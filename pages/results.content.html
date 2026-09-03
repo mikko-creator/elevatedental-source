@@ -1,0 +1,426 @@
+<!--META {"title":"Dental Before and After Philippines | Patient Results","desc":"Real cases by treatment type and patient stories in their own words. Veneers, Invisalign, implants and full-mouth rehabilitation.","noindex":true}-->
+<!-- TITLE and DESC are the LOCKED values from _handoff/seo-enrichment.md section 1, the SEO SSOT.
+     The SSOT separator is an en dash and renders here as a pipe, because verify-no-dashes is
+     registered on this build. Only the SEPARATOR CHARACTER changed; no word was altered, added,
+     removed or reordered.
+     The key is "desc" and NOT "description": build.mjs renders esc(meta.desc), and its JSON branch
+     does not alias description to desc, so a "description" key ships an EMPTY meta description
+     while looking correct in the fragment.
+     noindex is set on EVERY page because this publishes to a PUBLIC preview URL while the pages
+     carry representative market prices rather than this clinic's own figures. robots.txt cannot
+     carry that load: crawlers read it only at the origin root, and this ships to a project
+     subpath, so the disallow-all there is inert. noindex is the protection that actually works. -->
+<!-- ============================================================================
+     THE BODY. FIVE sections, one per section of _copy/results.md, in brief order,
+     with the copy's section 5 closing folded INLINE into section 05 because the
+     chrome owns the single closing band and the body authors ZERO. Forced grammar
+     throughout: section -> div.container -> div.row -> div.col -> OBJECT, exactly
+     ONE .container and ONE .row per section, spans via .col--span-N inside the
+     plain 12 track row.
+
+     THE GOVERNING CONSTRAINT, and the reason this page composes differently from
+     every other T-INDEX page in the set: blocker B-2. There is no documented
+     owner authorisation for the clinical image library and none for republishing the
+     text of the patient stories. So this page has a card grid with NO CASES IN IT,
+     on purpose, and it says so in words rather than filling the grid with stock
+     photography. A stock smile in a results slot is not a placeholder, it is a
+     fabricated clinical outcome, which is the single worst thing this page could
+     ship. The imagery below is therefore about METHOD, never about outcome: a
+     shade guide, a shade tab and a chairside examination. Not one image on this
+     page is presented as a case, a before, an after or a result.
+
+     WHAT REPLACES THE SET. The template hands this type a filterable wall. Where
+     the wall cannot be filled, the honest inheritance is the wall's CONTRACT: the
+     five segments the gallery is divided into, what each one will show, how each
+     is documented, and the release each is waiting on. That is a real page rather
+     than an empty one, and it converts to the finished gallery with no rebuild.
+     ============================================================================ -->
+
+<!-- pick: HERO-COMPOSITIONS.md #2 Split-text-right + photo-left | considered: #5,#22 | rigor: heavy | why: the mirrored split is the right opener for the one page in this set whose first duty is a CAVEAT rather than a claim. Leading with the photograph on the reading side and the words on the right slows the first beat by exactly one column, which is what a page that must say "this is an individual outcome, not a forecast" before it says anything else actually needs; the locked T-INDEX hero, the centred headline with an index below, is built to hand over a ROUTE, and this page has no set to route into yet, so reusing it would promise a wall that is not there. #5, the full bleed image with overlay text, sets type on photography, which the locked feel bans outright, and on a results page a headline lying across a smiling face is the exact composition that reads as a testimonial. #22, the statistics heavy hero, would spend the first screen on counted proof, and the only counted proof this page owns is the published testimonial figure, which the claim rations to a single use and which cannot be illustrated with the stories themselves while consent is open. ADAPTATION: the photograph in the media column is a SHADE GUIDE being held against a patient's teeth, chosen because it shows the practice measuring rather than the practice succeeding. LIBRARY: _COMPOSITION-LAWS L1 stacked split reading order, applied so the 767 stack reads heading, media, body with no order override and the caveat still arrives before the gallery contract. -->
+<!-- FRONT OF HOUSE, 2026-08-25. The opener is re-composed to the foh-hero contract. The #2
+     pick above is superseded for the hero only; its ADAPTATION note still holds and is the
+     reason this band is a SHADE GUIDE being held against teeth - the practice measuring
+     rather than the practice succeeding - and not a smile.
+     THE OLD MEDIA. The .kit-slot held THIS EXACT FILE, so it was deleted rather than print
+     the same frame twice in one section, and its .col--span-5.col--media went with it rather
+     than leaving an empty grid cell that still eats the 40px row gap. Its alt is carried onto
+     the band verbatim. The file is now used exactly once on this page.
+     TWO DISCLOSURES WERE KEPT IN THE LOCKUP ON PURPOSE, and they are the reason this hero is
+     over the word budget. This is the one page whose first duty is a caveat rather than a
+     claim, and BOTH of these exist NOWHERE ELSE in the fragment:
+       - the .kit-status gallery flag. Without it the lede describes a gallery the page
+         cannot show yet, which would be an overstatement on a healthcare page. s02 states
+         the blocker one band later, but the flag has to arrive with the promise.
+       - the .kit-accentline individual-outcome caveat. A grep of the whole fragment finds
+         "individual outcome" only in this hero. Deleting it would have removed the page's
+         one results disclaimer outright.
+     THE LEDE is the SECOND sentence of the existing lede, taken verbatim, because it is the
+     half carrying the countable fact (74 published testimonials, which appears nowhere else
+     on the page). The dropped first half, "Real cases, filtered to yours", is s03's entire
+     subject: "The gallery is split by treatment, not poured into one carousel."
+     WHAT WENT: the filter-by-treatment paragraph (s03), the not-a-forecast paragraph (its
+     caveat is the accentline immediately above it, kept), and the .kit-foot ledger, whose
+     five items were jump links to the four sections that follow it in order. -->
+<section class="section surface-dark kit-hero foh-hero" id="s01" aria-labelledby="h01" data-surface="dark" data-rise>
+  <div class="container">
+    <div class="row">
+      <div class="col col--full">
+        <div class="foh-hero__stage">
+          <figure class="foh-hero__band">
+            <img class="foh-hero__img" src="../assets/generated/gen-hero-shade-pair.jpg" alt="Two ceramic shade samples standing on brass posts and stone plinths, side by side against deep navy." width="3136" height="1344" loading="eager" fetchpriority="high" decoding="async">
+            
+          </figure>
+          <div class="foh-hero__inner">
+              <h1 class="foh-hero__title" id="h01">Dental Before and After Philippines. Patient Results.</h1>
+            </div>
+          <div class="foh-hero__lockup">
+            <p class="foh-hero__eyebrow">Results and patient stories</p>
+            <p class="foh-hero__lede">Before and after images grouped by the treatment that produced them, and 74 published patient testimonials in the patients' own words.</p>
+            <p class="kit-accentline">Every case shown is an individual outcome.</p>
+            <div class="kit-actions">
+              <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+              <a class="kit-btn kit-btn--secondary" href="#s03">See what the gallery will hold</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #7 Problem framing | considered: #22,#24 | rigor: heavy | why: the locked copy gives this slot to the FEATURED set and then states, in its own owner block, that the featured slots are empty by design because publishing a before and after image or the text of a patient story requires a signed release naming this website, and no release is on file. #7 is the only entry in the catalogue whose job is to state a PROBLEM plainly and hold the reader in it rather than resolve it with a card, which is exactly what an honest featured band looks like when the feature cannot be shown. #22, the featured case study plus two small, is the shape the copy describes and would be the pick the day consent lands, but it cannot render at all without three real cases, and filling it with stock photography is the specific failure the copy calls out by name. #24, the testimonials grid, is blocked twice over: the story text is consent blocked in the same breath as the images, and a grid of invented quotes on a medical site is fabricated proof of the worst kind. ADAPTATION: #7's problem statement is paired with the exact PER CASE unlock list rather than with a solution card, so this band is a working intake form for the owner as well as an explanation for the reader, and it degrades into #22 the moment four signed releases exist. LIBRARY: _MODERN-DESIGN-PATTERN-LIBRARY shape masked media is deliberately NOT used in this band; the honesty block carries no photograph at all, because any image beside a sentence about missing case evidence starts to read as the evidence. -->
+<section class="section section--cool" id="s02" aria-labelledby="h02" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">02</span>
+            <div>
+              <span class="kit-eyebrow">The featured set</span>
+              <h2 id="h02">The pinned cases are empty by design, and here is exactly why.</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--span-7 col--copy">
+        <p class="kit-lede readw">A small pinned set sits above the full list. These are chosen for what they demonstrate, not for how recent they are.</p>
+        <p class="kit-body readw">Cases where the plan was the interesting part, where more than one discipline was involved, or where the starting position was the kind most people assume cannot be treated. Each featured case carries the treatment performed, the disciplines involved and the number of visits it took, so you can read it as a piece of clinical work rather than as a picture.</p>
+        <p class="kit-body readw">None of that is on this page yet, and none of it is being approximated. Publishing a clinical photograph of a person, or the words they wrote about their own treatment, is not a design decision. It is a permission, and the practice does not have it in writing.</p>
+      </div>
+
+      <div class="col col--span-5">
+        <div class="kit-card kit-card--tint kit-card--pad" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Per case, what unlocks a slot</span>
+            <svg class="kit-ring" width="28" height="28" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+            </svg>
+          </div>
+          <p class="kit-card__title">Eight fields, and the first one is the only one that is not editorial.</p>
+          <ol class="kit-list kit-list--ledger">
+            <li><span><b>The signed release.</b> Naming this website as a place of publication. Nothing else on this list matters without it.</span></li>
+            <li><span><b>A case reference,</b> so the record can be traced back at the clinic.</span></li>
+            <li><span><b>The treatment performed,</b> named as the treatment page names it.</span></li>
+            <li><span><b>The disciplines involved,</b> which is the part that shows how the case was actually planned.</span></li>
+            <li><span><b>The number of visits</b> and the clinic it was carried out at.</span></li>
+            <li><span><b>Before and after images,</b> same angle, same lighting, because a change of lighting is not a change of teeth.</span></li>
+            <li><span><b>One line on what the case required,</b> and a link to the treatment page it belongs to.</span></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">The segments below are the part of this page that is finished. They are written, they are structured, and they are waiting for cases rather than for words.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#s03"><span>Read the segment contract</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #21 Case studies 3-col | considered: #30,#9 | rigor: heavy | why: the copy's central argument for this page is that the gallery is SEGMENTED by treatment rather than presented as one carousel, because a patient researching veneers has no use for scrolling through implant cases to find them; #21 is the catalogue entry whose column IS a case class, so the segment reads as a body of clinical work rather than as a product tile, and its three column rhythm takes five segments as three then two without either row looking like an afterthought. #30, the before and after grid, is the shape the finished gallery becomes, and it is unusable today for the reason section 02 sets out: it cannot render without the consent blocked images, and a grid of empty frames is a placeholder wall, which this build forbids. #9, services three-col, would frame each segment as an offering with an action, and a case class is not a thing you buy; that framing also quietly turns "full mouth rehabilitation" into a menu item when the copy is careful to describe it as the class of case that needs more than one discipline. ADAPTATION, and it is the load bearing one: #21's card normally carries a case's result; here every card carries the segment's DOCUMENTATION STANDARD instead, the named instrument each case in that segment is planned on, plus its release state. That is real, verified content taken from the practice's own published clinical inventory, and it converts to #30 with no rebuild the day the releases land. LIBRARY: _RESPONSIVE-PATTERN-LIBRARY, the four tier reflow ladder, applied by authoring every segment .col--span-4 so the set steps 3 up, 2 up, 1 up with no orphaned track at the 1023 and 767 steps. -->
+<section class="section section--warm" id="s03" aria-labelledby="h03" data-rise>
+  <div class="container">
+    <div class="row row--stretch">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">03</span>
+            <div>
+              <span class="kit-eyebrow">The five segments</span>
+              <h2 id="h03">The gallery is split by treatment, not poured into one carousel.</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">A patient researching veneers has no use for scrolling through implant cases to find them. Each segment below states what it holds, and what the case is planned on before anything is fitted.</p>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Segment 01</span>
+            <span class="kit-card__unit">Veneers</span>
+          </div>
+          <p class="kit-card__title">Porcelain, zirconia and direct composite, shown by material.</p>
+          <p class="kit-card__body">Material is what drives both the look and the fee, so the segment is split by it rather than by how recent the case is. Veneer cases are planned on a RayFace facial scanner, so the proportions are set against the whole face rather than against the tooth in isolation.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="porcelain-veneers.html"><span>Porcelain veneers</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card kit-card--tint" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Segment 02</span>
+            <span class="kit-card__unit">Invisalign (Clear Aligners)</span>
+          </div>
+          <p class="kit-card__title">Grouped by what was being corrected.</p>
+          <p class="kit-card__body">Crowding, spacing, or a bite issue. Alignment cases are planned on an iTero intraoral scanner, which produces the digital model the aligner sequence is built from. Course lengths differ case by case, and the card states the actual length rather than an average.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="invisalign.html"><span>Invisalign</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Segment 03</span>
+            <span class="kit-card__unit">Implants</span>
+          </div>
+          <p class="kit-card__title">Single tooth, multiple teeth and full arch.</p>
+          <p class="kit-card__body">Every implant case is planned on 3D CBCT imaging, which is available at all four clinics, so the bone is assessed in three dimensions before anything is placed. The card states how many implants were placed and over how long.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="dental-implant.html"><span>Dental implants</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card kit-card--tint" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Segment 04</span>
+            <span class="kit-card__unit">Whitening</span>
+          </div>
+          <p class="kit-card__title">Photographed against a shade guide, not against better lighting.</p>
+          <p class="kit-card__body">Zoom whitening is light activated and carried out in the clinic in a single session. Whitening cases are shown against a shade guide rather than against a change in lighting, which is the honest way to photograph them and the reason this segment is the slowest to fill.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="laser-teeth-whitening.html"><span>Teeth whitening</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Segment 05</span>
+            <span class="kit-card__unit">Full mouth rehabilitation</span>
+          </div>
+          <p class="kit-card__title">The cases that need more than one discipline.</p>
+          <p class="kit-card__body">Prosthodontics for the restorations, periodontics for the foundation, oral surgery where teeth have to come out first. Bite is checked with OccluSense bite analysis before the final work is fitted. These cases run over months, and the card says how many.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="treatments.html"><span>All treatments</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-4 col--media">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/generated/gen-veneer-tweezers.jpg" alt="A single ultrathin porcelain veneer shell held in fine polished tweezers above a dark slate slab." width="900" height="600" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>An examination, not a case</b><span>Every photograph on this page shows method. None of them is a result.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--full">
+        <p class="kit-micro">The filter contract, and the words it says when it finds nothing</p>
+        <p class="kit-body readw--wide">Every card carries its own filter values so the toolbar acts on real content rather than shipping inert: the case type, the treatment slug, the clinic, one or more tags, and the publication date the recency sort reads. A persistent line above the grid states how many of the total are showing, and a combination that returns nothing renders these words rather than a blank panel.</p>
+        <p class="kit-quote kit-quote--display readw">No cases match that combination yet. That is a gap in what we have published, not a gap in what we treat. Clear one filter to widen the search, browse by treatment below, or ask a specialist about your own case directly at a consultation.</p>
+        <div class="kit-tags">
+          <a class="kit-tag" href="porcelain-veneers.html">Porcelain veneers</a>
+          <a class="kit-tag" href="zirconia-veneers.html">Zirconia veneers</a>
+          <a class="kit-tag" href="composite-or-direct-veneers.html">Direct veneers</a>
+          <a class="kit-tag" href="invisalign.html">Invisalign (Clear Aligners)</a>
+          <a class="kit-tag" href="braces.html">Braces</a>
+          <a class="kit-tag" href="dental-implant.html">Dental implants</a>
+          <a class="kit-tag" href="dental-crowns.html">Crowns and bridges</a>
+          <a class="kit-tag" href="laser-teeth-whitening.html">Zoom teeth whitening</a>
+          <a class="kit-tag" href="root-canal-treatment.html">Root canal treatment</a>
+        </div>
+        <div class="kit-foot">
+          <p class="kit-micro">If none of the five is yours</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#s04"><span>Four ways to move sideways</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #50 Topic columns | considered: #45,#9 | rigor: heavy | why: the locked copy fixes FOUR routes onward and gives them equal weight, by treatment, by specialist, by question and by fee, and each is a different KIND of move rather than a different product, so peer topic columns with no hierarchy between them is the correct instrument; #50 is the entry built for exactly that, and it is the only one that leaves room for the route that says "you do not have to know what your case is", which a commercial pattern would bury under the two that lead to a page. #45's category chips compress each route to a single word, which is enough for a treatment name but destroys the by question route, whose entire value is the sentence explaining that a consultation exists for people who cannot name the problem. #9's services three-col caps at three and would drop one route, and the one a services grid drops is always the one with no product behind it. ADAPTATION: this band carries no photograph, because the section immediately above it already spends the page's method image and a second face here would pull the eye off four short decisions. It is also spent WARM rather than on paper so the page's second non light anchor lands in the closing third, which is where a page ending on a decision wants its weight. LIBRARY: _MODERN-WOW-SPEC, the technique ceiling, applied as restraint: no parallax, no sticky rail, no reveal beyond the locked rise, because a routing band is read in two seconds and motion there costs the reader time. -->
+<section class="section section--paper" id="s04" aria-labelledby="h04" data-rise>
+  <div class="container">
+    <div class="row row--stretch">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">04</span>
+            <div>
+              <span class="kit-eyebrow">Four routes onward</span>
+              <h2 id="h04">If nothing here matches your case, we probably have not published it yet.</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">That is worth saying plainly rather than leaving you to scroll: an unpublished case is a gap in the record, not a gap in what our specialists treat.</p>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Route 01</span>
+            <span class="kit-card__unit">By treatment</span>
+          </div>
+          <p class="kit-card__title">Read the treatment itself.</p>
+          <p class="kit-card__body">The full treatment list covers all twenty treatments, grouped by the specialist discipline that performs them, each with a starting price.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="treatments.html"><span>All Treatments</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card kit-card--tint" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Route 02</span>
+            <span class="kit-card__unit">By specialist</span>
+          </div>
+          <p class="kit-card__title">Choose the clinician instead of the procedure.</p>
+          <p class="kit-card__body">The roster lists the whole bench, and the profile is where training and the treatments that clinician performs are set out.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="specialists.html"><span>Our Specialists</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card kit-card--flat" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Route 03</span>
+            <span class="kit-card__unit">By question</span>
+          </div>
+          <p class="kit-card__title">If you are not sure what your case even is.</p>
+          <p class="kit-card__body">That is what the consultation is for. Describe it at the desk or on the phone and a specialist will tell you what the options are before any figure is discussed.</p>
+        </article>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card kit-card--tint" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Route 04</span>
+            <span class="kit-card__unit">By fee</span>
+          </div>
+          <p class="kit-card__title">If cost is the thing holding you back.</p>
+          <p class="kit-card__body">The price list publishes a starting figure for every treatment named on this page, so you can size the decision before you book it.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="prices.html"><span>Treatment Prices</span></a>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #27 Numbered process steps | considered: #57,#34 | rigor: heavy | why: the locked closing says that looking at other people's cases only gets you so far, and that yours needs an examination, an image and a specialist looking at both. That is a SEQUENCE, and #27 is the only entry in the catalogue that renders a sequence as a sequence, with the numbers carrying the order rather than a paragraph asserting it; on the one page in this set that cannot show its evidence, ending on the four steps that actually produce evidence for YOUR case is the strongest honest close available. #57, the standalone pull quote, would end the page on a sentence, and a sentence is what this page has had to offer for four sections already; the reader arriving here has earned something procedural. #34, the FAQ accordion, hides the close behind a click and turns a four step commitment into a list of objections, which inverts the register the voice decision locks. ADAPTATION: the steps are set inside the locked .kit-sys matrix so the four read as one instrument panel rather than four boxes, and the copy's closing ask is folded in beneath them as a .kit-inline rail, which Collision A permits inside a content bearing section and which G-CTA1 does not count as a closing band. LIBRARY: _MODERN-DESIGN-PATTERN-LIBRARY shape masked media, applied to this band's photograph as the circle clip, so the round language on this page comes from the mask rather than from inventing a radius the brand does not own. -->
+<section class="section section--warm" id="s05" aria-labelledby="h05" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">05</span>
+            <div>
+              <span class="kit-eyebrow">What settles it</span>
+              <h2 id="h05">Looking at other people's cases only gets you so far.</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-status kit-tab"><span class="kit-status__dot" aria-hidden="true"></span>Four steps, in this order, at any of the four clinics</p>
+      </div>
+
+      <div class="col col--span-7">
+        <div class="kit-sys kit-sys--3up" data-rise>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">Step 01</span>
+            <p class="kit-sys__name">The examination</p>
+            <p class="kit-sys__note">A specialist looks at the actual teeth, not at a photograph of somebody else's.</p>
+            <span class="kit-sys__where"><i aria-hidden="true"></i>At the chair</span>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">Step 02</span>
+            <p class="kit-sys__name">The image</p>
+            <p class="kit-sys__note">3D CBCT imaging is available at all four clinics, so bone and roots are assessed in three dimensions.</p>
+            <span class="kit-sys__where"><i aria-hidden="true"></i>All four clinics</span>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">Step 03</span>
+            <p class="kit-sys__name">The written plan</p>
+            <p class="kit-sys__note">The sequence, in order, including the stages that belong to a second discipline.</p>
+            <span class="kit-sys__where"><i aria-hidden="true"></i>Before anything starts</span>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">Step 04</span>
+            <p class="kit-sys__name">The written quote</p>
+            <p class="kit-sys__note">You leave holding it, with no commitment to start. Elevate Dental is self pay, so the figure you are given is the figure you deal with.</p>
+            <span class="kit-sys__where"><i aria-hidden="true"></i>Same visit</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--span-5 col--media">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--circle">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_06_step-by-step-process-of-getting-dental-veneers-scaled.jpg" alt="A gloved hand holds a two row tooth shade tab set against a plain blue background." width="2560" height="1705" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>The instrument, not the outcome</b><span>The same tab set every whitening and veneer case is recorded against.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">One last thing about money</p>
+          <p class="kit-accentline">Yours needs an examination, an image and a specialist looking at both.</p>
+          <p class="kit-body readw--wide">Elevate Dental does not accept HMO or dental insurance. All treatment is self pay, which is why the written quote matters more here than it would somewhere a third party settles the bill: the number you are shown is the number, and you get it in writing before anything is scheduled.</p>
+        </div>
+        <div class="kit-inline">
+          <p>Book a free consultation at any of our four Metro Manila clinics. You leave with a written treatment plan and a written quote, and no commitment to start. Confirm current consultation terms with the clinic before you book.</p>
+          <div class="kit-inline__acts">
+            <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+            <a class="kit-btn kit-btn--ghost" href="locations.html"><span>The four clinics</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

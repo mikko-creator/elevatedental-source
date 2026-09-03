@@ -1,0 +1,778 @@
+<!--META {"title":"Oral Prophylaxis Philippines | From ₱2,500 Cleaning","desc":"Professional dental cleaning that removes plaque and tartar. How often to come, what it involves and what it costs.","noindex":true}-->
+<!-- TITLE and DESC are the LOCKED values from _handoff/seo-enrichment.md section 1, the SEO SSOT.
+     The SSOT separator is an en dash and renders here as a pipe, because verify-no-dashes is
+     registered on this build. Only the SEPARATOR CHARACTER changed; no word was altered, added,
+     removed or reordered.
+     The key is "desc" and NOT "description": build.mjs renders esc(meta.desc), and its JSON branch
+     does not alias description to desc, so a "description" key ships an EMPTY meta description
+     while looking correct in the fragment.
+     noindex is set on EVERY page because this publishes to a PUBLIC preview URL while the pages
+     carry representative market prices rather than this clinic's own figures. robots.txt cannot
+     carry that load: crawlers read it only at the origin root, and this ships to a project
+     subpath, so the disallow-all there is inert. noindex is the protection that actually works. -->
+<!-- ============================================================================
+     DESIGN-SYSTEM PROVENANCE for pages/oral-prophylaxis.content.html, cited and MEANT.
+     (The locked T-FEATURE concept carried these citations in its file comment above
+     the document head; promotion extracts only the main element, so they are restored
+     here, in the body,
+     where they ride with the page they govern.)
+
+     blueprint composition-medical-health   the SECTOR spine. Its Collision A, that the
+               appointment CTA is the spine but the body authors ZERO closing bands, is
+               why every ask on this page rides on a .kit-inline rail inside a content
+               band. Its Collision B, warm imagery against a calm voice, is why the
+               photographs carry the warmth and the sentences carry the certainty.
+
+     library   _COMPOSITION-LAWS             L9 SELECTION-RATIONALE is why every band
+               below carries a defended ledger naming what was refused and on what
+               evidence, and L1 STACKED SPLIT READING ORDER is why no media cell is ever
+               authored above its own heading.
+     library   _SCROLL-STICKY-BEHAVIOR-LIBRARY  consulted and DEDUCTED FROM, not applied.
+               Its pinned side rail is the obvious way to hold a reader's position
+               through a long page, and it is unusable here: the locked .section sets
+               overflow:hidden and a position:sticky descendant of an overflow:hidden
+               ancestor never pins. The route index, the per-band ordinal and the ruled
+               hand-off are the structural substitute for the affordance it describes.
+     library   _RESPONSIVE-PATTERN-LIBRARY   the four-tier reflow ladder. Nothing here
+               introduces a fixed width, a negative inline margin or an unclamped image,
+               which is why the ladder gate reports a clean reflow at every tier.
+     library   _MODERN-WOW-SPEC              the technique ceiling: real photography over
+               token-built material, hairline plus contact-shadow separation, and a
+               three-move motion budget (rise, lift, media drift) with nothing else.
+     _MODERN-DESIGN-PATTERN-LIBRARY  the shape-masked media it describes, spent once at
+               stage 02 where the photograph carries an argument rather than a caption.
+     ============================================================================ -->
+<!-- ============================================================================
+     THE BODY. Eleven sections: the opener, the route index, and the NINE stages the
+     route declares. T-FEATURE concept B "THE GUIDED PATH", promoted to ORAL
+     PROPHYLAXIS. The spine is preserved and re-pointed at this page:
+
+       1. THE ROUTE INDEX in band two, in-flow markup and in-document anchors, so it
+          works with scripting off and survives a static capture.
+       2. THE STAGE STAMP, 01 to 09, in every band's .kit-open__no slot.
+       3. THE HAND-OFF RAIL, a ruled .kit-foot closing every band, naming what comes
+          next and linking to it, plus a link back to the index.
+
+     WHY THIS PAGE IS NOT THE AIRFLOW PAGE WITH THE NOUNS SWAPPED. Both treatments
+     clean, and the two pages share a pool of photographs, so the composition is
+     deliberately divergent: the route band is warm rather than cool, the procedure
+     runs as a SEMANTIC TABLE rather than as step cards, the bench and the exits are
+     column pairs rather than card rows, the money stage takes the plain-deal stance
+     rather than the cost-model split, and the questions run as one flat stack rather
+     than in two named groups. Where the two pages genuinely say the same thing, this
+     one links to the other rather than restating it.
+
+     Every section obeys section -> div.container -> div.row -> div.col -> OBJECT
+     with EXACTLY ONE .container and ONE .row. ZERO closing CTA bands, ZERO dark
+     bands, ZERO arc seams, no page-local CSS.
+     ============================================================================ -->
+
+<!-- src: D-OFFER-001 -->
+<!-- pick: HERO-COMPOSITIONS.md #13 Centered + scroll cue, the continue indicator | considered: #16,#22 | rigor: heavy | why: this is the appointment most people book without reading anything, so the hero's job is to answer the fee question and then declare that the rest of the page is a sequence worth following rather than a brochure, and #13 is the only catalogued hero whose named device is the CONTINUE affordance instead of a closing argument. #16's sticky hero pins its text while the image scrolls, and it is refused twice over: the locked .section sets overflow:hidden so a pinned child would silently fail to pin, and a hero that holds still while the page moves is the opposite of a hero that hands the reader onward, which is the one thing a reader wondering whether a routine clean is even the right appointment actually needs from it. #22's statistics-heavy hero would need countable proof and the only numbers this page owns are a placeholder fee and a six-month interval, so the band would either sit empty or dress a recall interval as a metric. ADAPTATION: #13's centring, full-viewport box and animated chevron are all refused, because this system holds one left reading axis, the locked hero declares no min-height, and the motion budget has no bounce in it. What is kept is the structure, a hero that ends on an explicit continue rail naming the two places most readers jump to. -->
+<!-- FRONT OF HOUSE. The opening section is now the one full-bleed photographic band.
+     THE PRICE CAVEAT WAS NOT DELETED, IT MOVED. The h1 read "...From ₱2,500, a
+     representative market figure rather than an Elevate price." The figure stays in the
+     headline; the disclosure is now carried by the .kit-tag chip that already stood
+     under it and already says it: "Market range, not an Elevate fee". invisalign.html's
+     pattern, reused rather than reinvented.
+     AMENDED 2026-08-25, SECOND PASS. THE FIGURE HAS NOW FOLLOWED ITS CAVEAT DOWN, so the
+     paragraph above no longer describes this file: the price is NOT in the headline any more.
+     The reason is measured rather than assumed. With the whole band markup standing between
+     them, the h1 figure sat far further from its marker than the 120 characters that
+     price-placeholder-unmarked allows, and the page was blocked by that rule. The figure now
+     sits INSIDE the chip, byte for byte unchanged, directly in front of the wording that
+     qualifies it. That is the invisalign shape taken one step further, and it is what Front of
+     House wanted anyway, a short headline with no price in it.
+     NOTHING WAS CUT. The h1 keeps the treatment name; the chip keeps every word it already had.
+     ONE ADDITION, in this page's own words rather than new ones. "Market range, not an Elevate
+     fee" carries none of the phrases the rule accepts as a marker, "fee" being neither "price"
+     nor "quote", so the qualifier this page's OWN h1 used before the first pass, "a
+     representative market figure rather than an Elevate price", quoted verbatim above, is
+     restored in front of it. The old chip line is kept in full after it and is not replaced.
+     THE ASSIGNED PHOTOGRAPH IS A DIFFERENT FILE from the one this section held, so the
+     .kit-slot was NOT deleted: the mouth-mirror examination keeps its caption and now
+     sits below the band, in the sibling section carrying the rest of the opening stage.
+     The two frames show different things, so the pair is not redundant.
+     ALT is the string already written for this file further down this same page, reused
+     verbatim rather than rewritten. RECORDED: that means the frame appears twice on the
+     page, once as the band and once in its own section. The assignment is fixed and the
+     later section owns its caption, so neither use was removed.
+     THE LEDE IS COMPRESSED TO ITS FIRST CLAUSE. The full sentence is the ONLY place on
+     this page that describes what is removed and from where, so it was not thrown away:
+     it stands complete, verbatim, in the section immediately below. The seven-word
+     overlap is deliberate, not an accident of copy-paste. -->
+<section class="section surface-dark kit-hero foh-hero" id="s-start" aria-labelledby="h-start" data-surface="dark" data-rise>
+  <div class="container">
+    <div class="row">
+      <div class="col col--full">
+        <div class="foh-hero__stage">
+          <figure class="foh-hero__band">
+            <img class="foh-hero__img" src="../assets/generated/gen-hero-prophy-tray.jpg" alt="A slim ultrasonic scaler handpiece and a polishing angle laid on an oval brushed brass tray over bone linen." width="3136" height="1344" loading="eager" fetchpriority="high" decoding="async">
+            
+          </figure>
+          <div class="foh-hero__inner">
+              <h1 class="foh-hero__title" id="h-start">Oral Prophylaxis Philippines.</h1>
+            </div>
+          <div class="foh-hero__lockup">
+            <p class="foh-hero__eyebrow">Oral prophylaxis, the routine clean</p>
+            <p class="foh-hero__lede">Oral prophylaxis is the routine professional clean.</p>
+            <div class="kit-tags">
+              <span class="kit-tag kit-tag--accent kit-tab">From ₱2,500, a representative market figure rather than an Elevate price. Market range, not an Elevate fee.</span>
+            </div>
+            <div class="kit-actions">
+              <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+              <a class="kit-btn kit-btn--secondary" href="contact.html">Ask about this treatment</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- The rest of the opening stage, on the paper ground it already carried, with the
+     same 12-track row and the same .col--span-N cells, so no cell changes width. -->
+<section class="section section--paper" id="s-start-b" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">Start</span>
+          </div>
+        </div>
+        <p class="kit-lede readw">Oral prophylaxis is the routine professional clean: plaque and hardened tartar removed from the tooth surface and from the margin where it meets the gum, then the surfaces smoothed so deposits take longer to rebuild.</p>
+        <p class="kit-body readw">Your first consultation is free, and your exact fee is quoted before treatment begins. Confirm current consultation terms with the clinic before you book.</p>
+      </div>
+
+      <div class="col col--span-5">
+        <figure class="kit-slot" data-rise style="box-shadow: var(--ds-shadow-lift);">
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2021_06_3-Types-of-Teeth-Cleaning-Procedures.jpg" alt="A clinician in a white coat and white gloves holding a mouth mirror and probe at the lower front teeth of a seated patient who is smiling." width="1200" height="800" loading="eager" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>The examination is the appointment</b><span>The chart comes before the scaler.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>See the nine stages</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#stage-06"><span>Skip to what it costs</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- src: D-OFFER-017 -->
+<!-- pick: SECTION-COMPONENTS.md #36 Sticky-sidebar topic nav | considered: #50,#45 | rigor: heavy | why: the index band orients a reader inside a long document rather than presenting content, and #36 is the catalogued entry whose declared role is exactly that, a topic index against a docs-coded body, with a narrow-tier reflow that lifts the index above the content, which is the reading order a route needs on a phone. #50's topic columns group items into parallel subjects with no order between them, which would erase the one property this index carries, that the gum chart at stage 03 is what decides whether the remaining stages describe your appointment at all. #45's category chips are a filter affordance, and a filter implies the reader may discard the parts that do not interest them, which is precisely wrong on a page whose credibility rests on the stage that says this is not the treatment you need. ADAPTATION: #36's sidebar is STICKY and cannot be here, because the locked .section sets overflow:hidden and a sticky descendant of an overflow:hidden ancestor never pins; the affordance is rebuilt in flow, with the index read once, an ordinal stamped on every band and a hand-off closing each one. -->
+<section class="section section--warm" id="s-route" aria-labelledby="h-route" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-4">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">Route</span>
+            <div>
+              <span class="kit-eyebrow">The nine stages</span>
+              <h2 id="h-route">What this page covers</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Nine stages, and one of them exists to tell you this is the wrong appointment.</p>
+        <p class="kit-body readw">Read straight through for the whole visit in sequence. Jump into the middle and the band names its own position and the one that follows, so the order is never lost.</p>
+      </div>
+
+      <div class="col col--span-8">
+        <ol class="kit-list kit-list--ledger" data-rise>
+          <li><span><b>What it is.</b> Why a home routine cannot finish the job, and what the appointment removes that a brush leaves behind. <a href="#stage-01">Go to stage 01</a></span></li>
+          <li><span><b>Who it suits.</b> Nearly everyone, on a schedule, and the cases where a deeper treatment is booked instead. <a href="#stage-02">Go to stage 02</a></span></li>
+          <li><span><b>How it works.</b> Six steps from the medical history to the fluoride, with the minutes each one takes. <a href="#stage-03">Go to stage 03</a></span></li>
+          <li><span><b>Who performs it.</b> The two disciplines involved, and the finding that moves a case from one to the other. <a href="#stage-04">Go to stage 04</a></span></li>
+          <li><span><b>The instruments.</b> Three named systems and the single job each of them is right for. <a href="#stage-05">Go to stage 05</a></span></li>
+          <li><span><b>What it costs.</b> The starting figure, what moves it, and the one way this clinic is paid. <a href="#stage-06">Go to stage 06</a></span></li>
+          <li><span><b>What changes.</b> The state your mouth is in when you stand up, and the three things this treatment cannot do. <a href="#stage-07">Go to stage 07</a></span></li>
+          <li><span><b>Questions.</b> Seven answers, including the two people are most embarrassed to ask. <a href="#stage-08">Go to stage 08</a></span></li>
+          <li><span><b>Aftercare and the consultation.</b> The half hour after, the routine between visits, and what you leave the first one holding. <a href="#stage-09">Go to stage 09</a></span></li>
+        </ol>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 01, what tartar actually is, why no amount of brushing shifts it, and why the examination is part of the treatment rather than an addition to it.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-01"><span>Go to stage 01</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- src: D-OFFER-017 -->
+<!-- pick: SECTION-COMPONENTS.md #7 Problem framing | considered: #12,#8 | rigor: heavy | why: this stage is a PROBLEM statement before it is a treatment description, that plaque mineralizes into a deposit no home routine can remove and that the deposit is what inflames gums, and #7 is the catalogued entry built to state a problem plainly and let the remedy follow from it, which is why the band runs as prose against one image of the deposit itself rather than as a feature row. #12's feature row with a screenshot puts the artefact beside the argument and is the pick used one page over for the powder handpiece, and it is refused here because the artefact in this stage is not an instrument, it is a deposit on a root surface, which is a condition rather than a product. #8's manifesto band would turn a mechanical fact into a belief statement, and there is nothing to believe here: calculus is either present or it is not, and the gum chart records which. ADAPTATION, disclosed because it matters: the image in this band is a medical ILLUSTRATION rather than a photograph, and its alt text says so, because the only honest way to show sub-gingival deposit at that scale is a drawing and a reader must not mistake it for a picture of their own mouth. -->
+<section class="section section--paper" id="stage-01" aria-labelledby="h01" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">01</span>
+            <div>
+              <span class="kit-eyebrow">Stage 01, plain English</span>
+              <h2 id="h01">What the routine clean is</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Brushing and flossing control plaque. They do not remove tartar.</p>
+        <p class="kit-body readw">Once plaque mineralizes against the tooth it becomes calculus, a hard deposit bonded to enamel and to the root below the gum line, and no home routine will shift it. Calculus holds bacteria against the gum, and that is what turns healthy tissue into bleeding, receding tissue.</p>
+        <p class="kit-body readw">Oral prophylaxis is the appointment that removes it. An ultrasonic scaler breaks the deposit off the tooth with high-frequency vibration and a water spray, hand instruments finish the areas the tip cannot reach, and the surfaces are then polished so they are smooth rather than microscopically rough. Smooth surfaces give new plaque less to hold on to.</p>
+        <p class="kit-body readw">This is the standard maintenance appointment for adults and for children with their permanent teeth.</p>
+      </div>
+
+      <div class="col col--span-5">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/generated/gen-scaler-macro.jpg" alt="An ultrasonic scaler tip in close up with fine water droplets against a dark background." width="675" height="585" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>An illustration, deliberately</b><span>Deposit below the margin cannot be photographed in place.</span></figcaption>
+        </figure>
+        <div class="kit-truth">
+          <span class="kit-truth__k">Part of the treatment, not an extra</span>
+          <p>The examination is not an add-on to the clean. In the same visit your dentist charts gum condition, checks for decay, looks at the soft tissue, and tells you what has changed since your last visit. Most decay and most gum disease are found at a routine appointment, while they are still small problems.</p>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 02, whether this is the appointment your mouth actually needs, and the three cases where the honest answer is a different one.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-02"><span>Go to stage 02</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Back to the route</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- src: D-OFFER-013 -->
+<!-- pick: SECTION-COMPONENTS.md #50 Topic columns | considered: #6,#10 | rigor: heavy | why: the exits from this stage are three SUBJECTS with no order between them, a reader takes at most one and never all three, and #50 is the entry catalogued for parallel subject columns where the absence of a sequence is the point and each column can end on its own destination. #6's is-this-for-me qualifier is the obvious catalogued fit and is refused deliberately: it is spent one page over on the sibling cleaning treatment, and two sibling pages carrying the same qualifier shape would read as one page written twice, which is the flat-fanout failure the variety discipline exists to stop. #10's four-column compact grid is catalogued for lighter content per cell, and each of these exits needs a real clinical reason plus a destination, which is not light. ADAPTATION: the medical history that changes how the appointment is run is set as a ruled foot on the band rather than as a fourth column, because it is a precondition on every path here rather than an alternative to weigh against the others. -->
+<section class="section section--cool" id="stage-02" aria-labelledby="h02" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">02</span>
+            <div>
+              <span class="kit-eyebrow">Stage 02</span>
+              <h2 id="h02">Who it suits, and where the route forks</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">This suits nearly everyone, on a schedule.</p>
+        <p class="kit-body readw">It is the correct treatment if your gums are healthy or mildly inflamed, if you can see hardened deposit behind the lower front teeth or along the margin, and if you simply want the six-month visit done properly.</p>
+        <p class="kit-body readw">It suits you particularly if it has been a while. A long gap does not disqualify you from a routine appointment. It usually just means a longer one, and occasionally a second.</p>
+      </div>
+
+      <div class="col col--span-5">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--arch">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2021_04_6-Tips-On-Cleaning-Your-Dental-Braces-Properly.jpg" alt="A woman against a plain white wall holding up a pink and white toothbrush and looking at it doubtfully with her lips pressed together." width="1200" height="800" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Not a failure of effort</b><span>A hardened deposit is not something brushing can undo.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--span-4">
+        <h3 class="kit-head">If pockets have formed</h3>
+        <p class="kit-body">If the gum bleeds heavily and generally, or if bone loss shows on imaging, a surface clean is not enough and is not what we will do. Deposit under the gum has to be lifted off the root itself. That treatment is performed by our periodontics specialists, and it usually runs over more than one visit.</p>
+        <p class="kit-meta"><a class="kit-link-plain" href="tooth-scaling-and-root-planning.html">Scaling and root planing</a></p>
+      </div>
+
+      <div class="col col--span-4">
+        <h3 class="kit-head">If there is untreated decay</h3>
+        <p class="kit-body">The cavity is restored separately. A clean does not repair a cavity, and polishing around active decay changes nothing about it. The examination in this appointment is usually where the cavity is found in the first place.</p>
+        <p class="kit-meta"><a class="kit-link-plain" href="dental-fillings.html">Dental fillings</a></p>
+      </div>
+
+      <div class="col col--span-4">
+        <h3 class="kit-head">If your concern is colour</h3>
+        <p class="kit-body">If what bothers you is the shade of your teeth rather than the health of your gums, this appointment will lift marks off the surface but will not lighten your natural shade. Whitening is the treatment for that, and it is only carried out on a mouth that is already clean and healthy.</p>
+        <p class="kit-meta"><a class="kit-link-plain" href="laser-teeth-whitening.html">Teeth whitening</a></p>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Tell us beforehand</p>
+          <p class="kit-body readw--wide">If you are pregnant, take a blood thinner, have a heart valve or joint replacement, or have any condition that changes how we handle bleeding or infection risk. Any of these changes how the appointment is run, and it is easier to plan for before you are in the chair.</p>
+          <p class="kit-body readw--wide">Stage 03 comes next: the visit broken into its parts, with the minutes each one takes.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-03"><span>Go to stage 03</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Route index</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- src: D-POSITION-DEPTH -->
+<!-- pick: SECTION-COMPONENTS.md #28 Process timeline horizontal | considered: #27,#13 | rigor: heavy | why: what this stage owes the reader is a sequence with a DURATIONS AXIS, six steps whose minutes add up to the appointment they are about to book, and #28 is the entry written for a long sequence in which the connector between stops is part of the meaning; what is taken from it is that argument rather than its literal geometry. #27's numbered process cards are the sibling cleaning page's pick, and repeating the card run here would make two pages that share a photo pool also share their one distinctive middle band, which is the flat-fanout failure. #13's bento grid is non-sequential by design, and presenting the gum chart as a peer of the polish would hide the dependency that decides everything downstream, that the chart is what says whether the remaining five steps are the right treatment. ADAPTATION, deliberate: #28's horizontal flow is NOT built, because a horizontal timeline drops its connector and wraps two-up at the tablet tier, and building one would need page-local CSS that promotion strips. The argument is delivered by the locked semantic table instead: the hairline row rules ARE the connector, the step column is the flow axis, and the third column carries the duration so a reader can total their own visit. At the mobile tier the sheet reflows each row into a labelled card, which is #28's own documented behaviour. -->
+<section class="section section--warm" id="stage-03" aria-labelledby="h03" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">03</span>
+            <div>
+              <span class="kit-eyebrow">Stage 03, history to fluoride</span>
+              <h2 id="h03">How the visit runs</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Six steps, in this order, with the time each one takes at the chair.</p>
+        <p class="kit-body readw">The first step is the one that decides the rest. Everything after it is carried out on a mouth that has already been charted, not on an assumption about what a clean should involve.</p>
+      </div>
+
+      <div class="col col--span-5">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/generated/gen-prophy-angle.jpg" alt="A prophy angle handpiece and a well of polishing paste on a stainless steel tray." width="675" height="585" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Retracted, lit, and charted first</b><span>Safety glasses, a retractor and a mirror, before any tip.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-table__scroll">
+          <table class="kit-table">
+            <caption>The six steps of a maintenance visit</caption>
+            <thead>
+              <tr><th scope="col">Step</th><th scope="col">What happens</th><th scope="col">How long</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">01 Consultation and examination</b></td>
+                <td data-label="What happens">Medical history, soft-tissue check, decay check, and a gum chart that records pocket depths and bleeding points. This is the step that decides whether a routine clean is the right treatment at all.</td>
+                <td data-label="How long" class="kit-tab">10 to 15 minutes</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">02 Imaging if indicated</b></td>
+                <td data-label="What happens">Taken only where the examination raises a question, such as suspected decay between teeth or suspected bone loss. Not routine, and not taken to fill a file.</td>
+                <td data-label="How long" class="kit-tab">5 to 10 minutes</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">03 Ultrasonic scaling</b></td>
+                <td data-label="What happens">Hardened deposit is removed from the crown surfaces and from where they meet the gum, with an ultrasonic tip and water spray, quadrant by quadrant.</td>
+                <td data-label="How long" class="kit-tab">10 to 20 minutes</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">04 Hand instrumentation</b></td>
+                <td data-label="What happens">The areas an ultrasonic tip cannot finish, particularly tight contacts between the front teeth, are cleared by hand.</td>
+                <td data-label="How long" class="kit-tab">5 to 10 minutes</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">05 Polishing</b></td>
+                <td data-label="What happens">Surfaces are polished smooth. Where surface marking is heavy, AirFlow (guided biofilm therapy) may be used in place of a paste.</td>
+                <td data-label="How long" class="kit-tab">About 5 minutes</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">06 Fluoride and review</b></td>
+                <td data-label="What happens">Fluoride is applied where indicated, and you are shown the specific areas your home routine is missing.</td>
+                <td data-label="How long" class="kit-tab">About 5 minutes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Your calendar</p>
+          <p class="kit-body readw--wide">A maintenance appointment runs 45 minutes to an hour. A first visit, or a visit after several years, runs longer and is occasionally split across two appointments so that no quadrant is rushed.</p>
+          <p class="kit-body readw--wide">Stage 04 follows: the two disciplines involved, and the finding that hands a case from one to the other.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-04"><span>Go to stage 04</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Back to the route</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- src: D-POSITION-BENCH -->
+<!-- pick: SECTION-COMPONENTS.md #11 Service pillars 2-col with image | considered: #18,#20 | rigor: heavy | why: this stage names two disciplines and shows one examination, which is #11's exact law, a photograph that STRETCHES against a small set of cards rather than a capped image beside a tall stack, and the locked sheet already implements it as .kit-mediagrid with the media-fits-track anchors baked in, so the media can never burst its track. #18's team grid is what a reader expects under a who-performs-it heading and it is refused on evidence rather than taste: per-clinic and per-treatment rosters are recorded as BLOCKED in client-rules.json, so a grid of faces would assert an assignment no receipt supports. #20's team mosaic fails the same way and adds a second problem, since a mosaic gives its tiles different sizes and a larger tile beside a clinician is a seniority claim nobody at this practice has made. ADAPTATION: the cards name DISCIPLINES rather than people, and the photograph shows a patient being shown her own mouth rather than a portrait, so nothing on the band implies an identity the build cannot evidence. -->
+<section class="section section--paper" id="stage-04" aria-labelledby="h04" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">04</span>
+            <div>
+              <span class="kit-eyebrow">Stage 04, the bench</span>
+              <h2 id="h04">Who performs it</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">This appointment is performed by our General Dentistry specialists.</p>
+        <p class="kit-body readw--wide">If the chart shows periodontal disease rather than surface build-up, your case moves to our periodontics specialists within the same group, so you are not sent to another practice to finish what was started here. Every clinician who performs this treatment is listed by name, discipline and training on our specialists page.</p>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-mediagrid">
+          <figure class="kit-mediagrid__media kit-slot" data-rise>
+            <div class="kit-slot__mask kit-slot__mask--frame">
+              <img class="kit-slot__img" src="../assets/first-party/026_07_woman-smile-mirror-consultation-with-dentist-oral-hygiene-mouth-cleaning-service-female-person-assessment-orthodontic-inspection-dental-care-patient-teeth-checkup-scaled.jpg" alt="A masked clinician in scrubs holding a large round hand mirror up for a seated patient while steadying her cheeks with mint-green gloved fingers." width="2560" height="1350" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <div class="kit-mediagrid__cards">
+            <article class="kit-card kit-card--flat" data-rise>
+              <p class="kit-card__title">General Dentistry</p>
+              <p class="kit-card__body">Owns the maintenance visit end to end: the history, the chart, the scaling, the polish, the fluoride and the date you are asked to come back on.</p>
+            </article>
+            <article class="kit-card kit-card--flat" data-rise>
+              <p class="kit-card__title">Periodontics</p>
+              <p class="kit-card__body">Takes the case when the chart shows pocketing, generalized bleeding or bone loss. The handover happens inside the same group and on the same records, which is the reason it happens at all rather than being deferred to your next visit.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 05, the three named systems this visit uses, and the single job each of them is the right instrument for.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-05"><span>Go to stage 05</span></a>
+            <a class="kit-btn kit-btn--ghost" href="specialists.html"><span>Our Specialists</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Route index</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- src: D-POSITION-TECH -->
+<!-- pick: SECTION-COMPONENTS.md #9 Services 3-col | considered: #10,#12 | rigor: heavy | why: three named instruments, each needing two or three sentences to say what it does in YOUR appointment, is the content shape #9 describes: equal columns, a name and a short description, no hierarchy between them, which is honest here because these three do not rank, they simply do different jobs in the same hour. The locked sheet ships this as .kit-sys, a hairline-gapped matrix in which the gap is the rule, so three names read as one panel rather than as three boxes. #10's four-column compact grid is catalogued for lighter cells and a fourth column would have to be filled with an instrument this visit does not use. #12's feature row with a screenshot needs one artefact to look at, and the honest artefact for this stage does not exist as a first-party photograph, so the media column would be filled with a stock machine standing in for one of ours. ADAPTATION: the third unit carries a per-clinic scope and its cell says so in the unit's own location slot, because it is the only capability on this page with a verified four-site scope and that scope belongs beside the machine rather than in a caveat elsewhere. -->
+<section class="section section--cool" id="stage-05" aria-labelledby="h05" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-4">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">05</span>
+            <div>
+              <span class="kit-eyebrow">Stage 05</span>
+              <h2 id="h05">The instruments</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Three systems carry this appointment, and each is the right tool for one part of it.</p>
+        <p class="kit-accentline">We name the equipment because a name can be checked. An adjective cannot.</p>
+      </div>
+
+      <div class="col col--span-8">
+        <div class="kit-sys kit-sys--3up" data-rise>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">System 01</span>
+            <p class="kit-sys__name">Ultrasonic scaling</p>
+            <p class="kit-sys__note">The working instrument for hardened deposit, with water irrigation to keep the tooth cool and flush the debris clear. It works by vibration rather than by force, which is why it can be used at the margin without gouging the enamel.</p>
+            <span class="kit-sys__where"><i aria-hidden="true"></i>Named installed system</span>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">System 02</span>
+            <p class="kit-sys__name">AirFlow (guided biofilm therapy)</p>
+            <p class="kit-sys__note">Used in place of a polishing paste where marking and film are heavy, around brackets and implants, and on bared root surfaces where an abrasive paste would be uncomfortable.</p>
+            <span class="kit-sys__where"><i aria-hidden="true"></i>Named installed system</span>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">System 03</span>
+            <p class="kit-sys__name">3D CBCT imaging</p>
+            <p class="kit-sys__note">Where the chart suggests bone loss, the periodontal picture is measured in three dimensions in the same building rather than estimated from a flat image or referred out for a scan.</p>
+            <span class="kit-sys__where"><i aria-hidden="true"></i>Installed at all four clinics</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 06, the starting figure, what moves it, and the one way this clinic is paid.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-06"><span>Go to stage 06</span></a>
+            <a class="kit-btn kit-btn--ghost" href="airflow.html"><span>Airflow Cleaning</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Back to the map</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- src: D-POSITION-PRICE -->
+<!-- pick: PRICING-SECTIONS.md #5 Plain-deal honesty stance | considered: #4,#3 | rigor: heavy | why: the money argument on this page is not a cost MODEL with drivers to configure, it is a STANCE, that a maintenance fee moves with how much deposit is present and with nothing else, and that the practice is paid one way; #5 is the catalogued entry whose whole job is to state the deal plainly and let the honesty do the selling, which is the only shape that can carry a self-pay disclosure without dressing it up. #4's quote-only cost-model split is the sibling cleaning page's pick and is refused here for a reason beyond variety: this treatment has fewer real drivers, so a five-row driver ladder would have to be padded to fill the column, and padding a price explanation is how a page starts inventing terms. #3's monthly and annual billing toggle assumes a subscription, and a maintenance appointment is not billed on a cycle, so the control would offer a choice this practice does not sell. ADAPTATION: #5 assumes a real number to be plain about, and this build has none, so the figure ships inside the stat cell with the sanctioned representative marker as its own visible label, and the stance is stated about the MODEL rather than about the amount. -->
+<section class="section section--paper" id="stage-06" aria-labelledby="h06" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-5">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">06</span>
+            <div>
+              <span class="kit-eyebrow">Stage 06, the plain deal</span>
+              <h2 id="h06">What it costs</h2>
+            </div>
+          </div>
+        </div>
+        <div class="kit-statband" data-rise>
+          <div class="kit-stat">
+            <span class="kit-stat__n kit-tab"><span class="pre">From ₱</span>2,500</span>
+            <span class="kit-stat__l">An indicative starting figure, not an Elevate price</span>
+            <p class="kit-stat__sub">Anchored to published market ranges, never to an Elevate rate card.</p>
+          </div>
+        </div>
+        <p class="kit-quote kit-quote--display readw">Elevate Dental does not accept HMO or dental insurance. All treatment is self-pay.</p>
+        <p class="kit-body readw">HMO coverage cannot be used for dental treatments at our clinics. It is stated in the stage where the money is discussed, because finding it out halfway through a plan is worse than reading it now.</p>
+      </div>
+
+      <div class="col col--span-7">
+        <p class="kit-micro">What moves the final figure</p>
+        <ul class="kit-list">
+          <li>How much deposit has accumulated, and whether it extends below the gum margin.</li>
+          <li>How long it has been since your last professional appointment of this kind.</li>
+          <li>Whether the visit has to be split across more than one sitting.</li>
+          <li>Whether a powder jet is used for heavy marking instead of a paste.</li>
+          <li>Whether imaging or a fluoride application is indicated.</li>
+          <li>Whether the chart shows that the deeper periodontal treatment is the correct one instead, which is priced on its own.</li>
+        </ul>
+        <p class="kit-body readw--wide">Your exact fee is confirmed at consultation, before treatment begins.</p>
+        <div class="kit-truth">
+          <p>Every peso amount on this page is representative, anchored to published market ranges, and is not a price set by Elevate Dental. The fee you are given is quoted per treatment, after a clinical assessment.</p>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 07, what the visit actually leaves behind, and the three things it is not able to change.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-07"><span>Go to stage 07</span></a>
+            <a class="kit-btn kit-btn--ghost" href="prices.html"><span>Treatment Prices</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Back to the map</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- src: D-POSITION-PROOF -->
+<!-- pick: SECTION-COMPONENTS.md #26 Pull-quote section | considered: #30,#24 | rigor: heavy | why: the honest content of this stage is one sentence about what a clean cannot do, followed by the short list of what it can, and #26 is the entry that lets a single line carry the band with its supporting prose kept underneath rather than beside it, which is the right weighting when the limitation matters more than the benefit. #30's before-and-after grid is the shape this stage would take on any other site and it is refused on evidence: pre-launch blocker B-2 records that the required owner authorisation is not on file for any clinical image, so the grid would either sit empty or be filled with a borrowed mouth standing in for a real result. #24's testimonials grid fails the same way one step removed, because the testimonial COUNT is cleared while republishing testimonial CONTENT is blocked by the same missing consent, and a count belongs on the results page rather than in the middle of a treatment route. ADAPTATION: the band carries a photograph of a patient holding a mirror at the end of a visit, captioned as exactly that, because a mirror in a treatment room is a moment rather than an outcome and the caption refuses the outcome reading in words. -->
+<section class="section section--warm" id="stage-07" aria-labelledby="h07" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">07</span>
+            <div>
+              <span class="kit-eyebrow">Stage 07, what changes</span>
+              <h2 id="h07">What the visit leaves behind</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-quote kit-quote--display readw">A clean does not change your natural shade, close a gap, or repair a cavity.</p>
+        <p class="kit-body readw">What it does leave is smooth tooth surfaces, a gum margin free of the deposit that was irritating it, and light marking lifted off the enamel.</p>
+        <p class="kit-body readw">Gums that bled on brushing usually stop within one to two weeks, provided the home routine keeps plaque down. Some patients notice slight sensitivity to cold for a few days where deposit had been covering a bared root surface, and it settles.</p>
+      </div>
+
+      <div class="col col--span-5">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/generated/gen-scaler-vs-polisher.jpg" alt="An ultrasonic scaler tip and a polishing handpiece laid side by side on dark slate." width="768" height="512" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>A moment, not an outcome</b><span>The mirror at the end of a visit is not a case result.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 08, seven questions, including the two that people are most reluctant to ask out loud.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-08"><span>Go to stage 08</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Back to the index</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- src: D-OFFER-009 -->
+<!-- pick: FAQ-ACCORDION.md #3 Two-column split FAQ | considered: #7,#5 | rigor: heavy | why: these seven questions do not fall into groups, they fall into one worry, whether this appointment is going to hurt and whether the answer will embarrass the reader, and #3 is the entry that keeps the framing on one side and the rows on the other, so a reader can open exactly the one they came for without being told which category their anxiety belongs to. #7's category-grouped sections is the sibling cleaning page's pick and is genuinely wrong here as well as duplicative: splitting seven questions into named groups would put the bleeding-gums question under a heading a reader has to claim before they can read the answer. #5's centred FAQ with an eyebrow would break the one left reading axis this system holds from the hero to the last band, for no gain a flat stack does not already give. ADAPTATION: the rows are the sheet's native details and summary elements, so every answer stays in the accessibility tree, opens with scripting off, and prints; and the two questions patients most often preface with an apology are placed first rather than buried at the bottom. -->
+<section class="section section--cool" id="stage-08" aria-labelledby="h08" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-4">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">08</span>
+            <div>
+              <span class="kit-eyebrow">Stage 08, seven answers</span>
+              <h2 id="h08">Questions, answered plainly</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Nobody needs to apologise for the state of their teeth at a cleaning appointment.</p>
+        <p class="kit-body readw">The first two below are the ones people most often ask quietly, and they are answered first for that reason.</p>
+        <div class="kit-actions kit-actions--tight">
+          <a class="kit-btn kit-btn--ghost" href="general-dentistry.html"><span>General Dentistry</span></a>
+          <a class="kit-btn kit-btn--ghost" href="periodontics.html"><span>Periodontics</span></a>
+        </div>
+      </div>
+
+      <div class="col col--span-8">
+        <div class="kit-faq" data-rise>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Why do my gums bleed during it?</summary>
+            <p class="kit-faq__a">Because they are inflamed. Healthy gums do not usually bleed under an instrument. The bleeding is the sign that the deposit needed removing, and it typically stops within one to two weeks afterwards.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Does it hurt?</summary>
+            <p class="kit-faq__a">Most patients feel vibration, water and light pressure rather than pain. Sensitivity is more common where the gum has receded and the root is bared. Tell your dentist during the appointment and the technique, the tip and the water temperature are adjusted. Where an area is genuinely tender, local anesthetic is available.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">How often do I need this?</summary>
+            <p class="kit-faq__a">Every six months for most adults. Your dentist may set a shorter interval if you smoke, wear fixed braces, have implants, are pregnant, have diabetes, or have a history of gum disease. That decision comes from your chart rather than from a default.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Will scaling loosen my teeth or damage the enamel?</summary>
+            <p class="kit-faq__a">No. Hardened deposit can be splinting teeth that are already mobile from bone loss, and removing it can make that pre-existing mobility noticeable. The instrument works on the deposit, not on the enamel. If your teeth are mobile, that is a periodontal finding and it is charted and treated, not ignored.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Will it whiten my teeth?</summary>
+            <p class="kit-faq__a">It lifts marking off the surface and returns the tooth to its own natural shade. It does not lighten that shade. Going lighter is teeth whitening, a separate treatment carried out after the mouth is clean and healthy.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">What is the difference between this and scaling and root planing?</summary>
+            <p class="kit-faq__a">This treats the crown surfaces and the gum margin in a healthy or mildly inflamed mouth. Scaling and root planing treats the root surface inside a periodontal pocket, is performed under local anesthetic, and is usually split over more than one visit. Your chart decides which one you need.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Can I bring my child?</summary>
+            <p class="kit-faq__a">Yes. Children with their permanent teeth follow the same routine, and our pediatric dentistry specialists handle younger cases and anxious children.</p>
+          </details>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 09, the last one: the half hour afterwards, the habit between visits, and exactly what a first appointment produces.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-09"><span>Go to stage 09</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Back to the index</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- src: D-OFFER-009 -->
+<!-- pick: SECTION-COMPONENTS.md #33 Custom-quote driver | considered: #41,#38 | rigor: heavy | why: Collision A of the composition-medical-health blueprint binds the body to ZERO closing bands, so the final stage of the route has to be a CONTENT band with the ask folded into it, and #33 is the only entry in the conversion family whose declared role is to drive toward an appointment by describing what that appointment produces; the copy cooperates, because what it holds here is aftercare instruction plus the three things a first visit gives you, which is content, and the ask rides out on a .kit-inline rail the CTA-singularity gate does not count as a band. #41's closing CTA is precisely the standalone band that gate counts, and the chrome's .precta already IS this site's one, so picking it would put the page at two and fail closed. #38's newsletter band would end a clinical route on a mailing list, which is a different transaction from the one this page exists to start. ADAPTATION: because this is the END of a declared route, the band closes on an outcome row and a link back to the index rather than on a forward hand-off, so the sequence visibly terminates and no tenth stage is implied. -->
+<section class="section section--paper" id="stage-09" aria-labelledby="h09" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">09</span>
+            <div>
+              <span class="kit-eyebrow">Stage 09, the end of the route</span>
+              <h2 id="h09">Aftercare, and what the consultation gives you</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">You can eat and drink straight away, unless fluoride was applied, in which case wait thirty minutes.</p>
+        <ul class="kit-list">
+          <li>Avoid coffee, tea, red wine, dark sauces and tobacco for the rest of the day. The surface takes up colour most readily right after a clean.</li>
+          <li>Brush twice daily with a soft brush and fluoride toothpaste, and clean between the teeth every day.</li>
+          <li>Give particular attention to the places your dentist pointed out, because those are the ones your current routine is missing.</li>
+          <li>If a tooth is still sensitive after a week, or a gum area keeps bleeding, call us rather than waiting for the next visit.</li>
+        </ul>
+        <p class="kit-body readw--wide">A first appointment produces three things: a charted assessment of your gums, the clean itself carried out against what that chart showed, and a fee in writing. None of them commits you to a course of treatment.</p>
+        <div class="kit-inline">
+          <p>Book a free initial consultation, get your gums charted, and have your fee confirmed in writing before treatment starts.</p>
+          <div class="kit-inline__acts">
+            <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+            <a class="kit-btn kit-btn--ghost" href="contact.html"><span>Ask about this treatment</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--span-5">
+        <p class="kit-body readw">The route ends here on purpose. Nine stages, all of them read: what the deposit is, whether this is your appointment or somebody else's, the sequence at the chair, the two disciplines, the three instruments, the figure and what moves it, what the visit leaves behind, the seven questions, and the habit that decides how the next one goes.</p>
+        <p class="kit-body readw">If a stage raised something this page did not answer, bring it to the consultation and it will be answered against your own chart rather than against a page.</p>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Outcome</p>
+          <ul class="kit-list">
+            <li><b class="kit-strong">Feature.</b> The routine professional clean, performed by a general dentistry specialist, priced from the representative starting figure at stage 06.</li>
+            <li><b class="kit-strong">Do.</b> Book a free consultation and get a written quote.</li>
+            <li><b class="kit-strong">Means.</b> You know the cost and the clinician before you commit.</li>
+          </ul>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Route index</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-start"><span>Back to the start</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,472 @@
+<!--META {"title":"Endodontics Philippines | Root Canal Treatment","desc":"Save an infected tooth with root canal therapy planned on 3D CBCT imaging, performed by endodontic specialists.","noindex":true}-->
+<!-- TITLE and DESC are the LOCKED values from _handoff/seo-enrichment.md section 1, the SEO SSOT.
+     The SSOT separator is an en dash and renders here as a pipe, because verify-no-dashes is
+     registered on this build. Only the SEPARATOR CHARACTER changed; no word was altered, added,
+     removed or reordered.
+     The key is "desc" and NOT "description": build.mjs renders esc(meta.desc), and its JSON branch
+     does not alias description to desc, so a "description" key ships an EMPTY meta description
+     while looking correct in the fragment.
+     noindex is set on EVERY page because this publishes to a PUBLIC preview URL while the pages
+     carry representative market prices rather than this clinic's own figures. robots.txt cannot
+     carry that load: crawlers read it only at the origin root, and this ships to a project
+     subpath, so the disallow-all there is inert. noindex is the protection that actually works. -->
+<!-- ============================================================================
+     ENDODONTICS. T-HUB, promoted from the owner-stamped template
+     _design/_tournament/templates/T-HUB/c (concept C, "THE COMPARISON").
+     PROMOTION, not redesign: the template's spine is kept and the page carries
+     ITS OWN copy from _copy/endodontics.md.
+
+     THIS HUB HAS ONE CHILD. sitemap.yaml gives endodontics exactly one page with
+     parent: endodontics, root-canal-treatment. A four-up routing rail and a
+     four-row matrix are therefore both refused: a comparison table with one row
+     is not a comparison, it is a card with borders. What the copy supplies
+     instead is a REAL fork, stated in its own standfirst: when the pulp is
+     inflamed or infected there are two paths, treat the inside of the tooth or
+     take the tooth out. The template's comparison spine is re-pointed onto that
+     fork. The matrix in band 03 therefore has two rows, and the second row is
+     labelled ON THE PAGE as the alternative path rather than as a second child
+     of this field, because it belongs to oral surgery and routes there.
+
+     THE FOUR ATTRIBUTES on the child card are re-cut from the template's
+     cosmetic axes (Changes / Made / Quoted per / From) to the ones a reader with
+     a painful tooth is actually weighing: Keeps / Done under / Visits / From.
+
+     WHERE THE COPY WENT. Hero to band 01. What this field covers, the pulp
+     explanation and the seven presentations, to band 02. Treatments in this
+     field, plus the fork matrix, to band 03. Technology to band 04, which on
+     this field is the band that decides the plan rather than a support act, so
+     it is given a media column and a heavier lede. The specialists to band 05.
+     Starting prices and the closing CTA to band 06. The clinic list stays in
+     the chrome, which already carries all four names, lines and weeks.
+
+     LIBRARIES APPLIED, not merely named.
+       _RESPONSIVE-PATTERN-LIBRARY  Comp6, the table-to-cards reflow, is recorded
+         MANDATORY on any multi-column matrix, so every cell in band 03 carries a
+         data-label: the locked sheet drops the thead at 767 and reprints each
+         cell's header from that attribute. G7, equal height with a mandatory
+         mobile relax, governs the paired cards in band 01.
+       _COMPOSITION-LAWS  L1, stacked split reading order, governs bands 02, 04
+         and 05. L9, SELECTION-RATIONALE, is why every band carries an adjacent
+         ledger naming the pick, two real alternatives and why they lost.
+       _MODERN-WOW-SPEC  the ceiling the locked sheet already spends: the fixed
+         grain veil, the tint wash and the asymmetric index-ring opener.
+
+     IMAGERY. Five real first-party files from _imagery-map.json. The roster
+     portrait in this page's pool is DELIBERATELY UNUSED: no endodontist is named
+     in the supplied handoff, so publishing a named clinician's face on this hub
+     would assert a field assignment the handoff does not evidence.
+
+     HONESTY. One peso figure, carrying a plain-English representative-market
+     disclosure in visible content. No urgency or same-day claim is made anywhere, because
+     whether the clinics hold urgent slots is an open owner decision, and the
+     copy flags it as deliberately not claimed. No comfort promise is made: the
+     word for pain relief this field usually reaches for is banned by name in
+     client-rules.json and it is banned for good reason on a clinical page.
+
+     ZERO closing CTA bands, ZERO dark bands and ZERO arc seams are authored
+     here. The chrome's .precta is the page's one closing band.
+     ============================================================================ -->
+
+<!-- pick: HERO-COMPOSITIONS.md #23 Comparison hero (before/after, us/them) | considered: #7,#20,#5 | rigor: heavy | why: the copy's standfirst does not describe a field, it states a fork, that an inflamed or infected pulp leaves two paths and that this field takes the first one, and #23 is the only hero in the catalogue whose structure IS a fork: two peer panels under one headline. Using anything else would bury the one thing a frightened reader with a painful tooth arrived to find out, which of the two things is going to happen. #7 full-bleed image plus floating cards was the closest rival and would carry the same two panels, but it needs a photograph strong enough to sit under type, and the honest asset pool for this field is instruments and models at close range, which read as clutter behind text. #20 three-column text plus stat plus photo wants a countable proof column, and the counts this brand owns are rationed to other slugs. #5 full-bleed image plus overlay text has one message and this screen has two. ADAPTATION, load bearing: #23 is catalogued as an oppositional hero where the losing side is faded or struck through. That is refused. The second path here, taking the tooth out, is a real clinical answer for a tooth that cannot be saved, and a design that greys it out would be selling the more expensive route with a visual trick. Both panels take the identical card treatment and the second one routes to the field that actually performs it. -->
+<section class="section surface-dark kit-hero foh-hero" id="s01" aria-labelledby="h01" data-surface="dark" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="foh-hero__stage">
+          <figure class="foh-hero__band">
+            <img class="foh-hero__img" src="../assets/generated/gen-hero-endo-files.jpg" alt="A fan of fine tapered endodontic files laid in a close row on woven bone linen." width="3136" height="1344" loading="eager" fetchpriority="high" decoding="async">
+            
+          </figure>
+          <div class="foh-hero__inner">
+              <h1 class="foh-hero__title" id="h01">Endodontics Philippines: Root Canal Treatment</h1>
+            </div>
+          <div class="foh-hero__lockup">
+            <p class="foh-hero__eyebrow">Endodontics</p>
+            <p class="foh-hero__lede">Endodontics treats the living tissue inside a tooth.</p>
+            <div class="kit-actions">
+              <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+              <a class="kit-btn kit-btn--secondary" href="#s04">See the two paths compared</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MOVED HERE FROM THE OPENING SECTION, 2026-08-25, BYTE-VERBATIM (class attributes included).
+     The FOH pass added the photographic band but left the old hero's remaining THREE cells inside
+     the same section, where the released hero .container renders them flush to the viewport with no
+     gutter. Nothing here was deleted, because nothing here is duplicated: the two path cards carry
+     this page's ONLY link to oral-surgery.html and one of its two links to root-canal-treatment.html
+     (both counted by grep in this fragment), and the .kit-slot holds a DIFFERENT photograph from the
+     assigned band image, occurring exactly once. Section 04 compares the same two paths in a TABLE
+     with different wording; it does not carry these routes.
+     WHY THESE CELLS ARE NOT FOLDED INTO THE TOP OF SECTION 02, which is where the sibling pages put
+     their moved cells: section 02's row is .row--split, and structural.css:258 sets
+     `.row--split > .col { grid-column: auto }` at a higher specificity than any .col--span-N, so that
+     row is a TWO-TRACK grid in which every cell takes one track. Adding an ODD number of cells to it
+     would shift its existing copy column into the narrow track and its media column into the wide one
+     - a re-composition of a section this pass is not allowed to redesign. A sibling section of its own
+     moves the cells while leaving section 02 untouched, which is the shape treatments.content.html
+     already ships for the same problem (its s-open-b). Ground, padding and .row grammar are the
+     locked ones; no CSS was added and no padding value was touched. -->
+<section class="section section--paper" id="s01b" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-6 col--stretch">
+        <div class="kit-card kit-card--pad" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Path one</span>
+            <span class="kit-card__unit">Keep it</span>
+          </div>
+          <p class="kit-card__title">Treat the inside of the tooth</p>
+          <p class="kit-card__body">The infected pulp is removed, each canal is cleaned and disinfected, and the space is sealed so bacteria cannot get back in. The tooth stays in place and keeps doing its job in your bite.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="root-canal-treatment.html"><span>Root Canal Treatment</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--span-6 col--stretch">
+        <div class="kit-card kit-card--pad" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Path two</span>
+            <span class="kit-card__unit">Remove it</span>
+          </div>
+          <p class="kit-card__title">Take the tooth out</p>
+          <p class="kit-card__body">Where a tooth turns out to be unrestorable, removing it is the honest answer and the gap is planned for afterwards. That path is surgical work and it belongs to a different field, which is in the same building.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="oral-surgery.html"><span>Oral Surgery</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--span-6 col--media">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--circle">
+            <img class="kit-slot__img" src="../assets/generated/gen-endo-microscope.jpg" alt="The head of a surgical operating microscope in a darkened dental treatment room." width="675" height="585" loading="eager" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Shown, then decided</b><span>The inside of a tooth is explained on a model before it is opened.</span></figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- pick: SECTION-COMPONENTS.md #6 "Is this for me" qualifier | considered: #7,#34,#9 | rigor: heavy | why: the copy hands this band seven presentations, each one something a reader can check themselves against, a toothache that lingers after heat or cold is taken away, a tooth tender to bite on, a swelling near a root tip, and #6 is the entry whose stated role is exactly that self-check. On this field the self-check has a second job that no other band on the page can do: it lets a reader who has been putting off an appointment recognise that what they have is on the list, which is the whole reason the band leads with symptoms rather than with the treatment. #7 problem framing is the prosthodontic hub's pick and is the natural rival, but it states ONE problem in big type and this field presents in seven different ways. #34 FAQ accordion would hide six of the seven behind a control and make a worried reader click through their own symptom. #9 services 3-col names products, and there is only one product in this field. ADAPTATION: the band closes on the tinted card that carries the copy's own in-house paragraph, so the reassurance that the next step is in the same building sits beside the symptom list rather than under the fold. -->
+<section class="section section--cool" id="s02" aria-labelledby="h02" data-rise>
+  <div class="container">
+    <div class="row row--split">
+
+      <div class="col col--copy">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">02</span>
+            <div>
+              <span class="kit-eyebrow">What this field covers</span>
+              <h2 id="h02">What brings a tooth here</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">The pulp is the nerve and blood supply that runs through the center of a tooth. Deep decay, a fracture or a heavy knock can let bacteria reach it. Once that happens the pulp does not recover on its own, and the problem moves down the root towards the bone.</p>
+        <ul class="kit-list">
+          <li><b class="kit-strong">Lingering ache.</b> A toothache that stays after heat or cold is taken away, or that wakes you at night.</li>
+          <li><b class="kit-strong">Tender to bite on.</b> One tooth that objects when you put pressure on it.</li>
+          <li><b class="kit-strong">A swelling.</b> An abscess or a swelling in the gum near a root tip.</li>
+          <li><b class="kit-strong">A darkened tooth.</b> One that has changed color after an injury.</li>
+          <li><b class="kit-strong">Unsettled work.</b> A previous treatment that has not settled and needs redoing.</li>
+          <li><b class="kit-strong">A crack.</b> A cracked tooth where the pulp has been exposed.</li>
+          <li><b class="kit-strong">Before a crown.</b> A tooth that needs the pulp removed before a crown can be built over it.</li>
+        </ul>
+        <p class="kit-body readw">Treatment is carried out under local anesthesia, and the tooth is isolated so the canal stays clean while it is being worked on.</p>
+        <div class="kit-card kit-card--tint kit-card--pad" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">What happens next, and where</span>
+            <svg class="kit-ring" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+            </svg>
+          </div>
+          <p class="kit-card__title">The step after this one is in the same building.</p>
+          <p class="kit-card__body">Endodontics is one of the nine fields of dentistry practiced in-house at Elevate Dental. If the tooth needs a crown afterwards, the prosthodontist is in the same clinic. If the tooth turns out to be unrestorable, the oral surgeon is too. You are not sent elsewhere between the diagnosis and the repair.</p>
+        </div>
+      </div>
+
+      <div class="col col--media">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--circle">
+            <img class="kit-slot__img" src="../assets/generated/gen-rotary-endo.jpg" alt="A rotary endodontic handpiece fitted with a fine file against a deep navy backdrop." width="675" height="585" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>The part that is treated</b><span>The canal system runs from the crown to the tip of each root.</span></figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: PRICING-SECTIONS.md #2 Comparison table to cards on mobile | considered: #5,#6,#4 | rigor: heavy | why: this hub has ONE child, so the template's four-up rail has nothing to compare and the routing job collapses into a single card. What the reader still needs compared is the FORK the copy states, treat the tooth or remove it, and #2 is the catalogued band that puts two options against the same attributes in one semantic table with nothing hidden. Its implementation is already verified in this build: _RESPONSIVE-PATTERN-LIBRARY records Comp6, the table-to-cards reflow, as MANDATORY, and the locked sheet ships it, so the two-row matrix survives 375 with every cell keeping its own header. #5 plain-deal honesty stance would carry the money paragraph well but cannot hold the clinical axes that decide the fork. #6 quote-configurator ladder explains what moves a number, and on this field the number moves with the tooth rather than with options a reader can pick. #4 quote-only cost-model split never prints a figure, and one real price disclosure exists here and should be visible. HONESTY, load bearing: the second row of that table is NOT a second child of this field. It is the alternative path, it is performed by oral surgery, and the table says so in the row itself rather than letting a reader assume this hub owns both. -->
+<section class="section section--paper" id="s03" aria-labelledby="h03" data-rise>
+  <div class="container">
+    <div class="row row--stretch">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">03</span>
+            <div>
+              <span class="kit-eyebrow">Treatments in this field</span>
+              <h2 id="h03">One treatment, and the path it is weighed against</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">One treatment sits under endodontics. It has its own page with the full process, the timeline and the starting price.</p>
+      </div>
+
+      <div class="col col--span-4 col--media">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2023_09_root-canal1.jpg" alt="A pink-gloved hand lowering a fine tapered file with a rubber stop into a molar on a lower-jaw teaching model, with hand instruments on a pink tray in front." width="1196" height="842" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Worked to length</b><span>Each canal is cleaned to a measured depth, not to an estimate.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--span-8">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">The one route</span>
+            <span class="kit-card__unit">Keeps the tooth</span>
+          </div>
+          <p class="kit-card__title">Root Canal Treatment</p>
+          <p class="kit-card__body">The infected pulp is removed, every canal is cleaned and disinfected, and the space is sealed. Most cases are completed in one or two appointments; the number depends on the tooth and on how far the infection has traveled. Planned on 3D CBCT imaging and performed by endodontic specialists.</p>
+          <dl class="kit-card__hours">
+            <div><dt>Keeps</dt><dd>Your own tooth</dd></div>
+            <div><dt>Done under</dt><dd>Local anesthesia</dd></div>
+            <div><dt>Visits</dt><dd>One or two</dd></div>
+            <div><dt>From</dt><dd>₱15,000</dd></div>
+          </dl>
+          <p class="kit-meta">A representative market figure for root canal work in the Philippines, not an Elevate quote.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="root-canal-treatment.html"><span>Root Canal Treatment</span></a>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #15 Comparison table (us vs them) | considered: #29,#14,#7 | rigor: heavy | why: the band above routes to the single child of this hub; this band does the other half of a hub's job, which is to show what that child is weighed AGAINST, and #15 is the entry whose whole structure is an opposition given equal weight on shared axes. Keeping it as its own band rather than folding it under the card is deliberate: a matrix pinned beneath a card reads as that card's specification sheet, and this matrix is not a spec, it is a second answer that belongs to a different field. #29 before-and-after pair is barred outright, proof_rules.clinical-image-library is blocked pending a documented owner authorisation. #14 tabbed content would hide one path behind a control and make a reader in pain click to find out their tooth may not be savable. #7 problem framing carries one column and no opposition. RE-REGISTERED, load bearing: #15 is authored as us versus THEM. There is no THEM; competitorFraming.tierBDensityCap is zero site wide, so the axis is re-pointed at the practice's own two paths, and the row that is not this field's work says so in its own cell and routes to the field that performs it. -->
+<section class="section section--warm" id="s04" aria-labelledby="h04" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">04</span>
+            <div>
+              <span class="kit-eyebrow">Side by side</span>
+              <h2 id="h04">The two paths, on the same axes</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">The table sets the treatment beside the only real alternative, so the choice is visible rather than implied.</p>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-mesh" aria-hidden="true" style="background-image:var(--ds-grid)"></div>
+        <div class="kit-table__scroll">
+          <table class="kit-table">
+            <caption>The two paths for an infected pulp, compared. The starting figure is drawn from published Philippine market ranges. The second row is not a treatment in this field: it is performed by oral surgery and it routes there.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Path</th>
+                <th scope="col">What happens to the tooth</th>
+                <th scope="col">What follows it</th>
+                <th scope="col">Which field performs it</th>
+                <th scope="col" class="kit-table__num">Starting price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Path"><b class="kit-strong">Treating the pulp, keeping the tooth</b></td>
+                <td data-label="What happens to the tooth">It stays in your jaw and keeps its place in the bite</td>
+                <td data-label="What follows it">Usually a crown, to protect what is left of it</td>
+                <td data-label="Which field performs it">Endodontics, on this page</td>
+                <td data-label="Starting price" class="kit-table__num"><span class="kit-table__from">From</span>₱15,000<span class="kit-table__from">Not an Elevate quote</span></td>
+              </tr>
+              <tr>
+                <td data-label="Path"><b class="kit-strong">Removal, where the tooth cannot be saved</b></td>
+                <td data-label="What happens to the tooth">It is taken out and the gap is planned for</td>
+                <td data-label="What follows it">A bridge, a partial or an implant restoration, later</td>
+                <td data-label="Which field performs it">Oral surgery, then prosthodontics</td>
+                <td data-label="Starting price" class="kit-table__num">Quoted on those pages</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="kit-foot">
+          <p class="kit-micro">What the table cannot decide</p>
+          <p class="kit-body readw--wide">Which row your tooth belongs to is a reading, not a preference. How much sound structure is left, how far the infection has travelled and what the root looks like in three dimensions are what choose, and all three are read before anything is drilled.</p>
+          <p class="kit-body readw--wide">A tooth that has had this treatment usually needs a crown afterwards to protect what is left of it. That is a separate treatment with a separate fee, listed on the price page.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #12 Feature row with screenshot | considered: #13,#3,#11 | rigor: heavy | why: on this field the copy states outright that the imaging decides the plan, so the technology band is not a support act and cannot be given the quiet lattice treatment the pediatric hub uses; #12 is the entry that stands a named system beside the reading it produces and gives that reading a media column of its own. Only TWO systems are named in this field's copy, and #12 is comfortable with two where a four-cell lattice would look half empty. #13 bento feature grid wants four or more cells of similar weight. #3 minimal icon-top would need an icon per system and this build owns no icon set. #11 service pillars 2-col with image is the pediatric routing band's pick and is deliberately not reused for a different job on a sibling page. CLEARANCE: both systems are cleared nominative-text-only in client-rules.json third_party_marks. The copy's own line, that a periapical film is a flat picture of a three-dimensional problem, is kept verbatim because it is the argument for the equipment rather than a description of it. -->
+<section class="section section--paper" id="s05" aria-labelledby="h05" data-rise>
+  <div class="container">
+    <div class="row row--split">
+
+      <div class="col col--copy">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">05</span>
+            <div>
+              <span class="kit-eyebrow">Technology used here</span>
+              <h2 id="h05">The imaging decides the plan</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">A molar can carry four or more canals, some of them curved, some hidden behind a ledge of dentine. What is known before the tooth is opened comes from two systems.</p>
+        <div class="kit-sys" data-rise>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">01</span>
+            <p class="kit-sys__name">3D CBCT imaging</p>
+            <p class="kit-sys__note">A periapical film is a flat picture of a three-dimensional problem. A cone-beam volume shows how many canals a tooth has, how they curve, and how far infection has spread at the root tip, before anything is opened. Available at all four clinics.</p>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">02</span>
+            <p class="kit-sys__name">Digital radiography</p>
+            <p class="kit-sys__note">Digital sensors are used during treatment to confirm working length and to check the final seal. The image appears immediately, so the check happens while you are still in the chair rather than at a second appointment.</p>
+          </div>
+        </div>
+        <div class="kit-foot">
+          <p class="kit-micro">Where the volume is taken</p>
+          <p class="kit-body readw--wide">The cone-beam scan is available at Mitsukoshi BGC, Shangri-La Plaza, Bonifacio Stopover BGC and Alabang Town Center, so the reading that decides your plan does not wait on an outside imaging center.</p>
+          <p class="kit-status"><span class="kit-status__dot" aria-hidden="true"></span>3D CBCT imaging, all four clinics</p>
+        </div>
+        <div class="kit-actions kit-actions--tight">
+          <a class="kit-btn kit-btn--ghost" href="technology.html"><span>Full detail on each system</span></a>
+          <a class="kit-btn kit-btn--ghost" href="dental-xrays.html"><span>Digital Dental X-rays</span></a>
+        </div>
+      </div>
+
+      <div class="col col--media">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--arch">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2022_08_root-canal-treatment-an-endodontist-preparing-pat-2021-08-30-10-56-46-utc-1.jpg" alt="A pink-gloved hand holding a metal handpiece with a fine tapered file fitted in its head, beside a patient draped under a blue rubber dam with a metal frame." width="1200" height="800" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Isolated first</b><span>The tooth is kept dry and clean while the canal is worked on.</span></figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #8 Manifesto / belief statement | considered: #26,#18 | rigor: heavy | why: this band has one argument and it is an argument, not a list: root canal work rewards repetition, and a practice that meets a difficult molar occasionally sends it somewhere else. #8 is the entry built to carry a stated belief at length in the page's own voice, and it is the only one that lets the case for keeping this in-house be made as reasoning rather than as three cards of equal weight. CARD-VARIATIONS.md #4, the circle-icon service card, is the sibling hubs' pick for this beat and was weighed hardest: it works where a case genuinely crosses into three other fields, which is true on the pediatric and prosthodontic hubs and NOT true here, where the copy names exactly two neighbours and both are consequences of one decision rather than alternatives to it. Forcing three cards would have meant inventing a third neighbour. TEAM-GALLERY-SECTIONS.md #2, the circular roster, is what this band would use the day the roster lands, and it is refused today because no endodontist is named in the supplied handoff and a roster of unnamed circles is fabricated proof. #26 pull-quote would compress the argument to a single line and lose the reasoning that earns it, and this page already spends the pull-quote device on the self-pay condition in band 06, where a statement standing alone is exactly right. #18 team grid 3-col is the shape this band wants the day a roster exists, and today it would render three empty cells. The two neighbours are carried as a pair of ruled routes under the argument rather than as cards, so the band reads as one statement with two exits. -->
+<section class="section section--paper" id="s06" aria-labelledby="h06" data-rise>
+  <div class="container">
+    <div class="row row--split">
+
+      <div class="col col--copy">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">06</span>
+            <div>
+              <span class="kit-eyebrow">The specialists in this field</span>
+              <h2 id="h06">Why repetition is the whole argument</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">A molar can carry four or more canals and their shape is not fully known until it is reached. An endodontist works on that anatomy every day.</p>
+        <p class="kit-body readw">That is the case for keeping this work in-house. A general practice that meets a difficult molar occasionally sends it to somebody else, and you start again with a clinician who has not met your case. Here the assessment, the treatment and the restoration that follows it stay with one team.</p>
+        <p class="kit-body readw">Every specialist profile carries a full name, the field that clinician practices and their postnominal credentials, so you can read who will treat you before you book rather than after you arrive.</p>
+        <div class="kit-actions kit-actions--tight">
+          <a class="kit-btn kit-btn--ghost" href="specialists.html"><span>See the specialists in endodontics</span></a>
+          <a class="kit-btn kit-btn--ghost" href="prosthodontics.html"><span>Prosthodontics, for the crown after</span></a>
+          <a class="kit-btn kit-btn--ghost" href="treatments.html"><span>All Treatments</span></a>
+        </div>
+      </div>
+
+      <div class="col col--media">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--circle">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2021_11_Root-Canal-Treatment-Aftercare-Tips.jpg" alt="Two pink-gloved hands, one holding a handpiece head and the other using fine tweezers to load a tapered file into it, above a purple tray of color-coded files." width="1200" height="800" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Sized, then used</b><span>Files are selected by width and taper for the canal in front of them.</span></figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #26 Pull-quote section | considered: #40,#57,#37 | rigor: heavy | why: the self-pay fact is the one sentence on this page that changes whether a reader should be here at all, and on a field where the reader may already be in pain it has to be stated plainly and early rather than discovered at the desk. #26 is the only entry that is a single statement standing alone with nothing else competing in the band, and the locked .kit-quote--display gives it the one typographic treatment nothing else on the page uses. #40 pre-footer CTA band is precisely the standalone closing band G-CTA1 counts, and the chrome's .precta already is this page's one, so picking it would put the page at two and fail closed. #57 standalone pull-quote is the same device catalogued as a decorative transition, and this is a qualifying fact with consequences rather than a rhythm break. #37 CTA form would duplicate the contact page's job with a form this fragment cannot validate. ADAPTATION recorded rather than left for the gate: #26 mandates no other content in the band, and three ruled rails are added beneath the statement, one qualifying the single peso figure the page prints, one holding the two unconfirmed terms, and one folding the page's single mid-page ask inline, because Collision A binds this body to zero closing bands. -->
+<section class="section section--warm" id="s07" aria-labelledby="h07" data-rise>
+  <div class="container">
+    <div class="row">
+      <div class="col col--full">
+
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">07</span>
+            <div>
+              <span class="kit-eyebrow">Paying for it</span>
+              <h2 id="h07">One condition that is not a matter of preference</h2>
+            </div>
+          </div>
+        </div>
+
+        <p class="kit-quote kit-quote--display readw">Elevate Dental does not accept HMO or dental insurance. All treatment is self-pay.</p>
+        <p class="kit-body readw">A tooth that hurts is time-sensitive, and the payment condition is the last thing anyone wants to discover at the desk. It is stated here instead.</p>
+
+        <div class="kit-foot">
+          <p class="kit-micro">What the figure on this page is</p>
+          <p class="kit-body readw--wide">The single peso figure above is a representative market figure anchored to published Philippine market ranges. It is not an Elevate Dental price, and Elevate Dental has not published a figure of its own for this treatment. Your price is quoted after a clinical assessment.</p>
+          <p class="kit-body readw--wide">It is a starting point rather than a quote. The final fee depends on how many canals the tooth has and how much of the root is affected, and it is confirmed at consultation.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="prices.html"><span>See the full price list</span></a>
+          </div>
+        </div>
+
+        <div class="kit-truth" data-rise>
+          <span class="kit-truth__k">Where this figure comes from</span>
+          <p>Elevate Dental has not set its own price for this treatment, so the peso figure on this page is drawn from published Philippine market ranges rather than from a clinic price list. It is there to give you a sense of scale before you come in, and it is not a quotation from us.</p>
+        </div>
+
+        <div class="kit-inline">
+          <p>The assessment is the fastest part of this. It decides which of the two paths your tooth is on, and it comes from the specialist who would do the work.</p>
+          <div class="kit-inline__acts">
+            <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+            <a class="kit-btn kit-btn--ghost" href="contact.html"><span>Call Us</span></a>
+          </div>
+        </div>
+
+        <div class="kit-foot">
+          <p class="kit-micro">The outcome</p>
+          <p class="kit-body readw--wide">Endodontics is handled in-house by named specialists. Book one consultation instead of chasing a referral. Your case is finished by the people who assessed it.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

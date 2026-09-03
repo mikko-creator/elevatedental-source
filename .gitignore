@@ -1,0 +1,23 @@
+# Scratch previews. Regenerable from the scripts in tools/, and they go stale
+# the moment the build moves on, which has already misled a review once.
+_preview-*.html
+
+# Build scaffolding, derived from _design/ and pages/ on every run
+_build/
+_build-src/
+
+# Never commit keys
+.mcp.json
+*.key
+.env
+
+# OS noise
+Thumbs.db
+.DS_Store
+
+# The prep handoff: the client compliance record (blocked claims, missing receipts).
+# Kept on disk because the build reads it; never committed.
+_handoff/
+
+# Pre-FOH page backups. Working-tree scratch from the front-of-house pass.
+*.pre-foh.bak

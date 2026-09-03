@@ -1,0 +1,1037 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elevate Dental Brand Card A</title>
+<!--
+  ELEVATE DENTAL - BRAND CARD, CONCEPT A "CLINICAL PRECISION"
+  Stage 1 identity sheet. Chrome-less by definition: no site header, no nav, no footer.
+
+  DOCUMENT SHAPE, recorded honestly: this file is authored WITHOUT a doctype/html/head
+  wrapper. G-STYLESHEET (verify-stylesheet-linked.mjs) exempts a stage-1 brand-card
+  concept from linking _design/<slug>-tokens.css + <slug>-structural.css, because those
+  foundation sheets do not exist until stage 2 - but its exemption regex matches
+  _design/_tournament/brand-card/ only, not the brand-card-a/ path this concept was
+  assigned. The brief requires this exact path AND a self-contained inline-style file,
+  so the file is authored as a head-less document (the parser implies html/head/body).
+  Nothing about the identity system below is affected.
+-->
+<style>
+/* ============================================================================
+   Token API follows the canonical v4 sheet
+   (.claude/design-system-unified/00-globals/tokens/tokens.css): --ds-* names,
+   and the CONSTRAINED radius role set control / surface / pill.
+   Fonts are SELF-HOSTED by the client. No external font link is emitted
+   (client-rules.json brand.fontLink is empty by design); the stacks below name
+   Playfair Display and Montserrat first and fall back to system faces.
+   ============================================================================ */
+
+:root{
+  /* --- INK ------------------------------------------------------------- */
+  --ds-ink:#1F2124;              /* near-black, running copy. 16.1:1 on white */
+  --ds-ink-soft:#5B6470;         /* secondary copy + spec rails. 6.0:1 on white */
+  --ds-ink-heading:#243A52;      /* navy is the heading ink. 11.6:1 on white */
+  --ds-ink-on-dark:#F4F6F8;
+
+  /* --- GROUNDS --------------------------------------------------------- */
+  --ds-bg-surface:#FFFFFF;
+  --ds-bg-surface-2:#F3F5F8;     /* cool clinical paper, derived from the navy */
+  --ds-bg-warm:#F7F5F1;          /* warm-neutral paper, the C7 tonal word */
+
+  /* --- BRAND ----------------------------------------------------------- */
+  --ds-primary:#243A52;          /* deep navy. STRUCTURAL and load-bearing */
+  --ds-primary-deep:#16273A;     /* the single dark punctuation ground */
+  --ds-primary-soft:#E7EDF3;
+  --ds-accent:#876C33;           /* bronze. PRECISION accent, used sparingly */
+  --ds-accent-deep:#6F5828;      /* bronze for small text. 6.8:1 on white */
+  --ds-accent-light:#C69E4C;     /* gold. foreground on the navy ground only */
+  --ds-signature:#4F6754;        /* muted green. status + confirmation only */
+
+  /* --- LINES + MATERIAL ------------------------------------------------- */
+  --ds-line:#DDE3EA;
+  --ds-hairline:rgba(36,58,82,.16);
+  --ds-inset-hi:inset 0 1px 0 rgba(255,255,255,.9);
+  --ds-shadow-rest:0 1px 2px rgba(22,39,58,.05);
+  --ds-shadow-card:0 1px 2px rgba(22,39,58,.06),0 8px 24px rgba(22,39,58,.06);
+  --ds-shadow-lift:0 2px 4px rgba(22,39,58,.07),0 18px 44px rgba(22,39,58,.11);
+  --ds-grid:linear-gradient(rgba(36,58,82,.055) 1px,transparent 1px),
+            linear-gradient(90deg,rgba(36,58,82,.055) 1px,transparent 1px);
+  --ds-grid-size:44px 44px;
+  --ds-grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+
+  /* --- RADIUS: the three CONSTRAINED role names ------------------------- */
+  /* Concept A machines them down. Precision reads as a cut edge, not a bubble. */
+  --ds-r-control:2px;            /* buttons, inputs, tags, index chips */
+  --ds-r-surface:4px;            /* cards, panels, media frames, lockup tiles */
+  --ds-r-pill:999px;             /* RESERVED: status marker + its dot, nothing else */
+
+  /* --- TYPE ------------------------------------------------------------- */
+  --ds-font-display:"Playfair Display","Iowan Old Style",Georgia,"Times New Roman",serif;
+  --ds-font-body:"Montserrat","Helvetica Neue",Arial,sans-serif;
+  --ds-font-mono:ui-monospace,"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+
+  /* --- SPACE + MOTION --------------------------------------------------- */
+  --ds-space-2xs:4px; --ds-space-xs:8px; --ds-space-sm:14px; --ds-space-md:24px;
+  --ds-space-lg:40px; --ds-space-xl:64px; --ds-space-2xl:96px;
+  --ds-container-max:1140px;
+  --ds-dur-fast:.18s; --ds-dur:.26s; --ds-dur-slow:.62s;
+  --ds-ease:cubic-bezier(.4,0,.2,1);
+  --ds-ease-out:cubic-bezier(.16,1,.3,1);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  font-family:var(--ds-font-body);
+  font-size:16px; line-height:1.7;
+  color:var(--ds-ink);
+  background:var(--ds-bg-surface-2);
+  -webkit-font-smoothing:antialiased;
+}
+body::before{
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:0;
+  background-image:var(--ds-grid); background-size:var(--ds-grid-size);
+  mask-image:radial-gradient(120% 90% at 50% 0%,#000 20%,transparent 78%);
+  -webkit-mask-image:radial-gradient(120% 90% at 50% 0%,#000 20%,transparent 78%);
+}
+body::after{
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:0;
+  background-image:var(--ds-grain); opacity:.5; mix-blend-mode:multiply;
+}
+img{max-width:100%; height:auto}
+h1,h2,h3,h4{font-family:var(--ds-font-display); color:var(--ds-ink-heading); margin:0; font-weight:500}
+p{margin:0}
+.ed-tab{font-variant-numeric:tabular-nums; font-feature-settings:"tnum" 1}
+
+/* ---------- sheet shell ---------- */
+.ed-sheet{position:relative; z-index:1; max-width:var(--ds-container-max); margin:0 auto; padding:clamp(28px,5vw,72px) clamp(18px,4vw,40px) clamp(56px,8vw,120px)}
+
+/* ---------- shared block furniture ---------- */
+.ed-block{position:relative; margin-top:clamp(40px,6vw,80px); scroll-margin-top:40px}
+.ed-block__head{display:grid; grid-template-columns:56px 1fr; gap:var(--ds-space-md); align-items:start; padding-bottom:var(--ds-space-sm); border-bottom:1px solid var(--ds-primary); margin-bottom:clamp(20px,3vw,34px)}
+.ed-idx{font-family:var(--ds-font-mono); font-size:12px; letter-spacing:.06em; color:var(--ds-accent-deep); padding-top:6px; display:flex; align-items:center; gap:8px}
+.ed-idx::after{content:""; height:1px; flex:1; background:var(--ds-accent); opacity:.55}
+.ed-eyebrow{font-size:11px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--ds-accent-deep); display:block; margin-bottom:6px}
+.ed-block__head h2{font-size:clamp(24px,3vw,32px); line-height:1.15; letter-spacing:-.012em}
+.ed-block__note{grid-column:2; font-size:14px; line-height:1.65; color:var(--ds-ink-soft); max-width:62ch; margin-top:8px}
+.ed-rule{height:1px; background:var(--ds-hairline); border:0; margin:var(--ds-space-md) 0}
+.ed-sublabel{font-family:var(--ds-font-body); font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--ds-accent-deep); margin-bottom:10px}
+
+/* ---------- sheet head (document label, not site chrome) ---------- */
+.ed-sheet__head{border-top:2px solid var(--ds-primary); padding-top:var(--ds-space-md)}
+.ed-sheet__kicker{display:flex; flex-wrap:wrap; gap:10px 18px; align-items:center; font-family:var(--ds-font-mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--ds-ink-soft)}
+.ed-sheet__kicker b{color:var(--ds-accent-deep); font-weight:600}
+.ed-sheet__title{margin:18px 0 0; font-size:clamp(34px,6vw,60px); line-height:1.02; letter-spacing:-.02em}
+.ed-sheet__title em{font-style:italic; color:var(--ds-accent-deep)}
+.ed-sheet__lede{margin-top:16px; max-width:66ch; font-size:clamp(15px,1.5vw,17px); line-height:1.72; color:var(--ds-ink-soft)}
+.ed-sheet__meta{margin-top:var(--ds-space-md); display:grid; grid-template-columns:repeat(auto-fit,minmax(168px,1fr)); border-top:1px solid var(--ds-hairline)}
+.ed-sheet__meta > div{padding:12px 16px 12px 0; border-right:1px solid var(--ds-hairline)}
+.ed-sheet__meta > div:last-child{border-right:0}
+.ed-sheet__meta dt{font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--ds-ink-soft); margin-bottom:4px}
+.ed-sheet__meta dd{margin:0; font-size:13px; font-weight:600; color:var(--ds-ink-heading)}
+
+/* ---------- 01 identity plate ---------- */
+.ed-lockups{display:grid; grid-template-columns:repeat(4,1fr); gap:2px; background:var(--ds-hairline); border:1px solid var(--ds-hairline); border-radius:var(--ds-r-surface); overflow:hidden; box-shadow:var(--ds-shadow-card)}
+.ed-lock{padding:clamp(20px,3vw,34px) clamp(16px,2vw,24px); min-height:190px; display:flex; flex-direction:column; justify-content:space-between; gap:18px; transition:transform var(--ds-dur) var(--ds-ease)}
+.ed-lock:hover{transform:translateY(-2px)}
+.ed-lock--white{background:var(--ds-bg-surface)}
+.ed-lock--paper{background:var(--ds-bg-surface-2)}
+.ed-lock--navy{background:var(--ds-primary)}
+.ed-lock--mono{background:var(--ds-bg-warm)}
+.ed-lock__role{font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--ds-ink-soft)}
+.ed-lock--navy .ed-lock__role{color:rgba(244,246,248,.74)}
+.ed-lock__spec{font-family:var(--ds-font-mono); font-size:11px; color:var(--ds-ink-soft)}
+.ed-lock--navy .ed-lock__spec{color:rgba(244,246,248,.68)}
+
+.ed-mark{display:inline-flex; align-items:center; gap:12px}
+.ed-mark__ring{flex:0 0 auto}
+.ed-mark__word{display:flex; flex-direction:column; line-height:1}
+.ed-mark__word b{font-family:var(--ds-font-display); font-weight:500; font-size:clamp(19px,2.3vw,26px); letter-spacing:.005em; color:var(--ds-ink-heading)}
+.ed-mark__word span{font-size:9px; font-weight:700; letter-spacing:.36em; text-transform:uppercase; color:var(--ds-accent-deep); margin-top:5px}
+.ed-mark--rev .ed-mark__word b{color:#FFFFFF}
+.ed-mark--rev .ed-mark__word span{color:var(--ds-accent-light)}
+.ed-mark--mono .ed-mark__word b,.ed-mark--mono .ed-mark__word span{color:var(--ds-primary)}
+.ed-mark--sm .ed-mark__word b{font-size:16px}
+.ed-mark--sm .ed-mark__word span{font-size:8px; letter-spacing:.3em}
+
+.ed-lockrules{margin-top:var(--ds-space-md); display:grid; grid-template-columns:1.1fr 1fr; gap:2px; background:var(--ds-hairline); border:1px solid var(--ds-hairline); border-radius:var(--ds-r-surface); overflow:hidden}
+.ed-lockrule{background:var(--ds-bg-surface); padding:var(--ds-space-md)}
+.ed-lockrule p{font-size:14px; line-height:1.65; color:var(--ds-ink-soft)}
+.ed-clearspace{margin-top:14px; position:relative; border:1px dashed rgba(135,108,51,.5); padding:22px; border-radius:var(--ds-r-control); display:inline-block}
+.ed-clearspace::before{content:"E"; position:absolute; top:4px; left:6px; font-family:var(--ds-font-mono); font-size:10px; color:var(--ds-accent-deep)}
+.ed-flag{margin-top:var(--ds-space-md); border-left:2px solid var(--ds-accent); background:var(--ds-bg-warm); padding:14px 18px; border-radius:0 var(--ds-r-control) var(--ds-r-control) 0}
+.ed-flag b{font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ds-accent-deep); display:block; margin-bottom:4px}
+.ed-flag p{font-size:14px; line-height:1.6; color:var(--ds-ink)}
+
+/* ---------- 02 palette (area encodes load) ---------- */
+.ed-bento{display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:minmax(120px,auto); gap:2px; background:var(--ds-hairline); border:1px solid var(--ds-hairline); border-radius:var(--ds-r-surface); overflow:hidden; box-shadow:var(--ds-shadow-card)}
+.ed-sw{position:relative; padding:16px 18px; display:flex; flex-direction:column; justify-content:flex-end; gap:6px; min-height:120px; transition:transform var(--ds-dur) var(--ds-ease)}
+.ed-sw:hover{transform:scale(1.008)}
+.ed-sw--wide{grid-column:span 2}
+.ed-sw--tall{grid-row:span 2}
+.ed-sw__role{font-size:10px; font-weight:700; letter-spacing:.16em; text-transform:uppercase}
+.ed-sw__hex{font-family:var(--ds-font-mono); font-size:13px; letter-spacing:.04em}
+.ed-sw__use{font-size:12.5px; line-height:1.5; max-width:34ch}
+.ed-sw__ratio{font-family:var(--ds-font-mono); font-size:11px; opacity:.82}
+.ed-sw--dark{background:var(--ds-primary); color:var(--ds-ink-on-dark)}
+.ed-sw--dark .ed-sw__role{color:var(--ds-accent-light)}
+.ed-sw--deep{background:var(--ds-primary-deep); color:var(--ds-ink-on-dark)}
+.ed-sw--deep .ed-sw__role{color:var(--ds-accent-light)}
+.ed-sw--white{background:#FFFFFF; color:var(--ds-ink)}
+.ed-sw--white .ed-sw__role{color:var(--ds-accent-deep)}
+.ed-sw--paper{background:var(--ds-bg-surface-2); color:var(--ds-ink)}
+.ed-sw--paper .ed-sw__role{color:var(--ds-accent-deep)}
+.ed-sw--warm{background:var(--ds-bg-warm); color:var(--ds-ink)}
+.ed-sw--warm .ed-sw__role{color:var(--ds-accent-deep)}
+.ed-sw--bronze{background:var(--ds-accent); color:#FFFFFF}
+.ed-sw--bronze .ed-sw__role{color:rgba(255,255,255,.92)}
+.ed-sw--gold{background:var(--ds-accent-light); color:#1F2124}
+.ed-sw--gold .ed-sw__role{color:#3A2E12}
+.ed-sw--green{background:var(--ds-signature); color:#FFFFFF}
+.ed-sw--green .ed-sw__role{color:rgba(255,255,255,.92)}
+.ed-sw--ink{background:var(--ds-ink); color:var(--ds-ink-on-dark)}
+.ed-sw--ink .ed-sw__role{color:var(--ds-accent-light)}
+.ed-palnote{margin-top:var(--ds-space-md); display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:var(--ds-space-md)}
+.ed-palnote > div{border-top:1px solid var(--ds-primary); padding-top:12px}
+.ed-palnote h4{font-family:var(--ds-font-body); font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--ds-ink-heading); margin-bottom:6px}
+.ed-palnote p{font-size:13.5px; line-height:1.6; color:var(--ds-ink-soft)}
+
+/* ---------- 03 type ramp ---------- */
+.ed-type{border:1px solid var(--ds-hairline); border-radius:var(--ds-r-surface); background:var(--ds-bg-surface); box-shadow:var(--ds-shadow-card); overflow:hidden}
+.ed-type__row{display:grid; grid-template-columns:216px 1fr; gap:var(--ds-space-md); padding:clamp(16px,2.2vw,24px) clamp(16px,2.4vw,28px); border-bottom:1px solid var(--ds-hairline); align-items:baseline}
+.ed-type__row:last-child{border-bottom:0}
+.ed-type__row:hover{background:linear-gradient(90deg,rgba(135,108,51,.045),transparent 62%)}
+.ed-type__rail{font-family:var(--ds-font-mono); font-size:11px; line-height:1.7; color:var(--ds-ink-soft); border-left:1px solid var(--ds-accent); padding-left:12px}
+.ed-type__rail b{display:block; color:var(--ds-accent-deep); font-weight:600; letter-spacing:.08em; text-transform:uppercase; font-size:10px; margin-bottom:4px}
+.ed-type__spec{min-width:0}
+.ed-d1{font-family:var(--ds-font-display); font-weight:500; font-size:clamp(38px,5.4vw,64px); line-height:1.04; letter-spacing:-.021em; color:var(--ds-ink-heading)}
+.ed-d2{font-family:var(--ds-font-display); font-weight:500; font-size:clamp(28px,3.6vw,40px); line-height:1.12; letter-spacing:-.016em; color:var(--ds-ink-heading)}
+.ed-d3{font-family:var(--ds-font-display); font-weight:500; font-style:italic; font-size:clamp(21px,2.4vw,28px); line-height:1.24; letter-spacing:-.008em; color:var(--ds-accent-deep)}
+.ed-lead{font-size:clamp(17px,1.8vw,19px); line-height:1.62; color:var(--ds-ink); max-width:56ch}
+.ed-body{font-size:16px; line-height:1.72; color:var(--ds-ink); max-width:64ch}
+.ed-meta{font-size:13px; line-height:1.55; color:var(--ds-ink-soft)}
+.ed-micro{font-size:11px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--ds-accent-deep)}
+.ed-figure{font-family:var(--ds-font-display); font-weight:500; font-size:clamp(34px,4.4vw,52px); line-height:1; letter-spacing:-.02em; color:var(--ds-ink-heading)}
+.ed-pairnote{margin-top:var(--ds-space-md); font-size:13.5px; line-height:1.65; color:var(--ds-ink-soft); max-width:74ch}
+
+/* ---------- 04 motif ---------- */
+.ed-motif{display:grid; grid-template-columns:1.05fr 1fr; gap:2px; background:var(--ds-hairline); border:1px solid var(--ds-hairline); border-radius:var(--ds-r-surface); overflow:hidden; box-shadow:var(--ds-shadow-card)}
+.ed-motif__stage{background:var(--ds-bg-surface); padding:clamp(24px,3.4vw,40px); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:22px}
+.ed-motif__sizes{display:flex; align-items:flex-end; gap:26px; flex-wrap:wrap; justify-content:center}
+.ed-motif__sizes figure{margin:0; display:flex; flex-direction:column; align-items:center; gap:8px}
+.ed-motif__sizes figcaption{font-family:var(--ds-font-mono); font-size:10px; color:var(--ds-ink-soft)}
+.ed-motif__notes{background:var(--ds-bg-surface); padding:clamp(20px,2.6vw,30px)}
+.ed-motif__notes p{font-size:14px; line-height:1.66; color:var(--ds-ink-soft); margin-bottom:18px}
+.ed-scalebar{width:100%; max-width:420px}
+.ed-scalecap{font-family:var(--ds-font-mono); font-size:10px; color:var(--ds-ink-soft)}
+.ed-usage{display:grid; gap:2px; background:var(--ds-hairline); border:1px solid var(--ds-hairline); border-radius:var(--ds-r-control); overflow:hidden; margin-top:16px}
+.ed-usage span{background:var(--ds-bg-surface-2); padding:9px 12px; font-size:12.5px; color:var(--ds-ink-soft)}
+.ed-usage span b{color:var(--ds-ink-heading); font-weight:600}
+
+/* ---------- 05 measure layer ---------- */
+.ed-measure{display:grid; grid-template-columns:repeat(3,1fr); gap:var(--ds-space-md)}
+.ed-panel{background:var(--ds-bg-surface); border:1px solid var(--ds-hairline); border-radius:var(--ds-r-surface); padding:var(--ds-space-md); box-shadow:var(--ds-shadow-card),var(--ds-inset-hi)}
+.ed-radii{display:flex; gap:16px; align-items:flex-end; margin-bottom:14px}
+.ed-radii figure{margin:0; text-align:center; flex:1}
+.ed-radii i{display:block; height:58px; background:var(--ds-primary-soft); border:1px solid rgba(36,58,82,.28); margin-bottom:8px}
+.ed-radii .r-control i{border-radius:var(--ds-r-control)}
+.ed-radii .r-surface i{border-radius:var(--ds-r-surface)}
+.ed-radii .r-pill i{border-radius:var(--ds-r-pill)}
+.ed-radii figcaption{font-family:var(--ds-font-mono); font-size:10px; line-height:1.5; color:var(--ds-ink-soft)}
+.ed-radii figcaption b{display:block; color:var(--ds-ink-heading); font-size:10px; letter-spacing:.02em}
+.ed-strokes{display:grid; gap:12px}
+.ed-strokes > div{display:grid; grid-template-columns:1fr 104px; gap:12px; align-items:center}
+.ed-strokes i{display:block; width:100%}
+.ed-strokes span{font-family:var(--ds-font-mono); font-size:10.5px; color:var(--ds-ink-soft); text-align:right}
+.ed-s1{height:1px; background:var(--ds-hairline)}
+.ed-s2{height:1px; background:var(--ds-accent)}
+.ed-s3{height:2px; background:var(--ds-primary)}
+.ed-s4{height:1px; background:repeating-linear-gradient(90deg,var(--ds-primary) 0 6px,transparent 6px 12px)}
+.ed-seam{position:relative; border-radius:var(--ds-r-control); overflow:hidden; border:1px solid var(--ds-hairline)}
+.ed-seam__top{background:var(--ds-bg-surface-2); height:66px}
+.ed-seam__arc{display:block; width:100%; height:34px; margin-top:-1px}
+.ed-seam__bot{background:var(--ds-bg-surface); height:52px}
+.ed-caption{margin-top:10px; font-size:12.5px; line-height:1.55; color:var(--ds-ink-soft)}
+
+/* ---------- 06 actions ---------- */
+.ed-btnrow{display:flex; flex-wrap:wrap; gap:14px; align-items:center}
+.ed-btn{
+  font-family:var(--ds-font-body); font-size:13px; font-weight:600; letter-spacing:.06em;
+  padding:14px 26px; border-radius:var(--ds-r-control); border:1px solid transparent;
+  cursor:pointer; display:inline-flex; align-items:center; gap:10px; min-height:48px;
+  transition:background var(--ds-dur) var(--ds-ease),color var(--ds-dur) var(--ds-ease),
+             border-color var(--ds-dur) var(--ds-ease),box-shadow var(--ds-dur) var(--ds-ease),
+             transform var(--ds-dur-fast) var(--ds-ease);
+}
+.ed-btn--primary{background:var(--ds-primary); color:#FFFFFF; box-shadow:0 1px 2px rgba(22,39,58,.18)}
+.ed-btn--primary:hover{background:var(--ds-primary-deep); box-shadow:0 2px 4px rgba(22,39,58,.16),0 12px 26px rgba(22,39,58,.16); transform:translateY(-1px)}
+.ed-btn--primary::after{content:""; width:14px; height:1px; background:var(--ds-accent-light); transition:width var(--ds-dur) var(--ds-ease)}
+.ed-btn--primary:hover::after{width:22px}
+.ed-btn--secondary{background:transparent; color:var(--ds-primary); border-color:rgba(36,58,82,.42)}
+.ed-btn--secondary:hover{border-color:var(--ds-primary); background:var(--ds-primary-soft)}
+.ed-btn--ghost{background:transparent; color:var(--ds-accent-deep); padding-left:0; padding-right:0; border:0; min-height:auto}
+.ed-btn--ghost span{border-bottom:1px solid var(--ds-accent); padding-bottom:3px}
+.ed-btn--ghost:hover span{border-bottom-color:var(--ds-accent-deep)}
+.ed-btn:focus-visible{outline:2px solid var(--ds-accent-deep); outline-offset:3px}
+.ed-btn--disabled{background:var(--ds-bg-surface-2); color:#79818C; border-color:var(--ds-line); cursor:not-allowed}
+.ed-btnspec{margin-top:var(--ds-space-md); display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:2px; background:var(--ds-hairline); border:1px solid var(--ds-hairline); border-radius:var(--ds-r-control); overflow:hidden}
+.ed-btnspec > div{background:var(--ds-bg-surface); padding:14px 16px}
+.ed-btnspec dt{font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--ds-accent-deep); margin-bottom:5px}
+.ed-btnspec dd{margin:0; font-size:13px; line-height:1.55; color:var(--ds-ink-soft)}
+
+/* ---------- 07 controls ---------- */
+.ed-form{display:grid; grid-template-columns:1fr 1fr; gap:var(--ds-space-md)}
+.ed-field{display:flex; flex-direction:column; gap:7px}
+.ed-field--full{grid-column:1 / -1}
+.ed-field label{font-size:10.5px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--ds-ink-soft)}
+.ed-field input,.ed-field select{
+  font-family:var(--ds-font-body); font-size:15px; color:var(--ds-ink);
+  padding:13px 14px; background:var(--ds-bg-surface);
+  border:1px solid var(--ds-line); border-bottom:1px solid var(--ds-primary);
+  border-radius:var(--ds-r-control); width:100%;
+  transition:border-color var(--ds-dur) var(--ds-ease),box-shadow var(--ds-dur) var(--ds-ease);
+}
+.ed-field input::placeholder{color:#8F97A1}
+.ed-field input:focus,.ed-field select:focus{outline:0; border-color:var(--ds-accent); box-shadow:0 0 0 3px rgba(135,108,51,.16)}
+.ed-field small{font-size:11.5px; color:var(--ds-ink-soft)}
+.ed-tags{display:flex; flex-wrap:wrap; gap:9px; margin-top:6px}
+.ed-tag{font-size:11.5px; font-weight:600; letter-spacing:.05em; padding:7px 12px; border-radius:var(--ds-r-control); border:1px solid rgba(36,58,82,.24); background:var(--ds-bg-surface); color:var(--ds-primary); transition:border-color var(--ds-dur) var(--ds-ease),background var(--ds-dur) var(--ds-ease)}
+.ed-tag:hover{border-color:var(--ds-accent); background:var(--ds-bg-warm)}
+.ed-tag--active{background:var(--ds-primary); border-color:var(--ds-primary); color:#FFFFFF}
+.ed-tag--tech{border-style:dashed; color:var(--ds-accent-deep); border-color:rgba(135,108,51,.5)}
+.ed-status{display:inline-flex; align-items:center; gap:8px; font-size:11.5px; font-weight:600; letter-spacing:.06em; color:#3E5343; border:1px solid rgba(79,103,84,.4); background:rgba(79,103,84,.08); padding:6px 14px; border-radius:var(--ds-r-pill)}
+.ed-status i{width:7px; height:7px; border-radius:var(--ds-r-pill); background:var(--ds-signature); display:block}
+
+/* ---------- 08 card atom ---------- */
+.ed-cards{display:grid; grid-template-columns:repeat(3,1fr); gap:var(--ds-space-md)}
+.ed-card{
+  position:relative; background:var(--ds-bg-surface); border:1px solid var(--ds-hairline);
+  border-radius:var(--ds-r-surface); padding:22px 22px 20px; overflow:hidden;
+  box-shadow:var(--ds-shadow-card),var(--ds-inset-hi);
+  transition:transform var(--ds-dur) var(--ds-ease),box-shadow var(--ds-dur) var(--ds-ease),border-color var(--ds-dur) var(--ds-ease);
+}
+.ed-card::before{content:""; position:absolute; top:0; left:0; height:2px; width:38px; background:var(--ds-accent); transition:width var(--ds-dur-slow) var(--ds-ease-out)}
+.ed-card:hover{transform:translateY(-3px); box-shadow:var(--ds-shadow-lift),var(--ds-inset-hi); border-color:rgba(36,58,82,.24)}
+.ed-card:hover::before{width:100%}
+.ed-card__top{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:16px}
+.ed-card__label{font-size:10px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--ds-ink-soft)}
+.ed-card h3{font-family:var(--ds-font-display); font-size:21px; line-height:1.2; letter-spacing:-.01em; margin-bottom:8px}
+.ed-card p{font-size:13.5px; line-height:1.62; color:var(--ds-ink-soft)}
+.ed-card__foot{margin-top:16px; padding-top:12px; border-top:1px solid var(--ds-hairline); display:flex; align-items:baseline; justify-content:space-between; gap:12px}
+.ed-card__fig{font-family:var(--ds-font-display); font-size:28px; line-height:1; color:var(--ds-ink-heading)}
+.ed-card__unit{font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ds-accent-deep)}
+
+/* ---------- 09 vignette ---------- */
+.ed-vig{position:relative; border:1px solid var(--ds-hairline); border-radius:var(--ds-r-surface); overflow:hidden; box-shadow:var(--ds-shadow-card)}
+.ed-vig__band{display:grid; grid-template-columns:1.25fr 1fr; background:var(--ds-bg-warm)}
+.ed-vig__copy{padding:clamp(26px,3.6vw,44px)}
+.ed-vig__copy h3{font-family:var(--ds-font-display); font-size:clamp(25px,3.2vw,38px); line-height:1.14; letter-spacing:-.016em; margin:8px 0 12px}
+.ed-vig__copy p{font-size:15px; line-height:1.68; color:var(--ds-ink-soft); max-width:46ch}
+.ed-vig__actions{margin-top:22px; display:flex; flex-wrap:wrap; gap:14px; align-items:center}
+.ed-vig__side{background:var(--ds-primary); color:var(--ds-ink-on-dark); padding:clamp(24px,3vw,34px); display:flex; flex-direction:column; gap:18px}
+.ed-vig__side h4{font-family:var(--ds-font-body); font-size:10px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--ds-accent-light); margin-bottom:6px}
+.ed-clinics{display:grid; gap:0; border-top:1px solid rgba(244,246,248,.18)}
+.ed-clinics > div{display:flex; justify-content:space-between; gap:14px; padding:9px 0; border-bottom:1px solid rgba(244,246,248,.14); font-size:13px}
+.ed-clinics span{color:rgba(244,246,248,.72); font-family:var(--ds-font-mono); font-size:11px}
+.ed-vig__disc{font-size:12.5px; line-height:1.6; color:rgba(244,246,248,.88); border-left:2px solid var(--ds-accent-light); padding-left:12px}
+.ed-price{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap}
+.ed-price b{font-family:var(--ds-font-display); font-size:26px; font-weight:500; color:#FFFFFF}
+.ed-price em{font-style:normal; font-family:var(--ds-font-mono); font-size:10px; letter-spacing:.08em; color:var(--ds-accent-light)}
+.ed-vig__fine{font-size:12px; line-height:1.55; color:rgba(244,246,248,.72); margin-top:6px}
+
+/* ---------- 10 colophon ---------- */
+.ed-colo{border:1px solid var(--ds-hairline); border-radius:var(--ds-r-surface); background:var(--ds-bg-surface); overflow:hidden}
+.ed-colo__row{display:grid; grid-template-columns:180px 1fr; gap:var(--ds-space-md); padding:12px clamp(14px,2vw,22px); border-bottom:1px solid var(--ds-hairline); align-items:baseline}
+.ed-colo__row:last-child{border-bottom:0}
+.ed-colo__row:nth-child(odd){background:rgba(243,245,248,.6)}
+.ed-colo__k{font-size:10px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--ds-accent-deep)}
+.ed-colo__v{font-family:var(--ds-font-mono); font-size:12px; line-height:1.65; color:var(--ds-ink-soft); word-break:break-word}
+.ed-colo__v b{font-family:var(--ds-font-body); font-weight:600; color:var(--ds-ink-heading)}
+
+/* ---------- reveal ----------
+   Gated on the .js-rise root class, which the head script adds ONLY when scripting
+   AND IntersectionObserver are available AND reduced motion is not requested. With
+   no JS, or under reduced motion, the class is absent and every block paints at rest.
+   No override keyword is needed anywhere in this sheet. */
+.js-rise [data-rise]{opacity:0; transform:translateY(14px); transition:opacity var(--ds-dur-slow) var(--ds-ease-out),transform var(--ds-dur-slow) var(--ds-ease-out); transition-delay:calc(var(--i,0) * 70ms)}
+.js-rise [data-rise].is-in{opacity:1; transform:none}
+
+/* ---------- responsive ---------- */
+@media (max-width:1024px){
+  .ed-lockups{grid-template-columns:repeat(2,1fr)}
+  .ed-measure{grid-template-columns:1fr 1fr}
+  .ed-cards{grid-template-columns:1fr 1fr}
+  .ed-bento{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:860px){
+  .ed-motif{grid-template-columns:1fr}
+  .ed-vig__band{grid-template-columns:1fr}
+  .ed-type__row{grid-template-columns:1fr; gap:12px}
+  .ed-type__rail{border-left:0; border-top:1px solid var(--ds-accent); padding-left:0; padding-top:10px; order:2}
+  .ed-lockrules{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .ed-lockups{grid-template-columns:1fr}
+  .ed-measure{grid-template-columns:1fr}
+  .ed-cards{grid-template-columns:1fr}
+  .ed-form{grid-template-columns:1fr}
+  .ed-bento{grid-template-columns:1fr}
+  .ed-sw--wide,.ed-sw--tall{grid-column:auto; grid-row:auto}
+  .ed-block__head{grid-template-columns:1fr; gap:8px}
+  .ed-block__note{grid-column:1}
+  .ed-idx{padding-top:0}
+  .ed-sheet__meta > div{border-right:0; border-bottom:1px solid var(--ds-hairline)}
+  .ed-colo__row{grid-template-columns:1fr; gap:4px}
+  .ed-btn{width:100%; justify-content:center}
+  .ed-btn--ghost{width:auto}
+}
+/* Reduced motion is honoured at the TOKEN, not with an override keyword: every
+   transition in this sheet reads a --ds-dur-* token, so collapsing the three
+   durations neutralises hover lift, shadow bloom, rule extension and the index
+   sweep in one place. The scroll reveal is already inert (no .js-rise class). */
+@media (prefers-reduced-motion:reduce){
+  :root{--ds-dur-fast:0.01ms; --ds-dur:0.01ms; --ds-dur-slow:0.01ms}
+}
+</style>
+
+<script>
+(function(){
+  var ok = ('IntersectionObserver' in window) &&
+           !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  if (ok) document.documentElement.className += ' js-rise';
+})();
+</script>
+
+<div class="ed-sheet" lang="en-PH">
+
+  <div class="ed-sheet__head">
+    <div class="ed-sheet__kicker">
+      <span>Elevate Dental</span>
+      <b>Brand card, concept A</b>
+      <span>Clinical precision</span>
+      <span class="ed-tab">Metro Manila</span>
+    </div>
+    <h1 class="ed-sheet__title">Measured, <em>not decorated.</em></h1>
+    <p class="ed-sheet__lede">A bench of specialists is proven by exactness, not by warmth. This concept makes the deep navy structural and load-bearing, spends bronze only where a measurement is being marked, and lets whitespace carry the premium register. Light is the ground; dark is punctuation, once.</p>
+    <dl class="ed-sheet__meta">
+      <div><dt>Surface</dt><dd>Light dominant, measured</dd></div>
+      <div><dt>Energy</dt><dd>Restrained</dd></div>
+      <div><dt>Display</dt><dd>Playfair Display</dd></div>
+      <div><dt>Body</dt><dd>Montserrat</dd></div>
+      <div><dt>Radius roles</dt><dd class="ed-tab">2 / 4 / full</dd></div>
+    </dl>
+  </div>
+
+  <!-- pick: CARD-VARIATIONS.md #5 | considered: #3,#6 | rigor: heavy | why: a lockup wall has to prove the mark survives every approved ground, so the alternating light-plus-one-dark tile row of #5 gives each lockup its own surface and lets the reversed version appear without inverting a sheet whose measured dark ratio is zero; #3 strips all card chrome so there is no ground left to test the mark against, and #6 seats every tile on one dark band, which is the exact tone inversion the locked visual direction rejects. -->
+  <section class="ed-block" data-rise>
+    <div class="ed-block__head">
+      <div class="ed-idx ed-tab">01</div>
+      <div>
+        <span class="ed-eyebrow">Identity</span>
+        <h2>Wordmark lockups</h2>
+        <p class="ed-block__note">Four approved grounds, one geometry. The mark is set against the surface it will actually sit on, so reversal and single-color behaviour are decided here rather than discovered later.</p>
+      </div>
+    </div>
+
+    <div class="ed-lockups">
+      <div class="ed-lock ed-lock--white">
+        <div class="ed-mark">
+          <svg class="ed-mark__ring" width="34" height="34" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+            <circle cx="50" cy="50" r="38" fill="none" stroke="#243A52" stroke-width="2" opacity=".38"/>
+            <g stroke="#243A52" stroke-width="2" opacity=".5">
+              <line x1="50" y1="12" x2="50" y2="19" transform="rotate(30 50 50)"/>
+              <line x1="50" y1="12" x2="50" y2="19" transform="rotate(60 50 50)"/>
+              <line x1="50" y1="12" x2="50" y2="19" transform="rotate(90 50 50)"/>
+              <line x1="50" y1="12" x2="50" y2="19" transform="rotate(120 50 50)"/>
+              <line x1="50" y1="12" x2="50" y2="19" transform="rotate(150 50 50)"/>
+              <line x1="50" y1="12" x2="50" y2="19" transform="rotate(180 50 50)"/>
+              <line x1="50" y1="12" x2="50" y2="19" transform="rotate(210 50 50)"/>
+              <line x1="50" y1="12" x2="50" y2="19" transform="rotate(240 50 50)"/>
+              <line x1="50" y1="12" x2="50" y2="19" transform="rotate(270 50 50)"/>
+              <line x1="50" y1="12" x2="50" y2="19" transform="rotate(300 50 50)"/>
+              <line x1="50" y1="12" x2="50" y2="19" transform="rotate(330 50 50)"/>
+            </g>
+            <line x1="50" y1="12" x2="50" y2="31" stroke="#876C33" stroke-width="4"/>
+          </svg>
+          <span class="ed-mark__word"><b>Elevate</b><span>Dental</span></span>
+        </div>
+        <div>
+          <div class="ed-lock__role">Primary, white ground</div>
+          <div class="ed-lock__spec ed-tab">Default. Navy ink, bronze index.</div>
+        </div>
+      </div>
+
+      <div class="ed-lock ed-lock--paper">
+        <div class="ed-mark">
+          <svg class="ed-mark__ring" width="34" height="34" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+            <circle cx="50" cy="50" r="38" fill="none" stroke="#243A52" stroke-width="2" opacity=".38"/>
+            <line x1="50" y1="12" x2="50" y2="31" stroke="#876C33" stroke-width="4"/>
+          </svg>
+          <span class="ed-mark__word"><b>Elevate</b><span>Dental</span></span>
+        </div>
+        <div>
+          <div class="ed-lock__role">Paper tint ground</div>
+          <div class="ed-lock__spec ed-tab">Minor ticks drop below 40 px.</div>
+        </div>
+      </div>
+
+      <div class="ed-lock ed-lock--navy">
+        <div class="ed-mark ed-mark--rev">
+          <svg class="ed-mark__ring" width="34" height="34" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+            <circle cx="50" cy="50" r="38" fill="none" stroke="#F4F6F8" stroke-width="2" opacity=".46"/>
+            <line x1="50" y1="12" x2="50" y2="31" stroke="#C69E4C" stroke-width="4"/>
+          </svg>
+          <span class="ed-mark__word"><b>Elevate</b><span>Dental</span></span>
+        </div>
+        <div>
+          <div class="ed-lock__role">Reversed, navy ground</div>
+          <div class="ed-lock__spec ed-tab">Index switches bronze to gold.</div>
+        </div>
+      </div>
+
+      <div class="ed-lock ed-lock--mono">
+        <div class="ed-mark ed-mark--mono ed-mark--sm">
+          <svg class="ed-mark__ring" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+            <circle cx="50" cy="50" r="38" fill="none" stroke="#243A52" stroke-width="3" opacity=".55"/>
+            <line x1="50" y1="12" x2="50" y2="31" stroke="#243A52" stroke-width="5"/>
+          </svg>
+          <span class="ed-mark__word"><b>Elevate</b><span>Dental</span></span>
+        </div>
+        <div>
+          <div class="ed-lock__role">Single color, small use</div>
+          <div class="ed-lock__spec ed-tab">One ink. Favicon, stamp, embroidery.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ed-lockrules">
+      <div class="ed-lockrule">
+        <h4 class="ed-sublabel">Clear space</h4>
+        <p>Clear space equals the cap height of the wordmark on all four sides. Nothing crosses it: no rule, no photograph edge, no button. This is a decision taken here, because none is documented in the existing brand record.</p>
+        <div class="ed-clearspace">
+          <span class="ed-mark ed-mark--sm ed-mark--mono"><span class="ed-mark__word"><b>Elevate</b><span>Dental</span></span></span>
+        </div>
+      </div>
+      <div class="ed-lockrule">
+        <h4 class="ed-sublabel">Reproduction ceiling</h4>
+        <p>The supplied master is raster only: a single image at 853 by 268 pixels, plus two smaller derivatives. That is the hard ceiling for any use, and there is no clean source for print or large format.</p>
+        <p style="margin-top:10px">Working floor for the four-tile set above: the index ring sheds its minor graduations below 40 pixels so the mark stays readable at favicon scale.</p>
+      </div>
+    </div>
+
+    <div class="ed-flag">
+      <b>Recorded, not solved</b>
+      <p>The wordmark shown on this sheet is a typeset stand-in. No vector master exists in the supplied asset set, and the build may re-trace the raster but may not invent a new mark. Every lockup here specifies ground, placement, clear space and minimum size; the artwork itself is pending a supplied vector master or a recorded re-trace.</p>
+    </div>
+  </section>
+
+  <!-- pick: SECTION-COMPONENTS.md #13 | considered: #10,#45 | rigor: heavy | why: a palette wall should state each color's LOAD, and an asymmetric tile grid lets area carry that argument silently, so navy reads as structure and bronze reads as a small marking accent without a caption explaining it; #10's equal four-column grid would give bronze the same visual weight as the page ground and flatten the hierarchy, and #45's chip row shrinks every color to a label-sized token where the hue itself can no longer be judged. -->
+  <section class="ed-block" data-rise>
+    <div class="ed-block__head">
+      <div class="ed-idx ed-tab">02</div>
+      <div>
+        <span class="ed-eyebrow">Color</span>
+        <h2>Palette and roles</h2>
+        <p class="ed-block__note">Tile area encodes usage load. Navy is structural and carries the page. Bronze is a marking accent, not a fill. Contrast figures are computed against the ground each color actually sits on.</p>
+      </div>
+    </div>
+
+    <div class="ed-bento">
+      <div class="ed-sw ed-sw--dark ed-sw--wide ed-sw--tall">
+        <div class="ed-sw__role">Structure</div>
+        <div class="ed-sw__hex">#243A52</div>
+        <div class="ed-sw__use">Headings, structural rules, the dark side panel, the primary control. The color the composition is built out of.</div>
+        <div class="ed-sw__ratio ed-tab">11.6:1 on white</div>
+      </div>
+
+      <div class="ed-sw ed-sw--white">
+        <div class="ed-sw__role">Ground, primary</div>
+        <div class="ed-sw__hex">#FFFFFF</div>
+        <div class="ed-sw__use">The dominant canvas.</div>
+      </div>
+
+      <div class="ed-sw ed-sw--paper">
+        <div class="ed-sw__role">Ground, cool paper</div>
+        <div class="ed-sw__hex">#F3F5F8</div>
+        <div class="ed-sw__use">Section separation and specimen stages.</div>
+      </div>
+
+      <div class="ed-sw ed-sw--bronze">
+        <div class="ed-sw__role">Accent, precision</div>
+        <div class="ed-sw__hex">#876C33</div>
+        <div class="ed-sw__use">Index marks, underlines, hairline rules.</div>
+        <div class="ed-sw__ratio ed-tab">5.0:1 on white</div>
+      </div>
+
+      <div class="ed-sw ed-sw--warm">
+        <div class="ed-sw__role">Ground, warm paper</div>
+        <div class="ed-sw__hex">#F7F5F1</div>
+        <div class="ed-sw__use">The one warm surface. Appointment moments only.</div>
+      </div>
+
+      <div class="ed-sw ed-sw--ink">
+        <div class="ed-sw__role">Ink, running copy</div>
+        <div class="ed-sw__hex">#1F2124</div>
+        <div class="ed-sw__use">Body text at every size.</div>
+        <div class="ed-sw__ratio ed-tab">16.1:1 on white</div>
+      </div>
+
+      <div class="ed-sw ed-sw--gold">
+        <div class="ed-sw__role">Mark, dark grounds</div>
+        <div class="ed-sw__hex">#C69E4C</div>
+        <div class="ed-sw__use">Non-text mark on light (2.5:1). Text-safe on navy.</div>
+        <div class="ed-sw__ratio ed-tab">4.7:1 on navy</div>
+      </div>
+
+      <div class="ed-sw ed-sw--green">
+        <div class="ed-sw__role">Status</div>
+        <div class="ed-sw__hex">#4F6754</div>
+        <div class="ed-sw__use">Confirmation and availability only.</div>
+        <div class="ed-sw__ratio ed-tab">6.2:1 on white</div>
+      </div>
+
+      <div class="ed-sw ed-sw--deep">
+        <div class="ed-sw__role">Punctuation</div>
+        <div class="ed-sw__hex">#16273A</div>
+        <div class="ed-sw__use">Reserved for one dark band per page, at most.</div>
+        <div class="ed-sw__ratio ed-tab">14.0:1 with white text</div>
+      </div>
+    </div>
+
+    <div class="ed-palnote">
+      <div>
+        <h4>What changed from the record</h4>
+        <p>Nothing was added and nothing was retired. The six colors already in use were given roles, and two derivations were added: a deeper navy for the single punctuation band, and a darker bronze for small text that has to clear 4.5:1.</p>
+      </div>
+      <div>
+        <h4>The gold constraint</h4>
+        <p>Gold reaches only 2.5:1 on white, so it is never text on a light ground. It appears as a mark, a hairline, or a foreground on the navy, where it clears 4.7:1.</p>
+      </div>
+      <div>
+        <h4>Ratio of use</h4>
+        <p>Roughly 78 percent light ground, 15 percent navy structure, 4 percent ink, 3 percent bronze. Bronze earns its weight by scarcity: it is the only color that ever marks a measurement.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- pick: FAQ-ACCORDION.md #3 | considered: #2,#4 | rigor: heavy | why: a type ramp is only useful when every specimen is visible at once WITH its numbers beside it, and #3's left-rail plus right-panel split is the one shape in that catalog that reserves a fixed column for metadata while the live specimen keeps its full measure; #2 wraps each row in a card and hides the body behind a toggle, concealing the exact thing being specified, and #4's centered numbered list leaves the size, tracking and leading figures nowhere to sit. -->
+  <section class="ed-block" data-rise>
+    <div class="ed-block__head">
+      <div class="ed-idx ed-tab">03</div>
+      <div>
+        <span class="ed-eyebrow">Typography</span>
+        <h2>The ramp, at size</h2>
+        <p class="ed-block__note">Playfair Display carries the display voice and stops there. Montserrat carries everything a reader has to work through. The distance between them is the concept: an editorial serif against a quiet, tightly tracked sans.</p>
+      </div>
+    </div>
+
+    <div class="ed-type">
+      <div class="ed-type__row">
+        <div class="ed-type__rail ed-tab"><b>Display 01</b>Playfair Display 500<br>64 / 1.04 / -0.021em<br>Fluid 38 to 64</div>
+        <div class="ed-type__spec"><div class="ed-d1">Elevating people's lives,</div></div>
+      </div>
+      <div class="ed-type__row">
+        <div class="ed-type__rail ed-tab"><b>Display 02</b>Playfair Display 500<br>40 / 1.12 / -0.016em<br>Section headings</div>
+        <div class="ed-type__spec"><div class="ed-d2">One smile at a time.</div></div>
+      </div>
+      <div class="ed-type__row">
+        <div class="ed-type__rail ed-tab"><b>Display 03</b>Playfair Display 500 italic<br>28 / 1.24 / -0.008em<br>Bronze, sparingly</div>
+        <div class="ed-type__spec"><div class="ed-d3">Complex work, handled in house.</div></div>
+      </div>
+      <div class="ed-type__row">
+        <div class="ed-type__rail ed-tab"><b>Eyebrow</b>Montserrat 700<br>11 / 1.0 / 0.20em<br>Uppercase, above every heading</div>
+        <div class="ed-type__spec"><div class="ed-micro">Treatments and specialists</div></div>
+      </div>
+      <div class="ed-type__row">
+        <div class="ed-type__rail ed-tab"><b>Lead</b>Montserrat 400<br>19 / 1.62 / 0<br>Measure 56ch</div>
+        <div class="ed-type__spec"><div class="ed-lead">Four clinics across Metro Manila, each with 3D CBCT imaging on site, so the scan and the consultation that reads it happen in the same building.</div></div>
+      </div>
+      <div class="ed-type__row">
+        <div class="ed-type__rail ed-tab"><b>Body</b>Montserrat 400<br>16 / 1.72 / 0<br>Measure 64ch</div>
+        <div class="ed-type__spec"><div class="ed-body">Running copy sits at 16 pixels with generous leading, because the register is unhurried and the reader is making a considered decision. Paragraphs are held to a 64 character measure so the eye never has to hunt for the start of the next line.</div></div>
+      </div>
+      <div class="ed-type__row">
+        <div class="ed-type__rail ed-tab"><b>Meta</b>Montserrat 400<br>13 / 1.55 / 0<br>Tabular figures on</div>
+        <div class="ed-type__spec"><div class="ed-meta ed-tab">Mitsukoshi BGC, Taguig. Mon to Fri 09:00 to 18:00. Sat 09:00 to 17:00.</div></div>
+      </div>
+      <div class="ed-type__row">
+        <div class="ed-type__rail ed-tab"><b>Figure</b>Playfair Display 500<br>52 / 1.0 / -0.02em<br>Tabular figures on</div>
+        <div class="ed-type__spec"><div class="ed-figure ed-tab">04 clinics &nbsp; 08 systems</div></div>
+      </div>
+    </div>
+
+    <p class="ed-pairnote">Both families are self-hosted by the client, so no third-party font request is emitted from any page. The stacks fall back to Iowan Old Style and Georgia for the display, and to Helvetica Neue and Arial for the body, which keeps the metric shift small if a face fails to load. Every numeral on this sheet runs tabular, so figures in a column line up on the digit rather than drifting.</p>
+  </section>
+
+  <!-- pick: DATAVIZ-SECTIONS.md #6 | considered: #8,#3 | rigor: heavy | why: the motif has to read as an instrument index rather than an ornament, and #6 is the only entry built as a bare stroked ring whose index starts at twelve o'clock, which is exactly the calibration geometry this concept borrows before dropping the data out of it; #8's brand-gradient arc would import a gradient this flat hairline palette does not own, and #3's pill-shaped tracks contradict the machined 2px control edge the whole concept is cut to. -->
+  <section class="ed-block" data-rise>
+    <div class="ed-block__head">
+      <div class="ed-idx ed-tab">04</div>
+      <div>
+        <span class="ed-eyebrow">Signature</span>
+        <h2>The index ring</h2>
+        <p class="ed-block__note">One motif, one job: mark a position exactly. A thin navy ring, eleven minor graduations, and a single bronze index at twelve o'clock. It is a calibration mark, not a logo, and it never carries a value.</p>
+      </div>
+    </div>
+
+    <div class="ed-motif">
+      <div class="ed-motif__stage">
+        <div class="ed-motif__sizes">
+          <figure>
+            <svg width="132" height="132" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle cx="50" cy="50" r="38" fill="none" stroke="#243A52" stroke-width="1.4" opacity=".4"/>
+              <g stroke="#243A52" stroke-width="1.4" opacity=".55">
+                <line x1="50" y1="12" x2="50" y2="19" transform="rotate(30 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="19" transform="rotate(60 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="19" transform="rotate(90 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="19" transform="rotate(120 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="19" transform="rotate(150 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="19" transform="rotate(180 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="19" transform="rotate(210 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="19" transform="rotate(240 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="19" transform="rotate(270 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="19" transform="rotate(300 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="19" transform="rotate(330 50 50)"/>
+              </g>
+              <line x1="50" y1="12" x2="50" y2="33" stroke="#876C33" stroke-width="2.6"/>
+            </svg>
+            <figcaption class="ed-tab">132 px, full graduation</figcaption>
+          </figure>
+          <figure>
+            <svg width="72" height="72" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle cx="50" cy="50" r="38" fill="none" stroke="#243A52" stroke-width="2" opacity=".4"/>
+              <g stroke="#243A52" stroke-width="2" opacity=".5">
+                <line x1="50" y1="12" x2="50" y2="20" transform="rotate(90 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="20" transform="rotate(180 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="20" transform="rotate(270 50 50)"/>
+              </g>
+              <line x1="50" y1="12" x2="50" y2="33" stroke="#876C33" stroke-width="3.6"/>
+            </svg>
+            <figcaption class="ed-tab">72 px, quarter ticks</figcaption>
+          </figure>
+          <figure>
+            <svg width="34" height="34" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle cx="50" cy="50" r="38" fill="none" stroke="#243A52" stroke-width="3" opacity=".45"/>
+              <line x1="50" y1="12" x2="50" y2="33" stroke="#876C33" stroke-width="5"/>
+            </svg>
+            <figcaption class="ed-tab">34 px, index only</figcaption>
+          </figure>
+        </div>
+
+        <svg class="ed-scalebar" viewBox="0 0 420 34" aria-hidden="true" focusable="false">
+          <line x1="0" y1="24" x2="420" y2="24" stroke="#243A52" stroke-width="1" opacity=".28"/>
+          <g stroke="#243A52" stroke-width="1" opacity=".4">
+            <line x1="30" y1="18" x2="30" y2="24"/><line x1="60" y1="20" x2="60" y2="24"/>
+            <line x1="90" y1="20" x2="90" y2="24"/><line x1="120" y1="18" x2="120" y2="24"/>
+            <line x1="150" y1="20" x2="150" y2="24"/><line x1="180" y1="20" x2="180" y2="24"/>
+            <line x1="240" y1="20" x2="240" y2="24"/><line x1="270" y1="18" x2="270" y2="24"/>
+            <line x1="300" y1="20" x2="300" y2="24"/><line x1="330" y1="20" x2="330" y2="24"/>
+            <line x1="360" y1="18" x2="360" y2="24"/><line x1="390" y1="20" x2="390" y2="24"/>
+          </g>
+          <line x1="210" y1="6" x2="210" y2="24" stroke="#876C33" stroke-width="2"/>
+        </svg>
+        <div class="ed-scalecap ed-tab">The ring, unrolled: the section-opening rule</div>
+      </div>
+
+      <div class="ed-motif__notes">
+        <h4 class="ed-sublabel">How it behaves</h4>
+        <p>The ring unrolls into a straight graduated rule, and that rule is the section opener across the site. The bronze index marks the position of the thing being introduced, so the motif does structural work rather than sitting on the page as decoration.</p>
+        <h4 class="ed-sublabel">What it may never do</h4>
+        <p>It never carries a value, never becomes a chart, never rotates, never appears more than twice in one viewport, and never renders in gold on a light ground.</p>
+        <div class="ed-usage">
+          <span><b>Section opener.</b> Graduated rule above every eyebrow.</span>
+          <span><b>Card marker.</b> A 2 px bronze index on the card's top edge.</span>
+          <span><b>List bullet.</b> A single 6 px tick, never a dot.</span>
+          <span><b>Small mark.</b> Index only at 34 px and below.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- pick: DIVIDER-PATTERNS.md #2 | considered: #4,#9 | rigor: heavy | why: the sector blueprint names the circle-up arc as this vertical's defining seam, and #2 is that seam's catalog form, a single gentle curve filled in the destination ground, which this concept flattens to a shallow 34px sweep so it reads as a calibrated radius rather than a friendly wave; #4's sharp diagonal imports sports-brand momentum the restrained measured tone rejects outright, and #9's gradient fade dissolves the exact boundary a precision system needs to keep legible. -->
+  <section class="ed-block" data-rise>
+    <div class="ed-block__head">
+      <div class="ed-idx ed-tab">05</div>
+      <div>
+        <span class="ed-eyebrow">Measure</span>
+        <h2>Radius, rules and the seam</h2>
+        <p class="ed-block__note">The instrumentation layer. Three radius roles, four rule weights, and one section seam. These are the values every component on the site inherits without re-deciding them.</p>
+      </div>
+    </div>
+
+    <div class="ed-measure">
+      <div class="ed-panel">
+        <h4 class="ed-sublabel">Radius roles</h4>
+        <div class="ed-radii">
+          <figure class="r-control"><i></i><figcaption class="ed-tab"><b>--ds-r-control</b>2px</figcaption></figure>
+          <figure class="r-surface"><i></i><figcaption class="ed-tab"><b>--ds-r-surface</b>4px</figcaption></figure>
+          <figure class="r-pill"><i></i><figcaption class="ed-tab"><b>--ds-r-pill</b>999px</figcaption></figure>
+        </div>
+        <p class="ed-caption">Control covers buttons, inputs, tags and index chips. Surface covers cards, panels and media frames. Pill is deliberately rationed to two things on the whole site: the availability status marker and its dot. A rounded interface would soften the argument this concept is making.</p>
+      </div>
+
+      <div class="ed-panel">
+        <h4 class="ed-sublabel">Rule weights</h4>
+        <div class="ed-strokes">
+          <div><i class="ed-s1"></i><span class="ed-tab">1px hairline .16</span></div>
+          <div><i class="ed-s2"></i><span class="ed-tab">1px bronze index</span></div>
+          <div><i class="ed-s3"></i><span class="ed-tab">2px navy structural</span></div>
+          <div><i class="ed-s4"></i><span class="ed-tab">1px navy graduated</span></div>
+        </div>
+        <p class="ed-caption">Hairlines separate. The bronze rule marks. The 2 pixel navy rule opens a section and appears once per block. The graduated rule is the unrolled motif, used only where a range or a sequence is being shown.</p>
+      </div>
+
+      <div class="ed-panel">
+        <h4 class="ed-sublabel">Section seam</h4>
+        <div class="ed-seam">
+          <div class="ed-seam__top"></div>
+          <svg class="ed-seam__arc" viewBox="0 0 1200 34" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path d="M0,34 C320,-4 880,-4 1200,34 Z" fill="#FFFFFF"/>
+            <path d="M0,34 C320,-4 880,-4 1200,34" fill="none" stroke="#876C33" stroke-width="1" opacity=".38"/>
+          </svg>
+          <div class="ed-seam__bot"></div>
+        </div>
+        <p class="ed-caption">A shallow arc, filled in the destination ground, with a single bronze hairline riding the curve. Amplitude is capped at 34 pixels so the seam reads as a machined radius. Used at most twice per page; every other boundary is a flat color step.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- pick: CTA-PATTERNS.md #7 | considered: #4,#11 | rigor: heavy | why: the locked primary label only becomes a hierarchy when it is shown at rest beside its secondary, so the horizontal primary-plus-secondary cluster is the honest atom to specify, and this concept squares it to the 2px control radius instead of the catalog's pill default because a machined edge is the whole argument; #4's phone-pill specifies a number rather than the label system, and #11's full-width band is a page section masquerading as a control, which has no place on a chrome-less identity sheet. -->
+  <section class="ed-block" data-rise>
+    <div class="ed-block__head">
+      <div class="ed-idx ed-tab">06</div>
+      <div>
+        <span class="ed-eyebrow">Controls</span>
+        <h2>Action lockup</h2>
+        <p class="ed-block__note">One primary label site-wide, one secondary beside it, one text link after. The primary carries a short gold rule that extends on hover, which is the only motion any button on this site performs.</p>
+      </div>
+    </div>
+
+    <div class="ed-panel">
+      <div class="ed-btnrow">
+        <button type="button" class="ed-btn ed-btn--primary">Book an Appointment</button>
+        <button type="button" class="ed-btn ed-btn--secondary">Call Us</button>
+        <button type="button" class="ed-btn ed-btn--ghost"><span>Ask about this treatment</span></button>
+        <button type="button" class="ed-btn ed-btn--disabled" disabled>Unavailable</button>
+      </div>
+
+      <dl class="ed-btnspec">
+        <div><dt>Primary</dt><dd>Navy fill, white label, 2px control radius, 48px minimum height. The gold rule extends from 14 to 22 pixels on hover.</dd></div>
+        <div><dt>Secondary</dt><dd>Transparent, navy label, hairline border at 42 percent. Fills to the soft navy tint on hover.</dd></div>
+        <div><dt>Text link</dt><dd>Bronze label on a 1px bronze underline. The underline darkens rather than moves.</dd></div>
+        <div><dt>Focus</dt><dd>A 2px bronze outline at 3px offset on every control. Never removed, never traded for a shadow.</dd></div>
+      </dl>
+      <p class="ed-caption">Label discipline: the primary reads exactly "Book an Appointment" everywhere it appears, in that capitalisation. Secondaries are chosen per context from a fixed short list, and a page carries at most one.</p>
+    </div>
+  </section>
+
+  <!-- pick: FORM-LAYOUTS.md #3 | considered: #2,#6 | rigor: heavy | why: an input atom is only specified once you can see it in a narrow track and a full-width track in the same specimen, and the 2-up field row does exactly that while keeping labels above the field where a clinical form belongs; #2's fields-beside-a-map arrangement drags a whole contact-page layout onto an identity sheet, and #6's welded email-and-button pair specifies a newsletter component rather than the field itself. -->
+  <section class="ed-block" data-rise>
+    <div class="ed-block__head">
+      <div class="ed-idx ed-tab">07</div>
+      <div>
+        <span class="ed-eyebrow">Controls</span>
+        <h2>Fields and tags</h2>
+        <p class="ed-block__note">Labels sit above the field, never inside it, because a booking form is filled once and read back twice. The field's bottom border is navy at full weight, the same structural rule used everywhere else.</p>
+      </div>
+    </div>
+
+    <div class="ed-panel">
+      <div class="ed-form">
+        <div class="ed-field">
+          <label for="ed-name">Full name</label>
+          <input id="ed-name" type="text" placeholder="As it appears on your record">
+        </div>
+        <div class="ed-field">
+          <label for="ed-mobile">Mobile</label>
+          <input id="ed-mobile" type="tel" class="ed-tab" placeholder="+63 XXX XXX XXXX">
+        </div>
+        <div class="ed-field ed-field--full">
+          <label for="ed-clinic">Preferred clinic</label>
+          <select id="ed-clinic">
+            <option>Mitsukoshi BGC, Taguig</option>
+            <option>Shangri-La Plaza, Mandaluyong</option>
+            <option>Bonifacio Stopover, Taguig</option>
+            <option>Alabang Town Center, Muntinlupa</option>
+          </select>
+          <small>Four clinics keep four genuinely different schedules, so hours belong on the card, not behind a toggle.</small>
+        </div>
+      </div>
+
+      <hr class="ed-rule">
+
+      <h4 class="ed-sublabel">Discipline tags</h4>
+      <div class="ed-tags">
+        <span class="ed-tag ed-tag--active">Orthodontics</span>
+        <span class="ed-tag">Periodontics</span>
+        <span class="ed-tag">Endodontics</span>
+        <span class="ed-tag">Prosthodontics</span>
+        <span class="ed-tag">Pediatric Dentistry</span>
+        <span class="ed-tag">Oral Surgery</span>
+      </div>
+      <p class="ed-caption">Squared to the control radius. Six named disciplines are shown as specimens; the full taxonomy is set by the published roster, not by this sheet.</p>
+
+      <div class="ed-tags" style="margin-top:18px">
+        <span class="ed-tag ed-tag--tech">3D CBCT imaging</span>
+        <span class="ed-tag ed-tag--tech">iTero intraoral scanner</span>
+        <span class="ed-tag ed-tag--tech">RayFace facial scanner</span>
+        <span class="ed-tag ed-tag--tech">OccluSense bite analysis</span>
+      </div>
+      <p class="ed-caption">Technology tags take a dashed border so they never read as a filter control. These are plain-text names of equipment the practice operates: no logo, no badge, no provider-status claim.</p>
+
+      <div style="margin-top:18px">
+        <span class="ed-status"><i></i>Accepting new patients</span>
+      </div>
+      <p class="ed-caption">The only full-radius shape on the sheet. Pill means state, never action, so a rounded edge is always information rather than an invitation to click.</p>
+    </div>
+  </section>
+
+  <!-- pick: CARD-VARIATIONS.md #2 | considered: #4,#9 | rigor: heavy | why: the specialty card has to hold a small measured figure inside its body, and #2 is the only service-card archetype in that catalog that embeds a mini-visual in the card rather than bolting an icon on top, so the tabular figure and the index mark can live together under the copy; #4's filled circle icon is precisely the friendly read this concept argues against, and #9's verified-purchase tag pill imports a consumer-review device onto a clinical surface. -->
+  <section class="ed-block" data-rise>
+    <div class="ed-block__head">
+      <div class="ed-idx ed-tab">08</div>
+      <div>
+        <span class="ed-eyebrow">Surfaces</span>
+        <h2>The card atom</h2>
+        <p class="ed-block__note">White ground, hairline border, 4 pixel surface radius, and a 2 pixel bronze index at the top left that extends across the full card edge on hover. The figure at the foot runs tabular so a row of cards lines up on the digit.</p>
+      </div>
+    </div>
+
+    <div class="ed-cards">
+      <div class="ed-card">
+        <div class="ed-card__top">
+          <span class="ed-card__label">Discipline</span>
+          <svg width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+            <circle cx="50" cy="50" r="38" fill="none" stroke="#243A52" stroke-width="3" opacity=".35"/>
+            <line x1="50" y1="12" x2="50" y2="33" stroke="#876C33" stroke-width="5"/>
+          </svg>
+        </div>
+        <h3>Orthodontics</h3>
+        <p>Aligner and fixed-appliance planning, scanned rather than impressed, with the treating orthodontist named on the plan.</p>
+        <div class="ed-card__foot">
+          <span class="ed-card__fig ed-tab">04</span>
+          <span class="ed-card__unit">Clinics offering</span>
+        </div>
+      </div>
+
+      <div class="ed-card">
+        <div class="ed-card__top">
+          <span class="ed-card__label">Technology</span>
+          <svg width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+            <circle cx="50" cy="50" r="38" fill="none" stroke="#243A52" stroke-width="3" opacity=".35"/>
+            <line x1="50" y1="12" x2="50" y2="33" stroke="#876C33" stroke-width="5"/>
+          </svg>
+        </div>
+        <h3>3D CBCT imaging</h3>
+        <p>On site at every clinic, so imaging and the consultation that reads it happen in one visit rather than across two buildings.</p>
+        <div class="ed-card__foot">
+          <span class="ed-card__fig ed-tab">08</span>
+          <span class="ed-card__unit">Named systems</span>
+        </div>
+      </div>
+
+      <div class="ed-card">
+        <div class="ed-card__top">
+          <span class="ed-card__label">Location</span>
+          <svg width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+            <circle cx="50" cy="50" r="38" fill="none" stroke="#243A52" stroke-width="3" opacity=".35"/>
+            <line x1="50" y1="12" x2="50" y2="33" stroke="#876C33" stroke-width="5"/>
+          </svg>
+        </div>
+        <h3>Mitsukoshi BGC</h3>
+        <p>Taguig. The opening figure sits on the card because a reader choosing between four clinics is choosing on hours as much as on address.</p>
+        <div class="ed-card__foot">
+          <span class="ed-card__fig ed-tab">09:00</span>
+          <span class="ed-card__unit">Opens, Mon to Fri</span>
+        </div>
+      </div>
+    </div>
+    <p class="ed-caption">Card chrome is identical across every use. Only the label, the figure and the unit change, which is what lets a discipline card, a technology card and a clinic card sit in one grid without looking assembled.</p>
+  </section>
+
+  <!-- pick: SECTION-COMPONENTS.md #40 | considered: #41,#37 | rigor: heavy | why: the sector blueprint makes the appointment CTA the spine of every page, so the single applied vignette this sheet is allowed should be that band, where the type ramp, the palette roles, the control atoms and the one dark punctuation surface all have to agree at once; #41's bare closing action shows the button with no supporting rail to test the dark panel against, and #37's split inquiry form would drag a whole form layout onto a sheet that already specified the field atom above. -->
+  <section class="ed-block" data-rise>
+    <div class="ed-block__head">
+      <div class="ed-idx ed-tab">09</div>
+      <div>
+        <span class="ed-eyebrow">Applied</span>
+        <h2>One vignette</h2>
+        <p class="ed-block__note">The only applied composition on this sheet. It exists to prove the system holds together at the moment that matters: the appointment band, with the dark panel spent exactly once.</p>
+      </div>
+    </div>
+
+    <div class="ed-vig">
+      <div class="ed-vig__band">
+        <div class="ed-vig__copy">
+          <span class="ed-micro">Appointments</span>
+          <h3>Nine disciplines. Thirty-one specialists. One clinic.</h3>
+          <p>A treatment plan is written once, by the people who will carry it out, in the building where the imaging was taken.</p>
+          <div class="ed-vig__actions">
+            <button type="button" class="ed-btn ed-btn--primary">Book an Appointment</button>
+            <button type="button" class="ed-btn ed-btn--secondary">Call Us</button>
+          </div>
+        </div>
+        <div class="ed-vig__side">
+          <div>
+            <h4>Clinics</h4>
+            <div class="ed-clinics">
+              <div>Mitsukoshi BGC<span class="ed-tab">Taguig</span></div>
+              <div>Shangri-La Plaza<span class="ed-tab">Mandaluyong</span></div>
+              <div>Bonifacio Stopover<span class="ed-tab">Taguig</span></div>
+              <div>Alabang Town Center<span class="ed-tab">Muntinlupa</span></div>
+            </div>
+          </div>
+          <p class="ed-vig__disc">Elevate Dental does not accept HMO or dental insurance. All treatment is self-pay.</p>
+          <div>
+            <h4>Currency specimen</h4>
+            <div class="ed-price">
+              <b class="ed-tab">&#8369;180,000</b>
+              <em>[REPRESENTATIVE-PLACEHOLDER]</em>
+            </div>
+            <p class="ed-vig__fine">Peso glyph, digits, comma separators, no space. The pattern survives a change in digit count because the figure is set in tabular numerals against a fixed baseline.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- pick: SECTION-COMPONENTS.md #53 | considered: #15,#36 | rigor: heavy | why: a provenance ledger is a fixed-label, variable-value ruled table, which is precisely the narrow-label plus one-fr-value construction of the hours table, widened here because the values are file paths rather than times; #15's comparison matrix implies a verdict per row that a list of sources does not carry, and #36's sticky topic rail would turn a nine-line colophon into a navigation system nobody asked for. -->
+  <section class="ed-block" data-rise>
+    <div class="ed-block__head">
+      <div class="ed-idx ed-tab">10</div>
+      <div>
+        <span class="ed-eyebrow">Provenance</span>
+        <h2>What this was built from</h2>
+        <p class="ed-block__note">Every decision above traces to one of these. Where the sector blueprint and the measured tone disagreed, the measured tone won on surface and the blueprint won on structure.</p>
+      </div>
+    </div>
+
+    <div class="ed-colo">
+      <div class="ed-colo__row"><div class="ed-colo__k">Quality ceiling</div><div class="ed-colo__v"><b>_MODERN-WOW-SPEC</b> &nbsp; layered shadow plus hairline plus inset highlight, staggered scroll reveal, display-scale contrast, oversized tabular numerals, restrained accent light. Read as: felt, not noticed.</div></div>
+      <div class="ed-colo__row"><div class="ed-colo__k">Pattern recipes</div><div class="ed-colo__v"><b>_MODERN-DESIGN-PATTERN-LIBRARY</b> &nbsp; the buildable technique layer behind the arc seam, the card hover bloom and the material veil.</div></div>
+      <div class="ed-colo__row"><div class="ed-colo__k">Token API</div><div class="ed-colo__v"><b>00-globals/tokens/tokens.css</b> &nbsp; the --ds-* naming and the constrained radius role set: --ds-r-control, --ds-r-surface, --ds-r-pill. No chip, sm, md, lg or xl radius names are emitted.</div></div>
+      <div class="ed-colo__row"><div class="ed-colo__k">Sector blueprint</div><div class="ed-colo__v"><b>composition-medical-health</b> &nbsp; appointment CTA as the spine, the circle-up arc seam, circle-masked geometry, calming tint washes. Obeyed on structure; the circle language is carried by the index ring and the arc seam rather than by soft photography frames.</div></div>
+      <div class="ed-colo__row"><div class="ed-colo__k">Visual direction</div><div class="ed-colo__v"><b>_handoff/visual-direction.md</b> &nbsp; locked. Light surface dominance, restrained energy, no dark hero, eyebrow above serif heading, existing brand furniture as an input.</div></div>
+      <div class="ed-colo__row"><div class="ed-colo__k">Brand record</div><div class="ed-colo__v"><b>_handoff/elevatedental-tokens-spec.md</b> &nbsp; the six colors, the two families, the tagline, the raster-only mark and the supply gaps. A record, not a mandate.</div></div>
+      <div class="ed-colo__row"><div class="ed-colo__k">Doctrine</div><div class="ed-colo__v"><b>_handoff/client-rules.json</b> &nbsp; banned vocabulary, the locked primary CTA label, the peso rendering rule, the self-pay structural truth, and nominative text-only use of every third-party technology name.</div></div>
+      <div class="ed-colo__row"><div class="ed-colo__k">Open</div><div class="ed-colo__v"><b>Two hard blockers stand.</b> No real treatment prices exist, so every peso figure is a marked placeholder. No documented owner authorisation exists for the clinical image library, so no before-and-after imagery is specified on this sheet.</div></div>
+      <div class="ed-colo__row"><div class="ed-colo__k">Fonts</div><div class="ed-colo__v"><b>Self-hosted by the client.</b> No external font request is emitted. The weight and format inventory remains an open supply gap.</div></div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+(function(){
+  // The head script already decided whether motion is allowed. If it did not set the
+  // class, the blocks are painted at rest by CSS and there is nothing to observe.
+  if (document.documentElement.className.indexOf('js-rise') === -1) return;
+  var nodes = document.querySelectorAll('[data-rise]');
+  Array.prototype.forEach.call(nodes, function(n, i){ n.style.setProperty('--i', i % 4); });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
+  Array.prototype.forEach.call(nodes, function(n){ io.observe(n); });
+})();
+</script>

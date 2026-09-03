@@ -1,0 +1,699 @@
+{
+  "slug": "elevatedental",
+  "stage": "IMAGERY",
+  "generated_at": "2026-08-14",
+  "mode": "CURATION",
+  "rationale": "The skill defaults to GENERATING imagery via fal. That assumes a greenfield asset window and does not hold here: the seam copied 594 real first-party files, 457 usable masters. Generation is the exception. The deciding reason is honesty not cost: on a medical site a generated image standing in for a clinician, a patient or a clinical result is fabricated proof, which content-bible bans outright.",
+  "usable_masters": 457,
+  "pages_needing_imagery": 47,
+  "pages_mapped": 47,
+  "generation_gaps": 0,
+  "fal_spend_required": 0,
+  "review_watchlist": [
+    {
+      "slug": "dental-fillings",
+      "matches": 4
+    },
+    {
+      "slug": "dental-sealant",
+      "matches": 4
+    },
+    {
+      "slug": "dental-crowns",
+      "matches": 3
+    }
+  ],
+  "consent_constraint": "The 138 before/after clinical images are usable for BUILD but carry NO documented owner authorisation (blocker B-2, waived for build only). The case gallery may be composed and reviewed; it may NOT be published.",
+  "pages": {
+    "index": {
+      "matches": 7,
+      "primary": "elevatedental.ph_wp-content_uploads_2026_02_luxury-dental-clinic-in-manila.png",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2026_02_luxury-dental-clinic-in-manila.png",
+        "elevatedental.ph_wp-content_uploads_2018_06_choosing-dental-clinic.jpg",
+        "elevatedental.ph_wp-content_uploads_2023_04_dentist-in-clinic-examines-x-ray-of-jaw-of-client-2021-11-02-17-00-47-utc.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_07_dentist-and-patient-in-dental-clinic-2022-03-31-20-13-13-utc-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2023_04_model-tooth-dentist-doctor-shows-patient-tooth-reception-dentist-s-office.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_12_dentist-at-dental-clinic-white-healthy-tooth-with-2022-11-16-18-05-26-utc.jpg",
+        "dentalclinic.ph_wp-content_uploads_2022_10_invisalign-cost-in-the-philippines.jpg"
+      ],
+      "generation_needed": false
+    },
+    "dental-tourism": {
+      "matches": 16,
+      "primary": "elevatedental.ph_wp-content_uploads_2026_03_dental-tourism-b1.jpg",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2026_03_dental-tourism-b1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_dental-tourism-mobile.jpg",
+        "elevatedental.ph_wp-content_uploads_2018_01_dental-tourism-hills-700x467-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_tourism-07.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_tourism-04.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_tourism-01-2.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_tourism-09.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_tourism-03.jpg"
+      ],
+      "generation_needed": false
+    },
+    "invisalign": {
+      "matches": 25,
+      "primary": "elevatedental.ph_wp-content_uploads_2026_06_invisalign-for-professionals.jpg",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2026_06_invisalign-for-professionals.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_02_invisalign-veneers-whitening.png",
+        "elevatedental.ph_wp-content_uploads_2022_03_young-smiling-woman-holding-invisalign-braces-over-2022-01-19-22-49-09-utc-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2018_12_invisalign-in-the-philippines.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_invisalign-main.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_MARCH_Invisalign_V2_1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_invisalign.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_invisalign-bna1-before.jpg"
+      ],
+      "generation_needed": false
+    },
+    "treatments": {
+      "matches": 30,
+      "primary": "elevatedental.ph_wp-content_uploads_2020_01_dental-procedure-header-image.jpg",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2020_01_dental-procedure-header-image.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_WP-Asset-_-ATC-Treatment-Room-1_11zon-scaled-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_10_denture-treatment-prosthetic-dentistry-implants-2021-08-26-16-25-54-utc.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_things-to-consider-before-a-veneer-treatment-scaled.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_Bonifacio-Stopover-Treatment-Room-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_Bonifacio-Stopover-Treatment-Room.jpg",
+        "elevatedental.ph_wp-content_uploads_2019_01_procedure-porcelain-veneers.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_11_woman-getting-teeth-treatment-2021-09-01-15-27-14-utc-1.jpg"
+      ],
+      "generation_needed": false
+    },
+    "specialists": {
+      "matches": 56,
+      "primary": "elevatedental.ph_wp-content_uploads_2026_02_art-of-cosmetic-dentistry.png",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2026_02_art-of-cosmetic-dentistry.png",
+        "elevatedental.ph_wp-content_uploads_2022_03_doctor-hold-an-artificial-model-of-the-jaw-with-in-2021-08-28-20-06-39-utc-1.jpg",
+        "h-beautiful-smile-before-receiving-dental-care-check-up-teeth-whitening-bleaching-female-doctor-wearing-exam-gloves-checks-tooth-color-with-comparison-veneer-scale-chart-scaled.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_Dentist-Roster-Dr.-Sarah-Rivera_Coat.png",
+        "026_07_woman-smile-mirror-consultation-with-dentist-oral-hygiene-mouth-cleaning-service-female-person-assessment-orthodontic-inspection-dental-care-patient-teeth-checkup-scaled.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_10_denture-treatment-prosthetic-dentistry-implants-2021-08-26-16-25-54-utc.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_07_Dentist-Roster-Dr.-Kevin-Balda.png",
+        "elevatedental.ph_wp-content_uploads_2026_06_Dentist-Roster-Dr.-Johnnie-Rey-Sanchez-DMD-MScD_Coat.png"
+      ],
+      "generation_needed": false
+    },
+    "technology": {
+      "matches": 7,
+      "primary": "elevatedental.ph_wp-content_uploads_2022_07_doctor-holding-and-looking-at-dental-x-ray-2021-08-27-09-16-54-utc-1.jpg",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2022_07_doctor-holding-and-looking-at-dental-x-ray-2021-08-27-09-16-54-utc-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2023_04_dentist-in-clinic-examines-x-ray-of-jaw-of-client-2021-11-02-17-00-47-utc.jpg",
+        "elevatedental.ph_wp-content_uploads_2023_04_pain-of-tooth-decay-on-teeth-x-ray-2023-02-21-00-38-19-utc.jpg",
+        "elevatedental.ph_wp-content_uploads_2023_03_x-ray-close-up-2021-08-26-18-11-44-utc-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_digital-dental-xray-bp.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_digital-xrays-main.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_dental-xray-featured.jpg"
+      ],
+      "generation_needed": false
+    },
+    "prices": {
+      "matches": 7,
+      "primary": "elevatedental.ph_wp-content_uploads_2026_02_luxury-dental-clinic-in-manila.png",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2026_02_luxury-dental-clinic-in-manila.png",
+        "elevatedental.ph_wp-content_uploads_2018_06_choosing-dental-clinic.jpg",
+        "026_07_woman-smile-mirror-consultation-with-dentist-oral-hygiene-mouth-cleaning-service-female-person-assessment-orthodontic-inspection-dental-care-patient-teeth-checkup-scaled.jpg",
+        "elevatedental.ph_wp-content_uploads_2023_04_dentist-in-clinic-examines-x-ray-of-jaw-of-client-2021-11-02-17-00-47-utc.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_07_dentist-and-patient-in-dental-clinic-2022-03-31-20-13-13-utc-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_12_dentist-at-dental-clinic-white-healthy-tooth-with-2022-11-16-18-05-26-utc.jpg",
+        "dentalclinic.ph_wp-content_uploads_2022_10_invisalign-cost-in-the-philippines.jpg"
+      ],
+      "generation_needed": false
+    },
+    "locations": {
+      "matches": 28,
+      "primary": "elevatedental.ph_wp-content_uploads_2026_02_luxury-dental-clinic-in-manila.png",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2026_02_luxury-dental-clinic-in-manila.png",
+        "elevatedental.ph_wp-content_uploads_2018_06_choosing-dental-clinic.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_WP-Asset-_-ATC-Facade_11zon-scaled-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_WP-Asset-_-ATC-Treatment-Room-1_11zon-scaled-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_Bonifacio-Stopover-Hallway.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_Bonifacio-Stopover-Facade.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_Lobby-Shangri-La.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_Bonifacio-Stopover-Treatment-Room-1.jpg"
+      ],
+      "generation_needed": false
+    },
+    "results": {
+      "matches": 142,
+      "primary": "elevatedental.ph_wp-content_uploads_2026_02_smile-makeover.png",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2026_02_smile-makeover.png",
+        "elevatedental.ph_wp-content_uploads_2026_02_invisalign-veneers-whitening.png",
+        "elevatedental.ph_wp-content_uploads_2022_04_smile-dental-veneers_t20_pRYdgd-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2023_01_October-2022-Before-_-After-4-1-1.png",
+        "elevatedental.ph_wp-content_uploads_2026_06_step-by-step-process-of-getting-dental-veneers-scaled.jpg",
+        "h-beautiful-smile-before-receiving-dental-care-check-up-teeth-whitening-bleaching-female-doctor-wearing-exam-gloves-checks-tooth-color-with-comparison-veneer-scale-chart-scaled.jpg",
+        "elevatedental.ph_wp-content_uploads_2018_09_misconceptions-about-porcelain-veneers.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_things-to-consider-before-a-veneer-treatment-scaled.jpg"
+      ],
+      "generation_needed": false
+    },
+    "general-dentistry": {
+      "matches": 8,
+      "primary": "026_07_woman-smile-mirror-consultation-with-dentist-oral-hygiene-mouth-cleaning-service-female-person-assessment-orthodontic-inspection-dental-care-patient-teeth-checkup-scaled.jpg",
+      "pool": [
+        "026_07_woman-smile-mirror-consultation-with-dentist-oral-hygiene-mouth-cleaning-service-female-person-assessment-orthodontic-inspection-dental-care-patient-teeth-checkup-scaled.jpg",
+        "elevatedental.ph_wp-content_uploads_2021_11_5-Benefits-of-Dental-Fillings.jpg",
+        "elevatedental.ph_wp-content_uploads_2021_06_3-Types-of-Teeth-Cleaning-Procedures.jpg",
+        "elevatedental.ph_wp-content_uploads_2021_04_6-Tips-On-Cleaning-Your-Dental-Braces-Properly.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_oral-prophylaxis-bp.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_dental-fillings-faqs.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_dental-fillings-featured-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_oral-prophylaxis-featured.jpg"
+      ],
+      "generation_needed": false
+    },
+    "cosmetic-dentistry": {
+      "matches": 74,
+      "primary": "elevatedental.ph_wp-content_uploads_2026_02_smile-makeover.png",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2026_02_smile-makeover.png",
+        "elevatedental.ph_wp-content_uploads_2026_02_art-of-cosmetic-dentistry.png",
+        "elevatedental.ph_wp-content_uploads_2026_02_invisalign-veneers-whitening.png",
+        "elevatedental.ph_wp-content_uploads_2022_04_smile-dental-veneers_t20_pRYdgd-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_06_step-by-step-process-of-getting-dental-veneers-scaled.jpg",
+        "h-beautiful-smile-before-receiving-dental-care-check-up-teeth-whitening-bleaching-female-doctor-wearing-exam-gloves-checks-tooth-color-with-comparison-veneer-scale-chart-scaled.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_06_teeth-whitening-results-scaled.jpg",
+        "elevatedental.ph_wp-content_uploads_2018_09_misconceptions-about-porcelain-veneers.jpg"
+      ],
+      "generation_needed": false
+    },
+    "orthodontics": {
+      "matches": 55,
+      "primary": "elevatedental.ph_wp-content_uploads_2026_06_invisalign-for-professionals.jpg",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2026_06_invisalign-for-professionals.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_02_invisalign-veneers-whitening.png",
+        "elevatedental.ph_wp-content_uploads_2022_03_woman-with-braces-on-teeth-closeup-2022-02-14-18-04-11-utc-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_03_young-smiling-woman-holding-invisalign-braces-over-2022-01-19-22-49-09-utc-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2018_12_invisalign-in-the-philippines.jpg",
+        "026_07_woman-smile-mirror-consultation-with-dentist-oral-hygiene-mouth-cleaning-service-female-person-assessment-orthodontic-inspection-dental-care-patient-teeth-checkup-scaled.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_07_dentist-assisting-patient-wear-invisible-braces-scaled.jpg",
+        "elevatedental.ph_wp-content_uploads_2021_04_7-Reasons-Why-You-Need-Dental-Braces.jpg"
+      ],
+      "generation_needed": false
+    },
+    "oral-surgery": {
+      "matches": 24,
+      "primary": "elevatedental.ph_wp-content_uploads_2022_04_dental-implants-for-patient-2021-08-29-21-25-47-utc-1.jpg",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2022_04_dental-implants-for-patient-2021-08-29-21-25-47-utc-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_10_denture-treatment-prosthetic-dentistry-implants-2021-08-26-16-25-54-utc.jpg",
+        "elevatedental.ph_wp-content_uploads_2018_09_benefits-of-dental-implants.jpg",
+        "elevatedental.ph_wp-content_uploads_2018_10_tooth-implant-in-the-model-human-teeth-gums-and-PZHNUNM.jpg",
+        "elevatedental.ph_wp-content_uploads_2018_05_decayed-tooth-extraction.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_03_How-to-Care-for-Your-Dental-Implants.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_09_dental-care-implants-for-veneers-man-with-perfec-2021-12-09-04-31-31-utc-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_03_Dentures-Vs-Implants-Pros-and-Cons.jpg"
+      ],
+      "generation_needed": false
+    },
+    "pediatric-dentistry": {
+      "matches": 10,
+      "primary": "elevatedental.ph_wp-content_uploads_2026_06_parents-guide-to-children-dental-health-scaled.jpg",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2026_06_parents-guide-to-children-dental-health-scaled.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_03_A-Parents-Guide-to-Braces-for-Kids.jpg",
+        "elevatedental.ph_wp-content_uploads_2023_09_Dental-Care-for-Kids.jpg",
+        "elevatedental.ph_wp-content_uploads_2024_09_pediatric.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_pediatric-dentistry-main.jpg",
+        "elevatedental.ph_wp-content_uploads_2021_10_5-Beneficial-Dental-Treatment-for-Kids-768x512-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_Fluoride-Treatment-FAQs-2.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_fluoride-treatment-bp.jpg"
+      ],
+      "generation_needed": false
+    },
+    "prosthodontics": {
+      "matches": 29,
+      "primary": "elevatedental.ph_wp-content_uploads_2022_10_denture-treatment-prosthetic-dentistry-implants-2021-08-26-16-25-54-utc.jpg",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2022_10_denture-treatment-prosthetic-dentistry-implants-2021-08-26-16-25-54-utc.jpg",
+        "elevatedental.ph_wp-content_uploads_2021_11_5-Denture-Care-Tips-Dos-and-Donts.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_dental-bridge-bna4-after-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_dental-bridge-bna4-before-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_03_Dentures-Vs-Implants-Pros-and-Cons.jpg",
+        "elevatedental.ph_wp-content_uploads_2017_11_Dental-crown-featured-image.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_12_technician-working-on-prosthetic-bridge-with-drill-2022-12-18-17-46-57-utc.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_dental-bridge-bna2-before.jpg"
+      ],
+      "generation_needed": false
+    },
+    "endodontics": {
+      "matches": 7,
+      "primary": "elevatedental.ph_wp-content_uploads_2021_11_Root-Canal-Treatment-Aftercare-Tips.jpg",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2021_11_Root-Canal-Treatment-Aftercare-Tips.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_endodontics-main.jpg",
+        "elevatedental.ph_wp-content_uploads_2023_09_root-canal1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_root-canal-treatment-bp.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_08_root-canal-treatment-an-endodontist-preparing-pat-2021-08-30-10-56-46-utc-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_Dentist-Roster-Dr.-MJ-Mendoza.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_root-canal-treatment-thumb.jpg"
+      ],
+      "generation_needed": false
+    },
+    "periodontics": {
+      "matches": 6,
+      "primary": "elevatedental.ph_wp-content_uploads_2018_10_tooth-implant-in-the-model-human-teeth-gums-and-PZHNUNM.jpg",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2018_10_tooth-implant-in-the-model-human-teeth-gums-and-PZHNUNM.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_periodontics-main.jpg",
+        "elevatedental.ph_wp-content_uploads_2023_05_woman-mouth-with-bleeding-gums-during-teeth-brushing-periodontal-disease-avitaminosis-gingivitis.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_tooth-scaling-main.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_10_visual-plastic-prop-of-gum-and-teeth-presented-by-2022-09-29-20-18-07-utc.jpg",
+        "elevatedental.ph_wp-content_uploads_2021_09_Airflow-Vs-Scaling-768x512-1.jpg"
+      ],
+      "generation_needed": false
+    },
+    "dental-xrays": {
+      "matches": 7,
+      "primary": "elevatedental.ph_wp-content_uploads_2022_07_doctor-holding-and-looking-at-dental-x-ray-2021-08-27-09-16-54-utc-1.jpg",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2022_07_doctor-holding-and-looking-at-dental-x-ray-2021-08-27-09-16-54-utc-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2023_04_dentist-in-clinic-examines-x-ray-of-jaw-of-client-2021-11-02-17-00-47-utc.jpg",
+        "elevatedental.ph_wp-content_uploads_2023_04_pain-of-tooth-decay-on-teeth-x-ray-2023-02-21-00-38-19-utc.jpg",
+        "elevatedental.ph_wp-content_uploads_2023_03_x-ray-close-up-2021-08-26-18-11-44-utc-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_digital-dental-xray-bp.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_digital-xrays-main.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_dental-xray-featured.jpg"
+      ],
+      "generation_needed": false
+    },
+    "bgc-mitsukoshi": {
+      "matches": 15,
+      "primary": "elevatedental.ph_wp-content_uploads_2026_02_luxury-dental-clinic-in-manila.png",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2026_02_luxury-dental-clinic-in-manila.png",
+        "elevatedental.ph_wp-content_uploads_2018_06_choosing-dental-clinic.jpg",
+        "elevatedental.ph_wp-content_uploads_2021_11_Casipit-Dental-Group-BGC-Is-Now-rebranding-to-Elevate-Dental.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_Mitsukoshi-Lobby.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_Mitsukoshi-Treatment-Room.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_Mitsukoshi-Treatment-Room2.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_Mitsukoshi-Treatment-Room3.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_Mitsukoshi-Facade.jpg"
+      ],
+      "generation_needed": false
+    },
+    "shangri-la-plaza": {
+      "matches": 11,
+      "primary": "elevatedental.ph_wp-content_uploads_2026_02_luxury-dental-clinic-in-manila.png",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2026_02_luxury-dental-clinic-in-manila.png",
+        "elevatedental.ph_wp-content_uploads_2018_06_choosing-dental-clinic.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_Lobby-Shangri-La.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_WP-Asset-_-Lobby-Shangri-La_11zon_11zon.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_WP-Asset-_-Playroom-Shangri-La_11zon.jpg",
+        "elevatedental.ph_wp-content_uploads_2023_04_dentist-in-clinic-examines-x-ray-of-jaw-of-client-2021-11-02-17-00-47-utc.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_07_dentist-and-patient-in-dental-clinic-2022-03-31-20-13-13-utc-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_WP-Asset-_-Treatment-Room-Shangri-La_1_11zon.jpg"
+      ],
+      "generation_needed": false
+    },
+    "bgc-stopover": {
+      "matches": 11,
+      "primary": "elevatedental.ph_wp-content_uploads_2026_02_luxury-dental-clinic-in-manila.png",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2026_02_luxury-dental-clinic-in-manila.png",
+        "elevatedental.ph_wp-content_uploads_2018_06_choosing-dental-clinic.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_Bonifacio-Stopover-Hallway.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_Bonifacio-Stopover-Facade.jpg",
+        "elevatedental.ph_wp-content_uploads_2021_11_Casipit-Dental-Group-BGC-Is-Now-rebranding-to-Elevate-Dental.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_Bonifacio-Stopover-Treatment-Room-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_Bonifacio-Stopover-Treatment-Room.jpg",
+        "elevatedental.ph_wp-content_uploads_2023_04_dentist-in-clinic-examines-x-ray-of-jaw-of-client-2021-11-02-17-00-47-utc.jpg"
+      ],
+      "generation_needed": false
+    },
+    "atc": {
+      "matches": 11,
+      "primary": "elevatedental.ph_wp-content_uploads_2026_02_luxury-dental-clinic-in-manila.png",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2026_02_luxury-dental-clinic-in-manila.png",
+        "elevatedental.ph_wp-content_uploads_2018_06_choosing-dental-clinic.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_WP-Asset-_-ATC-Facade_11zon-scaled-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_WP-Asset-_-ATC-Treatment-Room-1_11zon-scaled-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_05_Alabang-Town-Center-Lobby.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_ATC-Lobby.jpg",
+        "elevatedental.ph_wp-content_uploads_2023_04_dentist-in-clinic-examines-x-ray-of-jaw-of-client-2021-11-02-17-00-47-utc.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_07_dentist-and-patient-in-dental-clinic-2022-03-31-20-13-13-utc-1.jpg"
+      ],
+      "generation_needed": false
+    },
+    "airflow": {
+      "matches": 25,
+      "primary": "026_07_woman-smile-mirror-consultation-with-dentist-oral-hygiene-mouth-cleaning-service-female-person-assessment-orthodontic-inspection-dental-care-patient-teeth-checkup-scaled.jpg",
+      "pool": [
+        "026_07_woman-smile-mirror-consultation-with-dentist-oral-hygiene-mouth-cleaning-service-female-person-assessment-orthodontic-inspection-dental-care-patient-teeth-checkup-scaled.jpg",
+        "elevatedental.ph_wp-content_uploads_2023_07_airflow-2.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_airflow-bna4-before-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2021_06_3-Types-of-Teeth-Cleaning-Procedures.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_airflow-bna4-after-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2021_04_6-Tips-On-Cleaning-Your-Dental-Braces-Properly.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_airflow-featured-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2021_08_What-Happens-During-an-Airflow-Treatment-768x493-1.jpg"
+      ],
+      "generation_needed": false
+    },
+    "dental-fillings": {
+      "matches": 4,
+      "primary": "elevatedental.ph_wp-content_uploads_2021_04_Porcelain-Veneers-Vs-Composite-Veneers.jpg",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2021_04_Porcelain-Veneers-Vs-Composite-Veneers.jpg",
+        "elevatedental.ph_wp-content_uploads_2021_11_5-Benefits-of-Dental-Fillings.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_dental-fillings-faqs.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_dental-fillings-featured-1.jpg"
+      ],
+      "generation_needed": false
+    },
+    "oral-prophylaxis": {
+      "matches": 7,
+      "primary": "026_07_woman-smile-mirror-consultation-with-dentist-oral-hygiene-mouth-cleaning-service-female-person-assessment-orthodontic-inspection-dental-care-patient-teeth-checkup-scaled.jpg",
+      "pool": [
+        "026_07_woman-smile-mirror-consultation-with-dentist-oral-hygiene-mouth-cleaning-service-female-person-assessment-orthodontic-inspection-dental-care-patient-teeth-checkup-scaled.jpg",
+        "elevatedental.ph_wp-content_uploads_2021_06_3-Types-of-Teeth-Cleaning-Procedures.jpg",
+        "elevatedental.ph_wp-content_uploads_2021_04_6-Tips-On-Cleaning-Your-Dental-Braces-Properly.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_oral-prophylaxis-bp.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_tooth-scaling-main.jpg",
+        "elevatedental.ph_wp-content_uploads_2021_09_Airflow-Vs-Scaling-768x512-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_oral-prophylaxis-featured.jpg"
+      ],
+      "generation_needed": false
+    },
+    "composite-or-direct-veneers": {
+      "matches": 47,
+      "primary": "elevatedental.ph_wp-content_uploads_2026_02_invisalign-veneers-whitening.png",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2026_02_invisalign-veneers-whitening.png",
+        "elevatedental.ph_wp-content_uploads_2022_04_smile-dental-veneers_t20_pRYdgd-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_06_step-by-step-process-of-getting-dental-veneers-scaled.jpg",
+        "h-beautiful-smile-before-receiving-dental-care-check-up-teeth-whitening-bleaching-female-doctor-wearing-exam-gloves-checks-tooth-color-with-comparison-veneer-scale-chart-scaled.jpg",
+        "elevatedental.ph_wp-content_uploads_2018_09_misconceptions-about-porcelain-veneers.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_things-to-consider-before-a-veneer-treatment-scaled.jpg",
+        "elevatedental.ph_wp-content_uploads_2018_02_porcelain-laminate-veneer.jpg",
+        "elevatedental.ph_wp-content_uploads_2021_05_Why-Do-You-Need-Dental-Veneers.jpg"
+      ],
+      "generation_needed": false
+    },
+    "laser-teeth-whitening": {
+      "matches": 24,
+      "primary": "elevatedental.ph_wp-content_uploads_2026_02_invisalign-veneers-whitening.png",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2026_02_invisalign-veneers-whitening.png",
+        "h-beautiful-smile-before-receiving-dental-care-check-up-teeth-whitening-bleaching-female-doctor-wearing-exam-gloves-checks-tooth-color-with-comparison-veneer-scale-chart-scaled.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_06_teeth-whitening-results-scaled.jpg",
+        "elevatedental.ph_wp-content_uploads_2021_06_6-Reasons-for-Professional-Zoom-Teeth-Whitening.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_teeth-whitening-bna2-after.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_teeth-whitening-bna2-before.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_teeth-whitening-bna5-before.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_teeth-whitening-bna5-after.jpg"
+      ],
+      "generation_needed": false
+    },
+    "porcelain-veneers": {
+      "matches": 55,
+      "primary": "elevatedental.ph_wp-content_uploads_2026_02_invisalign-veneers-whitening.png",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2026_02_invisalign-veneers-whitening.png",
+        "elevatedental.ph_wp-content_uploads_2022_04_smile-dental-veneers_t20_pRYdgd-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_04_porcelain-teeth-2021-08-26-22-28-13-utc-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_06_step-by-step-process-of-getting-dental-veneers-scaled.jpg",
+        "h-beautiful-smile-before-receiving-dental-care-check-up-teeth-whitening-bleaching-female-doctor-wearing-exam-gloves-checks-tooth-color-with-comparison-veneer-scale-chart-scaled.jpg",
+        "elevatedental.ph_wp-content_uploads_2018_09_misconceptions-about-porcelain-veneers.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_things-to-consider-before-a-veneer-treatment-scaled.jpg",
+        "elevatedental.ph_wp-content_uploads_2018_02_porcelain-laminate-veneer.jpg"
+      ],
+      "generation_needed": false
+    },
+    "zirconia-veneers": {
+      "matches": 58,
+      "primary": "elevatedental.ph_wp-content_uploads_2026_02_invisalign-veneers-whitening.png",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2026_02_invisalign-veneers-whitening.png",
+        "elevatedental.ph_wp-content_uploads_2022_04_smile-dental-veneers_t20_pRYdgd-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_06_step-by-step-process-of-getting-dental-veneers-scaled.jpg",
+        "h-beautiful-smile-before-receiving-dental-care-check-up-teeth-whitening-bleaching-female-doctor-wearing-exam-gloves-checks-tooth-color-with-comparison-veneer-scale-chart-scaled.jpg",
+        "elevatedental.ph_wp-content_uploads_2018_09_misconceptions-about-porcelain-veneers.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_things-to-consider-before-a-veneer-treatment-scaled.jpg",
+        "elevatedental.ph_wp-content_uploads_2018_02_porcelain-laminate-veneer.jpg",
+        "elevatedental.ph_wp-content_uploads_2021_05_Why-Do-You-Need-Dental-Veneers.jpg"
+      ],
+      "generation_needed": false
+    },
+    "braces": {
+      "matches": 32,
+      "primary": "elevatedental.ph_wp-content_uploads_2022_03_woman-with-braces-on-teeth-closeup-2022-02-14-18-04-11-utc-1.jpg",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2022_03_woman-with-braces-on-teeth-closeup-2022-02-14-18-04-11-utc-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_03_young-smiling-woman-holding-invisalign-braces-over-2022-01-19-22-49-09-utc-1.jpg",
+        "026_07_woman-smile-mirror-consultation-with-dentist-oral-hygiene-mouth-cleaning-service-female-person-assessment-orthodontic-inspection-dental-care-patient-teeth-checkup-scaled.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_07_dentist-assisting-patient-wear-invisible-braces-scaled.jpg",
+        "elevatedental.ph_wp-content_uploads_2021_04_7-Reasons-Why-You-Need-Dental-Braces.jpg",
+        "elevatedental.ph_wp-content_uploads_2018_12_Getting-Braces-in-the-Philippines.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_03_A-Parents-Guide-to-Braces-for-Kids.jpg",
+        "elevatedental.ph_wp-content_uploads_2019_01_guide-to-braces.jpg"
+      ],
+      "generation_needed": false
+    },
+    "service-oral-surgery": {
+      "matches": 7,
+      "primary": "elevatedental.ph_wp-content_uploads_2018_05_decayed-tooth-extraction.jpg",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2018_05_decayed-tooth-extraction.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_08_dental-male-employee-is-demonstrating-extraction-i-2021-09-03-23-32-37-utc.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_oral-surgery-maon-bp.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_oral-surgery.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_oral-surgery-faqs-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_oral-surgery-main.jpg",
+        "elevatedental.ph_wp-content_uploads_2023_03_tooth-extraction-with-a-dental-instrument-with-for-2022-04-20-18-35-01-utc-1.jpg"
+      ],
+      "generation_needed": false
+    },
+    "dental-implant": {
+      "matches": 17,
+      "primary": "elevatedental.ph_wp-content_uploads_2022_04_dental-implants-for-patient-2021-08-29-21-25-47-utc-1.jpg",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2022_04_dental-implants-for-patient-2021-08-29-21-25-47-utc-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_10_denture-treatment-prosthetic-dentistry-implants-2021-08-26-16-25-54-utc.jpg",
+        "elevatedental.ph_wp-content_uploads_2018_09_benefits-of-dental-implants.jpg",
+        "elevatedental.ph_wp-content_uploads_2018_10_tooth-implant-in-the-model-human-teeth-gums-and-PZHNUNM.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_03_How-to-Care-for-Your-Dental-Implants.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_09_dental-care-implants-for-veneers-man-with-perfec-2021-12-09-04-31-31-utc-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_03_Dentures-Vs-Implants-Pros-and-Cons.jpg",
+        "elevatedental.ph_wp-content_uploads_2017_12_Dental-implant-featured-image.jpg"
+      ],
+      "generation_needed": false
+    },
+    "dental-sealant": {
+      "matches": 4,
+      "primary": "elevatedental.ph_wp-content_uploads_2026_06_parents-guide-to-children-dental-health-scaled.jpg",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2026_06_parents-guide-to-children-dental-health-scaled.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_03_A-Parents-Guide-to-Braces-for-Kids.jpg",
+        "elevatedental.ph_wp-content_uploads_2023_09_Dental-Care-for-Kids.jpg",
+        "elevatedental.ph_wp-content_uploads_2021_10_5-Beneficial-Dental-Treatment-for-Kids-768x512-1.jpg"
+      ],
+      "generation_needed": false
+    },
+    "fluoride-treatment": {
+      "matches": 7,
+      "primary": "elevatedental.ph_wp-content_uploads_2026_06_parents-guide-to-children-dental-health-scaled.jpg",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2026_06_parents-guide-to-children-dental-health-scaled.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_03_A-Parents-Guide-to-Braces-for-Kids.jpg",
+        "elevatedental.ph_wp-content_uploads_2023_09_Dental-Care-for-Kids.jpg",
+        "elevatedental.ph_wp-content_uploads_2021_10_5-Beneficial-Dental-Treatment-for-Kids-768x512-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_Fluoride-Treatment-FAQs-2.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_fluoride-treatment-bp.jpg",
+        "elevatedental.ph_wp-content_uploads_2021_10_7-Benefits-of-A-Fluoride-Treatment-768x512-1.jpg"
+      ],
+      "generation_needed": false
+    },
+    "complete-dentures": {
+      "matches": 8,
+      "primary": "elevatedental.ph_wp-content_uploads_2022_10_denture-treatment-prosthetic-dentistry-implants-2021-08-26-16-25-54-utc.jpg",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2022_10_denture-treatment-prosthetic-dentistry-implants-2021-08-26-16-25-54-utc.jpg",
+        "elevatedental.ph_wp-content_uploads_2021_11_5-Denture-Care-Tips-Dos-and-Donts.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_03_Dentures-Vs-Implants-Pros-and-Cons.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_dentures-faqs.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_complete-dentures-bp.jpg",
+        "elevatedental.ph_wp-content_uploads_2021_10_5-Common-Questions-People-Ask-Before-Getting-Dentures-768x513-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_removable-partial-dentures-main-bp.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_complete-dentures-featured.jpg"
+      ],
+      "generation_needed": false
+    },
+    "dental-bridge": {
+      "matches": 17,
+      "primary": "elevatedental.ph_wp-content_uploads_2026_03_dental-bridge-bna4-after-1.jpg",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2026_03_dental-bridge-bna4-after-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_dental-bridge-bna4-before-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_12_technician-working-on-prosthetic-bridge-with-drill-2022-12-18-17-46-57-utc.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_dental-bridge-bna2-before.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_dental-bridge-bna2-after.jpg",
+        "elevatedental.ph_wp-content_uploads_2021_07_Dental-Bridge-Vs-Implants-Choosing-The-Best-Option-768x511-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_dental-bridge-bna5-before.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_dental-bridge-bna5-after.jpg"
+      ],
+      "generation_needed": false
+    },
+    "dental-crowns": {
+      "matches": 3,
+      "primary": "elevatedental.ph_wp-content_uploads_2017_11_Dental-crown-featured-image.jpg",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2017_11_Dental-crown-featured-image.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_crowns-bp.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_08_dental-crowns-on-the-white-background-2021-09-01-15-20-43-utc.jpg"
+      ],
+      "generation_needed": false
+    },
+    "removable-partial-dentures": {
+      "matches": 8,
+      "primary": "elevatedental.ph_wp-content_uploads_2022_10_denture-treatment-prosthetic-dentistry-implants-2021-08-26-16-25-54-utc.jpg",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2022_10_denture-treatment-prosthetic-dentistry-implants-2021-08-26-16-25-54-utc.jpg",
+        "elevatedental.ph_wp-content_uploads_2021_11_5-Denture-Care-Tips-Dos-and-Donts.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_03_Dentures-Vs-Implants-Pros-and-Cons.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_dentures-faqs.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_complete-dentures-bp.jpg",
+        "elevatedental.ph_wp-content_uploads_2021_10_5-Common-Questions-People-Ask-Before-Getting-Dentures-768x513-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_removable-partial-dentures-main-bp.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_complete-dentures-featured.jpg"
+      ],
+      "generation_needed": false
+    },
+    "root-canal-treatment": {
+      "matches": 7,
+      "primary": "elevatedental.ph_wp-content_uploads_2021_11_Root-Canal-Treatment-Aftercare-Tips.jpg",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2021_11_Root-Canal-Treatment-Aftercare-Tips.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_endodontics-main.jpg",
+        "elevatedental.ph_wp-content_uploads_2023_09_root-canal1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_root-canal-treatment-bp.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_08_root-canal-treatment-an-endodontist-preparing-pat-2021-08-30-10-56-46-utc-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_Dentist-Roster-Dr.-MJ-Mendoza.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_root-canal-treatment-thumb.jpg"
+      ],
+      "generation_needed": false
+    },
+    "tooth-scaling-and-root-planning": {
+      "matches": 6,
+      "primary": "elevatedental.ph_wp-content_uploads_2018_10_tooth-implant-in-the-model-human-teeth-gums-and-PZHNUNM.jpg",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2018_10_tooth-implant-in-the-model-human-teeth-gums-and-PZHNUNM.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_periodontics-main.jpg",
+        "elevatedental.ph_wp-content_uploads_2023_05_woman-mouth-with-bleeding-gums-during-teeth-brushing-periodontal-disease-avitaminosis-gingivitis.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_tooth-scaling-main.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_10_visual-plastic-prop-of-gum-and-teeth-presented-by-2022-09-29-20-18-07-utc.jpg",
+        "elevatedental.ph_wp-content_uploads_2021_09_Airflow-Vs-Scaling-768x512-1.jpg"
+      ],
+      "generation_needed": false
+    },
+    "digital-dental-x-ray": {
+      "matches": 7,
+      "primary": "elevatedental.ph_wp-content_uploads_2022_07_doctor-holding-and-looking-at-dental-x-ray-2021-08-27-09-16-54-utc-1.jpg",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2022_07_doctor-holding-and-looking-at-dental-x-ray-2021-08-27-09-16-54-utc-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2023_04_dentist-in-clinic-examines-x-ray-of-jaw-of-client-2021-11-02-17-00-47-utc.jpg",
+        "elevatedental.ph_wp-content_uploads_2023_04_pain-of-tooth-decay-on-teeth-x-ray-2023-02-21-00-38-19-utc.jpg",
+        "elevatedental.ph_wp-content_uploads_2023_03_x-ray-close-up-2021-08-26-18-11-44-utc-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_digital-dental-xray-bp.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_04_digital-xrays-main.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_dental-xray-featured.jpg"
+      ],
+      "generation_needed": false
+    },
+    "patients": {
+      "matches": 8,
+      "primary": "elevatedental.ph_wp-content_uploads_2026_02_luxury-dental-clinic-in-manila.png",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2026_02_luxury-dental-clinic-in-manila.png",
+        "elevatedental.ph_wp-content_uploads_2018_06_choosing-dental-clinic.jpg",
+        "026_07_woman-smile-mirror-consultation-with-dentist-oral-hygiene-mouth-cleaning-service-female-person-assessment-orthodontic-inspection-dental-care-patient-teeth-checkup-scaled.jpg",
+        "elevatedental.ph_wp-content_uploads_2023_04_dentist-in-clinic-examines-x-ray-of-jaw-of-client-2021-11-02-17-00-47-utc.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_07_dentist-and-patient-in-dental-clinic-2022-03-31-20-13-13-utc-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2023_04_model-tooth-dentist-doctor-shows-patient-tooth-reception-dentist-s-office.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_12_dentist-at-dental-clinic-white-healthy-tooth-with-2022-11-16-18-05-26-utc.jpg",
+        "dentalclinic.ph_wp-content_uploads_2022_10_invisalign-cost-in-the-philippines.jpg"
+      ],
+      "generation_needed": false
+    },
+    "about": {
+      "matches": 6,
+      "primary": "elevatedental.ph_wp-content_uploads_2026_02_luxury-dental-clinic-in-manila.png",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2026_02_luxury-dental-clinic-in-manila.png",
+        "elevatedental.ph_wp-content_uploads_2018_06_choosing-dental-clinic.jpg",
+        "elevatedental.ph_wp-content_uploads_2023_04_dentist-in-clinic-examines-x-ray-of-jaw-of-client-2021-11-02-17-00-47-utc.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_07_dentist-and-patient-in-dental-clinic-2022-03-31-20-13-13-utc-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_12_dentist-at-dental-clinic-white-healthy-tooth-with-2022-11-16-18-05-26-utc.jpg",
+        "dentalclinic.ph_wp-content_uploads_2022_10_invisalign-cost-in-the-philippines.jpg"
+      ],
+      "generation_needed": false
+    },
+    "contact": {
+      "matches": 7,
+      "primary": "elevatedental.ph_wp-content_uploads_2026_02_luxury-dental-clinic-in-manila.png",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2026_02_luxury-dental-clinic-in-manila.png",
+        "elevatedental.ph_wp-content_uploads_2018_06_choosing-dental-clinic.jpg",
+        "elevatedental.ph_wp-content_uploads_2023_04_dentist-in-clinic-examines-x-ray-of-jaw-of-client-2021-11-02-17-00-47-utc.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_07_dentist-and-patient-in-dental-clinic-2022-03-31-20-13-13-utc-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2023_04_model-tooth-dentist-doctor-shows-patient-tooth-reception-dentist-s-office.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_12_dentist-at-dental-clinic-white-healthy-tooth-with-2022-11-16-18-05-26-utc.jpg",
+        "dentalclinic.ph_wp-content_uploads_2022_10_invisalign-cost-in-the-philippines.jpg"
+      ],
+      "generation_needed": false
+    },
+    "promos": {
+      "matches": 13,
+      "primary": "elevatedental.ph_wp-content_uploads_2026_03_gl-promo.jpg",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2026_03_gl-promo.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_promo-as.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_Website-Promo-Anniversary-Promo-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_Elevate-Dental_BPI-Installment-Promo_KV2.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_Website-Promo-Anniversary-Sale.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_bridal-promo.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_promo-cdc.jpg",
+        "elevatedental.ph_wp-content_uploads_2026_03_Website-Promo-Cebu-Pacific.jpg"
+      ],
+      "generation_needed": false
+    },
+    "careers": {
+      "matches": 6,
+      "primary": "elevatedental.ph_wp-content_uploads_2026_02_luxury-dental-clinic-in-manila.png",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2026_02_luxury-dental-clinic-in-manila.png",
+        "elevatedental.ph_wp-content_uploads_2018_06_choosing-dental-clinic.jpg",
+        "elevatedental.ph_wp-content_uploads_2023_04_dentist-in-clinic-examines-x-ray-of-jaw-of-client-2021-11-02-17-00-47-utc.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_07_dentist-and-patient-in-dental-clinic-2022-03-31-20-13-13-utc-1.jpg",
+        "elevatedental.ph_wp-content_uploads_2022_12_dentist-at-dental-clinic-white-healthy-tooth-with-2022-11-16-18-05-26-utc.jpg",
+        "dentalclinic.ph_wp-content_uploads_2022_10_invisalign-cost-in-the-philippines.jpg"
+      ],
+      "generation_needed": false
+    },
+    "insights": {
+      "matches": 5,
+      "primary": "elevatedental.ph_wp-content_uploads_2020_02_Blog-4.png",
+      "pool": [
+        "elevatedental.ph_wp-content_uploads_2020_02_Blog-4.png",
+        "elevatedental.ph_wp-content_uploads_2020_02_Blog-7.png",
+        "elevatedental.ph_wp-content_uploads_2020_02_Blog-1.png",
+        "elevatedental.ph_wp-content_uploads_2020_03_Blog.png",
+        "elevatedental.ph_wp-content_uploads_2020_03_Blog.jpg"
+      ],
+      "generation_needed": false
+    }
+  }
+}

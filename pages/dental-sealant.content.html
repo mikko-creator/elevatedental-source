@@ -1,0 +1,612 @@
+<!--META {"title":"Dental Sealants Philippines | Child Cavity Protection","desc":"A protective coating on the chewing surfaces of your child's molars to prevent decay. When to have it done and what it costs.","noindex":true}-->
+<!-- TITLE and DESC are the LOCKED values from _handoff/seo-enrichment.md section 1, the SEO SSOT.
+     The SSOT separator is an en dash and renders here as a pipe, because verify-no-dashes is
+     registered on this build. Only the SEPARATOR CHARACTER changed; no word was altered, added,
+     removed or reordered.
+     The key is "desc" and NOT "description": build.mjs renders esc(meta.desc), and its JSON branch
+     does not alias description to desc, so a "description" key ships an EMPTY meta description
+     while looking correct in the fragment.
+     noindex is set on EVERY page because this publishes to a PUBLIC preview URL while the pages
+     carry representative market prices rather than this clinic's own figures. robots.txt cannot
+     carry that load: crawlers read it only at the origin root, and this ships to a project
+     subpath, so the disallow-all there is inert. noindex is the protection that actually works. -->
+<!-- ============================================================================
+     THE BODY. elevatedental / dental-sealant. T-FEATURE, concept B "THE GUIDED PATH",
+     the owner pick of 2026-08-15 (_approvals.json T-FEATURE).
+
+     THE SPINE IS PRESERVED, RE-POINTED AT THIS TREATMENT: an in-flow route index that
+     works with scripting off, an ORDINAL in the .kit-open__no slot of every band, and a
+     ruled .kit-foot hand-off naming the next stage. No position:sticky (inert inside the
+     overflow:hidden .section), no scroll-spy script.
+
+     THIS PAGE DECLARES SIX STAGES, THE SHORTEST ROUTE OF THE SET, AND THAT IS THE POINT.
+     The route length is read off THIS page's copy (_copy/dental-sealant.md). A sealant is
+     a ten-minute, no-injection, no-drilling procedure and the copy calls it the least
+     invasive item on the whole site. Padding it to the nine stages a veneer or an implant
+     page needs would misrepresent the treatment by the SHAPE of the page before a word was
+     read: a reader who meets a long, grave route assumes a long, grave procedure. Eight
+     sections. The route is short because the treatment is.
+
+     ONE MERGE, MADE ON CONTENT RATHER THAN CONVENIENCE. Stage 04 carries WHO PLACES IT and
+     WHAT EQUIPMENT DOES NOT MATTER in one band, because the copy makes them one argument:
+     sealing a tooth is low-technology, so what decides the outcome is judgement and
+     handling rather than a machine. Splitting them would have produced a technology stage
+     whose honest content is "nothing here is relevant", which is a hole rather than a stop.
+
+     Every section obeys section -> div.container -> div.row -> div.col -> OBJECT with
+     EXACTLY ONE .container and ONE .row. Skin classes sit on the OBJECT.
+     NO PAGE-LOCAL STYLE BLOCK. ZERO closing CTA bands, ZERO dark bands, ZERO arc seams.
+
+     DESIGN-SYSTEM PROVENANCE, cited and meant:
+       blueprint composition-medical-health  the SECTOR spine. Collision A (zero closing
+                 bands in the body) and Collision B (warm imagery, calm voice) bind here,
+                 and Collision B governs the imagery choice on a page about children.
+       library   _COMPOSITION-LAWS           L9 SELECTION-RATIONALE is why every band
+                 carries a defended ledger; L1 STACKED SPLIT READING ORDER is why no media
+                 cell is authored above its own heading.
+       library   _RESPONSIVE-PATTERN-LIBRARY the four-tier reflow ladder.
+       library   _MODERN-WOW-SPEC            real photography over token-built material.
+       library   _MODERN-DESIGN-PATTERN-LIBRARY  the shape-masked media spent through the
+                 locked .kit-slot family.
+
+     IMAGERY. Four real first-party photographs, the entire pool assigned to this page in
+     _imagery-map.json, each LOOKED AT before its alt text was written. ZERO generated
+     images. The braces photograph at stage 02 is placed against the ONE sentence in the
+     copy that mentions braces (sealing before a fixed appliance goes on) and its caption
+     says so, rather than being dropped in as generic child-dentistry decoration. ZERO
+     before-and-after pairs: for a child the consent required is a parent's, and it is not
+     in hand (B-2).
+
+     CLAIM DISCIPLINE. The copy's refusal to name irrelevant equipment is carried through
+     verbatim in intent: 3D CBCT is named ONLY to say it is not used for this, which is the
+     opposite of an equipment claim. No permanence claim (sealants wear, and the page says
+     so). Both peso figures carry the sanctioned visible marker. The self-pay truth is
+     carried in stage 05 in its canonical wording.
+     ============================================================================ -->
+
+<!-- pick: HERO-COMPOSITIONS.md #13 Centered + scroll cue, the continue indicator | considered: #20,#3,#19 | rigor: heavy | why: the reader here is a PARENT, and a parent's question about a preventive procedure is "what is going to be done to my child and will it upset them", which is a sequence question; #13 is the only cataloged entry whose named device is the CONTINUE affordance, a hero that is explicitly incomplete and hands the reader onward into that sequence. #20's three parallel proof columns argue for the practice, which is the wrong argument when the procedure costs less than a restaurant meal and the real anxiety is about the child, not the clinic. #3's dual-promise 50/50 would split the page between parent and child as two audiences, when there is one decision-maker. #19's bento presents everything at once and would make a ten-minute appointment look like a program. ADAPTATION: #13's centering, 100vh box and animated chevron are refused per the single left reading axis, the no-min-height hero law and the three-move motion budget. DIVERGENCE FROM THE TEMPLATE, stated honestly: every sibling page in this type opens on the appliance or the operator; this one opens on a CHILD WHO IS NOT DISTRESSED, because that is the outcome the parent is actually shopping for and it is the one thing the photograph can honestly show. -->
+<!-- FRONT OF HOUSE. The opening section is now the one full-bleed photographic band.
+     THE PRICE CAVEAT WAS NOT DELETED, IT MOVED. The h1 read "...From ₱1,500 per tooth,
+     a representative market figure rather than an Elevate quote." The figure stays in
+     the headline and the disclosure now sits in the .kit-tag chip that already stood
+     under it and already says it: "Indicative market range, not an Elevate price".
+     That is the invisalign.html pattern, reused rather than reinvented.
+     AMENDED 2026-08-25, SECOND PASS. THE FIGURE HAS NOW FOLLOWED ITS CAVEAT DOWN, so the
+     paragraph above no longer describes this file: the price is NOT in the headline any more.
+     The reason is measured rather than assumed. With the whole band markup standing between
+     them, the h1 figure sat far further from its marker than the 120 characters that
+     price-placeholder-unmarked allows, and the page was blocked by that rule. The figure now
+     sits INSIDE the chip, byte for byte unchanged, directly in front of the wording that
+     qualifies it. That is the invisalign shape taken one step further, and it is what Front of
+     House wanted anyway, a short headline with no price in it.
+     NOTHING WAS CUT. The h1 keeps the treatment name; the chip keeps every word it already had.
+     THE PHOTOGRAPH IS NOT DUPLICATED. parents-guide-to-children-dental-health was the
+     .kit-slot image in this same section, so the slot is gone, its alt is carried
+     across verbatim, and the .col--span-5 that held it is gone too rather than left
+     as an empty cell that renders at zero height and still pays the 40px row gap.
+     THE LEDE is the existing one compressed to its defining clause. The clause it
+     sheds (the brush cannot reach the fissure) is not lost: stage 01 is three
+     paragraphs on exactly that, which is why it can leave the first screen.
+     The rest of stage 00 (the opener, the second chip, the free-consultation line and
+     the how-this-page-is-laid-out foot) moved intact into the sibling section below,
+     which keeps the paper ground and pays the same one --ed-flow interval. -->
+<section class="section surface-dark kit-hero foh-hero" id="s-start" aria-labelledby="h-start" data-surface="dark" data-rise>
+  <div class="container">
+    <div class="row">
+      <div class="col col--full">
+        <div class="foh-hero__stage">
+          <figure class="foh-hero__band">
+            <img class="foh-hero__img" src="../assets/generated/gen-hero-sealant-molar.jpg" alt="A single molar model raised on a small white plinth on a bright clinic worktop, a mouth mirror lying beside it." width="3136" height="1344" loading="eager" fetchpriority="high" decoding="async">
+            
+          </figure>
+          <div class="foh-hero__inner">
+              <h1 class="foh-hero__title" id="h-start">Dental Sealants in the Philippines.</h1>
+            </div>
+          <div class="foh-hero__lockup">
+            <p class="foh-hero__eyebrow">Dental sealants, pediatric dentistry</p>
+            <p class="foh-hero__lede">A protective coating flowed into the grooves of your child's back teeth.</p>
+            <div class="kit-tags">
+              <span class="kit-tag kit-tag--accent kit-tab">From ₱1,500 per tooth. Indicative market range, not an Elevate price.</span>
+            </div>
+            <div class="kit-actions">
+              <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+              <a class="kit-btn kit-btn--secondary" href="contact.html">Ask about this treatment</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- The rest of the opening stage, on the paper ground it already carried. The
+     .col--span-5 that held the photograph is not reproduced here: its only occupant is
+     now the band above, and an empty cell would still pay the row gap. -->
+<section class="section section--paper" id="s-start-b" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">Start</span>
+          </div>
+        </div>
+        <div class="kit-tags">
+          <span class="kit-tag kit-tab">No injection, no drilling</span>
+        </div>
+        <p class="kit-body readw">The first consultation is free, and it tells you which teeth are ready for one and which are not. Confirm current consultation terms with the clinic before you book.</p>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>See the six stages</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#stage-02"><span>Skip to the limits</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #36 Sticky-sidebar topic nav | considered: #27,#50 | rigor: heavy | why: this band IS the concept, and #36 is the only entry whose stated role is ORIENTATION across a document rather than presentation of content, with a declared reflow that moves the index ABOVE the body at the narrow tier. #27's numbered process steps describe a PROCEDURE, and stage 03 of this page IS that procedure, so the map and the territory would share a shape. #50's topic columns are unordered by construction. ADAPTATION: #36's sidebar is STICKY and cannot be, because position:sticky is inert inside the overflow:hidden .section; the affordance is rebuilt as an in-flow index plus a per-band ordinal plus a per-band hand-off. WHAT THIS INDEX DOES THAT ITS SIBLINGS' DO NOT: it is six rows rather than eight or nine, and the copy beside it says why in one sentence. A route index is a promise about length, and the honest promise on a preventive appointment is a short one. -->
+<section class="section section--cool" id="s-route" aria-labelledby="h-route" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-4">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">Route</span>
+            <div>
+              <span class="kit-eyebrow">The six stages</span>
+              <h2 id="h-route">What this page covers</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Six stages, which is the fewest on any treatment page here.</p>
+        <p class="kit-body readw">Nothing has been left out to make it short. This is simply a small procedure, and a page that dressed it up as a major one would be lying with its length before it lied with a word.</p>
+      </div>
+
+      <div class="col col--span-8">
+        <ol class="kit-list kit-list--ledger" data-rise>
+          <li><span><b>The grooves.</b> Why a brush bristle is too wide for the place decay actually starts, and what gets flowed in there instead. <a href="#stage-01">Go to stage 01</a></span></li>
+          <li><span><b>Which teeth, and which not.</b> The right age, the children who gain most, and five situations where the answer is wait or do something else. <a href="#stage-02">Go to stage 02</a></span></li>
+          <li><span><b>The appointment.</b> Eight steps, no injection, and the one step that decides whether it lasts. <a href="#stage-03">Go to stage 03</a></span></li>
+          <li><span><b>The hands, not the hardware.</b> The judgement this needs, and a technology section that spends its length on what is not used. <a href="#stage-04">Go to stage 04</a></span></li>
+          <li><span><b>The fee.</b> An anchor figure, the three things that move it, and the one way this clinic is paid. <a href="#stage-05">Go to stage 05</a></span></li>
+          <li><span><b>Answers and upkeep.</b> Eight real questions, what to do if one comes off, and what a sealant does not protect. <a href="#stage-06">Go to stage 06</a></span></li>
+        </ol>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 01, what is actually being sealed, and why this is not a filling.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-01"><span>Go to stage 01</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #21 Definition block with inline callout | considered: #12,#57 | rigor: heavy | why: this stage defines the treatment by defining the PROBLEM first, a fissure narrower than a brush bristle, and then interrupts itself with the distinction that matters most to a parent: this is not a filling. #21 is built for exactly that, a continuous definition with a called-out consequence seated inside it, which the locked .kit-truth block provides. #12's feature row with a screenshot is refused because the subject is a groove a fraction of a millimetre wide inside a child's molar, and no photograph in the assigned pool shows one; a picture of a child smiling next to a paragraph about fissure anatomy is decoration pretending to be evidence. #57's standalone pull-quote could carry the "not a filling" line alone but not the anatomy that makes it make sense. ADAPTATION: the band carries NO photograph, deliberately, on an eight-section page with four of them. The one band whose subject is too small to photograph is the one band with nothing to look at. -->
+<section class="section section--warm" id="stage-01" aria-labelledby="h01" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">01</span>
+            <div>
+              <span class="kit-eyebrow">Stage 01, plain English</span>
+              <h2 id="h01">What is being sealed, and why</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Look closely at a back tooth and you will see a pattern of grooves running across the chewing surface.</p>
+        <p class="kit-body readw">On some children those grooves are shallow. On others they are deep, narrow fissures, and the tip of a toothbrush bristle is wider than the opening. Food and bacteria go in. The brush does not follow. That is why most childhood decay starts on the biting surfaces of the first adult back teeth rather than anywhere else in the mouth.</p>
+        <p class="kit-body readw">A sealant closes those grooves. It is a flowable resin, painted into the clean, dry fissure system and hardened with a curing light in seconds, leaving a smooth top surface a brush can actually clean. Glass ionomer is used instead in some situations, usually where the surface will not stay dry enough for resin to bond, and it releases fluoride as a secondary benefit.</p>
+      </div>
+
+      <div class="col col--span-5">
+        <div class="kit-truth">
+          <span class="kit-truth__k">This is not a filling</span>
+          <p>Nothing is drilled and nothing is removed. A filling repairs damage that has already happened. A sealant goes onto a healthy tooth to prevent the damage in the first place, which makes it the least invasive item on this entire site. If your child needs a filling, that is a different treatment and you will be told so at the examination rather than after.</p>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 02, which teeth are candidates, at what age, and the five situations where the honest answer is to wait or to do something else.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-02"><span>Go to stage 02</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Return to the index</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #30 Ledger list with per-row detail | considered: #6,#10 | rigor: heavy | why: FIVE limits, each a different kind of answer (treat instead, wait, this does not cover that, case by case, expect wear), is more than #10's four peer cells hold and too heterogeneous for #6's continuous qualifier prose, which would bury the two that a parent most needs to find: that a decayed tooth must not be sealed over, and that a sealed tooth is not a sealed mouth. #30's ledger rows take five without deforming and let each lead with the situation the parent is checking against. ADAPTATION, and it is the ledger entry worth defending: the row about sealing before braces is paired with the ONLY braces photograph in this page's assigned pool, because that row is the one place the copy mentions a fixed appliance. Placing that image anywhere else on a sealant page would be generic child-dentistry decoration; placed here it illustrates the sentence beside it. -->
+<section class="section section--paper" id="stage-02" aria-labelledby="h02" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-5">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">02</span>
+            <div>
+              <span class="kit-eyebrow">Stage 02</span>
+              <h2 id="h02">Which teeth, at what age, and which not</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">The usual timing is the first permanent molars, at around age six, and the second set at around age twelve. Premolars are done where the grooves warrant it.</p>
+        <p class="kit-body readw">They are worth most in a child who has already had decay, who has deep fissures, who eats or drinks sugar frequently, or who finds thorough brushing difficult.</p>
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2022_03_A-Parents-Guide-to-Braces-for-Kids.jpg" alt="Close-up of a young smile with metal brackets and archwires on both the upper and lower teeth." width="1200" height="860" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Before this goes on</b><span>Sealing is routinely worthwhile ahead of a fixed appliance.</span></figcaption>
+        </figure>
+        <p class="kit-body readw">A fixed appliance makes the whole mouth harder to clean for the next two years, so a teenager heading into one is a straightforward candidate.</p>
+      </div>
+
+      <div class="col col--span-7">
+        <p class="kit-micro">The five honest limits</p>
+        <ol class="kit-list kit-list--ledger" data-rise>
+          <li><span><b>Established decay into dentine rules it out.</b> Sealing over decay traps it. That tooth needs restoring instead, and the examination is what tells the difference between a stained groove and a cavity.</span></li>
+          <li><span><b>A partly erupted tooth cannot be sealed reliably yet.</b> Resin needs a dry field to bond, and a tooth still under a flap of gum will not stay dry. The correct answer is to come back, not to place one that will fail in six months, and you will be told to return rather than charged for one now.</span></li>
+          <li><span><b>This does not protect the surfaces between teeth.</b> Decay between molars is caused by what stays there overnight, and only flossing and diet address it. A sealed tooth is not a sealed mouth, and any clinic implying otherwise is overselling a small, useful procedure.</span></li>
+          <li><span><b>Baby teeth are done case by case.</b> Usually only where a child is at high risk and the tooth still has years of service left in it.</span></li>
+          <li><span><b>These are not permanent.</b> They wear and they chip. Each one is checked at every recall and repaired or replaced when it needs it. That is normal, and it is part of what the recall appointment is for.</span></li>
+        </ol>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 03, the appointment itself, step by step, and the one step nobody should hurry.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-03"><span>Go to stage 03</span></a>
+            <a class="kit-btn kit-btn--ghost" href="dental-fillings.html"><span>Dental fillings</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>The stage list</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #28 Process timeline horizontal | considered: #27,#13 | rigor: heavy | why: EIGHT steps with a real duration on each is the long sequence #28 was written for; #27 is cataloged for three to six numbered cards and would overrun at eight. #13's bento is non-sequential, and here the order is the reassurance: a parent reading down the column can see that the etching gel comes and goes in twenty seconds and that the light is on for less than a minute. ADAPTATION: #28's horizontal flow is not built (it drops its connector and wraps two-up at the tablet tier, and would need page-local CSS that promotion strips); the locked table's hairline rules are the connector and the third column is the durations axis. WHAT IS SPECIFIC TO THIS TABLE: every duration is in SECONDS OR MINUTES, and that is the argument. On the implant page the same component carries months. Same device, opposite fact, and the reader learns the difference without being told it. -->
+<section class="section section--cool" id="stage-03" aria-labelledby="h03" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-5">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">03</span>
+            <div>
+              <span class="kit-eyebrow">Stage 03, the appointment</span>
+              <h2 id="h03">Step by step, in seconds and minutes</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">The whole appointment takes about 10 to 15 minutes per tooth. There is no injection, no drilling, and nothing a child needs to brace for.</p>
+      </div>
+
+      <div class="col col--span-7">
+        <p class="kit-body readw--wide">Step 03 is the one that is never hurried. Keeping the tooth dry is what decides whether the sealant is still there in two years, and a clinician who rushes it is saving ninety seconds at the cost of the whole procedure.</p>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-table__scroll">
+          <table class="kit-table">
+            <caption>Eight steps, and what each one takes</caption>
+            <thead>
+              <tr><th scope="col">Step</th><th scope="col">What happens</th><th scope="col">How long</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">01 Examination</b></td>
+                <td data-label="What happens">The dentist checks which teeth have erupted, how deep the fissures are, and whether any already have decay. Radiographs only where they are needed to see between the teeth. You are told which teeth are candidates today and which should wait.</td>
+                <td data-label="How long" class="kit-tab">10 to 15 minutes</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">02 Cleaning the surface</b></td>
+                <td data-label="What happens">The biting surface is cleaned so the sealant bonds to enamel rather than to a film of plaque.</td>
+                <td data-label="How long" class="kit-tab">2 to 3 minutes per tooth</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">03 Isolation and drying</b></td>
+                <td data-label="What happens">Cotton rolls or a rubber dam keep the tooth dry. This step decides whether it lasts, so it is not hurried.</td>
+                <td data-label="How long" class="kit-tab">2 minutes</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">04 Etching</b></td>
+                <td data-label="What happens">A mild acid gel is applied to the enamel to give the resin a surface to grip, then rinsed off and the tooth dried again.</td>
+                <td data-label="How long" class="kit-tab">About 20 seconds</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">05 Placing it</b></td>
+                <td data-label="What happens">The resin is flowed into the grooves with a fine applicator so that it fills them rather than bridging them.</td>
+                <td data-label="How long" class="kit-tab">1 to 2 minutes</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">06 Curing</b></td>
+                <td data-label="What happens">A blue curing light hardens the resin. It is set immediately, and your child can eat straight afterwards.</td>
+                <td data-label="How long" class="kit-tab">20 to 40 seconds</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">07 Bite check</b></td>
+                <td data-label="What happens">The sealed surface is checked against the opposing tooth and adjusted if it feels high.</td>
+                <td data-label="How long" class="kit-tab">2 minutes</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">08 Recall</b></td>
+                <td data-label="What happens">Each one is inspected for wear and chipping and topped up when required.</td>
+                <td data-label="How long" class="kit-tab">Every 6 months</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 04, who does this, and a technology section that spends most of its length telling you what is not used.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-04"><span>Go to stage 04</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Jump to the map</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #8 Manifesto band | considered: #11,#9 | rigor: heavy | why: this band merges the bench and the technology beats because the copy makes them ONE argument, and that argument is a belief statement: sealing a tooth is low-technology, so what decides the result is judgement and handling rather than equipment. #8's manifesto band exists for a belief carried as continuous prose. #11's media-plus-cards is the bench device on the sibling pages of this type and is refused here because cards would restore the very equipment-list format the copy is arguing against. #9's three-column services grid would demand three systems of equal standing, and this page's honest position is that none of the three named systems places a sealant at all. ADAPTATION, and it is the whole reason the band exists in this shape: the named-technology cell is inverted. It states that 3D CBCT is NOT used for this and that your child will not be scanned for one, then gives each system the narrow, true role it actually has. A technology section that lists what a practice owns is an advertisement; one that says what has nothing to do with your appointment is a disclosure. -->
+<section class="section section--warm" id="stage-04" aria-labelledby="h04" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-6">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">04</span>
+            <div>
+              <span class="kit-eyebrow">Stage 04, judgement over equipment</span>
+              <h2 id="h04">Who does it, and why no machine is named</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">This is placed by a pediatric dentistry specialist, and the difference is not manual skill on a two-minute procedure.</p>
+        <p class="kit-body readw">It is judgement and handling: knowing which groove is stained and which is decayed, knowing when a tooth is not dry enough, and being able to get a nervous six-year-old to sit still without turning the visit into something they will remember badly for the next decade.</p>
+        <p class="kit-accentline">Sealing a tooth is a low-technology procedure and this page will not pretend otherwise.</p>
+        <p class="kit-body readw">It needs a clean, dry tooth, a good light and a steady hand. Naming an expensive machine that has nothing to do with it would tell you nothing about whether your child's teeth will be sealed well.</p>
+        <p class="kit-body readw">If the examination finds decay that has to be restored, or if crowding suggests the orthodontist should look early, those clinicians work in the same practice, so your child is not sent elsewhere for the next step.</p>
+      </div>
+
+      <div class="col col--span-6">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--arch">
+            <img class="kit-slot__img" src="../assets/generated/gen-paediatric-tray.jpg" alt="A small tray of child sized dental instruments on a pale clinical surface." width="768" height="512" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>The actual skill</b><span>Getting a child to sit still, without it becoming a memory.</span></figcaption>
+        </figure>
+        <p class="kit-micro">What the named systems do here, and do not</p>
+        <ul class="kit-list">
+          <li><b class="kit-strong">3D CBCT imaging.</b> Available at all four clinics, and NOT used for this. Your child will not be scanned to have a tooth sealed. It is relevant in pediatric dentistry for a different question: locating an unerupted or impacted permanent tooth when one is late arriving.</li>
+          <li><b class="kit-strong">AirFlow (guided biofilm therapy).</b> Operated at our clinics for professional cleaning. Whether it is used before sealing is a clinical decision made at the appointment, depending on how much plaque is sitting on the surface.</li>
+          <li><b class="kit-strong">Digital dental radiography.</b> Where decay between the back teeth needs ruling out first, a digital radiograph does it at a low dose and is viewed on screen immediately, so you see what the dentist sees while your child is still in the chair.</li>
+        </ul>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 05, the money: an anchor figure, the three things that move it, and how payment works here.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-05"><span>Go to stage 05</span></a>
+            <a class="kit-btn kit-btn--ghost" href="specialists.html"><span>Our Specialists</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Route index</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: PRICING-SECTIONS.md #4 Quote-only cost-model split | considered: #6,#2 | rigor: heavy | why: the copy holds a cost MODEL, a per-tooth anchor plus three named drivers plus a promise the real number follows an examination, and #4 is built for that argument: a split head, a rules list, and an oversized display figure carrying the anchor, with the ask NOT closed in the band because the chrome owns the closing band. #6's configurator ladder would be a third numbered device on a page that already numbers a six-stage route and an eight-step table. #2's comparison table needs a rate card and none exists. ADAPTATIONS: #4's no-price law is broken exactly once, because the locked copy publishes an anchor and the brief requires the money question answered above the fold rather than buried; the figure ships in the stat cell with the representative marker as its own label. #4's portrait media frame is dropped, because dressing a self-pay disclosure in a photograph is what makes a reader distrust it. THE DRIVER WORTH READING TWICE is the third one: a tooth that turns out to need a filling is a different treatment at a different fee, and the parent is told that at the examination rather than at the counter afterwards. -->
+<section class="section section--paper" id="stage-05" aria-labelledby="h05" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-5">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">05</span>
+            <div>
+              <span class="kit-eyebrow">Stage 05, how the number is built</span>
+              <h2 id="h05">What it costs</h2>
+            </div>
+          </div>
+        </div>
+        <div class="kit-statband" data-rise>
+          <div class="kit-stat">
+            <span class="kit-stat__n kit-tab"><span class="pre">From</span> ₱1,500</span>
+            <span class="kit-stat__l">A market figure, not an Elevate quote</span>
+            <p class="kit-stat__sub">Per tooth. Anchored to published market ranges, not to an Elevate price list.</p>
+          </div>
+        </div>
+        <div class="kit-truth">
+          <p>Every peso amount on this page is representative and anchored to published market ranges rather than to an Elevate price list. Elevate quotes your own figure per treatment, after a clinical assessment.</p>
+        </div>
+      </div>
+
+      <div class="col col--span-7">
+        <p class="kit-micro">What moves the final figure</p>
+        <ul class="kit-list">
+          <li><b class="kit-strong">Number of teeth.</b> These are priced per tooth. Most children have two or four done in one visit, and the visit itself is not repeated for each one.</li>
+          <li><b class="kit-strong">Material.</b> Resin and glass ionomer sit at different costs, and the choice is clinical rather than commercial. Glass ionomer is used where the tooth cannot be kept dry enough for resin.</li>
+          <li><b class="kit-strong">Whether other work is needed first.</b> A tooth that turns out to need a filling is a different treatment at a different fee, and you are told that at the examination, before anything is placed.</li>
+        </ul>
+        <p class="kit-body readw--wide">The exact figure is confirmed at consultation, after an examination, and it is given to you in writing before treatment starts.</p>
+        <div class="kit-foot">
+          <p class="kit-micro">How you pay</p>
+          <p class="kit-quote kit-quote--display readw">Elevate Dental does not accept HMO or dental insurance. All treatment is self-pay.</p>
+          <p class="kit-body readw--wide">HMO coverage cannot be used for dental treatments at our clinics. Payment is by cash, bank cheque, bank transfer, debit or credit card, or QR payment.</p>
+        </div>
+        <div class="kit-inline">
+          <p>Which teeth are ready is decided by what has actually erupted in your child's mouth, so the only way to know is an examination.</p>
+          <div class="kit-inline__acts">
+            <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+            <a class="kit-btn kit-btn--ghost" href="prices.html"><span>Treatment Prices</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 06, the last one: the questions parents actually ask, and what to do when one chips.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-06"><span>Go to stage 06</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>The whole route</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: FAQ-ACCORDION.md #7 Category-grouped sections | considered: #4,#2 | rigor: heavy | why: the questions arrive at two moments, choosing it and living with it, and #7 is the only entry that groups an FAQ into named sub-blocks for that reason. #4's numbered list would be a third numbered run on a page that already numbers a six-stage route and an eight-step table. #2's per-question cards would box a clinical answer, and this system reserves the box for a thing you can act on. ADAPTATION, and it is why this band is LAST: Collision A binds the body to zero closing bands, so the route ends on a CONTENT band with the ask folded into a .kit-inline rail. The consent hold rides here too rather than taking a stage of its own, because on a six-stage route a band whose only content is an absence would be a fifth of the page spent on something that is not there. -->
+<section class="section section--cool" id="stage-06" aria-labelledby="h06" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-4">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">06</span>
+            <div>
+              <span class="kit-eyebrow">Stage 06, the end of the route</span>
+              <h2 id="h06">Questions parents ask</h2>
+            </div>
+          </div>
+        </div>
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2023_09_Dental-Care-for-Kids.jpg" alt="Four smiling children of primary-school age posed together against a plain pale background." width="1200" height="848" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Around six, and again around twelve</b><span>The two ages when those teeth arrive.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--span-8">
+        <p class="kit-micro">Before you book</p>
+        <div class="kit-faq" data-rise>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">At what age should my child have these?</summary>
+            <p class="kit-faq__a">Usually soon after the six-year molars arrive, and again around age twelve when the second set comes through. The right answer for your child is decided by what has actually erupted, which is what the examination looks at.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Does it hurt?</summary>
+            <p class="kit-faq__a">There is no injection and no drilling. Your child will feel the tooth being cleaned and dried, will taste the etching gel briefly, and will need to keep their mouth open for a few minutes. Most children find it one of the easier appointments they will have.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Are they safe?</summary>
+            <p class="kit-faq__a">Resin sealants have been in routine clinical use for decades and are placed in very small quantities on the outer surface of enamel. If you have specific concerns about materials, raise them at the consultation and you will get a straight answer, including the option of a glass ionomer alternative.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Can adults have them?</summary>
+            <p class="kit-faq__a">Yes, where an adult still has deep, unfilled fissures and a history of decay. It is less common because most adult molars have either been restored already or have proven themselves over decades.</p>
+          </details>
+        </div>
+
+        <p class="kit-micro">Afterwards</p>
+        <div class="kit-faq" data-rise>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">How long does one last?</summary>
+            <p class="kit-faq__a">Commonly several years, depending on the bite and on how hard your child chews. They wear down gradually rather than failing suddenly, which is why they are inspected at each six-month recall and repaired when needed.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">What if one comes off?</summary>
+            <p class="kit-faq__a">Bring your child in. A lost or chipped one is replaced, and it is a short appointment. That is not a treatment failure, it is wear.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Does my child still need to brush?</summary>
+            <p class="kit-faq__a">Yes, and to floss. This protects a single face of a single tooth. The sides between the teeth and along the gum line are still exposed, and they are where the decay it does not prevent shows up.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Do these replace fluoride treatment?</summary>
+            <p class="kit-faq__a">No. They do different jobs. This physically blocks the grooves on the chewing surface. Fluoride hardens the whole enamel surface against acid. Children at higher decay risk usually have both.</p>
+          </details>
+        </div>
+      </div>
+
+      <div class="col col--span-7">
+        <p class="kit-micro">Aftercare</p>
+        <ul class="kit-list">
+          <li>Your child can eat and drink immediately, though it is sensible to avoid very hard or sticky food on the first day.</li>
+          <li>Keep brushing twice daily with a fluoride toothpaste.</li>
+          <li>Start flossing between the back teeth as soon as they touch.</li>
+          <li>Avoid chewing ice and hard candy, which chip them off.</li>
+          <li>Keep the six-month recall so each one can be checked while a repair is still small.</li>
+        </ul>
+        <div class="kit-inline">
+          <p>The first consultation is free. Your child is examined, and you are told exactly which teeth would benefit, which should wait, and which need something else instead, with the figure in writing before anything is done.</p>
+          <div class="kit-inline__acts">
+            <a class="kit-btn kit-btn--secondary" href="contact.html">Ask about this treatment</a>
+            <a class="kit-btn kit-btn--ghost" href="pediatric-dentistry.html"><span>Pediatric Dentistry</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--span-5">
+        <p class="kit-body readw">The route ends here on purpose, and it ended sooner than the other treatment pages on this site because there was less to say and no reason to pad it.</p>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Outcome</p>
+          <ul class="kit-list">
+            <li><b class="kit-strong">Feature.</b> A preventive coating at the representative per-tooth figure set out in stage 05, placed by a pediatric dentistry specialist.</li>
+            <li><b class="kit-strong">Do.</b> Book a free consultation and get a written quote.</li>
+            <li><b class="kit-strong">Means.</b> You know which of your child's teeth need one, and what it costs, before anything is done.</li>
+          </ul>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Index of stages</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-start"><span>Back to the start</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

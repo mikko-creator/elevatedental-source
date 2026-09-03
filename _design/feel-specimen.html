@@ -1,0 +1,793 @@
+<!doctype html>
+<html lang="en-PH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elevate Dental FEEL specimen</title>
+
+<!--
+  ELEVATE DENTAL - FEEL SPECIMEN
+  Stage: after (1) BRAND-CARD (locked, concept A "Clinical Precision") and before SYSTEM sign-off.
+
+  WHAT THIS IS. Not a page and not a tournament entry. It is a single artifact of THREE BAND
+  FRAGMENTS whose only job is to lock the BODY FEEL: figure and ground, how the type scale gets
+  applied at real sizes, section rhythm, motion budget, and surface treatment. It deliberately
+  carries NO main element at all, because it composes no page.
+
+  WHAT IT WAS BUILT FROM (the v4 unified design system):
+    _MODERN-WOW-SPEC                 the quality ceiling. Layered shadow plus hairline plus inset
+                                     highlight, staggered scroll reveal, display-scale type contrast,
+                                     oversized tabular numerals, image zoom inside a masked frame,
+                                     intentional asymmetry. Read as felt, never noticed.
+    _MODERN-DESIGN-PATTERN-LIBRARY   the buildable technique layer behind the arc seam, the masked
+                                     media frames, the card hover bloom and the material veil.
+    _COMPOSITION-LAWS                L9 SELECTION-RATIONALE. Every band below carries a defended
+                                     ledger at HEAVY rigor, because a FEEL decision propagates.
+    composition-medical-health       the sector blueprint. Appointment CTA as the spine, services
+                                     grid as the table of contents, trust stacked, the A2 circle-up
+                                     arc seam, circle-masked imagery, calming tint washes.
+    10-structure-library             HERO-COMPOSITIONS, DIVIDER-PATTERNS, SECTION-COMPONENTS and
+                                     CARD-VARIATIONS. Four picks, four ledgers, all defended below.
+
+  TOKENS. This file links the LOCKED sheet _design/elevatedental-tokens.css and consumes it as an
+  API. It defines no colour, no family, no radius and no duration of its own. The structural sheet
+  does not exist yet; it is written at SYSTEM, which is held on FEEL.
+
+  TONE, MEASURED NOT ASSUMED. surface_dominance light, dark_ratio 0, energy restrained. Light is the
+  ground. The .surface-dark flip is spent EXACTLY ONCE, on band 2, and the specimen argues below why
+  that band earns it. The failure mode designed against is flat and generic, not too quiet.
+
+  VOICE. Calm and specific, per the reconciliation of Collision B. The sector blueprint's warm
+  first-person register is deliberately NOT applied.
+
+  IMAGERY. This specimen precedes the IMAGERY stage, so every photographic slot is a token-built
+  surface, labelled in place as a slot. The circle mask and the arch mask shown on those slots ARE
+  the treatment being locked; only the photograph is pending.
+-->
+
+<link rel="stylesheet" href="./elevatedental-tokens.css">
+
+<style>
+/* ==========================================================================
+   FEEL SPECIMEN - local composition CSS.
+   Every value below is either a token from the locked sheet or a layout decision.
+   No colour, family, radius or duration is invented here.
+   ========================================================================== */
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  font-family:var(--ds-font-body);
+  font-size:16px; line-height:1.72;
+  color:var(--ds-ink);
+  background:var(--ds-bg-surface-2);
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%; height:auto}
+p{margin:0}
+h1,h2,h3{margin:0; font-weight:500; font-family:var(--ds-font-display); color:var(--ds-ink-heading)}
+button{font:inherit}
+
+/* the ultra-subtle grain that kills flatness across the whole sheet (WOW spec, texture) */
+body::after{
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:var(--ds-z-below);
+  background-image:var(--ds-grain);
+  opacity:var(--ds-opacity-texture);
+  mix-blend-mode:multiply;
+}
+
+/* ---------- shared type ramp, APPLIED at the sizes stage 1 specified ---------- */
+.fs-d1{font-family:var(--ds-font-display); font-size:clamp(38px,5.4vw,64px); line-height:1.04; letter-spacing:-.021em; color:var(--ds-ink-heading)}
+.fs-d2{font-family:var(--ds-font-display); font-size:clamp(28px,3.6vw,40px); line-height:1.12; letter-spacing:-.016em; color:var(--ds-ink-heading)}
+.fs-d3{font-family:var(--ds-font-display); font-style:italic; font-size:clamp(21px,2.4vw,28px); line-height:1.24; letter-spacing:-.008em; color:var(--ds-accent-deep)}
+.fs-eyebrow{display:block; font-size:11px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--ds-accent-deep)}
+.fs-lead{font-size:clamp(17px,1.8vw,19px); line-height:1.62; color:var(--ds-ink); max-width:56ch}
+.fs-body{font-size:16px; line-height:1.72; color:var(--ds-ink); max-width:64ch}
+.fs-meta{font-size:13px; line-height:1.55; color:var(--ds-ink-soft)}
+.fs-micro{font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--ds-accent-deep)}
+.fs-figure{font-family:var(--ds-font-display); font-size:clamp(34px,4.4vw,52px); line-height:1; letter-spacing:-.02em; color:var(--ds-ink-heading)}
+.fs-tab{font-variant-numeric:tabular-nums; font-feature-settings:"tnum" 1}
+.surface-dark .fs-eyebrow,
+.surface-dark .fs-micro{color:var(--ds-accent-light)}
+.surface-dark .fs-d3{color:var(--ds-accent-light)}
+
+/* ---------- sheet shell ---------- */
+.fs-sheet{max-width:var(--ds-container-max); margin:0 auto; padding:0 clamp(18px,4vw,40px)}
+.fs-sheet--wide{max-width:1320px}
+
+/* ---------- specimen apparatus: the document label + the colophon ----------
+   Not a band, not site chrome. It names the artifact so nobody mistakes it for a page. */
+.fs-doc{border-top:2px solid var(--ds-primary); padding:var(--ds-space-md) 0 var(--ds-space-lg)}
+.fs-doc__kicker{display:flex; flex-wrap:wrap; gap:10px 18px; align-items:center; font-family:var(--ds-font-mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--ds-ink-soft)}
+.fs-doc__kicker b{color:var(--ds-accent-deep); font-weight:600}
+.fs-doc__title{margin:16px 0 0; font-family:var(--ds-font-display); font-size:clamp(28px,4.2vw,44px); line-height:1.06; letter-spacing:-.018em; color:var(--ds-ink-heading)}
+.fs-doc__title em{font-style:italic; color:var(--ds-accent-deep)}
+.fs-doc__lede{margin-top:14px; max-width:70ch; font-size:15px; line-height:1.7; color:var(--ds-ink-soft)}
+.fs-doc__meta{margin-top:var(--ds-space-md); display:grid; grid-template-columns:repeat(auto-fit,minmax(156px,1fr)); border-top:1px solid var(--ds-hairline)}
+.fs-doc__meta > div{padding:12px 16px 12px 0; border-right:1px solid var(--ds-hairline)}
+.fs-doc__meta > div:last-child{border-right:0}
+.fs-doc__meta dt{font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--ds-ink-soft); margin-bottom:4px}
+.fs-doc__meta dd{margin:0; font-size:13px; font-weight:600; color:var(--ds-ink-heading)}
+
+/* ---------- the section opener: the index ring, UNROLLED ----------
+   Stage 1's signature motif. A graduated rule with eleven minor graduations and a single
+   bronze index at the start, marking the position of the thing being introduced. It is
+   built from tokens, so it re-inks itself on the dark surface with no override. */
+.fs-open{margin-bottom:clamp(20px,3vw,30px)}
+.fs-open__rule{position:relative; height:14px; margin-bottom:var(--ds-space-sm)}
+.fs-open__rule::before{content:""; position:absolute; left:0; right:0; bottom:0; height:1px; background:var(--ds-primary); opacity:.30}
+.fs-open__rule::after{
+  content:""; position:absolute; left:0; right:0; bottom:0; height:7px;
+  background-image:repeating-linear-gradient(90deg,var(--ds-primary) 0 1px,transparent 1px calc(100% / 12));
+  opacity:.42;
+}
+.fs-open__idx{position:absolute; left:0; bottom:0; width:2px; height:14px; background:var(--ds-accent)}
+.fs-open__head{display:grid; grid-template-columns:auto 1fr; gap:6px var(--ds-space-md); align-items:baseline}
+.fs-open__no{font-family:var(--ds-font-mono); font-size:11px; letter-spacing:.08em; color:var(--ds-accent-deep)}
+.surface-dark .fs-open__no{color:var(--ds-accent-light)}
+
+/* ---------- the index ring, drawn from tokens so it flips with the surface ---------- */
+.fs-ring{display:block; flex:0 0 auto}
+.fs-ring__track{fill:none; stroke:var(--ds-primary); opacity:.38}
+.fs-ring__tick{fill:none; stroke:var(--ds-primary); opacity:.5}
+.fs-ring__index{stroke:var(--ds-accent)}
+
+/* ---------- controls, carried verbatim from the locked action lockup ---------- */
+.fs-btn{
+  font-family:var(--ds-font-body); font-size:13px; font-weight:600; letter-spacing:.06em;
+  padding:14px 26px; min-height:48px; border-radius:var(--ds-r-control);
+  border:1px solid transparent; cursor:pointer; display:inline-flex; align-items:center; gap:10px;
+  transition:background var(--ds-dur-fast) var(--ds-ease-out),
+             color var(--ds-dur-fast) var(--ds-ease-out),
+             border-color var(--ds-dur-fast) var(--ds-ease-out),
+             box-shadow var(--ds-dur-fast) var(--ds-ease-out),
+             transform var(--ds-dur-fast) var(--ds-ease-out);
+}
+.fs-btn--primary{background:var(--ds-primary); color:var(--ds-bg-surface); box-shadow:var(--ds-shadow-rest)}
+.fs-btn--primary::after{content:""; width:14px; height:1px; background:var(--ds-accent-light); transition:width var(--ds-dur-slow) var(--ds-ease-out)}
+.fs-btn--primary:hover{background:var(--ds-primary-deep); box-shadow:var(--ds-shadow-card); transform:translateY(-1px)}
+.fs-btn--primary:hover::after{width:22px}
+.fs-btn--secondary{background:transparent; color:var(--ds-primary); border-color:var(--ds-hairline)}
+.fs-btn--secondary:hover{border-color:var(--ds-primary); background:var(--ds-primary-soft)}
+.fs-btn--ghost{background:transparent; border:0; color:var(--ds-accent-deep); padding-left:0; padding-right:0; min-height:auto}
+.fs-btn--ghost span{border-bottom:1px solid var(--ds-accent); padding-bottom:3px; transition:border-color var(--ds-dur-fast) var(--ds-ease-out)}
+.fs-btn--ghost:hover span{border-bottom-color:var(--ds-accent-deep)}
+.fs-btn:focus-visible{outline:2px solid var(--ds-accent-deep); outline-offset:3px}
+.surface-dark .fs-btn--primary{background:var(--ds-accent); color:var(--ds-primary-deep)}
+.surface-dark .fs-btn--primary::after{background:var(--ds-primary-deep)}
+.surface-dark .fs-btn--primary:hover{background:var(--ds-accent-light)}
+.surface-dark .fs-btn--ghost{color:var(--ds-accent-light)}
+.surface-dark .fs-btn--ghost span{border-bottom-color:var(--ds-accent-light)}
+.surface-dark .fs-btn:focus-visible{outline-color:var(--ds-accent-light)}
+
+/* ---------- the imagery SLOT treatment ----------
+   The sector blueprint requires circle-masked and large-radius media. The brand's radius roles are
+   CONSTRAINED to 2px / 4px / pill, and pill is rationed to the status marker, so the round geometry
+   is delivered as a clip MASK and an arch MASK rather than by inventing a radius token. What is
+   locked here is the mask, the frame, the caption rail and the hover drift. The photograph arrives
+   at the IMAGERY stage. */
+.fs-slot{margin:0; position:relative}
+.fs-slot__mask{position:relative; overflow:hidden; box-shadow:var(--ds-shadow-card),var(--ds-inset-hi)}
+.fs-slot__mask--circle{aspect-ratio:1 / 1; clip-path:circle(50% at 50% 50%)}
+.fs-slot__mask--arch{height:100%; min-height:240px; border-radius:50% 50% var(--ds-r-surface) var(--ds-r-surface)}
+.fs-slot__art{
+  position:absolute; inset:0;
+  display:flex; align-items:center; justify-content:center;
+  background-color:var(--ds-bg-surface-2);
+  background-image:
+    radial-gradient(115% 92% at 32% 16%,var(--ds-primary-soft) 0%,transparent 64%),
+    var(--ds-grid),
+    linear-gradient(158deg,var(--ds-bg-surface) 0%,var(--ds-primary-soft) 100%);
+  background-size:auto,var(--ds-grid-size),auto;
+  transition:transform var(--ds-dur-slow) var(--ds-ease-out);
+}
+.fs-slot:hover .fs-slot__art{transform:scale(1.04)}
+.fs-slot__cap{
+  margin-top:10px; display:flex; gap:8px; align-items:baseline;
+  font-family:var(--ds-font-mono); font-size:10.5px; line-height:1.55; letter-spacing:.02em;
+  color:var(--ds-ink-soft);
+}
+.fs-slot__cap b{color:var(--ds-accent-deep); font-weight:600; letter-spacing:.1em; text-transform:uppercase; white-space:nowrap}
+.surface-dark .fs-slot__cap b{color:var(--ds-accent-light)}
+.surface-dark .fs-slot__art{
+  background-color:var(--ds-bg-surface-2);
+  background-image:
+    radial-gradient(115% 92% at 32% 16%,var(--ds-primary-soft) 0%,transparent 64%),
+    var(--ds-grid),
+    linear-gradient(158deg,var(--ds-bg-warm) 0%,var(--ds-primary-soft) 100%);
+}
+
+/* =========================================================================
+   BAND 1 - HERO. Light ground with a calming tint wash. Three columns.
+   ========================================================================= */
+.fs-hero{
+  position:relative;
+  background-color:var(--ds-bg-surface);
+  background-image:
+    radial-gradient(78% 62% at 88% 4%,var(--ds-primary-soft) 0%,transparent 58%),
+    radial-gradient(52% 46% at 4% 96%,var(--ds-bg-warm) 0%,transparent 62%),
+    var(--ds-grid);
+  background-size:auto,auto,var(--ds-grid-size);
+  border-top:1px solid var(--ds-hairline);
+  padding-top:clamp(48px,7vw,88px);
+}
+.fs-hero__grid{
+  display:grid;
+  grid-template-columns:1.42fr .74fr 1fr;
+  gap:clamp(28px,4vw,56px);
+  align-items:start;
+  padding-bottom:clamp(40px,6vw,72px);
+}
+.fs-hero__claim h1{margin-bottom:var(--ds-space-md)}
+.fs-hero__sub{margin-bottom:var(--ds-space-sm)}
+.fs-hero__acts{margin-top:var(--ds-space-lg); display:flex; flex-wrap:wrap; gap:14px; align-items:center}
+.fs-hero__truth{
+  margin-top:var(--ds-space-lg); padding:14px 18px;
+  border-left:2px solid var(--ds-accent); background:var(--ds-bg-warm);
+  border-radius:0 var(--ds-r-control) var(--ds-r-control) 0;
+  box-shadow:var(--ds-shadow-rest);
+  max-width:58ch;
+}
+.fs-hero__truth b{display:block; font-size:10.5px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--ds-accent-deep); margin-bottom:4px}
+.fs-hero__truth p{font-size:13.5px; line-height:1.6; color:var(--ds-ink)}
+
+/* the countable proof column - oversized tabular numerals, hairline separated */
+.fs-count{border-top:2px solid var(--ds-primary); padding-top:var(--ds-space-sm)}
+.fs-count__row{position:relative; padding:14px 0 14px 16px; border-bottom:1px solid var(--ds-hairline)}
+.fs-count__row:last-child{border-bottom:0}
+.fs-count__row::before{content:""; position:absolute; left:0; top:20px; width:6px; height:1px; background:var(--ds-accent)}
+.fs-count__row .fs-figure{display:block}
+.fs-count__unit{display:block; margin-top:6px; font-size:10.5px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--ds-ink-soft)}
+
+/* the hero imagery slot, held slightly low so it breaks the top line of the grid (WOW asymmetry) */
+.fs-hero__media{margin-top:clamp(0px,2.4vw,34px)}
+
+/* ---------- the A2 circle-up arc seam ----------
+   Filled in the DESTINATION ground so the dark band rises into the light one instead of cutting it.
+   Amplitude capped at 34px, which is what keeps it a machined radius rather than a friendly wave. */
+.fs-seam{display:block; width:100%; height:34px; margin-bottom:-1px}
+.fs-seam__fill{fill:var(--ds-primary-deep)}
+.fs-seam__edge{fill:none; stroke:var(--ds-accent); stroke-opacity:.55; stroke-width:1}
+
+/* =========================================================================
+   BAND 2 - SECTION. The one dark band. Named systems beside a stretching media column.
+   ========================================================================= */
+.fs-systems{
+  position:relative;
+  background-color:var(--ds-bg-surface);
+  background-image:
+    radial-gradient(66% 54% at 82% 0%,var(--ds-primary-soft) 0%,transparent 62%),
+    var(--ds-grid);
+  background-size:auto,var(--ds-grid-size);
+  color:var(--ds-ink);
+  padding:clamp(48px,7vw,88px) 0 clamp(44px,6vw,76px);
+}
+.fs-systems__grid{
+  display:grid; grid-template-columns:.72fr 1.42fr;
+  gap:clamp(28px,4vw,52px);
+  align-items:stretch;
+}
+.fs-systems__media{align-self:stretch; display:flex; flex-direction:column}
+.fs-systems__media .fs-slot{display:flex; flex-direction:column; height:100%}
+.fs-sys{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1px; background:var(--ds-hairline); border:1px solid var(--ds-hairline); border-radius:var(--ds-r-surface); overflow:hidden; box-shadow:var(--ds-shadow-card)}
+.fs-sys__unit{position:relative; background:var(--ds-bg-surface-2); padding:18px 20px 20px; transition:background var(--ds-dur-fast) var(--ds-ease-out)}
+.fs-sys__unit:hover{background:var(--ds-bg-warm)}
+.fs-sys__unit::before{content:""; position:absolute; top:0; left:20px; width:14px; height:2px; background:var(--ds-accent); transition:width var(--ds-dur-slow) var(--ds-ease-out)}
+.fs-sys__unit:hover::before{width:calc(100% - 40px)}
+.fs-sys__no{font-family:var(--ds-font-mono); font-size:10px; letter-spacing:.1em; color:var(--ds-accent-light); display:block; margin-bottom:6px}
+.fs-sys__name{font-family:var(--ds-font-display); font-size:19px; line-height:1.2; letter-spacing:-.008em; color:var(--ds-ink-heading); margin-bottom:6px}
+.fs-sys__note{font-size:13px; line-height:1.6; color:var(--ds-ink-soft)}
+.fs-sys__where{display:inline-flex; align-items:center; gap:8px; margin-top:10px; font-size:11px; font-weight:600; letter-spacing:.06em; color:var(--ds-ink-on-dark); border:1px solid var(--ds-hairline); background:var(--ds-primary-soft); padding:5px 11px; border-radius:var(--ds-r-control)}
+.fs-sys__where i{display:block; width:6px; height:6px; border-radius:var(--ds-r-pill); background:var(--ds-signature)}
+
+/* the mid-page CTA, folded INLINE inside a content-bearing band.
+   Collision A, resolved: the body authors zero closing CTA bands. This is a ruled inline rail. */
+.fs-inline{
+  margin-top:var(--ds-space-lg); padding-top:var(--ds-space-md);
+  border-top:1px solid var(--ds-hairline);
+  display:flex; flex-wrap:wrap; gap:16px var(--ds-space-md); align-items:center; justify-content:space-between;
+}
+.fs-inline p{font-size:13.5px; line-height:1.6; color:var(--ds-ink-soft); max-width:52ch}
+.fs-inline__acts{display:flex; flex-wrap:wrap; gap:14px; align-items:center}
+
+/* =========================================================================
+   BAND 3 - CARD ROW. Cool paper ground, white cards raised off it.
+   ========================================================================= */
+.fs-clinics{
+  background-color:var(--ds-bg-surface-2);
+  background-image:radial-gradient(60% 50% at 12% 0%,var(--ds-bg-warm) 0%,transparent 66%);
+  padding:clamp(48px,7vw,88px) 0 clamp(52px,7vw,96px);
+  border-bottom:1px solid var(--ds-hairline);
+}
+.fs-cards{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:var(--ds-space-md)}
+.fs-card{
+  position:relative; display:flex; flex-direction:column;
+  background:var(--ds-bg-surface); border:1px solid var(--ds-hairline);
+  border-radius:var(--ds-r-surface); padding:20px 20px 18px; overflow:hidden;
+  box-shadow:var(--ds-shadow-card),var(--ds-inset-hi);
+  transition:transform var(--ds-dur-fast) var(--ds-ease-out),
+             box-shadow var(--ds-dur-fast) var(--ds-ease-out),
+             border-color var(--ds-dur-fast) var(--ds-ease-out);
+}
+.fs-card::before{content:""; position:absolute; top:0; left:0; height:2px; width:38px; background:var(--ds-accent); transition:width var(--ds-dur-slow) var(--ds-ease-out)}
+.fs-card:hover{transform:translateY(-3px); box-shadow:var(--ds-shadow-lift),var(--ds-inset-hi); border-color:var(--ds-line)}
+.fs-card:hover::before{width:100%}
+.fs-card__top{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:16px}
+.fs-card__label{font-size:10px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--ds-ink-soft)}
+.fs-card__media{width:96px; margin-bottom:16px}
+.fs-card__media .fs-slot__cap{margin-top:8px; font-size:9.5px}
+.fs-card h3{font-family:var(--ds-font-display); font-size:21px; line-height:1.2; letter-spacing:-.01em; margin-bottom:8px}
+.fs-card__addr{font-size:12.5px; line-height:1.6; color:var(--ds-ink-soft); margin-bottom:14px}
+.fs-card__hours{margin-top:auto; border-top:1px solid var(--ds-hairline); padding-top:12px; display:grid; gap:5px}
+.fs-card__hours div{display:flex; justify-content:space-between; gap:12px; font-size:12px; line-height:1.5}
+.fs-card__hours dt{color:var(--ds-ink-soft)}
+.fs-card__hours dd{margin:0; color:var(--ds-ink-heading); font-weight:600}
+.fs-card__hours .is-closed dd{color:var(--ds-accent-deep); font-weight:600}
+.fs-card__foot{margin-top:12px; padding-top:10px; border-top:1px solid var(--ds-hairline); display:flex; align-items:baseline; justify-content:space-between; gap:10px}
+.fs-card__tel{font-family:var(--ds-font-mono); font-size:11.5px; color:var(--ds-ink-heading)}
+.fs-card__unit{font-size:9.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ds-accent-deep)}
+
+/* the ruled foot: the nine disciplines, named rather than asserted */
+.fs-foot{margin-top:clamp(32px,4vw,52px); border-top:2px solid var(--ds-primary); padding-top:var(--ds-space-md)}
+.fs-tags{display:flex; flex-wrap:wrap; gap:9px; margin-top:12px}
+.fs-tag{
+  font-size:11.5px; font-weight:600; letter-spacing:.05em; padding:7px 12px;
+  border-radius:var(--ds-r-control); border:1px solid var(--ds-hairline);
+  background:var(--ds-bg-surface); color:var(--ds-primary);
+  transition:border-color var(--ds-dur-fast) var(--ds-ease-out),background var(--ds-dur-fast) var(--ds-ease-out);
+}
+.fs-tag:hover{border-color:var(--ds-accent); background:var(--ds-bg-warm)}
+.fs-status{display:inline-flex; align-items:center; gap:8px; margin-top:16px; font-size:11.5px; font-weight:600; letter-spacing:.06em; color:var(--ds-signature); border:1px solid var(--ds-hairline); background:var(--ds-bg-surface); padding:6px 14px; border-radius:var(--ds-r-pill)}
+.fs-status i{width:7px; height:7px; border-radius:var(--ds-r-pill); background:var(--ds-signature); display:block}
+
+/* ---------- colophon: what this was built from ---------- */
+.fs-colophon{padding:clamp(36px,5vw,64px) 0 clamp(48px,7vw,96px)}
+.fs-colophon__grid{border:1px solid var(--ds-hairline); border-radius:var(--ds-r-surface); background:var(--ds-bg-surface); overflow:hidden; box-shadow:var(--ds-shadow-card)}
+.fs-colophon__row{display:grid; grid-template-columns:190px 1fr; gap:var(--ds-space-md); padding:12px clamp(14px,2vw,22px); border-bottom:1px solid var(--ds-hairline); align-items:baseline}
+.fs-colophon__row:last-child{border-bottom:0}
+.fs-colophon__row:nth-child(odd){background:var(--ds-bg-surface-2)}
+.fs-colophon__k{font-size:10px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--ds-accent-deep)}
+.fs-colophon__v{font-family:var(--ds-font-mono); font-size:11.5px; line-height:1.7; color:var(--ds-ink-soft); word-break:break-word}
+.fs-colophon__v b{font-family:var(--ds-font-body); font-weight:600; color:var(--ds-ink-heading)}
+
+/* ---------- motion budget ----------
+   The reveal is gated on the .js-rise root class, which the head script adds ONLY when scripting
+   and IntersectionObserver are available AND reduced motion is not requested. With no JS, or under
+   reduced motion, the class never lands and every band paints at rest. */
+.js-rise [data-rise]{
+  opacity:0; transform:translateY(14px);
+  transition:opacity var(--ds-dur-slow) var(--ds-ease-out),transform var(--ds-dur-slow) var(--ds-ease-out);
+  transition-delay:calc(var(--i,0) * 70ms);
+}
+.js-rise [data-rise].is-in{opacity:1; transform:none}
+
+/* ---------- responsive ---------- */
+@media (max-width:1100px){
+  .fs-hero__grid{grid-template-columns:1.3fr .8fr; }
+  .fs-hero__media{grid-column:1 / -1; margin-top:var(--ds-space-md); max-width:420px}
+  .fs-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .fs-systems__grid{grid-template-columns:1fr}
+  .fs-systems__media .fs-slot{max-width:360px}
+  .fs-slot__mask--arch{min-height:200px}
+}
+@media (max-width:640px){
+  .fs-hero__grid{grid-template-columns:1fr}
+  .fs-hero__media{max-width:none}
+  .fs-sys{grid-template-columns:1fr}
+  .fs-cards{grid-template-columns:1fr}
+  .fs-doc__meta > div{border-right:0; border-bottom:1px solid var(--ds-hairline)}
+  .fs-colophon__row{grid-template-columns:1fr; gap:4px}
+  .fs-inline{flex-direction:column; align-items:flex-start}
+  .fs-btn{width:100%; justify-content:center}
+  .fs-btn--ghost{width:auto}
+}
+
+/* Reduced motion is honoured at the TOKEN, not with an override keyword: every transition in this
+   sheet reads a --ds-dur-* token, so collapsing the durations neutralises the hover lift, the shadow
+   bloom, the index extension and the media drift in one place. The scroll reveal is already inert. */
+@media (prefers-reduced-motion:reduce){
+  :root{--ds-dur-fast:.01ms; --ds-dur-slow:.01ms; --ds-dur-data:.01ms}
+}
+</style>
+
+<script>
+(function(){
+  var ok = ('IntersectionObserver' in window) &&
+           !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  if (ok) document.documentElement.className += ' js-rise';
+})();
+</script>
+</head>
+
+<body>
+
+<!-- SPECIMEN APPARATUS. Not a band, not site chrome. It labels the artifact. -->
+<div class="fs-sheet fs-doc">
+  <div class="fs-doc__kicker">
+    <span>Elevate Dental</span>
+    <b>FEEL specimen</b>
+    <span>Band fragments, no page</span>
+    <span class="fs-tab">Metro Manila</span>
+  </div>
+  <p class="fs-doc__title">Three bands. <em>One body.</em></p>
+  <p class="fs-doc__lede">Stage 1 locked the identity. This artifact locks the body: how figure separates from ground, how the type ramp behaves at real sizes, how far apart two bands sit, what moves and how far, and what a surface is made of. It composes exactly three fragments and no page. Light is the ground throughout; the dark surface is spent once, on the band that has to carry measured evidence, and the specimen argues for that spend in its own ledger.</p>
+  <dl class="fs-doc__meta">
+    <div><dt>Surface</dt><dd>Light dominant</dd></div>
+    <div><dt>Energy</dt><dd>Restrained</dd></div>
+    <div><dt>Dark budget</dt><dd class="fs-tab">1 of 3 bands</dd></div>
+    <div><dt>Seam budget</dt><dd class="fs-tab">1 arc, 1 step</dd></div>
+    <div><dt>Motion</dt><dd>Rise, lift, drift</dd></div>
+  </dl>
+</div>
+
+
+<!-- pick: HERO-COMPOSITIONS.md #20 | considered: #5,#22 | rigor: heavy | why: the locked lead is a COUNT, so the opener has to seat the claim, the four countable facts and the imagery slot in one frame without any of the three borrowing another's space, and #20 is the only hero in that catalog that gives each its own column, which is what lets "Nine disciplines. Thirty-one specialists. One clinic." land beside its own evidence instead of merely above it; #5 sets the headline over a scrimmed full-bleed photograph, which the locked visual direction bans outright as a washed-out overlay treatment and which would invert a measured ground whose dark ratio is zero; #22 keeps the numerals but drops the photograph entirely, and a credibility vertical shipping zero imagery moves is precisely the automatic failure the sector reconciliation was written to prevent. -->
+<section class="fs-hero" data-rise>
+  <div class="fs-sheet fs-sheet--wide">
+    <div class="fs-hero__grid">
+
+      <div class="fs-hero__claim">
+        <div class="fs-open">
+          <div class="fs-open__rule"><span class="fs-open__idx"></span></div>
+          <div class="fs-open__head">
+            <span class="fs-open__no fs-tab">01</span>
+            <span class="fs-eyebrow">Elevate Dental, Metro Manila</span>
+          </div>
+        </div>
+
+        <h1 class="fs-d1">Nine disciplines. Thirty-one specialists. One clinic.</h1>
+
+        <p class="fs-lead fs-hero__sub">Complex dental work should not mean being referred somewhere else.</p>
+        <p class="fs-body">A treatment plan is written once, by the people who will carry it out, in the building where the imaging was taken.</p>
+
+        <div class="fs-hero__acts">
+          <button type="button" class="fs-btn fs-btn--primary">Book an Appointment</button>
+          <button type="button" class="fs-btn fs-btn--secondary">See our specialists</button>
+        </div>
+
+        <div class="fs-hero__truth">
+          <b>Stated plainly, and early</b>
+          <p>Elevate Dental does not accept HMO or dental insurance. All treatment is self-pay.</p>
+        </div>
+      </div>
+
+      <div class="fs-count">
+        <div class="fs-count__row">
+          <span class="fs-figure fs-tab">09</span>
+          <span class="fs-count__unit">Disciplines</span>
+        </div>
+        <div class="fs-count__row">
+          <span class="fs-figure fs-tab">31</span>
+          <span class="fs-count__unit">Specialists</span>
+        </div>
+        <div class="fs-count__row">
+          <span class="fs-figure fs-tab">04</span>
+          <span class="fs-count__unit">Clinics, Metro Manila</span>
+        </div>
+        <div class="fs-count__row">
+          <span class="fs-figure fs-tab">4/4</span>
+          <span class="fs-count__unit">With 3D CBCT on site</span>
+        </div>
+      </div>
+
+      <figure class="fs-slot fs-hero__media">
+        <div class="fs-slot__mask fs-slot__mask--circle">
+          <div class="fs-slot__art">
+            <svg class="fs-ring" width="132" height="132" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="fs-ring__track" cx="50" cy="50" r="38" stroke-width="1.4"/>
+              <g class="fs-ring__tick" stroke-width="1.4">
+                <line x1="50" y1="12" x2="50" y2="19" transform="rotate(30 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="19" transform="rotate(60 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="19" transform="rotate(90 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="19" transform="rotate(120 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="19" transform="rotate(150 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="19" transform="rotate(180 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="19" transform="rotate(210 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="19" transform="rotate(240 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="19" transform="rotate(270 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="19" transform="rotate(300 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="19" transform="rotate(330 50 50)"/>
+              </g>
+              <line class="fs-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="2.6"/>
+            </svg>
+          </div>
+        </div>
+        <figcaption class="fs-slot__cap">
+          <b>Imagery slot</b>
+          <span>Facility photograph, circle mask, 1:1. The mask, the frame and the drift on hover are locked here. The photograph is placed at the IMAGERY stage from the 31 first-party facility files already on hand.</span>
+        </figcaption>
+      </figure>
+
+    </div>
+  </div>
+
+  <!-- pick: DIVIDER-PATTERNS.md #2 | considered: #1,#5 | rigor: heavy | why: the sector blueprint names the A2 circle-up arc as this vertical's defining seam and #2 is its catalog form, a single gentle curve filled in the DESTINATION ground, which is what lets the one dark band rise into the light one rather than cut it off; the amplitude is machined down to 34px so it reads as a calibrated radius instead of the friendly wave the entry describes, and a single bronze hairline rides the curve so the boundary stays legible in a precision system. #1's hard edge is already what every other boundary in this specimen is, so spending it here would leave the vertical's one signature transition unbuilt; #5's gentle slant imports a forward lean the restrained measured tone rejects, and its straight cut contradicts the circular geometry the index ring establishes as the brand's only round form. -->
+  <svg class="fs-seam" viewBox="0 0 1200 34" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <path class="fs-seam__fill" d="M0,34 C320,-4 880,-4 1200,34 Z"/>
+    <path class="fs-seam__edge" d="M0,34 C320,-4 880,-4 1200,34"/>
+  </svg>
+</section>
+
+
+<!-- pick: SECTION-COMPONENTS.md #11 | considered: #9,#13 | rigor: heavy | why: eight named systems only persuade beside the room they stand in, so this band needs a media column that STRETCHES against a real two-column grid of named equipment, which is exactly what #11 specifies under its media-plus-cards law, and it is the shape that carries the sector's masked-imagery move on the single surface this brand is allowed to run dark; #9's plain three-column services row has no media column at all, so the masked imagery treatment would have nowhere to live and the band would collapse into a list of nouns; #13's eight-to-twelve tile bento is app-coded busywork that reads loud, and loud is the one thing a restrained clinical register cannot afford to spend on its only dark punctuation. -->
+<section class="fs-systems surface-dark" data-rise>
+  <div class="fs-sheet fs-sheet--wide">
+
+    <div class="fs-open">
+      <div class="fs-open__rule"><span class="fs-open__idx"></span></div>
+      <div class="fs-open__head">
+        <span class="fs-open__no fs-tab">02</span>
+        <div>
+          <span class="fs-eyebrow">Instrumentation</span>
+          <h2 class="fs-d2" style="margin-top:8px">Eight named systems. Imaging at all four clinics.</h2>
+        </div>
+      </div>
+    </div>
+
+    <p class="fs-lead" style="margin-bottom:clamp(24px,3vw,36px)">Every plan starts from measured data rather than an estimate. The systems are named because a name can be checked.</p>
+
+    <div class="fs-systems__grid">
+
+      <div class="fs-systems__media">
+        <figure class="fs-slot">
+          <div class="fs-slot__mask fs-slot__mask--arch">
+            <div class="fs-slot__art">
+              <svg class="fs-ring" width="104" height="104" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+                <circle class="fs-ring__track" cx="50" cy="50" r="38" stroke-width="2"/>
+                <g class="fs-ring__tick" stroke-width="2">
+                  <line x1="50" y1="12" x2="50" y2="20" transform="rotate(90 50 50)"/>
+                  <line x1="50" y1="12" x2="50" y2="20" transform="rotate(180 50 50)"/>
+                  <line x1="50" y1="12" x2="50" y2="20" transform="rotate(270 50 50)"/>
+                </g>
+                <line class="fs-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="3.6"/>
+              </svg>
+            </div>
+          </div>
+          <figcaption class="fs-slot__cap">
+            <b>Imagery slot</b>
+            <span>Equipment or operatory photograph, arch mask, column height. The arch is the circle-up geometry applied to media, so the round language comes from a mask and not from a new radius token: the brand's radius roles stay at 2px, 4px and pill.</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="fs-sys">
+        <div class="fs-sys__unit">
+          <span class="fs-sys__no fs-tab">01</span>
+          <h3 class="fs-sys__name">3D CBCT imaging</h3>
+          <p class="fs-sys__note">Cone beam CT produces a 3D view of teeth, jaw and surrounding structures for implant, surgical and endodontic planning.</p>
+          <span class="fs-sys__where"><i></i>At all four clinics</span>
+        </div>
+        <div class="fs-sys__unit">
+          <span class="fs-sys__no fs-tab">02</span>
+          <h3 class="fs-sys__name">iTero</h3>
+          <p class="fs-sys__note">High-resolution digital impressions in minutes, with no putty tray.</p>
+        </div>
+        <div class="fs-sys__unit">
+          <span class="fs-sys__no fs-tab">03</span>
+          <h3 class="fs-sys__name">RayFace</h3>
+          <p class="fs-sys__note">A 3D facial scan, so veneers and smile design are planned against the proportions of your actual face.</p>
+        </div>
+        <div class="fs-sys__unit">
+          <span class="fs-sys__no fs-tab">04</span>
+          <h3 class="fs-sys__name">OccluSense</h3>
+          <p class="fs-sys__note">Digital occlusal analysis measures how the teeth actually meet, so crowns, veneers and aligners fit and function rather than merely look correct.</p>
+        </div>
+        <div class="fs-sys__unit">
+          <span class="fs-sys__no fs-tab">05</span>
+          <h3 class="fs-sys__name">Sol Dental Laser</h3>
+          <p class="fs-sys__note">Soft-tissue work and gum contouring, handled precisely.</p>
+        </div>
+        <div class="fs-sys__unit">
+          <span class="fs-sys__no fs-tab">06</span>
+          <h3 class="fs-sys__name">Piezotome</h3>
+          <p class="fs-sys__note">Ultrasonic bone instrumentation that cuts bone while sparing soft tissue, supporting more comfortable extractions and faster healing.</p>
+        </div>
+        <div class="fs-sys__unit">
+          <span class="fs-sys__no fs-tab">07</span>
+          <h3 class="fs-sys__name">AirFlow</h3>
+          <p class="fs-sys__note">Guided biofilm cleaning with air, water and fine powder.</p>
+        </div>
+        <div class="fs-sys__unit">
+          <span class="fs-sys__no fs-tab">08</span>
+          <h3 class="fs-sys__name">Zoom</h3>
+          <p class="fs-sys__note">Light-activated in-clinic whitening, completed in a single session, with measures to limit sensitivity.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fs-inline">
+      <p>Every name above is plain text for equipment the practice operates. No logo, no badge, no provider-status claim, and no system listed at a clinic that does not hold it.</p>
+      <div class="fs-inline__acts">
+        <button type="button" class="fs-btn fs-btn--ghost"><span>See the system by clinic matrix</span></button>
+        <button type="button" class="fs-btn fs-btn--primary">Book an Appointment</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- pick: CARD-VARIATIONS.md #2 | considered: #3,#7 | rigor: heavy | why: stage 1 locked the card atom at this archetype, and this row's job is to prove the atom survives genuinely differentiated content, four clinics whose schedules actually disagree with one another, with the embedded mini-visual resolved as the circle-masked clinic photograph the sector blueprint asks for rather than a decorative chart; #3 strips card chrome down to spacing alone, so four different opening tables would float on the ground with nothing separating one schedule from the next, which is the exact reading a reader choosing between four clinics cannot afford; #7 sets the name over a full-bleed photograph, which is type on imagery the visual direction bans, and it leaves no ruled foot for the direct line and the hours a four-schedule roster has to show on the card rather than behind a toggle. -->
+<section class="fs-clinics" data-rise>
+  <div class="fs-sheet fs-sheet--wide">
+
+    <div class="fs-open">
+      <div class="fs-open__rule"><span class="fs-open__idx"></span></div>
+      <div class="fs-open__head">
+        <span class="fs-open__no fs-tab">03</span>
+        <div>
+          <span class="fs-eyebrow">Four clinics</span>
+          <h2 class="fs-d2" style="margin-top:8px">Four schedules, four numbers, on the card.</h2>
+        </div>
+      </div>
+    </div>
+
+    <p class="fs-body" style="margin-bottom:clamp(24px,3vw,36px)">The four clinics keep four genuinely different weeks. One closes on Sunday, one runs a single window all seven days, and two split weekday and weekend hours. That belongs on the face of the card, not behind a toggle.</p>
+
+    <div class="fs-cards">
+
+      <article class="fs-card">
+        <div class="fs-card__top">
+          <span class="fs-card__label">Taguig</span>
+          <svg class="fs-ring" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+            <circle class="fs-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+            <line class="fs-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+          </svg>
+        </div>
+        <figure class="fs-slot fs-card__media">
+          <div class="fs-slot__mask fs-slot__mask--circle"><div class="fs-slot__art"></div></div>
+          <figcaption class="fs-slot__cap"><b>Slot</b><span>Clinic photo</span></figcaption>
+        </figure>
+        <h3>Mitsukoshi BGC</h3>
+        <p class="fs-card__addr">2F Mitsukoshi BGC, 8th Ave. cor 36th St., Grand Central Park, Taguig City</p>
+        <dl class="fs-card__hours fs-tab">
+          <div><dt>Mon to Fri</dt><dd>11:00 to 20:00</dd></div>
+          <div><dt>Sat to Sun</dt><dd>10:30 to 20:00</dd></div>
+        </dl>
+        <div class="fs-card__foot">
+          <span class="fs-card__tel fs-tab">+63 917 159 9284</span>
+          <span class="fs-card__unit">Direct line</span>
+        </div>
+      </article>
+
+      <article class="fs-card">
+        <div class="fs-card__top">
+          <span class="fs-card__label">Mandaluyong</span>
+          <svg class="fs-ring" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+            <circle class="fs-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+            <line class="fs-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+          </svg>
+        </div>
+        <figure class="fs-slot fs-card__media">
+          <div class="fs-slot__mask fs-slot__mask--circle"><div class="fs-slot__art"></div></div>
+          <figcaption class="fs-slot__cap"><b>Slot</b><span>Clinic photo</span></figcaption>
+        </figure>
+        <h3>Shangri-La Plaza</h3>
+        <p class="fs-card__addr">4F East Wing, Shangri-La Plaza, EDSA cor Shaw Blvd, Ortigas, Mandaluyong City</p>
+        <dl class="fs-card__hours fs-tab">
+          <div><dt>Mon to Sun</dt><dd>10:30 to 19:00</dd></div>
+          <div><dt>Closures</dt><dd>None</dd></div>
+        </dl>
+        <div class="fs-card__foot">
+          <span class="fs-card__tel fs-tab">+63 968 851 5420</span>
+          <span class="fs-card__unit">Direct line</span>
+        </div>
+      </article>
+
+      <article class="fs-card">
+        <div class="fs-card__top">
+          <span class="fs-card__label">Taguig</span>
+          <svg class="fs-ring" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+            <circle class="fs-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+            <line class="fs-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+          </svg>
+        </div>
+        <figure class="fs-slot fs-card__media">
+          <div class="fs-slot__mask fs-slot__mask--circle"><div class="fs-slot__art"></div></div>
+          <figcaption class="fs-slot__cap"><b>Slot</b><span>Clinic photo</span></figcaption>
+        </figure>
+        <h3>Bonifacio Stopover</h3>
+        <p class="fs-card__addr">Unit R303, 3rd floor, Bonifacio Stopover Pavilion, Bonifacio Global City, Taguig City</p>
+        <dl class="fs-card__hours fs-tab">
+          <div><dt>Mon to Sat</dt><dd>09:00 to 18:00</dd></div>
+          <div class="is-closed"><dt>Sunday</dt><dd>Closed</dd></div>
+        </dl>
+        <div class="fs-card__foot">
+          <span class="fs-card__tel fs-tab">+63 917 829 4551</span>
+          <span class="fs-card__unit">Direct line</span>
+        </div>
+      </article>
+
+      <article class="fs-card">
+        <div class="fs-card__top">
+          <span class="fs-card__label">Muntinlupa</span>
+          <svg class="fs-ring" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+            <circle class="fs-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+            <line class="fs-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+          </svg>
+        </div>
+        <figure class="fs-slot fs-card__media">
+          <div class="fs-slot__mask fs-slot__mask--circle"><div class="fs-slot__art"></div></div>
+          <figcaption class="fs-slot__cap"><b>Slot</b><span>Clinic photo</span></figcaption>
+        </figure>
+        <h3>Alabang Town Center</h3>
+        <p class="fs-card__addr">2nd Floor, 2225 Commerce Mall, Alabang Town Center, Ayala Alabang, Muntinlupa 1780</p>
+        <dl class="fs-card__hours fs-tab">
+          <div><dt>Mon to Fri</dt><dd>11:00 to 20:00</dd></div>
+          <div><dt>Sat to Sun</dt><dd>10:00 to 20:00</dd></div>
+        </dl>
+        <div class="fs-card__foot">
+          <span class="fs-card__tel fs-tab">+63 917 114 0598</span>
+          <span class="fs-card__unit">Direct line</span>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="fs-foot">
+      <span class="fs-micro">The nine disciplines, named rather than asserted</span>
+      <div class="fs-tags">
+        <span class="fs-tag">General Dentistry</span>
+        <span class="fs-tag">Cosmetic Dentistry</span>
+        <span class="fs-tag">Orthodontics</span>
+        <span class="fs-tag">Endodontics</span>
+        <span class="fs-tag">Periodontics</span>
+        <span class="fs-tag">Prosthodontics</span>
+        <span class="fs-tag">Pediatric Dentistry</span>
+        <span class="fs-tag">Oral Surgery</span>
+        <span class="fs-tag">Dental X-rays</span>
+      </div>
+      <span class="fs-status"><i></i>Accepting new patients</span>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SPECIMEN APPARATUS. The provenance rail. Not a band. -->
+<div class="fs-sheet fs-colophon">
+  <div class="fs-colophon__grid">
+    <div class="fs-colophon__row"><div class="fs-colophon__k">Quality ceiling</div><div class="fs-colophon__v"><b>_MODERN-WOW-SPEC</b> &nbsp; layered shadow plus hairline plus inset highlight on every raised surface, staggered scroll reveal, display-scale type contrast against calm body, oversized tabular numerals, image drift inside a masked frame, intentional asymmetry where the hero media breaks the top line of its grid. Felt, not noticed.</div></div>
+    <div class="fs-colophon__row"><div class="fs-colophon__k">Technique layer</div><div class="fs-colophon__v"><b>_MODERN-DESIGN-PATTERN-LIBRARY</b> &nbsp; the buildable recipes behind the arc seam filled in the destination ground, the shape-masked media frames, the card hover bloom and the grain veil.</div></div>
+    <div class="fs-colophon__row"><div class="fs-colophon__k">Selection law</div><div class="fs-colophon__v"><b>_COMPOSITION-LAWS</b> &nbsp; L9 SELECTION-RATIONALE at HEAVY rigor. Four ledgers, four catalogs, two or more real alternatives defended per pick, because a FEEL decision propagates into every template that follows.</div></div>
+    <div class="fs-colophon__row"><div class="fs-colophon__k">Sector blueprint</div><div class="fs-colophon__v"><b>composition-medical-health</b> &nbsp; applied here: the A2 circle-up arc seam as the hero's closing transition, circle-masked and arch-masked imagery treatment, calming tint washes on both light bands, hours-up-front reassurance, and the appointment CTA kept as the spine without authoring a closing band. Deliberately NOT applied: the blueprint's warm first-person voice, resolved against by Collision B in favour of the measured restrained register.</div></div>
+    <div class="fs-colophon__row"><div class="fs-colophon__k">Structure picks</div><div class="fs-colophon__v"><b>HERO-COMPOSITIONS #20</b> three-column hero &nbsp; <b>DIVIDER-PATTERNS #2</b> single smooth curve, machined to 34px &nbsp; <b>SECTION-COMPONENTS #11</b> media plus cards with a stretching media column &nbsp; <b>CARD-VARIATIONS #2</b> light card with an embedded mini-visual. No pick is its catalog's first entry.</div></div>
+    <div class="fs-colophon__row"><div class="fs-colophon__k">Token API</div><div class="fs-colophon__v"><b>_design/elevatedental-tokens.css</b> &nbsp; linked, locked, and the only source of colour, family, radius, space and duration in this file. Radius stays at the three constrained roles. The structural sheet is written at SYSTEM and does not exist yet.</div></div>
+    <div class="fs-colophon__row"><div class="fs-colophon__k">Dark budget</div><div class="fs-colophon__v"><b>Spent once, on band 2.</b> Measured tone reads light dominant with a dark ratio of zero, so the flip is not a mood, it is punctuation. It is spent on the eight named systems because that band is the one place the page is asked to be believed on measurement rather than description, and the token sheet built its gold accent specifically to hold on that navy. Bands 1 and 3 are light. The hero is never dark.</div></div>
+    <div class="fs-colophon__row"><div class="fs-colophon__k">Seam budget</div><div class="fs-colophon__v"><b>One arc, one step.</b> The arc carries the light band into the dark one. The return to light is a flat colour step opened by the unrolled index rule, per the motif's own rule that every other boundary is a flat step.</div></div>
+    <div class="fs-colophon__row"><div class="fs-colophon__k">Imagery</div><div class="fs-colophon__v"><b>Slots, labelled in place.</b> This specimen precedes the IMAGERY stage, so what is locked is the treatment: circle mask at 1:1 in the hero and on every card, arch mask at column height in band 2, a caption rail under each, and a slow scale drift on hover inside an overflow-hidden frame. Six slots, zero grey boxes, and every one names what will fill it. The 138 clinical case images may be built with but not published until consent is documented.</div></div>
+    <div class="fs-colophon__row"><div class="fs-colophon__k">Not shown</div><div class="fs-colophon__v"><b>No price figure.</b> No real treatment price exists, and the currency pattern was already locked at stage 1. Carrying a representative peso figure into a body-feel artifact would propagate a number nobody has supplied, so the slot is deliberately absent rather than filled with a placeholder. No rating is shown either: the unsourced figure is retired until platform, count and date are supplied.</div></div>
+    <div class="fs-colophon__row"><div class="fs-colophon__k">Motion</div><div class="fs-colophon__v"><b>Three moves, no more.</b> A staggered rise on band entry, a lift with a shadow bloom on the card, and a slow drift on masked media. Every transition reads a --ds-dur token, so reduced motion collapses all of them in one place, and the reveal never arms because its root class is gated on the same query.</div></div>
+    <div class="fs-colophon__row"><div class="fs-colophon__k">Document shape</div><div class="fs-colophon__v"><b>No main element, by design.</b> This is three band fragments and their apparatus, not a page composition. The document-label and the provenance rail above and below are specimen furniture, not bands.</div></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  if (document.documentElement.className.indexOf('js-rise') === -1) return;
+  var nodes = document.querySelectorAll('[data-rise]');
+  Array.prototype.forEach.call(nodes, function(n, i){ n.style.setProperty('--i', i % 4); });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
+  Array.prototype.forEach.call(nodes, function(n){ io.observe(n); });
+
+  // FAILSAFE. The reveal must never be able to leave a band invisible. If nothing has
+  // scrolled the page within the window below (a full-page screenshot, a print, a capture
+  // harness, an embedded preview frame), every remaining band is put at rest. A reader who
+  // scrolls sooner still gets the staggered rise; a tool that never scrolls still gets the
+  // finished artifact instead of two blank bands.
+  setTimeout(function(){
+    io.disconnect();
+    Array.prototype.forEach.call(nodes, function(n){ n.classList.add('is-in'); });
+  }, 1600);
+})();
+</script>
+
+</body>
+</html>

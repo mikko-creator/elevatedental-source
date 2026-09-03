@@ -1,0 +1,757 @@
+<!--META {"title":"Dental Bridge Philippines | Fixed Tooth Replacement","desc":"A fixed bridge that replaces one or more missing teeth using the neighbouring teeth as support. Process and starting price.","noindex":true}-->
+<!-- TITLE and DESC are the LOCKED values from _handoff/seo-enrichment.md section 1, the SEO SSOT.
+     The SSOT separator is an en dash and renders here as a pipe, because verify-no-dashes is
+     registered on this build. Only the SEPARATOR CHARACTER changed; no word was altered, added,
+     removed or reordered.
+     The key is "desc" and NOT "description": build.mjs renders esc(meta.desc), and its JSON branch
+     does not alias description to desc, so a "description" key ships an EMPTY meta description
+     while looking correct in the fragment.
+     noindex is set on EVERY page because this publishes to a PUBLIC preview URL while the pages
+     carry representative market prices rather than this clinic's own figures. robots.txt cannot
+     carry that load: crawlers read it only at the origin root, and this ships to a project
+     subpath, so the disallow-all there is inert. noindex is the protection that actually works. -->
+<!-- ============================================================================
+     THE BODY. Eleven sections: the opener, the route index, and the nine stages the
+     route declares. Every section obeys the forced grammar
+
+         section  ->  div.container  ->  div.row  ->  div.col  ->  OBJECT
+
+     and carries EXACTLY ONE .container and EXACTLY ONE .row, because the sheet's
+     edge-margin zeroing rule fires on every .col in a section, so a second .row would
+     have its leading object's margin removed and the two rows would butt. Multi-band
+     sections are composed inside the ONE twelve-track row with .col--full bands and
+     .col--span-N cells, and the vertical interval between bands is the row GAP.
+
+     THE SUBJECT. A dental bridge, and only a dental bridge: the pontic that replaces
+     the missing tooth, the abutment teeth that carry it, the span that joins them,
+     and the standing question of whether an implant would be the better answer. This
+     page is authored from _copy/dental-bridge.md. Nothing on it is inherited prose
+     from a sibling treatment page.
+
+     ZERO closing CTA bands, ZERO dark bands and ZERO arc seams are authored here.
+     ============================================================================ -->
+
+<!-- pick: HERO-COMPOSITIONS.md #13 Centered + scroll cue, the continue indicator | considered: #23,#20 | rigor: heavy | why: a bridge is not one object a reader can take in at a glance, it is a decision with a fork in it, so the opener's job is to declare that a route exists and hand the reader onto it rather than to close an argument in one frame; #13 is the only catalogue entry whose named structural device IS the continue affordance, a hero that is deliberately incomplete and points onward, and that is the promise this page then keeps nine times. #23's comparison hero was the serious rival, because the bridge-or-implant question is genuinely a two-column argument and the copy answers it twice, and it is refused because putting that fork in the HERO would settle the page's hardest decision before the reader has been told what a pontic or an abutment is; the comparison earns its place at stage 02 and again at stage 08, after the anatomy. #20's three parallel columns say "three reasons at once", which is the opposite of "here is step one of nine", and it is additionally the locked flagship's opener. ADAPTATION, recorded rather than left for the gate: #13 centres its text, runs a full-viewport box and animates a bouncing chevron; all three are refused. The centring goes because this system holds ONE left reading axis; the 100vh box goes because the locked hero declares no min-height by law; the chevron goes because a bounce is not one of the three moves in the motion budget. What is KEPT is the entry's real structure, an opener that ends on an explicit continue affordance, delivered here as an in-flow ruled rail naming the route and the two places a reader most often jumps to. -->
+<!-- FRONT OF HOUSE RESTRUCTURE. The hero is re-housed into the foh-hero contract: one
+     full-bleed scrimmed photographic band carrying the headline, a paper lockup under it for
+     the eyebrow, the lede, the disclosure chip and the existing buttons. .surface-dark is the
+     page's one dark beat, which verify-not-flat credits. The h1's inline market-price caveat is
+     removed FROM THE HEADLINE ONLY; it is still disclosed by the .kit-tag--accent chip in the
+     lockup. The bridge-model .kit-slot is a DIFFERENT photograph to the assigned band image, so
+     it is kept below the band with its caption intact rather than deleted as a duplicate. -->
+<!-- PRICE MOVED OUT OF THE HEADLINE, 2026-08-25. The starting figure 23,000 stood inside
+     h1.foh-hero__title while the disclosure that marks it sat in the .kit-tag chip AFTER the whole
+     band markup, 419 characters further down the source. client-rules
+     price-placeholder-unmarked requires a marker within 120 characters of every peso figure, so the
+     pair was separated by more than three times the permitted distance and the page was blocked.
+     NOTHING WAS DELETED AND NOTHING WAS REWORDED: the figure is byte-identical (23,000), and the
+     caveat is the exact string this page already carried ("A market anchor, not an Elevate price"). The
+     figure was moved DOWN into its own chip so the number and its disclosure are read together,
+     which is also what the Front of House concept wants of a hero headline - short, and not a price
+     list. The shape now matches the three sibling treatment pages that were already correct
+     (airflow, complete-dentures, dental-fillings): "From [figure]. [caveat]" in one .kit-tag.
+     Measured after the edit: marker begins 19 characters after the figure. -->
+<section class="section surface-dark kit-hero foh-hero" id="s-start" aria-labelledby="h-start" data-surface="dark" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="foh-hero__stage">
+          <figure class="foh-hero__band">
+            <img class="foh-hero__img" src="../assets/generated/gen-hero-bridge-span.jpg" alt="Ceramic tooth forms standing together on a slim brushed brass rail against deep navy panelled cabinetry." width="3136" height="1344" loading="eager" fetchpriority="high" decoding="async">
+            
+          </figure>
+          <div class="foh-hero__inner">
+              <h1 class="foh-hero__title" id="h-start">Dental Bridge Philippines. Fixed tooth replacement.</h1>
+            </div>
+          <div class="foh-hero__lockup">
+            <p class="foh-hero__eyebrow">Fixed bridgework, prosthodontics</p>
+            <p class="foh-hero__lede">A dental bridge is a fixed replacement that spans a gap using the neighboring teeth as its support.</p>
+            <div class="kit-tags">
+              <span class="kit-tag kit-tag--accent kit-tab">From ₱23,000. A market anchor, not an Elevate price</span>
+            </div>
+            <div class="kit-actions">
+              <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+              <a class="kit-btn kit-btn--secondary" href="contact.html">Ask about this treatment</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #36 Sticky-sidebar topic nav | considered: #27,#50 | rigor: heavy | why: this band IS the concept, so the pick has to be the entry whose stated role is orientation across a long document rather than presentation of content, and #36 is the only one: a docs-coded page with a topic index beside the body, whose declared reflow is the index moving ABOVE the content at the narrow tier, which is precisely the reading order a route needs on a phone. #27's numbered process cards were considered because the index is numbered, and refused because on THIS page the numbers would collide: stage 03 is a real seven-appointment sequence a patient will physically attend, and dressing the table of contents in the same numbered-card shape would make the document's chapters look like clinical visits. #50's topic columns group items into parallel subject columns with no order between them, which destroys the one property this index exists to carry, that the abutment assessment precedes the preparation and there are exactly nine stops. ADAPTATION, load bearing and stated plainly: #36 is a STICKY sidebar and this build cannot have one, because the locked .section sets overflow:hidden to clip its atmosphere layers and position:sticky is inert inside an overflow:hidden ancestor, so a pinned rail would silently fail to pin. The affordance is rebuilt structurally instead: the index is a real in-flow band read once, every later band stamps its own ordinal in the index-ring opener, and every band closes on a hand-off naming the next one, so position is re-established at each joint rather than displayed continuously. -->
+<section class="section section--cool" id="s-route" aria-labelledby="h-route" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <!-- MOVED HERE FROM THE OPENING SECTION, 2026-08-25, VERBATIM. The FOH pass added the
+           photographic band but left the old hero's remaining two cells inside the same
+           section, where the released hero .container renders them flush to the viewport with
+           no gutter. Both cells hold content that exists NOWHERE ELSE on this page, so
+           neither was deleted: the .kit-slot carries a DIFFERENT photograph from the band
+           image (checked by filename, one occurrence in this fragment), and the .kit-foot is
+           this page's only statement of how the route is laid out. Markup is byte-identical
+           to what stood in the hero except for ONE class: the foot cell was .col--full and is
+           .col--span-7 here, so the pair fills one 12-track line and no existing cell in this
+           row changes width or position. -->
+      <div class="col col--span-4">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">Route</span>
+            <div>
+              <span class="kit-eyebrow">The nine stages</span>
+              <h2 id="h-route">What this page covers</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Every stop below is a real part of getting a bridge made and fitted, not a heading invented to fill a page.</p>
+        <p class="kit-body readw">Read them in sequence and you have the whole of it, including the parts that are not comfortable to read. Arrive in the middle and each band tells you which stop you are at and which one follows.</p>
+      </div>
+
+      <div class="col col--span-7">
+        <div class="kit-foot">
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>See the nine stages</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#stage-06"><span>Skip to what it costs</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--span-5">
+        <figure class="kit-slot" data-rise style="box-shadow: var(--ds-shadow-lift);">
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/generated/gen-bridge-articulator.jpg" alt="A dental study model of an upper arch mounted on a stainless articulator in a dark studio." width="675" height="585" loading="eager" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>The appliance</b><span>Three joined units, two of them crowns.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--span-8">
+        <ol class="kit-list kit-list--ledger" data-rise>
+          <li><span><b>What it is.</b> The pontic, the abutments, and why the whole span is cemented as one piece. <a href="#stage-01">Go to stage 01</a></span></li>
+          <li><span><b>Who it suits.</b> The gaps this closes well, and three exits where a different treatment is correct. <a href="#stage-02">Go to stage 02</a></span></li>
+          <li><span><b>How it works.</b> Seven appointments from assessment to the bite recheck, and the chair time each needs. <a href="#stage-03">Go to stage 03</a></span></li>
+          <li><span><b>Who performs it.</b> The specialty that owns bridgework, and what is finished without a referral out. <a href="#stage-04">Go to stage 04</a></span></li>
+          <li><span><b>The instruments.</b> Three named systems, and what each measures on a restoration that splints teeth together. <a href="#stage-05">Go to stage 05</a></span></li>
+          <li><span><b>What it costs.</b> Why the number is counted per unit, the five variables, and the one way this practice is paid. <a href="#stage-06">Go to stage 06</a></span></li>
+          <li><span><b>The check.</b> The moment the work can still be sent back, and the visit that reads your bite again. <a href="#stage-07">Go to stage 07</a></span></li>
+          <li><span><b>Questions.</b> Eight answers, grouped by how far into the treatment each one arrives. <a href="#stage-08">Go to stage 08</a></span></li>
+          <li><span><b>Aftercare.</b> Cleaning beneath a joined span, and what the consultation produces. <a href="#stage-09">Go to stage 09</a></span></li>
+        </ol>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 01 opens with the anatomy: which unit replaces the missing tooth, which units do the carrying, and why it is set in place as a single object.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-01"><span>Open stage 01</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #12 Feature row with screenshot | considered: #11,#58 | rigor: heavy | why: this stage explains an OBJECT the reader has never held, a single restoration made of joined units, and #12's role is stated as "look at the product", a headline and body on one side against the artefact itself on the other, so the photograph of a multi-unit bridge being finished on the bench is evidence for the paragraphs rather than decoration beside them. #11's service pillars pair a media column with a SET of peer cards, and this stage has no set: it is one continuous explanation that walks from the parts, to the material, to the damage a gap does if it is left, and cards would chop a causal chain into four things of equal rank. #58's full-bleed image divider would spend the band height on a photograph and push the explanation under it, which is the full-width-media-then-content stack SECTION-COMPONENTS.md #14b names as the sprawl failure. ADAPTATION: the entry's screenshot slot holds a first-party laboratory photograph rather than a product interface, capped by the locked frame mask so it can never balloon the row, which is #14b's own remedy; and the irreversible part, that sound teeth on either side have to be cut down to carry the crowns, is lifted out of the prose into the locked truth block, because the reader should not have to reach the end of a paragraph to find the thing they cannot undo. -->
+<section class="section section--paper" id="stage-01" aria-labelledby="h01" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">01</span>
+            <div>
+              <span class="kit-eyebrow">Stage 01, plain English</span>
+              <h2 id="h01">What a dental bridge is</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">A bridge is one piece of dental work made of several joined units.</p>
+        <p class="kit-body readw">The false tooth in the middle is the pontic. The units on either side are crowns that sit over your own teeth, and those teeth carry the load. The whole span is cemented as a single restoration, which is why it cannot be taken out and why this work is counted by how many units it has rather than by how many teeth it replaces.</p>
+        <p class="kit-body readw">Material decides both the look and the strength. Zirconia is the usual choice where chewing force is highest, at the back of the mouth. Lithium disilicate, sold as Emax, is used at the front where translucency matters and light has to pass through the way it passes through enamel. Porcelain fused to metal remains a durable option in specific cases. Your prosthodontist will tell you which one your case calls for, and why, before any tooth is shaped.</p>
+        <p class="kit-body readw">The problem this solves is a gap that has begun to affect the rest of the mouth. Teeth on either side of a space tilt into it, the opposing tooth drifts down to meet nothing, food packs into the void, and the bite changes. Closing the space stops that sequence and gives you back chewing on that side.</p>
+      </div>
+
+      <div class="col col--span-5">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2022_12_technician-working-on-prosthetic-bridge-with-drill-2022-12-18-17-46-57-utc.jpg" alt="A laboratory technician holding a joined multi unit bridge on a mandrel and shaping it with a rotary handpiece at the bench." width="1200" height="800" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Built as one piece</b><span>Finished at the bench before it is ever tried in.</span></figcaption>
+        </figure>
+        <div class="kit-truth">
+          <span class="kit-truth__k">The honest part</span>
+          <p>Fitting a conventional bridge means reducing the two teeth beside the gap so the crowns fit over them without leaving the teeth bulkier than they were. That reduction is irreversible. From then on those teeth need a crown on them. It is the trade you are making for a fixed replacement with no surgery, and it is the first thing discussed at the assessment rather than the last.</p>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 02 asks whether your own gap is one this should close, and marks the three turnings where the honest answer is another treatment.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-02"><span>Go to stage 02</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Route index</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #9 Services 3-col | considered: #10,#6 | rigor: heavy | why: the copy names exactly THREE places where a bridge is the wrong answer, an untouched pair of neighbours, supports weakened by gum disease, and a gap too long to span, and #9 gives three equal columns each with room for two or three real sentences and a destination link, which is what turns a stated limit into a turning the reader can actually take. Three peers at three across is the arrangement with no ragged cell and no implied ranking, and none of these three outranks the others: which one applies is decided by the mouth, not by the practice. #10's four-column compact grid was the obvious inherited habit and is refused on arithmetic and on content: three items at four across leaves a hole, and #10 is catalogued for LIGHTER content per cell, while the bone-loss turning needs a full explanation of why a weakened support cannot be asked to carry a splinted load. #6, the "is this for me" qualifier, is refused because its buyer-profile columns carry no destination per row, so the three named alternatives would collapse back into prose and the reader would be told what not to have without being told where to go. ADAPTATION: the fourth limit in the copy, that this work commits teeth an implant would leave alone, is NOT given a fourth cell. It is the same decision as turning 01 seen from the other side, so it is stated once inside that cell and picked up again in the closing questions, rather than being counted twice to make the row look fuller. The band's photograph shows the appliance named on turning 03, because a reader deciding against a fixed span deserves to see what the alternative physically is. -->
+<section class="section section--warm" id="stage-02" aria-labelledby="h02" data-rise>
+  <div class="container">
+    <div class="row row--stretch">
+
+      <div class="col col--span-8">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">02</span>
+            <div>
+              <span class="kit-eyebrow">Stage 02</span>
+              <h2 id="h02">Whose gap a bridge should close</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">This suits you if you are missing one tooth, or a short run of them, and the teeth on both sides of the space are healthy, well held by bone, and either already crowned or heavily filled.</p>
+        <div class="kit-tags">
+          <span class="kit-tag">One missing tooth</span>
+          <span class="kit-tag">A short run of two or three</span>
+          <span class="kit-tag">Neighbours already crowned</span>
+          <span class="kit-tag">Neighbours heavily filled</span>
+          <span class="kit-tag">A fixed result without surgery</span>
+          <span class="kit-tag">An implant ruled out medically</span>
+        </div>
+        <p class="kit-body readw--wide">If those neighbours already need crowns, the work does two jobs at once, which is the case where this treatment is at its most efficient. If one of the three turnings below describes your mouth instead, take it, and read the treatment named on it next.</p>
+      </div>
+
+      <div class="col col--span-4">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2021_08_4-Types-of-Dental-Bridges-768x438-1.jpg" alt="A removable partial denture with metal clasps standing beside a mouth mirror and a probe on a pale blue surface." width="768" height="438" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>The other appliance</b><span>What turning 03 sends a long gap toward.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Turning 01</span>
+            <span class="kit-card__unit">Leave them alone</span>
+          </div>
+          <p class="kit-card__title">A single implant instead</p>
+          <p class="kit-card__body">If the two teeth flanking the space are sound, untouched and free of fillings, a single implant is usually the better treatment, because it puts a tooth back without cutting into two healthy ones to hold it there. Trading two intact teeth for a fixed span is a real cost, and it is counted here rather than passed over.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="dental-implant.html"><span>Dental implant</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Turning 02</span>
+            <span class="kit-card__unit">Treat the gums</span>
+          </div>
+          <p class="kit-card__title">Periodontal care comes first</p>
+          <p class="kit-card__body">A span loads two teeth with the work of three. If gum disease has already taken bone from around them, they cannot be asked to carry that extra share, and cementing anything onto them shortens their life instead of lengthening it. The gums are treated and stabilised first, and the design is planned afterwards against what the bone will actually hold.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="periodontics.html"><span>Periodontics</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Turning 03</span>
+            <span class="kit-card__unit">Too long a reach</span>
+          </div>
+          <p class="kit-card__title">A long gap needs another design</p>
+          <p class="kit-card__body">Ceramic flexes across distance, and a span stretched over a long empty stretch will flex, then fail, and take a support tooth with it when it goes. An implant supported solution or a removable partial denture is the honest alternative in that situation, and which of the two fits is a prosthodontic decision made with your radiographs in front of you.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="prosthodontics.html"><span>Prosthodontics</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">What we will tell you</p>
+          <p class="kit-body readw--wide">If your case is not one this treatment should take, you will be told so at the consultation and shown which of the three turnings applies. Active decay is dealt with before any of them, on whichever path the case finally goes down.</p>
+          <p class="kit-body readw--wide">Stage 03 lays the appointments out in order, with the chair time each one needs.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-03"><span>Go to stage 03</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Route index</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #28 Process timeline horizontal | considered: #27,#13 | rigor: heavy | why: the copy fixes SEVEN visits and attaches a real duration to each, and #28 is the entry written for the long sequence, six to twelve stops, where the connector between them is part of the meaning; #27 is catalogued for three to six numbered cards, so seven overruns the shape it was measured at, and #27 additionally cannot express the dependency that decides this treatment's calendar, that the temporary is worn because the laboratory work has not happened yet. #13's bento grid is non-sequential by design, and presenting preliminary root canal work as a peer of the try-in would hide the fact that it is a gate the case may or may not pass through. ADAPTATION, deliberate and worth defending: #28's horizontal flow is NOT built, because a horizontal timeline drops its connector and wraps two-up at the tablet tier, which is the failure the entry itself records, and because building one would need page-local CSS that promotion strips. What is taken from #28 is its actual argument, that a long sequence needs a persistent connector and a durations axis, and that is delivered by the locked semantic table: the hairline row rules ARE the connector, the visit column is the flow axis, and the third column carries the duration so a patient can add up their own calendar. At the mobile tier the sheet reflows each row into a labelled card, which is #28's own documented behaviour of shedding the connector and stacking the stops. -->
+<section class="section section--paper" id="stage-03" aria-labelledby="h03" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">03</span>
+            <div>
+              <span class="kit-eyebrow">Stage 03, assessment to recheck</span>
+              <h2 id="h03">How the treatment runs</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Seven visits, in this order, with how long each one holds the chair.</p>
+        <p class="kit-body readw">Two of them are gates rather than steps. Nothing is shaped until the bone around your own teeth has been read on a radiograph and the design has been agreed, and nothing is cemented until the fit, the contacts and the shade have been checked with the work still removable. Those two gates are why the list is as long as it is.</p>
+      </div>
+
+      <div class="col col--span-5">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/generated/gen-bridge-porcelain.jpg" alt="A three unit all ceramic dental bridge in natural white porcelain resting on dark polished slate." width="768" height="513" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Visit one</b><span>The supports are read before anything is planned.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-table__scroll">
+          <table class="kit-table">
+            <caption>The seven visits and what each is for</caption>
+            <thead>
+              <tr><th scope="col">Visit</th><th scope="col">What happens</th><th scope="col">How long</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Visit"><b class="kit-strong">01 Consultation and assessment</b></td>
+                <td data-label="What happens">Clinical examination, radiographs, and a judgement on whether the teeth flanking the space, and the bone holding them, can take the extra share. Material and design are agreed. You receive the written quote at this appointment.</td>
+                <td data-label="How long" class="kit-tab">45 to 60 minutes</td>
+              </tr>
+              <tr>
+                <td data-label="Visit"><b class="kit-strong">02 Preliminary work, where needed</b></td>
+                <td data-label="What happens">Decay, a failing filling, root canal treatment or gum treatment on a support is completed before anything else starts. This is quoted separately, and not every case needs it.</td>
+                <td data-label="How long" class="kit-tab">Case by case</td>
+              </tr>
+              <tr>
+                <td data-label="Visit"><b class="kit-strong">03 Preparation and records</b></td>
+                <td data-label="What happens">The two flanking teeth are numbed and shaped to receive their crowns. The arch is scanned or impressed, the bite is recorded, and the shade is matched.</td>
+                <td data-label="How long" class="kit-tab">90 to 120 minutes</td>
+              </tr>
+              <tr>
+                <td data-label="Visit"><b class="kit-strong">04 Temporary fitted, same sitting</b></td>
+                <td data-label="What happens">A provisional is cemented lightly so the shaped teeth are protected and the space is not visible while the laboratory works.</td>
+                <td data-label="How long" class="kit-tab">Same appointment</td>
+              </tr>
+              <tr>
+                <td data-label="Visit"><b class="kit-strong">05 Laboratory fabrication</b></td>
+                <td data-label="What happens">The units are built and joined to the scan and the bite record. Nothing happens at the chair during this period.</td>
+                <td data-label="How long" class="kit-tab">One to two weeks</td>
+              </tr>
+              <tr>
+                <td data-label="Visit"><b class="kit-strong">06 Try-in and cementation</b></td>
+                <td data-label="What happens">Fit at the margins, the contact points, the shade and the bite are all checked before cement is mixed. Adjustments belong at this stage, not after.</td>
+                <td data-label="How long" class="kit-tab">45 to 60 minutes</td>
+              </tr>
+              <tr>
+                <td data-label="Visit"><b class="kit-strong">07 Review</b></td>
+                <td data-label="What happens">Your bite is read again once you have been using it, and you are shown how to clean the underside of the span.</td>
+                <td data-label="How long" class="kit-tab">One short visit, two to four weeks later</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Your calendar</p>
+          <p class="kit-body readw--wide">Most cases finish in two to three appointments across two to four weeks. A case needing endodontic or periodontal work first takes longer, and the plan handed to you at the consultation states the sequence for your mouth specifically.</p>
+          <p class="kit-body readw--wide">Stage 04 names the discipline responsible for this work and says what stays inside the practice.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-04"><span>Go to stage 04</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Route index</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #8 Manifesto / belief statement | considered: #18,#11 | rigor: heavy | why: unlike a cosmetic case, which several disciplines touch at once, this treatment has ONE owner, and the whole content of this stage is a single position held plainly: it is prosthodontics, prosthodontics is a recognized specialty rather than a label, and it is practised here by clinicians whose main discipline it is. #8 is the catalogue's entry for exactly that, one to three sentences of stated belief carried as a quote-formatted block with a rule above, and it is the only shape that can be honest here, because a grid of any kind would need per-cell facts this build does not have. #18's team grid is what a reader expects under this heading, and it is refused on evidence rather than taste: per-discipline and per-clinic rosters are recorded as BLOCKED in client-rules.json, so a grid of faces would either borrow portraits from another discipline or assert an assignment no receipt supports, which is fabricated proof on a medical page. #11's media-plus-cards band is refused for the arithmetic that made it right on a cosmetic page and wrong here: it wants a two by two of peer cards, and there is one discipline to name, not four, so three cells would have to be invented to fill it. ADAPTATION: the belief is followed by the one concrete, evidenced thing this stage can say, that endodontic and periodontal work on a support is done inside the same practice rather than referred out, and the reader is sent to the prosthodontics-filtered index instead of to a person, which is the furthest the receipts currently reach. -->
+<section class="section section--paper" id="stage-04" aria-labelledby="h04" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">04</span>
+            <div>
+              <span class="kit-eyebrow">Stage 04, one discipline</span>
+              <h2 id="h04">Who performs it</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-quote kit-quote--display readw">Bridgework is prosthodontics, and prosthodontics is a recognized dental specialty, not a word a general practice can award itself.</p>
+        <p class="kit-body readw--wide">The specialty exists to replace missing teeth and rebuild a bite, and at Elevate Dental it is practised in house by clinicians who do this as their main clinical discipline rather than as an occasional job between other work.</p>
+        <p class="kit-body readw--wide">If your case needs endodontic care on a carrying tooth first, or the gums stabilised before the design is committed to, that is handled by a specialist inside this same practice. You are not sent out and back, and no part of your plan is decided by somebody who will never see the finished work in your mouth.</p>
+        <p class="kit-body readw--wide">Every clinician is listed by name, discipline and training on the specialists index, filtered to the discipline that will take your case. Read the profiles, then book with the one you want.</p>
+      </div>
+
+      <div class="col col--span-5">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--arch">
+            <img class="kit-slot__img" src="../assets/generated/gen-shade-bench.jpg" alt="A ceramic shade guide fanned open beside a finished white crown on a dark laboratory bench." width="675" height="585" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Shown, then explained</b><span>The work is discussed before it is agreed.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 05 names three instruments and says exactly what each of them measures.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-05"><span>Go to stage 05</span></a>
+            <a class="kit-btn kit-btn--ghost" href="specialists.html"><span>Our Specialists</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Back to the map</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #11 Service pillars 2-col with image | considered: #9,#13 | rigor: heavy | why: the copy names THREE machines and, crucially, says the practice runs eight and that only these three touch this treatment, so the band has to read as a short deliberate selection rather than as an equipment inventory; #11's media-plus-cards law gives a stretched photograph against a small two-column card grid, which reads as "here is the case, and here are the three things measured on it", where a matrix of tiles would read as "here is our kit list". The photograph is load bearing rather than decorative: mounted study models with the arches brought into bite are literally the thing the bite-analysis card is about. #9's three-column matrix was the near miss and is refused because it puts three equal boxes in a row with no case in front of them, which is precisely the adjectival technology band the copy is written against, and because the same matrix already carries a longer instrument list elsewhere on this site, so re-spending it here would make a three item selection look like a truncated eight. #13's bento grid gives its tiles different sizes, and a bigger tile is a claim of importance, which would assert that the scanner matters more than the bite reading; on a restoration that splints teeth together the bite reading is arguably the one that decides whether the work survives. ADAPTATION: the card grid runs three cells rather than the entry's canonical two by two, which the law's own "2-3 item" clause allows, and no fourth cell is invented to square the grid, because inventing a fourth machine to make a layout tidy is the exact dishonesty this stage is written to avoid. -->
+<section class="section section--warm" id="stage-05" aria-labelledby="h05" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">05</span>
+            <div>
+              <span class="kit-eyebrow">Stage 05</span>
+              <h2 id="h05">The technology behind it</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Three systems touch this treatment. They are named here because a name can be checked, and an adjective cannot.</p>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-mediagrid">
+          <figure class="kit-mediagrid__media kit-slot" data-rise>
+            <div class="kit-slot__mask kit-slot__mask--arch">
+              <img class="kit-slot__img" src="../assets/generated/gen-implant-vs-bridge.jpg" alt="A titanium implant post standing beside a three unit porcelain bridge on a brushed steel tray." width="768" height="511" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <div class="kit-mediagrid__cards">
+            <article class="kit-card kit-card--flat" data-rise>
+              <p class="kit-card__title">iTero intraoral scanner</p>
+              <p class="kit-card__body">A digital scan replaces the impression tray for most of these cases. It records the shaped teeth, the opposing arch and the way they meet in one sitting, and the file leaves for the laboratory the same day rather than travelling as a physical mould that can distort on the way.</p>
+            </article>
+            <article class="kit-card kit-card--flat" data-rise>
+              <p class="kit-card__title">OccluSense bite analysis</p>
+              <p class="kit-card__body">Joining teeth together changes how force moves through them, because one high contact is no longer absorbed by one tooth, it is carried by the whole joined piece. OccluSense maps where every contact lands and how hard, in sequence, so the finished work is adjusted against a reading instead of against a strip of articulating paper alone.</p>
+            </article>
+            <article class="kit-card kit-card--flat" data-rise>
+              <p class="kit-card__title">3D CBCT imaging</p>
+              <p class="kit-card__body">Available at all four clinics. The scan shows bone level and root anatomy in three dimensions, which is how the teeth being asked to carry the load are checked before they are committed to. It is also how the implant comparison is assessed, if you want that answered properly before you decide.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-truth">
+          <p>The one to two week fabrication window shown here is a market-typical range, not a figure quoted by this practice or its laboratory.</p>
+        </div>
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 06 builds the fee: a per unit model, five variables that move it, and one way of paying.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-06"><span>Go to stage 06</span></a>
+            <a class="kit-btn kit-btn--ghost" href="technology.html"><span>Technology</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Back to the map</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: PRICING-SECTIONS.md #4 Quote-only cost-model split | considered: #6,#2 | rigor: heavy | why: what sits under this heading is a cost MODEL rather than a price, and #4 is the entry built for that argument: a split head, a copy column that states the model as a rules list, and one oversized display figure carrying the anchor, with the ask deliberately left open because the closing band lives elsewhere. The fit is unusually literal here. #4's canonical model rule is "per unit, not per head", and this work is priced per unit in exactly that sense: a three-unit span replacing one missing tooth is three units of laboratory work and two crown preparations, which is why it costs more than the single crown a reader may be mentally comparing it against. #6's configurator ladder is the locked flagship's pick, so spending it again would remove the contrast the owner is being asked to judge, and this page already carries two numbered runs, the route and the seven visits, so a third would make an ordinal stop meaning position. #2's comparison table needs a rate card to fill it, and no Elevate rate card exists, so the table would be either empty or invented. ADAPTATIONS, both recorded: first, #4 holds a hard law that no price appears in the band, and that law is broken exactly once, because the brief requires the money question answered rather than buried, so the figure ships inside the stat cell with a plain-English representative-market disclosure as its own label, reading as an anchor with a caveat attached rather than as a rate. Second, #4's portrait media frame with a corner badge is dropped, because dressing a self-pay disclosure in a photograph is the move that makes a reader distrust the disclosure. -->
+<section class="section section--cool" id="stage-06" aria-labelledby="h06" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-5">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">06</span>
+            <div>
+              <span class="kit-eyebrow">Stage 06, how the number is built</span>
+              <h2 id="h06">What it costs</h2>
+            </div>
+          </div>
+        </div>
+        <div class="kit-statband" data-rise>
+          <div class="kit-stat">
+            <span class="kit-stat__n kit-tab">₱23,000</span>
+            <span class="kit-stat__l">Representative of the market, not an Elevate price</span>
+            <p class="kit-stat__sub">The starting figure, per unit.</p>
+          </div>
+        </div>
+        <div class="kit-truth">
+          <p>The amount above is a market-derived figure, not a price quoted by this practice. The figure for your own case is quoted after a clinical assessment.</p>
+        </div>
+      </div>
+
+      <div class="col col--span-7">
+        <p class="kit-micro">What moves the final figure</p>
+        <ul class="kit-list">
+          <li><b class="kit-strong">How many units.</b> The fee is built per unit, so a three-unit span replacing one tooth costs more than a single crown does.</li>
+          <li><b class="kit-strong">Material.</b> Zirconia, lithium disilicate and porcelain fused to metal are priced differently from one another.</li>
+          <li><b class="kit-strong">Preliminary work.</b> Root canal therapy, a core build-up, or periodontal care on either abutment is quoted as separate work.</li>
+          <li><b class="kit-strong">Design.</b> A conventional span, a cantilever and a resin-bonded design are three different pieces of laboratory work.</li>
+          <li><b class="kit-strong">Complexity.</b> Front teeth, a difficult shade match and an altered bite each add clinical time.</li>
+        </ul>
+        <p class="kit-body readw--wide">Your exact figure is confirmed in writing at the consultation, after the examination and the radiographs. No quote is given for this treatment without seeing the teeth that would carry it, which is why nothing here is offered as a phone estimate.</p>
+        <div class="kit-foot">
+          <p class="kit-micro">How you pay</p>
+          <p class="kit-quote kit-quote--display readw">Elevate Dental does not accept HMO or dental insurance. All treatment is self-pay.</p>
+          <p class="kit-body readw--wide">HMO coverage cannot be used for dental treatments at our clinics. It is stated here, in the stage where money is discussed, because learning it late, halfway through a plan, is worse than reading it now.</p>
+        </div>
+        <div class="kit-inline">
+          <p>Your own number comes from your own mouth, so the only way to reach it is an examination and a quote you can hold.</p>
+          <div class="kit-inline__acts">
+            <a class="kit-btn kit-btn--ghost" href="prices.html"><span>Treatment Prices</span></a>
+            <a class="kit-btn kit-btn--ghost" href="prosthodontics.html"><span>Prosthodontics</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 07 is the quality check, and the reason it happens before any cement is mixed.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-07"><span>Go to stage 07</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Route index</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #57 Quote / pull-quote standalone | considered: #30,#29 | rigor: heavy | why: this stage has one thing to say and it is a sentence, not a gallery: the check that decides whether this work lasts happens while it can still be sent back to the laboratory, which is a standard of care rather than a picture of a smile, and #57 exists to break the rhythm and let one sentence carry a band. A pause is structurally right here too, sitting between the money stage and the questions stage, where a reader most needs one. #30's before and after grid is the shape this heading takes on every competing site and it is refused on evidence: pre-launch blocker B-2 records that the required owner authorisation is not on file for any clinical image, and the imagery map holds eight before-and-after files for this treatment that are cleared for BUILD and explicitly not for publication, so composing the grid would either sit empty or ship an unconsented patient's mouth. #29's before and after pair fails identically at half the size, and pairing a stock smile with a real one would be worse than either. ADAPTATION: this is the only band on a page with six photographs that carries none at all, and that is the point. The stage with no admissible evidence is the stage with nothing to look at, and the two holds sit in the open beside the prose where a reviewer can find them rather than in a comment where only a developer would. -->
+<section class="section section--paper" id="stage-07" aria-labelledby="h07" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">07</span>
+            <div>
+              <span class="kit-eyebrow">Stage 07, the standard of care</span>
+              <h2 id="h07">The check that decides it</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-quote kit-quote--display readw">Work adjusted at try-in and work adjusted after cementing are two different standards, and only one of them can still be sent back.</p>
+        <p class="kit-body readw">At the try-in, the seal at the margins, the contact against each adjacent tooth, the shade in daylight and the way the piece meets the opposing arch are all assessed while the laboratory can still take it away and correct it. That is the moment worth insisting on, and it is why the sixth visit is scheduled with time in it rather than squeezed in at the end of a list.</p>
+        <p class="kit-body readw">The second check is the review. Once you have chewed on it for a fortnight, your bite is read again, because a restoration that felt correct in the chair settles differently in use, and a contact that is fractionally high is easier to relieve at three weeks than to explain at three years.</p>
+        <p class="kit-body readw">No result is described to you before your own mouth has been examined. What this treatment will look like, how much of the space it can close, and how the shade will sit against the teeth you keep are all answered on your own case, at the assessment.</p>
+      </div>
+
+      <div class="col col--span-5">
+        <div class="kit-truth">
+          <p>No durability period, free-replacement window or repair commitment is stated on this page.</p>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 08 answers eight questions, from the first worry to the last one.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-08"><span>Go to stage 08</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Route index</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: FAQ-ACCORDION.md #7 Category-grouped sections | considered: #4,#3 | rigor: heavy | why: on a page organised as a route the questions do not arrive as one undifferentiated list, they arrive at three separate moments, before consenting to have two teeth shaped, during the fortnight spent in a provisional, and years later when a carrying tooth gives trouble, and #7 is the only entry that groups an FAQ into named sub-blocks for that reason. Grouping keeps the band inside the concept rather than dropping a generic accordion into the middle of a sequence, and it puts the bridge-or-implant question where it actually belongs, in the group a reader is in BEFORE anything is cut. #4's numbered list with no expansion is refused twice: this page already numbers the route and the seven visits, so a third numbered run would make the ordinals stop carrying position, and eight permanently open answers would make this the tallest band on the page immediately before the closing stage. #3's two-column split, questions ranged left against answers right, is refused because it reads correctly only when every answer is short enough to sit on one line of its partner, and four of these answers run to a full clinical paragraph, so the right column would tower over the left and the pairing that justifies the shape would break. ADAPTATION: every group is built from the sheet's native details and summary rows, so each answer stays in the accessibility tree, opens with scripting off, survives a static capture, and is a real paragraph element rather than a styled div. -->
+<section class="section section--cool" id="stage-08" aria-labelledby="h08" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-4">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">08</span>
+            <div>
+              <span class="kit-eyebrow">Stage 08, eight answers</span>
+              <h2 id="h08">Questions, grouped by when they arrive</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Two asked before consenting, two asked while the provisional is in, and four asked in the years afterwards.</p>
+        <p class="kit-body readw">None is hidden behind a form, and none is answered with a figure this page cannot stand behind.</p>
+        <div class="kit-actions kit-actions--tight">
+          <a class="kit-btn kit-btn--ghost" href="prices.html"><span>Treatment Prices</span></a>
+          <a class="kit-btn kit-btn--ghost" href="specialists.html"><span>Our Specialists</span></a>
+        </div>
+      </div>
+
+      <div class="col col--span-8">
+        <p class="kit-micro">Before you consent</p>
+        <div class="kit-faq" data-rise>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Does the tooth next door have to be cut down?</summary>
+            <p class="kit-faq__a">Yes, for a conventional design. Each flanking tooth is reduced so its crown fits over it without leaving the tooth fatter than it started. This is the single reason the implant option is put in front of you first whenever those neighbours are still untouched.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Bridge or implant?</summary>
+            <p class="kit-faq__a">One is faster and involves no surgery, but it commits two teeth that are currently doing nothing wrong. The other takes longer and has a surgical stage, but it leaves those two alone. Both are done in house here, so the recommendation you get is the one your radiographs support rather than the one the practice happens to sell.</p>
+          </details>
+        </div>
+
+        <p class="kit-micro">While the provisional is in</p>
+        <div class="kit-faq" data-rise>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Will it hurt?</summary>
+            <p class="kit-faq__a">The shaping appointment is carried out under local anesthetic. Cold sensitivity for a few days afterwards, while the provisional is on, is common, and it settles once the definitive piece is cemented. Tell your clinician if it does not settle, rather than waiting for the review.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">How long am I in a temporary?</summary>
+            <p class="kit-faq__a">One to two weeks in most cases. It looks and works well enough to eat and speak normally, but it is cemented lightly on purpose so it can be lifted off again, so avoid very hard or sticky food while it is on and call us if it loosens.</p>
+          </details>
+        </div>
+
+        <p class="kit-micro">In the years after</p>
+        <div class="kit-faq" data-rise>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">How long will it last?</summary>
+            <p class="kit-faq__a">That depends on your bite, on the health of the two teeth doing the carrying, and on how well the underside is cleaned. This kind of work fails at those teeth far more often than it fails at the porcelain, which is why the cleaning routine matters more than the material does. No fixed term is quoted here, because no remake policy has been supplied.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">How do I clean underneath it?</summary>
+            <p class="kit-faq__a">You cannot pass floss between the units, because they are joined. Use a threader or superfloss to draw floss beneath the false tooth once a day, and an interdental brush wherever the space allows one. Two minutes a day there is what keeps the carrying teeth healthy.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Can it be whitened later?</summary>
+            <p class="kit-faq__a">No. Porcelain and zirconia do not respond to whitening agents. If you are thinking about lightening the teeth you still have, do that first and let the shade settle, then have the new work matched to the result. The order is not optional.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">What if a carrying tooth fails years later?</summary>
+            <p class="kit-faq__a">The piece has to come off, the tooth is treated or replaced, and the span is redesigned around what is left. That is precisely why those teeth are assessed so carefully at the start instead of being worked around when one of them is already doubtful.</p>
+          </details>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 09 closes the route with the cleaning routine and the contents of a first appointment.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-09"><span>Go to stage 09</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Route index</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #33 Custom-quote driver | considered: #41,#37 | rigor: heavy | why: Collision A of composition-medical-health binds the body to ZERO closing bands, so the final stop on the route has to be a CONTENT band with the ask folded into it, and #33 is the only entry in the conversion family whose stated role is to drive toward a quote by explaining what the quote requires rather than by being a heading with a button under it. The copy cooperates: what it holds here is aftercare instruction, which is content, plus a description of what the first appointment produces, and the appointment ask rides out on a .kit-inline rail that G-CTA1 does not count as a band. #41's closing CTA is exactly the standalone band the gate counts, and the chrome's .precta already IS this page's one, so picking it would put the page at two and fail closed across every inheriting page at once. #37's split CTA form would stand a second appointment form beneath a header, a mega panel and a closing band that all carry the same control, duplicating the contact page's job and adding a form this template cannot validate. ADAPTATION: because this is the END of a declared route rather than a generic tail, the band closes on the outcome row and a link back to the index rather than on another forward hand-off, so the sequence visibly terminates and nobody is left waiting for a tenth stage that does not exist. -->
+<section class="section section--warm" id="stage-09" aria-labelledby="h09" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">09</span>
+            <div>
+              <span class="kit-eyebrow">Stage 09, the end of the route</span>
+              <h2 id="h09">Aftercare, and what your first visit hands you</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Joined units are looked after the way natural teeth are, with one addition that is not optional.</p>
+        <ul class="kit-list">
+          <li>Treat the provisional gently: softer food, no lifting floss straight up and out at its edge, and a phone call rather than a wait if it comes loose.</li>
+          <li>Once the definitive work is in place, pass floss under the pontic daily with a threader or superfloss. Nothing else reaches that surface, and that surface is where trouble starts.</li>
+          <li>Add an interdental brush wherever the gum has left room for one, and use it at the joints rather than only at the ends.</li>
+          <li>Do not use your front teeth as tools. No ice, no fingernails, no tearing packaging open.</li>
+          <li>If you grind at night, wear the guard every night, because a joined piece transmits that force to two teeth instead of one.</li>
+          <li>Keep your recall visits so the margins and the gum levels are read before a small problem becomes a remake.</li>
+        </ul>
+        <p class="kit-body readw--wide">Bring any previous radiographs and a list of your current medication. The first appointment produces three things: an examination of the teeth and gums against what you want changed, a treatment plan naming the material and the design, and the fee set down in writing. None of them commits you to anything, and none of them requires a tooth to be shaped first.</p>
+        <div class="kit-inline">
+          <p>Book a free first consultation at any of the four Metro Manila clinics, and leave it knowing the plan, the clinician and the fee. Confirm current consultation terms with the clinic before you book.</p>
+          <div class="kit-inline__acts">
+            <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+            <a class="kit-btn kit-btn--ghost" href="contact.html"><span>Ask about this treatment</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--span-5">
+        <p class="kit-body readw">The route ends here deliberately. Nine stops, all of them readable without a phone call: the parts and what joins them, the trade made to hold them in place, the three cases that send you elsewhere, the seven visits, who is qualified to do it, the instruments, what the price depends on, the check that decides whether it lasts, and how to clean it.</p>
+        <p class="kit-body readw">If a stop raised something this page did not settle, bring it in. It will be answered against your own radiographs rather than against a web page.</p>
+        <div class="kit-foot">
+          <p class="kit-micro">Outcome</p>
+          <ul class="kit-list">
+            <li><b class="kit-strong">Feature.</b> A fixed dental bridge, priced by the unit and fitted by a prosthodontics specialist.</li>
+            <li><b class="kit-strong">Do.</b> Book a free first consultation and leave with the fee set down on paper.</li>
+            <li><b class="kit-strong">Means.</b> You know the clinician, the design and the cost before you commit to any of them.</li>
+          </ul>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Back to the index</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-start"><span>Back to the start</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

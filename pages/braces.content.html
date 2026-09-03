@@ -1,0 +1,722 @@
+<!--META {"title":"Braces Philippines | From ₱90,000 | Full Treatment","desc":"Fixed orthodontic braces fitted and monitored by in-house orthodontists. Treatable cases, timeline and starting price.","noindex":true}-->
+<!-- TITLE and DESC are the LOCKED values from _handoff/seo-enrichment.md section 1, the SEO SSOT.
+     The SSOT separator is an en dash and renders here as a pipe, because verify-no-dashes is
+     registered on this build. Only the SEPARATOR CHARACTER changed; no word was altered, added,
+     removed or reordered.
+     The key is "desc" and NOT "description": build.mjs renders esc(meta.desc), and its JSON branch
+     does not alias description to desc, so a "description" key ships an EMPTY meta description
+     while looking correct in the fragment.
+     noindex is set on EVERY page because this publishes to a PUBLIC preview URL while the pages
+     carry representative market prices rather than this clinic's own figures. robots.txt cannot
+     carry that load: crawlers read it only at the origin root, and this ships to a project
+     subpath, so the disallow-all there is inert. noindex is the protection that actually works. -->
+<!-- ============================================================================
+     THE BODY. elevatedental / braces. T-FEATURE, concept B "THE GUIDED PATH", the
+     owner pick of 2026-08-15 (_approvals.json T-FEATURE).
+
+     THE SPINE IS PRESERVED, RE-POINTED AT THIS TREATMENT: an in-flow route index that
+     works with scripting off, an ORDINAL stamped in the .kit-open__no slot of every
+     band, and a ruled .kit-foot hand-off naming the next stage. No position:sticky is
+     authored, because it is inert inside .section (the locked sheet sets
+     overflow:hidden), and no scroll-spy script is added, because the spine has to
+     survive scripting being switched off.
+
+     THIS PAGE DECLARES SEVEN STAGES. The route length is read off THIS page's copy
+     (_copy/braces.md). Orthodontics is the one treatment on this template where the
+     RESULT stage cannot stand alone: the copy holds the case records back under
+     blocker B-2, and a band whose only content is an absence is a hole in a route
+     rather than a stop on it, so the consent hold is carried inside the final stage
+     beside the questions it actually answers. Nine sections, not eleven.
+
+     Every section obeys section -> div.container -> div.row -> div.col -> OBJECT and
+     carries EXACTLY ONE .container and EXACTLY ONE .row. Skin classes sit on the
+     OBJECT, never on the .col.
+
+     NO PAGE-LOCAL STYLE BLOCK. Every class used here is defined in a LINKED sheet.
+     ZERO closing CTA bands, ZERO dark bands, ZERO arc seams. The chrome's .precta owns
+     the one closing band and the page's one dark punctuation.
+
+     DESIGN-SYSTEM PROVENANCE, cited and meant:
+       blueprint composition-medical-health  the SECTOR spine. Collision A (zero closing
+                 bands in the body) and Collision B (warm imagery, calm voice) bind here.
+       library   _COMPOSITION-LAWS           L9 SELECTION-RATIONALE is why every band
+                 carries a defended ledger; L1 STACKED SPLIT READING ORDER is why no
+                 media cell is authored above its own heading.
+       library   _RESPONSIVE-PATTERN-LIBRARY the four-tier reflow ladder. The seven-step
+                 table reflows to labeled cards rather than dropping a column.
+       library   _MODERN-WOW-SPEC            real photography over token-built material,
+                 hairline plus contact-shadow separation, a three-move motion budget.
+       library   _MODERN-DESIGN-PATTERN-LIBRARY  the shape-masked media spent through
+                 the locked .kit-slot family.
+
+     IMAGERY. Five real first-party photographs from this page's assignment in
+     _imagery-map.json, each LOOKED AT before its alt text was written. ZERO generated
+     images, ZERO placeholder boxes, and ZERO before-and-after pairs: the orthodontic
+     case records are owner-blocked (B-2) and a stock smile in a result's place is a
+     fabricated outcome claim.
+
+     CLAIM DISCIPLINE. Durations ship as the copy's RANGES and are never rewritten as
+     promises. NO Invisalign provider tier appears anywhere: the 2026 tier is
+     unconfirmed and a tier claim without its year is never valid. Both peso figures
+     carry a plain-English representative-market disclosure. The self-pay truth is carried in stage 06 in
+     its canonical wording.
+     ============================================================================ -->
+
+<!-- pick: HERO-COMPOSITIONS.md #13 Centered + scroll cue, the continue indicator | considered: #20,#8,#3 | rigor: heavy | why: a treatment measured in YEARS is read by someone whose real question is "how long am I in this and what happens between now and the end", so the hero's job is to declare a route and hand the reader onto it rather than to make a claim; #13 is the only cataloged entry whose named device is the CONTINUE affordance. #20's three parallel proof columns are the locked flagship's hero and would argue by simultaneity, which is wrong for a sequence with a declared length. #8's manifesto band opens on belief, and the one thing an orthodontic patient does not want first is a statement of values. #3's dual-promise 50/50 splits the page between two audiences, and the adult and the parent on this page want the same thing in the same order. ADAPTATION: #13's centering, its 100vh box and its animated chevron are all refused, for the single left reading axis, the no-min-height hero law and the three-move motion budget respectively. What is KEPT is a hero that ends on an explicit continue affordance. DIVERGENCE FROM THE TEMPLATE, stated honestly: the template hero pairs its photograph with a per-tooth figure; this hero pairs a bonded appliance with a DURATION RANGE, because on this treatment the calendar is the thing being bought and the copy leads with it. -->
+<!-- FRONT OF HOUSE RESTRUCTURE. The hero above is re-housed into the foh-hero contract:
+     one full-bleed scrimmed photographic band carrying the headline, a paper lockup under it
+     for the eyebrow, the lede, the disclosure chips and the existing buttons. .surface-dark is
+     the page's one dark beat and is what verify-not-flat credits. The .kit-open ordinal that
+     stamped "Start" is spent by the band itself; the route's numbering resumes at s-route.
+     The h1's inline market-price caveat is REMOVED FROM THE HEADLINE ONLY and continues to be
+     disclosed by the .kit-tag--accent chip in the lockup, which already carried it verbatim.
+     The bracket-and-wire .kit-slot is a DIFFERENT photograph to the assigned band image, so it
+     is kept below the band with its caption intact rather than deleted as a duplicate. -->
+<!-- PRICE MOVED OUT OF THE HEADLINE, 2026-08-25. The starting figure 90,000 stood inside
+     h1.foh-hero__title while the disclosure that marks it sat in the .kit-tag chip AFTER the whole
+     band markup, 436 characters further down the source. client-rules
+     price-placeholder-unmarked requires a marker within 120 characters of every peso figure, so the
+     pair was separated by more than three times the permitted distance and the page was blocked.
+     NOTHING WAS DELETED AND NOTHING WAS REWORDED: the figure is byte-identical (90,000), and the
+     caveat is the exact string this page already carried ("Market range, not an Elevate price"). The
+     figure was moved DOWN into its own chip so the number and its disclosure are read together,
+     which is also what the Front of House concept wants of a hero headline - short, and not a price
+     list. The shape now matches the three sibling treatment pages that were already correct
+     (airflow, complete-dentures, dental-fillings): "From [figure]. [caveat]" in one .kit-tag.
+     Measured after the edit: marker begins 16 characters after the figure. -->
+<section class="section surface-dark kit-hero foh-hero" id="s-start" aria-labelledby="h-start" data-surface="dark" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="foh-hero__stage" data-wash="deep">
+          <figure class="foh-hero__band">
+            <img class="foh-hero__img" src="../assets/generated/gen-hero-bridge-frame.jpg" alt="A lower dental arch model fitted with fixed braces, the brackets and archwire catching the light on a shallow brushed brass dish." width="3136" height="1344" loading="eager" fetchpriority="high" decoding="async">
+            
+          </figure>
+          <div class="foh-hero__inner">
+              <h1 class="foh-hero__title" id="h-start">Dental Braces in the Philippines.</h1>
+            </div>
+          <div class="foh-hero__lockup">
+            <p class="foh-hero__eyebrow">Dental braces, fixed appliances</p>
+            <p class="foh-hero__lede">Braces are fixed appliances bonded to your teeth, moving them into alignment over 12 to 30 months under an orthodontist.</p>
+            <div class="kit-tags">
+              <span class="kit-tag kit-tag--accent kit-tab">From ₱90,000. Market range, not an Elevate price</span>
+              <span class="kit-tag kit-tab">Most cases run 12 to 30 months</span>
+            </div>
+            <div class="kit-actions">
+              <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+              <a class="kit-btn kit-btn--secondary" href="contact.html" data-page="contact.html">Ask about this treatment</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #36 Sticky-sidebar topic nav | considered: #27,#50 | rigor: heavy | why: this band IS the concept, and #36 is the only cataloged entry whose stated role is ORIENTATION across a long document rather than presentation of content, with a declared reflow that moves the index ABOVE the body at the narrow tier, which is the reading order a route needs on a phone. #27's numbered process steps are refused because its numbers describe a PROCEDURE the reader undergoes, while these numbers describe a DOCUMENT the reader is inside, and this page's stage 03 is a real seven-step procedure that would become indistinguishable from its own table of contents. #50's topic columns are unordered by construction and would destroy the one property the index exists to carry. ADAPTATION, load bearing: #36's sidebar is STICKY and cannot be, because position:sticky is inert inside the overflow:hidden .section, so the affordance is rebuilt structurally as an in-flow index, a per-band ordinal and a per-band hand-off. -->
+<section class="section section--cool" id="s-route" aria-labelledby="h-route" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <!-- MOVED HERE FROM THE OPENING SECTION, 2026-08-25, VERBATIM. The FOH pass added the
+           photographic band but left the old hero's remaining two cells inside the same
+           section, where the released hero .container renders them flush to the viewport with
+           no gutter. Both cells hold content that exists NOWHERE ELSE on this page, so
+           neither was deleted: the .kit-slot carries a DIFFERENT photograph from the band
+           image (checked by filename, one occurrence in this fragment), and the .kit-foot is
+           this page's only statement of how the route is laid out. Markup is byte-identical
+           to what stood in the hero except for ONE class: the foot cell was .col--full and is
+           .col--span-7 here, so the pair fills one 12-track line and no existing cell in this
+           row changes width or position. -->
+      <div class="col col--span-4">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">Route</span>
+            <div>
+              <span class="kit-eyebrow">The seven stages</span>
+              <h2 id="h-route">What this page covers</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Seven stages, and the last one on the list is the one people skip and then regret.</p>
+        <p class="kit-body readw">Retention is not an epilogue bolted onto the end of orthodontics. Teeth drift back toward where they began, so holding them is part of the treatment rather than an optional extra sold afterwards.</p>
+      </div>
+
+      <div class="col col--span-7">
+        <div class="kit-foot">
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>See the seven stages</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#stage-06"><span>Skip to what it costs</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--span-5">
+        <figure class="kit-slot" data-rise style="box-shadow: var(--ds-shadow-lift);">
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2022_03_woman-with-braces-on-teeth-closeup-2022-02-14-18-04-11-utc-1.jpg" alt="Close-up of a smiling mouth with metal brackets bonded across the upper teeth and an archwire threaded through them." width="1200" height="800" loading="eager" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>A bracket and a wire</b><span>The whole mechanism, on every tooth being moved.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--span-8">
+        <ol class="kit-list kit-list--ledger" data-rise>
+          <li><span><b>The mechanism.</b> A wire that wants its own shape back, three kinds of bracket, and why crooked teeth are a plumbing problem before they are a looks problem. <a href="#stage-01">Go to stage 01</a></span></li>
+          <li><span><b>Whether it fits your case.</b> What fixed appliances correct, and four honest limits including the one where teeth are not the problem at all. <a href="#stage-02">Go to stage 02</a></span></li>
+          <li><span><b>Appointment by appointment.</b> Records to retainers, how long each visit runs, and how often you are back in the chair. <a href="#stage-03">Go to stage 03</a></span></li>
+          <li><span><b>The bench.</b> Who plans the case, who sees you at each adjustment, and which neighboring specialist steps in when. <a href="#stage-04">Go to stage 04</a></span></li>
+          <li><span><b>The instruments.</b> Three named systems, and a plain statement about when you will NOT be given a scan. <a href="#stage-05">Go to stage 05</a></span></li>
+          <li><span><b>The fee.</b> An anchor figure, the drivers behind it, and the one way this clinic is paid. <a href="#stage-06">Go to stage 06</a></span></li>
+          <li><span><b>Answers and upkeep.</b> Seven real questions, what you cannot eat, and how the result is held after debonding. <a href="#stage-07">Go to stage 07</a></span></li>
+        </ol>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 01, what is actually bonded to your teeth, the three bracket types used here, and why alignment is a mechanical repair rather than a cosmetic one.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-01"><span>Go to stage 01</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #10 Services 4-col compact | considered: #12,#21 | rigor: heavy | why: this stage has to explain ONE mechanism and then present THREE parallel appliance choices, and the three are genuine peers with no ranking between them, which is what #10's compact peer cells are for; three cells at span-4 fill the twelve-track row exactly, so there is no ragged remainder to read as a mistake. #12's feature row with a screenshot is refused because a photograph of brackets cannot distinguish metal from ceramic from self-ligating at the size the media cell would run, so the media would illustrate the heading while the actual content, the DIFFERENCE between three appliances, went unillustrated. #21's definition block with an inline callout is the sibling page's pick for its material stage and carries only one continuous argument, so the three bracket types would be flattened into a list inside a paragraph and stop being choosable. ADAPTATION: the mechanism itself is carried ABOVE the cells as prose with an accent line, because the wire-and-bracket explanation is the premise all three appliances share and repeating it per card would be the intra-page repetition G-REPEAT exists to stop. -->
+<section class="section section--warm" id="stage-01" aria-labelledby="h01" data-rise>
+  <div class="container">
+    <div class="row row--stretch">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">01</span>
+            <div>
+              <span class="kit-eyebrow">Stage 01, plain English</span>
+              <h2 id="h01">What braces are, and what they are actually repairing</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">A bracket is bonded to each tooth and a wire is threaded through them. The wire wants to return to its own shape, and as it does, it carries the teeth with it.</p>
+        <p class="kit-body readw--wide">Changing the wire changes the force, and changing the force changes what the teeth do next. That is the whole mechanism, and in principle it has not changed in decades. What has changed is the precision with which the target position is planned and the force is sequenced.</p>
+        <p class="kit-accentline">Crowded teeth trap plaque where a brush cannot reach. A deep bite wears the lower incisors down. A crossbite loads teeth sideways in a direction they were not built for.</p>
+        <p class="kit-body readw--wide">So this is a mechanical repair as much as a cosmetic one, and that is the honest reason to have it done rather than the one usually advertised.</p>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Appliance 01</span>
+            <span class="kit-card__unit">Metal</span>
+          </div>
+          <p class="kit-card__title">Metal brackets</p>
+          <p class="kit-card__body">The smallest of the three and the most efficient at delivering force. Where a case needs a lot of movement in a reasonable time, this is the appliance that does it with the least compromise.</p>
+        </article>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Appliance 02</span>
+            <span class="kit-card__unit">Ceramic</span>
+          </div>
+          <p class="kit-card__title">Ceramic brackets</p>
+          <p class="kit-card__body">Tooth colored and less visible. These suit adults who want a fixed appliance, and the reliability that comes with it, without the metal look across the front teeth.</p>
+        </article>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Appliance 03</span>
+            <span class="kit-card__unit">Self-ligating</span>
+          </div>
+          <p class="kit-card__title">Self-ligating brackets</p>
+          <p class="kit-card__body">The wire is held by a built-in clip rather than an elastic tie, which changes how the wire is engaged. Which of the three is right for you is a clinical decision made on your records, not a menu choice.</p>
+        </article>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 02, what fixed appliances correct well, and the four situations where the honest answer is something other than this treatment.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-02"><span>Go to stage 02</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Return to the index</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #6 "Is this for me" qualifier | considered: #10,#57 | rigor: heavy | why: this page's limits are NOT four parallel exits to four other treatments, which is what the sibling veneer pages carry, and picking the same four-card exit board here would misdescribe the content: three of these four limits are PRECONDITIONS or referrals inside the same course of care (treat the decay first, refer the skeletal case to an oral surgeon, do not start if the brushing will not change) and only ONE is a genuine alternative treatment. #6 is the entry built for exactly that asymmetry, a qualifier band that states who a treatment fits and then qualifies it in prose that can carry conditions of different KINDS without ranking them as peers. #10's four-cell exit grid is refused for the reason just given, and because using the identical device on three sibling T-FEATURE pages is the flat fan-out the variety gate exists to catch. #57's standalone pull-quote could carry the one hard refusal but not five separate conditions. ADAPTATION: the treatable list ships as a .kit-tags row so seven named malocclusions read as a scannable set rather than a paragraph, and the single real alternative gets the only destination link in the band, because it is the only limit with somewhere else to go. -->
+<section class="section section--paper" id="stage-02" aria-labelledby="h02" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-5">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">02</span>
+            <div>
+              <span class="kit-eyebrow">Stage 02</span>
+              <h2 id="h02">Whether this is the right instrument for you</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Fixed appliances handle severe rotations and large vertical movements more predictably than any removable appliance, which is why complex cases are still treated this way.</p>
+        <div class="kit-tags">
+          <span class="kit-tag">Crowding</span>
+          <span class="kit-tag">Spacing</span>
+          <span class="kit-tag">Rotated teeth</span>
+          <span class="kit-tag">Deep bite</span>
+          <span class="kit-tag">Open bite</span>
+          <span class="kit-tag">Crossbite</span>
+          <span class="kit-tag">A protruding upper arch</span>
+        </div>
+        <p class="kit-body readw">Children are usually assessed around age 7, when the first permanent molars and incisors are in. Assessment at that age does not mean treatment at that age. It means the orthodontist can see whether the arches have room, and can time any intervention properly.</p>
+      </div>
+
+      <div class="col col--span-7">
+        <p class="kit-micro">The four honest limits</p>
+        <ol class="kit-list kit-list--ledger" data-rise>
+          <li><span><b>Untreated decay or active gum disease.</b> That is treated before a single bracket goes on. Bonding over inflamed gums or soft enamel makes both worse for two years, and your assessment will say so.</span></li>
+          <li><span><b>A skeletal problem rather than a dental one.</b> Braces move teeth. They do not move jaws. In a growing child a jaw discrepancy may be treatable with growth modification if it is caught in time. In an adult with a fully grown jaw, a significant discrepancy needs orthognathic surgery planned jointly with an oral surgeon.</span></li>
+          <li><span><b>Mild to moderate crowding where being visibly in braces is the obstacle.</b> Invisalign (Clear Aligners) is the alternative and it is treated by the same orthodontists here. Aligners are less visible and removable for meals. They are also more dependent on you, because they only work in the hours you actually wear them. Fixed appliances work whether or not you remember them.</span></li>
+          <li><span><b>An unwillingness to change your brushing routine.</b> Then do not start. Fixed appliances make cleaning harder for the length of the treatment, and the white demineralization marks that follow poor cleaning around brackets are permanent enamel damage. This is said before treatment, not after.</span></li>
+        </ol>
+        <div class="kit-actions kit-actions--tight">
+          <a class="kit-btn kit-btn--ghost" href="invisalign.html" data-page="invisalign.html"><span>Clear aligners</span></a>
+          <a class="kit-btn kit-btn--ghost" href="oral-surgery.html" data-page="oral-surgery.html"><span>Oral surgery</span></a>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 03, every appointment from the first set of records to the retainer, with how long each one runs and how often you are back.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-03"><span>Go to stage 03</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>The stage list</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #28 Process timeline horizontal | considered: #27,#13 | rigor: heavy | why: the copy fixes SEVEN steps and attaches a real duration or interval to each, and #28 is the entry written for the long sequence where the connector between steps carries meaning; #27 is cataloged for three to six numbered cards, so seven overruns the shape it was measured at. #13's bento grid is non-sequential by design, and presenting the bonding appointment as a peer of retention would hide the dependency that makes this treatment take years. ADAPTATION: #28's horizontal flow is NOT built, because a horizontal timeline drops its connector and wraps two-up at the tablet tier, the failure the entry itself records, and because building one would need page-local CSS that promotion strips. What is taken is #28's argument, that a long sequence needs a persistent connector and a durations axis: the locked table's hairline row rules ARE the connector and the third column is the axis. THE ONE DIVERGENCE WORTH NAMING: the final row's duration is not a number. Retention is open ended, and writing a figure there to make the column look tidy would be the only invented fact on this page. -->
+<section class="section section--cool" id="stage-03" aria-labelledby="h03" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">03</span>
+            <div>
+              <span class="kit-eyebrow">Stage 03, records to retainers</span>
+              <h2 id="h03">Appointment by appointment</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Seven steps, and step 03 is the one most often skipped elsewhere and most often regretted.</p>
+        <p class="kit-body readw">Cleaning, fillings, gum treatment or extractions are completed BEFORE any bracket is bonded. Starting a two year appliance on top of unfinished work means carrying that work, and its consequences, for the whole course.</p>
+      </div>
+
+      <div class="col col--span-5">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2018_12_Getting-Braces-in-the-Philippines.jpg" alt="A clinician in pink gloves using an instrument to adjust the archwire on a young girl's upper brackets." width="1920" height="1282" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Every four to eight weeks</b><span>The wire is changed, not the appliance.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-table__scroll">
+          <table class="kit-table">
+            <caption>The seven steps, with the time each takes at the chair</caption>
+            <thead>
+              <tr><th scope="col">Step</th><th scope="col">What happens</th><th scope="col">How long</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">01 Consultation and records</b></td>
+                <td data-label="What happens">Examination, photographs, radiographs, and a digital scan of both arches. Where root position, impacted teeth or the airway need assessing in three dimensions, 3D CBCT imaging is taken. Your fee and your likely duration are given to you in writing.</td>
+                <td data-label="How long" class="kit-tab">60 to 90 minutes</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">02 Diagnosis and treatment plan</b></td>
+                <td data-label="What happens">The orthodontist sets the target position, decides whether space needs to be created, and decides whether extractions are part of the plan. You see the plan and the reasoning before you agree to it.</td>
+                <td data-label="How long" class="kit-tab">1 to 2 weeks</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">03 Preparatory work</b></td>
+                <td data-label="What happens">Cleaning, fillings, gum treatment or extractions are completed first, in whatever order your mouth requires.</td>
+                <td data-label="How long" class="kit-tab">Variable</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">04 Bonding appointment</b></td>
+                <td data-label="What happens">Brackets are bonded and the first wire is placed. There is no anesthesia and no drilling. Expect pressure and soreness for two to five days afterwards.</td>
+                <td data-label="How long" class="kit-tab">60 to 120 minutes</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">05 Adjustments</b></td>
+                <td data-label="What happens">Wires are changed in sequence from light and flexible to heavier and more rigid. Elastics may be added. The soreness after each change is briefer than after the first fitting.</td>
+                <td data-label="How long" class="kit-tab">15 to 30 minutes, every 4 to 8 weeks</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">06 Debonding</b></td>
+                <td data-label="What happens">Brackets and adhesive are removed and the teeth are polished. How long the whole course took depends on how far the teeth had to travel and how consistently you attended.</td>
+                <td data-label="How long" class="kit-tab">60 to 90 minutes</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">07 Retention</b></td>
+                <td data-label="What happens">A fixed retainer, a removable retainer, or both. This step has no end date, and that is not an omission in the table.</td>
+                <td data-label="How long" class="kit-tab">Indefinite</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 04, who plans the case, who you actually see at each visit, and which neighboring specialist steps in when the plan needs one.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-04"><span>Go to stage 04</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Jump to the map</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #11 Service pillars 2-col with image | considered: #18,#8 | rigor: heavy | why: this stage names the disciplines that can touch one orthodontic case, and #11's media-plus-cards law fits a small set exactly: one photograph STRETCHING against a card group rather than a capped image beside a tall stack, which is what verify-media-fits-track enforces and what the locked .kit-mediagrid already implements. #18's team grid is what a reader expects under this heading and is refused on evidence: per-clinic and per-treatment rosters are recorded as BLOCKED in client-rules.json, so a grid of faces would assert an assignment no receipt supports. #8's manifesto band has nowhere to name separate disciplines, and naming them is the only concrete thing this stage is cleared to do. ADAPTATION, specific to orthodontics: the band's real claim is CONTINUITY, that the same clinician sees the case through rather than a different dentist at each adjustment, so that sentence sits in the lede where the reader meets it first, and the cards carry the neighboring disciplines that join a case rather than replacing it. -->
+<section class="section section--warm" id="stage-04" aria-labelledby="h04" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">04</span>
+            <div>
+              <span class="kit-eyebrow">Stage 04, the bench</span>
+              <h2 id="h04">Who plans it, and who you see each time</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Cases are planned and adjusted by an orthodontics specialist. The diagnosis, the wire sequence and the decision on extractions are theirs.</p>
+        <p class="kit-body readw--wide">The same clinician sees you through the case rather than a different dentist at each adjustment. Over two years of monthly visits that continuity is not a courtesy, it is what keeps the plan coherent.</p>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-mediagrid">
+          <figure class="kit-mediagrid__media kit-slot" data-rise>
+            <div class="kit-slot__mask kit-slot__mask--arch">
+              <img class="kit-slot__img" src="../assets/first-party/026_07_woman-smile-mirror-consultation-with-dentist-oral-hygiene-mouth-cleaning-service-female-person-assessment-orthodontic-inspection-dental-care-patient-teeth-checkup-scaled.jpg" alt="A masked clinician in green gloves framing a seated patient's face with both hands while holding up a hand mirror for her to look into." width="2560" height="1350" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <div class="kit-mediagrid__cards">
+            <article class="kit-card kit-card--flat" data-rise>
+              <p class="kit-card__title">Orthodontics</p>
+              <p class="kit-card__body">Owns the case from the first records to the retainer, and carries the decisions no other discipline makes on it.</p>
+            </article>
+            <article class="kit-card kit-card--flat" data-rise>
+              <p class="kit-card__title">Oral Surgery</p>
+              <p class="kit-card__body">Where a tooth has to come out to create space, or an impacted canine has to be exposed and bonded, the surgeon who does it works in the same practice.</p>
+            </article>
+            <article class="kit-card kit-card--flat" data-rise>
+              <p class="kit-card__title">Prosthodontics</p>
+              <p class="kit-card__body">Where restorative work follows alignment, it is planned inside the same clinic rather than posted to a third party at the end of the case.</p>
+            </article>
+            <article class="kit-card kit-card--flat" data-rise>
+              <p class="kit-card__title">General Dentistry</p>
+              <p class="kit-card__body">The cleanings, fillings and gum treatment that step 03 depends on, completed ahead of the appliance rather than squeezed in around it.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 05, the three named systems, and a plain statement about when you will not be given a scan.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-05"><span>Go to stage 05</span></a>
+            <a class="kit-btn kit-btn--ghost" href="specialists.html" data-page="specialists.html"><span>Our Specialists</span></a>
+            <a class="kit-btn kit-btn--ghost" href="oral-surgery.html" data-page="oral-surgery.html"><span>Oral Surgery</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Route index</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #9 Services 3-col | considered: #10,#13 | rigor: heavy | why: THREE named units, each needing two or three real sentences about what it does to YOUR case, is exactly #9's shape: equal columns, a name and a short description, no hierarchy. Equal weight is the honest treatment because none of these outranks another, they simply answer different questions. The locked sheet ships this as .kit-sys, the hairline-gapped matrix where the gap is the rule. #10's four-column compact grid is cataloged for LIGHTER content and would leave a hole at three units. #13's bento gives tiles different sizes, and a bigger tile is a claim of importance, so it would assert that the CBCT scanner matters more than the bite analysis, which nobody at this practice has said. ADAPTATION, and it is the point of the band: the ruled foot carries a REFUSAL rather than a hand-off boast. The copy states plainly that a straightforward crowding case does not need a CBCT scan and will not be given one to justify the equipment, and on a page whose whole stage is named technology that sentence is the only thing that makes the rest of it credible. -->
+<section class="section section--paper" id="stage-05" aria-labelledby="h05" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">05</span>
+            <div>
+              <span class="kit-eyebrow">Stage 05</span>
+              <h2 id="h05">The three systems, and when you will not be given one</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Three named instruments support an orthodontic case here.</p>
+        <p class="kit-accentline">We name the systems because a name can be checked. An adjective cannot.</p>
+      </div>
+
+      <div class="col col--span-5">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2021_04_7-Reasons-Why-You-Need-Dental-Braces.jpg" alt="A three-quarter close-up of a smile showing metal brackets and an archwire across the upper teeth." width="1200" height="800" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Checked, not eyeballed</b><span>Where the teeth meet is recorded before the brackets come off.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-sys kit-sys--3up" data-rise>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">Station 01</span>
+            <p class="kit-sys__name">3D CBCT imaging</p>
+            <p class="kit-sys__note">A flat radiograph shows you a shadow. This shows the root in three dimensions, so an impacted canine can be located precisely, root proximity can be checked before a tooth is moved into a tight space, and resorption risk can be assessed rather than guessed at.</p>
+            <span class="kit-sys__where"><i aria-hidden="true"></i>All four clinics</span>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">Station 02</span>
+            <p class="kit-sys__name">iTero intraoral scanner</p>
+            <p class="kit-sys__note">Both arches are captured digitally, which removes impression trays from the process and leaves a record that can be re-measured later. The same scan supports the clear aligner pathway if you switch to it or finish with it.</p>
+            <span class="kit-sys__where"><i aria-hidden="true"></i>Named installed system</span>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">Station 03</span>
+            <p class="kit-sys__name">OccluSense bite analysis</p>
+            <p class="kit-sys__note">Where the teeth meet at the end of treatment, and how hard, is recorded rather than eyeballed on carbon paper. Alignment that looks correct and loads unevenly is a case that relapses, so this is checked before debonding.</p>
+            <span class="kit-sys__where"><i aria-hidden="true"></i>Named installed system</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">And when you will not be given one</p>
+          <p class="kit-body readw--wide">Which of these is used depends on your case. A straightforward crowding case does not need a CBCT scan, and you will not be given one to justify the equipment.</p>
+          <p class="kit-body readw--wide">Next, stage 06, the money: an anchor figure, the drivers behind it, and how payment actually works at this practice.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-06"><span>Go to stage 06</span></a>
+            <a class="kit-btn kit-btn--ghost" href="technology.html" data-page="technology.html"><span>Technology</span></a>
+            <a class="kit-btn kit-btn--ghost" href="orthodontics.html" data-page="orthodontics.html"><span>Orthodontics</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>The whole route</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: PRICING-SECTIONS.md #4 Quote-only cost-model split | considered: #6,#2 | rigor: heavy | why: what the copy holds here is a cost MODEL, one anchor figure plus three named drivers plus a promise that the real number comes from records that have been read, and #4 is built for that argument: a split head, a rules list, and an oversized display figure carrying the anchor, with the ask deliberately NOT closed in this band because the chrome owns the closing band. #6's configurator ladder would be a third numbered device on a page that already numbers the route and the seven steps, so the ordinals would stop meaning position. #2's comparison table needs a rate card and no real Elevate price exists, so it would be empty or invented. ADAPTATIONS: #4's law that no price appears in the band is broken exactly once, because the locked copy publishes an anchor and the brief requires the money question answered rather than buried; the figure ships inside the stat cell with its representative-market disclosure as its own label. #4's portrait media frame is dropped, because dressing a self-pay disclosure in a photograph is what makes a reader distrust it. ONE ADDITION THIS PAGE NEEDS: the copy promises the written figure states what it INCLUDES and what it does not, which on a two-year treatment is the difference between a quote and a surprise, so that sentence is given its own line rather than folded into the paragraph. -->
+<section class="section section--warm" id="stage-06" aria-labelledby="h06" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-5">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">06</span>
+            <div>
+              <span class="kit-eyebrow">Stage 06, how the number is built</span>
+              <h2 id="h06">What it costs</h2>
+            </div>
+          </div>
+        </div>
+        <div class="kit-statband" data-rise>
+          <div class="kit-stat">
+            <span class="kit-stat__n kit-tab"><span class="pre">From</span> ₱90,000</span>
+            <span class="kit-stat__l">An indicative market figure, not a quote from Elevate</span>
+            <p class="kit-stat__sub">Full treatment. Anchored to published market ranges, not to an Elevate price list.</p>
+          </div>
+        </div>
+        <div class="kit-truth">
+          <p>Every peso amount on this page is representative and anchored to published market ranges. Your own figure is set after a clinical assessment.</p>
+        </div>
+      </div>
+
+      <div class="col col--span-7">
+        <p class="kit-micro">What moves the final figure</p>
+        <ul class="kit-list">
+          <li><b class="kit-strong">Case complexity.</b> A mild alignment case finishing in twelve months and a full case with extractions, elastics and a thirty month arc are different pieces of work, and they are priced as such.</li>
+          <li><b class="kit-strong">Appliance type.</b> The three bracket types set out in stage 01 sit at different costs.</li>
+          <li><b class="kit-strong">Number of arches and number of visits.</b> A single arch case is not priced as a double arch case, and a case that runs long runs through more adjustment appointments.</li>
+        </ul>
+        <p class="kit-body readw--wide">The exact figure is confirmed at consultation, after your records have been taken and read, and it is given to you in writing before treatment starts.</p>
+        <p class="kit-accentline">The written figure states what it includes and what it does not.</p>
+        <div class="kit-foot">
+          <p class="kit-micro">How you pay</p>
+          <p class="kit-quote kit-quote--display readw">Elevate Dental does not accept HMO or dental insurance. All treatment is self-pay.</p>
+          <p class="kit-body readw--wide">HMO coverage cannot be used for dental treatments at our clinics. Payment is by cash, bank cheque, bank transfer, debit or credit card, or QR payment. It is stated here, in the stage where the money is discussed, because finding it out late is worse than reading it now.</p>
+        </div>
+        <div class="kit-inline">
+          <p>A timeline and a fee both come out of records that have actually been read, so the only way to get either is an examination.</p>
+          <div class="kit-inline__acts">
+            <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+            <a class="kit-btn kit-btn--ghost" href="prices.html" data-page="prices.html"><span>Treatment Prices</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 07, the last one: the questions people actually ask, what you cannot eat, and what holds the teeth in place afterwards.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-07"><span>Go to stage 07</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Index of stages</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: FAQ-ACCORDION.md #7 Category-grouped sections | considered: #4,#2 | rigor: heavy | why: on a route the questions arrive at two different moments, before anything is bonded and while you are living in the appliance, and #7 is the only entry that groups an FAQ into named sub-blocks for that reason. #4's numbered list would be a third numbered run on a page that already numbers the route and the seven steps. #2's per-question rounded cards would add a third card treatment to a page that already spends cards on three appliances and four disciplines, and it would box a clinical answer when this system reserves the box for a thing you can act on. ADAPTATION, and it is why this band is the LAST one: Collision A binds the body to zero closing bands, so the end of the route has to be a CONTENT band with the ask folded into it. The consent hold, which on the sibling veneer pages gets a stage of its own, is carried HERE instead, because on this treatment the case records answer the same question the reader is already asking in the FAQ and a stage whose only content is an absence would be a hole in the route rather than a stop on it. -->
+<section class="section section--cool" id="stage-07" aria-labelledby="h07" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-4">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">07</span>
+            <div>
+              <span class="kit-eyebrow">Stage 07, the end of the route</span>
+              <h2 id="h07">Questions, upkeep, and holding the result</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Three questions people ask before they start, and four they ask while they are wearing the appliance.</p>
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2019_01_guide-to-braces.jpg" alt="A young woman smiling outdoors with metal braces on her upper teeth, leaning against a tree in daylight." width="1300" height="937" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Two years, lived in</b><span>Most of this treatment happens outside the clinic.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--span-8">
+        <p class="kit-micro">Before you start</p>
+        <div class="kit-faq" data-rise>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">How long will I be in braces?</summary>
+            <p class="kit-faq__a">Most cases run between 12 and 30 months. The orthodontist gives you an estimated range at the planning stage, based on your actual records rather than on an average. Missed appointments extend it, and so does a bracket that keeps coming loose.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Does it hurt?</summary>
+            <p class="kit-faq__a">Fitting itself is not painful and needs no anesthetic. The soreness comes afterwards: pressure and tenderness on biting for two to five days after the fitting, and a shorter, milder version after each adjustment. Soft food and ordinary analgesia handle it, and orthodontic wax covers a bracket that is rubbing.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Braces or clear aligners?</summary>
+            <p class="kit-faq__a">It depends on the movements required and on you. Fixed appliances handle severe rotations, large vertical corrections and extraction cases more predictably. Aligners are less visible and removable, and they suit mild to moderate cases in patients who will wear them 20 to 22 hours a day. The same orthodontists treat both here, so the recommendation is not steered by what the clinic happens to offer.</p>
+          </details>
+        </div>
+
+        <p class="kit-micro">While you are wearing it, and after</p>
+        <div class="kit-faq" data-rise>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">What can I not eat?</summary>
+            <p class="kit-faq__a">Nothing hard, sticky or stringy. No ice, no nuts, no hard bread crusts, no sticky candy, and no biting straight into apples or corn on the cob. Cut hard food into pieces. A broken bracket costs you an unscheduled appointment and adds time to the case.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">How do I clean around brackets?</summary>
+            <p class="kit-faq__a">Brush after every meal, angling the brush above and below the bracket. Use an interdental brush around each bracket and a floss threader or superfloss between the teeth once daily. This is the single behavior that decides whether you finish with straight teeth or straight teeth with white marks on them.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Will my teeth move back afterwards?</summary>
+            <p class="kit-faq__a">Yes, if you stop wearing retainers. Teeth are held in bone that remodels for months after treatment, and the tissue fibers around them keep pulling toward the original position for longer than that. Retainers are worn nightly, indefinitely. That is not a sales line, it is the condition on which the result holds.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Can I have this with crowns, bridges or implants?</summary>
+            <p class="kit-faq__a">Crowns and bridges can usually be bracketed, with adjustments to the bonding technique. An implant cannot be moved: it is fused to bone and stays exactly where it was placed, so it becomes a fixed point the plan has to work around. This is why the orthodontist should see you before an implant is placed, not after.</p>
+          </details>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-truth">
+          <p>Orthodontic cases are recorded here in photographs and scans at the start, during treatment and at debonding, and those records are not published on this page. Publishing an identifiable patient's teeth requires that patient's documented written consent.</p>
+        </div>
+      </div>
+
+      <div class="col col--span-7">
+        <p class="kit-micro">Upkeep, during and after</p>
+        <ul class="kit-list">
+          <li>Attend every scheduled adjustment.</li>
+          <li>Call the clinic if a bracket comes loose or a wire is poking, rather than waiting for the next appointment.</li>
+          <li>Wear your elastics for the hours you are told, because the mid-treatment correction depends on them entirely.</li>
+          <li>After debonding, wear your retainers exactly as instructed.</li>
+          <li>Bring the retainers to every recall so they can be checked for fit and wear.</li>
+        </ul>
+        <div class="kit-inline">
+          <p>The first consultation is free. You will be examined, your records taken and read by an orthodontist, and you will be told honestly whether a fixed appliance, clear aligners, or a joint plan with another specialist is the right answer for your case. Confirm current consultation terms with the clinic before you book.</p>
+          <div class="kit-inline__acts">
+            <a class="kit-btn kit-btn--secondary" href="contact.html" data-page="contact.html">Ask about this treatment</a>
+            <a class="kit-btn kit-btn--ghost" href="orthodontics.html" data-page="orthodontics.html"><span>Orthodontics</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--span-5">
+        <p class="kit-body readw">The route ends here on purpose, and nothing on it was held back for a phone call. If a band raised something this page did not settle, bring it to the chair and it will be answered against your own records rather than against a web page.</p>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Outcome</p>
+          <ul class="kit-list">
+            <li><b class="kit-strong">Feature.</b> Fixed appliances at the representative starting figure set out in stage 06, planned and adjusted by an orthodontics specialist.</li>
+            <li><b class="kit-strong">Do.</b> Book a free consultation and get a written quote.</li>
+            <li><b class="kit-strong">Means.</b> You know the cost, the likely timeline and the clinician before you commit.</li>
+          </ul>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Reopen the map</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-start"><span>Back to the start</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,525 @@
+<!--META {"title":"Contact Elevate Dental | Book an Appointment","desc":"Direct lines for all four clinics, email, and an appointment request form. We reply within one business day.","noindex":true}-->
+<!-- TITLE and DESC are the LOCKED values from _handoff/seo-enrichment.md section 1, the SEO SSOT.
+     The SSOT separator is an en dash and renders here as a pipe, because verify-no-dashes is
+     registered on this build. Only the SEPARATOR CHARACTER changed; no word was altered, added,
+     removed or reordered.
+     The key is "desc" and NOT "description": build.mjs renders esc(meta.desc), and its JSON branch
+     does not alias description to desc, so a "description" key ships an EMPTY meta description
+     while looking correct in the fragment.
+     noindex is set on EVERY page because this publishes to a PUBLIC preview URL while the pages
+     carry representative market prices rather than this clinic's own figures. robots.txt cannot
+     carry that load: crawlers read it only at the origin root, and this ships to a project
+     subpath, so the disallow-all there is inert. noindex is the protection that actually works. -->
+<!-- ============================================================================
+     THE BODY. T-CONTACT, concept A "THE DIRECT ANSWER". Four sections, one per
+     section of _copy/contact.md, in the order the copy fixes them. Every section
+     obeys the forced grammar
+
+         section  ->  div.container  ->  div.row  ->  div.col  ->  OBJECT
+
+     and carries EXACTLY ONE .container and EXACTLY ONE .row, because the sheet's
+     edge margin zeroing rule (.section .col > :first-child) fires on every .col in
+     a section, so a second .row would have its leading object's margin removed and
+     the two rows would butt. Multi band sections are composed inside the ONE 12
+     track row with .col--full bands and .col--span-N cells, and the vertical
+     interval between bands is the row GAP rather than a margin.
+
+     THE THESIS. THE DIRECT ANSWER. Reaching the right clinic is the whole page, so
+     the four branches, the four direct lines and the four real weeks are the
+     largest things on it and nothing decorative stands between the reader and a
+     number. The first screen already carries all four lines as tap targets; the
+     form is second because the locked copy puts it second and points forward to the
+     clinic records; the clinic records are the page's centre of gravity and take
+     the only photography on the page, one real facade or lobby per branch.
+
+     DESIGN SYSTEM PROVENANCE, cited and meant (verify-design-system-used, D1):
+       library   _MODERN-WOW-SPEC                the technique ceiling. Separation on
+                 this light ground is carried by a hairline plus a graded contact
+                 shadow plus a change of material, never by a value ladder; the
+                 index ring and its unrolled rule open all four bands; the grain
+                 veil keeps the light ground from reading flat. No band on this page
+                 spends a device the ceiling does not already sanction.
+       library   _COMPOSITION-LAWS               L1 stacked split reading order (the
+                 two split bands below reflow heading, then aside, then body, which
+                 is the locked sheet's own display:contents interleave, not a
+                 per page override) and L9 SELECTION-RATIONALE (the ledger blocks).
+       library   _RESPONSIVE-PATTERN-LIBRARY     the four tier reflow ladder. Every
+                 multi cell row on this page is authored in .col--span-N so it steps
+                 4 up, then 2 up at 1023, then 1 up at 767 through the LOCKED sheet
+                 rather than through a new media query.
+       library   _MICROCOPY-VOICE                applied literally at section 02: all
+                 field labels are sentence case IN THE SOURCE and are rendered upper
+                 case by .kit-label's text-transform, so the accessible name and a
+                 copy paste stay readable; hint text states the requirement instead
+                 of blaming the reader; the one documented conflict is the submit
+                 label, where the catalogue wants a sentence case verb phrase and
+                 client-rules.json locks the exact string "Book an Appointment", so
+                 the client lock wins and the deviation is recorded here.
+       blueprint composition-medical-health      the SECTOR spine, reconciled in
+                 _SECTOR-BLUEPRINT-RECONCILIATION.md. Collision A is binding: the
+                 body authors ZERO closing CTA bands and the ONE mid page ask is a
+                 .kit-inline rail folded inside content bearing section 04.
+
+     ZERO closing CTA bands are authored here. The chrome's .precta is the page's one.
+     ZERO dark bands are authored here. Measured tone is dark_ratio 0 and the one
+       permitted flip is already spent by the chrome's closing band.
+     ZERO arc seams are authored here. The one arc per page is spent by the header.
+     ZERO page local classes are authored here. Every class resolves to the locked
+       tokens sheet, the locked chrome sheet, the locked structural sheet or the
+       standard tier sheet.
+
+     IMAGERY. Five real photographs, every one a first party file recorded in
+     _imagery-map.json: the Mitsukoshi reception in the hero, and one facade or
+     lobby per branch in section 03. NOTHING on this page is generated, and no
+     token built surface stands where a photograph belongs. The four branch
+     photographs are the honest artefact for a four clinic record: a generic
+     treatment room captioned with a named branch would be a fabricated place.
+
+     CLAIM DISCIPLINE. No superlative, no rating, no provider tier, no specialist or
+     discipline count (all three are rationed away from contact), no HMO or
+     insurance implication, no response time and no consultation term, because
+     neither has been supplied. There is no peso figure anywhere on this page, so
+     there is no representative figure to mark. The self pay truth is carried in
+     section 04, in the body flow, in its canonical wording, above the closing ask.
+     ============================================================================ -->
+
+<!-- pick: HERO-COMPOSITIONS.md #11 Centered headline + CTA grid below | considered: #28,#20,#25 | rigor: heavy | why: this page's whole job is routing a caller to one of four clinics, and #11 is the only hero in the catalogue whose shape IS a text block followed immediately by a three to four cell grid of destinations, which is exactly the payload here, four branches and four published lines on the first screen with nothing between the sentence and the number; its stated use case names a local multi category service business and four named clinics with four real numbers is that case with the categories swapped for places. #28 embedded map or location hero is the closest sector fit and is rejected on a hard constraint rather than on taste: it is written for a SINGLE location and its right half is a map embed, no map asset exists anywhere in _imagery-map.json, and a third party map iframe is an external dependency this build cannot honour, so picking it would leave half the hero empty or fill it with a stand in. #25 embedded lead capture form hero is the obvious contact page reflex and is the strongest rival, but this page's intake is seven fields including a select and a free text message, which is a form for a whole BAND rather than a compact hero card; standing it in the hero would push the four direct lines under the fold on the one page whose job is delivering them, and it would either duplicate the form the locked copy fixes as its own numbered section with its own H2 or force that section to be deleted. #20 three column hero is the shape the locked sheet already ships as .row--claim and it is the flagship's pick, but its middle column is a countable proof stack and the countable facts this page owns are four telephone numbers, which are routing controls and not figures to be set at 72px; forcing them into stat numerals would dress a dialling target as a statistic. ADAPTATION recorded here rather than left for the gate: #11 centres its headline and this hero does not, because the locked structural sheet pins ONE reading measure to ONE left axis on every band and forbids re-centring it; only the centring is dropped, the two part shape is kept whole. SECOND ADAPTATION, forced by G-REPEAT and settled against the locked copy: the four grid cells were built as the four clinic direct-line cards, which put the clinic roster in the hero AND again in section 03, and _copy/contact.md S2 states outright that the direct line for every clinic belongs in the next section. The roster is therefore owned by 03 alone and the four cells now carry the four DESTINATIONS this page offers, form, lines, email and the what-happens-next sequence, which is the grid-of-destinations payload the entry is catalogued for. -->
+<!-- FRONT OF HOUSE. The opening section is now the one full-bleed photographic band.
+     The assigned photograph is the ALABANG TOWN CENTER frontage, which is NOT the file
+     this section held, so the Mitsukoshi reception slot was not deleted: it keeps its
+     caption and now sits BELOW the band, in the sibling section that carries the rest
+     of stage 01. Its alt text is the one already written for this file on this page
+     (section 03's branch roster), reused verbatim rather than rewritten.
+     RECORDED, not hidden: that same frontage also appears in the branch roster below,
+     because the roster owes one real photograph per clinic and the hero assignment is
+     fixed. The band is a wide crop of it; the roster cell is the record.
+     NO CTA WAS ADDED. This hero never carried a .kit-actions block, so the lockup has
+     none: the four destination cards below are this page's routing controls, and
+     inventing a button here would be a CTA this page's copy does not have. -->
+<section class="section surface-dark kit-hero foh-hero" id="s01" aria-labelledby="h01" data-surface="dark" data-rise>
+  <div class="container">
+    <div class="row">
+      <div class="col col--full">
+        <div class="foh-hero__stage">
+          <figure class="foh-hero__band">
+            <img class="foh-hero__img" src="../assets/generated/gen-hero-entrance-dusk.jpg" alt="A clinic entrance at dusk, a deep navy portal with a brushed brass reveal, glass doors glowing softly from within, tropical planting either side." width="3136" height="1344" loading="eager" fetchpriority="high" decoding="async">
+            
+          </figure>
+          <div class="foh-hero__inner">
+              <h1 class="foh-hero__title" id="h01">Contact Elevate Dental</h1>
+            </div>
+          <div class="foh-hero__lockup">
+            <p class="foh-hero__eyebrow">Contact</p>
+            <p class="foh-hero__lede">Four clinics, four direct lines, one appointment form.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stage 01 continued, on the warm ground the opening section carried, with the same
+     12-track row and the same .col--span-N cells, so not one cell changes width. The
+     eyebrow moved up into the lockup and the ordinal stays here to keep the opener. -->
+<section class="section section--warm" id="s01b" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-6">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">01</span>
+          </div>
+        </div>
+        <p class="kit-lede readw">Call the clinic you want and you reach that clinic.</p>
+        <p class="kit-body readw">There is no switchboard. Each clinic publishes its own number, and it is answered by the Front Desk Officer at that clinic. If you would rather write, the form below goes to the clinic you select on it.</p>
+        <div class="kit-truth">
+        </div>
+      </div>
+      <div class="col col--span-6 col--media">
+        <figure class="kit-slot" data-rise style="box-shadow: var(--ds-shadow-lift);">
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_04_Mitsukoshi-Lobby.jpg" alt="The reception at the Mitsukoshi BGC clinic, with the front desk to the right of a marble arch and seating along the glazed wall." width="1400" height="933" loading="eager" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Reception</b><span>Mitsukoshi BGC, the flagship clinic.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--span-3">
+        <a class="kit-card kit-card--tint" href="#s02" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Appointment form</span>
+            <svg class="kit-ring" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+            </svg>
+          </div>
+          <p class="kit-card__title">Request an appointment</p>
+          <p class="kit-card__body">Seven fields. The clinic you pick on the form is the one that receives it.</p>
+          <div class="kit-card__foot">
+            <span class="kit-card__tel kit-tab">Section 02</span>
+            <span class="kit-card__unit">Open</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col col--span-3">
+        <a class="kit-card kit-card--tint" href="#s03" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Direct lines</span>
+            <svg class="kit-ring" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+            </svg>
+          </div>
+          <p class="kit-card__title">Call a clinic yourself</p>
+          <p class="kit-card__body">Every clinic publishes its own number and answers it at its own front desk.</p>
+          <div class="kit-card__foot">
+            <span class="kit-card__tel kit-tab">Section 03</span>
+            <span class="kit-card__unit">View</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col col--span-3">
+        <a class="kit-card kit-card--tint" href="mailto:info@elevatedental.ph" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Email</span>
+            <svg class="kit-ring" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+            </svg>
+          </div>
+          <p class="kit-card__title">Write to us instead</p>
+          <p class="kit-card__body">One address reaches all four clinics if a call is not convenient.</p>
+          <div class="kit-card__foot">
+            <span class="kit-card__tel kit-tab">info@elevatedental.ph</span>
+            <span class="kit-card__unit">Email</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col col--span-3">
+        <a class="kit-card kit-card--tint" href="#s04" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">After you send</span>
+            <svg class="kit-ring" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+            </svg>
+          </div>
+          <p class="kit-card__title">What happens next</p>
+          <p class="kit-card__body">The sequence from a submitted request through to the consultation itself.</p>
+          <div class="kit-card__foot">
+            <span class="kit-card__tel kit-tab">Section 04</span>
+            <span class="kit-card__unit">Read</span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<!-- pick: FORM-LAYOUTS.md #2 2-col split form (fields left + map/info right) | considered: #13,#8,#3 | rigor: heavy | why: the copy fixes seven fields and one submit, and it fixes a SECOND job for this same band, telling a reader who would rather not type where the four numbers are, so the band needs a form column and an information column standing side by side; #2 is the catalogued entry for exactly that, its when to use line names local services with a physical presence and puts medical practices first, and its stated 60/40 ratio is the .row--split geometry the locked sheet already ships at 1.42fr to 1fr, so the pick costs no new grid. #13 is this catalogue's own T-CONTACT page treatment and it is the strongest rival, rejected on two grounds: its premise is that the form IS the whole page, and here the form is the second of four bands while the four clinic records are the page's centre of gravity; and its reference implementation is a bw- prefixed panel family (bw-form, bw-field, bw-select, bw-cadence) that this brand's locked sheets do not define, so picking it would either ship page local CSS, which promotion STRIPS, or force new objects into a locked sheet. #8 booking form with date and guests names medical appointment booking in its own when to use line and is the closest vertical match, but it is a compact horizontal bar of picker pills that presumes the practice publishes bookable SLOTS, and this practice does not: the locked copy says the clinic confirms a time with you directly, so a check availability control would imply a live diary that is nowhere evidenced, and four pills cannot carry a seven field intake ending in a free text message. #3's 2-up field rows would pair Full name beside Contact number inside a 59 percent column, collapse to the same single column at 767 anyway, and buy nothing but a denser desktop form on a page whose form is deliberately short. RE-REGISTERED: #2's right column is catalogued as a map embed or an address block, and here it is neither, because the addresses are the NEXT section's content and no map asset exists in the imagery map; it carries the locked countable proof stack and a routing card instead. -->
+<section class="section section--cool" id="s02" aria-labelledby="h02" data-rise>
+  <div class="container">
+    <div class="row row--split">
+
+      <div class="col col--copy">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">02</span>
+            <div>
+              <span class="kit-eyebrow">Appointment request</span>
+              <h2 id="h02">Request an appointment</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Seven fields. Enough for the clinic to prepare for you, and no more than that.</p>
+
+        <form action="#book" method="post" aria-labelledby="h02">
+          <div class="kit-field">
+            <label class="kit-label" for="f-name">Full name</label>
+            <input class="kit-input" type="text" id="f-name" name="name" autocomplete="name" placeholder="" required>
+          </div>
+          <div class="kit-field">
+            <label class="kit-label" for="f-tel">Contact number</label>
+            <input class="kit-input kit-tab" type="tel" id="f-tel" name="tel" autocomplete="tel" placeholder="" required>
+          </div>
+          <div class="kit-field">
+            <label class="kit-label" for="f-email">Email address</label>
+            <input class="kit-input" type="email" id="f-email" name="email" autocomplete="email" placeholder="" required>
+          </div>
+          <div class="kit-field">
+            <label class="kit-label" for="f-clinic">Preferred clinic</label>
+            <select class="kit-select" id="f-clinic" name="clinic" required>
+              <option value="">Choose the clinic you intend to visit</option>
+              <option value="mitsukoshi-bgc">Mitsukoshi BGC</option>
+              <option value="shangri-la-plaza">Shangri-La Plaza</option>
+              <option value="bonifacio-stopover-bgc">Bonifacio Stopover BGC</option>
+              <option value="alabang-town-center">Alabang Town Center</option>
+            </select>
+            <span class="kit-help">The form goes to the clinic you select here.</span>
+          </div>
+          <div class="kit-field">
+            <label class="kit-label" for="f-treatment">Treatment you are interested in</label>
+            <input class="kit-input" type="text" id="f-treatment" name="treatment" placeholder="">
+            <span class="kit-help">If you are not sure, leave it and say so in the message. Working out which treatment fits is what the consultation is for.</span>
+          </div>
+          <div class="kit-field">
+            <label class="kit-label" for="f-date">Preferred date</label>
+            <input class="kit-input kit-tab" type="date" id="f-date" name="date" placeholder="">
+            <span class="kit-help">Optional. The clinic confirms the time with you directly.</span>
+          </div>
+          <div class="kit-field">
+            <label class="kit-label" for="f-message">Message</label>
+            <textarea class="kit-textarea" id="f-message" name="message" rows="5" placeholder=""></textarea>
+            <span class="kit-help">Anything the clinic should know in advance: a medication, a previous treatment, an anxiety about the chair.</span>
+          </div>
+          <div class="kit-actions kit-actions--tight">
+            <button class="kit-btn kit-btn--primary" type="submit">Book an Appointment</button>
+          </div>
+        </form>
+
+        <!-- LINK RESTORED 2026-08-24, and the sentence rewritten to match what it now leads to.
+             HISTORY: this line pointed at privacy-policy.html while that page did not exist. It was
+             found by auditing the ASSEMBLED preview rather than the source, which is the only place a
+             404 of this kind shows up, and it was the last broken link on the site. It was briefly
+             rewritten to admit the gap in words; the owner then asked for interim legal pages, so the
+             page is real and the link is live again.
+             THE WORDING IS DELIBERATE. It does NOT say "see our privacy policy for how records are
+             held", which was the original phrasing, because the interim notice does NOT say how
+             records are held: that is precisely what is still pending. Promising it here and not
+             delivering it there would just move the broken promise one click along. It says what the
+             page actually contains. Restore the fuller wording when the signed policy lands. -->
+        <p class="kit-note">Your details are used to arrange this appointment. Our <a href="privacy-policy.html">privacy notice</a> sets out exactly what this form asks for, and what is still being finalised.</p>
+      </div>
+
+      <div class="col">
+        <div class="kit-statband kit-statband--stack" data-rise>
+          <div class="kit-stat">
+            <span class="kit-stat__n kit-tab">4</span>
+            <span class="kit-stat__l">Direct clinic lines</span>
+            <p class="kit-stat__sub">One for each clinic, published on this page and answered at that clinic.</p>
+          </div>
+          <div class="kit-stat">
+            <span class="kit-stat__n kit-tab">7</span>
+            <span class="kit-stat__l">Fields on this form</span>
+            <p class="kit-stat__sub">Three of them optional, so a request takes about a minute.</p>
+          </div>
+          <div class="kit-stat">
+            <span class="kit-stat__n kit-tab">0</span>
+            <span class="kit-stat__l">Switchboards</span>
+            <p class="kit-stat__sub">No switchboard, and no callback roulette.</p>
+          </div>
+        </div>
+
+        <div class="kit-card kit-card--pad" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">If you would rather call</span>
+            <svg class="kit-ring" width="28" height="28" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+              <g class="kit-ring__tick" stroke-width="2.4">
+                <line x1="50" y1="12" x2="50" y2="20" transform="rotate(90 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="20" transform="rotate(180 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="20" transform="rotate(270 50 50)"/>
+              </g>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+            </svg>
+          </div>
+          <p class="kit-card__title">The direct line for every clinic is in the next section.</p>
+          <p class="kit-card__body">Each number is answered by the Front Desk Officer at that clinic, so the person who picks up is at the clinic you intend to visit.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="#s03"><span>The four clinics</span></a>
+            <span class="kit-card__unit">Or write</span>
+          </div>
+          <p class="kit-meta"><a href="mailto:info@elevatedental.ph">info@elevatedental.ph</a> reaches all four.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #51 Locations grid | considered: #52,#53,#19 | rigor: heavy | why: four clinics with four real addresses, four direct lines and four genuinely different weeks is a multi location RECORD, and #51 is the only entry whose stated role is exactly that, one tile per location carrying the name, the address and a photograph, with clinics named in its own when to use line; it is also the only shape that lets the four facility photographs do the work C7 reserves for them, since C7 says branch pages should be photographed PLACES rather than addresses with a map, and the practice holds thirty one real interior and facade files. #52 map embed plus contact is written for a SINGLE location, would push three of the four clinics off the band or onto one shared map, and there is no licensed map asset anywhere in _imagery-map.json, so it fails on content and on supply at the same time. #53 hours table would render the sharpest per clinic difference, the four different weeks, and would drop the addresses, the numbers and the photographs with it, so it is a component this band CONTAINS rather than a shape this band can be; the ruled hours block inside each card is #53 doing its job at card scale, which is where it belongs. #19 team grid 4-col compact has the right density and the wrong subject, and importing it would invite a portrait where a facade belongs, which on a page with no per clinic roster receipt would silently assert which specialist sits at which branch, a claim client-rules.json blocks outright. ADAPTATION recorded: #51 is catalogued as a three across grid and this band runs FOUR across, measured rather than assumed, because at four across the whole record set, four addresses, four weeks and four numbers, sits in ONE view at 1440 and can be compared without scrolling, which is the concept's entire argument; the cost is a locator sized photograph rather than a feature sized one, and on a contact page the photograph's job IS recognising the shopfront when you arrive. It steps to two across at 1023 and one across at 767 through the LOCKED sheet, where each photograph takes the full column. -->
+<section class="section section--warm" id="s03" aria-labelledby="h03" data-rise>
+  <div class="container">
+    <div class="row row--stretch">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">03</span>
+            <div>
+              <span class="kit-eyebrow">Where we are</span>
+              <h2 id="h03">The four clinics</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Call the clinic you intend to visit. Hours differ by clinic, so check before you travel.</p>
+      </div>
+
+      <div class="col col--span-3">
+        <div class="kit-card" data-rise>
+          <figure class="kit-slot">
+            <div class="kit-slot__mask kit-slot__mask--frame">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_04_Mitsukoshi-Facade.jpg" alt="The Mitsukoshi BGC clinic seen from the mall walkway, an arched black framed glass front with the reception desk and waiting seats visible inside." width="1400" height="933" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Taguig</span>
+          </div>
+          <p class="kit-card__title">Mitsukoshi BGC</p>
+          <p class="kit-card__addr">2F Mitsukoshi BGC, 8th Avenue corner 36th Street, Grand Central Park, Taguig</p>
+          <dl class="kit-card__hours">
+            <div><dt>Monday to Friday</dt><dd>11:00 to 20:00</dd></div>
+            <div><dt>Saturday and Sunday</dt><dd>10:30 to 20:00</dd></div>
+          </dl>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost kit-tab" href="tel:+639171599284"><span>+63 917 159 9284</span></a>
+            <span class="kit-card__unit">Direct</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--span-3">
+        <div class="kit-card" data-rise>
+          <figure class="kit-slot">
+            <div class="kit-slot__mask kit-slot__mask--frame">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_03_Lobby-Shangri-La.jpg" alt="The lobby at the Shangri-La Plaza clinic, a deep green feature wall with sculpted pendant lights over a stone front desk and curved seating." width="1350" height="901" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Mandaluyong</span>
+          </div>
+          <p class="kit-card__title">Shangri-La Plaza</p>
+          <p class="kit-card__addr">4F East Wing, Shangri-La Plaza, EDSA corner Shaw Boulevard, Ortigas, Mandaluyong</p>
+          <dl class="kit-card__hours">
+            <div><dt>Monday to Sunday</dt><dd>10:30 to 19:00</dd></div>
+          </dl>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost kit-tab" href="tel:+639688515420"><span>+63 968 851 5420</span></a>
+            <span class="kit-card__unit">Direct</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--span-3">
+        <div class="kit-card" data-rise>
+          <figure class="kit-slot">
+            <div class="kit-slot__mask kit-slot__mask--frame">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_04_Bonifacio-Stopover-Facade.jpg" alt="The glass frontage of the Bonifacio Stopover BGC clinic, with the lit Elevate Dental sign above the entrance and the waiting lounge visible through the glass." width="1462" height="975" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Taguig</span>
+          </div>
+          <p class="kit-card__title">Bonifacio Stopover BGC</p>
+          <p class="kit-card__addr">Unit R303, 3rd floor, Bonifacio Stopover Pavilion, Bonifacio Global City, Taguig</p>
+          <dl class="kit-card__hours">
+            <div><dt>Monday to Saturday</dt><dd>09:00 to 18:00</dd></div>
+            <div class="is-closed"><dt>Sunday</dt><dd>Closed</dd></div>
+          </dl>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost kit-tab" href="tel:+639178294551"><span>+63 917 829 4551</span></a>
+            <span class="kit-card__unit">Direct</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--span-3">
+        <div class="kit-card" data-rise>
+          <figure class="kit-slot">
+            <div class="kit-slot__mask kit-slot__mask--frame">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_04_WP-Asset-_-ATC-Facade_11zon-scaled-1.jpg" alt="The Alabang Town Center clinic along the mall corridor, a glass frontage with a planted lounge inside and the Elevate Dental mark on the wall." width="2560" height="1440" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Muntinlupa</span>
+          </div>
+          <p class="kit-card__title">Alabang Town Center</p>
+          <p class="kit-card__addr">2nd floor, 2225 Commerce Mall, Alabang Town Center, Ayala Alabang, Muntinlupa 1780</p>
+          <dl class="kit-card__hours">
+            <div><dt>Monday to Friday</dt><dd>11:00 to 20:00</dd></div>
+            <div><dt>Saturday and Sunday</dt><dd>10:00 to 20:00</dd></div>
+          </dl>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost kit-tab" href="tel:+639171140598"><span>+63 917 114 0598</span></a>
+            <span class="kit-card__unit">Direct</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Worth reading before you book</p>
+          <p class="kit-body readw--wide">3D CBCT imaging is installed at all four clinics, so the imaging available to you does not depend on which one you choose. Paid parking is available inside the building at all four.</p>
+          <p class="kit-note">Email, all four clinics: <a href="mailto:info@elevatedental.ph">info@elevatedental.ph</a></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #27 Numbered process steps (1-2-3-4) | considered: #33,#7,#34 | rigor: heavy | why: the copy's fourth section is a strict SEQUENCE with a real dependency inside it, the request is picked up before a time is agreed and the time is agreed before anything is brought to it, so the numbering is load bearing content rather than decoration, and #27 is the only candidate of the three whose numbering carries meaning; the locked structural sheet already ships it as .kit-list--ledger with mono leading zero counters, so the pick spends existing vocabulary and mints nothing new. #33 custom quote driver frames the next step as a commercial negotiation and ends in a figure, and the honest content here is a clinical intake sequence that ends in an examination, on a page where every peso figure is rationed away, so #33 would misdescribe what actually happens. #7 problem framing is a single big type statement with no slot for five ordered beats, and this section is the ANSWER to a question the page has already asked rather than the naming of a pain. #34 FAQ accordion would fold the sequence behind five closed summaries and hide the one thing a reader wants settled before booking, and the copy supplies no questions to hang them on. The self pay structural truth is carried in this band, in the body flow and above the closing ask, in its canonical wording and never as a footnote. -->
+<section class="section section--paper" id="s04" aria-labelledby="h04" data-rise>
+  <div class="container">
+    <div class="row row--aside">
+
+      <div class="col col--copy">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">04</span>
+            <div>
+              <span class="kit-eyebrow">After you send</span>
+              <h2 id="h04">What happens next</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">The clinic you selected picks up the request, confirms a time with you directly, and tells you what to bring.</p>
+
+        <ol class="kit-list kit-list--ledger">
+          <li><span><b>The request lands at the clinic.</b> The branch you chose on the form picks it up. There is no central queue it waits in first.</span></li>
+          <li><span><b>The time is confirmed with you directly.</b> The clinic agrees a slot with you and tells you what to bring to it.</span></li>
+          <li><span><b>You arrive 15 minutes early.</b> That is enough time to complete any necessary paperwork, or you can complete the forms in advance from the New Patient Guide.</span></li>
+          <li><span><b>The first appointment is a comprehensive exam.</b> Digital X-rays if they are needed, and a discussion of your options.</span></li>
+          <li><span><b>You leave knowing the plan.</b> What is happening, what can be done, and in what order.</span></li>
+        </ol>
+
+        <div class="kit-truth">
+          <span class="kit-truth__k">Before you book</span>
+          <p>One thing to know before you book: Elevate Dental does not accept HMO or dental insurance. All treatment is self-pay.</p>
+        </div>
+
+        <div class="kit-inline">
+          <p>If that sequence is what you were looking for, the appointment form is at the top of this page and every clinic's direct line is one section above this one.</p>
+          <div class="kit-inline__acts">
+            <a class="kit-btn kit-btn--primary" href="#s02">Book an Appointment</a>
+            <a class="kit-btn kit-btn--secondary" href="#s03">Call Us</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="kit-card kit-card--tint" data-rise>
+          <div class="kit-card__top">
+            <svg class="kit-ring" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+            </svg>
+          </div>
+          <p class="kit-card__title">Two figures are not on this page yet.</p>
+          <p class="kit-card__body">How long a request takes to be answered has not been supplied, and whether the first consultation is complimentary as a standing offer or only inside a dated promotion has not been settled. Both publish as written commitments or not at all.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

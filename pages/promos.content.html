@@ -1,0 +1,398 @@
+<!--META {"title":"Dental Promos Philippines | Current Offers","desc":"Our offers that are actually running right now, with the dates they end. Expired promotions are archived, not displayed.","noindex":true}-->
+<!-- TITLE and DESC are the LOCKED values from _handoff/seo-enrichment.md section 1, the SEO SSOT.
+     The SSOT separator is an en dash and renders here as a pipe, because verify-no-dashes is
+     registered on this build. Only the SEPARATOR CHARACTER changed; no word was altered, added,
+     removed or reordered.
+     The key is "desc" and NOT "description": build.mjs renders esc(meta.desc), and its JSON branch
+     does not alias description to desc, so a "description" key ships an EMPTY meta description
+     while looking correct in the fragment.
+     noindex is set on EVERY page because this publishes to a PUBLIC preview URL while the pages
+     carry representative market prices rather than this clinic's own figures. robots.txt cannot
+     carry that load: crawlers read it only at the origin root, and this ships to a project
+     subpath, so the disallow-all there is inert. noindex is the protection that actually works. -->
+<!-- ============================================================================
+     THE BODY. FIVE sections, one per section of _copy/promos.md, in brief order,
+     with the copy's section 5 closing folded INLINE into section 05 because the
+     chrome owns the single closing band and the body authors ZERO. Forced grammar
+     throughout: section -> div.container -> div.row -> div.col -> OBJECT, exactly
+     ONE .container and ONE .row per section.
+
+     THE IMAGERY DECISION, recorded because it is the least obvious thing on this
+     page. The imagery map hands promos a pool of EIGHT campaign key visuals. Seven
+     of the eight cannot ship as published artwork:
+
+       two carry the line "our biggest sale of the year" or "our biggest dental
+       promo ever", which is a superlative self description the claim rules forbid
+       outright, and one of those two also states a discount ceiling that does not
+       match the terms recorded in the brief set;
+       one is a past launch campaign, so publishing it as live is the exact defect
+       this page exists to fix;
+       one is a bridal package that is not in the current running set and whose
+       artwork also carries a retired product name and a CTA label the locked label
+       rule replaces;
+       two are partner campaigns, a bank instalment and an airline, and the copy
+       blocks every partner offer until the client confirms in writing which
+       partnerships are active this year.
+
+     That leaves ONE usable photograph, which opens the page, and it is used for
+     what it actually shows: a clinician in the practice's own clinic. The other
+     two visual moments on this page are therefore INFORMATION rather than artwork:
+     the offer lifecycle, drawn, and the four clinic coverage of the one offer that
+     is running. Both are built from the locked colour tokens and both carry real,
+     verified content. Neither is a grey box standing in for a photograph.
+     ============================================================================ -->
+
+<!-- pick: HERO-COMPOSITIONS.md #4 Diptych portrait plus product or service | considered: #11,#24 | rigor: heavy | why: the diptych is the only hero in the catalogue that puts a SQUARE image beside the copy as an equal half rather than as a wide banner, and the single publishable asset this page owns is a 500 by 500 square campaign photograph; a wide hero would either crop the clinician out of it or upscale a small master until it softens, and on the one page whose subject is honesty about what is running, a visibly stretched image is the wrong first impression. #11, the centred headline with an index grid below, is the locked T-INDEX hero and it hands the reader a ROUTE through a long set; this page's set is one offer, so an index of stops would be scaffolding around a single item. #24, the awards led hero, stacks recognition above the headline, and this build has no evidenced award and no confirmed provider tier to stack, so the composition would open a slot that the honesty rules immediately require to be left empty. ADAPTATION: #4's second panel is catalogued as a product shot; here it is the offer STATE rather than a product, a short standing rule about what appears on this page and what never does, because the reader's first question on a promos page is whether anything here is still valid. LIBRARY: _RESPONSIVE-PATTERN-LIBRARY, the four tier reflow ladder, applied by pairing .col--span-5 with .col--span-7 so the ladder re-spans both cleanly at the 1023 step instead of pushing a 7 and 6 pair past twelve tracks. -->
+<!-- FRONT OF HOUSE RESTRUCTURE. The hero is re-housed into the foh-hero contract: one
+     full-bleed scrimmed photographic band carrying the headline, a paper lockup under it for the
+     eyebrow, the build status, the lede, the anti-inducement line and the existing buttons.
+     .surface-dark is the page's one dark beat, which verify-not-flat credits.
+     THE BAND IMAGE COMES FROM THE SHARED POOL, and hero-map.json records why: seven of the eight
+     campaign key visuals this page owns cannot ship, and the eighth is 500x500, far too small for
+     a band. A plain care photograph shows treatment rather than an offer, so nothing about the
+     promotion is overstated by the image. Its alt was written after opening the file.
+     WHAT LEFT THE HERO, and where each fact still stands, checked before cutting:
+       - "An offer that has passed its end date is archived automatically..." -> band 03, whose
+         heading, lifecycle diagram and rule list carry the whole lifecycle in detail.
+       - "Every offer is subject to clinical assessment, and our specialists will tell you..." ->
+         band 05, "Our specialists will tell you whether that treatment suits your case before
+         anything is booked against it".
+     THE .kit-accentline STAYS, even though band 05 restates it, because it is this page's one
+     anti-inducement statement and it belongs where the offers are introduced, not only after them.
+     The clinic .kit-slot is a DIFFERENT photograph to the assigned band image, so it is kept below
+     the band with its caption intact rather than deleted as a duplicate. -->
+<!-- FOH LEFTOVER REPAIRED, 2026-08-25. The FOH pass added the stage but left the OLD hero
+     composition in the same section, so this section carried the band AND the columns it
+     replaced. The hero row now holds exactly ONE .col, the .col--full carrying the stage.
+     NOTHING WAS DELETED HERE. Both leftover columns were read against the rest of the page and
+     both proved unique, so both were MOVED to the top of s02 rather than cut.
+     MOVED 1, the .col--span-5.col--media .kit-slot. Its file, 2026_03_promo-cdc.jpg, is a
+     DIFFERENT photograph to the assigned band image and appears exactly ONCE on this page. Its
+     span is kept at .col--span-5 UNCHANGED, deliberately: the source is 500x500 and a
+     .col--span-5 circle mask at the 1140px container is about 418px, so it does not upscale,
+     where a .col--full circle at 1060px would have blown it up about 2.1x.
+     MOVED 2, the .col--full .kit-foot, "How this page is filtered, and what it says when nothing
+     matches". Checked before moving, and it is NOT a duplicate. s03 mentions the filter values
+     only in passing, as one line of a six-field ledger ("The action, and the five filter values
+     the toolbar reads"), and never enumerates them or states the sort order. More importantly
+     its .kit-tags rail carries this page's ONLY links to three discipline hubs,
+     cosmetic-dentistry.html, orthodontics.html and general-dentistry.html: the s04 rail is a
+     TREATMENT rail (Invisalign, braces, veneers, whitening, AirFlow, implants, crowns) and
+     carries none of the three. The empty-state sentence is unique to it as well. It is re-spanned
+     to .col--span-7 for one mechanical reason: 5 + 7 fills the s02 grid line exactly, so the
+     moved pair tiles instead of leaving a hole beside the photograph.
+     The emptied .cols went with their content rather than being left behind: an empty grid cell
+     renders at zero height but still consumes the 40px row gap. -->
+<section class="section surface-dark kit-hero foh-hero" id="s01" aria-labelledby="h01" data-surface="dark" data-rise>
+  <div class="container">
+    <div class="row">
+      <div class="col col--full">
+        <div class="foh-hero__stage">
+          <figure class="foh-hero__band">
+            <img class="foh-hero__img" src="../assets/generated/gen-hero-brass-card.jpg" alt="A plain brushed brass card lying on woven bone linen under dappled afternoon shadow." width="3136" height="1344" loading="eager" fetchpriority="high" decoding="async">
+            
+          </figure>
+          <div class="foh-hero__inner">
+              <h1 class="foh-hero__title" id="h01">Current Offers</h1>
+            </div>
+          <div class="foh-hero__lockup">
+            <p class="foh-hero__eyebrow">Offers</p>
+            <p class="foh-hero__lede">Only offers that are running right now, each carrying the date it ends.</p>
+            <p class="kit-accentline">A discount changes what a treatment costs. It does not change whether that treatment is right for your case.</p>
+            <div class="kit-actions">
+              <a class="kit-btn kit-btn--primary" href="#s02">See the offer that is running</a>
+              <a class="kit-btn kit-btn--secondary" href="prices.html">Prices without an offer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- pick: CARD-VARIATIONS.md #18 Promo banner card, full width with CTA | considered: #16,#15 | rigor: heavy | why: this stop holds exactly ONE item, and a one item grid is not a grid, it is a banner; #18 is the catalogue entry built to carry a single offer at full measure with its terms and its action attached, which is the only shape that does not make a single running promotion look like the last survivor of a set. The pick also keeps the terms ON the card rather than behind a link, which is the copy's stated rule for this page. #16, the featured article card with an image overlay headline, sets type on photography, which the locked feel bans, and would in this case set a discount figure over a patient's face. #15, the pricing tier card, frames an offer as a tier you choose between, and there is only one offer and no tiers, so the composition would imply a choice the practice is not offering. ADAPTATION, and it is the honest one: #18 expects a key visual behind the banner. The campaign artwork for this exact offer exists in the asset set and is NOT used, because the artwork states a treatment list and a discount ceiling that do not match the terms recorded in the brief, and it carries a superlative the claim rules forbid. So the banner is set on the locked tint surface and the artwork question is written into the held block underneath rather than resolved by shipping the poster. LIBRARY: _COMPOSITION-LAWS L9 selection rationale, applied literally: the reason this band shows no artwork is recorded here rather than left for a reviewer to discover. -->
+<section class="section section--cool" id="s02" aria-labelledby="h02" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">02</span>
+            <div>
+              <span class="kit-eyebrow">Running now</span>
+              <h2 id="h02">One offer is live, and these are its terms in full.</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">A small pinned set sits above the list, chosen for what the offers are worth rather than for what was posted most recently. Today that set holds one.</p>
+      </div>
+
+      <div class="col col--span-7">
+        <div class="kit-foot">
+          <p class="kit-micro">How this page is filtered, and what it says when nothing matches</p>
+          <p class="kit-body readw--wide">Every card carries five values so the toolbar acts on real content rather than shipping inert: its category, its tags, the treatment it applies to, the clinic or clinics it runs at, and the date it ends. The list is sorted by that end date, soonest first, so what expires first sits first.</p>
+          <div class="kit-tags">
+            <a class="kit-tag" href="cosmetic-dentistry.html">Cosmetic</a>
+            <a class="kit-tag" href="orthodontics.html">Orthodontics</a>
+            <a class="kit-tag" href="general-dentistry.html">General dentistry</a>
+            <a class="kit-tag" href="laser-teeth-whitening.html">Whitening</a>
+          </div>
+          <p class="kit-quote kit-quote--display readw">No current offer matches those filters. Clear one filter to widen the list, or see all current offers. If nothing is running for the treatment you want, the price list carries a starting figure for every treatment.</p>
+        </div>
+      </div>
+
+      <div class="col col--span-5 col--media">
+        <figure class="kit-slot kit-hero__media" data-rise style="box-shadow: var(--ds-shadow-lift);">
+          <div class="kit-slot__mask kit-slot__mask--circle">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_03_promo-cdc.jpg" alt="A clinician in a disposable gown and gloves stands in a treatment room while colleagues work at a chair behind him, under a wall mounted panoramic dental x-ray." width="500" height="500" loading="eager" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>The clinic, not the poster</b><span>The offer changes. Who carries out the treatment does not.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-card kit-card--tint kit-card--pad" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Anniversary offer, all four clinics</span>
+            <span class="kit-card__unit">Ends 31 August 2026</span>
+          </div>
+          <p class="kit-card__title">Cosmetic treatments, 1 August to 31 August 2026.</p>
+          <ol class="kit-list kit-list--ledger">
+            <li><span><b>Invisalign (Clear Aligners), up to 25 percent off.</b> The aligner course, planned on the intraoral scan that produces the digital model the sequence is built from.</span></li>
+            <li><span><b>Zoom teeth whitening, up to 20 percent off.</b> Light activated, carried out in the clinic in a single session.</span></li>
+            <li><span><b>Emax veneers, up to 20 percent off.</b> The porcelain veneer, planned against the whole face rather than against the tooth in isolation.</span></li>
+            <li><span><b>Where it applies.</b> Mitsukoshi BGC, Shangri-La Plaza, Bonifacio Stopover BGC and Alabang Town Center. Terms and conditions apply.</span></li>
+          </ol>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--span-6">
+        <div class="kit-truth">
+          <p>The offer above is transcribed from the practice's current listing, where it is dated 1 to 31 August 2026, and it has not been reconfirmed with the clinics. Confirm with the practice that it is still running, and that the discounts hold, before you rely on it.</p>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Below is the rule that governs every card on this page, drawn rather than asserted, and the two claim families that are withheld from an offer card until their receipts exist.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#s03"><span>The rule that keeps this list clean</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #28 Process timeline horizontal | considered: #27,#53 | rigor: heavy | why: the defect this page exists to fix is a promotions archive displaying seventeen expired entries beside the live ones, several with contradictory dates, and the fix is a RULE that runs on a date rather than a promise that someone will tidy up. A rule that runs on a date is a timeline, and #28 is the only entry in the catalogue that renders one along a real axis, so the reader sees that removal is automatic and dated rather than editorial. #27, numbered process steps, renders the same four moments as a stack of cards, which reads as things a person does in order; the whole point here is that nobody does the third step, the date does. #53, the hours table, is the other dated instrument in the catalogue, but a table asks the reader to compare rows, and there is only one row until a second offer starts. ADAPTATION: #28's axis is normally a project schedule with named owners. Here the axis is one offer's life, the markers are its two published dates plus the automatic removal, and the whole figure is drawn in the locked tokens rather than as an image, because a picture of a date is a picture that goes stale. LIBRARY: _MODERN-WOW-SPEC, the technique ceiling, read as a licence for token built information rather than for effect: the figure is the only ornament this band carries, and it carries content. -->
+<section class="section section--warm" id="s03" aria-labelledby="h03" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">03</span>
+            <div>
+              <span class="kit-eyebrow">All current offers</span>
+              <h2 id="h03">One card per offer, and the end date sits on the card.</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">The end date is not in the terms, it is on the face of the card, because the end date is the part that decides whether an offer is any use to you.</p>
+      </div>
+
+      <div class="col col--span-7">
+        <figure class="kit-figure" data-rise>
+          <svg viewBox="0 0 760 200" width="760" height="200" role="img" aria-labelledby="lifecycle-t lifecycle-d" style="width: 100%; height: auto;">
+            <title id="lifecycle-t">The life of one offer, from its start date to automatic removal</title>
+            <desc id="lifecycle-d">A horizontal rail with three marked moments: the offer starts on its published start date, runs while both dates bracket today, and is removed from this page on the day after its end date. There is no fourth state in which an expired offer is still displayed.</desc>
+            <line x1="40" y1="94" x2="720" y2="94" style="stroke: var(--ds-hairline); stroke-width: 2"/>
+            <line x1="40" y1="94" x2="400" y2="94" style="stroke: var(--ds-accent); stroke-width: 6"/>
+            <circle cx="40" cy="94" r="9" style="fill: var(--ds-accent)"/>
+            <circle cx="400" cy="94" r="9" style="fill: var(--ds-accent)"/>
+            <circle cx="720" cy="94" r="9" style="fill: var(--ds-bg-surface); stroke: var(--ds-hairline); stroke-width: 3"/>
+            <text x="40" y="58" style="fill: var(--ds-ink-heading); font-family: var(--ds-font-mono); font-size: 16px; font-weight: 700">01 STARTS</text>
+            <text x="40" y="136" style="fill: var(--ds-ink-soft); font-family: var(--ds-font-body); font-size: 16px">Published start date</text>
+            <text x="40" y="162" style="fill: var(--ds-ink-soft); font-family: var(--ds-font-body); font-size: 16px">1 August 2026</text>
+            <text x="400" y="58" text-anchor="middle" style="fill: var(--ds-ink-heading); font-family: var(--ds-font-mono); font-size: 16px; font-weight: 700">02 RUNS</text>
+            <text x="400" y="136" text-anchor="middle" style="fill: var(--ds-ink-soft); font-family: var(--ds-font-body); font-size: 16px">Shown on this page</text>
+            <text x="400" y="162" text-anchor="middle" style="fill: var(--ds-ink-soft); font-family: var(--ds-font-body); font-size: 16px">Soonest to end sits first</text>
+            <text x="720" y="58" text-anchor="end" style="fill: var(--ds-ink-heading); font-family: var(--ds-font-mono); font-size: 16px; font-weight: 700">03 REMOVED</text>
+            <text x="720" y="136" text-anchor="end" style="fill: var(--ds-ink-soft); font-family: var(--ds-font-body); font-size: 16px">The day after it ends</text>
+            <text x="720" y="162" text-anchor="end" style="fill: var(--ds-ink-soft); font-family: var(--ds-font-body); font-size: 16px">By the date, not by hand</text>
+          </svg>
+          <figcaption class="kit-slot__cap"><b>The expiry rule</b><span>Offers are removed on the day after they end. Nothing here has expired.</span></figcaption>
+        </figure>
+        <div class="kit-truth">
+          <p>No bank, card issuer, term, minimum spend threshold or interest rate is published here: card partner and instalment offers carried on the practice's current site have end dates from two years ago and are not confirmed as active this year.</p>
+        </div>
+      </div>
+
+      <div class="col col--span-5">
+        <div class="kit-card kit-card--pad" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">The card, declared once</span>
+            <svg class="kit-ring" width="28" height="28" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+            </svg>
+          </div>
+          <p class="kit-card__title">Six visible fields, repeated for every offer that lands.</p>
+          <ol class="kit-list kit-list--ledger">
+            <li><span><b>The offer title,</b> in plain words rather than in campaign language.</span></li>
+            <li><span><b>Runs from and to.</b> Both dates, always. An offer without an end date is not published.</span></li>
+            <li><span><b>What is included,</b> which treatments it applies to and the reduction on each.</span></li>
+            <li><span><b>Where it applies,</b> named clinics, or all four.</span></li>
+            <li><span><b>Conditions,</b> minimum units, minimum spend or first time patient limits, stated on the card rather than hidden behind an asterisk.</span></li>
+            <li><span><b>The action,</b> and the five filter values the toolbar reads.</span></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">If none of it applies to you</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#s04"><span>Where to go with nothing running</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #45 Category chips or nav | considered: #50,#9 | rigor: heavy | why: this band answers one short question, where do I go when nothing is running for me, and the honest answer is mostly a set of DESTINATIONS rather than a set of arguments; #45 is the entry whose unit is the destination itself, so eight treatments and four clinics can sit as twelve real targets in the space three prose columns would spend explaining two of them. The pick also matches how a reader arrives here: they have already read that nothing applies to them, so what they want is the shortest path out, not another paragraph. #50, topic columns, is the right instrument when each route needs a sentence to be understood, which is true on the results and specialists routing bands and is NOT true here, where "Braces" means braces. #9, services three-col, would cap the set at three and turn the four clinics into a service menu, which they are not. ADAPTATION: the chips carry the treatment and clinic routes; the three routes that genuinely need a sentence, the price list, the roster and the new patient guide, are set beneath them as a short ledger rather than compressed into chips, so nothing is shortened past the point of being useful. The band's figure is the four clinic coverage of the one offer that is running, drawn in the locked tokens, because "which clinics" is the single most asked question about any offer and the answer is currently the same for all four. LIBRARY: _RESPONSIVE-PATTERN-LIBRARY, applied so the chip set wraps as a flow rather than as a grid, which is the one shape in this build that never needs a re-span at any tier. -->
+<section class="section section--cool" id="s04" aria-labelledby="h04" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">04</span>
+            <div>
+              <span class="kit-eyebrow">Nothing here for you today</span>
+              <h2 id="h04">Offers are periodic. The treatment you want may simply not have one.</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">That is worth saying plainly rather than leaving you to scroll to the bottom of a page that has nothing on it for you.</p>
+      </div>
+
+      <div class="col col--span-7">
+        <p class="kit-micro">By treatment</p>
+        <div class="kit-tags">
+          <a class="kit-tag" href="invisalign.html">Invisalign (Clear Aligners)</a>
+          <a class="kit-tag" href="braces.html">Braces</a>
+          <a class="kit-tag" href="porcelain-veneers.html">Porcelain veneers</a>
+          <a class="kit-tag" href="zirconia-veneers.html">Zirconia veneers</a>
+          <a class="kit-tag" href="laser-teeth-whitening.html">Zoom teeth whitening</a>
+          <a class="kit-tag" href="airflow.html">AirFlow (guided biofilm therapy)</a>
+          <a class="kit-tag" href="dental-implant.html">Dental implants</a>
+          <a class="kit-tag" href="dental-crowns.html">Crowns</a>
+        </div>
+        <p class="kit-micro">Three routes that need a sentence</p>
+        <ol class="kit-list kit-list--ledger">
+          <li><a class="kit-link-plain" href="prices.html"><b>The price list.</b> A starting figure for every treatment, whether or not an offer is running against it.</a></li>
+          <li><a class="kit-link-plain" href="specialists.html"><b>The roster.</b> The person matters more than the discount. Read who would be treating you.</a></li>
+          <li><a class="kit-link-plain" href="patients.html"><b>The new patient guide.</b> What a first visit involves, what to bring, and how payment works.</a></li>
+        </ol>
+      </div>
+
+      <div class="col col--span-5">
+        <figure class="kit-figure" data-rise>
+          <svg viewBox="0 0 560 300" width="560" height="300" role="img" aria-labelledby="coverage-t coverage-d" style="width: 100%; height: auto;">
+            <title id="coverage-t">Where the one running offer applies</title>
+            <desc id="coverage-d">Four rows, one per clinic. The anniversary offer applies at all four: Mitsukoshi BGC, Shangri-La Plaza, Bonifacio Stopover BGC and Alabang Town Center.</desc>
+            <text x="0" y="22" style="fill: var(--ds-ink-heading); font-family: var(--ds-font-mono); font-size: 15px; font-weight: 700">ANNIVERSARY OFFER, BY CLINIC</text>
+            <circle cx="12" cy="76" r="9" style="fill: var(--ds-accent)"/>
+            <line x1="34" y1="76" x2="548" y2="76" style="stroke: var(--ds-hairline); stroke-width: 2"/>
+            <text x="46" y="70" style="fill: var(--ds-ink-heading); font-family: var(--ds-font-body); font-size: 17px">Mitsukoshi BGC</text>
+            <circle cx="12" cy="142" r="9" style="fill: var(--ds-accent)"/>
+            <line x1="34" y1="142" x2="548" y2="142" style="stroke: var(--ds-hairline); stroke-width: 2"/>
+            <text x="46" y="136" style="fill: var(--ds-ink-heading); font-family: var(--ds-font-body); font-size: 17px">Shangri-La Plaza</text>
+            <circle cx="12" cy="208" r="9" style="fill: var(--ds-accent)"/>
+            <line x1="34" y1="208" x2="548" y2="208" style="stroke: var(--ds-hairline); stroke-width: 2"/>
+            <text x="46" y="202" style="fill: var(--ds-ink-heading); font-family: var(--ds-font-body); font-size: 17px">Bonifacio Stopover BGC</text>
+            <circle cx="12" cy="274" r="9" style="fill: var(--ds-accent)"/>
+            <line x1="34" y1="274" x2="548" y2="274" style="stroke: var(--ds-hairline); stroke-width: 2"/>
+            <text x="46" y="268" style="fill: var(--ds-ink-heading); font-family: var(--ds-font-body); font-size: 17px">Alabang Town Center</text>
+          </svg>
+          <figcaption class="kit-slot__cap"><b>All four, this time</b><span>An offer that runs at some clinics and not others says so on its own card.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">One thing to settle before you plan around any of it</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#s05"><span>How payment actually works here</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #8 Manifesto or belief statement | considered: #57,#33 | rigor: heavy | why: the closing on this page is not an offer summary, it is a POSITION: bring the offer to the consultation and a specialist will tell you whether the treatment suits your case before anything is booked against it. #8 is the catalogue entry whose whole job is to state a position in the brand's own voice at full measure, which is the only shape that can carry a sentence a discount page is not expected to say. It is also the right container for the structural truth this page must not soften, that the practice takes no HMO and no dental insurance, because a belief band states a fact once, plainly, at reading width, instead of tucking it into a footnote where a reader who is planning a budget will miss it. #57, the standalone pull quote, would set the same words as decoration and drop the two supporting sentences that make them actionable. #33, the custom quote driver, turns the close into a form, and the chrome already owns the page's single closing conversion band, so a second one here would be the exact double band G-CTA1 exists to stop. ADAPTATION: the copy's closing ask is folded in as a .kit-inline rail rather than authored as its own band, which Collision A permits inside a content bearing section. LIBRARY: _COMPOSITION-LAWS L1, stacked split reading order, applied so the position lands above the rail at every width and the reader meets the self pay fact before the action rather than after it. -->
+<section class="section section--warm" id="s05" aria-labelledby="h05" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">05</span>
+            <div>
+              <span class="kit-eyebrow">Ask what applies to your case</span>
+              <h2 id="h05">Bring the offer you are interested in to the consultation.</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-status kit-tab"><span class="kit-status__dot" aria-hidden="true"></span>Self pay practice. No third party settles the bill</p>
+      </div>
+
+      <div class="col col--span-8 col--copy">
+        <p class="kit-lede readw">Our specialists will tell you whether that treatment suits your case before anything is booked against it, and what the sequence would be if it does.</p>
+        <p class="kit-body readw">That is the order the assessment runs in, and it does not change because a discount is attached to one of the options. A treatment that is wrong for your case does not become right for it at a lower figure.</p>
+        <p class="kit-accentline">Elevate Dental does not accept HMO or dental insurance. All treatment is self pay, offers included.</p>
+        <p class="kit-body readw">Which is worth knowing before you plan around an offer: the figure on the card is the figure you deal with, and you get the whole plan in writing before anything is scheduled.</p>
+      </div>
+
+      <div class="col col--span-4">
+        <div class="kit-card kit-card--flat" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">What is on this page</span>
+            <span class="kit-card__unit">Today</span>
+          </div>
+          <p class="kit-card__title">One running offer, two held claim families, zero expired entries.</p>
+          <p class="kit-card__body">The list is short because the rule is strict. A promotions page that keeps its past on display is not showing you more choice, it is showing you that nobody has looked at it recently.</p>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-inline">
+          <p>Tell us which treatment you are considering and we will tell you what your case actually needs, whether or not something is running against it this month.</p>
+          <div class="kit-inline__acts">
+            <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+            <a class="kit-btn kit-btn--ghost" href="treatments.html"><span>All Treatments</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

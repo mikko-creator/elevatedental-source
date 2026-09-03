@@ -1,0 +1,631 @@
+<!--META {"title":"Prosthodontics Philippines | Crowns, Bridges, Dentures","desc":"Replace and restore teeth with crowns, bridges, complete dentures and removable partials, planned by in-house prosthodontists.","noindex":true}-->
+<!-- TITLE and DESC are the LOCKED values from _handoff/seo-enrichment.md section 1, the SEO SSOT.
+     The SSOT separator is an en dash and renders here as a pipe, because verify-no-dashes is
+     registered on this build. Only the SEPARATOR CHARACTER changed; no word was altered, added,
+     removed or reordered.
+     The key is "desc" and NOT "description": build.mjs renders esc(meta.desc), and its JSON branch
+     does not alias description to desc, so a "description" key ships an EMPTY meta description
+     while looking correct in the fragment.
+     noindex is set on EVERY page because this publishes to a PUBLIC preview URL while the pages
+     carry representative market prices rather than this clinic's own figures. robots.txt cannot
+     carry that load: crawlers read it only at the origin root, and this ships to a project
+     subpath, so the disallow-all there is inert. noindex is the protection that actually works. -->
+<!-- ============================================================================
+     PROSTHODONTICS. T-HUB, promoted from the owner-stamped template
+     _design/_tournament/templates/T-HUB/c (concept C, "THE COMPARISON").
+     PROMOTION, not redesign: the template's spine is kept (index-ring openers,
+     one shared comparison rail, a real semantic matrix, visible owner holds,
+     zero closing CTA bands) and the page carries ITS OWN copy from
+     _copy/prosthodontics.md.
+
+     THIS HUB'S CHILDREN, resolved from sitemap.yaml parent: fields, are FOUR:
+     dental-crowns, dental-bridge, removable-partial-dentures and
+     complete-dentures. That is the one hub in this set whose child count
+     matches the template's four-up rail, so the rail is kept intact. What is
+     re-cut is the four ATTRIBUTES on it. The template compares cosmetic routes
+     on Changes / Made / Quoted per / From. Nobody choosing between a crown and
+     a denture is asking what CHANGES; they are asking what is being replaced,
+     whether it comes out at night, how it is priced and where it starts. The
+     rail therefore reads Replaces / Worn / Quoted per / From.
+
+     ORDERING. The template orders its children by starting price ascending. Two
+     of these four have no supplied figure, so a price order would rank two real
+     numbers above two blanks and imply the blanks are the expensive end. The
+     order used instead is the copy's own, and it is a clinical scale: one
+     damaged tooth, one missing tooth, several missing teeth, a whole arch.
+
+     WHERE THE COPY WENT. Hero to band 01. What this field covers to band 02,
+     the four situations plus the bite paragraph. Treatments in this field to
+     band 03 and the matrix in band 04. The honest counterweight, the cases that
+     need something else finished first, to band 05, which the copy supplies
+     directly (an extraction first, or a root canal first). The specialists to
+     band 06, including the one prosthodontist the handoff actually sources.
+     Technology to band 07. Starting prices and the closing CTA to band 08.
+     The clinic list stays in the chrome.
+
+     LIBRARIES APPLIED, not merely named.
+       _RESPONSIVE-PATTERN-LIBRARY  Comp6, the table-to-cards reflow, recorded
+         MANDATORY on any three-or-four-column matrix, is why every cell in the
+         band 04 table carries a data-label: the locked sheet drops the thead at
+         767 and reprints each cell's header from that attribute. G7, equal
+         height with a mandatory mobile relax, is why the four child cards share
+         a baseline through .row--stretch and relax to content height on stack.
+       _COMPOSITION-LAWS  L1, stacked split reading order, governs bands 02, 05
+         and 07. L9, SELECTION-RATIONALE, is why every band carries an adjacent
+         ledger naming the pick, two real alternatives and why they lost.
+       _MODERN-WOW-SPEC  the ceiling the locked sheet already spends: the fixed
+         grain veil, the tint wash and the asymmetric index-ring opener.
+
+     IMAGERY. Five real first-party files from _imagery-map.json. The two
+     dental-bridge before-and-after files in this page's pool are DELIBERATELY
+     UNUSED: proof_rules.clinical-image-library is status blocked (B-2, no
+     documented owner authorisation), so a before-and-after pair may not be
+     published in any form. The one portrait-style stock frame on the page is
+     captioned as a stock frame rather than left to read as a case result.
+
+     HONESTY. Two of the four treatments have a representative peso figure and
+     two have none. Every peso figure carries a plain-English representative-market
+     disclosure in visible content, and each figure is written with the peso
+     glyph U+20B1 rather than an entity so the currency and price-marking rules in
+     client-rules.json can actually see it. The self-pay truth is stated in band
+     08 in its canonical wording. Four owner holds are shown ON the page: the
+     two missing figures, the per-field roster beyond the one sourced name, the
+     real prices, and the free-consultation term the copy flags as agent-derived
+     rather than owner-confirmed.
+
+     ZERO closing CTA bands, ZERO dark bands and ZERO arc seams are authored
+     here. The chrome's .precta is the page's one closing band.
+     ============================================================================ -->
+
+<!-- pick: HERO-COMPOSITIONS.md #4 Diptych portrait + product/service | considered: #23,#20,#2 | rigor: heavy | why: this is the ONE hub in the set whose opening argument is a person rather than a fork, because the copy's own standfirst says the point is continuity, that the specialist who assesses the case is the specialist who finishes it, and the handoff sources exactly one prosthodontist by name. #4 is the catalogued hero built to stand a named practitioner beside the work, and it is the only one that can carry a real named credential in the first screen without inventing a bench. The template's own #23 comparison hero was the incumbent and was genuinely weighed: it fits a two-route fork, and this field has FOUR routes, so a two-panel hero would have to pick two of the four and silently demote the others before the reader has met any of them. #20 three-column text plus stat plus photo wants a countable proof column, and the specialist count and field count are rationed by client-rules.json to other slugs. #2 split-text-right with photo-left is the plain version of what is used here and would work, but it has no second panel at all, so the credential and the work would compete for one column. ADAPTATION: #4 asks for a PORTRAIT half. No portrait of the named prosthodontist is in the asset pool and a borrowed face would be fabricated proof, so the portrait half is spent on the WORK the roster produces, a bench of finished units, and the credential is carried as text in a card beside it. -->
+<!-- FRONT OF HOUSE, 2026-08-25. The opener is re-composed to the foh-hero contract: one
+     full-bleed scrimmed photograph carrying a short headline, then the eyebrow / lede /
+     actions lockup beneath it. .surface-dark is this page's one dark beat and is what
+     verify-not-flat credits. The HERO-COMPOSITIONS #4 pick above still explains WHAT the
+     photograph may show: no portrait of the named prosthodontist exists in the pool and a
+     borrowed face would be fabricated proof, so the frame is spent on the WORK the roster
+     produces. That reasoning is unchanged; only the diptych composition is superseded.
+     THE .kit-slot IS DELETED because it held THIS EXACT FILE: keeping it would print the
+     bench of finished units twice in one section. Its .col--span-5 col--media went with it
+     rather than leaving an empty grid cell that still eats the 40px row gap.
+     WHAT ELSE WAS REMOVED AND WHERE EVERY FACT STILL LIVES. The .kit-open ordinal "01" is
+     spent by the band; the numbering resumes at 02. The first kit-body names the four
+     appliances, and section 03 ("The four routes, side by side") names all four again as its
+     own row headings, so the list is not lost. The continuity kit-body - "the specialist who
+     assesses your case is the specialist who finishes it" - is restated in section 02
+     ("Prosthodontics is one of the nine fields of dentistry practiced in-house at Elevate
+     Dental") and in the closing band ("Prosthodontics is handled in-house by named
+     specialists. Book one consultation instead of chasing a referral"). The .kit-accentline
+     about which appliances come out at night is exactly what section 03's comparison carries
+     as a repeated "Removable, out at night" row, and section 04 is the deciding matrix built
+     on the same distinction. The .kit-foot's four chips were labels for those same four
+     routes and are dropped with them; the secondary CTA still points at section 04, which is
+     where the comparison actually lives. The lede keeps its one existing sentence unchanged. -->
+<section class="section surface-dark kit-hero foh-hero" id="s01" aria-labelledby="h01" data-surface="dark" data-rise>
+  <div class="container">
+    <div class="row">
+      <div class="col col--full">
+        <div class="foh-hero__stage">
+          <figure class="foh-hero__band">
+            <img class="foh-hero__img" src="../assets/generated/gen-hero-lab-bench.jpg" alt="A dental laboratory bench with pale plaster study models on a bone worktop, fine sculpting tools laid in a row under a brushed brass lamp." width="3136" height="1344" loading="eager" fetchpriority="high" decoding="async">
+            
+          </figure>
+          <div class="foh-hero__inner">
+              <h1 class="foh-hero__title" id="h01">Prosthodontics Philippines: Crowns, Bridges, Dentures</h1>
+            </div>
+          <div class="foh-hero__lockup">
+            <p class="foh-hero__eyebrow">Prosthodontics</p>
+            <p class="foh-hero__lede">Prosthodontics restores teeth that are damaged and replaces teeth that are gone.</p>
+            <div class="kit-actions">
+              <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+              <a class="kit-btn kit-btn--secondary" href="#s04">Compare all four appliances</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #7 Problem framing | considered: #6,#9,#45 | rigor: heavy | why: the copy does not hand this band a list of services or a set of reader profiles; it hands four SITUATIONS, each stated as a problem with its answer attached, and #7 is the entry whose whole structure is a problem stated plainly before any product is named. That ordering matters on this field more than on any other in the set, because a reader arrives knowing what has gone wrong (a tooth broke, a tooth is missing, the denture rocks) and not knowing which of four nouns applies to it. #6 the qualifier is the pediatric hub's pick and is the natural rival, but it sorts readers by PROFILE, and here every reader has the same profile, something is missing or broken, so the sort that helps is by situation instead. #9 services 3-col cannot hold four situations without a second row and would name the products before the problems, which reverses the copy. #45 category chips would strip each situation to a label, and the clause after each one is the part that lets a reader recognise their own case. ADAPTATION: the band closes on the bite paragraph, which is the copy's own correction to a common misreading, that worn edges and a rocking denture are prosthodontic rather than cosmetic problems, and it is set as a tinted card so the correction sits beside the list rather than under it. -->
+<section class="section section--cool" id="s02" aria-labelledby="h02" data-rise>
+  <div class="container">
+    <div class="row row--split">
+
+      <div class="col col--copy">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">02</span>
+            <div>
+              <span class="kit-eyebrow">What this field covers</span>
+              <h2 id="h02">Four situations, and what each one is answered with</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">A prosthodontist rebuilds what is missing or broken, and builds it so your bite can carry it for years.</p>
+        <ul class="kit-list">
+          <li><b class="kit-strong">A tooth too damaged to hold a filling.</b> It is covered with a crown.</li>
+          <li><b class="kit-strong">A gap where a tooth used to be.</b> It is closed with a fixed bridge or, where the case allows, an implant restoration.</li>
+          <li><b class="kit-strong">Several missing teeth in the same arch.</b> They are replaced with a removable partial denture.</li>
+          <li><b class="kit-strong">A jaw with no teeth left.</b> It is restored with a complete denture.</li>
+        </ul>
+        <div class="kit-card kit-card--tint kit-card--pad" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">The misreading this field corrects</span>
+            <svg class="kit-ring" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+            </svg>
+          </div>
+          <p class="kit-card__title">The field also covers the bite itself.</p>
+          <p class="kit-card__body">Worn edges, a collapsed bite height and existing dentures that rock or rub are prosthodontic problems rather than cosmetic ones, and they are assessed as such. Prosthodontics is one of the nine fields of dentistry practiced in-house at Elevate Dental. That is why a case needing an extraction first, or a root canal first, does not move to a different clinic between steps. The plan is written once and carried out by the people who wrote it.</p>
+        </div>
+      </div>
+
+      <div class="col col--media">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--circle">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2022_12_technician-working-on-prosthetic-bridge-with-drill-2022-12-18-17-46-57-utc.jpg" alt="Two ungloved hands at a workbench, one holding a small three-unit ceramic bridge and the other bringing a rotary handpiece bur against it." width="1200" height="800" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Fit before finish</b><span>A span is shaped against the reading, not by eye.</span></figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #10 Services 4-col compact | considered: #9,#21,#44 | rigor: heavy | why: this is the band that does the T-HUB's actual job, routing to the four real child slugs, and #10 is the entry built for exactly four peers with a lighter content load per column, which is what lets all four be seen together. A hub whose children cannot be seen together is not a hub, it is four adverts stacked. This is the template's own pick and it is KEPT here rather than re-argued, because this hub is the one whose child count the template was drawn for. What is adapted is the rail: each tile carries a SPEC RAIL in the locked .kit-card__hours, whose margin-top:auto pins it to the bottom, so the four rails land on one baseline and the reader compares by running the eye down a column. #9 services 3-col cannot hold four children without demoting one to a second row, which silently ranks them. #21 case studies 3-col is written for evidence, and this practice's clinical images are owner-blocked, so a case-study shape would have to be filled with something that is not a case. #44 featured collection is the commerce form of the same row and would put price first on figures that are not prices yet. -->
+<section class="section section--paper" id="s03" aria-labelledby="h03" data-rise>
+  <div class="container">
+    <div class="row row--stretch">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">03</span>
+            <div>
+              <span class="kit-eyebrow">Treatments in this field</span>
+              <h2 id="h03">The four routes, side by side</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">Four treatments sit under prosthodontics. Each has its own page with the full process, the timeline and the starting price. They are ordered here by scale, from one damaged tooth to a whole arch.</p>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Route 01</span>
+            <span class="kit-card__unit">One tooth</span>
+          </div>
+          <p class="kit-card__title">Dental Crowns</p>
+          <p class="kit-card__body">A crown covers a tooth that is cracked, heavily filled or worn down, and returns it to full chewing function. Emax and zirconia. The fit is checked with OccluSense bite analysis before it is cemented.</p>
+          <dl class="kit-card__hours">
+            <div><dt>Replaces</dt><dd>Nothing, it covers</dd></div>
+            <div><dt>Worn</dt><dd>Cemented, stays in</dd></div>
+            <div><dt>Quoted per</dt><dd>Unit</dd></div>
+            <div><dt>From</dt><dd>₱30,000</dd></div>
+          </dl>
+          <p class="kit-meta">A representative market figure for crowns in the Philippines, not an Elevate price.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="dental-crowns.html"><span>Dental Crowns</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Route 02</span>
+            <span class="kit-card__unit">One gap</span>
+          </div>
+          <p class="kit-card__title">Dental Bridge</p>
+          <p class="kit-card__body">A fixed replacement that spans a gap using the neighboring teeth as support. It is cemented in place, so there is nothing to take out at night.</p>
+          <dl class="kit-card__hours">
+            <div><dt>Replaces</dt><dd>One missing tooth</dd></div>
+            <div><dt>Worn</dt><dd>Cemented, stays in</dd></div>
+            <div><dt>Quoted per</dt><dd>Span</dd></div>
+            <div><dt>From</dt><dd>-</dd></div>
+          </dl>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="dental-bridge.html"><span>Dental Bridge</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Route 03</span>
+            <span class="kit-card__unit">Several teeth</span>
+          </div>
+          <p class="kit-card__title">Removable Partial Dentures</p>
+          <p class="kit-card__body">Replaces several missing teeth while keeping the natural teeth you still have. It comes out for cleaning and goes back in.</p>
+          <dl class="kit-card__hours">
+            <div><dt>Replaces</dt><dd>Several in one arch</dd></div>
+            <div><dt>Worn</dt><dd>Removable, out at night</dd></div>
+            <div><dt>Quoted per</dt><dd>Appliance</dd></div>
+            <div><dt>From</dt><dd>-</dd></div>
+          </dl>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="removable-partial-dentures.html"><span>Partial Dentures</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Route 04</span>
+            <span class="kit-card__unit">A whole arch</span>
+          </div>
+          <p class="kit-card__title">Complete Dentures</p>
+          <p class="kit-card__body">A full-arch replacement for every tooth in the upper or lower jaw, fitted by our prosthodontists and checked with OccluSense bite analysis so contact is even across the arch.</p>
+          <dl class="kit-card__hours">
+            <div><dt>Replaces</dt><dd>Every tooth in an arch</dd></div>
+            <div><dt>Worn</dt><dd>Removable, out at night</dd></div>
+            <div><dt>Quoted per</dt><dd>Arch</dd></div>
+            <div><dt>From</dt><dd>₱60,000</dd></div>
+          </dl>
+          <p class="kit-meta">An indicative market figure for a full arch, not an Elevate price.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="complete-dentures.html"><span>Complete Dentures</span></a>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: PRICING-SECTIONS.md #2 Comparison table to cards on mobile | considered: #4,#6,#3 | rigor: heavy | why: the cards above say what each route is; only a matrix can say what separates four routes on the axes a reader is actually weighing, and #2 is the catalogued band whose stance is that nothing is hidden, every option against every attribute in one semantic table. It is also the only pricing entry that can hold a price column INSIDE a clinical comparison, which matters here because two of the four cells hold a number and two hold an admission that none was supplied, and putting those side by side is the honest way to show the gap. Implementation is verified rather than invented: _RESPONSIVE-PATTERN-LIBRARY records Comp6, the table-to-cards reflow, as MANDATORY on a four-column matrix, and the locked sheet already ships it. #4 quote-only cost-model split refuses to print a figure at all, which would hide the two figures that DO exist. #6 quote-configurator ladder is built for one treatment whose fee moves with options, not for four different appliances. #3 monthly and annual billing toggle is a subscription device and this practice bills per treatment. ADAPTATION: a sixth column is added for what each route asks of the teeth beside it, because that is the axis the copy keeps returning to and it is the one a patient never thinks to ask about until the plan is drawn. -->
+<section class="section section--warm" id="s04" aria-labelledby="h04" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">04</span>
+            <div>
+              <span class="kit-eyebrow">Side by side</span>
+              <h2 id="h04">The deciding matrix</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">The same four routes on the axes that actually separate them. Read down a column, not across a brochure.</p>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-mesh" aria-hidden="true" style="background-image:var(--ds-grid)"></div>
+        <div class="kit-table__scroll">
+          <table class="kit-table">
+            <caption>Prosthodontic routes compared. Every peso figure below is drawn from published Philippine market ranges, not from an Elevate Dental price list.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Treatment</th>
+                <th scope="col">What it replaces</th>
+                <th scope="col">Fixed or removable</th>
+                <th scope="col">Asks of the teeth beside it</th>
+                <th scope="col">Quoted per</th>
+                <th scope="col" class="kit-table__num">Starting price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Treatment"><b class="kit-strong">Dental crowns</b></td>
+                <td data-label="What it replaces">Nothing. It covers a tooth</td>
+                <td data-label="Fixed or removable">Fixed, cemented on</td>
+                <td data-label="Asks of the teeth beside it">Nothing</td>
+                <td data-label="Quoted per">Unit</td>
+                <td data-label="Starting price" class="kit-table__num"><span class="kit-table__from">From</span>₱30,000<span class="kit-table__from">Not an Elevate price</span></td>
+              </tr>
+              <tr>
+                <td data-label="Treatment"><b class="kit-strong">Dental bridge</b></td>
+                <td data-label="What it replaces">One missing tooth, sometimes more</td>
+                <td data-label="Fixed or removable">Fixed, nothing to remove</td>
+                <td data-label="Asks of the teeth beside it">They carry the span</td>
+                <td data-label="Quoted per">Span</td>
+                <td data-label="Starting price" class="kit-table__num">-</td>
+              </tr>
+              <tr>
+                <td data-label="Treatment"><b class="kit-strong">Removable partial dentures</b></td>
+                <td data-label="What it replaces">Several teeth gone from one arch</td>
+                <td data-label="Fixed or removable">Removable, out at night</td>
+                <td data-label="Asks of the teeth beside it">They hold it in place</td>
+                <td data-label="Quoted per">Appliance</td>
+                <td data-label="Starting price" class="kit-table__num">-</td>
+              </tr>
+              <tr>
+                <td data-label="Treatment"><b class="kit-strong">Complete dentures</b></td>
+                <td data-label="What it replaces">Every tooth in one jaw</td>
+                <td data-label="Fixed or removable">Removable, out at night</td>
+                <td data-label="Asks of the teeth beside it">None are left to ask</td>
+                <td data-label="Quoted per">Arch</td>
+                <td data-label="Starting price" class="kit-table__num"><span class="kit-table__from">From</span>₱60,000<span class="kit-table__from">Not an Elevate price</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="kit-tags">
+          <span class="kit-tag kit-tag--accent kit-tab">Two figures are market-derived. Neither is a quote.</span>
+        </div>
+      </div>
+
+      <div class="col col--span-7">
+        <div class="kit-foot">
+          <p class="kit-micro">What a matrix cannot decide</p>
+          <p class="kit-body readw--wide">Every row above is true of the appliance in general. None of it is true of your jaw until someone has read the bone, the bite and what is left of the teeth. Two people can arrive missing the same tooth and leave with different plans, because what holds the replacement is what actually chooses.</p>
+          <p class="kit-body readw--wide">Each figure is a starting point, not a quote. The final fee depends on case complexity and is confirmed at consultation.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #15 Comparison table (us vs them) | considered: #14,#29,#8 | rigor: heavy | why: the strongest thing a hub can say is the thing that costs it a booking, so the band after the matrix is the case for NOT starting the restoration yet, and #15 is the only entry that gives an opposition an actual shape, two peer panels weighted equally with the deciding question named between them. The copy earns it: it states plainly that a case needing an extraction first, or a root canal first, does not move to a different clinic between steps, which is not a caveat, it is a second answer with its own sequence. Rendering it as two panels of the same size is what makes finish something else first read as a recommendation rather than a hedge in small print. #14 tabbed content would hide one of the two answers behind a control, and making a reader click to be told their case is not ready undoes the argument. #29 before-and-after pair is barred outright here: proof_rules.clinical-image-library is blocked pending a documented owner authorisation, so the two before-and-after files in this page's asset pool may not be published in any form. #8 manifesto carries one voice and no opposition. RE-REGISTERED, load bearing: #15 is authored as us versus THEM. There is no THEM. competitorFraming.tierBDensityCap is zero on every page, so the axis is re-pointed at the SAME practice's two answers, build it now or finish the groundwork first, which is the only opposition this page is permitted to draw and the only one that helps. -->
+<section class="section section--paper" id="s05" aria-labelledby="h05" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">05</span>
+            <div>
+              <span class="kit-eyebrow">The honest half</span>
+              <h2 id="h05">When the groundwork comes first</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">A restoration is only as good as what holds it. Two conditions decide whether the appliance is made now or after something underneath it has been dealt with.</p>
+      </div>
+
+      <div class="col col--span-4">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2022_03_Dentures-Vs-Implants-Pros-and-Cons.jpg" alt="A complete upper and lower denture set photographed together on a plain white ground, the two arches meeting at the front teeth." width="1200" height="800" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Made to a jaw</b><span>The appliance is built to what is there on the day it is measured.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--span-4 col--stretch">
+        <div class="kit-card kit-card--pad" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Build it now</span>
+            <span class="kit-card__unit">Ready</span>
+          </div>
+          <p class="kit-card__title">Make the restoration now when</p>
+          <p class="kit-card__body">what is left of the tooth is sound, the teeth that will carry the work are stable, and nothing under the gum is waiting to be treated. Then the remaining questions are material and fit, and those are settled against a scan and a bite reading rather than against an estimate.</p>
+        </div>
+      </div>
+
+      <div class="col col--span-4 col--stretch">
+        <div class="kit-card kit-card--pad" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Finish the groundwork</span>
+            <span class="kit-card__unit">Not yet</span>
+          </div>
+          <p class="kit-card__title">Do something else first when</p>
+          <p class="kit-card__body">the tooth needs a root canal before a crown can be built over it, or a tooth has to come out before an arch can be planned. An appliance made over unfinished work is measured against a mouth that is about to change shape.</p>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Why a hub page says this out loud</p>
+          <p class="kit-body readw--wide">Being told the sequence before the quote is not a delay and it is not an upsell. It is the difference between an appliance that seats and one that is remade in its first year, and you are better served hearing it here than at the chair with a plan already drawn.</p>
+          <p class="kit-body readw--wide">Here the endodontist and the oral surgeon are colleagues on the same case, so a finding like that revises the sequence in one conversation rather than restarting it somewhere else.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: CARD-VARIATIONS.md #4 Circle-icon service card with arrow link | considered: #8,#3 | rigor: heavy | why: band 05 has just told the reader their case may need another field finished first, so this band has to make that a route rather than a dead end, and #4 is catalogued for medical and dental practices with multi-product navigation: a light card whose circular mark, short clause and ruled link are a tap target rather than a paragraph. This system already owns a circular mark, the index ring, drawn from tokens as inline SVG, so the pattern lands without minting an icon set. #8 team bio card is the entry this band would prefer, because the handoff sources one prosthodontist by name and a bio card is built for exactly that, but a single bio card beside three empty ones would either stand alone as a bench of one or invite three borrowed faces, and per-clinic assignment is blocked outright, so the credential is carried as TEXT in the band's own truth rail instead and the cards stay routes. #3 minimal 3-up icon-top drops all card chrome and these are onward navigation, so they need an edge and a real target. The dark service tile that opens CARD-VARIATIONS.md was also weighed and refused: it inverts the ground, and the measured tone is dark_ratio zero with the one permitted flip already spent on the chrome's closing band. -->
+<section class="section section--cool" id="s06" aria-labelledby="h06" data-rise>
+  <div class="container">
+    <div class="row row--stretch">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">06</span>
+            <div>
+              <span class="kit-eyebrow">The specialists in this field</span>
+              <h2 id="h06">Who else is in the room</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">Prosthodontics here is done by prosthodontists. That is the whole argument. A single-dentist practice sends this work out to somebody else; our patients stay with the team that assessed them.</p>
+        <p class="kit-body readw--wide">These are the three fields a restorative case most often turns out to need before or beside the appliance itself.</p>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card kit-card--tint" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">If the nerve is involved</span>
+            <svg class="kit-ring" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+            </svg>
+          </div>
+          <p class="kit-card__title">Endodontics</p>
+          <p class="kit-card__body">A tooth that needs the pulp removed before a crown can be built over it is an endodontic case first. The crown is designed after that work is sealed, not around it.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="endodontics.html"><span>Endodontics</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card kit-card--tint" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">If a tooth has to go</span>
+            <svg class="kit-ring" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+            </svg>
+          </div>
+          <p class="kit-card__title">Oral Surgery</p>
+          <p class="kit-card__body">An extraction, or an implant to carry a restoration, is surgical work planned on the imaging. Where a case allows an implant to carry the work, this is the field that places it.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="oral-surgery.html"><span>Oral Surgery</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card kit-card--tint" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">If the foundation is unstable</span>
+            <svg class="kit-ring" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+            </svg>
+          </div>
+          <p class="kit-card__title">Periodontics</p>
+          <p class="kit-card__body">The gum and bone a fixed restoration is anchored to. Where the supporting tissue is being treated, that treatment is settled before an appliance is measured to it.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="periodontics.html"><span>Periodontics</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Named, before you book</p>
+          <p class="kit-body readw--wide">Dr. Esther Casipit-Tan, MScD, is a prosthodontist on our published roster. Every specialist profile carries a full name, the field that clinician practices and their postnominal credentials, so you can read who will treat you before you book rather than after you arrive.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="specialists.html"><span>See the specialists in prosthodontics</span></a>
+            <a class="kit-btn kit-btn--ghost" href="treatments.html"><span>All Treatments</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #12 Feature row with screenshot | considered: #13,#9,#3 | rigor: heavy | why: on this field the imaging IS the plan, and #12 is the entry whose shape is a named system beside the thing it produces, a reading held up next to the work it governs. That is literally what the band shows: four named systems in the locked .kit-sys lattice beside a photograph of an appliance being checked against an instrument rather than against a guess. #13 bento feature grid is the pediatric hub's pick for the same lattice and is deliberately NOT reused here, because on that page the equipment had to sit back and here it is the argument, so the band gets a media column and a heavier lede rather than a quiet panel. #9 services 3-col cannot hold four peers without a second row. #3 minimal icon-top would need an icon per system and this build owns no icon set. CLEARANCE, load bearing: every system named here is cleared nominative-text-only in client-rules.json third_party_marks. No logo, no badge, no partner status, no manufacturer attribution beyond the name, and the Sol laser is not named on this page at all because nothing in this field's copy uses it. -->
+<section class="section section--paper" id="s07" aria-labelledby="h07" data-rise>
+  <div class="container">
+    <div class="row row--split">
+
+      <div class="col col--copy">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">07</span>
+            <div>
+              <span class="kit-eyebrow">Technology used here</span>
+              <h2 id="h07">What the appliance is measured against</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Prosthodontic planning runs on named systems, not on unspecified equipment.</p>
+        <div class="kit-sys" data-rise>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">01</span>
+            <p class="kit-sys__name">3D CBCT imaging</p>
+            <p class="kit-sys__note">A three-dimensional scan of the jaw showing bone volume, root position and the nerve canal before a crown, bridge or implant restoration is planned.</p>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">02</span>
+            <p class="kit-sys__name">iTero intraoral scanner</p>
+            <p class="kit-sys__note">A digital impression taken with a handheld scanner instead of a tray of impression material. The scan travels to the laboratory as a file.</p>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">03</span>
+            <p class="kit-sys__name">OccluSense bite analysis</p>
+            <p class="kit-sys__note">A digital record of where your teeth meet and how hard. The restoration is adjusted against that reading rather than against an estimate.</p>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">04</span>
+            <p class="kit-sys__name">RayFace facial scanner</p>
+            <p class="kit-sys__note">A 3D scan of your face, used to plan crowns and smile design against your actual facial proportions rather than a generic template.</p>
+          </div>
+        </div>
+        <div class="kit-foot">
+          <p class="kit-micro">Imaging</p>
+          <p class="kit-body readw--wide">The cone-beam scan is available at all four clinics: Mitsukoshi BGC, Shangri-La Plaza, Bonifacio Stopover BGC and Alabang Town Center. On this field it is what a bridge or an implant restoration is planned on, so the volume and the plan happen in one building.</p>
+          <p class="kit-status"><span class="kit-status__dot" aria-hidden="true"></span>3D CBCT imaging, all four clinics</p>
+        </div>
+        <div class="kit-actions kit-actions--tight">
+          <a class="kit-btn kit-btn--ghost" href="technology.html"><span>Full detail on each system</span></a>
+          <a class="kit-btn kit-btn--ghost" href="locations.html"><span>All Locations</span></a>
+        </div>
+      </div>
+
+      <div class="col col--media">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--arch">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2021_11_5-Denture-Care-Tips-Dos-and-Donts.jpg" alt="Blue-gloved hands holding a lower denture on a pink base while a white powered handpiece tip is brought against its front teeth, in a green-tiled treatment room." width="1200" height="800" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Checked, not assumed</b><span>An appliance is adjusted against a reading before it is handed over.</span></figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #26 Pull-quote section | considered: #57,#40,#8 | rigor: heavy | why: the self-pay fact is the one sentence on this page that changes whether a reader should be here at all, and C7 requires it stated plainly rather than buried as fine print at the foot. #26 is the only entry that is a single statement standing alone with nothing else competing in the band, which is what makes a disclosure read as a disclosure rather than as a term someone hoped you would skim. Giving it the page's most emphatic typographic treatment, the locked .kit-quote--display, is the design argument: on a page whose job is comparison, the one thing that is not comparable gets the one treatment nothing else on the page uses. #57 standalone pull-quote is the same device catalogued as a decorative transition between bands, and this is not a rhythm break, it is a qualifying fact with consequences. #40 pre-footer CTA band is precisely the standalone closing band G-CTA1 counts, and the chrome's .precta already is this page's one, so picking it would put the page at two and fail closed. #8 manifesto would recast a payment condition as a brand belief, which the sector reconciliation refuses. ADAPTATION recorded rather than left for the gate: #26 mandates no other content in the band, and two ruled rails are added beneath the statement, one qualifying the figures the page has just printed and one folding the single mid-page ask inline, because Collision A binds this body to zero closing bands and the ask has to live somewhere content-bearing. -->
+<section class="section section--warm" id="s08" aria-labelledby="h08" data-rise>
+  <div class="container">
+    <div class="row">
+      <div class="col col--full">
+
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">08</span>
+            <div>
+              <span class="kit-eyebrow">Paying for it</span>
+              <h2 id="h08">One condition that is not a matter of preference</h2>
+            </div>
+          </div>
+        </div>
+
+        <p class="kit-quote kit-quote--display readw">Elevate Dental does not accept HMO or dental insurance. All treatment is self-pay.</p>
+        <p class="kit-body readw">That is stated here, beside the figures, because finding it out late, halfway through a treatment plan that runs across several appointments, is worse than reading it now.</p>
+
+        <div class="kit-foot">
+          <p class="kit-micro">What the figures on this page are</p>
+          <p class="kit-body readw--wide">Every peso figure above is anchored to what this kind of work costs across the wider market. None of them is an Elevate Dental price, and your own number is quoted per treatment after a clinical assessment.</p>
+          <p class="kit-body readw--wide">None of these figures may be read as a price, a range, a floor or an estimate. Two of the four routes carry no number at all, which is deliberate rather than an omission.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="prices.html"><span>See the full price list</span></a>
+          </div>
+        </div>
+
+        <div class="kit-truth">
+          <p>Each figure above is anchored to published Philippine market ranges rather than to a price list of ours. Your own figure is quoted per treatment once a specialist has assessed the teeth, the bite and what is left to build on.</p>
+        </div>
+
+        <div class="kit-inline">
+          <p>One consultation is enough to start. The assessment, the treatment plan and the quote come from the specialist who would do the work, and nothing is made until you have agreed to it.</p>
+          <div class="kit-inline__acts">
+            <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+            <a class="kit-btn kit-btn--ghost" href="contact.html"><span>Call Us</span></a>
+          </div>
+        </div>
+
+        <div class="kit-foot">
+          <p class="kit-micro">The outcome</p>
+          <p class="kit-body readw--wide">Prosthodontics is handled in-house by named specialists. Book one consultation instead of chasing a referral. Your case is finished by the people who assessed it.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

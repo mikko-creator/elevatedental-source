@@ -1,0 +1,384 @@
+<!--META {"title":"New Dental Patient Guide | Your First Visit","desc":"What to bring, what the first appointment involves, our forms, accepted payment methods and answers to common questions.","noindex":true}-->
+<!-- TITLE and DESC are the LOCKED values from _handoff/seo-enrichment.md section 1, the SEO SSOT.
+     The SSOT separator is an en dash and renders here as a pipe, because verify-no-dashes is
+     registered on this build. Only the SEPARATOR CHARACTER changed; no word was altered, added,
+     removed or reordered.
+     The key is "desc" and NOT "description": build.mjs renders esc(meta.desc), and its JSON branch
+     does not alias description to desc, so a "description" key ships an EMPTY meta description
+     while looking correct in the fragment.
+     noindex is set on EVERY page because this publishes to a PUBLIC preview URL while the pages
+     carry representative market prices rather than this clinic's own figures. robots.txt cannot
+     carry that load: crawlers read it only at the origin root, and this ships to a project
+     subpath, so the disallow-all there is inert. noindex is the protection that actually works. -->
+<!-- ============================================================================
+     THE BODY. patients, page type T-PERSONA, promoted from the owner-stamped T-PERSONA
+     concept B and then RE-COMPOSED against _copy/patients.md.
+
+     THE FLEX, STATED PLAINLY. patients is the ONLY page of this type that is not a
+     branch. The stamped concept solves ARRIVAL: numbered steps beside a real photograph,
+     a refusal to fake a map, and every unverified fact carried as a visible held block.
+     That method transfers exactly, because a first visit is also an arrival; what changes
+     is WHAT the reader is arriving at. The template walks a body through a building.
+     This page walks a body through an APPOINTMENT: what happens in the chair, in the
+     order it happens, then the two things about money that a patient is entitled to know
+     before they book rather than at the desk. So the numbered ledger survives as the
+     sequence of the first visit, and the wayfinding stages are replaced by the stages of
+     the appointment itself. No address, no floor and no direct line is repeated here:
+     the four clinics own those, this page owns the visit.
+
+     THE ORDER IS THE COPY'S OWN, AND THE ONE FACT THAT MOVES IS DELIBERATE. The
+     self-pay disclosure is placed in the MIDDLE of the page attached to the payment
+     stage, not at the foot, because the copy states in terms that it is the single fact
+     most likely to change a reader's decision and that burying it in an accordion wastes
+     the trust that disclosing it early buys.
+
+     SIX SECTIONS: what a first appointment is; the visit in order; forms and what to
+     bring; how to pay and what is not accepted; instalment arrangements; the questions
+     we are asked most, closing on the ask.
+
+     THE ONE PESO FIGURE ON THIS PAGE IS ILLUSTRATIVE AND SAYS SO. Section five carries
+     the SHAPE of an instalment arrangement because the copy carries it, and it ships with
+     a plain-English market-figure disclosure in visible text beside the figure, plus
+     the held block recording that no partner bank may be named and no term presented as
+     live until the client confirms which agreements are in force.
+
+     GROUND SEQUENCE: paper, cool, paper, warm, cool, warm, then the chrome's dark band.
+     ZERO closing CTA bands, ZERO dark bands, ZERO arc seams, ZERO page-local CSS.
+     The specialist total, the discipline total and the one-roof phrase are rationed by
+     client-rules.json to other pages and are absent here by construction. No clinic is
+     given a capability the four-clinic CBCT scope does not cover.
+     ============================================================================ -->
+
+<!-- pick: HERO-COMPOSITIONS.md #4 Diptych portrait + product/service | considered: #10,#28,#20 | rigor: heavy | library: _COMPOSITION-LAWS L3 media-fits-track, _MODERN-DESIGN-PATTERN-LIBRARY H-series shape-masked media | why: this page opens on a PROMISE about a procedure rather than on a place, that a first appointment is a consultation and that everything about to happen is set out in advance, and #4 is the entry built to pair a statement with the thing the statement is about, so the sentence sits beside the artefact a first visit actually turns on, a tooth explained across a desk; that is the honest picture for a consultation, and it is available as a real first-party file, which a photograph of a smiling result is not, because every before-and-after file in this library is owner-blocked. #10's centred headline-only hero would carry the promise in type alone and leave the page's first screen with no evidence of what a consultation looks like. #28's embedded map hero is the branch pattern and is meaningless here: this page is not an address and has no pin to place. #20's three-column text-stat-photo hero would need a countable fact to fill its middle cell, and the only countable things on this page are a price list this page must not quote and a specialist total rationed to other pages, so the cell would have to be padded to exist. ADAPTATION: #4's second panel is catalogued as a portrait, and no clinician portrait may appear here, because naming or picturing a clinician against a service implies an assignment no receipt supports; the panel therefore carries the CONSULTATION rather than the consultant. -->
+<!-- FRONT OF HOUSE, 2026-08-25. The opener is re-composed to the foh-hero contract: one
+     full-bleed scrimmed photograph carrying a short headline, then the eyebrow / lede /
+     actions lockup beneath it. .surface-dark is this page's one dark beat and is what
+     verify-not-flat credits. The HERO-COMPOSITIONS #4 pick above still explains WHY this
+     photograph and not a portrait or a smiling result - the panel carries the consultation
+     rather than the consultant, and every before-and-after file in this library is
+     owner-blocked. Only the diptych composition is superseded.
+     THE .kit-slot IS DELETED because it held THIS EXACT FILE: keeping it would print the
+     cutaway molar twice in one section. Its .col--media went with it rather than leaving an
+     empty grid cell that still eats the 40px row gap. Its caption, "The consultation / What
+     is happening, explained before it is treated", is the same claim the band now makes with
+     the same photograph, so nothing is asserted that was not asserted before.
+     WHAT ELSE WAS REMOVED AND WHERE EVERY PROMISE STILL LIVES. The .kit-open ordinal "New
+     patients" is spent by the band. The kit-body paragraph is this page's own table of
+     contents, and every clause of it is a section heading below: "Your first appointment is a
+     consultation... examine, image if imaging is needed, and then set out your options" is
+     restated stage by stage in the s-visit ledger; "what to bring" is h-forms ("Forms and what
+     to bring"); "what you can pay with, and what we do not accept" is h-pay ("We do not accept
+     HMO or dental insurance") and h-instal ("Instalment options"). No promise leaves the page.
+     The lede keeps its one existing sentence unchanged. -->
+<section class="section surface-dark kit-hero foh-hero" id="s-first" aria-labelledby="h-first" data-surface="dark" data-rise>
+  <div class="container">
+    <div class="row">
+      <div class="col col--full">
+        <div class="foh-hero__stage">
+          <figure class="foh-hero__band">
+            <img class="foh-hero__img" src="../assets/generated/gen-hero-waiting-detail.jpg" alt="A quiet waiting corner with two pale armchairs, a low table and a potted palm against a navy dado." width="3136" height="1344" loading="eager" fetchpriority="high" decoding="async">
+            
+          </figure>
+          <div class="foh-hero__inner">
+              <h1 class="foh-hero__title" id="h-first">New Patient Guide</h1>
+            </div>
+          <div class="foh-hero__lockup">
+            <p class="foh-hero__eyebrow">Before you book</p>
+            <p class="foh-hero__lede">Everything you need before a first visit, in the order you need it.</p>
+            <div class="kit-actions">
+              <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+              <a class="kit-btn kit-btn--secondary" href="locations.html">Choose a clinic</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #27 Numbered process steps | considered: #28,#14,#8 | rigor: heavy | library: _RESPONSIVE-PATTERN-LIBRARY G7 equal-height cards, _COMPOSITION-LAWS L1 mobile stack-order | why: a first appointment IS a strictly ordered procedure, four things in one order, and the reader's actual anxiety is not what each one is but WHEN it happens and how long the whole thing takes, so the ordinal has to be carried structurally rather than promised in prose; #27 is the catalogue entry for exactly that, and the locked sheet renders it as the counter-led ledger whose numeral is a real grid item, so a reader can count the stages without reading them. This is also the ONE device the stamped branch template contributes to this page unchanged, and it is inherited here on purpose: the arrival ledger that walks a body through a building is the same instrument that walks a body through an appointment. #28's horizontal process timeline sets its stages along a track, which is right for a treatment plan measured in months and wrong for a single visit measured in minutes, where a horizontal run would imply gaps between stages that do not exist. #14's tabbed content hides three of the four stages behind controls, and a reader deciding whether to book needs the whole sequence visible at once. #8's manifesto block would state the philosophy of a first visit and leave the reader still not knowing what happens second. ADAPTATION: the ledger is paired with the imaging photograph rather than with a diagram, because the one stage a patient cannot picture from the words alone is the one where a record is taken and read. -->
+<section class="section section--cool" id="s-visit" aria-labelledby="h-visit" data-rise>
+  <div class="container">
+    <div class="row row--aside">
+
+      <div class="col col--copy">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">On the day</span>
+            <div>
+              <span class="kit-eyebrow">Four stages, one order</span>
+              <h2 id="h-visit">Your first visit</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Please arrive 15 minutes early to complete any necessary paperwork. Our team will guide you through a comprehensive exam, digital X-rays if they are needed, and a discussion of your oral health.</p>
+        <p class="kit-accentline">Allow time. A first appointment is not a fifteen-minute check.</p>
+        <ol class="kit-list kit-list--ledger">
+          <li><span><b>Arrive 15 minutes early.</b> Paperwork is completed at the desk, or in advance using the forms in the next section.</span></li>
+          <li><span><b>Comprehensive exam.</b> A specialist examines your teeth, your gums and your bite.</span></li>
+          <li><span><b>Imaging, if it is needed.</b> Digital X-rays are taken in clinic. 3D CBCT imaging is installed at all four clinics, so a case that needs a three-dimensional view does not go anywhere else for it.</span></li>
+          <li><span><b>A discussion of your options.</b> What is happening, what can be done about it, in what order, and what each route involves.</span></li>
+        </ol>
+      </div>
+
+      <div class="col col--media">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--arch">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2022_12_dentist-at-dental-clinic-white-healthy-tooth-with-2022-11-16-18-05-26-utc.jpg" alt="A clinician in a pale coat at a white desk, pointing a stylus at a panoramic radiograph displayed on a tablet, with a plaster model of an upper jaw and two probes laid out beside it." width="1200" height="675" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>The record</b><span>Read with you, not just about you.</span></figcaption>
+        </figure>
+        <div class="kit-card kit-card--tint kit-card--pad" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Before the day</span>
+            <span class="kit-card__unit">Ask</span>
+          </div>
+          <p class="kit-card__title">An urgent question before your slot</p>
+          <p class="kit-card__body">Contact your chosen clinic directly and ask for the Front Desk Officer. The four direct lines are on the Contact page and in the footer of every page.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="contact.html"><span>The four direct lines</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #9 Services 3-col | considered: #34,#45,#53 | rigor: heavy | library: _RESPONSIVE-PATTERN-LIBRARY G7 equal-height cards, _COMPOSITION-LAWS L5 section density ceiling | why: three forms exist, they are peers rather than a sequence, and each one needs the same three things stated at the same weight, its name, what it actually asks you for, and why it matters to fill it in, so a three-column breakdown at equal card height is the shape that says peer rather than order; #9 gives all three at readable size and its 3 to 2 to 1 ladder lands them as one tidy row at desktop and a clean stack at 375. #34's FAQ accordion would hide two of the three behind a control, and a form a reader does not know exists is a form they arrive without. #45's category chips carry a bare label, which is the one thing that will not help here, since the medical history form matters clinically and a chip cannot say so. #53's hours table is a schedule instrument and these are documents, not times. ADAPTATION: the row is .row--stretch so the locked sheet's height rule equalises the three cards and pins their foot rails to one baseline; and the cards carry NO download control, because the form files themselves are not in the supplied source and a button that resolves to nothing is worse than a named document a patient can ask the desk for. -->
+<section class="section section--paper" id="s-forms" aria-labelledby="h-forms" data-rise>
+  <div class="container">
+    <div class="row row--stretch">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">Paperwork</span>
+            <div>
+              <span class="kit-eyebrow">Done at home, or done at the desk</span>
+              <h2 id="h-forms">Forms and what to bring</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">Three forms are completed before you are seen. Completing them at home shortens the time between arriving and being seen.</p>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top"><span class="kit-card__label">Form 01</span><span class="kit-card__unit">Details</span></div>
+          <p class="kit-card__title">New Patient Registration</p>
+          <p class="kit-card__body">Your details, your contact information, and the clinic you are attending.</p>
+        </article>
+      </div>
+      <div class="col col--span-4">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top"><span class="kit-card__label">Form 02</span><span class="kit-card__unit">Clinical</span></div>
+          <p class="kit-card__title">Medical History Form</p>
+          <p class="kit-card__body">Current medications, allergies, and any condition that affects treatment or anesthesia. This one matters clinically. Complete it fully.</p>
+        </article>
+      </div>
+      <div class="col col--span-4">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top"><span class="kit-card__label">Form 03</span><span class="kit-card__unit">Records</span></div>
+          <p class="kit-card__title">Privacy and data consent</p>
+          <p class="kit-card__body">How your records are held and used.</p>
+        </article>
+      </div>
+
+      <div class="col col--span-6">
+        <div class="kit-truth">
+          <p>A clinic in the Philippines falls under the Data Privacy Act, not United States health-privacy legislation. The card above therefore names the privacy document by what it does rather than by a statute.</p>
+        </div>
+      </div>
+      <div class="col col--span-6">
+        <div class="kit-truth">
+          <p>No list of what to bring to your appointment is published here. Ask when you book, and bring what the clinic names.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: PRICING-SECTIONS.md #5 Plain-deal honesty stance | considered: #4,#2 | rigor: heavy | library: _MODERN-WOW-SPEC section-1 depth, _COMPOSITION-LAWS L9 selection rationale | why: this band carries the single fact most likely to change a reader's decision, that this practice takes no HMO and no dental insurance, and the copy is explicit that disclosing it early buys trust while burying it in an accordion wastes that trust, so the band must be plain, unornamented and placed mid page where a reader still has a choice to make; #5 is the only entry in its family that is empty-handed by design, carrying the creed as a plain statement rather than dressing it as an argument, which is why the restraint IS the treatment here. #4's quote-only cost-model split would frame the disclosure in a media panel with a metric row beside it, dressing a refusal as a sales argument, which is precisely the move that makes a reader distrust the refusal. #2's comparison table would set these terms against a column of alternatives, and the only alternatives to compare against are competitors, whom this brand may never name on a page. ADAPTATION, load bearing: #5 by catalogue states the stance and stops. Here the stance is immediately followed by what IS available in its place, the five payment methods and a starting price per treatment, because a disclosure that closes a door without showing the open one reads as an apology rather than as a term of business. The word describing prices as transparent is withheld from this page until real owner figures replace the representative ones. -->
+<section class="section section--warm" id="s-pay" aria-labelledby="h-pay" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-6">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">Money</span>
+            <div>
+              <span class="kit-eyebrow">The fact most likely to change your mind</span>
+              <h2 id="h-pay">We do not accept HMO or dental insurance</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-quote kit-quote--display readw">Elevate Dental does not accept HMOs or dental insurance, and HMO coverage cannot be used for dental treatments at our clinics.</p>
+        <p class="kit-body readw">All treatment is self-pay. This sits here, in the middle of the page, rather than at the bottom of an accordion. It is the single fact most likely to change your decision, and you are entitled to it before you book rather than at the desk.</p>
+        <div class="kit-foot">
+          <p class="kit-micro">What is available instead</p>
+          <ul class="kit-list">
+            <li><b class="kit-strong">A starting price for every treatment.</b> The price list publishes a starting figure per treatment so you can size a plan before you walk in.</li>
+            <li><b class="kit-strong">Instalment arrangements through partner banks,</b> where a partnership is currently in force. The next section sets out what that does and does not mean.</li>
+            <li><b class="kit-strong">A consultation first.</b> The cost of your plan is set out before treatment begins, not after it finishes.</li>
+          </ul>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="prices.html"><span>Treatment Prices</span></a>
+            <a class="kit-btn kit-btn--ghost" href="treatments.html"><span>All Treatments</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--span-6">
+        <div class="kit-card kit-card--tint kit-card--pad" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">How to pay</span>
+            <span class="kit-card__unit">Five methods</span>
+          </div>
+          <p class="kit-card__title">Settled at the clinic</p>
+          <p class="kit-card__body">Payment is settled at the clinic itself. The same five methods are taken at every one of them.</p>
+          <ul class="kit-list kit-list--inline">
+            <li><span class="kit-tag kit-tab">Cash</span></li>
+            <li><span class="kit-tag kit-tab">Bank cheque</span></li>
+            <li><span class="kit-tag kit-tab">Bank transfer</span></li>
+            <li><span class="kit-tag kit-tab">Debit and credit cards</span></li>
+            <li><span class="kit-tag kit-tab">QR payments</span></li>
+          </ul>
+        </div>
+        <div class="kit-foot">
+          <p class="kit-micro">How a plan is quoted</p>
+          <p class="kit-body">Treatment is quoted per treatment, after clinical assessment. You are told the cost of your plan before it starts, not after it finishes.</p>
+        </div>
+        <div class="kit-truth">
+          <p>Every figure currently on the price list is a representative market figure anchored to published Philippine ranges rather than a quoted Elevate fee, which is why this page describes what the list covers and quotes no number from it.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: PRICING-SECTIONS.md #6 Quote-configurator ladder | considered: #3,#1a | rigor: heavy | library: _COMPOSITION-LAWS L9 selection rationale, _MODERN-WOW-SPEC section-1 depth | why: the subject of this band is a MECHANISM whose terms are unknown, an instalment arrangement that has run periodically against a minimum spend and for a fixed number of months and may or may not be running today, so what the reader needs is the SHAPE of the thing plus an honest statement that its parameters are not published, and #6 is the entry whose whole subject is a cost mechanism explained rather than a price asserted, which is the only pricing family member that can describe a ladder without quoting a rung. It is taken here in its DESCRIBED form rather than as a live widget, and that adaptation is the point: a working configurator would compute a figure from terms this build is forbidden to publish. #3's monthly and annual billing toggle presumes two live plans a reader may switch between, and there is exactly one arrangement here and it may not be live at all. #1a's three-tier cards would present instalment options as a menu to choose from, which would state as current an offer whose partner agreements all carry a 2024 end date. ADAPTATION AND THE ONE PESO FIGURE ON THIS PAGE: the illustrative shape is printed because the copy prints it, and it ships with a plain-English market-figure disclosure in visible text beside the figure, plus a held block recording that no bank may be named and no term, threshold or rate presented as live until the client confirms which agreements are in force in 2026. -->
+<section class="section section--cool" id="s-instal" aria-labelledby="h-instal" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">Paying over time</span>
+            <div>
+              <span class="kit-eyebrow">Ask before you plan around one</span>
+              <h2 id="h-instal">Instalment options</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Instalment arrangements have been offered periodically through partner banks, against a minimum spend and for a fixed number of months. Whether one is running today depends on the agreement in force with that bank at that time.</p>
+        <p class="kit-body readw">Ask the Front Desk Officer at your clinic before you plan around one. Nothing on this page should be read as an offer you can take up today.</p>
+      </div>
+
+      <div class="col col--span-5">
+        <div class="kit-card kit-card--flat kit-card--pad" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Illustration only</span>
+            <span class="kit-card__unit">Not an offer</span>
+          </div>
+          <p class="kit-card__title">The shape of such an arrangement</p>
+          <p class="kit-card__body">0% over 12 months on a minimum spend of ₱20,000, an indicative market figure and not an Elevate quote or a live offer. The numbers above illustrate the SHAPE of an arrangement of this kind and are not terms you can hold us to.</p>
+        </div>
+        <div class="kit-truth">
+          <p>The bank partnerships named on the current site all carry a 2024 end date. No bank, term, threshold or interest rate is presented here as current.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #34 FAQ accordion | considered: #35,#7,#50 | rigor: heavy | library: _RESPONSIVE-PATTERN-LIBRARY Tab5 touch targets, _COMPOSITION-LAWS L5 section density ceiling | why: eight questions with genuinely uneven answers, one of which is a stated refusal to answer, is the exact payload #34 exists for: a reader scans the eight questions, opens only the one they came with, and the section costs a screen instead of five; the locked sheet ships it as a native details and summary pair, so it works with scripting off and every control clears the touch floor. It also earns its place LAST: everything above is what the practice knows about a first visit, and this is where the reader's own leftover question gets answered, including the one the practice cannot answer yet. #35's grouped FAQ would impose categories on eight items that do not group cleanly, adding a navigation layer to a list that fits on one screen closed. #7's problem-framing block would state the reader's problem for them, which on a page whose whole register is second-person and declarative would read as being told what you are worried about. #50's topic columns would set all eight answers open in parallel, which is the sprawl the accordion exists to avoid and would bury the closing ask under it. ADAPTATION: the emergency-care question is published WITH NO ANSWER, carried as a held block rather than dropped, because it is the question a patient in pain asks first and neither an emergency service nor the absence of one is evidenced anywhere; dropping the question would hide the gap, and answering it either way would be an invention. -->
+<section class="section section--warm" id="s-ask" aria-labelledby="h-ask" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">Leftovers</span>
+            <div>
+              <span class="kit-eyebrow">Answered, or openly unanswered</span>
+              <h2 id="h-ask">Questions we are asked most</h2>
+            </div>
+          </div>
+        </div>
+        <div class="kit-faq" data-rise>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Is parking available at your clinics?</summary>
+            <p class="kit-faq__a">Yes. Paid parking is available inside the building at all four: Mitsukoshi BGC, Shangri-La Plaza, Bonifacio Stopover BGC and Alabang Town Center.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Do you accept HMOs or dental insurance?</summary>
+            <p class="kit-faq__a">No. We do not accept HMO or dental insurance, and coverage of that kind cannot be applied to dental treatment at any of our clinics. Treatment is self-pay, and the practice states that in its own words in the payment section above.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">What are the credentials of the dentists here?</summary>
+            <p class="kit-faq__a">Our dentists are board-certified and licensed, with local and international postgraduate training, and they continue postgraduate education and hands-on workshops. Each one is published individually with name, credentials and discipline on the Specialists page. Read the profile of whoever you are booking with before you book.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">What payment methods do you take?</summary>
+            <p class="kit-faq__a">Cash, bank cheque, bank transfer, debit and credit cards, and QR payments. Arrangements for paying over time are covered in the section above, and depend on which bank partnerships are in force.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">What diagnostic and imaging services are available in clinic?</summary>
+            <p class="kit-faq__a">Panoramic, cephalometric and periapical dental X-rays. 3D CBCT imaging, installed at each of the four. Digital scanning with the iTero intraoral scanner and the RayFace facial scanner for impressions and smile planning. Imaging is done where you are treated, so a diagnosis does not wait on an appointment somewhere else.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Do you run promotions?</summary>
+            <p class="kit-faq__a">Offers run periodically. Whatever is running now is listed on the Promos page with the date it ends. An offer past its end date is archived, not displayed.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Is emergency or after-hours care available?</summary>
+            <p class="kit-faq__a">This one is not answered yet, and the reason is recorded beside this list rather than hidden. See the held note on emergency care.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">What do you not offer?</summary>
+            <p class="kit-faq__a">Sedation dentistry is not evidenced in our current published material and is not claimed here. Treatment warranty terms are not published. If a plan you are considering depends on either, ask the clinic directly before you commit to it.</p>
+          </details>
+        </div>
+      </div>
+
+      <div class="col col--span-5">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2022_07_dentist-and-patient-in-dental-clinic-2022-03-31-20-13-13-utc-1.jpg" alt="A dentist in a white coat leaning in beside a young child sitting on an adult's lap in the dental chair, all three looking at a screen he is pointing to with a gloved hand, under the overhead operating light." width="1200" height="800" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>The explanation</b><span>Questions answered in the room, too.</span></figcaption>
+        </figure>
+        <div class="kit-truth">
+          <p>Whether this practice offers an emergency service is not stated here, in either direction. If you need urgent care, call the clinic and ask rather than infer an answer from this page.</p>
+        </div>
+        <div class="kit-truth">
+          <p>A complimentary first consultation has appeared repeatedly inside dated promotions and never as a standing offer.</p>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-inline">
+          <p>Bring the completed forms, arrive 15 minutes early, and allow time for a full exam and a proper discussion of your options. One direct line is published per clinic, on the Contact page and at the foot of every page.</p>
+          <div class="kit-inline__acts">
+            <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+            <a class="kit-btn kit-btn--ghost" href="mailto:info@elevatedental.ph"><span>info@elevatedental.ph</span></a>
+            <a class="kit-btn kit-btn--ghost" href="locations.html"><span>All Four Clinics</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

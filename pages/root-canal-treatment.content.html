@@ -1,0 +1,743 @@
+<!--META {"title":"Root Canal Treatment Philippines | From ₱15,000","desc":"Save an infected tooth instead of extracting it. Planned on 3D CBCT and performed by endodontic specialists.","noindex":true}-->
+<!-- TITLE and DESC are the LOCKED values from _handoff/seo-enrichment.md section 1, the SEO SSOT.
+     The SSOT separator is an en dash and renders here as a pipe, because verify-no-dashes is
+     registered on this build. Only the SEPARATOR CHARACTER changed; no word was altered, added,
+     removed or reordered.
+     The key is "desc" and NOT "description": build.mjs renders esc(meta.desc), and its JSON branch
+     does not alias description to desc, so a "description" key ships an EMPTY meta description
+     while looking correct in the fragment.
+     noindex is set on EVERY page because this publishes to a PUBLIC preview URL while the pages
+     carry representative market prices rather than this clinic's own figures. robots.txt cannot
+     carry that load: crawlers read it only at the origin root, and this ships to a project
+     subpath, so the disallow-all there is inert. noindex is the protection that actually works. -->
+<!-- ============================================================================
+     DESIGN-SYSTEM PROVENANCE for pages/root-canal-treatment.content.html, cited and MEANT.
+
+     blueprint composition-medical-health   Collision A binds the body to ZERO closing bands, so
+               the ask rides an inline .kit-inline rail inside a content band and the site's one
+               closing band stays with the inherited chrome. Collision B, warm imagery against a
+               calm voice, is why the instruments are photographed warm and the sentences about
+               infection are written flat.
+
+     library   _COMPOSITION-LAWS             L9 SELECTION-RATIONALE is why every band carries a
+               defended ledger naming what was refused and on what evidence; L1 STACKED SPLIT
+               READING ORDER is why no media cell is authored above the heading it belongs to.
+     library   _SCROLL-STICKY-BEHAVIOR-LIBRARY  consulted and DEDUCTED FROM. A pinned rail is inert
+               inside the locked .section overflow:hidden ancestor, so the route index, the ordinal
+               on each band and the ruled hand-off replace that affordance structurally.
+     library   _RESPONSIVE-PATTERN-LIBRARY   the four tier reflow ladder. No fixed width, no negative
+               inline margin and no unclamped image is declared anywhere on this page.
+     library   _MODERN-WOW-SPEC              the technique ceiling: real first party photography over
+               token built material, hairline plus contact shadow separation, and a three move motion
+               budget carried by the data-rise attribute and its .is-in state class.
+
+     WHERE THE PHOTOGRAPHS STOP, and why it is deliberate. The first six bands are photographed and
+     the last three are not. Stage 05 is the money, and dressing a self pay disclosure in a picture
+     is what makes a reader stop believing it. Stage 06 is the result, and the only honest image of
+     a healed root tip is a follow up radiograph belonging to a patient whose signed release does
+     not exist, which is blocker B-2. Stage 07 is answers. The page therefore runs out of pictures
+     at exactly the point where it runs out of things it is entitled to show, and says so on the band.
+
+     THE CUT. _imagery-map.json gives this page seven masters. The named clinician roster portrait is
+     refused under imagery-system.md section 2b, a face beside a treatment implies an assignment no
+     receipt supports, and the 320 by 320 master is refused under section 5, a small master needs a
+     small slot and this page has none. The endodontics hub publishes from the same five remaining
+     files, so this page leads on a different one and runs them in a different order. Each is placed
+     exactly ONCE.
+     ============================================================================ -->
+
+<!-- ============================================================================
+     THE BODY. Nine sections: the opener, the route index, and the seven stages the route declares.
+     Every section obeys the forced grammar
+
+         section  ->  div.container  ->  div.row  ->  div.col  ->  OBJECT
+
+     with EXACTLY ONE .container and ONE .row per section; multi band sections compose inside the
+     single twelve track row using .col--full bands and .col--span-N cells, and the vertical interval
+     between bands is the row GAP.
+
+     THE SPINE, inherited from the locked T-FEATURE concept: an ordinal in every .kit-open__no, an
+     in-flow route index read once in band two, and a ruled .kit-foot hand-off closing every band by
+     naming the stage after it. Ordinary flow markup and ordinary in-document anchors, so the spine
+     survives scripting being switched off and survives being printed.
+
+     ZERO closing CTA bands, ZERO dark bands and ZERO arc seams are authored here.
+     ============================================================================ -->
+
+<!-- pick: HERO-COMPOSITIONS.md #13 Centered + scroll cue, the continue indicator | considered: #23,#7 | rigor: heavy | why: this is the one route in the pass whose reader may arrive in active pain, mid search, at two in the morning, and what such a reader needs from an opener is not a display of everything the practice can do but a promise that the page is ordered and finite. #13 is the only catalogue entry whose named structural device is the CONTINUE affordance, a hero that is explicitly incomplete and points onward, and the whole page then keeps that promise seven times. #23's comparison hero, the before and after or us and them shape, is refused twice over on this build: blocker B-2 blocks every clinical before and after for want of a signed release, and competitorFraming.tierBDensityCap is zero, so the other half of a comparison hero is a thing this page may not put on screen. #7's full bleed image with floating stat cards would set copy over a photograph, which C7 forbids outright, dark_ratio being zero and photographs being framed media objects on this site rather than washes behind type. ADAPTATIONS: #13's centring, its full viewport box and its animated chevron are all refused, the first because this system holds one left reading axis, the second because the locked hero declares no min-height by law, the third because the motion budget is three moves. What ships is the entry's real structure, an opener that ends on an explicit continue rail naming the route and the band a frightened reader most wants, which on this page is the one about whether it hurts. -->
+<!-- FRONT OF HOUSE. The opening section is now the one full-bleed photographic band.
+     THE PRICE CAVEAT WAS NOT DELETED, IT MOVED. The h1 read "...From ₱15,000, a
+     representative market figure drawn from published ranges, not an Elevate quote."
+     The figure stays in the headline; the disclosure is carried by the .kit-tag chip
+     that already stood under it and already says it: "A market anchor, not a fee this
+     practice has issued". invisalign.html's pattern, reused rather than reinvented.
+     AMENDED 2026-08-25, SECOND PASS. THE FIGURE HAS NOW FOLLOWED ITS CAVEAT DOWN, so the
+     paragraph above no longer describes this file: the price is NOT in the headline any more.
+     The reason is measured rather than assumed. With the whole band markup standing between
+     them, the h1 figure sat far further from its marker than the 120 characters that
+     price-placeholder-unmarked allows, and the page was blocked by that rule. The figure now
+     sits INSIDE the chip, byte for byte unchanged, directly in front of the wording that
+     qualifies it. That is the invisalign shape taken one step further, and it is what Front of
+     House wanted anyway, a short headline with no price in it.
+     NOTHING WAS CUT. The h1 keeps the treatment name; the chip keeps every word it already had.
+     ONE ADDITION, in this page's own words rather than new ones. "A market anchor, not a fee
+     this practice has issued" carries none of the phrases the rule accepts as a marker, so the
+     qualifier this page's OWN h1 used before the first pass, "a representative market figure
+     drawn from published ranges, not an Elevate quote", quoted verbatim above, is restored in
+     front of it. The old chip line is kept in full after it and is not replaced.
+     THE PHOTOGRAPH IS NOT DUPLICATED. Root-Canal-Treatment-Aftercare-Tips was the
+     .kit-slot image in this same section, so the slot is gone, its alt text is carried
+     across verbatim, and the .col--span-5 that held it is gone too rather than left as
+     an empty cell that renders at zero height and still pays the 40px row gap.
+     ONE THING WAS LOST WITH THAT SLOT, and it is recorded rather than glossed: the
+     figcaption "The instruments / Files a few tenths of a millimeter across, one canal
+     at a time." The band carries no caption in the Front of House contract.
+     THE LEDE is the first sentence of the existing lede, which stands on its own. Its
+     second sentence was not thrown away: it stands verbatim in the section below. -->
+<section class="section surface-dark kit-hero foh-hero" id="s-start" aria-labelledby="h-start" data-surface="dark" data-rise>
+  <div class="container">
+    <div class="row">
+      <div class="col col--full">
+        <div class="foh-hero__stage">
+          <figure class="foh-hero__band">
+            <img class="foh-hero__img" src="../assets/generated/gen-hero-tooth-section.jpg" alt="A cross section tooth model on a brushed brass block, its interior chamber lit against deep navy." width="3136" height="1344" loading="eager" fetchpriority="high" decoding="async">
+            
+          </figure>
+          <div class="foh-hero__inner">
+              <h1 class="foh-hero__title" id="h-start">Root Canal Treatment Philippines.</h1>
+            </div>
+          <div class="foh-hero__lockup">
+            <p class="foh-hero__eyebrow">Root canal treatment, endodontics</p>
+            <p class="foh-hero__lede">This saves an infected tooth instead of extracting it.</p>
+            <div class="kit-tags">
+              <span class="kit-tag kit-tag--accent kit-tab">From ₱15,000, a representative market figure drawn from published ranges, not an Elevate quote. A market anchor, not a fee this practice has issued.</span>
+            </div>
+            <div class="kit-actions">
+              <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+              <a class="kit-btn kit-btn--secondary" href="contact.html">Ask about this treatment</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- The rest of the opening stage, on the paper ground it already carried. The
+     .col--span-5 that held the photograph is not reproduced: its only occupant is the
+     band above, and an empty cell would still pay the row gap. -->
+<section class="section section--paper" id="s-start-b" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">Start</span>
+          </div>
+        </div>
+        <p class="kit-lede readw">The dead or dying tissue inside the root is removed, the canals are disinfected and sealed, and the tooth stays in your jaw doing the job it was doing before.</p>
+        <p class="kit-quote kit-quote--display readw">Nothing replaces a natural tooth as well as the tooth itself.</p>
+        <p class="kit-body readw">Your first consultation is free, and you leave it holding an assessment, a plan and a written quote. Confirm current consultation terms with the clinic before you book.</p>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-body readw--wide">Seven stages, numbered in the order the treatment happens, each one closing by naming the one after it. If you are in pain right now and want only one answer, take the second link below: it goes straight to the band that answers whether this hurts.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>See the seven stages</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#stage-07"><span>Does it hurt</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #36 Sticky-sidebar topic nav | considered: #45,#50 | rigor: heavy | why: the band's job is ORIENTATION across a long clinical document rather than presentation of content, and #36 is the only catalogue entry written for that, a docs coded index beside the body whose documented narrow tier behaviour is to move ABOVE the content, which is the reading order a route needs on a phone at the hour this page gets read. #45's category chips would compress each stage into two or three words, and the difference between the stage that says a tooth can be saved and the stage that says it cannot is not survivable in three words. #50's topic columns are parallel subject groups with no order between them, and order is the property the index exists to carry: stage 06 is where you learn whether it worked, and it comes after stage 03 for a reason. ADAPTATION: #36's sticky rail cannot be built, because position:sticky is inert inside the locked .section overflow:hidden ancestor, so the index is a real in-flow band read once and position is re-established at every hand-off instead of being displayed continuously. -->
+<section class="section section--cool" id="s-route" aria-labelledby="h-route" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-4">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">Route</span>
+            <div>
+              <span class="kit-eyebrow">The seven stages</span>
+              <h2 id="h-route">What this page covers</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Seven stages, and the one most pages leave out is stage 06.</p>
+        <p class="kit-body readw">Stage 06 is how anyone actually knows the work succeeded, which is a radiograph taken six to twelve months later, not the day the pain stops. Stage 02 is the other uncomfortable one: it names three situations in which the honest recommendation is to take the tooth out.</p>
+      </div>
+
+      <div class="col col--span-8">
+        <ol class="kit-list kit-list--ledger" data-rise>
+          <li><span><b>What is inside a tooth.</b> The chamber, the canals, the pulp, and what happens once bacteria reach it. <a href="#stage-01">Go to stage 01</a></span></li>
+          <li><span><b>Whether yours is savable.</b> The signs that bring people in, retreatment, and three situations where removal is the honest answer. <a href="#stage-02">Go to stage 02</a></span></li>
+          <li><span><b>The sequence.</b> From diagnosis through to the review visit, and which single step decides the outcome. <a href="#stage-03">Go to stage 03</a></span></li>
+          <li><span><b>The bench and the imaging.</b> The specialty that owns this, and the instrument that most often changes the plan. <a href="#stage-04">Go to stage 04</a></span></li>
+          <li><span><b>The money.</b> Why the tooth decides the figure, the two paths compared, and how this practice is paid. <a href="#stage-05">Go to stage 05</a></span></li>
+          <li><span><b>How anyone knows it worked.</b> What stops, when it stops, and the image that confirms the bone has filled back in. <a href="#stage-06">Go to stage 06</a></span></li>
+          <li><span><b>Questions and aftercare.</b> Eight answers, all of them open, starting with whether it hurts. <a href="#stage-07">Go to stage 07</a></span></li>
+        </ol>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 01, the anatomy the whole treatment is about, which takes two minutes to read and makes every stage after it make sense.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-01"><span>Go to stage 01</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #12 Feature row with screenshot | considered: #59,#58 | rigor: heavy | why: this stage describes an anatomy nobody has seen, a chamber and a set of canals running down inside a root, and #12's declared role is look at the product, one continuous explanation set against the artefact so a reader can map the words onto something visible. The photograph earns its place as evidence rather than decoration: it is a sectioned teaching model showing exactly the chamber, the canals and the lesion in the bone that the four paragraphs name, and a reader who looks at it once will understand the rest of the route. #59's video embed is refused on two counts: this build owns no first party clinical video, and an embedded third party player would import an asset the imagery spec does not govern and a network dependency the page does not need. #58's full bleed image divider would spend the entire band on the photograph and push the explanation below it, the full width media then content stack that SECTION-COMPONENTS.md #14b names as the sprawl failure. ADAPTATION: the sentence that actually changes a decision, that a hollowed out back tooth splits under chewing force unless it is capped, is lifted out of the prose into the locked truth block, because the cost of the crown afterwards is the thing people are most often surprised by and it should not be discoverable only by reading to the end. -->
+<section class="section section--paper" id="stage-01" aria-labelledby="h01" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">01</span>
+            <div>
+              <span class="kit-eyebrow">Stage 01, the anatomy</span>
+              <h2 id="h01">What is inside a tooth</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Inside every tooth is a chamber, and running down each root from it, a set of very narrow canals.</p>
+        <p class="kit-body readw">They hold the pulp, which is nerve tissue and blood vessels. When decay, a crack or an injury lets bacteria reach that pulp it becomes inflamed, then it dies, and the infection travels down the canal and out through the end of the root into the bone around it. That is what produces the throbbing, the swelling, and the tenderness when you bite.</p>
+        <p class="kit-body readw">The treatment removes that tissue. Each canal is cleaned along its whole length, shaped so it can be filled, irrigated repeatedly with disinfecting solution, then sealed with gutta percha and a sealer. The access opening is closed afterwards.</p>
+        <p class="kit-body readw">What it solves is a plain choice, keep the tooth or lose it. Once the pulp is beyond recovery there is no third option in which the tooth is left alone and gets better.</p>
+      </div>
+
+      <div class="col col--span-5">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/generated/gen-rotary-endo.jpg" alt="A rotary endodontic handpiece fitted with a fine file against a deep navy backdrop." width="675" height="585" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>The chamber and the canals</b><span>A teaching model, sectioned. The dark area is infection in bone.</span></figcaption>
+        </figure>
+        <div class="kit-truth">
+          <span class="kit-truth__k">The honest part</span>
+          <p>Reaching the canals means taking structure out of the middle of the tooth, and a hollowed out back tooth splits under chewing force. That is why a crown is part of this treatment on a molar rather than an optional extra afterwards, and why the quote you are given should state both items. A treated tooth that splits usually cannot be saved.</p>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 02, the signs that bring people in, what retreatment is, and the three situations in which taking the tooth out is the honest recommendation.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-02"><span>Go to stage 02</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Back to the route</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #10 Services 4-col compact | considered: #6,#29 | rigor: heavy | why: this stage carries FOUR peer cells that are not all the same kind of thing, three exits where the tooth cannot be kept and one re-entry where a tooth previously written off often can be, and #10 is the entry that gives four equal cells with lighter content per cell and room for a destination link on each, which is what turns a clinical limit into a route the reader can actually walk. Giving retreatment a cell of its own beside the three exits is the composition decision on this band: it is the single most hopeful fact on the page and burying it in a paragraph would lose it. #6's qualifier is the obvious catalogued fit and is refused because its buyer profile columns carry no destination per row, so three named alternatives would collapse into prose and the reader would be told the tooth cannot be kept without being told what replaces it. #29's before and after pair is refused on evidence rather than layout: blocker B-2 records no owner authorisation for any clinical image, so the pair would sit empty or borrow a stranger's radiograph. ADAPTATION: the SIGNS are rendered above the cells as a plain tag row rather than as a fifth card, because a symptom is a thing you check yourself against, not a place you go. -->
+<section class="section section--warm" id="stage-02" aria-labelledby="h02" data-rise>
+  <div class="container">
+    <div class="row row--stretch">
+
+      <div class="col col--span-5">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">02</span>
+            <div>
+              <span class="kit-eyebrow">Stage 02</span>
+              <h2 id="h02">Whether your tooth can be kept</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">Treatment is indicated when the pulp is irreversibly inflamed or has already died.</p>
+        <div class="kit-tags">
+          <span class="kit-tag">Lingering pain to hot or cold after the stimulus is gone</span>
+          <span class="kit-tag">Pain on biting</span>
+          <span class="kit-tag">A tooth that has darkened</span>
+          <span class="kit-tag">A swelling, or a small bump on the gum near the root</span>
+          <span class="kit-tag">An area of infection showing on a radiograph below the tooth</span>
+        </div>
+        <p class="kit-body readw--wide">It is also carried out on a badly fractured tooth, and as a planned step before some crown and bridge work where the pulp is already compromised. If one of the three exits below describes your tooth instead, we would rather say so at the assessment than after you have paid for a treatment that was never going to hold.</p>
+      </div>
+
+      <div class="col col--span-7">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--arch">
+            <img class="kit-slot__img" src="../assets/generated/gen-endo-microscope.jpg" alt="The head of a surgical operating microscope in a darkened dental treatment room." width="675" height="585" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Where the choice is made</b><span>On a model, at the assessment, before anything is opened.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Exit 01</span>
+            <span class="kit-card__unit">Split root</span>
+          </div>
+          <p class="kit-card__title">A vertical root fracture</p>
+          <p class="kit-card__body">A root split down its length cannot be saved, and cleaning the inside of it changes nothing about the split. The tooth comes out and the conversation moves to what replaces it.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="service-oral-surgery.html"><span>Oral surgery</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Exit 02</span>
+            <span class="kit-card__unit">Nothing to build on</span>
+          </div>
+          <p class="kit-card__title">Too little left above the gum</p>
+          <p class="kit-card__body">A clean canal is no use if there is not enough tooth standing above the gum to build a restoration onto. Replacement is planned instead, with an implant, a bridge or a removable appliance.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="dental-implant.html"><span>Dental implants</span></a>
+            <a class="kit-btn kit-btn--ghost" href="dental-bridge.html"><span>Dental bridge</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Exit 03</span>
+            <span class="kit-card__unit">Lost support</span>
+          </div>
+          <p class="kit-card__title">Advanced bone loss around it</p>
+          <p class="kit-card__body">A tooth loosened by advanced gum disease does not become stable because the inside of its root is clean. The problem is outside the root, and that is where the treatment has to go.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="periodontics.html"><span>Periodontics</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Re-entry</span>
+            <span class="kit-card__unit">Second attempt</span>
+          </div>
+          <p class="kit-card__title">Treated years ago, sore again</p>
+          <p class="kit-card__body">This is retreatment, and it is common. The tooth is reopened, the old root filling is taken out, the anatomy is reassessed and the whole canal system is cleaned and sealed properly a second time. Many teeth already written off are kept this way.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="endodontics.html"><span>Endodontics</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 03, the running order of the work itself, and how long each part of it takes.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-03"><span>Go to stage 03</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Back to the route</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #28 Process timeline horizontal | considered: #27,#54 | rigor: heavy | why: eight steps with a real duration attached to each and hard dependencies between them is exactly the long sequence #28 was written for, where the connector between stops carries meaning. #27 is catalogued for three to six numbered cards, so eight overruns the shape it was measured at, and the route index above already spends numbered cards, which would make a second numbered run stop reading as position. #54's schedule grid lays stops against a calendar axis and would require publishing appointment intervals this build has no receipt for; the copy gives chair time and a span, not dated slots, so the grid's own axis would have to be invented. ADAPTATION, deliberate: #28's horizontal flow is NOT built, because a horizontal timeline drops its connector and wraps two up at the tablet tier, the failure the entry itself records, and building one needs page local CSS that promotion strips. What is taken is the argument, that a long sequence needs a persistent connector and a duration axis, delivered by the locked semantic table where the hairline row rules ARE the connector. Step 04 carries a sentence the other steps do not, that this is the step which determines the outcome, because a reader comparing quotes should know which part of the work is the work. -->
+<section class="section section--paper" id="stage-03" aria-labelledby="h03" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">03</span>
+            <div>
+              <span class="kit-eyebrow">Stage 03, diagnosis to review</span>
+              <h2 id="h03">The eight clinical steps</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Eight steps, in this order, with the minutes each occupies at the chair.</p>
+        <p class="kit-body readw">Most cases take one to three visits of sixty to ninety minutes. Molars carry more canals than front teeth and take longer. Curved canals, retreatment and a tooth with an active abscess take longer still, and the plan you are handed states the sequence for your tooth rather than for a typical one.</p>
+      </div>
+
+      <div class="col col--span-5">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2023_09_root-canal1.jpg" alt="A gloved hand lowering a fine endodontic file with a red stopper into a lower jaw teaching model resting on a pink drape, with hand instruments laid out beside it." width="1196" height="842" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Measured, not estimated</b><span>Each canal is worked to its own recorded length.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-table__scroll">
+          <table class="kit-table">
+            <caption>Diagnosis to review, step by step</caption>
+            <thead>
+              <tr><th scope="col">Step</th><th scope="col">What happens</th><th scope="col">How long</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">01 Consultation and diagnosis</b></td>
+                <td data-label="What happens">Examination, sensitivity and percussion testing, and radiographs. Imaging in three dimensions is taken where a flat film cannot answer the question. The written quote is handed over here.</td>
+                <td data-label="How long" class="kit-tab">45 to 60 minutes</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">02 Anaesthesia and isolation</b></td>
+                <td data-label="What happens">The tooth and the tissue around it are numbed. A rubber dam is then placed to isolate the tooth, which keeps saliva and its bacteria out of the canals and is the standard of care for this work, not an optional refinement.</td>
+                <td data-label="How long" class="kit-tab">First 15 minutes</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">03 Access</b></td>
+                <td data-label="What happens">A small opening is made through the biting surface, or through the back of an incisor, to reach the chamber.</td>
+                <td data-label="How long" class="kit-tab">15 to 20 minutes</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">04 Cleaning and shaping</b></td>
+                <td data-label="What happens">Every canal is located, measured to its full working length, cleaned, shaped so it can be filled, and irrigated again and again with disinfecting solution. This is the step that determines the outcome. Everything before it is preparation and everything after it is closure.</td>
+                <td data-label="How long" class="kit-tab">30 to 60 minutes</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">05 Medication and temporary seal</b></td>
+                <td data-label="What happens">Where a second visit is planned, an antibacterial dressing is left in place and the tooth is sealed temporarily for one to two weeks.</td>
+                <td data-label="How long" class="kit-tab">Where a second visit is planned</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">06 Filling</b></td>
+                <td data-label="What happens">The canals are filled with gutta percha and sealer, and a radiograph confirms the fill has reached the correct length before anything is closed over it.</td>
+                <td data-label="How long" class="kit-tab">30 to 45 minutes</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">07 Core build up and the definitive restoration</b></td>
+                <td data-label="What happens">The tooth is rebuilt, and a crown is fitted on back teeth and on any incisor that has lost substantial structure.</td>
+                <td data-label="How long" class="kit-tab">One to two weeks later</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">08 Review</b></td>
+                <td data-label="What happens">A radiograph is taken to confirm that the bone around the root is healing. This appointment belongs to the work, not to an upsell attached after it.</td>
+                <td data-label="How long" class="kit-tab">At six to twelve months</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 04, the specialty that owns this work, and the one instrument that most often rewrites a case before it is opened.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-04"><span>Go to stage 04</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Back to the index</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #13 Bento feature grid | considered: #9,#11 | rigor: heavy | why: this is the one band in the pass where the three named instruments are NOT peers and the copy says so outright: three dimensional imaging is described as the single most useful thing you can put in front of a clinician planning this treatment, while the laser and the scanner are adjuncts to disinfection and to the crown that follows. #13 is the entry whose tiles are deliberately unequal, and an unequal tile is a claim of importance, which is exactly the claim being made here and which a hairline matrix of three equal cells would silently erase. #9's equal three column grid was the correct pick on the sibling routes for the opposite reason, that no instrument there outranked another, and using it here would flatten a clinical statement the practice has actually made. #11's media plus card set would put the photograph in charge of the band and reduce the imaging argument to one card among three. ADAPTATION, load bearing: no bento CSS is authored, because a page local grid is stripped at promotion. The asymmetry is built from the locked twelve track row instead, a wide cell carrying the imaging argument at prose weight against a narrow stacked pair, which is #13's proportion delivered by the structure the build already owns. The band names a DISCIPLINE and links to the published roster; nobody is named and nobody is tied to a branch, because per clinic rosters are recorded as blocked. -->
+<section class="section section--cool" id="stage-04" aria-labelledby="h04" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-5">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">04</span>
+            <div>
+              <span class="kit-eyebrow">Stage 04, the bench and the imaging</span>
+              <h2 id="h04">Who does this, and what they can see</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">This is endodontics, the recognised specialty concerned with the inside of the tooth and the tissue around the root tip, practised here in house as a main clinical discipline.</p>
+        <p class="kit-body readw">If the case then needs a crown, or turns out to need removal and replacement instead, that side of the plan is handled by a specialist inside the same practice rather than by a referral out.</p>
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2022_08_root-canal-treatment-an-endodontist-preparing-pat-2021-08-30-10-56-46-utc-1.jpg" alt="Pink gloved hands holding an endodontic handpiece loaded with a fine file, above a patient isolated behind a blue rubber dam clipped in a frame." width="1200" height="800" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Isolated, then opened</b><span>The blue sheet is the rubber dam from step 02.</span></figcaption>
+        </figure>
+        <div class="kit-actions kit-actions--tight">
+          <a class="kit-btn kit-btn--ghost" href="specialists.html"><span>Our Specialists</span></a>
+          <a class="kit-btn kit-btn--ghost" href="endodontics.html"><span>Endodontics</span></a>
+        </div>
+      </div>
+
+      <div class="col col--span-7">
+        <p class="kit-micro">The instrument that changes the plan</p>
+        <p class="kit-lede readw--wide">3D CBCT imaging, available at all four clinics.</p>
+        <p class="kit-body readw--wide">A conventional radiograph flattens a three dimensional root system into a single image. That is how a fourth canal in an upper molar, a second canal in a lower incisor, a curve, a resorption defect or a small lesion at the root tip gets missed. A scan shows the anatomy in three dimensions before any opening is made, which is the reason a difficult case does not have to be sent somewhere else.</p>
+        <p class="kit-accentline">We name the systems because a name can be checked. An adjective cannot.</p>
+        <div class="kit-sys" data-rise>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">Adjunct</span>
+            <p class="kit-sys__name">Sol Dental Laser</p>
+            <p class="kit-sys__note">Used during disinfection to help carry irrigating solution into the fine lateral branches of the canal system that a file cannot physically reach.</p>
+            <span class="kit-sys__where"><i aria-hidden="true"></i>Named installed system</span>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">Afterwards</span>
+            <p class="kit-sys__name">iTero intraoral scanner</p>
+            <p class="kit-sys__note">Used for the restoration that follows. The rebuilt tooth, the opposing arch and the bite are scanned in the chair, so the crown protecting the work is made from a digital record rather than from a second set of impressions.</p>
+            <span class="kit-sys__where"><i aria-hidden="true"></i>Named installed system</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 05, why the tooth itself decides the figure, the two paths set side by side, and the one way this practice is paid.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-05"><span>Go to stage 05</span></a>
+            <a class="kit-btn kit-btn--ghost" href="technology.html"><span>Technology</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Back to the index</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: PRICING-SECTIONS.md #4 Quote-only cost-model split | considered: #6,#2 | rigor: heavy | why: what this band holds is a cost MODEL whose first variable is a number the reader can look up in their own mouth, how many canals the tooth has, and #4 is built for that argument: a split head, a copy column stating the model as rules, and the ask left open because the closing band lives in the chrome. #6's configurator ladder would imply an interactive control that outputs a figure, and pricing.ladder is deliberately EMPTY on this build, so any figure it output would be invented. #2's comparison table needs a rate card to fill and none exists. ADAPTATION, and it is the one that matters on this treatment: the copy contains a genuine comparison that needs NO figures, keeping the tooth against taking it out and replacing it, and that comparison is composed here as two plain paths rather than as a priced table, because saying that replacement generally costs more is supportable and putting numbers against it is not. The band carries no photograph, on a page that carries four: dressing a self pay disclosure in a picture is the move that makes a reader stop believing the disclosure. -->
+<section class="section section--warm" id="stage-05" aria-labelledby="h05" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-5">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">05</span>
+            <div>
+              <span class="kit-eyebrow">Stage 05, how the number is built</span>
+              <h2 id="h05">What it costs</h2>
+            </div>
+          </div>
+        </div>
+        <div class="kit-statband" data-rise>
+          <div class="kit-stat">
+            <span class="kit-stat__n kit-tab"><span class="pre">From ₱</span>15,000</span>
+            <span class="kit-stat__l">An anchor taken from the market, not an Elevate fee</span>
+            <p class="kit-stat__sub">Anchored to published Philippine market ranges. No treatment price from this practice exists yet.</p>
+          </div>
+        </div>
+        <div class="kit-truth">
+          <p>Every peso amount on this page is representative and anchored to published market ranges rather than a fee Elevate has quoted. What you pay is quoted per treatment, after a clinical assessment.</p>
+        </div>
+      </div>
+
+      <div class="col col--span-7">
+        <p class="kit-micro">What moves the final figure</p>
+        <ul class="kit-list">
+          <li><b class="kit-strong">Which tooth it is.</b> An incisor has one canal. A premolar usually has one or two. A molar commonly has three or four, and every one of them is located, cleaned, shaped and filled separately. This is the largest single variable and you can count it yourself.</li>
+          <li><b class="kit-strong">How difficult the anatomy is.</b> A curve, a calcified canal, an extra canal, an open root end or an active abscess each add chair time.</li>
+          <li><b class="kit-strong">Whether it is a second attempt.</b> Reopening a tooth and clearing out what was placed the first time is more work than starting clean.</li>
+          <li><b class="kit-strong">Imaging.</b> A scan, where the case needs one, is quoted as its own line.</li>
+          <li><b class="kit-strong">The restoration afterwards.</b> The core build up and the crown are separate items, and on a back tooth the crown belongs to the plan. Your quote states both, so the full figure is visible at the start rather than at the end.</li>
+        </ul>
+      </div>
+
+      <div class="col col--span-6">
+        <div class="kit-foot">
+          <p class="kit-micro">The two paths, without numbers on them</p>
+          <p class="kit-body readw--wide">You can have the tooth taken out instead, and sometimes that is the right call. But a gap does not stay a gap: the teeth beside it tilt, the tooth above or below it drifts down, and the bite changes. Replacing an extracted tooth with an implant or a bridge generally costs more than keeping the one you have. Both paths are laid out with their costs at the consultation, and the choice is yours to make with the figures in front of you.</p>
+        </div>
+      </div>
+
+      <div class="col col--span-6">
+        <div class="kit-foot">
+          <p class="kit-micro">How you pay</p>
+          <p class="kit-quote kit-quote--display readw">Elevate Dental does not accept HMO or dental insurance. All treatment is self-pay.</p>
+          <p class="kit-body readw--wide">HMO coverage cannot be used for dental treatments at our clinics. It sits in the stage where money is discussed, because discovering it midway through a plan is worse than reading it here.</p>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-inline">
+          <p>The figure for your tooth comes from its anatomy, so the only route to it is an examination and the imaging that goes with it.</p>
+          <div class="kit-inline__acts">
+            <a class="kit-btn kit-btn--ghost" href="prices.html"><span>Treatment Prices</span></a>
+            <a class="kit-btn kit-btn--ghost" href="contact.html"><span>Ask about this treatment</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 06, the part nobody advertises: how anyone actually establishes that the work succeeded.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-06"><span>Go to stage 06</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Back to the map</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #26 Pull-quote section | considered: #30,#24 | rigor: heavy | why: this stage's entire argument compresses into one sentence, that success here is read on an image months later rather than felt on the day the pain stops, and #26 exists to let a single sentence carry a band and break the rhythm around it. A band that pauses is also structurally right at this position, sitting between the money stage and the questions stage where a reader most needs a breath. #30's before and after grid is the shape this stage would take on any other clinic site and it is refused on evidence: pre-launch blocker B-2 records that the required owner authorisation is not on file for any clinical image, and the honest before and after here is a pair of radiographs belonging to a real person, so the grid would either sit empty or borrow somebody's films. #24's testimonials grid fails the same way one step removed, because the testimonial COUNT is cleared on this build while republishing testimonial CONTENT is blocked by the same missing consent. ADAPTATION: the timescales are set as a compact definition list rather than as prose, so a reader can find the number of months without reading the paragraph, and the hold itself is marked with a visible status pill rather than left in a comment, because a reviewer should be able to see what is missing from the page rather than from the source. -->
+<section class="section section--paper" id="stage-06" aria-labelledby="h06" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">06</span>
+            <div>
+              <span class="kit-eyebrow">Stage 06, how it is judged</span>
+              <h2 id="h06">How anyone knows it worked</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-quote kit-quote--display readw">The day your pain stops is not the day anyone knows this succeeded.</p>
+        <p class="kit-body readw">What stops first is measurable and quick. Pain from an irreversibly inflamed pulp usually settles within a few days of the canals being cleaned, and the tenderness to biting fades as the inflammation at the root tip resolves.</p>
+        <p class="kit-body readw">What matters is read on an image. Where infection had eaten into the bone at the root tip, that bone fills back in once the canal system has been properly sealed, and the follow up radiograph is where anyone can see whether it has. That is why the review appointment is part of the treatment and not an extra, and it is the only honest way to tell you whether the tooth has healed.</p>
+      </div>
+
+      <div class="col col--span-5">
+        <p class="kit-micro">What changes, and when</p>
+        <dl class="kit-defs">
+          <div><dt>Pain from the inflamed pulp</dt><dd>A few days</dd></div>
+          <div><dt>Tenderness to biting</dt><dd>Days to weeks</dd></div>
+          <div><dt>Swelling at the gum</dt><dd>Days, once drained</dd></div>
+          <div><dt>Bone at the root tip</dt><dd>6 to 12 months</dd></div>
+          <div><dt>Confirmed by</dt><dd>A follow up radiograph</dd></div>
+        </dl>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 07, the last one: eight answers, every one of them open on the page, beginning with the question everybody actually arrives with.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-07"><span>Go to stage 07</span></a>
+            <a class="kit-btn kit-btn--ghost" href="endodontics.html"><span>Endodontics</span></a>
+            <a class="kit-btn kit-btn--ghost" href="results.html"><span>Patient Results</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Back to the map</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: FAQ-ACCORDION.md #4 Numbered list FAQ, no expansion | considered: #7,#2 | rigor: heavy | why: every other route in this pass can reasonably ask a reader to open a row, and this one cannot: the person reading it may be in pain, on a phone, at an hour when nobody answers the telephone, and an answer behind a disclosure control is an answer they have to work for. #4 is the only FAQ entry whose defining property is that every answer is published OPEN, and that property, not its list numerals, is what is taken. #7's category grouping earns its place on a route where questions arrive at two separate moments, and here they do not: all eight arrive at once, in the same anxious sitting, so inventing a boundary between them would be furniture. #2's rounded shadowed cards would add a third card treatment to a page already spending cards on the four cells at stage 02, and this system reserves the box for a thing you can act on rather than a thing you read. ADAPTATION, twice over: the entry's NUMERALS are refused, because this page already spends ordinals on the route and on the eight clinical steps and a third numbered run would make the ordinals stop carrying position; and the rows are still built from the sheet's native details and summary elements, each carrying the open attribute, so every answer is visible on load while the control remains real, keeps its accessibility semantics, works with scripting off and prints. -->
+<section class="section section--warm" id="stage-07" aria-labelledby="h07" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-6">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">07</span>
+            <div>
+              <span class="kit-eyebrow">Stage 07, the end of the route</span>
+              <h2 id="h07">Eight answers, none of them folded away</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Every answer below is open where it sits. Nothing here is behind a control, a form or a telephone call.</p>
+        <p class="kit-micro">Aftercare, the first week</p>
+        <ul class="kit-list">
+          <li>Do not chew on that tooth until the definitive restoration is on it, particularly while a temporary filling is holding the access cavity closed.</li>
+          <li>Take painkillers as directed for the first few days rather than waiting to see whether you need them.</li>
+          <li>Brush and floss the tooth exactly as you would any other.</li>
+          <li>Telephone the clinic if swelling increases, if pain worsens after the third day, or if the temporary filling comes out.</li>
+        </ul>
+        <div class="kit-inline">
+          <p>If a tooth is painful right now, say so when you book, so the appointment is given enough chair time to treat it rather than only to look at it.</p>
+          <div class="kit-inline__acts">
+            <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+            <a class="kit-btn kit-btn--ghost" href="prices.html"><span>Treatment Prices</span></a>
+          </div>
+        </div>
+        <div class="kit-faq" data-rise>
+          <details class="kit-faq__item" open>
+            <summary class="kit-faq__q">Does it hurt?</summary>
+            <p class="kit-faq__a">The tooth is numbed before any work begins and it is kept numb throughout. Most of the pain people associate with this treatment comes from the infection that brought them in, not from the work that resolves it. Expect the tooth to be tender to biting for two to four days afterwards, which is normal and responds to ordinary painkillers taken as directed.</p>
+          </details>
+          <details class="kit-faq__item" open>
+            <summary class="kit-faq__q">How many visits will it take?</summary>
+            <p class="kit-faq__a">One to three, depending on the tooth and on whether there is an active infection. Front teeth are commonly completed in a single sitting. Molars and abscessed teeth are more often done across two.</p>
+          </details>
+          <details class="kit-faq__item" open>
+            <summary class="kit-faq__q">Why do I need a crown afterwards?</summary>
+            <p class="kit-faq__a">Because a treated tooth is more brittle than a live one and has had structure taken out of its middle. On a back tooth the cap holds the remaining walls together against chewing force, and a tooth that splits usually cannot be rescued. The crown protects the work you have already paid for.</p>
+          </details>
+          <details class="kit-faq__item" open>
+            <summary class="kit-faq__q">Can I just have it taken out instead?</summary>
+            <p class="kit-faq__a">You can, and occasionally that is the right call. Read the two paths at stage 05 before you decide, because the consequences of a gap are the part that is easy to underestimate on the day.</p>
+          </details>
+        </div>
+      </div>
+
+      <div class="col col--span-6">
+        <div class="kit-faq" data-rise>
+          <details class="kit-faq__item" open>
+            <summary class="kit-faq__q">It was treated before and still hurts.</summary>
+            <p class="kit-faq__a">That is retreatment and it is common rather than exotic. The tooth is reopened, the previous filling material is removed, the anatomy is reassessed on CBCT, and the whole system is cleaned again. Many teeth that were written off are kept this way.</p>
+          </details>
+          <details class="kit-faq__item" open>
+            <summary class="kit-faq__q">Will the tooth go dark?</summary>
+            <p class="kit-faq__a">A front tooth can discolour afterwards. It is treatable, usually by whitening the tooth from the inside, or with a veneer or a cap. Raise it at the consultation if the tooth shows when you smile, so it is planned for rather than dealt with as a surprise later.</p>
+          </details>
+          <details class="kit-faq__item" open>
+            <summary class="kit-faq__q">Do I need antibiotics?</summary>
+            <p class="kit-faq__a">Not routinely. Antibiotics do not reach the inside of a dead canal, which is the whole reason cleaning it is the treatment. They are prescribed where there is spreading infection or systemic involvement, and not as a substitute for the work.</p>
+          </details>
+          <details class="kit-faq__item" open>
+            <summary class="kit-faq__q">Which clinic can I book?</summary>
+            <p class="kit-faq__a">There are four clinics in Metro Manila: Mitsukoshi BGC, Shangri-La Plaza, Bonifacio Stopover BGC and Alabang Town Center. Which of them schedule this work, and on which days, is still being confirmed with the practice, so book through the appointment control and you will be placed at the branch that can take your case.</p>
+          </details>
+        </div>
+
+        <div class="kit-foot">
+          <p class="kit-micro">Outcome</p>
+          <ul class="kit-list">
+            <li><b class="kit-strong">Feature.</b> A tooth kept rather than removed, planned on CBCT and performed by an endodontics specialist in house.</li>
+            <li><b class="kit-strong">Do.</b> Book the free consultation and take the plan and the quotation away with you.</li>
+            <li><b class="kit-strong">Means.</b> You know the cost and the clinician before you commit.</li>
+          </ul>
+          <p class="kit-body readw--wide">The route ends here on purpose. Seven stages, all of them read: the anatomy, whether the tooth can be kept, the eight steps, the specialty and the imaging, the money and the two paths, how success is established, and the answers. If something raised a question this page did not settle, bring it and it will be answered against your own radiograph rather than against a page.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Back to the stage list</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-start"><span>Back to the start</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

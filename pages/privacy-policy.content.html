@@ -1,0 +1,118 @@
+<!--META {"title":"Privacy Policy | Elevate Dental","desc":"An interim notice covering the details you send through this website, published while the clinic's full written privacy policy is being prepared.","noindex":true}-->
+<!-- TITLE and DESC come from the brief's machine block (_handoff/briefs/privacy-policy.md), not from
+     _handoff/seo-enrichment.md: that SSOT carries rows for the 47 inventory pages only, and this is a
+     PLATFORM page (sitemap.yaml lists privacy-policy under platform_pages, outside pages[]). Recorded
+     so the difference is not mistaken for a missed lookup.
+     The key is "desc" and NOT "description": build.mjs renders esc(meta.desc) and its JSON branch does
+     not alias description to desc, so a "description" key ships an EMPTY meta description while
+     looking correct in the fragment. noindex matches every other page on this preview. -->
+<!-- ============================================================================
+     WHY THIS PAGE EXISTS, AND WHAT IT DELIBERATELY DOES NOT DO.
+
+     The owner asked on 2026-08-24 for an interim privacy page to stand in until the
+     real policy is written, and said they will replace it. So this is a REAL,
+     reachable page, not a marker: no TBD, no TODO, no bracket token, no lorem.
+
+     It contains NO invented legal text, per the OWNER-PENDING slot the brief sets
+     out in its section 3: no retention period, no lawful basis, no named processor,
+     no transfer term, no governing jurisdiction, no rights list presented as
+     binding. This is a healthcare provider and a patient could act on the text, so
+     an admitted gap is safe where a fabricated policy that reads authoritative is
+     not. The brief does NOT declare `legal_draft: competitor-referenced`, so the
+     owner-pending default applies and no competitor-adapted draft may be written.
+
+     EVERY FACTUAL CLAIM HERE IS TRACEABLE:
+       the seven data items are the actual field labels on the appointment form in
+       contact.content.html, read off the form rather than described from memory;
+       the email and phone number are already published in the site chrome
+       (_design/_chrome-block.html); this page opens no new contact route.
+
+     HOW THIS PAGE GOT ITS SHAPE, because two gates corrected it. The first draft was
+     written in the kit-* FEATURE vocabulary: kit-truth panels in a two-column grid
+     with a dedicated closing CTA band. G-CTA1 blocked it (the chrome .precta is the
+     single site-wide closing band). The rewrite was still a marketing composition,
+     and G-LEGAL-DOC blocked that too, because a T-LEGAL page must carry a real
+     .bw-legal prose measure. Both were right, and this is the third and correct
+     shape: one reading measure of flowing prose, an anchored index, ZERO imagery,
+     no cards, and no body-authored CTA band.
+
+     The .bw-legal / .bw-toc skin did not exist in this build and was added to
+     elevatedental-structural.css for these two pages, copied from the skill's own
+     brand-agnostic template with six token substitutions. That block documents
+     itself; see the T-LEGAL DOCUMENT SKIN header there.
+
+     REPLACING IT: drop the effective line and the callout in section 01, and swap
+     the three anchored blocks in section 02 for the signed policy. The chrome
+     footer link and the appointment-form note in contact.content.html both already
+     point here.
+     ============================================================================ -->
+
+<!-- pick: LEGAL-SECTIONS.md #2 Inline anchored table-of-contents | considered: #1,#3 | why: the document is short enough that #3's sticky side-rail would be a persistent chrome element policing three headings, which reads as scaffolding rather than help and costs a whole column on a page whose entire design argument is one calm measure. #1, the bare prose container, is the menu's stated safe default and was the runner-up. #2 wins on the one thing that is unusual about THIS document: it is an interim notice, so the reader's first question is not "where is the retention clause" but "is there actually a policy here at all". An inline index answers that in a glance by showing the whole shape of the document, including how short it is, which a bare prose container hides behind a scroll. The index sits UNDER the callout rather than above it so the honesty fence is read before the contents it indexes. -->
+<section class="section section--paper" id="s01" aria-labelledby="h01" data-rise style="background-image: var(--ds-grid);">
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--measure">
+        <div class="bw-legal">
+          <h1 id="h01">Privacy Policy</h1>
+          <p class="bw-legal__effective">Interim notice, published 24 August 2026. No expiry.</p>
+          <div class="bw-legal__callout">
+            <strong>This is an interim notice, not a finished privacy policy.</strong> It is deliberately short, it states only what can be checked, and it makes no commitment on the practice's behalf. The written policy will replace it in full.
+          </div>
+          <p>This page exists so that the line beside our appointment form leads somewhere real.</p>
+          <p>The written privacy policy for Elevate Dental is being prepared. Until it is finished and signed off, we would rather publish an honest short notice than a long document that looks settled and is not. A policy is a commitment about patient records, and an approximation of one is not a commitment.</p>
+          <p>Nothing written here reduces any right you already hold in law.</p>
+        </div>
+        <nav class="bw-toc" aria-label="On this page">
+          <span class="bw-toc__title">On this page</span>
+          <ul class="bw-toc__list">
+            <li class="bw-toc__item"><a class="bw-toc__link" href="#h02">What this website asks you for</a></li>
+            <li class="bw-toc__item"><a class="bw-toc__link" href="#h03">What is not settled yet</a></li>
+            <li class="bw-toc__item"><a class="bw-toc__link" href="#h04">How to ask in the meantime</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: LEGAL-SECTIONS.md #1 Prose-document container single measure | considered: #2,#3 | why: the body of a policy is the one place in this build where flowing prose IS the design, and #1 is the only entry in the catalogue that says so: no surfaces, no shadows, no columns, with the measure and the rhythm carrying the whole thing. #2 is already spent on the section above, and repeating its jump-index inside the document it indexes would be circular. #3's rail is rejected at this length for the reason given there. This pick is the correction of a real defect rather than a preference: the first two drafts of this page were feature-page compositions, and #1 is the entry that names the alternative explicitly, which is why the anchored h2 steps and the single reading measure are reproduced here exactly as specified. -->
+<section class="section section--cool" id="s02" aria-labelledby="h02" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--measure">
+        <div class="bw-legal">
+
+          <h2 id="h02">What this website asks you for</h2>
+          <p>This part is not pending, because it is observable. The appointment form is the only place on this site that asks you for anything, and these are its fields.</p>
+          <ul>
+            <li><b>Full name.</b> So the appointment can be put in a name at the desk.</li>
+            <li><b>Contact number.</b> The clinics confirm appointments by phone.</li>
+            <li><b>Email address.</b> An alternative route back to you.</li>
+            <li><b>Preferred clinic.</b> Which of the four branches you want to be seen at.</li>
+            <li><b>Treatment you are interested in.</b> So the right clinician is the one who calls you back.</li>
+            <li><b>Preferred date.</b> Checked against the chair diary.</li>
+            <li><b>Message.</b> Optional, and yours to leave blank.</li>
+          </ul>
+          <p>There is no other form on this site. No field asks for clinical history, and no field asks for payment details.</p>
+
+          <h2 id="h03">What is not settled yet</h2>
+          <p>A finished policy answers questions about how this practice runs: what is collected and why, how long a record is held, who inside the practice may open it, whether anything is shared outside it and with whom, and how you ask for a copy, a correction or a deletion.</p>
+          <p>Every one of those answers belongs to the clinic and its adviser. Writing plausible ones here would be guessing on their behalf, in a document a patient is entitled to rely on.</p>
+
+          <h2 id="h04">How to ask in the meantime</h2>
+          <p>Ask a person. If you want to know what the practice holds about you, or you would rather not send details through a form at all, call the branch you attend or email the practice and put the question directly.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="mailto:info@elevatedental.ph"><span>info@elevatedental.ph</span></a>
+            <a class="kit-btn kit-btn--ghost" href="tel:+639171140598"><span>Call a clinic</span></a>
+            <a class="kit-btn kit-btn--ghost" href="contact.html"><span>All four clinics</span></a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

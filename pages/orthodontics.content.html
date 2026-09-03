@@ -1,0 +1,513 @@
+<!--META {"title":"Orthodontics Philippines | Braces and Clear Aligners","desc":"Straighten teeth with fixed braces or Invisalign clear aligners. Treatable cases, timelines and starting prices for both.","noindex":true}-->
+<!-- TITLE and DESC are the LOCKED values from _handoff/seo-enrichment.md section 1, the SEO SSOT.
+     The SSOT separator is an en dash and renders here as a pipe, because verify-no-dashes is
+     registered on this build. Only the SEPARATOR CHARACTER changed; no word was altered, added,
+     removed or reordered.
+     The key is "desc" and NOT "description": build.mjs renders esc(meta.desc), and its JSON branch
+     does not alias description to desc, so a "description" key ships an EMPTY meta description
+     while looking correct in the fragment.
+     noindex is set on EVERY page because this publishes to a PUBLIC preview URL while the pages
+     carry representative market prices rather than this clinic's own figures. robots.txt cannot
+     carry that load: crawlers read it only at the origin root, and this ships to a project
+     subpath, so the disallow-all there is inert. noindex is the protection that actually works. -->
+<!-- ============================================================================
+     BODY, pages/orthodontics.content.html. Promoted from the owner-stamped T-HUB
+     template (_design/_tournament/templates/T-HUB/c/preview.html) and then
+     RE-AUTHORED against _copy/orthodontics.md, which is the authority.
+
+     WHERE THIS PAGE KEEPS THE TEMPLATE AND WHERE IT LEAVES IT:
+       - KEPT, and the only one of the five hubs in this set that keeps it: the
+         two-panel comparison hero. This field really does have exactly two children
+         and a reader's whole question is which of the two their bite needs, so the
+         template's opening structure is the correct one here rather than an
+         inherited habit. What is REFUSED is the catalogued treatment of it, where
+         one column is faded and struck through. Both routes are offered, neither is
+         the wrong answer, and a design that visually downgrades one of two
+         treatments a practice sells is a sales device wearing a comparison's clothes.
+       - LEFT: the template's six-column price matrix. Two treatments and one axis
+         are not a matrix, and orthodontic fees move with the number of movements and
+         the months in treatment more than with the appliance, so the money band is a
+         variables ladder rather than a grid.
+       - LEFT: the template's technology lattice of four cosmetic systems. Alignment
+         is a measurement discipline, so the band leads with the one measured fact
+         this field owns and names three systems behind it.
+       - ADDED: a band on TIME. Nothing else on this site asks a reader for two years,
+         and the locked copy carries an explicit hold on duration, so the honest move
+         is a band that states what sets the length and admits no published average
+         exists rather than a reassuring number nobody has supplied.
+
+     TERMINOLOGY held to client-rules: the trays are CLEAR ALIGNERS, never invisible
+     ones, and no provider-tier claim of any kind appears. ZERO closing CTA bands,
+     ZERO dark bands, ZERO page-local CSS. Every peso figure lives in exactly two
+     bands, marked in visible text within eighty characters of the figure.
+     ============================================================================ -->
+
+<!-- pick: HERO-COMPOSITIONS.md #23 | considered: #20,#3,#10 | rigor: heavy | why: this is the one hub in the set whose reader arrives holding a genuine two-way question, braces or aligners, so the comparison hero is not an inherited default here but the structurally correct opener: two peer columns under one headline, the choice posed on the first screen rather than described. The copy supplies the axis instead of a designer inventing one, because the deciding variable is how far the teeth have to travel and that variable separates the two routes cleanly. #20 three-column text plus stat plus photo wants a countable, and this field's countables, the specialist bench and the field count, are rationed by client-rules to other slugs, so a stat column would be empty or would break a ration. #3 split-screen fifty fifty writes its two halves for two AUDIENCES with two separate calls to action, and this page has one audience facing two appliances, so it would split the appointment ask before the reader knows what the choice is. #10 centred headline with no hero photograph fails the sector imagery floor on a credibility vertical. ADAPTATION, load bearing: the two panels take an identical card treatment and differ only in what they say, and the appointment ask sits below both, because a hero that poses a question should let a reader read both answers before it asks for anything. -->
+<!-- FRONT OF HOUSE RESTRUCTURE. The hero is re-housed into the foh-hero contract: one
+     full-bleed scrimmed photographic band carrying the headline, a paper lockup under it for the
+     eyebrow, the lede and the existing buttons. .surface-dark is the page's one dark beat, which
+     verify-not-flat credits. The h1 carries no price and is unchanged.
+     THE OLD .kit-slot IS DELETED, not kept: it held the SAME aligner photograph hero-map.json
+     assigns to the band, and one section must not show one photograph twice. Its .col went with
+     it rather than being left empty, because an empty grid cell still consumes the row gap.
+     WHAT ELSE LEFT THE HERO, and where each fact still stands, checked before cutting:
+       - "It treats crowding, gaps, protrusion and a bite that does not close evenly" -> band 02,
+         "Find yours on this list", which names every one of those conditions in its own list.
+       - "planned by an orthodontist ... reviewed against the bite" -> the band 02 lede, "reads how
+         the upper and lower teeth meet, and sets a sequence of movements".
+       - "The appliance is the second question. The first is how far the teeth have to travel."
+         -> band 04, "Distance of travel, not preference", whose whole lede is that sentence.
+     The two route cards stay: they are the page's braces-or-aligners fork and carry its only
+     links to the two child pages. -->
+<!-- FOH LEFTOVER REMOVED, 2026-08-25. The FOH pass added the stage but left the OLD hero
+     composition in the same section, so this section carried the band AND the columns it
+     replaced. The hero row now holds exactly ONE .col, the .col--full carrying the stage.
+     WHAT WAS DELETED, AND THE CLAIM ABOVE THAT DID NOT SURVIVE CHECKING. The two
+     .col--span-6.col--stretch route cards ("Route one / Fixed" and "Route two / Removable") are
+     removed. The FOH note above kept them on the stated ground that they "carry its only links
+     to the two child pages". That was checked against the file and it is not true: s-decide
+     carries href="braces.html" and href="invisalign.html" as well, so the hero cards were the
+     SECOND copy of both links, not the only one.
+     WHERE EVERY CLAIM ON THOSE CARDS STILL STANDS, in s-decide "Appliance A / Widest range" and
+     "Appliance B / Discreet":
+       - "Brackets bonded to the teeth, wired and adjusted" and "Nothing is taken out and nothing
+         depends on you remembering" -> "Fixed brackets and wires, adjusted at intervals through
+         the whole course", plus the rows "Worn: Bonded, never removed by you" and "Taken out for
+         meals: No".
+       - "handle the widest range of cases, including the severe crowding and bite corrections
+         trays cannot address on their own" -> "Braces handle the widest range of cases,
+         including severe crowding and the bite corrections that need a force trays cannot
+         deliver on their own".
+       - "A sequence of clear trays, changed on a schedule" and "Discreet in normal conversation
+         and taken out for meals and cleaning, which also means the result depends on you wearing
+         them" -> "A sequence of removable clear trays, each worn for a set period and changed on
+         schedule, planned from a digital scan. Discreet in normal conversation, and dependent on
+         the hours you actually wear them", plus the rows "Taken out for meals: Yes, and for
+         cleaning" and "Progress by: Changing to the next tray".
+     s-decide states all of it with more attached, including the two starting figures and their
+     market markers, so the removal costs the page no fact and no link. Nothing was moved below.
+     The emptied .cols went with their content rather than being left behind: an empty grid cell
+     renders at zero height but still consumes the 40px row gap. -->
+<section class="section surface-dark kit-hero foh-hero" id="s-open" aria-labelledby="h-open" data-surface="dark" data-rise>
+  <div class="container">
+    <div class="row">
+      <div class="col col--full">
+        <div class="foh-hero__stage">
+          <figure class="foh-hero__band">
+            <img class="foh-hero__img" src="../assets/generated/gen-hero-partial-frame.jpg" alt="A lower arch model wearing a clear orthodontic appliance, resting in a shallow brushed brass dish under raking light." width="3136" height="1344" loading="eager" fetchpriority="high" decoding="async">
+            
+          </figure>
+          <div class="foh-hero__inner">
+              <h1 class="foh-hero__title" id="h-open">Orthodontics Philippines. Braces and Clear Aligners.</h1>
+            </div>
+          <div class="foh-hero__lockup">
+            <p class="foh-hero__eyebrow">Moving teeth, and holding them</p>
+            <p class="foh-hero__lede">Orthodontics moves teeth into position and holds them there.</p>
+            <div class="kit-actions">
+              <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+              <a class="kit-btn kit-btn--secondary" href="#s-decide">What decides between them</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #6 | considered: #50,#9,#7 | rigor: heavy | why: the locked copy lists seven conditions in the reader's own vocabulary, crowding, gaps, protrusion, an open bite, drift after an extraction, relapse after retainers were abandoned, and a person recognising ONE of them is the entire qualification event for this page. #6 is the entry whose declared job is that recognition, a reader matching their own mouth against a set of profiles until one is obviously theirs. It matters more here than on any other hub because alignment is elective for most people who have it: nothing hurts, so the reader has to see themselves in a line of type before anything else on the page is worth reading. #50 topic columns would sort the seven into families, which suits a diagnostic field and not this one, since a crossbite and a relapsed case can want the same appliance. #9 services three-column would present conditions as products. #7 problem framing holds one problem in large type and there are seven. ADAPTATION: the last two rows name situations rather than shapes, an extraction gap and a lapsed retainer, because both are common in adults and neither is visible when a reader looks in a mirror. -->
+<section class="section section--cool" id="s-field" aria-labelledby="h-field" data-rise>
+  <div class="container">
+    <div class="row row--split">
+
+      <div class="col col--copy">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">02</span>
+            <div>
+              <span class="kit-eyebrow">What this field covers</span>
+              <h2 id="h-field">Find yours on this list</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Your orthodontist takes records, reads how the upper and lower teeth meet, and sets a sequence of movements that brings them into a stable relationship.</p>
+        <ul class="kit-list">
+          <li><b class="kit-strong">Crowded or overlapping teeth.</b> There is not enough arch for the teeth to sit side by side.</li>
+          <li><b class="kit-strong">Gaps and spacing.</b> The opposite problem, and it responds to the same appliances.</li>
+          <li><b class="kit-strong">Protruding upper front teeth.</b> Often the complaint that brings an adult in.</li>
+          <li><b class="kit-strong">Overbite, underbite and crossbite.</b> A relationship problem between the arches rather than within one of them.</li>
+          <li><b class="kit-strong">An open bite.</b> The front teeth do not meet when the back teeth do.</li>
+          <li><b class="kit-strong">Drift after an extraction.</b> Neighbouring teeth lean into a space that was left open.</li>
+          <li><b class="kit-strong">Relapse.</b> Treated years ago, retainers stopped, and the teeth have moved back.</li>
+        </ul>
+        <div class="kit-card kit-card--tint kit-card--pad" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">What a long case runs into</span>
+            <svg class="kit-ring" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+            </svg>
+          </div>
+          <p class="kit-card__title">Alignment cases frequently need one of the other fields</p>
+          <p class="kit-card__body">Crowding can hide decay that has to be dealt with before brackets go on. A crossbite can involve a tooth that needs taking out first. Adult cases often finish with restorative work once the teeth are where they belong. Each of those handovers happens inside this practice, on the same records, without your plan going on hold while you find someone else.</p>
+        </div>
+      </div>
+
+      <div class="col col--media">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2022_03_woman-with-braces-on-teeth-closeup-2022-02-14-18-04-11-utc-1.jpg" alt="A close view of a mouth held slightly open, showing metal brackets bonded across the upper front teeth with an archwire running through them and a lower arch behind." width="1200" height="800" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Fixed appliance</b><span>Brackets and one continuous wire, seen at conversation distance.</span></figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: CARD-VARIATIONS.md #15 | considered: #4,#2,#9 | rigor: heavy | why: this band has exactly two peers to place and each one needs a specification rail with a figure at its foot, which is the two-up tier card and nothing else in the card family; the circle-icon service card carries a clause and a link but no rail, and a rail is the whole comparison here. RE-REGISTERED, load bearing: #15 is a PRICING tier card, and its two defining commerce devices are refused outright. There is no featured tier, because neither appliance is recommended over the other and elevating one would be a sales decision dressed as a clinical one, and there is no "most popular" badge, because no supplied source records what patients here actually choose. What survives is the useful half, two equal cards compared on four axes with the floor figure last. #4 circle-icon service card is used on the tier-2 hub for routing and has no rail. #2 light feature card with an embedded mini-visual would need two more photographs and this page's pool is already spent on the bands that carry one. #9 testimonial three-up would answer an appliance question with opinions, and no testimonial on this build carries a platform, count and date, so none may be published at all. -->
+<section class="section section--paper" id="s-two" aria-labelledby="h-two" data-rise>
+  <div class="container">
+    <div class="row row--stretch">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">03</span>
+            <div>
+              <span class="kit-eyebrow">Treatments in this field</span>
+              <h2 id="h-two">The two appliances on four axes</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">Both are fitted and monitored by in-house orthodontists. They differ in what is bonded to the tooth, what you can take out, how progress is made, and where the fee starts.</p>
+      </div>
+
+      <div class="col col--span-6">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Appliance A</span>
+            <span class="kit-card__unit">Widest range</span>
+          </div>
+          <p class="kit-card__title">Braces</p>
+          <p class="kit-card__body">Fixed brackets and wires, adjusted at intervals through the whole course. Braces handle the widest range of cases, including severe crowding and the bite corrections that need a force trays cannot deliver on their own.</p>
+          <dl class="kit-card__hours">
+            <div><dt>Worn</dt><dd>Bonded, never removed by you</dd></div>
+            <div><dt>Taken out for meals</dt><dd>No</dd></div>
+            <div><dt>Progress by</dt><dd>Adjustment appointments</dd></div>
+            <div><dt>From</dt><dd>₱90,000 <span class="kit-meta">market figure, not an Elevate price</span></dd></div>
+          </dl>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="braces.html"><span>Dental Braces</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-6">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Appliance B</span>
+            <span class="kit-card__unit">Discreet</span>
+          </div>
+          <p class="kit-card__title">Invisalign Clear Aligners</p>
+          <p class="kit-card__body">A sequence of removable clear trays, each worn for a set period and changed on schedule, planned from a digital scan. Discreet in normal conversation, and dependent on the hours you actually wear them.</p>
+          <dl class="kit-card__hours">
+            <div><dt>Worn</dt><dd>Removable, on your discipline</dd></div>
+            <div><dt>Taken out for meals</dt><dd>Yes, and for cleaning</dd></div>
+            <div><dt>Progress by</dt><dd>Changing to the next tray</dd></div>
+            <div><dt>From</dt><dd>₱180,000 <span class="kit-meta">market figure, not an Elevate price</span></dd></div>
+          </dl>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="invisalign.html"><span>Invisalign Clear Aligners</span></a>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #15 | considered: #14,#34,#29 | rigor: heavy | why: the rails above compare the appliances and leave the reader with the question the rails cannot answer, which is which one their own bite needs, and that has two answers with real conditions attached, so it is an opposition and #15 is the only entry that gives an opposition a shape. The equal weighting is the argument: a reader who wants trays and is told their case needs brackets must read that as clinical rather than as an upsell, and two panels of identical size are what make it read that way. #14 tabbed content would hide one answer behind a control, and making someone click to be told their preferred appliance is unsuitable is the worst possible sequencing of that news. #34 FAQ accordion is the same problem in a longer form and is used one band down where the questions genuinely are questions. #29 before and after pair is barred outright: every clinical before and after file in this library is owner-blocked under pre-launch blocker B-2. RE-REGISTERED: #15 is written as us versus THEM, client-rules caps competitor mentions at zero on every page, so the axis is re-pointed at the same practice's two appliances, which is the only opposition this page may draw. -->
+<section class="section section--warm" id="s-decide" aria-labelledby="h-decide" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">04</span>
+            <div>
+              <span class="kit-eyebrow">What actually decides it</span>
+              <h2 id="h-decide">Distance of travel, not preference</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">Preference is a real input and it is not the deciding one. How far each tooth has to move, and in which direction, is what narrows the choice before anyone asks what you would like.</p>
+      </div>
+
+      <div class="col col--span-4">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2022_03_young-smiling-woman-holding-invisalign-braces-over-2022-01-19-22-49-09-utc-1.jpg" alt="A smiling woman holding a single transparent aligner tray flat across both open palms, her face soft focus behind it against a plain pale ground." width="1200" height="801" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Removable means optional</b><span>A tray only works during the hours it is actually in.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--span-4 col--stretch">
+        <div class="kit-card kit-card--pad" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Trays are on the table when</span>
+            <span class="kit-card__unit">Shorter travel</span>
+          </div>
+          <p class="kit-card__title">The movements are moderate and you will keep to the hours</p>
+          <p class="kit-card__body">Mild to moderate crowding or spacing, an arch that needs tipping rather than bodily repositioning, and a person whose day allows a tray to stay in for the wear time their orthodontist specifies. Being removable is the advantage and the risk in the same sentence.</p>
+        </div>
+      </div>
+
+      <div class="col col--span-4 col--stretch">
+        <div class="kit-card kit-card--pad" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Brackets are the answer when</span>
+            <span class="kit-card__unit">Longer travel</span>
+          </div>
+          <p class="kit-card__title">Roots have to be moved, or the arches have to be related</p>
+          <p class="kit-card__body">Severe crowding, a tooth that has to be uprighted through bone, a crossbite, or a correction that needs continuous force nothing can be taken out of. A fixed appliance also removes compliance from the equation entirely, which for some patients is the deciding factor on its own.</p>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">What settles it</p>
+          <p class="kit-body readw--wide">Records first, opinion second. The examination, the images and the digital scan show your orthodontist the roots and the arch relationship, and the appliance recommendation follows from those. If both are viable for your case you will be told so plainly, and then preference is a legitimate tie-breaker.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: FAQ-ACCORDION.md #4 | considered: #3,#5,#7 | rigor: heavy | why: three questions about time follow every alignment consultation, how long will it take, what makes it longer, and what happens when it ends, and the numbered list variant is the only entry in the accordion family that answers a question without hiding it behind a control first. That matters here more than anywhere else on the page: the honest answer to the first question is that no published average exists for this practice, and an answer like that must not sit behind a plus sign, because a reader who never opens it walks away with a number they invented themselves. #3 the two-column split FAQ separates a question from its answer across a gutter, which at phone width becomes two stacked lists a reader has to zip together. #5 centred FAQ with an eyebrow is a layout for a long tail of questions and this is three. #7 category grouping needs categories and there is one topic. ADAPTATION: the counter is meaningful rather than decorative because the three questions are asked in that order, and the middle row is the only one this practice can answer fully, so it is the longest. -->
+<section class="section section--cool" id="s-time" aria-labelledby="h-time" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7 col--copy">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">05</span>
+            <div>
+              <span class="kit-eyebrow">The part nobody asks about first</span>
+              <h2 id="h-time">Three questions about time</h2>
+            </div>
+          </div>
+        </div>
+        <ol class="kit-list kit-list--ledger">
+          <li><span><b>How long will mine take.</b> Both routes are measured in months. Your orthodontist confirms the length of your case after records and a scan, because it is set by how far your teeth have to travel and not by which appliance you chose.</span></li>
+          <li><span><b>What makes a case longer.</b> Roots that have to move through bone rather than tips that have to rotate. An arch relationship that has to change rather than teeth that have to straighten within one. A tray sequence worn for fewer hours than it was planned for. Missed adjustment appointments, which stall a fixed case in exactly the same way.</span></li>
+          <li><span><b>What happens at the end.</b> Teeth move back if nothing holds them, which is why relapse appears on the condition list above. Retention is part of the plan, not an afterthought bought separately, and it is discussed before treatment begins rather than on the day the appliance comes off.</span></li>
+        </ol>
+      </div>
+
+      <div class="col col--span-5">
+        <div class="kit-truth">
+          <p>No typical treatment-duration range is published for either appliance. Publishing a borrowed industry average would be a promise this practice has not made, so duration is given case by case.</p>
+        </div>
+        <div class="kit-truth">
+          <p>Whether retainers are included in the treatment fee, and what a replacement costs, is not stated here. It is a question every patient asks at the end of a long course of treatment.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #11 | considered: #18,#19,#8 | rigor: heavy | why: a two-year relationship is the strongest argument this field has for a bench rather than a single practitioner, and pillars-with-image is the entry that lets that argument run as continuous prose beside a photograph of the relationship itself, an appliance being fitted with the clinician's hands in frame. The photograph is doing specific work rather than decorating: it shows the moment the copy is about, someone else in the room who will still be there in eighteen months. #18 and #19, the three and four-column team grids, are what this band would be if the per-field roster existed. It does not, and client-rules blocks tying any clinician to a named clinic, so a grid of faces here would fabricate the exact fact the held block below withholds. #8 manifesto would turn an operational argument into a creed and lose the specifics that make it checkable. ADAPTATION: the band routes to the published index rather than showing anyone, so the reader meets the bench as a list they can verify rather than as portraits they have to take on trust. -->
+<section class="section section--paper" id="s-bench" aria-labelledby="h-bench" data-rise>
+  <div class="container">
+    <div class="row row--split-rev">
+
+      <div class="col col--copy">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">06</span>
+            <div>
+              <span class="kit-eyebrow">The specialists in this field</span>
+              <h2 id="h-bench">Two years is a relationship, not a transaction</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Every dentist here is published by name and by field. Filter the index to orthodontics to see who takes these cases.</p>
+        <p class="kit-body readw--wide">This is the clearest illustration on the site of what a bench changes. Over that length of time a case does not stay purely orthodontic. When yours needs an extraction, a filling, gum treatment or a crown at the end, that appointment is made without leaving the practice, and the orthodontist stays on the case throughout rather than handing you over and hoping.</p>
+        <div class="kit-actions kit-actions--tight">
+          <a class="kit-btn kit-btn--ghost" href="specialists.html"><span>Our Specialists</span></a>
+          <a class="kit-btn kit-btn--ghost" href="treatments.html"><span>All Treatments</span></a>
+        </div>
+      </div>
+
+      <div class="col col--media">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--arch">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_07_dentist-assisting-patient-wear-invisible-braces-scaled.jpg" alt="A clinician seen from behind holding a clear aligner tray up to the open mouth of a seated patient in a paper bib, who is watching the tray rather than the camera." width="2560" height="1707" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>The fitting</b><span>The first tray is seated with the orthodontist watching, not posted out.</span></figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #3 | considered: #2,#4,#56 | rigor: heavy | why: alignment is a measurement discipline before it is an appliance one, so this band should lead with the single measured fact the field owns and let the instrument names sit behind it as supporting detail, which is exactly the stat strip's structure, one figure at the front and a quiet row of specifics behind. Leading with the confirmed imaging fact is the honest ordering, because it is the only thing on this page a reader can hold every clinic to. #2 trust strip and #56 sponsors wall both want marks, and every system named here is cleared as nominative text only, no logo, no badge and no partner status, so either would require artwork this build may not draw. #4 press band has no coverage to carry. ADAPTATION: the three systems are named with what each one measures rather than with what it is, because a scanner is only interesting on this page for the thing it makes measurable, and a reader choosing an orthodontist is entitled to know the plan was drawn from a measurement rather than from an impression and an opinion. -->
+<section class="section section--warm" id="s-kit" aria-labelledby="h-kit" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">07</span>
+            <div>
+              <span class="kit-eyebrow">Technology used here</span>
+              <h2 id="h-kit">Planning is measurement first</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-status"><span class="kit-status__dot" aria-hidden="true"></span>Cone beam scanning is verified at Mitsukoshi BGC, Shangri-La Plaza, Bonifacio Stopover BGC and Alabang Town Center</p>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-sys kit-sys--3up" data-rise>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">01</span>
+            <p class="kit-sys__name">iTero intraoral scanner</p>
+            <p class="kit-sys__note">Measures the arch in place of a putty impression tray. The scan is what a tray sequence is generated from, and it is repeated during treatment so progress can be compared against the plan rather than estimated by eye.</p>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">02</span>
+            <p class="kit-sys__name">Digital radiography</p>
+            <p class="kit-sys__note">Measures the roots, the jaw relationship and the teeth still to erupt, on panoramic and cephalometric images read on screen in the same appointment.</p>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">03</span>
+            <p class="kit-sys__name">3D CBCT imaging</p>
+            <p class="kit-sys__note">Measures root position, an impacted tooth and the volume of bone around a tooth in three dimensions, which is what decides whether a movement is achievable before it is attempted.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-actions kit-actions--tight">
+          <a class="kit-btn kit-btn--ghost" href="technology.html"><span>See all the technology</span></a>
+          <a class="kit-btn kit-btn--ghost" href="locations.html"><span>All Locations</span></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: PRICING-SECTIONS.md #6 | considered: #2,#5,#4 | rigor: heavy | why: orthodontic fees vary more than any other field on this site and they vary for reasons a reader can be told, so the quote-configurator ladder is the pattern that fits the fact: it names the variables that move a number, in the order they bite, rather than printing a grid that implies a fixed menu. A table would be the wrong shape twice over here, once because two treatments and one axis are not a matrix, and once because a two-row grid would suggest the figures are comparable when the two routes are quoted on different logic. #2 comparison table is used on the tier-2 hub above, where nine fields genuinely need a matrix. #5 plain-deal honesty stance carries the payment condition and no figures, and that condition rides as a rail inside this band rather than taking one of its own, because this page has fewer money moments than a hub with twenty treatments under it. #4 quote-only cost-model split is barred by its own rule that it never prints a figure, and the locked copy prints two. -->
+<section class="section section--cool" id="s-cost" aria-labelledby="h-cost" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7 col--copy">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">08</span>
+            <div>
+              <span class="kit-eyebrow">Starting prices</span>
+              <h2 id="h-cost">Two floors, and what lifts them</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">A full course of braces starts at ₱90,000, <span class="kit-meta">a representative market figure,</span> and a clear aligner course at ₱180,000, <span class="kit-meta">read the same way and not an Elevate quote</span>.</p>
+        <p class="kit-body readw--wide">Both are floors rather than quotes. Cases in this field vary more than in most, because the fee follows the number of movements your teeth need and the months you spend in treatment. Three things move it:</p>
+        <ul class="kit-list">
+          <li><b class="kit-strong">How many teeth actually have to move,</b> and whether they move within one arch or between two.</li>
+          <li><b class="kit-strong">How long the case runs,</b> because time in treatment is appointments, and appointments are the fee.</li>
+          <li><b class="kit-strong">What has to happen first,</b> an extraction, a filling or gum treatment before an appliance can be fitted at all.</li>
+        </ul>
+        <p class="kit-body readw--wide">Your exact figure is confirmed at the consultation, in writing, before a single appointment is scheduled.</p>
+      </div>
+
+      <div class="col col--span-5">
+        <div class="kit-card kit-card--tint kit-card--pad" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">How it is settled</span>
+            <span class="kit-card__unit">Self-pay</span>
+          </div>
+          <p class="kit-card__title">Elevate Dental does not accept HMO or dental insurance.</p>
+          <p class="kit-card__body">Health plan coverage cannot be used for dental treatment at our clinics, and every case is settled directly. On a two-year commitment that is worth reading before the records appointment rather than after it.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="prices.html"><span>Treatment Prices</span></a>
+          </div>
+        </div>
+        <div class="kit-truth">
+          <p>Neither number above is an Elevate price. Both are indicative market figures taken from published Philippine ranges. What you pay is quoted once your bite has been assessed.</p>
+        </div>
+        <div class="kit-truth">
+          <p>A long course of treatment is commonly settled in stages. Whether this practice offers that, and on what terms, is not stated here, so nothing is claimed.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #27 | considered: #33,#37,#41 | rigor: heavy | why: an orthodontic consultation is genuinely a sequence with a dependency inside it, records before reading, reading before recommendation, recommendation before decision, and none of the four steps can be reordered without the next one losing its basis, so the numbering carries meaning rather than decoration and #27 is the only candidate whose numbers mean anything. It also resolves this page's structural constraint: the body authors zero closing bands, so the last beat has to be a CONTENT band with the ask folded in, and a sequence that ends on the reader deciding is a band that earns an inline rail rather than one built around a button. #33 custom-quote driver is the marquee template's closing pattern and reusing it at the exact moment a reader decides would make this hub a restyle of the marquee. #37 CTA form would stand a form beneath a header, a mega panel and a closing band that all carry the appointment control already. #41 closing CTA is the band the singularity gate counts, and the chrome carries this site's only one. AUTHORING FORM inherited from the locked flagship: each ledger row is ONE child, li greater-than span greater-than bold lead plus text, or the copy lands in the 44 pixel counter column. -->
+<section class="section section--warm" id="s-close" aria-labelledby="h-close" data-rise>
+  <div class="container">
+    <div class="row row--split">
+
+      <div class="col col--copy">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">09</span>
+            <div>
+              <span class="kit-eyebrow">Before you commit to months</span>
+              <h2 id="h-close">Find out which route your bite actually needs</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">A consultation here starts with records, and the recommendation comes out of them rather than out of a conversation about what you would prefer.</p>
+        <ol class="kit-list kit-list--ledger">
+          <li><span><b>Records.</b> An examination, images and a digital scan, taken in one visit.</span></li>
+          <li><span><b>The reading.</b> Your orthodontist reads the roots and the arch relationship out of those records rather than out of what a mirror shows you.</span></li>
+          <li><span><b>The recommendation.</b> Which appliance suits the case, what the sequence looks like, and how long it is likely to run.</span></li>
+          <li><span><b>Your decision.</b> Made with the plan in front of you, and nothing is fitted before you agree to it.</span></li>
+        </ol>
+        <p class="kit-body readw--wide">Nothing in that sequence commits you to anything. You leave with a written plan, a figure and a length, and the decision to start is a separate appointment you make afterwards.</p>
+        <div class="kit-truth">
+          <p>Whether the first consultation carries a fee is not stated on this page, and no complimentary visit is claimed.</p>
+        </div>
+        <div class="kit-inline">
+          <p>Two appliances, one question, and it is answered from a scan rather than from a preference. That takes one appointment to settle.</p>
+          <div class="kit-inline__acts">
+            <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+            <a class="kit-btn kit-btn--ghost" href="contact.html"><span>Call Us</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--media">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2021_04_7-Reasons-Why-You-Need-Dental-Braces.jpg" alt="A three-quarter view of a lower face smiling, with metal brackets and an archwire visible across the upper teeth against a plain grey ground." width="1200" height="800" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Mid-course</b><span>A fixed appliance part way through a plan, at ordinary reading distance.</span></figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>

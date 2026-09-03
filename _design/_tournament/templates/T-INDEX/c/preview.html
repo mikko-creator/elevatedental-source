@@ -1,0 +1,1399 @@
+<!doctype html>
+<html lang="en-PH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elevate Dental T-INDEX concept C, The Comparison (Specialists)</title>
+<meta name="description" content="Template tournament entry. T-INDEX, the per-TYPE listing template, laid out on the locked specialists copy.">
+<meta name="robots" content="noindex,nofollow">
+
+<!--
+  ELEVATE DENTAL : TEMPLATE TOURNAMENT, T-INDEX, CONCEPT C "THE COMPARISON"
+  Stage (5) TEMPLATES. BRAND-CARD, FEEL, SYSTEM, CHROME and IMAGERY are all stamped
+  and LOCKED. This file invents nothing above them.
+
+  WHAT THIS IS. ONE page-template concept for the T-INDEX page type, laid out on the
+  FINAL copy at _copy/specialists.md. FIVE pages inherit whatever the owner picks
+  here, so every decision below is recorded with a defended ledger at HEAVY rigor.
+
+  WHAT IT LINKS, IN THE ORDER THE SYSTEM REQUIRES
+    ../../../../elevatedental-tokens.css      the LOCKED token API, 55 tokens, dual surface
+    ../../../../elevatedental-chrome.css      the LOCKED chrome sheet
+    ../../../../elevatedental-structural.css  the LOCKED body sheet, 136 kit- components
+  The chrome carrier from _design/_chrome-block.html is inlined VERBATIM around the
+  main element below, split at its ONE main slot: same header, same mega panel, same
+  drawer, same .precta closing band, same footer, same script, same nesting. Nothing
+  in it is restyled, relabelled or re-indented.
+
+  THE CONCEPT. THE COMPARISON. A roster index is not a wall of names, it is a CHOICE,
+  and this page is built around the choice the reader is actually making. Section 01
+  sets the two real routes side by side, each with the honest case against it: choose
+  the clinician yourself, or book the consultation and let the case be routed. Section
+  03 hands the reader the instrument to self-select on: nine fields, each stating what
+  it covers AND WHERE IT STOPS, beside the field it is most often confused with. Every
+  row of that comparison carries its own boundary, because the thing a patient cannot
+  do is tell prosthodontic from periodontic, and a listing page that only lists is
+  asking them to guess. Sections 04 and 05 compare the card against the data that
+  supports it, then compare the three ways out when the filter returns nothing.
+
+  DESIGN-SYSTEM PROVENANCE (derived, never invented). Menus are cited per section in
+  the selection ledgers below. Beyond them this page applies:
+    library   _RESPONSIVE-PATTERN-LIBRARY    the four tier reflow ladder. Both bespoke
+              grids re-declare their column counts at the SAME anchors the locked
+              sheet already runs (1023 / 767), and the section 03 comparison table
+              takes the library's table-to-cards reflow, which is why every td on this
+              page carries a data-label.
+    library   _COMPOSITION-LAWS              L1 stacked split reading order (every
+              section's lead heading precedes its media at 767) and L9 selection
+              rationale (the per-section ledger comments, at heavy rigor).
+    library   _MODERN-WOW-SPEC               intentional asymmetry: the hero media is
+              held low off the top grid line via the locked .kit-hero__media offset,
+              so the first screen is not two boxes squared up against each other.
+    blueprint composition-medical-health     the SECTOR spine, read through
+              _SECTOR-BLUEPRINT-RECONCILIATION.md. Three of its moves are load bearing
+              here: the IMAGERY FLOOR (a credibility vertical may not ship a photo free
+              marquee band, which is why section 01 and section 04 carry real first
+              party photographs and why no field row carries a decorative stock one);
+              the SELF-SELECTION qualifier (the blueprint's "is this for me" beat is
+              the whole page rather than one band on it); and Collision A, which allots
+              the chrome exactly one closing CTA band and leaves the body zero.
+
+  THE TRAP THIS PAGE TYPE FAILS ON, AND HOW IT IS AVOIDED. The classic T-INDEX defect
+  is a sort or filter control keyed to data the rows do not carry. Every control in
+  section 03 keys on an attribute stamped on the row itself: data-field for the
+  discipline chips, data-treat for the treatment select, data-name and data-order for
+  the two sorts. There is NO date sort, because a roster row carries no date, and the
+  toolbar says so in visible text. The clinic filter is specified, built and shipped
+  DISABLED under the copy's own label, because per-clinic assignment is owner-held and
+  no row carries a clinic value.
+
+  MEASURED TONE, HONOURED. surface_dominance light, dark_ratio 0, energy restrained.
+  Light is the ground. The body authors ZERO dark bands: the one permitted dark
+  punctuation is the chrome's closing band. The body authors ZERO arc seams, because
+  the one arc per page is spent where the header meets the page, and ZERO closing CTA
+  bands, per Collision A. The single mid page ask is an inline rail folded inside the
+  content bearing section 05.
+
+  IMAGERY. Four real photographs, every one a first party file assigned to this page in
+  _imagery-map.json. Three of them are published roster portraits, used in section 04
+  to fix the PORTRAIT TREATMENT decision C7 section 4 names by name, since two of the
+  three were shot on a white clinic ground and the third on a blush studio ground. They
+  are NOT a featured selection and the page says so in visible text: the pinned set is
+  an owner decision, it has not been supplied, and it is not auto filled here from
+  roster order, alphabetical order or recency. No clinician is assigned to a field or
+  to a clinic anywhere on this page.
+
+  CLAIM DISCIPLINE. No rank, reputation or seniority framing. No superlative, no
+  outcome promise, no competitor named, no rating figure, no provider tier, no HMO
+  implication, no peso figure at all (this page carries none, so it carries no price
+  placeholder either). The rationed counts are spent once each: "nine disciplines" in
+  the section 01 deck, "31 specialists" in the section 03 lede, and the H1 carries the
+  same verified figure as "31 dentists" so the hero and the list can both state it.
+-->
+
+<link rel="stylesheet" href="../../../../elevatedental-tokens.css">
+<link rel="stylesheet" href="../../../../elevatedental-chrome.css">
+<link rel="stylesheet" href="../../../../elevatedental-structural.css">
+
+<style>
+/* ==========================================================================
+   BESPOKE, PAGE LOCAL. TWO objects, minted because the locked structural sheet
+   carries neither a two panel side by side comparison nor a filter toolbar, and
+   this concept's whole thesis is a comparison the reader self selects from. Both
+   are kit- prefixed on purpose: verify-dom-structure hard codes /^(?:bw|kit)-/ as
+   THE skin prefixes, so a private prefix would silently blind the R5 check.
+
+   Both are LAYOUT AND TOKENS ONLY. Zero hex, zero rgba, zero colour, zero radius,
+   zero font, zero duration. Every visible edge, hairline, shadow, tint, rail and
+   mask on this page is a LOCKED object (.kit-card, .kit-table, .kit-tag,
+   .kit-select, .kit-truth, .kit-slot, .kit-statband) doing its own job inside these
+   grids. Neither paints anything on .container, .row or .col.
+
+   THE REFLOW IS AUTHORED TO THE LOCKED LADDER, not beside it
+   (_RESPONSIVE-PATTERN-LIBRARY, the four tier ladder the structural sheet already
+   runs at 1023 / 899 / 767 / 380): the toolbar steps 3 to 2 at 1023 and 2 to 1 at
+   767, and the comparison pair steps 2 to 1 at 767 with its two panels in source
+   order. Unlike a before and after pair, whose evidence IS the adjacency, a two
+   panel PROSE comparison loses nothing when it stacks, so this grid takes the
+   ladder's single column step rather than claiming an exception to it.
+   ========================================================================== */
+
+/* AUTHORING CONTRACTS INHERITED FROM THE LOCKED FLAGSHIP, both found by RENDERING
+   rather than by reading, both re-obeyed here.
+   (1) .kit-list--ledger li is display:grid with the tracks 44px and 1fr, and the
+       counter ::before is its FIRST grid item. A bold lead followed by loose text
+       makes THREE items and dumps the body copy into the 44px counter column, so
+       rows render about 420px tall instead of about 70. THE AUTHORING FORM IS ONE
+       CHILD PER ROW, li > span > b plus text, which is what the ledger in section
+       04 uses. This is a markup contract; the locked sheet is correct.
+   (2) .row--stretch stretches the .col, but a .kit-card is a normal block child and
+       still sizes to its content, so a card row lands with RAGGED bottoms. The one
+       line below is the same line the LOCKED chrome sheet already spends for the
+       mega panel card (.ed-mega .kit-card{height:100%}), applied through the
+       structure hook rather than as a class on it. Layout only.
+   A THIRD contract is obeyed by ABSENCE: position:sticky is INERT inside .section
+   because the locked sheet sets overflow:hidden, so this page authors no sticky
+   filter rail, which is exactly the affordance a toolbar band reaches for by
+   reflex. The toolbar sits in flow, above its own set, and scrolls with it. */
+.row--stretch > .col > .kit-card { height: 100%; }
+
+/* THE COMPARISON PAIR. HERO-COMPOSITIONS #23's two column oppositional grid,
+   re-pointed off "us versus them" (naming or framing against a competitor is banned
+   outright on this client) and onto the two ROUTES the reader owns. #23's own hook
+   is a 1px gap over a line colour; that is refused here, because this brand's
+   separation law is a hairline plus a graded contact shadow plus a change of
+   MATERIAL, never a value ladder, so the two panels are the locked .kit-card and
+   .kit-card--tint and this grid supplies geometry only. */
+.kit-choose {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--ds-space-md);
+  align-items: stretch;
+}
+.kit-choose > * { min-width: 0; height: 100%; }
+
+/* A THIRD AUTHORING CONTRACT FOR EVERY TEMPLATE THAT INHERITS THIS ONE, found by
+   RENDERING rather than by reading. The locked sheet declares .kit-card__body with
+   margin:0, and a class selector outranks the sheet's own `p + p` flow rule, so TWO
+   body paragraphs inside one card render BUTTED with zero space between them. It is
+   invisible in markup and every static gate passes it. Measured in section 05's third
+   route card before this rule existed. The fix is spacing only, it is driven off the
+   locked space scale, and it fires only on a SECOND body paragraph, so a one
+   paragraph card is untouched. */
+.kit-card__body + .kit-card__body { margin-top: var(--ds-space-sm); }
+
+/* THE FILTER TOOLBAR. Geometry only: three stacked label over control cells, which
+   is the idiom the locked sheet already paints as .kit-label above .kit-select
+   (FORM-LAYOUTS.md #1). The 44px floor on a chip is a TAP TARGET, which is layout,
+   not paint: .kit-tag rests at about 34px and a filter chip is a real control. */
+.kit-filterbar {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--ds-space-md);
+  align-items: start;
+}
+.kit-filterbar > * { min-width: 0; }
+.kit-tags .kit-tag { min-height: 44px; }
+
+/* THE FILTERED OUT STATE. `is-` is the framework utility prefix, so it carries no
+   skin class and needs none. The second rule exists because the locked sheet sets
+   .kit-table tr{display:block} at 767, which outranks a bare .is-out on a row. */
+.is-out { display: none; }
+.kit-table tbody tr.is-out { display: none; }
+
+@media (max-width: 1023px) {
+  .kit-filterbar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 767px) {
+  .kit-choose { grid-template-columns: minmax(0, 1fr); }
+  .kit-filterbar { grid-template-columns: minmax(0, 1fr); }
+}
+</style>
+</head>
+<body>
+<!-- ============================================================================
+     LOCKED CHROME CARRIER. elevatedental (Elevate Dental).
+     Stage (2) CHROME, concept B "THE CALM SHELF", the owner pick of 2026-08-14.
+
+     WHAT THIS FILE IS. A bare SHELL BODY: it opens at <body>, closes at </body>,
+     links no sheets and carries no inline styling. derive-shell.mjs inlines this
+     body VERBATIM into _build/_template.html and swaps the ONE <main> below for
+     the CONTENT slot. There are NO chrome tokens: only the head slots and the
+     CONTENT slot are dynamic. The paint lives in _design/elevatedental-chrome.css;
+     the token API in elevatedental-tokens.css; the grid in
+     elevatedental-structural.css.
+
+     NO TOKEN IS EVER SPELLED WITH ITS BRACES IN THIS COMMENT, and that is load
+     bearing rather than a style choice. derive-shell scans the DERIVED SHELL for
+     every double-brace token and exits non-zero on any it does not fill, and a
+     non-zero derive FAILS the build; worse, build.mjs fills the content slot with
+     a plain first-occurrence string replace, so a braced mention sitting ABOVE the
+     real slot would swallow the whole page body into this comment and leave the
+     real slot unfilled. Both were observed on this file before this line existed.
+     Name the slots in prose (the MAIN slot, the CONTENT slot); never in braces.
+
+     THE CHROME IS A LOCKED BLOCK and is EXEMPT from the section / .container /
+     .row / .col DOM grammar. It is carried across from chrome-b/preview.html
+     without re-shaping: the same header, the same mega panel, the same drawer,
+     the same closing band, the same footer, in the same nesting. Wrapping any of
+     it in the body grammar is what broke a previous build (.mega__feature stopped
+     being a direct grid child and collapsed from 424px to 235px).
+
+     WHAT WAS DROPPED. Only the preview's demo <main> body, which was scaffolding
+     so the chrome could be judged in context. It is replaced by the MAIN slot,
+     the ONE page content injection point.
+
+     THE FIVE PARTS.
+       tier 1  THE UTILITY STRIP  all four clinic names with their real direct
+               lines as tel: targets, the hours note, and the pinned appointment
+               control. Every way to REACH the clinic, on one rail.
+       tier 2  THE SHELF          the lockup and the ELEVEN item nav in C1 order,
+               alone on a taller tinted shelf. The MAP of the site, on its own
+               rail. It folds to the hamburger at 1100, not 768.
+       THE MEGA PANEL             hangs off the shelf, four columns.
+       THE DRAWER                 a flex column: head (fixed) / scroll region
+               (flex:1 1 auto, min-height:0, overflow-y:auto) / foot (flex:0 0
+               auto, a real SIBLING, never an overlay). Accordions are EXCLUSIVE.
+       THE .precta                the ONE closing CTA band site wide. Page bodies
+               author ZERO. It is also the page's ONE dark punctuation.
+       THE FOOTER                 five columns, warm paper, never a second dark band.
+
+     NAV PARITY (gate G-CHROME-NAV). The desktop shelf and the drawer list the
+     SAME eleven top level items, same labels, same order: Treatments,
+     Specialists, Technology, Prices, Locations, Results, Dental Tourism,
+     Patients, About, Insights, Contact.
+
+     THE SELF-PAY DISCLOSURE is a STRUCTURAL TRUTH and is carried in the chrome,
+     in the mega panel foot and again in the closing band: "Self-pay clinic. We do
+     not accept HMO or dental insurance. Every treatment is paid directly." It may
+     never be softened or dropped.
+
+     INTERNAL HREFS, DISCLOSED. Every page relative destination this chrome wants
+     (specialists.html, treatments.html, the four branch pages, the whole footer
+     sitemap) is recorded on its own link as data-page="<slug>.html". The href
+     itself resolves to the in-document #main anchor for now, because the locked
+     carrier is written at stage (2) CHROME, which is BEFORE any page exists on
+     disk, and G-CHROME-LINKS (verify-chrome-links-resolve) fails closed on a page
+     relative href whose pages/<slug>.html target is absent. This is the same
+     shape the seoguarantee carrier shipped. The destinations are therefore NOT
+     lost: wiring them is a mechanical href := data-page pass over this ONE file
+     once pages/ exists, and the chrome propagates from here by derive.
+     ============================================================================ -->
+
+<a class="kit-skip-link" href="#main">Skip to content</a>
+
+<!-- pick: NAV-PATTERNS.md #8 Centered logo + utility top corners + bottom link row | considered: #7,#3,#2 | rigor: heavy | why: C1 fixes eleven top-level labels, and eleven labels plus a lockup plus the pinned appointment control measure wider than the 1021px inner shelf has at 1101, so the only patterns that can carry this nav honestly are the ones that give the link row its OWN tier; #8 is the two-row form of that, and its "utility in the corners" top row is built for exactly the practical payload this clinic has, four real clinic numbers and an hours note, which is why the pick is #8 and not a one-bar pattern. #3 keeps every link on one bar beside a logo and a phone pill, which is precisely the arithmetic that overflowed 264px on the previous build and it would force either abbreviated labels or a dropped item, both of which break the drawer-parity gate. #2 centres the same single bar over the hero and fades it to solid on scroll, so it inherits the same overflow and additionally asks the hero to supply the header's contrast, which a light-dominant brand measured at dark_ratio 0 cannot do. #7 also gives the nav its own row but centres the wordmark between two icon clusters in row 1, and with four full branch names and numbers those corners are already spent, so the centred lockup would force the numbers to abbreviate, which the content bible bans by name. ADAPTATION recorded here rather than discovered at gate time: #8 puts its logo in the row-1 centre; this header keeps the lockup on the shelf beside the nav and lifts the appointment control up to the utility corner instead, because that is what leaves the nav a full-width run. -->
+<header class="site-header" id="top">
+
+  <!-- tier 1 : the utility strip. Practical only. -->
+  <div class="ed-util">
+    <div class="ed-wrap ed-util__in">
+      <ul class="ed-tels" aria-label="Clinic direct lines">
+        <li><a class="ed-tel" href="tel:+639171599284"><span class="ed-tel__c">Mitsukoshi BGC</span><span class="ed-tel__n">+63 917 159 9284</span></a></li>
+        <li><a class="ed-tel" href="tel:+639688515420"><span class="ed-tel__c">Shangri-La Plaza</span><span class="ed-tel__n">+63 968 851 5420</span></a></li>
+        <li><a class="ed-tel" href="tel:+639178294551"><span class="ed-tel__c">Bonifacio Stopover BGC</span><span class="ed-tel__n">+63 917 829 4551</span></a></li>
+        <li><a class="ed-tel" href="tel:+639171140598"><span class="ed-tel__c">Alabang Town Center</span><span class="ed-tel__n">+63 917 114 0598</span></a></li>
+      </ul>
+      <div class="ed-util__end">
+        <p class="ed-hours kit-tab"><b>Hours</b>09:00 to 20:00, varies by branch</p>
+        <a class="kit-btn kit-btn--primary" href="#book">Book an Appointment</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- tier 2 : the shelf. Navigational only. -->
+  <div class="ed-shelf">
+    <div class="ed-wrap ed-shelf__in header-bar">
+
+      <a class="ed-logo" href="#top" aria-label="Elevate Dental, home">
+        <svg class="kit-ring ed-logo__mark" width="30" height="30" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+          <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+          <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+        </svg>
+        <span class="ed-logo__word">Elevate Dental</span>
+      </a>
+
+      <nav class="ed-nav" aria-label="Primary">
+        <ul class="ed-nav__list">
+          <li class="ed-nav__item"><button class="ed-nav__link" type="button" id="mega-trigger" aria-expanded="false" aria-controls="mega"><span class="ed-navlabel">Treatments</span><i class="ed-caret" aria-hidden="true"></i></button></li>
+          <li class="ed-nav__item"><a class="ed-nav__link" href="#main" data-page="specialists.html"><span class="ed-navlabel">Specialists</span></a></li>
+          <li class="ed-nav__item"><a class="ed-nav__link" href="#main" data-page="technology.html"><span class="ed-navlabel">Technology</span></a></li>
+          <li class="ed-nav__item"><a class="ed-nav__link" href="#main" data-page="prices.html"><span class="ed-navlabel">Prices</span></a></li>
+          <li class="ed-nav__item"><a class="ed-nav__link" href="#main" data-page="locations.html"><span class="ed-navlabel">Locations</span></a></li>
+          <li class="ed-nav__item"><a class="ed-nav__link" href="#main" data-page="results.html"><span class="ed-navlabel">Results</span></a></li>
+          <li class="ed-nav__item"><a class="ed-nav__link" href="#main" data-page="dental-tourism.html"><span class="ed-navlabel">Dental Tourism</span></a></li>
+          <li class="ed-nav__item"><a class="ed-nav__link" href="#main" data-page="patients.html"><span class="ed-navlabel">Patients</span></a></li>
+          <li class="ed-nav__item"><a class="ed-nav__link" href="#main" data-page="about.html"><span class="ed-navlabel">About</span></a></li>
+          <li class="ed-nav__item"><a class="ed-nav__link" href="#main" data-page="insights.html"><span class="ed-navlabel">Insights</span></a></li>
+          <li class="ed-nav__item"><a class="ed-nav__link" href="#main" data-page="contact.html"><span class="ed-navlabel">Contact</span></a></li>
+        </ul>
+      </nav>
+
+      <!-- the compressed bar's two controls. The hamburger is LAST in the DOM and
+           flush to the gutter, so nothing sits to its right at 375. -->
+      <a class="kit-btn kit-btn--primary ed-cta-m" href="#book">Book an Appointment</a>
+      <button class="ed-burger hamburger" type="button" id="hamburger" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu"><i aria-hidden="true"></i></button>
+    </div>
+  </div>
+
+  <!-- the seam where the header meets the page. The page ground rises into the shelf. -->
+  <svg class="kit-seam kit-seam--paper ed-arc" viewBox="0 0 1200 34" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <path class="kit-seam__fill" d="M0,34 C320,-4 880,-4 1200,34 Z"/>
+    <path class="kit-seam__edge" d="M0,34 C320,-4 880,-4 1200,34"/>
+  </svg>
+
+  <div class="ed-scrim" id="mega-scrim" hidden></div>
+
+  <!-- pick: NAV-PATTERNS.md #7 Centered logo + below-it mega-nav with dropdowns | considered: #13,#9 | rigor: heavy | why: #7 is the only catalogued pattern where the mega hangs off a full-width NAV ROW rather than off a crowded single bar, which is the shape this header already has, so the panel drops straight out of the shelf and Treatments can open a four-column index of nine disciplines, the seven most-requested procedures and the four branches without one of the eleven labels being shortened to make room; that is the pressure valve the eleven-item nav needs. #13 hangs its overlay off an always-visible desktop hamburger, which would put two menu affordances on one bar and make the same icon mean "mega" at 1440 and "drawer" at 375, a state ambiguity a clinical brand should not ship. #9 opens its mega from category tabs that assume a search field and cart utilities in the row above, and importing that row would spend the utility strip on commerce chrome this clinic does not have, displacing the four real clinic numbers that are the strip's whole job. -->
+  <div class="ed-mega" id="mega" hidden aria-labelledby="mega-trigger">
+    <div class="ed-wrap ed-mega__in">
+      <div class="ed-mega__grid">
+
+        <div class="ed-mega__col">
+          <span class="kit-eyebrow">Nine disciplines</span>
+          <ul class="ed-mlist">
+            <li><a class="ed-mlink" href="#main" data-page="general-dentistry.html">General Dentistry</a></li>
+            <li><a class="ed-mlink" href="#main" data-page="cosmetic-dentistry.html">Cosmetic Dentistry</a></li>
+            <li><a class="ed-mlink" href="#main" data-page="orthodontics.html">Orthodontics</a></li>
+            <li><a class="ed-mlink" href="#main" data-page="oral-surgery.html">Oral Surgery</a></li>
+            <li><a class="ed-mlink" href="#main" data-page="pediatric-dentistry.html">Pediatric Dentistry</a></li>
+            <li><a class="ed-mlink" href="#main" data-page="prosthodontics.html">Prosthodontics</a></li>
+            <li><a class="ed-mlink" href="#main" data-page="endodontics.html">Endodontics</a></li>
+            <li><a class="ed-mlink" href="#main" data-page="periodontics.html">Periodontics</a></li>
+            <li><a class="ed-mlink" href="#main" data-page="dental-xrays.html">Digital Dental X-rays</a></li>
+          </ul>
+        </div>
+
+        <div class="ed-mega__col">
+          <span class="kit-eyebrow">Most requested</span>
+          <ul class="ed-mlist">
+            <li><a class="ed-mlink" href="#main" data-page="invisalign.html">Invisalign</a></li>
+            <li><a class="ed-mlink" href="#main" data-page="porcelain-veneers.html">Porcelain Veneers</a></li>
+            <li><a class="ed-mlink" href="#main" data-page="braces.html">Braces</a></li>
+            <li><a class="ed-mlink" href="#main" data-page="laser-teeth-whitening.html">Teeth Whitening</a></li>
+            <li><a class="ed-mlink" href="#main" data-page="dental-implant.html">Dental Implants</a></li>
+            <li><a class="ed-mlink" href="#main" data-page="airflow.html">Airflow Cleaning</a></li>
+            <li><a class="ed-mlink" href="#main" data-page="root-canal-treatment.html">Root Canal Treatment</a></li>
+          </ul>
+        </div>
+
+        <div class="ed-mega__col">
+          <span class="kit-eyebrow">Where we practise</span>
+          <div class="ed-mlist">
+            <a class="ed-mclinic" href="#main" data-page="bgc-mitsukoshi.html"><b>Mitsukoshi BGC</b><span class="kit-tab">Mon to Fri 11:00 to 20:00, Sat to Sun 10:30 to 20:00</span></a>
+            <a class="ed-mclinic" href="#main" data-page="shangri-la-plaza.html"><b>Shangri-La Plaza</b><span class="kit-tab">Mon to Sun 10:30 to 19:00</span></a>
+            <a class="ed-mclinic" href="#main" data-page="bgc-stopover.html"><b>Bonifacio Stopover BGC</b><span class="kit-tab">Mon to Sat 09:00 to 18:00, Sunday closed</span></a>
+            <a class="ed-mclinic" href="#main" data-page="atc.html"><b>Alabang Town Center</b><span class="kit-tab">Mon to Fri 11:00 to 20:00, Sat to Sun 10:00 to 20:00</span></a>
+          </div>
+        </div>
+
+        <div class="ed-mega__col">
+          <div class="kit-card kit-card--tint">
+            <div class="kit-card__top">
+              <span class="kit-card__label">Start here</span>
+              <svg class="kit-ring" width="28" height="28" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+                <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+                <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+              </svg>
+            </div>
+            <p class="kit-card__title">Not sure which treatment you need?</p>
+            <p class="kit-card__body">Thirty-one specialists across nine disciplines. Tell us what you want looked at and we will place you with the one who handles it.</p>
+            <div class="kit-card__foot">
+              <a class="kit-btn kit-btn--ghost" href="#main" data-page="treatments.html"><span>All Treatments</span></a>
+              <a class="kit-btn kit-btn--ghost" href="#main" data-page="prices.html"><span>Treatment Prices</span></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="ed-mega__foot">
+        <p class="kit-note">Self-pay clinic. We do not accept HMO or dental insurance. Every treatment is paid directly.</p>
+        <a class="kit-btn kit-btn--primary" href="#book">Book an Appointment</a>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+<!-- pick: NAV-PATTERNS.md #9 Ecom mega-nav double-row, drawer state | considered: #14,#10 | rigor: heavy | why: the drawer state is being taken from a DIFFERENT entry than the desktop system (#8), and that deviation is recorded here rather than left for the gate to find: #8's verified drawer is a centred-links panel, and centred links cannot hold a four-row clinic chooser plus eleven nav rows plus a foot, so this concept takes #9's drawer instead, a narrower panel with a LEFT-ALIGNED list where every row leads with its own label; that is the only catalogued drawer whose reading axis survives fifteen rows on a 375 screen, and left-aligned rows are what let the clinic chooser sit above the list as a scannable four-row block, which is the concept's own move because a Metro Manila patient picks a branch before a procedure. #14's full-width takeover sets its links at 36 to 44px, which fits about five rows above the fold, so eleven items plus a chooser would push most of the menu under a scroll with no room left for the appointment control. #10's full-width takeover opens with a centred wordmark, spending the top of the panel on identity the bar behind it is already showing, and its centred uppercase rows make the four branch names, the longest strings in the whole chrome, wrap. -->
+<div class="ed-drawer" id="drawer-root" hidden>
+  <div class="ed-drawer__scrim" id="drawer-scrim"></div>
+  <div class="ed-drawer__panel" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Menu">
+
+    <div class="ed-drawer__head">
+      <span class="ed-logo">
+        <svg class="kit-ring ed-logo__mark" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+          <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+          <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+        </svg>
+        <span class="ed-logo__word">Elevate Dental</span>
+      </span>
+      <button class="ed-close" type="button" id="drawer-close" aria-label="Close menu"></button>
+    </div>
+
+    <!-- THE SCROLL REGION. flex:1 1 auto, min-height:0, overflow-y:auto. -->
+    <div class="ed-drawer__scroll">
+
+      <section class="ed-pick" aria-label="Choose your clinic">
+        <span class="kit-eyebrow">Choose your clinic</span>
+        <ul class="ed-pick__list">
+          <li class="ed-pick__row">
+            <a class="ed-pick__name" href="#main" data-page="bgc-mitsukoshi.html"><b>Mitsukoshi BGC</b><span class="kit-tab">Mon to Fri 11:00 to 20:00</span></a>
+            <a class="ed-pick__tel" href="tel:+639171599284" aria-label="Call Mitsukoshi BGC">Call</a>
+          </li>
+          <li class="ed-pick__row">
+            <a class="ed-pick__name" href="#main" data-page="shangri-la-plaza.html"><b>Shangri-La Plaza</b><span class="kit-tab">Mon to Sun 10:30 to 19:00</span></a>
+            <a class="ed-pick__tel" href="tel:+639688515420" aria-label="Call Shangri-La Plaza">Call</a>
+          </li>
+          <li class="ed-pick__row">
+            <a class="ed-pick__name" href="#main" data-page="bgc-stopover.html"><b>Bonifacio Stopover BGC</b><span class="kit-tab">Mon to Sat 09:00 to 18:00</span></a>
+            <a class="ed-pick__tel" href="tel:+639178294551" aria-label="Call Bonifacio Stopover BGC">Call</a>
+          </li>
+          <li class="ed-pick__row">
+            <a class="ed-pick__name" href="#main" data-page="atc.html"><b>Alabang Town Center</b><span class="kit-tab">Mon to Fri 11:00 to 20:00</span></a>
+            <a class="ed-pick__tel" href="tel:+639171140598" aria-label="Call Alabang Town Center">Call</a>
+          </li>
+        </ul>
+      </section>
+
+      <nav aria-label="Primary, compact">
+        <ul class="ed-dnav">
+          <li>
+            <details class="ed-dacc" name="ed-drawer-acc">
+              <summary class="ed-dnav__sum"><span class="ed-navlabel">Treatments</span><i class="ed-dcaret" aria-hidden="true"></i></summary>
+              <div class="ed-sub-panel">
+                <ul class="ed-dlist">
+                  <li><a href="#main" data-page="treatments.html">All Treatments</a></li>
+                  <li><a href="#main" data-page="general-dentistry.html">General Dentistry</a></li>
+                  <li><a href="#main" data-page="cosmetic-dentistry.html">Cosmetic Dentistry</a></li>
+                  <li><a href="#main" data-page="orthodontics.html">Orthodontics</a></li>
+                  <li><a href="#main" data-page="oral-surgery.html">Oral Surgery</a></li>
+                  <li><a href="#main" data-page="pediatric-dentistry.html">Pediatric Dentistry</a></li>
+                  <li><a href="#main" data-page="prosthodontics.html">Prosthodontics</a></li>
+                  <li><a href="#main" data-page="endodontics.html">Endodontics</a></li>
+                  <li><a href="#main" data-page="periodontics.html">Periodontics</a></li>
+                  <li><a href="#main" data-page="dental-xrays.html">Digital Dental X-rays</a></li>
+                </ul>
+              </div>
+            </details>
+          </li>
+          <li><a class="ed-dnav__link" href="#main" data-page="specialists.html"><span class="ed-navlabel">Specialists</span></a></li>
+          <li><a class="ed-dnav__link" href="#main" data-page="technology.html"><span class="ed-navlabel">Technology</span></a></li>
+          <li><a class="ed-dnav__link" href="#main" data-page="prices.html"><span class="ed-navlabel">Prices</span></a></li>
+          <li><a class="ed-dnav__link" href="#main" data-page="locations.html"><span class="ed-navlabel">Locations</span></a></li>
+          <li><a class="ed-dnav__link" href="#main" data-page="results.html"><span class="ed-navlabel">Results</span></a></li>
+          <li><a class="ed-dnav__link" href="#main" data-page="dental-tourism.html"><span class="ed-navlabel">Dental Tourism</span></a></li>
+          <li>
+            <details class="ed-dacc" name="ed-drawer-acc">
+              <summary class="ed-dnav__sum"><span class="ed-navlabel">Patients</span><i class="ed-dcaret" aria-hidden="true"></i></summary>
+              <div class="ed-sub-panel">
+                <ul class="ed-dlist">
+                  <li><a href="#main" data-page="patients.html">New Patient Guide</a></li>
+                  <li><a href="#main" data-page="prices.html">Treatment Prices</a></li>
+                  <li><a href="#main" data-page="results.html">Results</a></li>
+                  <li><a href="#main" data-page="dental-tourism.html">Dental Tourism</a></li>
+                  <li><a href="#main" data-page="promos.html">Promos</a></li>
+                </ul>
+              </div>
+            </details>
+          </li>
+          <li><a class="ed-dnav__link" href="#main" data-page="about.html"><span class="ed-navlabel">About</span></a></li>
+          <li><a class="ed-dnav__link" href="#main" data-page="insights.html"><span class="ed-navlabel">Insights</span></a></li>
+          <li><a class="ed-dnav__link" href="#main" data-page="contact.html"><span class="ed-navlabel">Contact</span></a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <!-- THE FOOT. flex:0 0 auto, a sibling of the scroll region, never over it. -->
+    <div class="ed-drawer__foot drawer__foot">
+      <a class="kit-btn kit-btn--primary kit-btn--wide" href="#book">Book an Appointment</a>
+      <div class="ed-nap">
+        <a href="mailto:info@elevatedental.ph">info@elevatedental.ph</a>
+        <span>4 clinics, Metro Manila</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ============================================================================
+     THE BODY. Five sections, one per section of _copy/specialists.md, in the order
+     the copy fixes them. Every section obeys the forced grammar
+
+         section  ->  div.container  ->  div.row  ->  div.col  ->  OBJECT
+
+     and carries EXACTLY ONE .container and EXACTLY ONE .row, because the sheet's
+     edge-margin zeroing rule (.section .col > :first-child) fires on every .col in a
+     section, so a second .row would have its leading object's margin removed and the
+     two rows would butt. Multi-band sections are therefore composed inside the ONE
+     12 track row with .col--full bands and .col--span-N cells, which is what that
+     grid is for, and the vertical interval between bands is the row GAP.
+
+     THE SPINE. The index ring's unrolled rule opens all five sections and numbers
+     them 01 to 05. On this page the numbering carries a second job: it is the order
+     of the DECISION, not of the argument. 01 names the choice, 02 admits what the
+     page cannot yet decide for you, 03 hands you the instrument, 04 shows you what a
+     row will become, 05 catches you when the instrument returns nothing.
+
+     ZERO closing CTA bands are authored here. The chrome's .precta is the page's one,
+     per Collision A of the composition-medical-health reconciliation. The single mid
+     page ask is folded INLINE, as a .kit-inline rail inside the content bearing
+     section 05.
+
+     ZERO dark bands are authored here. The measured tone is dark_ratio 0 and the one
+     permitted flip is already spent by the chrome's closing band.
+
+     ZERO arc seams are authored here. The one arc per page is spent by the header;
+     every other boundary is the flat ground step opened by the index rule.
+
+     ZERO atmosphere layers are authored here. .kit-atmos is absolutely positioned and
+     would have to sit as a DIRECT child of a section element, which is R4 orphan
+     content under the forced grammar. The material variety is carried by the ground
+     modifiers (paper, cool, warm) plus the locked card and table materials instead.
+
+     NO TAG TOKEN IS EVER SPELLED WITH ITS ANGLE BRACKETS IN THIS COMMENT, and that is
+     load bearing rather than a style choice. It is the same class of trap the locked
+     chrome carrier records for double braces, found here by INSTRUMENTING a gate
+     rather than by reading it: verify-selection-rationale's topLevelSections scans the
+     RAW html and, unlike verify-dom-structure, does NOT mask comments first, so one
+     bracketed section token written in prose above opens a phantom element, the depth
+     counter never returns to zero, and EVERY section below it stops being top level.
+     Measured on this file before this line existed: the gate found 1 section instead
+     of 5 and its NO-BLOCK rule could not fire at all, so the page passed hollowly.
+     Name the elements in prose (a section element, the main element); never in
+     brackets.
+     ============================================================================ -->
+
+<!-- pick: HERO-COMPOSITIONS.md #23 Comparison hero (before/after, us/them) | considered: #20,#25,#10 | rigor: heavy | why: this concept's thesis is that a roster index is a CHOICE rather than a wall, and #23 is the only hero in the catalogue whose structure IS a choice: two columns set side by side under one headline, so the first screen argues in the page's own grammar instead of promising a comparison further down. It is also the only hero that has somewhere honest to put the case AGAINST, which this page needs twice over, because both routes have a real cost and the locked copy states both of them. The pick is re-pointed rather than copied, and the re-point is recorded here rather than left for a gate: #23 opposes an incumbent to us, and this client may never name or frame against a competitor, so the two columns are re-aimed at the two routes the READER owns, choose the clinician or let the case be routed, which is the same oppositional geometry pointed at a decision instead of a rival. #20's three-column claim-plus-stat-plus-photo hero is the LOCKED FLAGSHIP's own pick and it lands proof beside claim beautifully, but it has no second column for a counter-position, so the honest cost of each route would have to be demoted to body copy below the fold, which is precisely where a reader stops reading. #25's embedded lead-capture hero would stand a form where the choice belongs, on a page whose entire job is to let a visitor self-select before they book, and it would duplicate the contact page under a header that already pins the appointment control twice. #10's centred headline-only hero carries no imagery at all, and the composition-medical-health imagery floor makes a photo-free hero an automatic fail on a credibility vertical. -->
+<section class="section section--paper kit-hero" id="s01" aria-labelledby="h01" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-6">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">01</span>
+            <div><span class="kit-eyebrow">The roster</span></div>
+          </div>
+        </div>
+        <h1 id="h01">Dental Specialists in Manila. Meet our 31 dentists.</h1>
+        <p class="kit-lede readw">Thirty-one published clinician profiles, across nine disciplines and four Metro Manila clinics. This is the roster, not a selection from it. Filter it down to the field your case sits in, read the profile of the person who would treat you, and book that appointment specifically. You are choosing a clinician here, not a building.</p>
+        <div class="kit-actions">
+          <a class="kit-btn kit-btn--primary" href="#book">Book an Appointment</a>
+          <a class="kit-btn kit-btn--ghost" href="#s03"><span>Compare the nine fields</span></a>
+        </div>
+        <div class="kit-truth">
+          <span class="kit-truth__k">Before you choose</span>
+          <p>Two things this page will not do. It will not put a shortlist in front of the roster, because the pinned selection is an owner decision and has not been supplied. It will not tell you which clinic a named clinician sits in, because the per clinic schedules are not confirmed and no row on this page carries a clinic value.</p>
+        </div>
+      </div>
+
+      <div class="col col--span-6">
+        <figure class="kit-slot kit-hero__media" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--circle">
+            <img class="kit-slot__img" src="../../../../../assets/elevatedental.ph_wp-content_uploads_2026_02_art-of-cosmetic-dentistry.png" alt="A smiling patient beside a veneer shade guide and a dental model, with a clinician working on another patient in the background and the Manila skyline through the window." width="1536" height="1024" loading="eager" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Assessment</b><span>Shade guide, model and chair, in one frame.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-choose" data-rise>
+
+          <div class="kit-card">
+            <div class="kit-card__top">
+              <span class="kit-card__label">Route A</span>
+              <svg class="kit-ring" width="28" height="28" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+                <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+                <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+              </svg>
+            </div>
+            <h3 class="kit-card__title">You choose the clinician.</h3>
+            <p class="kit-card__body">Narrow the roster to the field your case sits in, read the profile of the person who would treat you, and book that clinician directly from their profile. If you already know whose name you want, this is the shorter route and nobody stands between you and it.</p>
+            <div class="kit-truth">
+              <span class="kit-truth__k">The cost of this route</span>
+              <p>You have to know which field your case belongs to. A case that turns out to span two fields is not a thing the person carrying it can reliably sort, and the filter cannot sort it for you either.</p>
+            </div>
+          </div>
+
+          <div class="kit-card kit-card--tint">
+            <div class="kit-card__top">
+              <span class="kit-card__label">Route B</span>
+              <svg class="kit-ring" width="28" height="28" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+                <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+                <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+              </svg>
+            </div>
+            <h3 class="kit-card__title">You let the case be routed.</h3>
+            <p class="kit-card__body">Book the consultation and the case is routed internally to the field it belongs to. Complex work is not meant to be sorted by the patient, and a case that turns out to span two fields is handled by two of our own specialists rather than sent out to a third party.</p>
+            <div class="kit-truth">
+              <span class="kit-truth__k">The cost of this route</span>
+              <p>You do not pick the name. You get the field the case belongs to, chosen by the group, and you meet that clinician at the consultation rather than before it.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: PRICING-SECTIONS.md #5 Plain-deal honesty stance | considered: #2,#4 | rigor: heavy | why: the copy hands this slot a heading and two finished paragraphs about a pinned set, and then a hard hold: the selection is an owner decision, it has not been supplied, and it may not be auto-filled from roster order, alphabetical order, recency or inference. Every pattern that renders a pinned set would therefore have to invent one, so the only honest pick is the one entry in the whole catalogue whose composition is deliberately EMPTY-HANDED, a head and a mono spec-chip strip with no cards, no media and no table, where the restraint IS the design. #5 was harvested as a trust beat and it is doing exactly that job here: it states plainly what is on the page and what is not, and the spec strip compresses the hold into three readable tokens rather than a paragraph of apology. #2's comparison table is the right instrument for a SET the page can actually show, which is why this concept spends it one section later on the nine fields; spent here it would need four columns of clinician detail that does not exist. #4's cost-model split pairs a rules list with a portrait media frame and a KPI row, and every one of those three slots would have to be filled with content the owner has not supplied, which is the failure this section exists to refuse. ADAPTATION, recorded: #5 centres its head and its lede; this band keeps the brand's single left reading axis, because the locked structural sheet fixes one measure pinned to one left axis across every band and forbids a band from re-centring it. -->
+<section class="section section--cool" id="s02" aria-labelledby="h02" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">02</span>
+            <div>
+              <span class="kit-eyebrow">Where to start</span>
+              <h2 id="h02">A place to start, if you do not know which field you need.</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">A short pinned set sits above the full list. It is not a ranking and it is not the whole roster. It is a small, deliberately chosen group, kept current, so that a first-time visitor who does not yet know whether their case is prosthodontic or periodontic still lands on a real clinician rather than an empty filter box.</p>
+        <p class="kit-body readw">Each pinned card carries the same information as every other card on this page: a photograph, the clinician's name, their credentials exactly as published, the field they practice in, and a link to the full profile. Nothing in the pinned set is presented that is not also true of the person in the list below.</p>
+        <div class="kit-truth">
+          <span class="kit-truth__k">Owner data, held</span>
+          <p>Four pinned slots are reserved and the copy above is final, but the selection itself is an owner decision and has not been supplied. It is not filled in here from roster order, alphabetical order or recency, and it is not inferred from the profile pages. Each slot needs a name, credentials as published, a field, and one sentence approved by that clinician.</p>
+        </div>
+        <div class="kit-tags">
+          <span class="kit-tag kit-tab">Pinned slots reserved, 4</span>
+          <span class="kit-tag kit-tab">Selection, an owner decision</span>
+          <span class="kit-tag kit-tag--accent kit-tab">Shown on this page, none</span>
+        </div>
+        <p class="kit-note readw">Until the four names land, the honest place to start is the comparison directly below. Read the nine fields, find the one your case sits in, and take Route A. If none of them is obviously yours, that is not a failure of reading, it is what Route B is for.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: PRICING-SECTIONS.md #2 Comparison table, cards on mobile | considered: #1,#4 | rigor: heavy | why: this is the section the whole concept is built to reach, and #2 is the only catalogued instrument that puts a set side by side ROW BY ROW under a stated axis, with a real semantic table, a caption, scope attributes, an overflow-x wrapper on desktop-narrow and a data-label card reflow at phone width; that reflow is not aspirational here, the LOCKED structural sheet already ships it at 767 and hard-requires a data-label on every td, so the pick spends locked vocabulary rather than inventing a grid. It also earns its keep on content: the axis this page needs is not "what each field does", which any card grid can carry, but "where each field STOPS", and a column reads down a boundary in a way nine separate cards never can, which is what lets a reader who cannot tell prosthodontic from periodontic settle it in one pass. #1's three-tier card set is built for two or three comparable options and would render nine fields as nine equivalent products, losing the boundary column entirely. #4's cost-model split argues ONE model in prose beside a portrait frame, so it can hold a rationale but not a set, and this section has to hold a set of nine and be filterable over it. The FILTERABLE half is taken from TEAM-GALLERY-SECTIONS.md #4, whose aria-pressed chip bar, live result count and never-remove-always-hide filtering are the machine bolted onto #2's table here; #4's own image tiles are refused, because a decorative photograph per field would be stock proof on a credibility vertical and composition-medical-health spends its imagery on real facilities and real people. -->
+<section class="section section--paper" id="s03" aria-labelledby="h03" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">03</span>
+            <div>
+              <span class="kit-eyebrow">Filter the roster</span>
+              <h2 id="h03">The full roster.</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Every published profile appears below. The list holds 31 specialists, and the count on this page and the count on the profile set are the same number by design: this page shows the bench, all of it, without a shortlist standing in front of it.</p>
+        <p class="kit-body readw">The profile is where the per-person detail sits: training, the treatments that clinician performs, and the discipline hub their work belongs to. Read it before you book. A specialist page that tells you nothing beyond a name is not doing its job, and neither is a roster you cannot narrow.</p>
+        <p class="kit-body readw">Until every profile's field and credential string is confirmed, the roster is presented by the field it sorts into. Nine rows, one per field, each carrying the treatments inside it, the boundary where it stops, and the route through to the clinicians who practise it. The toolbar filters those rows on values the rows actually carry, and on nothing else.</p>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-statband" data-rise>
+          <div class="kit-stat">
+            <span class="kit-stat__n kit-tab">31</span>
+            <span class="kit-stat__l">Published clinician profiles</span>
+            <p class="kit-stat__sub">Counted from the published profile set on 13 August 2026. Recount immediately before launch.</p>
+          </div>
+          <div class="kit-stat">
+            <span class="kit-stat__n kit-tab">9</span>
+            <span class="kit-stat__l">Fields of practice</span>
+            <p class="kit-stat__sub">A closed list. Every published profile belongs to one of the nine.</p>
+          </div>
+          <div class="kit-stat">
+            <span class="kit-stat__n kit-tab">4</span>
+            <span class="kit-stat__l">Metro Manila clinics</span>
+            <p class="kit-stat__sub">Which clinician practises at which clinic is not confirmed, so no row carries it.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-tags" role="group" aria-label="Filter by discipline">
+          <button class="kit-tag kit-tag--accent" type="button" aria-pressed="true" data-field-chip="all">All fields</button>
+          <button class="kit-tag" type="button" aria-pressed="false" data-field-chip="general-dentistry">General Dentistry</button>
+          <button class="kit-tag" type="button" aria-pressed="false" data-field-chip="cosmetic-dentistry">Cosmetic Dentistry</button>
+          <button class="kit-tag" type="button" aria-pressed="false" data-field-chip="orthodontics">Orthodontics</button>
+          <button class="kit-tag" type="button" aria-pressed="false" data-field-chip="oral-surgery">Oral Surgery</button>
+          <button class="kit-tag" type="button" aria-pressed="false" data-field-chip="pediatric-dentistry">Pediatric Dentistry</button>
+          <button class="kit-tag" type="button" aria-pressed="false" data-field-chip="prosthodontics">Prosthodontics</button>
+          <button class="kit-tag" type="button" aria-pressed="false" data-field-chip="endodontics">Endodontics</button>
+          <button class="kit-tag" type="button" aria-pressed="false" data-field-chip="periodontics">Periodontics</button>
+          <button class="kit-tag" type="button" aria-pressed="false" data-field-chip="dental-xrays">Digital Dental X-rays</button>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-filterbar">
+
+          <div>
+            <label class="kit-label" for="f-treat">Filter by treatment</label>
+            <select class="kit-select" id="f-treat">
+              <option value="">Any treatment</option>
+              <option value="airflow">AirFlow (guided biofilm therapy)</option>
+              <option value="braces">Braces</option>
+              <option value="complete-dentures">Complete Dentures</option>
+              <option value="composite-veneers">Composite (Direct) Veneers</option>
+              <option value="dental-bridge">Dental Bridge</option>
+              <option value="dental-crowns">Dental Crowns</option>
+              <option value="dental-fillings">Dental Fillings</option>
+              <option value="dental-implant">Dental Implants</option>
+              <option value="dental-sealant">Dental Sealant</option>
+              <option value="digital-dental-x-ray">Digital Dental X-ray</option>
+              <option value="fluoride-treatment">Fluoride Treatment</option>
+              <option value="invisalign">Invisalign (Clear Aligners)</option>
+              <option value="laser-teeth-whitening">Laser Teeth Whitening</option>
+              <option value="oral-prophylaxis">Oral Prophylaxis</option>
+              <option value="oral-surgery">Oral Surgery</option>
+              <option value="porcelain-veneers">Porcelain Veneers</option>
+              <option value="removable-partial-dentures">Removable Partial Dentures</option>
+              <option value="root-canal-treatment">Root Canal Treatment</option>
+              <option value="tooth-scaling">Tooth Scaling and Root Planing</option>
+              <option value="zirconia-veneers">Zirconia Veneers</option>
+            </select>
+            <p class="kit-help">Narrows the roster to the fields that perform the treatment you are considering. Dental Implants deliberately matches two fields, because placement and restoration are two different pieces of work.</p>
+          </div>
+
+          <div>
+            <label class="kit-label" for="f-clinic">Filter by clinic</label>
+            <select class="kit-select" id="f-clinic" disabled aria-describedby="f-clinic-note">
+              <option>Not available yet</option>
+            </select>
+            <p class="kit-help" id="f-clinic-note"><b class="kit-strong">Clinic filter available once schedules are confirmed.</b> Specified, built, and shipped disabled on purpose. Which clinician practises at which clinic has not been confirmed, so no row on this page carries a clinic value and this control has nothing honest to filter on. The mandated label is set here rather than inside the control because a select clips its option text to the track width, which cut the sentence at "schedules are" when it was rendered at 1440.</p>
+          </div>
+
+          <div>
+            <label class="kit-label" for="f-sort">Sort</label>
+            <select class="kit-select" id="f-sort">
+              <option value="listed">Discipline, as the clinic lists them</option>
+              <option value="az">Name, A to Z</option>
+            </select>
+            <p class="kit-help">Both orders read a value stamped on the row itself. There is no date sort on this page, because a roster row carries a name, a field and its treatments, and it carries no date.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <p class="kit-meta" id="set-status" role="status" aria-live="polite"><b class="kit-strong">9</b> of 9 fields shown.</p>
+        <p class="kit-note readw--wide">Filters combine. Choosing a field and a treatment together shows only the rows that match both, and the result count above updates as you go, so you always know how many you are looking at.</p>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-table__scroll" id="set-table">
+          <table class="kit-table" id="fieldset">
+            <caption>Nine fields, what each one covers, and where each one stops</caption>
+            <thead>
+              <tr>
+                <th scope="col">Field</th>
+                <th scope="col">What it covers</th>
+                <th scope="col">Where it stops</th>
+                <th scope="col">Read next</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr data-field="general-dentistry" data-order="1" data-name="General Dentistry" data-treat="dental-fillings oral-prophylaxis airflow dental-sealant digital-dental-x-ray">
+                <td data-label="Field"><b class="kit-strong">General Dentistry</b></td>
+                <td data-label="What it covers">Examination, Dental Fillings, Oral Prophylaxis, AirFlow (guided biofilm therapy) and Dental Sealant, plus the records that go with them.</td>
+                <td data-label="Where it stops">At work that belongs to a named field. A canal, a gum, a surgical extraction or an arch that has to move is handled by the field it belongs to.</td>
+                <td data-label="Read next"><a href="#main" data-page="general-dentistry.html">The General Dentistry hub</a></td>
+              </tr>
+
+              <tr data-field="cosmetic-dentistry" data-order="2" data-name="Cosmetic Dentistry" data-treat="porcelain-veneers zirconia-veneers composite-veneers laser-teeth-whitening">
+                <td data-label="Field"><b class="kit-strong">Cosmetic Dentistry</b></td>
+                <td data-label="What it covers">How a tooth reads: shade, shape and surface. Porcelain Veneers, Zirconia Veneers, Composite (Direct) Veneers and Laser Teeth Whitening.</td>
+                <td data-label="Where it stops">At appearance. It does not straighten an arch, which is orthodontic, and it does not replace a tooth that is gone, which is prosthodontic.</td>
+                <td data-label="Read next"><a href="#main" data-page="cosmetic-dentistry.html">The Cosmetic Dentistry hub</a></td>
+              </tr>
+
+              <tr data-field="orthodontics" data-order="3" data-name="Orthodontics" data-treat="invisalign braces">
+                <td data-label="Field"><b class="kit-strong">Orthodontics</b></td>
+                <td data-label="What it covers">The position of the teeth you still have. Invisalign (Clear Aligners) and Braces, planned before the first appliance is made.</td>
+                <td data-label="Where it stops">At movement. A missing tooth is not an orthodontic problem, and a tooth that hurts is assessed and treated before anything is moved.</td>
+                <td data-label="Read next"><a href="#main" data-page="orthodontics.html">The Orthodontics hub</a></td>
+              </tr>
+
+              <tr data-field="oral-surgery" data-order="4" data-name="Oral Surgery" data-treat="oral-surgery dental-implant">
+                <td data-label="Field"><b class="kit-strong">Oral Surgery</b></td>
+                <td data-label="What it covers">What has to come out or go in: surgical extraction, and the placement of a Dental Implant in bone.</td>
+                <td data-label="Where it stops">At the surgery. The crown that goes on top of an implant is prosthodontic work, and it is planned before the placement rather than after it.</td>
+                <td data-label="Read next"><a href="#main" data-page="oral-surgery.html">The Oral Surgery hub</a></td>
+              </tr>
+
+              <tr data-field="pediatric-dentistry" data-order="5" data-name="Pediatric Dentistry" data-treat="fluoride-treatment dental-sealant oral-prophylaxis">
+                <td data-label="Field"><b class="kit-strong">Pediatric Dentistry</b></td>
+                <td data-label="What it covers">Children. Fluoride Treatment, Dental Sealant, Oral Prophylaxis, and the first appointments a child ever has.</td>
+                <td data-label="Where it stops">This is the one field defined by the patient rather than the procedure. An adult with the same need is treated in the matching adult field.</td>
+                <td data-label="Read next"><a href="#main" data-page="pediatric-dentistry.html">The Pediatric Dentistry hub</a></td>
+              </tr>
+
+              <tr data-field="prosthodontics" data-order="6" data-name="Prosthodontics" data-treat="dental-crowns dental-bridge complete-dentures removable-partial-dentures dental-implant">
+                <td data-label="Field"><b class="kit-strong">Prosthodontics</b></td>
+                <td data-label="What it covers">Replacing and rebuilding. Dental Crowns, Dental Bridge, Complete Dentures, Removable Partial Dentures, and the restoration that sits on an implant.</td>
+                <td data-label="Where it stops">At the rebuild. It does not treat the infection inside the tooth or the gum that let the tooth fail, and both are settled first.</td>
+                <td data-label="Read next"><a href="#main" data-page="prosthodontics.html">The Prosthodontics hub</a></td>
+              </tr>
+
+              <tr data-field="endodontics" data-order="7" data-name="Endodontics" data-treat="root-canal-treatment">
+                <td data-label="Field"><b class="kit-strong">Endodontics</b></td>
+                <td data-label="What it covers">The inside of the tooth. Root Canal Treatment, and the diagnosis that decides whether a tooth can be kept at all.</td>
+                <td data-label="Where it stops">At the root. What protects the tooth afterwards is usually a crown, and a crown is prosthodontic.</td>
+                <td data-label="Read next"><a href="#main" data-page="endodontics.html">The Endodontics hub</a></td>
+              </tr>
+
+              <tr data-field="periodontics" data-order="8" data-name="Periodontics" data-treat="tooth-scaling">
+                <td data-label="Field"><b class="kit-strong">Periodontics</b></td>
+                <td data-label="What it covers">The foundation. The gum and the bone the teeth stand in, and Tooth Scaling and Root Planing where they are inflamed.</td>
+                <td data-label="Where it stops">At the foundation. A tooth already lost is replaced in another field, and the replacement waits until the foundation is stable.</td>
+                <td data-label="Read next"><a href="#main" data-page="periodontics.html">The Periodontics hub</a></td>
+              </tr>
+
+              <tr data-field="dental-xrays" data-order="9" data-name="Digital Dental X-rays" data-treat="digital-dental-x-ray">
+                <td data-label="Field"><b class="kit-strong">Digital Dental X-rays</b></td>
+                <td data-label="What it covers">The record. Digital Dental X-ray, and 3D CBCT imaging, which is available at all four clinics.</td>
+                <td data-label="Where it stops">Imaging is not treatment. It tells the other eight fields what they are looking at, before anyone touches anything.</td>
+                <td data-label="Read next"><a href="#main" data-page="dental-xrays.html">The Digital Dental X-rays hub</a></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-card kit-card--flat kit-card--pad is-out" id="set-empty">
+          <p class="kit-card__title">No clinician matches that combination.</p>
+          <p class="kit-card__body">Clear a filter, or choose a field below. This state is reachable on purpose: pick a field, then pick a treatment another field performs, and you will land here rather than on a blank panel.</p>
+          <div class="kit-actions kit-actions--tight">
+            <button class="kit-btn kit-btn--secondary" type="button" id="set-clear">Clear the filters</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: TEAM-GALLERY-SECTIONS.md #2 Team, circular roster, hover-reveal bio | considered: #1,#5 | rigor: heavy | why: the copy fixes this beat as the CARD, one template stamped once per clinician with the filter values carried on the card itself, and #2 is the catalogued roster whose portrait geometry is the CIRCLE, which is the exact geometry the locked structural sheet already ships as .kit-person plus .kit-slot__mask--circle, so the pick lands on locked vocabulary instead of a new frame. It is also the roster pattern that is legible at three items rather than needing a full wall, which matters because three is all this page may honestly show. #1's hover-reveal card grid hides its detail behind a hover, and the detail this section is arguing about is precisely what is MISSING from each card, so hiding it would hide the point. #5's dense dark tile wall is dark-ground only, and the measured tone for this brand is dark_ratio 0 with the one permitted flip already spent on the chrome's closing band. ADAPTATION, recorded rather than left to a gate: #2's hover-reveal BIO is refused outright, because no bio, credential string or field is owner-confirmed for any of the three, and a hover that reveals nothing is a broken affordance. What the three portraits are here to settle is the treatment decision C7 section 4 names by name, one portrait treatment applied to all thirty-one; set side by side they show the defect in the current set, since two were shot on a white clinic ground and the third on a blush studio ground, and a roster that looks like two shoots reads as a stitched-together group. -->
+<section class="section section--warm" id="s04" aria-labelledby="h04" data-rise>
+  <div class="container">
+    <div class="row row--stretch">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">04</span>
+            <div>
+              <span class="kit-eyebrow">The card</span>
+              <h2 id="h04">One card, stamped once per clinician.</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">The card is one template, stamped once per clinician, with the filter values carried on the card itself. That is what makes the toolbar above filter real content rather than decorate the page. Three published portraits are shown here so the portrait treatment can be settled once and applied to all thirty-one.</p>
+      </div>
+
+      <div class="col col--span-4">
+        <div class="kit-person" data-rise>
+          <figure class="kit-slot kit-person__media">
+            <div class="kit-slot__mask kit-slot__mask--circle">
+              <img class="kit-slot__img" src="../../../../../assets/elevatedental.ph_wp-content_uploads_2026_03_Dentist-Roster-Dr.-Sarah-Rivera_Coat.png" alt="Dr. Sarah Rivera, photographed in a white clinical coat against a blush studio background." width="460" height="575" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <h3 class="kit-person__name">Dr. Sarah Rivera</h3>
+          <p class="kit-person__role">Credentials pending confirmation</p>
+          <p class="kit-person__disc">Field row and clinic row are deliberately empty. Neither is confirmed, and neither is read here off a coat, a filename or a position in the roster.</p>
+          <span class="kit-person__where kit-tab">Ground, blush studio</span>
+        </div>
+      </div>
+
+      <div class="col col--span-4">
+        <div class="kit-person" data-rise>
+          <figure class="kit-slot kit-person__media">
+            <div class="kit-slot__mask kit-slot__mask--circle">
+              <img class="kit-slot__img" src="../../../../../assets/elevatedental.ph_wp-content_uploads_2026_07_Dentist-Roster-Dr.-Kevin-Balda.png" alt="Dr. Kevin Balda, photographed in a white clinical coat in front of a treatment chair on a white clinic ground." width="460" height="575" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <h3 class="kit-person__name">Dr. Kevin Balda</h3>
+          <p class="kit-person__role">Credentials pending confirmation</p>
+          <p class="kit-person__disc">Same card, same slots, same order. What changes between one card and the next is the values, never the shape of the card.</p>
+          <span class="kit-person__where kit-tab">Ground, white clinic</span>
+        </div>
+      </div>
+
+      <div class="col col--span-4">
+        <div class="kit-person" data-rise>
+          <figure class="kit-slot kit-person__media">
+            <div class="kit-slot__mask kit-slot__mask--circle">
+              <img class="kit-slot__img" src="../../../../../assets/elevatedental.ph_wp-content_uploads_2026_06_Dentist-Roster-Dr.-Johnnie-Rey-Sanchez-DMD-MScD_Coat.png" alt="Dr. Johnnie Rey Sanchez, photographed in a white clinical coat in front of a treatment chair on a white clinic ground." width="460" height="575" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <h3 class="kit-person__name">Dr. Johnnie Rey Sanchez</h3>
+          <p class="kit-person__role">Credentials pending confirmation</p>
+          <p class="kit-person__disc">Two of these three were shot on the same white ground and one was not. That is the decision this band is asking for, before the card is stamped thirty-one times.</p>
+          <span class="kit-person__where kit-tab">Ground, white clinic</span>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <ol class="kit-list kit-list--ledger">
+          <li><span><b>Photograph.</b> One portrait treatment, one crop ratio, one background handling, applied to every profile. Sixty portrait files exist across the thirty-one profiles and they were not shot to one standard.</span></li>
+          <li><span><b>Name.</b> As published on the profile. This is the value the A to Z sort reads.</span></li>
+          <li><span><b>Credentials.</b> Exactly as published, confirmed string by string. None of the three above is confirmed, so none of the three shows one.</span></li>
+          <li><span><b>Field.</b> The discipline the profile sorts into. This is the value the discipline chips read, and it is held per profile until the owner confirms it.</span></li>
+          <li><span><b>Clinic.</b> The row that is deliberately absent. Per clinic assignment is not confirmed, and a named clinician printed at a named address on a medical site is not a gap, it is an error.</span></li>
+          <li><span><b>Profile link.</b> The route out of the listing and into the detail, which is where training and the treatments that clinician performs actually live.</span></li>
+        </ol>
+        <div class="kit-truth">
+          <span class="kit-truth__k">Owner data, held</span>
+          <p>These three are not the pinned set, not a ranking and not a shortlist. They are three published roster portraits shown to fix the portrait treatment. Before launch, confirm that each portrait matches its profile, that every credential string is current, and that the clinician has agreed to the photograph being published.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #45 Category chips / nav | considered: #50,#35 | rigor: heavy | why: the copy fixes three routes out of an empty result, by field, by treatment, and by case if you would rather not decide, and it fixes them in that order; #45 is the browse-by-category slot whose whole role is to move a stalled reader sideways, and it is the only one of the three that carries BOTH shapes this section needs, a grid of category cards for the three routes and a chip row inside each for the real destinations, so nine field links and seven treatment links sit as tappable rows rather than as a paragraph of underlined text. The chips are the same locked .kit-tag object the toolbar in section 03 uses, which is deliberate: the reader has already learned what a chip does on this page, so the routing band teaches nothing new. #50's topic columns group items under a heading per column, which would render the three routes as three equivalent lists and lose the fact that the third route is a different KIND of answer, one you take when the first two have failed you. #35's grouped FAQ would turn three ways forward into three questions the reader did not ask, and an accordion would hide the routes behind a click at exactly the moment the reader is closest to leaving. The card skin is CARD-VARIATIONS.md #4's circle-icon service card reduced to its locked form here, the index ring in the card top and the ghost link at the foot. -->
+<section class="section section--cool" id="s05" aria-labelledby="h05" data-rise>
+  <div class="container">
+    <div class="row row--stretch">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">05</span>
+            <div>
+              <span class="kit-eyebrow">Three ways out</span>
+              <h2 id="h05">If the filter comes back empty, go sideways.</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">A filter that returns nothing must say so in words. The empty state on this page reads: "No clinician matches that combination. Clear a filter, or choose a field below." It never renders as a blank panel, and it never leaves you at a dead end with no way out except the back button.</p>
+      </div>
+
+      <div class="col col--span-4">
+        <div class="kit-card">
+          <div class="kit-card__top">
+            <span class="kit-card__label">Route one</span>
+            <svg class="kit-ring" width="28" height="28" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+            </svg>
+          </div>
+          <h3 class="kit-card__title">By field.</h3>
+          <p class="kit-card__body">Each hub explains the field, lists the treatments inside it, and shows what those treatments start at.</p>
+          <div class="kit-tags">
+            <a class="kit-tag" href="#main" data-page="general-dentistry.html">General Dentistry</a>
+            <a class="kit-tag" href="#main" data-page="cosmetic-dentistry.html">Cosmetic Dentistry</a>
+            <a class="kit-tag" href="#main" data-page="orthodontics.html">Orthodontics</a>
+            <a class="kit-tag" href="#main" data-page="oral-surgery.html">Oral Surgery</a>
+            <a class="kit-tag" href="#main" data-page="pediatric-dentistry.html">Pediatric Dentistry</a>
+            <a class="kit-tag" href="#main" data-page="prosthodontics.html">Prosthodontics</a>
+            <a class="kit-tag" href="#main" data-page="endodontics.html">Endodontics</a>
+            <a class="kit-tag" href="#main" data-page="periodontics.html">Periodontics</a>
+            <a class="kit-tag" href="#main" data-page="dental-xrays.html">Digital Dental X-rays</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--span-4">
+        <div class="kit-card kit-card--tint">
+          <div class="kit-card__top">
+            <span class="kit-card__label">Route two</span>
+            <svg class="kit-ring" width="28" height="28" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+            </svg>
+          </div>
+          <h3 class="kit-card__title">By treatment.</h3>
+          <p class="kit-card__body">If you already know the treatment, go straight to it. Every treatment page names the field it belongs to and routes back here filtered to the right clinicians.</p>
+          <div class="kit-tags">
+            <a class="kit-tag" href="#main" data-page="invisalign.html">Invisalign</a>
+            <a class="kit-tag" href="#main" data-page="porcelain-veneers.html">Porcelain Veneers</a>
+            <a class="kit-tag" href="#main" data-page="braces.html">Braces</a>
+            <a class="kit-tag" href="#main" data-page="laser-teeth-whitening.html">Teeth Whitening</a>
+            <a class="kit-tag" href="#main" data-page="dental-implant.html">Dental Implants</a>
+            <a class="kit-tag" href="#main" data-page="airflow.html">Airflow Cleaning</a>
+            <a class="kit-tag" href="#main" data-page="root-canal-treatment.html">Root Canal Treatment</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--span-4">
+        <div class="kit-card">
+          <div class="kit-card__top">
+            <span class="kit-card__label">Route three</span>
+            <svg class="kit-ring" width="28" height="28" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+            </svg>
+          </div>
+          <h3 class="kit-card__title">By case, if you would rather not decide.</h3>
+          <p class="kit-card__body">Book the consultation and let the group route it. Complex work is not meant to be sorted by the patient, and a case that turns out to span two fields is handled by two of our own specialists rather than sent out to a third party.</p>
+          <p class="kit-card__body">If you know whose name you want, book that clinician directly from their profile. If you do not, book the consultation and the case is routed internally to the field it belongs to.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="#main" data-page="contact.html"><span>Book the consultation</span></a>
+            <span class="kit-card__unit">Route B</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-inline">
+          <p>You do not have to pick the right specialist yourself. Either way the first consultation is free, a specialist looks at the actual case, and you leave with a written quote before anything is scheduled.</p>
+          <div class="kit-inline__acts">
+            <a class="kit-btn kit-btn--primary" href="#book">Book an Appointment</a>
+            <a class="kit-btn kit-btn--ghost" href="#s03"><span>Back to the nine fields</span></a>
+          </div>
+        </div>
+        <div class="kit-truth">
+          <span class="kit-truth__k">Owner data, held</span>
+          <p>The free first consultation is recorded as agent derived rather than owner supplied. Confirm the offer, its conditions and any expiry date before the word free is published. If it cannot be confirmed, this rail drops the line and keeps the written quote.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+/* THE FILTER MACHINE. Every control keys on an attribute stamped on the row it
+   filters: data-field for the chips, data-treat for the treatment select, data-name
+   and data-order for the two sorts. Nothing here reads a value the rows do not
+   carry, which is the failure this page type is known for. The clinic control is
+   disabled in markup and is never wired, because no row carries a clinic value.
+   Progressive: with scripting off the table renders complete and unfiltered, the
+   nine rows are all present, and the empty state stays hidden. */
+(function(){
+  "use strict";
+  var table  = document.getElementById("fieldset");
+  if(!table || !table.tBodies.length) return;
+  var tbody  = table.tBodies[0];
+  var wrap   = document.getElementById("set-table");
+  var rows   = Array.prototype.slice.call(tbody.rows);
+  var chips  = Array.prototype.slice.call(document.querySelectorAll("[data-field-chip]"));
+  var treat  = document.getElementById("f-treat");
+  var sorter = document.getElementById("f-sort");
+  var status = document.getElementById("set-status");
+  var empty  = document.getElementById("set-empty");
+  var clear  = document.getElementById("set-clear");
+  var total  = rows.length;
+  var field  = "all";
+
+  function matches(r){
+    if(field !== "all" && r.getAttribute("data-field") !== field) return false;
+    var t = treat ? treat.value : "";
+    if(t && (" " + (r.getAttribute("data-treat") || "") + " ").indexOf(" " + t + " ") === -1) return false;
+    return true;
+  }
+
+  function apply(){
+    var shown = 0;
+    rows.forEach(function(r){
+      var ok = matches(r);
+      r.classList.toggle("is-out", !ok);
+      if(ok) shown++;
+    });
+    if(status) status.innerHTML = '<b class="kit-strong">' + shown + '</b> of ' + total + ' fields shown.';
+    if(empty) empty.classList.toggle("is-out", shown !== 0);
+    if(wrap)  wrap.classList.toggle("is-out", shown === 0);
+  }
+
+  function sortRows(){
+    var mode = sorter ? sorter.value : "listed";
+    var arr = rows.slice();
+    if(mode === "az"){
+      arr.sort(function(a, b){
+        return a.getAttribute("data-name").localeCompare(b.getAttribute("data-name"));
+      });
+    } else {
+      arr.sort(function(a, b){
+        return (+a.getAttribute("data-order")) - (+b.getAttribute("data-order"));
+      });
+    }
+    arr.forEach(function(r){ tbody.appendChild(r); });
+  }
+
+  function setField(next){
+    field = next;
+    chips.forEach(function(c){
+      var on = c.getAttribute("data-field-chip") === field;
+      c.setAttribute("aria-pressed", on ? "true" : "false");
+      c.classList.toggle("kit-tag--accent", on);
+    });
+    apply();
+  }
+
+  chips.forEach(function(c){
+    c.addEventListener("click", function(){ setField(c.getAttribute("data-field-chip")); });
+  });
+  if(treat)  treat.addEventListener("change", apply);
+  if(sorter) sorter.addEventListener("change", sortRows);
+  if(clear)  clear.addEventListener("click", function(){
+    if(treat) treat.value = "";
+    setField("all");
+  });
+
+  apply();
+})();
+</script>
+
+</main>
+
+<!-- pick: CTA-PATTERNS.md #11 Full-width band CTA, section as button | considered: #7,#12 | rigor: heavy | why: Collision A of the sector reconciliation allots the CHROME exactly one closing band and forbids the body from authoring any, so this single band has to be composed once, here, and inherited by all 47 pages, and #11 is the catalogued form of a section whose whole job IS the ask; it is also the only candidate that can carry the qualifying self-pay fact beside the ask, which C7 requires be stated plainly rather than buried, and the only one that can hold the page's single dark punctuation, since C7 permits the flip exactly once and only on a proof or conversion band. #7's side-by-side primary-and-secondary cluster is an inline CTA pair, not a band, so picking it would leave the site with NO closing band and push every page to author its own, which is exactly the count gate G-CTA1 fails on. #12's sticky bottom bar is a persistent overlay rather than a closing moment, and adding a second always-on appointment control under a header that already pins "Book an Appointment" would put the same ask on screen twice at 375 with no page content between them. RE-REGISTERED from #11's arbitrary brand-colour fill to the system's own deep navy via .section--dark paired with .surface-dark, and entered on a flat ground step rather than a curve, because the page's one arc is already spent at the header and the sheet turns its light-to-light seam devices off at a dark boundary. -->
+<section class="section section--dark surface-dark precta" id="book">
+  <div class="kit-atmos kit-atmos--top" aria-hidden="true"></div>
+  <div class="container">
+    <div class="row row--aside row--center">
+
+      <div class="col col--copy">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">Book</span>
+            <div>
+              <span class="kit-eyebrow">Appointments</span>
+              <h2>Nine disciplines. Thirty-one specialists. One appointment.</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-accentline">Elevating People's Lives, One Smile at a Time.</p>
+        <p class="kit-lede readw--tight">Tell us what you want looked at and we will place you with the specialist whose discipline the case belongs to, at whichever of the four clinics suits your week.</p>
+        <div class="kit-actions">
+          <a class="kit-btn kit-btn--primary" href="#main" data-page="contact.html">Book an Appointment</a>
+          <a class="kit-btn kit-btn--secondary" href="#main" data-page="contact.html">Call Us</a>
+        </div>
+        <div class="kit-truth">
+          <span class="kit-truth__k">Before you book</span>
+          <p>Self-pay clinic. We do not accept HMO or dental insurance. Every treatment is paid directly.</p>
+        </div>
+      </div>
+
+      <div class="col col--media">
+        <div class="precta__aside">
+          <div class="precta__ring">
+            <svg class="kit-ring" width="64" height="64" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="1.6"/>
+              <g class="kit-ring__tick" stroke-width="1.4">
+                <line x1="50" y1="12" x2="50" y2="20" transform="rotate(30 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="20" transform="rotate(60 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="20" transform="rotate(90 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="20" transform="rotate(120 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="20" transform="rotate(150 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="20" transform="rotate(180 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="20" transform="rotate(210 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="20" transform="rotate(240 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="20" transform="rotate(270 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="20" transform="rotate(300 50 50)"/>
+                <line x1="50" y1="12" x2="50" y2="20" transform="rotate(330 50 50)"/>
+              </g>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="3"/>
+            </svg>
+          </div>
+          <span class="kit-eyebrow">Opening hours</span>
+          <dl class="kit-defs">
+            <div><dt>Mitsukoshi BGC</dt><dd>11:00 to 20:00</dd></div>
+            <div><dt>Shangri-La Plaza</dt><dd>10:30 to 19:00</dd></div>
+            <div><dt>Bonifacio Stopover BGC</dt><dd>09:00 to 18:00</dd></div>
+            <div><dt>Alabang Town Center</dt><dd>11:00 to 20:00</dd></div>
+          </dl>
+          <p class="kit-meta">Weekday hours shown. Weekend hours differ by branch and Bonifacio Stopover BGC is closed on Sundays.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: FOOTER-STYLES.md #3 5-col dense | considered: #1,#22 | rigor: heavy | why: C1's footer block is a CLOSED five-column contract, Treatments / Clinics / Patients / Clinic / Get in touch, and #3 is the only entry whose shape holds five columns of five to nine rows without merging or inventing a grouping, with the brand block pushed above the columns exactly as the entry describes; it also gives the "Get in touch" column room to run the four real direct lines as tel: targets at a full tap height rather than compressing them into one contact line. #1's four-column shape cannot take the fifth column without folding two of C1's groupings together, which silently edits the sitemap, and its dark ground would spend a SECOND deep band immediately under the .precta, which is where this concept has already spent the page's one dark punctuation; the footer is warm paper precisely so that band reads as punctuation and not as a dark tail. #22 splits contact into its own top row above the nav columns, which would print each of the four clinic numbers twice on one screen, once in the top row and once in the mandated "Get in touch" column, and a duplicated phone number in a four-branch clinic is a wayfinding error, not a redundancy. -->
+<footer class="site-footer">
+  <div class="container">
+
+    <div class="ed-fbrand">
+      <div class="ed-fbrand__id">
+        <svg class="kit-ring" width="44" height="44" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+          <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="2"/>
+          <g class="kit-ring__tick" stroke-width="2">
+            <line x1="50" y1="12" x2="50" y2="20" transform="rotate(90 50 50)"/>
+            <line x1="50" y1="12" x2="50" y2="20" transform="rotate(180 50 50)"/>
+            <line x1="50" y1="12" x2="50" y2="20" transform="rotate(270 50 50)"/>
+          </g>
+          <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="3.6"/>
+        </svg>
+        <span class="ed-fbrand__word">Elevate Dental</span>
+      </div>
+      <div class="ed-fbrand__say">
+        <p class="kit-accentline">Elevating People's Lives, One Smile at a Time.</p>
+        <p class="kit-note">Four clinics across Metro Manila. Thirty-one specialists across nine disciplines. Self-pay clinic: we do not accept HMO or dental insurance.</p>
+      </div>
+    </div>
+
+    <div class="ed-fcols">
+
+      <div class="ed-fcol">
+        <span class="kit-eyebrow">Treatments</span>
+        <ul class="ed-flist">
+          <li><a href="#main" data-page="treatments.html">All Treatments</a></li>
+          <li><a href="#main" data-page="invisalign.html">Invisalign</a></li>
+          <li><a href="#main" data-page="porcelain-veneers.html">Porcelain Veneers</a></li>
+          <li><a href="#main" data-page="braces.html">Braces</a></li>
+          <li><a href="#main" data-page="laser-teeth-whitening.html">Teeth Whitening</a></li>
+          <li><a href="#main" data-page="dental-implant.html">Dental Implants</a></li>
+          <li><a href="#main" data-page="airflow.html">Airflow Cleaning</a></li>
+        </ul>
+      </div>
+
+      <div class="ed-fcol">
+        <span class="kit-eyebrow">Clinics</span>
+        <ul class="ed-flist">
+          <li><a href="#main" data-page="locations.html">All Locations</a></li>
+          <li><a href="#main" data-page="bgc-mitsukoshi.html">Mitsukoshi BGC</a></li>
+          <li><a href="#main" data-page="shangri-la-plaza.html">Shangri-La Plaza</a></li>
+          <li><a href="#main" data-page="bgc-stopover.html">Bonifacio Stopover BGC</a></li>
+          <li><a href="#main" data-page="atc.html">Alabang Town Center</a></li>
+        </ul>
+      </div>
+
+      <div class="ed-fcol">
+        <span class="kit-eyebrow">Patients</span>
+        <ul class="ed-flist">
+          <li><a href="#main" data-page="patients.html">New Patient Guide</a></li>
+          <li><a href="#main" data-page="prices.html">Treatment Prices</a></li>
+          <li><a href="#main" data-page="results.html">Results</a></li>
+          <li><a href="#main" data-page="dental-tourism.html">Dental Tourism</a></li>
+          <li><a href="#main" data-page="promos.html">Promos</a></li>
+        </ul>
+      </div>
+
+      <div class="ed-fcol">
+        <span class="kit-eyebrow">Clinic</span>
+        <ul class="ed-flist">
+          <li><a href="#main" data-page="about.html">About Us</a></li>
+          <li><a href="#main" data-page="specialists.html">Our Specialists</a></li>
+          <li><a href="#main" data-page="technology.html">Technology</a></li>
+          <li><a href="#main" data-page="insights.html">Insights and Care</a></li>
+          <li><a href="#main" data-page="careers.html">Careers</a></li>
+          <li><a href="#main" data-page="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="ed-fcol">
+        <span class="kit-eyebrow">Get in touch</span>
+        <ul class="ed-flist ed-flist--tel kit-tab">
+          <li><a href="tel:+639171599284">Mitsukoshi BGC, +63 917 159 9284</a></li>
+          <li><a href="tel:+639688515420">Shangri-La Plaza, +63 968 851 5420</a></li>
+          <li><a href="tel:+639178294551">Bonifacio Stopover, +63 917 829 4551</a></li>
+          <li><a href="tel:+639171140598">Alabang Town Center, +63 917 114 0598</a></li>
+          <li><a href="mailto:info@elevatedental.ph">info@elevatedental.ph</a></li>
+        </ul>
+        <div class="ed-fsoc">
+          <a href="https://facebook.com/ElevateDentalPhilippines">Facebook</a>
+          <a href="https://instagram.com/elevatedental_ph/">Instagram</a>
+          <a href="https://tiktok.com/@elevatedentalph">TikTok</a>
+          <a href="https://linkedin.com/company/elevate-dental-ph/">LinkedIn</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="ed-fbar">
+      <p>Copyright 2026 Elevate Dental. All rights reserved.</p>
+      <ul class="ed-fbar__links">
+        <li><a href="#main" data-page="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="#main" data-page="terms.html">Terms</a></li>
+        <li><a href="#top">Back to top</a></li>
+      </ul>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  var header = document.querySelector(".site-header");
+  var mega = document.getElementById("mega");
+  var megaTrigger = document.getElementById("mega-trigger");
+  var megaScrim = document.getElementById("mega-scrim");
+  var drawer = document.getElementById("drawer-root");
+  var burger = document.getElementById("hamburger");
+  var drawerClose = document.getElementById("drawer-close");
+  var drawerScrim = document.getElementById("drawer-scrim");
+
+  /* --- the mega panel ---------------------------------------------------- */
+  function setMega(open){
+    if(!mega || !megaTrigger) return;
+    mega.hidden = !open;
+    if(megaScrim) megaScrim.hidden = !open;
+    megaTrigger.setAttribute("aria-expanded", open ? "true" : "false");
+  }
+  if(megaTrigger){
+    megaTrigger.addEventListener("click", function(){
+      setMega(megaTrigger.getAttribute("aria-expanded") !== "true");
+    });
+  }
+  if(megaScrim) megaScrim.addEventListener("click", function(){ setMega(false); });
+  document.addEventListener("click", function(e){
+    if(!mega || mega.hidden) return;
+    if(mega.contains(e.target) || (megaTrigger && megaTrigger.contains(e.target))) return;
+    setMega(false);
+  });
+
+  /* --- the drawer -------------------------------------------------------- */
+  function setDrawer(open){
+    if(!drawer || !burger) return;
+    drawer.hidden = !open;
+    burger.setAttribute("aria-expanded", open ? "true" : "false");
+    burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    document.body.style.overflow = open ? "hidden" : "";
+    if(open){ setMega(false); }
+  }
+  if(burger) burger.addEventListener("click", function(){ setDrawer(drawer.hidden); });
+  if(drawerClose) drawerClose.addEventListener("click", function(){ setDrawer(false); });
+  if(drawerScrim) drawerScrim.addEventListener("click", function(){ setDrawer(false); });
+
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape"){
+      setMega(false);
+      if(drawer && !drawer.hidden){ setDrawer(false); if(burger) burger.focus(); }
+    }
+  });
+
+  /* --- EXCLUSIVE drawer accordions. The `name` attribute already does this in
+     current browsers; this is the fallback, so the drawer can never grow to the
+     both-open height in an engine that ignores it. ------------------------- */
+  var accs = drawer ? drawer.querySelectorAll("details.ed-dacc") : [];
+  Array.prototype.forEach.call(accs, function(d){
+    d.addEventListener("toggle", function(){
+      if(!d.open) return;
+      Array.prototype.forEach.call(accs, function(other){
+        if(other !== d) other.open = false;
+      });
+    });
+  });
+
+  /* --- the sticky state: the utility row retires, the shelf stays --------- */
+  function onScroll(){
+    if(!header) return;
+    if(window.pageYOffset > 80) header.classList.add("is-stuck");
+    else header.classList.remove("is-stuck");
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  /* --- the scroll reveal latch, exactly as the structural sheet defines it:
+     the class is added ONLY when scripting, IntersectionObserver and normal
+     motion preference all hold, so nothing is ever hidden without it. ------ */
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if("IntersectionObserver" in window && !reduce){
+    document.documentElement.classList.add("js-rise");
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add("is-in"); io.unobserve(en.target); }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.05 });
+    Array.prototype.forEach.call(document.querySelectorAll("[data-rise]"), function(el, i){
+      el.style.setProperty("--i", i % 6);
+      io.observe(el);
+    });
+  }
+})();
+</script>
+
+</body>
+</html>

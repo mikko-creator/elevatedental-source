@@ -1,0 +1,595 @@
+<!--META {"title":"General Dentistry Philippines | Cleaning and Fillings","desc":"Routine preventive care: Airflow guided biofilm cleaning, oral prophylaxis and composite fillings. Starting prices and what to expect.","noindex":true}-->
+<!-- TITLE and DESC are the LOCKED values from _handoff/seo-enrichment.md section 1, the SEO SSOT.
+     The SSOT separator is an en dash and renders here as a pipe, because verify-no-dashes is
+     registered on this build. Only the SEPARATOR CHARACTER changed; no word was altered, added,
+     removed or reordered.
+     The key is "desc" and NOT "description": build.mjs renders esc(meta.desc), and its JSON branch
+     does not alias description to desc, so a "description" key ships an EMPTY meta description
+     while looking correct in the fragment.
+     noindex is set on EVERY page because this publishes to a PUBLIC preview URL while the pages
+     carry representative market prices rather than this clinic's own figures. robots.txt cannot
+     carry that load: crawlers read it only at the origin root, and this ships to a project
+     subpath, so the disallow-all there is inert. noindex is the protection that actually works. -->
+<!-- ============================================================================
+     BODY, pages/general-dentistry.content.html. Promoted from the owner-stamped
+     T-HUB template (_design/_tournament/templates/T-HUB/c/preview.html) and then
+     RE-AUTHORED against _copy/general-dentistry.md, which is the authority.
+
+     WHY THIS IS NOT THE TEMPLATE WITH THE NOUNS CHANGED:
+       - The template hub sells a CHOICE between four elective routes. This hub sells
+         a SCHEDULE. Its three children are not alternatives a reader picks between on
+         taste: two of them are cleanings that answer to different deposits, and the
+         third is a repair. So the hero poses no question, the comparison rail is
+         re-pointed at what each treatment actually removes and what instrument does
+         it, and the middle of the page is an opposition band between a cleaning
+         appointment and a restorative one rather than a four-way matrix.
+       - The template's price band is a six-column matrix across four peers. Three
+         peers do not need six columns, so the ladder here is a compact three-row
+         table and the space it saves is spent on the band this field genuinely owes
+         a reader: what a check-up finds that this field does NOT treat, and which
+         four fields those findings belong to.
+       - Every peso figure sits in exactly two bands, the treatment cards and the
+         ladder, each marked in visible text within eighty characters of its figure.
+       - ZERO closing CTA bands. The chrome carries the site's one; the ask here is
+         folded inline into the final content band. ZERO dark bands, ZERO local CSS.
+
+     IMAGERY: five of the eight files in this page's pool are placed, each once. The
+     two smallest masters sit in small slots, never as a lead frame, and the 320 pixel
+     file is not placed at all. No before-and-after file appears anywhere: the whole
+     clinical before/after library is owner-blocked under pre-launch blocker B-2.
+     ============================================================================ -->
+
+<!-- pick: HERO-COMPOSITIONS.md #2 | considered: #20,#23,#11 | rigor: heavy | why: most people arrive at this page with nothing wrong, which is the opposite of the state every other hub on this site opens in, so the hero has to be the least dramatic composition available rather than the most persuasive one. The mirror split, photograph left and copy right, is the only variant that puts the picture first in the reading order at phone width, and the picture here is a check-up being handed back to the patient in a hand mirror, which is the entire argument of routine care in one frame: you are shown what was found. #20 three-column text plus stat plus photo is the tier-2 hub's hero one level up and wants a countable fact, and every countable this brand owns is rationed to other slugs, so this page would have an empty stat column. #23 comparison hero is the LOCKED TEMPLATE's own opener and poses a two-way question; this field has three children and no binary between them, so the axis would be invented. #11 centred headline plus a service-icon grid needs an icon set the practice has never used and would preview band 03 at lower fidelity. ADAPTATION: the copy column closes on a ruled accent line rather than on a second paragraph, because the sentence that matters in this hero is short and would be lost inside body text. -->
+<!-- FRONT OF HOUSE. The opening section is now the one full-bleed photographic band.
+     THE PHOTOGRAPH IS NOT DUPLICATED. The assigned file is the same consultation frame
+     this section already held in its .kit-slot, so the slot is gone, its alt text is
+     carried across verbatim, and the .col--media that held it is gone too rather than
+     left as an empty cell that renders at zero height and still pays the row gap.
+     THE H1 IS UNTOUCHED: it was already six words. The lede is the page's own sentence
+     with its opening three words "General dentistry is" deleted, because the headline
+     directly above it already says General Dentistry. A deletion, not a rewrite; the
+     sentence keeps every idea it had.
+     The rest of stage 01 (the opener, the two body paragraphs and the accent line)
+     moved intact into the sibling section below. That section drops .row--split-rev,
+     because that modifier gives the copy the NARROW .72fr track and hands 1.42fr to a
+     media cell that no longer exists; a single .col--span-7 in a plain row gives the
+     copy back a real measure instead of standing it in a third of the grid. -->
+<section class="section surface-dark kit-hero foh-hero" id="s-lead" aria-labelledby="h-lead" data-surface="dark" data-rise>
+  <div class="container">
+    <div class="row">
+      <div class="col col--full">
+        <div class="foh-hero__stage">
+          <figure class="foh-hero__band">
+            <img class="foh-hero__img" src="../assets/generated/gen-hero-mirror-probe.jpg" alt="A long handled mouth mirror lying across a polished round surface beside folded bone linen." width="3136" height="1344" loading="eager" fetchpriority="high" decoding="async">
+            
+          </figure>
+          <div class="foh-hero__inner">
+              <h1 class="foh-hero__title" id="h-lead">General Dentistry Philippines. Cleaning and Fillings.</h1>
+            </div>
+          <div class="foh-hero__lockup">
+            <p class="foh-hero__eyebrow">Care on a schedule</p>
+            <p class="foh-hero__lede">The care your teeth need on a schedule, not in an emergency.</p>
+            <div class="kit-actions">
+              <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+              <a class="kit-btn kit-btn--secondary" href="#s-three">The three treatments</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stage 01 continued, on the paper ground the opening section carried. -->
+<section class="section section--paper" id="s-lead-b" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">01</span>
+          </div>
+        </div>
+        <p class="kit-body readw">It covers your check-up, your cleaning, the small fillings that stop a cavity from becoming a root canal, and the imaging that finds a problem while it is still simple to treat.</p>
+        <p class="kit-body readw">Here that work is done by dentists who sit alongside the orthodontists, endodontists, periodontists and surgeons. If your check-up finds something a general dentist does not treat, your next appointment is made in this practice.</p>
+        <p class="kit-accentline">Three treatments, one appointment interval, and a plan if something turns up.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #50 | considered: #11,#9,#13 | rigor: heavy | why: the locked copy hands this band seven CONDITIONS that fall into two natural families, things that are deposited on a tooth and things that have started to happen to it, and topic columns is the entry whose whole structure is parallel families of related items read down rather than across. Splitting the seven that way does real work: it tells a reader with a bleeding gum and a reader with a chipped edge that they are in the same appointment for two different reasons, which is what a diagnostic field has to establish before it lists a single treatment. #11 service pillars two-column with image is the closest runner-up and is used one band from the end of this page, where the media genuinely leads; here it would subordinate seven clinical conditions to a photograph. #9 services three-column would turn conditions into services, which is exactly the category error this band exists to prevent, because none of the seven is a treatment. #13 bento grid gives seven items seven different box sizes, ranking them by area when a check-up ranks them by what it finds. ADAPTATION: the in-house paragraph is pulled out of the list into a tinted card, because it is not an eighth condition, it is the reason the list is worth reading here rather than anywhere else. -->
+<section class="section section--cool" id="s-scope" aria-labelledby="h-scope" data-rise>
+  <div class="container">
+    <div class="row row--split">
+
+      <div class="col col--copy">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">02</span>
+            <div>
+              <span class="kit-eyebrow">What this field covers</span>
+              <h2 id="h-scope">The diagnostic and preventive layer</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Your dentist examines the teeth, gums and bite. Images are taken where an examination alone cannot answer the question. Deposits are removed. Teeth that have started to break down are restored before the damage reaches the nerve.</p>
+        <ul class="kit-list">
+          <li><b class="kit-strong">Deposited on the tooth.</b> Plaque and tartar on the crown and under the gum edge.</li>
+          <li><b class="kit-strong">Deposited on the tooth.</b> Surface staining from coffee, tea and tobacco.</li>
+          <li><b class="kit-strong">Happening to the tooth.</b> Decay and cavities.</li>
+          <li><b class="kit-strong">Happening to the tooth.</b> Chipped, worn or cracked edges.</li>
+          <li><b class="kit-strong">Happening to the tooth.</b> Sensitivity to hot, cold and sweet.</li>
+          <li><b class="kit-strong">Happening to the gum.</b> Early inflammation and bleeding.</li>
+          <li><b class="kit-strong">Watched over time.</b> Teeth already filled, crowned or root-treated.</li>
+        </ul>
+        <div class="kit-card kit-card--tint kit-card--pad" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">The moment it matters</span>
+            <svg class="kit-ring" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+            </svg>
+          </div>
+          <p class="kit-card__title">When an examination turns up something outside a general dentist's scope</p>
+          <p class="kit-card__body">This is one of the dental fields Elevate Dental holds in-house, alongside cosmetic dentistry, orthodontics, endodontics, periodontics, prosthodontics, oral surgery, pediatric dentistry and dental radiology. Your case moves to the right specialist without leaving the building, with your records, images and history already attached to it. You do not start again somewhere else.</p>
+        </div>
+      </div>
+
+      <div class="col col--media">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2021_06_3-Types-of-Teeth-Cleaning-Procedures.jpg" alt="A seated patient turning towards a clinician in a white coat and white gloves who is bringing a mouth mirror and a fine explorer probe up to her front teeth." width="1200" height="800" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Mirror and explorer</b><span>The examination that decides which of the three below you need.</span></figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #9 | considered: #10,#21,#44 | rigor: heavy | why: this field has exactly three children, and services three-column is the one entry sized for three peers at full content weight, so each tile can carry a real clause plus a four-row rail and all three still land on one screen without a widow. The rail is where the template is departed from: its locked axes, Changes, Made, Quoted per and From, compare four elective materials, and two of these three treatments add no material to a tooth at all. The axes that genuinely separate a cleaning from a cleaning from a repair are what each one takes off or puts back, which instrument does it, whether the fee follows the visit or the tooth, and where it starts, so those are the four rows. #10 services four-column compact is the template's own child grid and would leave a fourth column empty or force a filler tile. #21 case studies three-column is built for evidence and the clinical image library is owner-blocked under B-2, so the evidence slot could only be filled with something that is not evidence. #44 featured collection is a commerce shape that would rank a cleaning against a filling as though a reader were shopping. ORDERING is by starting figure ascending, so the routine appointment leads and the repair follows, which is also the clinical order most patients meet them in. -->
+<section class="section section--paper" id="s-three" aria-labelledby="h-three" data-rise>
+  <div class="container">
+    <div class="row row--stretch">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">03</span>
+            <div>
+              <span class="kit-eyebrow">Treatments in this field</span>
+              <h2 id="h-three">Two cleanings and a repair</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">They are not three versions of one appointment. Two remove something from the tooth and one puts something back, and the rails below say which is which.</p>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Route 01</span>
+            <span class="kit-card__unit">Removes</span>
+          </div>
+          <p class="kit-card__title">Oral Prophylaxis</p>
+          <p class="kit-card__body">Professional cleaning that lifts the hardened deposits a toothbrush cannot reach, above and below the gum margin. Most patients are seen twice a year.</p>
+          <dl class="kit-card__hours">
+            <div><dt>Takes off</dt><dd>Plaque and tartar</dd></div>
+            <div><dt>Instrument</dt><dd>Hand and ultrasonic scalers</dd></div>
+            <div><dt>Quoted per</dt><dd>Visit</dd></div>
+            <div><dt>From</dt><dd>₱2,500 <span class="kit-meta">market range, not an Elevate price</span></dd></div>
+          </dl>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="oral-prophylaxis.html"><span>Oral Prophylaxis</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Route 02</span>
+            <span class="kit-card__unit">Restores</span>
+          </div>
+          <p class="kit-card__title">Dental Fillings</p>
+          <p class="kit-card__body">Tooth-coloured composite that rebuilds a decayed or chipped tooth in a single visit, shaded to the enamel around it so the repair is not the first thing anyone sees.</p>
+          <dl class="kit-card__hours">
+            <div><dt>Puts back</dt><dd>Lost tooth structure</dd></div>
+            <div><dt>Instrument</dt><dd>Composite cured in the chair</dd></div>
+            <div><dt>Quoted per</dt><dd>Tooth</dd></div>
+            <div><dt>From</dt><dd>₱3,500 <span class="kit-meta">market range, not an Elevate price</span></dd></div>
+          </dl>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="dental-fillings.html"><span>Dental Fillings</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Route 03</span>
+            <span class="kit-card__unit">Removes</span>
+          </div>
+          <p class="kit-card__title">AirFlow</p>
+          <p class="kit-card__body">Guided biofilm therapy: cleaning with warm water, air and a fine powder rather than hand scraping. It reaches the grooves and margins instruments struggle with, and appointments are usually shorter than standard scaling.</p>
+          <dl class="kit-card__hours">
+            <div><dt>Takes off</dt><dd>Biofilm and stain</dd></div>
+            <div><dt>Instrument</dt><dd>Air, warm water and powder</dd></div>
+            <div><dt>Quoted per</dt><dd>Visit</dd></div>
+            <div><dt>From</dt><dd>₱4,500 <span class="kit-meta">market range, not an Elevate price</span></dd></div>
+          </dl>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="airflow.html"><span>AirFlow Cleaning</span></a>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #15 | considered: #14,#6,#29 | rigor: heavy | why: the cards above answer what each treatment is, and the question a reader is actually left holding is which KIND of appointment theirs is, which has exactly two answers and is therefore an opposition rather than a list. #15 is the only entry that gives an opposition a shape, two peer panels of equal weight with the deciding question named between them, and the equal weight is load bearing: a repair is not a failure and a cleaning is not a lesser visit, so a treatment that visually downgraded either one would be a sales device dressed as guidance. #14 tabbed content hides one of the two answers behind a control, and a reader who has to click to learn their appointment involves drilling has been managed rather than told. #6 self-selection qualifier is used two bands from the end of this page for the routing that genuinely needs it, and running it twice would flatten both. #29 before and after pair is barred outright: every clinical before and after file in this library is owner-blocked under B-2. RE-REGISTERED, load bearing: #15 is authored as us versus THEM and client-rules caps competitor mentions at zero on every page, so the axis is re-pointed at the same practice's two answers, which is the only opposition this page is permitted to draw. -->
+<section class="section section--warm" id="s-choose" aria-labelledby="h-choose" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">04</span>
+            <div>
+              <span class="kit-eyebrow">Which appointment is yours</span>
+              <h2 id="h-choose">Cleaning or repair</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">One question separates them, and you can usually answer it yourself before you book.</p>
+      </div>
+
+      <div class="col col--span-4">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2021_11_5-Benefits-of-Dental-Fillings.jpg" alt="Gloved hands at a covered instrument tray, one holding a fine spatula over a white mixing pad, with a dish of shade samples and rows of coloured composite syringes ranked behind." width="1200" height="800" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>The restorative tray</b><span>Shades are chosen before anything is placed.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--span-4 col--stretch">
+        <div class="kit-card kit-card--pad" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Nothing is broken</span>
+            <span class="kit-card__unit">Cleaning</span>
+          </div>
+          <p class="kit-card__title">Book a cleaning when the surfaces are sound</p>
+          <p class="kit-card__body">The teeth are intact, nothing is sensitive to bite on, and the complaint is roughness, staining or a gum that bleeds when you brush. That is a deposit problem. Your dentist decides between the two cleaning routes on what has actually built up and how deep into the pocket it reaches.</p>
+        </div>
+      </div>
+
+      <div class="col col--span-4 col--stretch">
+        <div class="kit-card kit-card--pad" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Something is broken</span>
+            <span class="kit-card__unit">Repair</span>
+          </div>
+          <p class="kit-card__title">Book a repair when structure has been lost</p>
+          <p class="kit-card__body">There is a visible hole, a chipped edge, a rough patch your tongue keeps finding, or a tooth that reacts to cold and settles again. That is a structure problem, and caught at this stage it is usually one appointment. Left alone it becomes the appointment two fields further down this page.</p>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">If you cannot tell</p>
+          <p class="kit-body readw--wide">Book the check-up and let the examination decide. A cleaning is often added to a repair visit anyway, and the sequence is agreed with you before either one starts.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: PRICING-SECTIONS.md #2 | considered: #6,#5,#4 | rigor: heavy | why: three treatments and one axis is a small matrix, and the comparison table is still the right pick for it because the locked structural sheet already ships the table-to-cards reflow, the head row dropped below 767 pixels and every cell reprinting its own label from a data attribute, so a compact ladder costs nothing to make responsive and reads as a ladder at every width. Keeping it SHORT is the adaptation: the template's version of this band runs six columns across four peers, and a three-row table with two columns is the honest size of the fact being published here, which leaves the page room for the band about what this field does not treat. #6 quote-configurator ladder explains what moves one number, which suits a single quoted treatment and not three fixed floors. #5 plain-deal honesty stance carries a payment condition and no figures, and that condition is carried in this same band as a closing rail rather than as a band of its own, because this page has fewer money moments than the tier-2 hub and does not need two. #4 quote-only cost-model split is barred by its own rule that it prints no figure, and the copy publishes three. -->
+<section class="section section--paper" id="s-cost" aria-labelledby="h-cost" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7 col--copy">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">05</span>
+            <div>
+              <span class="kit-eyebrow">Starting prices</span>
+              <h2 id="h-cost">Where the three floors sit</h2>
+            </div>
+          </div>
+        </div>
+        <div class="kit-table__scroll">
+          <table class="kit-table">
+            <caption>Starting figures in this field, drawn from published Philippine market ranges. Not one of them is an Elevate Dental price.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Treatment</th>
+                <th scope="col">Quoted per</th>
+                <th scope="col" class="kit-table__num">Starts at</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Treatment"><b class="kit-strong">Oral prophylaxis</b></td>
+                <td data-label="Quoted per">Visit</td>
+                <td data-label="Starts at" class="kit-table__num">₱2,500<span class="kit-table__from">Not an Elevate price</span></td>
+              </tr>
+              <tr>
+                <td data-label="Treatment"><b class="kit-strong">Dental fillings</b></td>
+                <td data-label="Quoted per">Tooth</td>
+                <td data-label="Starts at" class="kit-table__num">₱3,500<span class="kit-table__from">Not an Elevate price</span></td>
+              </tr>
+              <tr>
+                <td data-label="Treatment"><b class="kit-strong">AirFlow guided biofilm therapy</b></td>
+                <td data-label="Quoted per">Visit</td>
+                <td data-label="Starts at" class="kit-table__num">₱4,500<span class="kit-table__from">Not an Elevate price</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="kit-tags">
+          <span class="kit-tag kit-tag--accent kit-tab">Market ranges, not an Elevate price list</span>
+        </div>
+        <p class="kit-body readw--wide">Each is a floor. The final fee follows how many teeth are involved and how much has to be done to them, and it is confirmed at the consultation before anything is scheduled.</p>
+      </div>
+
+      <div class="col col--span-5">
+        <div class="kit-card kit-card--tint kit-card--pad" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">How it is paid</span>
+            <span class="kit-card__unit">Self-pay</span>
+          </div>
+          <p class="kit-card__title">Elevate Dental does not accept HMO or dental insurance.</p>
+          <p class="kit-card__body">Health plan coverage cannot be used for dental treatment at our clinics, and all treatment is settled directly. It is stated on this page rather than at the desk, because a routine appointment is the worst possible moment to discover a billing condition.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="prices.html"><span>Treatment Prices</span></a>
+          </div>
+        </div>
+        <div class="kit-truth" data-rise>
+          <span class="kit-truth__k">Not yet supplied</span>
+          <p>Real prices. All three figures above are representative market figures anchored to published Philippine market ranges rather than to an Elevate Dental price list, and Elevate Dental has not set a figure of its own for any treatment in this field. Your own price is quoted per treatment, after the examination has shown what is actually needed.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #10 | considered: #45,#9,#21 | rigor: heavy | why: the honest limit of a preventive field is that its own examination is the thing most likely to find work it cannot do, and the band that says so has to route to FOUR other fields with a light content load each, which is exactly what services four-column compact is sized for. Four tiles on one line also make a structural point the copy makes in prose: the handover is short, and it is four doors down the same corridor rather than a letter to a stranger. #45 category chips can carry a name and nothing else, and each of these four needs a clause explaining what the check-up found. #9 services three-column is used two bands up for the three children and would demote one of the four onward fields to a second row, which silently ranks them. #21 case studies three-column would want an outcome per field, and clinical outcomes are owner-blocked under B-2. ADAPTATION: no tile carries a price, because a reader being told their routine visit has found something else should meet the clinical route first and the money on the field's own page, not in the same breath. -->
+<section class="section section--cool" id="s-beyond" aria-labelledby="h-beyond" data-rise>
+  <div class="container">
+    <div class="row row--stretch">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">06</span>
+            <div>
+              <span class="kit-eyebrow">The honest limit</span>
+              <h2 id="h-beyond">What a check-up finds that this field does not treat</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">These four findings are common at a routine visit. Each belongs to a different specialist, and each of those specialists works in this building.</p>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card kit-card--tint" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Decay has reached the nerve</span>
+            <svg class="kit-ring" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+            </svg>
+          </div>
+          <p class="kit-card__title">Endodontics</p>
+          <p class="kit-card__body">Once the pulp is involved a filling no longer settles it. Root canal treatment saves the tooth, and the case moves across without you retelling it.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="endodontics.html"><span>Endodontics</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card kit-card--tint" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">The bleeding has reached the bone</span>
+            <svg class="kit-ring" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+            </svg>
+          </div>
+          <p class="kit-card__title">Periodontics</p>
+          <p class="kit-card__body">Gum inflammation that has begun to cost bone is past what a routine clean can hold. Deep cleaning under the gum is a different appointment with a different specialist.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="periodontics.html"><span>Periodontics</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card kit-card--tint" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">An old crown is failing</span>
+            <svg class="kit-ring" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+            </svg>
+          </div>
+          <p class="kit-card__title">Prosthodontics</p>
+          <p class="kit-card__body">When too little sound structure is left for composite to bond to, the answer is a crown, a bridge or a denture rather than a larger filling.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="prosthodontics.html"><span>Prosthodontics</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card kit-card--tint" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">The tooth cannot be kept</span>
+            <svg class="kit-ring" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+            </svg>
+          </div>
+          <p class="kit-card__title">Oral Surgery</p>
+          <p class="kit-card__body">A cracked root or an impacted wisdom tooth is a surgical problem. It is planned on a scan first, and what replaces the space is planned at the same time.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="oral-surgery.html"><span>Oral Surgery</span></a>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #7 | considered: #18,#19,#8 | rigor: heavy | why: the argument this band makes is not "look at our people", it is "here is a specific thing that goes wrong elsewhere and does not go wrong here", and problem framing is the only entry that leads with the failure and lets the answer follow it. The failure is concrete enough to render: a routine check-up turns up a cracked root, a failing crown or gum disease into the bone, and the referral is a letter, a new waiting list and your history explained again to someone who has never seen your file. Naming that first is what makes the answer land as relief rather than as a boast. #18 and #19, the three and four-column team grids, are what this band would obviously be if the per-field roster existed; it does not, and client-rules blocks tying any clinician to a named site, so a grid of faces here would be fabricated proof. #8 manifesto would turn an operational fact into a creed, and the sector reconciliation refuses that register on a clinical page. ADAPTATION: the band closes on the index rather than on a portrait, so the reader meets the bench as a published list they can check rather than as a photograph they have to trust. -->
+<section class="section section--warm" id="s-bench" aria-labelledby="h-bench" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7 col--copy">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">07</span>
+            <div>
+              <span class="kit-eyebrow">The specialists in this field</span>
+              <h2 id="h-bench">The handover is the part that usually goes wrong</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Every dentist here is published by name and by field, so you can read who will be treating you before you sit in the chair. Filter the index to general dentistry to see who practises in it.</p>
+        <p class="kit-body readw--wide">This is the part a single-dentist practice cannot reproduce. When a routine visit turns up a cracked root, a failing old crown or gum disease that has reached the bone, the referral stays internal. The specialist who takes over reads the same file, sees the same images, and works on the same protocols a corridor away.</p>
+        <div class="kit-actions kit-actions--tight">
+          <a class="kit-btn kit-btn--ghost" href="specialists.html"><span>Our Specialists</span></a>
+          <a class="kit-btn kit-btn--ghost" href="treatments.html"><span>All Treatments</span></a>
+        </div>
+      </div>
+
+      <div class="col col--span-5">
+        <div class="kit-truth">
+          <p>Most patients are seen twice a year, which is the general professional convention rather than a figure this practice has published.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #2 | considered: #3,#4,#56 | rigor: heavy | why: diagnosis in this field is only as good as what the dentist can see, so the equipment band is a credibility band rather than a specification sheet, and the trust strip is the entry whose structure is a quiet bordered row that sits back until it is read. The locked sheet implements exactly that as the systems lattice, a hairline-gapped grid where the gap IS the rule, so four named units read as one instrument panel instead of four competing boxes, which is the right volume for equipment on a page about routine care. #3 stat strip wants a measured figure at the front and this field owns no countable it is permitted to print. #4 press band has no coverage to carry. #56 sponsors logo wall is the same borrowed-credibility move at maximum volume. RE-REGISTERED, load bearing and the reason the pick is honest: the catalogue entry is a LOGO wall, and every mark here is cleared as nominative text only, no logo, no badge and no partner status, and the live site's unlabelled affiliation wall is recorded as an observed defect to move away from. So the lattice carries names and what each unit is for, and no mark is drawn anywhere on this page. -->
+<section class="section section--paper" id="s-kit" aria-labelledby="h-kit" data-rise>
+  <div class="container">
+    <div class="row row--split">
+
+      <div class="col col--copy">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">08</span>
+            <div>
+              <span class="kit-eyebrow">Technology used here</span>
+              <h2 id="h-kit">Four systems this field may use</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Diagnosis is only as good as what your dentist can see, which is why the imaging matters more on a preventive page than the instruments do.</p>
+        <div class="kit-sys" data-rise>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">01</span>
+            <p class="kit-sys__name">Digital radiography</p>
+            <p class="kit-sys__note">Low-dose digital images, on screen in the same appointment rather than developed later.</p>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">02</span>
+            <p class="kit-sys__name">3D CBCT imaging</p>
+            <p class="kit-sys__note">Used when a flat image cannot show the depth of a problem, such as a fractured root or a lesion under an existing restoration.</p>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">03</span>
+            <p class="kit-sys__name">AirFlow</p>
+            <p class="kit-sys__note">Removes biofilm and stain with air, water and fine powder, so a clean reaches areas hand instruments pass over.</p>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">04</span>
+            <p class="kit-sys__name">iTero intraoral scanner</p>
+            <p class="kit-sys__note">A digital scan of the teeth in place of putty impression trays, used for records and for planning restorative work.</p>
+          </div>
+        </div>
+        <p class="kit-status"><span class="kit-status__dot" aria-hidden="true"></span>Cone beam scanning is confirmed at all four Metro Manila clinics</p>
+        <div class="kit-actions kit-actions--tight">
+          <a class="kit-btn kit-btn--ghost" href="technology.html"><span>See all the technology</span></a>
+          <a class="kit-btn kit-btn--ghost" href="locations.html"><span>All Locations</span></a>
+        </div>
+      </div>
+
+      <div class="col col--media">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--arch">
+            <img class="kit-slot__img" src="../assets/generated/gen-prophy-angle.jpg" alt="A prophy angle handpiece and a well of polishing paste on a stainless steel tray." width="675" height="585" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Working distance</b><span>A cleaning appointment as it actually looks from the operator's side.</span></figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #11 | considered: #41,#27,#37 | rigor: heavy | why: the final beat is a short promise about what a first visit contains, and pillars-with-image is the right proportion for it: one column of plain sentences beside one frame of the work being done, with the ask folded into a rail rather than staged as an event. Anything larger would oversell a check-up. #41 closing CTA is the obvious pick and is REFUSED on a hard rule rather than on taste: the chrome carries this site's single closing band, so a second one authored in the body puts the page at two and fails the singularity gate closed. #27 numbered process steps is the tier-2 hub's closing pattern and this beat has no real dependency chain in it, so numbers would imply a sequence the copy does not claim. #37 CTA form would stand a form under a header, a mega panel and a closing band that all carry the appointment control already, and duplicate the contact page's job with a form this template cannot validate. ADAPTATION: the smallest master in this page's pool sits here rather than in a lead frame, because it is 675 pixels wide and a small file placed in a small slot stays sharp while the same file leading a band would not. -->
+<section class="section section--cool" id="s-close" aria-labelledby="h-close" data-rise>
+  <div class="container">
+    <div class="row row--split-rev">
+
+      <div class="col col--copy">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">09</span>
+            <div>
+              <span class="kit-eyebrow">What a first visit contains</span>
+              <h2 id="h-close">Book one consultation, not three</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">A check-up starts with an examination and the images your case needs.</p>
+        <p class="kit-body readw--wide">If everything is sound you leave with a cleaning schedule. If it is not, you are introduced to the person who treats it, on the same day and in the same practice, with your file already in front of them.</p>
+        <div class="kit-inline">
+          <p>Two cleanings and a repair is the whole of this field. Which one you need takes an examination to settle, and that is a single appointment.</p>
+          <div class="kit-inline__acts">
+            <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+            <a class="kit-btn kit-btn--ghost" href="contact.html"><span>Call Us</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--media">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/generated/gen-curing-light-tray.jpg" alt="A dental curing light and a composite placement instrument on a dark tray, lit by its own blue glow." width="675" height="585" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>One tooth at a time</b><span>A back tooth isolated under a dam while it is rebuilt.</span></figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>

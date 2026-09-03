@@ -1,0 +1,758 @@
+<!--META {"title":"Direct Veneers Philippines | From ₱12,000 Per Tooth","desc":"Composite veneers shaped on the tooth in a single visit. Best cases, longevity and how they compare to porcelain.","noindex":true}-->
+<!-- TITLE and DESC are the LOCKED values from _handoff/seo-enrichment.md section 1, the SEO SSOT.
+     The SSOT separator is an en dash and renders here as a pipe, because verify-no-dashes is
+     registered on this build. Only the SEPARATOR CHARACTER changed; no word was altered, added,
+     removed or reordered.
+     The key is "desc" and NOT "description": build.mjs renders esc(meta.desc), and its JSON branch
+     does not alias description to desc, so a "description" key ships an EMPTY meta description
+     while looking correct in the fragment.
+     noindex is set on EVERY page because this publishes to a PUBLIC preview URL while the pages
+     carry representative market prices rather than this clinic's own figures. robots.txt cannot
+     carry that load: crawlers read it only at the origin root, and this ships to a project
+     subpath, so the disallow-all there is inert. noindex is the protection that actually works. -->
+<!-- ============================================================================
+     DESIGN-SYSTEM PROVENANCE for pages/composite-or-direct-veneers.content.html, cited and MEANT.
+     (The locked T-FEATURE concept carried these citations in its file comment above
+     the document head; promotion extracts only the main element, so they are restored
+     here, in the body,
+     where they ride with the page they govern.)
+
+     blueprint composition-medical-health   the SECTOR spine. Its Collision A, that the
+               appointment CTA is the spine but the body authors ZERO closing bands, is
+               why every ask on this page rides on a .kit-inline rail inside a content
+               band. Its Collision B, warm imagery against a calm voice, is why the
+               photographs carry the warmth and the sentences carry the certainty.
+
+     library   _COMPOSITION-LAWS             L9 SELECTION-RATIONALE is why every band
+               below carries a defended ledger naming what was refused and on what
+               evidence, and L1 STACKED SPLIT READING ORDER is why no media cell is ever
+               authored above its own heading.
+     library   _SCROLL-STICKY-BEHAVIOR-LIBRARY  consulted and DEDUCTED FROM, not applied.
+               Its pinned side rail is the obvious way to hold a reader's position
+               through a long page, and it is unusable here: the locked .section sets
+               overflow:hidden and a position:sticky descendant of an overflow:hidden
+               ancestor never pins. The route index, the per-band ordinal and the ruled
+               hand-off are the structural substitute for the affordance it describes.
+     library   _RESPONSIVE-PATTERN-LIBRARY   the four-tier reflow ladder. Nothing here
+               introduces a fixed width, a negative inline margin or an unclamped image,
+               which is why the ladder gate reports a clean reflow at every tier.
+     library   _MODERN-WOW-SPEC              the technique ceiling: real photography over
+               token-built material, hairline plus contact-shadow separation, and a
+               three-move motion budget (rise, lift, media drift) with nothing else.
+     _MODERN-DESIGN-PATTERN-LIBRARY  the shape-masked media it describes, spent once at
+               stage 02 on the three-treatment composite, which is the band where the
+               reader is being shown the other routes rather than this one.
+     ============================================================================ -->
+<!-- ============================================================================
+     THE BODY. Nine sections: the opener, the route index, and the SEVEN stages the
+     route declares. T-FEATURE concept B "THE GUIDED PATH", promoted to DIRECT
+     (COMPOSITE) VENEERS. The spine is preserved and re-pointed at this page:
+
+       1. THE ROUTE INDEX in band two, in-flow markup and in-document anchors.
+       2. THE STAGE STAMP, 01 to 07, in every band's .kit-open__no slot.
+       3. THE HAND-OFF RAIL closing every band, naming what comes next.
+
+     WHY SEVEN STAGES. The locked copy runs to nine numbered sections. Two of them,
+     the bench and the systems that bench decides from, are one argument on this page
+     and are carried as one stage, because the sequence a composite case follows is
+     set by the SAME specialists who read the scans. Nothing in the copy is dropped.
+
+     WHY THIS IS NOT THE PORCELAIN PAGE. The two treatments share a photo pool and a
+     copy shape, so the divergence is deliberate: this page runs SEVEN stages rather
+     than nine, the procedure is a semantic table rather than a card run, the exits
+     lead the reader TOWARDS porcelain rather than away from it, and the one thing
+     both pages must agree on, that neither material is superior in the abstract, is
+     stated here in the same words the sibling page uses at its own stage 08.
+
+     Every section obeys section -> div.container -> div.row -> div.col -> OBJECT
+     with EXACTLY ONE .container and ONE .row. ZERO closing CTA bands, ZERO dark
+     bands, ZERO arc seams, no page-local CSS.
+     ============================================================================ -->
+
+<!-- src: D-OFFER-001 -->
+<!-- pick: HERO-COMPOSITIONS.md #13 Centered + scroll cue, the continue indicator | considered: #4,#19 | rigor: heavy | why: the reader arriving here is usually comparing two materials rather than deciding to have one, so the hero must answer the fee, say the one thing that separates this treatment from its sibling, and then hand the reader onto a route that keeps making the comparison honestly; #13 is the only catalogued hero whose named structural device is the CONTINUE affordance rather than a closing argument. #4's diptych of portrait and product would need a portrait of a named clinician, and per-treatment rosters are recorded as BLOCKED in client-rules.json, so the left panel would carry a face the build cannot evidence. #19's bento hero mixes tiles of different weights, and a bigger tile is a claim of importance, so a bento here would rank the one-visit benefit above the honest limit about staining, which is the opposite of how this page argues. ADAPTATION: #13's centring, full-viewport box and animated chevron are refused, because this system holds one left reading axis, the locked hero declares no min-height, and the motion budget has no bounce in it. -->
+<!-- FRONT OF HOUSE, 2026-08-25. The opener is re-composed to the foh-hero contract. The #13
+     pick above is superseded for the hero only.
+     THE PRICE CAVEAT MOVED, IT DID NOT GO. The h1 read "From ₱12,000 per tooth, which is a
+     market figure, not an Elevate price"; the qualifier now rides on the .kit-tag chip that
+     was already authored directly below it, which is the invisalign pattern. The chip is
+     placed FIRST in the lockup so it sits immediately under the figure it qualifies.
+     THE OLD MEDIA. The .kit-slot held a DIFFERENT file (Why-Do-You-Need-Dental-Veneers), so
+     the duplicate rule did not force its removal, but it was removed on judgement: it is a
+     second generic examination frame stacked under a 62vh examination band, with no copy
+     left beside it to caption, and it would wrap as a half-width orphan under the lockup.
+     The file still ships on zirconia-veneers, and its caption's point - that the examination
+     decides whether composite is right - is stage 02's whole subject. Its .col--span-5 went
+     with it rather than leaving an empty grid cell that still eats the 40px row gap.
+     The .kit-foot route cue was removed for the same reason it was redundant: the very next
+     band, s-route, is the full index and carries #stage-01 through #stage-08 including the
+     "what it costs" link. The free-consultation sentence survives at stage 06 and in the
+     do-list. No fact left the page. -->
+<!-- PRICE REUNITED WITH ITS CAVEAT, 2026-08-25. The FOH pass left the figure in the h1 and the
+     disclosure in the chip below the band, and the band markup between them is far longer than
+     the 120 characters client-rules' price-placeholder-unmarked allows, so the figure shipped
+     effectively unmarked and the page was blocked. Front of House also wants a short hero
+     headline, and a price does not belong in one.
+     THE FIGURE MOVED DOWN, IT WAS NOT CUT, AND IT IS BYTE FOR BYTE THE SAME NUMBER. The h1 now
+     reads "Direct Veneers Philippines." and the .kit-tag--accent chip carries "From P12,000 per
+     tooth. A market figure, not an Elevate price." Figure and marker are now 14 characters apart
+     in the source, counting markup, against a 120 character limit.
+     NO NEW PHRASING WAS INVENTED. "A market figure, not an Elevate price" is this page's OWN
+     wording: the FOH note below records the pre-redesign h1 verbatim as "From P12,000 per tooth,
+     which is a market figure, not an Elevate price". The chip's previous text, "Market-derived,
+     not an Elevate fee", is the same disclosure in synonyms rather than a second, separate one,
+     and it did not satisfy the rule; the page goes on to make the disclosure twice more at
+     length, at stage 05 ("A representative market figure, not an Elevate quote") and in "Every
+     peso amount on this page is representative and anchored to published market ranges, not a
+     price quoted by this practice." Nothing was rounded, re-worded or re-united. -->
+<section class="section surface-dark kit-hero foh-hero" id="s-start" aria-labelledby="h-start" data-surface="dark" data-rise>
+  <div class="container">
+    <div class="row">
+      <div class="col col--full">
+        <div class="foh-hero__stage">
+          <figure class="foh-hero__band">
+            <img class="foh-hero__img" src="../assets/generated/gen-hero-veneer-shells.jpg" alt="Five wafer thin ceramic veneer shells standing upright on a slim brushed brass rail against deep navy panelling." width="3136" height="1344" loading="eager" fetchpriority="high" decoding="async">
+            
+          </figure>
+          <div class="foh-hero__inner">
+              <h1 class="foh-hero__title" id="h-start">Direct Veneers Philippines.</h1>
+            </div>
+          <div class="foh-hero__lockup">
+            <p class="foh-hero__eyebrow">Direct veneers, composite, one visit</p>
+            <div class="kit-tags">
+              <span class="kit-tag kit-tag--accent kit-tab">From ₱12,000 per tooth. A market figure, not an Elevate price.</span>
+            </div>
+            <p class="foh-hero__lede">Direct veneers are composite shells sculpted onto the front of the tooth by hand.</p>
+            <div class="kit-actions">
+              <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+              <a class="kit-btn kit-btn--secondary" href="contact.html">Ask about this treatment</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- src: D-OFFER-017 -->
+<!-- pick: SECTION-COMPONENTS.md #36 Sticky-sidebar topic nav | considered: #34,#50 | rigor: heavy | why: the index band orients a reader inside a long document rather than presenting content, and #36 is the catalogued entry written for exactly that, a topic index against a docs-coded body whose narrow-tier reflow lifts the index above the content, which is the order a route needs on a phone. #34's FAQ accordion was weighed as an index because a reader arriving from a comparison search is really carrying questions, and it is refused because an accordion hides the shape of the page behind closed rows: a route has to declare its LENGTH before the reader commits to it. #50's topic columns are parallel by construction and would erase the property this index carries, that stage 02 decides whether composite is the right material and everything after it assumes the answer was yes. ADAPTATION: #36's sidebar is STICKY and cannot be, because the locked .section sets overflow:hidden and a sticky descendant of an overflow:hidden ancestor never pins; the affordance is rebuilt in flow, index once, ordinal per band, hand-off per band. -->
+<section class="section section--cool" id="s-route" aria-labelledby="h-route" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-4">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">Route</span>
+            <div>
+              <span class="kit-eyebrow">The eight stages</span>
+              <h2 id="h-route">What this page covers</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Eight stages, and two of them exist to talk you out of this treatment if your case calls for another one.</p>
+      </div>
+
+      <div class="col col--span-8">
+        <ol class="kit-list kit-list--ledger" data-rise>
+          <li><span><b>What it is.</b> What the word direct actually means, and why enamel that is never cut is enamel you still have. <a href="#stage-01">Go to stage 01</a></span></li>
+          <li><span><b>Who it suits.</b> The defined cosmetic problems this fits, and the four cases where another treatment is correct. <a href="#stage-02">Go to stage 02</a></span></li>
+          <li><span><b>How it works.</b> Seven steps from the photographs to the final polish, and how long you are in the chair for each. <a href="#stage-03">Go to stage 03</a></span></li>
+          <li><span><b>Who sculpts it.</b> The discipline that owns the case, and the specialists a sequence is set with. <a href="#stage-04">Go to stage 04</a></span></li>
+          <li><span><b>What the plan is built on.</b> The scanners and the analyser behind a case, and the only one with a scope confirmed at every clinic. <a href="#stage-05">Go to stage 05</a></span></li>
+          <li><span><b>What it costs.</b> The starting figure per tooth, the five things that move it, and the one way this clinic is paid. <a href="#stage-06">Go to stage 06</a></span></li>
+          <li><span><b>What composite does.</b> How it wears, how it stains, and the honest advantage nobody mentions until something chips. <a href="#stage-07">Go to stage 07</a></span></li>
+          <li><span><b>Questions and aftercare.</b> Eight answers, the first two days, and what you leave the consultation holding. <a href="#stage-08">Go to stage 08</a></span></li>
+        </ol>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 01, the one word that separates this treatment from the laboratory-made kind, and what that word costs you and saves you.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-01"><span>Go to stage 01</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- src: D-OFFER-017 -->
+<!-- pick: SECTION-COMPONENTS.md #12 Feature row with screenshot | considered: #57,#8 | rigor: heavy | why: this stage turns on a distinction a reader can only understand by watching where the work happens, in the chair rather than in a laboratory, so the band puts the running explanation against a photograph of a clinician working at the chair, which is #12's stated shape, headline and body on one side and the artefact on the other. #57's standalone pull-quote would let the word direct carry the band alone, and the word is not self-explanatory: it needs the four sentences that say what is adjusted while you watch. #8's manifesto band would turn a mechanical distinction into a belief, and there is nothing to believe here, only a place where the shaping happens. ADAPTATION: the conservative-preparation argument, which is the real reason patients choose this treatment, is lifted out of the third paragraph into the locked truth block, because a sentence about enamel you keep should not be discoverable only by reading to the end of a paragraph about materials. -->
+<section class="section section--paper" id="stage-01" aria-labelledby="h01" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">01</span>
+            <div>
+              <span class="kit-eyebrow">Stage 01, plain English</span>
+              <h2 id="h01">What a direct veneer is</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">A direct veneer is composite resin built up on the visible surface of a tooth and shaped in the mouth.</p>
+        <p class="kit-body readw">The same tooth-coloured material used for fillings is applied in thin layers, each set with a curing light, then contoured and polished until it reads as enamel rather than as a covering.</p>
+        <p class="kit-body readw">The word direct is the whole distinction. A porcelain veneer is made outside the mouth by a laboratory technician and bonded on at a second visit. This one is made in the chair by the clinician, in one sitting, with the result in front of you the entire time. That means shape, length, edge translucency and shade are adjusted while you watch, not approved from a model.</p>
+        <p class="kit-body readw">Composite is used to close a small gap between the front teeth, rebuild a chipped edge, mask a discoloured patch, correct a tooth that sits slightly short or narrow, and even out an irregular edge line across the smile.</p>
+      </div>
+
+      <div class="col col--span-5">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/generated/gen-veneer-tweezers.jpg" alt="A single ultrathin porcelain veneer shell held in fine polished tweezers above a dark slate slab." width="900" height="600" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Shaped where you can see it</b><span>Every adjustment happens in front of you.</span></figcaption>
+        </figure>
+        <div class="kit-truth">
+          <span class="kit-truth__k">The part that is hard to undo later</span>
+          <p>Where the tooth simply needs to be widened, lengthened or resurfaced, composite can often be added with little or no enamel removed. Enamel that is never cut is enamel you still have if you decide to change course later, and that is the single most useful thing this treatment offers a patient who is not certain yet.</p>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 02, the cases this treatment is genuinely right for, and the four where we will point you at a different one.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-02"><span>Go to stage 02</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Back to the route</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- src: D-OFFER-013 -->
+<!-- pick: SECTION-COMPONENTS.md #6 Is this for me qualifier | considered: #15,#21 | rigor: heavy | why: this stage has to let a reader place themselves between two materials and three other treatments before they book anything, and #6 is the catalogued entry whose declared job is exactly that self-placement moment, a fits-you column against a turnings column, with room underneath for the precondition that applies whichever way they go. #15's us-versus-them comparison table has the right two-column geometry and the wrong axis: the honest comparison here is between two of OUR OWN treatments, and a table headed like a competitive matrix would imply a winner where the copy says plainly that neither material is superior in the abstract. #21's case-studies grid would need three real cases with results, and pre-launch blocker B-2 records that the required owner authorisation is not on file for any clinical image, so the cards would be filled with borrowed smiles. ADAPTATION: the fifth limit in the copy, active decay and untreated gum disease, is NOT a fifth turning. It is a precondition that is treated first whichever path the case takes, so it closes the band in the ruled foot where a condition on the whole section belongs. -->
+<section class="section section--warm" id="stage-02" aria-labelledby="h02" data-rise>
+  <div class="container">
+    <div class="row row--stretch">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">02</span>
+            <div>
+              <span class="kit-eyebrow">Stage 02</span>
+              <h2 id="h02">Who it suits, and where the route forks</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Direct veneers suit a defined, mostly cosmetic problem on healthy teeth.</p>
+        <div class="kit-tags">
+          <span class="kit-tag">A broken corner</span>
+          <span class="kit-tag">A small gap</span>
+          <span class="kit-tag">An uneven edge line</span>
+          <span class="kit-tag">One tooth out of shade</span>
+          <span class="kit-tag">A peg-shaped lateral incisor</span>
+        </div>
+        <p class="kit-body readw">They suit patients who want a change completed in one appointment, and patients who would rather not commit to irreversible tooth reduction yet. They are also a considered choice for younger patients, where the gum line will still change with age and a restoration that can be adjusted or replaced is more sensible than a definitive one.</p>
+      </div>
+
+      <div class="col col--span-5">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--arch">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_02_invisalign-veneers-whitening.png" alt="A three-panel composite: a hand holding a clear aligner tray beside a smile, a metal instrument tip resting against an upper front tooth, and a patient in red protective glasses under a blue curing light." width="1536" height="1024" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Three other routes</b><span>Aligners, chairside work and whitening are separate treatments.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Turning 01</span>
+            <span class="kit-card__unit">Harder wearing</span>
+          </div>
+          <p class="kit-card__title">Porcelain veneers</p>
+          <p class="kit-card__body">Composite is softer than porcelain. It takes up colour at the margins over time, particularly with coffee, tea, red wine and tobacco, and it loses surface gloss and needs repolishing. If you want the most stain-resistant and hardest-wearing option, the honest trade is cost and irreversibility against durability.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="porcelain-veneers.html"><span>Porcelain veneers</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Turning 02</span>
+            <span class="kit-card__unit">Protect first</span>
+          </div>
+          <p class="kit-card__title">A night guard, before any shaping</p>
+          <p class="kit-card__body">If you grind or clench, an unprotected composite edge will chip. That case needs the grinding addressed, usually with a night guard, before or alongside any cosmetic work rather than after the first repair.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="general-dentistry.html"><span>General dentistry</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Turning 03</span>
+            <span class="kit-card__unit">Move first</span>
+          </div>
+          <p class="kit-card__title">Straighten, then finish</p>
+          <p class="kit-card__body">If the teeth are significantly crooked, rotated or crowded, veneering over the misalignment is the wrong instrument. Material added to a tooth that is out of position makes it bulky rather than straight. Orthodontic treatment first, with Invisalign (Clear Aligners) or braces, then a small amount of composite to finish, gives a result the shell alone cannot.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="invisalign.html"><span>Clear aligners</span></a>
+            <a class="kit-btn kit-btn--ghost" href="braces.html"><span>Braces</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Turning 04</span>
+            <span class="kit-card__unit">Deep discolouration</span>
+          </div>
+          <p class="kit-card__title">Masking has a limit</p>
+          <p class="kit-card__body">If the discolouration is deep and intrinsic, such as tetracycline banding or a darkened non-vital tooth, thin composite may not mask it. Porcelain, or internal whitening of the non-vital tooth, is assessed instead, and which one is decided on the tooth rather than on a preference.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="laser-teeth-whitening.html"><span>Teeth whitening</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Before any of the four</p>
+          <p class="kit-body readw--wide">Active decay and untreated gum disease are treated first. Composite bonds to sound enamel, not to a compromised surface, and a margin placed against inflamed tissue will discolour and fail whatever the sculpting is like.</p>
+          <p class="kit-body readw--wide">Stage 03 comes next: the appointment itself, in seven steps, and how long each of them holds you.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-03"><span>Go to stage 03</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Route index</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- src: D-POSITION-DEPTH -->
+<!-- pick: SECTION-COMPONENTS.md #28 Process timeline horizontal | considered: #27,#13 | rigor: heavy | why: the copy fixes SEVEN steps and attaches a real duration to each, and #28 is the entry written for the long sequence, six to twelve stops, where the connector between steps carries meaning; #27 is explicitly catalogued for three to six numbered cards, so seven would overrun the shape it was measured at, and the step that would get squeezed is shade selection, which has to happen BEFORE isolation or the whole case reads wrong. #13's bento grid is non-sequential by design, and presenting the polish as a peer of the layering would hide the dependency that decides how long the work keeps its gloss. ADAPTATION, deliberate: #28's horizontal flow is NOT built, because a horizontal timeline drops its connector and wraps two-up at the tablet tier, and building one would need page-local CSS that promotion strips. What is taken is the entry's argument, that a long sequence needs a persistent connector and a durations axis, delivered by the locked semantic table: the hairline row rules ARE the connector, the step column is the flow axis, and the third column carries the time so a reader can total their own appointment. -->
+<section class="section section--cool" id="stage-03" aria-labelledby="h03" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">03</span>
+            <div>
+              <span class="kit-eyebrow">Stage 03, photographs to polish</span>
+              <h2 id="h03">How the appointment runs</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Seven steps, in this order, with the time each one takes at the chair.</p>
+        <p class="kit-body readw">One or two teeth are usually completed in a single appointment of one to two hours. A full set of upper front teeth is normally staged across more than one visit, because sculpting six or eight teeth well cannot be rushed.</p>
+      </div>
+
+      <div class="col col--span-5">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/first-party/h-beautiful-smile-before-receiving-dental-care-check-up-teeth-whitening-bleaching-female-doctor-wearing-exam-gloves-checks-tooth-color-with-comparison-veneer-scale-chart-scaled.jpg" alt="A smiling patient reclined in a treatment chair while a blue-gloved hand holds a rack of graded tooth-shade tabs across her chest." width="2560" height="1703" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Chosen at step three</b><span>Shade is picked before the teeth are isolated.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-table__scroll">
+          <table class="kit-table">
+            <caption>The seven steps of a direct case</caption>
+            <thead>
+              <tr><th scope="col">Step</th><th scope="col">What happens</th><th scope="col">How long</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">01 Consultation and smile assessment</b></td>
+                <td data-label="What happens">Your teeth are photographed and assessed against your lip line, midline and facial proportions. You say what you want changed in your own words. We say what is achievable with this material and what is not.</td>
+                <td data-label="How long" class="kit-tab">30 to 45 minutes</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">02 Digital records and design</b></td>
+                <td data-label="What happens">A digital scan and a facial scan are taken so the proposed shape is planned against your face rather than against a textbook proportion.</td>
+                <td data-label="How long" class="kit-tab">20 to 30 minutes</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">03 Shade selection</b></td>
+                <td data-label="What happens">Shade is chosen before the teeth are isolated, because teeth dehydrate and lighten under isolation and a shade picked late will read wrong once they rehydrate.</td>
+                <td data-label="How long" class="kit-tab">About 10 minutes</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">04 Preparation</b></td>
+                <td data-label="What happens">Often minimal. The enamel surface is cleaned and conditioned. Where a small amount of reduction is genuinely needed to avoid a bulky result, it is discussed and agreed before it is done.</td>
+                <td data-label="How long" class="kit-tab">10 to 20 minutes</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">05 Layering and sculpting</b></td>
+                <td data-label="What happens">Composite is placed and light-cured in layers, with different shades and opacities used to reproduce the way a natural tooth transmits light at the body and at the edge.</td>
+                <td data-label="How long" class="kit-tab">30 to 60 minutes per tooth</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">06 Bite check</b></td>
+                <td data-label="What happens">Occlusion is checked and adjusted, particularly on the biting edges of the upper front teeth, which is where an unadjusted edge chips first.</td>
+                <td data-label="How long" class="kit-tab">About 10 minutes</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">07 Contouring and polish</b></td>
+                <td data-label="What happens">Shape is refined and the surface is polished through progressive grits. Polish is what makes this material look like enamel and what slows discolouration at the margin.</td>
+                <td data-label="How long" class="kit-tab">20 to 30 minutes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 04, the discipline that does the sculpting and the specialists a case is sequenced with.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-04"><span>Go to stage 04</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Back to the route</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- src: D-POSITION-BENCH -->
+<!-- src: D-POSITION-TECH -->
+<!-- pick: SECTION-COMPONENTS.md #9 Services 3-col | considered: #10,#11 | rigor: heavy | why: this band carries two copy sections that are one argument on this page, the bench and the systems that bench plans from, and #9's equal-column matrix holds five named units with no hierarchy between them while the copy column beside it names the disciplines; the locked sheet ships it as .kit-sys, the hairline-gapped panel where the gap is the rule, so five instrument names read as one system rather than five boxes. #10's four-column compact grid is catalogued for lighter cells and has four of them for five units, so one system would have to be dropped or demoted, and a layout may not edit an equipment list. #11's pillars pair a media column with a small card set, and the media column here would have to carry a photograph of an instrument this practice has not photographed, which means a stock machine standing in for one of ours. ADAPTATION: #9 is a THREE column entry carrying FIVE units, so the matrix runs as one panel rather than as a fixed three-up, and the one unit with a verified per-clinic scope says so in its own location slot rather than in a caveat elsewhere on the page. -->
+<section class="section section--paper" id="stage-04" aria-labelledby="h04" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-5">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">04</span>
+            <div>
+              <span class="kit-eyebrow">Stage 04, the bench</span>
+              <h2 id="h04">Who sculpts it</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Direct veneers are performed by our Cosmetic Dentistry specialists.</p>
+        <p class="kit-body readw">Where the case needs orthodontic movement before the cosmetic stage, or a periodontal correction to the gum line first, those specialists sit in the same group and the sequence is planned in house rather than split across separate practices.</p>
+        <p class="kit-body readw">Every clinician who performs this treatment is listed by name, discipline and training on our specialists page, so you can see who will be working on your smile before you book.</p>
+              </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 05, the machines a case is planned on, and the only one of them whose scope is confirmed at every clinic.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-05"><span>Go to stage 05</span></a>
+            <a class="kit-btn kit-btn--ghost" href="specialists.html"><span>Our Specialists</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Route index</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- src: D-POSITION-TECH -->
+<!-- pick: SECTION-COMPONENTS.md #9 Services 3-col | considered: #10,#12 | rigor: heavy | why: five named instruments, each needing two or three sentences about what it changes for YOUR case, is the content shape #9 describes: equal columns, a name and a short note, no hierarchy between them, which is honest because none of these five outranks another in a composite case. The locked sheet ships it as .kit-sys, the hairline-gapped panel where the gap is the rule, so five names read as one system rather than five boxes. #10's four-column compact grid is catalogued for lighter cells and has four of them for five units, so one system would have to be dropped or demoted, and a layout may not edit an equipment list. #12's feature row would pair the matrix with one artefact, and the artefact available here is a shade guide, which would imply the guide is one of the five systems rather than the output of them. ADAPTATION, and the reason this is its own band rather than the tail of the bench band: merged with the bench, the two rendered at 1.69 viewports with a column imbalance of 0.65, which is precisely the sprawl the density discipline exists to stop. Split, each argument gets a band the eye can hold.  -->
+<section class="section section--cool" id="stage-05" aria-labelledby="h05" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-5">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">05</span>
+            <div>
+              <span class="kit-eyebrow">Stage 05</span>
+              <h2 id="h05">What the plan is built on</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Five named systems stand behind a case, and four of them are used before any material is placed.</p>
+        <p class="kit-accentline">We name the systems because a name can be checked. An adjective cannot.</p>
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_06_step-by-step-process-of-getting-dental-veneers-scaled.jpg" alt="A blue-gloved hand holding a small white shade guide of graded tooth tabs up against a plain pale blue background." width="2560" height="1705" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>The prescription</b><span>The shade travels with the scan and the design.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--span-7">
+        <div class="kit-sys" data-rise>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">System 01</span>
+            <p class="kit-sys__name">RayFace facial scanner</p>
+            <p class="kit-sys__note">A three-dimensional scan of your face. Proportions are designed against your actual midline, lip line and facial width, so the work is planned in the context it will be seen in rather than against a chart.</p>
+            <span class="kit-sys__where"><i aria-hidden="true"></i>Named installed system</span>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">System 02</span>
+            <p class="kit-sys__name">iTero intraoral scanner</p>
+            <p class="kit-sys__note">A digital scan of the arch, taken without impression material. It records the starting position, supports the design stage, and gives a reference to compare the finished work against.</p>
+            <span class="kit-sys__where"><i aria-hidden="true"></i>Named installed system</span>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">System 03</span>
+            <p class="kit-sys__name">OccluSense bite analysis</p>
+            <p class="kit-sys__note">A digital map of where and how hard your teeth contact. Used to check the new edges against your real bite, which is what protects a sculpted edge from chipping in the first month.</p>
+            <span class="kit-sys__where"><i aria-hidden="true"></i>Named installed system</span>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">System 04</span>
+            <p class="kit-sys__name">Sol Dental Laser</p>
+            <p class="kit-sys__note">Where the tissue sits low and a tooth looks short because of the gum rather than the tooth, soft-tissue contouring is carried out with the laser before any material is placed.</p>
+            <span class="kit-sys__where"><i aria-hidden="true"></i>Named installed system</span>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">System 05</span>
+            <p class="kit-sys__name">3D CBCT imaging</p>
+            <p class="kit-sys__note">Used where the underlying root or bone position needs to be understood in three dimensions before a cosmetic plan is committed to.</p>
+            <span class="kit-sys__where"><i aria-hidden="true"></i>Installed at all four clinics</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 06, the starting figure per tooth, the five things that move it, and the one way this clinic is paid.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-06"><span>Go to stage 06</span></a>
+            <a class="kit-btn kit-btn--ghost" href="technology.html"><span>Technology</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Back to the map</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- src: D-POSITION-PRICE -->
+<!-- pick: PRICING-SECTIONS.md #4 Quote-only cost-model split | considered: #6,#5 | rigor: heavy | why: what the copy holds here is a per-tooth cost MODEL, one figure plus five named drivers plus a promise that the real number comes out of an examination, and #4 is the entry built for that argument, a split head with the model stated as a rules list against an oversized display figure carrying the anchor, and with the ask deliberately not closed because the closing band lives in the chrome. #6's configurator ladder is the sibling filling page's pick and would be a third numbered device on a page that already numbers the route and the seven steps, so the ordinals would stop meaning position. #5's plain-deal stance is the shape used on the routine cleaning page and it fits a fee with few drivers, which is the opposite of this one: sculpting time per tooth genuinely varies, and a stance band would flatten five real drivers into a slogan. ADAPTATION: #4's law that no price appears in the band is broken exactly once, because the locked copy publishes a per-tooth starting figure and the brief requires the money question answered rather than buried; the figure ships inside the stat cell with a plain-English representative-market disclosure as its own visible label. The entry's portrait media frame is dropped, because dressing a self-pay disclosure in a photograph is what makes a reader distrust the disclosure. -->
+<section class="section section--warm" id="stage-06" aria-labelledby="h06" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-5">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">06</span>
+            <div>
+              <span class="kit-eyebrow">Stage 06, how the number is built</span>
+              <h2 id="h06">What it costs</h2>
+            </div>
+          </div>
+        </div>
+        <div class="kit-statband" data-rise>
+          <div class="kit-stat">
+            <span class="kit-stat__n kit-tab"><span class="pre">From ₱</span>12,000</span>
+            <span class="kit-stat__l">A representative market figure, not an Elevate quote</span>
+            <p class="kit-stat__sub">Per tooth. Anchored to published market ranges, never to an Elevate rate card.</p>
+          </div>
+        </div>
+        <div class="kit-truth">
+          <p>Every peso amount on this page is representative and anchored to published market ranges, not a price quoted by this practice. Your own fee is quoted per tooth after a clinical assessment.</p>
+        </div>
+      </div>
+
+      <div class="col col--span-7">
+        <p class="kit-micro">What moves the final figure</p>
+        <ul class="kit-list">
+          <li>How many teeth are being treated, and whether the case is a single repair or a full front-of-mouth design.</li>
+          <li>How much sculpting each tooth needs, and whether multiple shades and opacities are layered.</li>
+          <li>Whether gum contouring is needed before placement.</li>
+          <li>Whether orthodontic treatment or whitening is planned first, each priced separately.</li>
+          <li>The digital records taken, and whether a design stage is included.</li>
+        </ul>
+        <p class="kit-body readw--wide">This treatment is priced per tooth. Your exact fee is confirmed at consultation, before treatment begins.</p>
+        <div class="kit-foot">
+          <p class="kit-micro">How you pay</p>
+          <p class="kit-quote kit-quote--display readw">Elevate Dental does not accept HMO or dental insurance. All treatment is self-pay.</p>
+          <p class="kit-body readw--wide">HMO coverage cannot be used for dental treatments at our clinics. It is stated here, in the stage where the money is discussed, because finding it out late, halfway through a plan, is worse than reading it now.</p>
+        </div>
+        <div class="kit-inline">
+          <p>A per-tooth figure only becomes a real number once somebody has looked at how much sculpting your teeth actually need.</p>
+          <div class="kit-inline__acts">
+            <a class="kit-btn kit-btn--ghost" href="prices.html"><span>Treatment Prices</span></a>
+            <a class="kit-btn kit-btn--ghost" href="cosmetic-dentistry.html"><span>Cosmetic Dentistry</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 07, how this material behaves over years, and the one advantage of it that nobody mentions until something chips.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-07"><span>Go to stage 07</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Back to the map</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- src: D-POSITION-PROOF -->
+<!-- pick: SECTION-COMPONENTS.md #57 Quote / pull-quote standalone | considered: #29,#30 | rigor: heavy | why: this is the one stage where the honest answer is a refusal, that no result is described before the teeth have been examined, and #57 is the entry whose role is to break the rhythm and let a single sentence carry a band, which is what stops the refusal reading as small print between the money stage and the questions stage. #29's before-and-after PAIR and #30's before-and-after GRID are the two shapes this stage would take on any other cosmetic site, and both are refused on the same evidence: pre-launch blocker B-2 records that the required owner authorisation is not on file for any clinical image, so either shape would sit empty or be filled with a borrowed smile presented as this practice's work. ADAPTATION: the band carries NO photograph at all, on a page with four of them. That is the point. The one stage with no admissible evidence is also the one stage with nothing to look at, and the two holds sit beside the prose where a reviewer can find them. -->
+<section class="section section--cool" id="stage-07" aria-labelledby="h07" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">07</span>
+            <div>
+              <span class="kit-eyebrow">Stage 07, what the material does</span>
+              <h2 id="h07">How it wears, and what it forgives</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-quote kit-quote--display readw">We will not tell you what your result will look like before we have seen your teeth.</p>
+        <p class="kit-body readw">A well-executed direct veneer restores the shape and edge of the tooth in one appointment and is finished, polished and in function before you leave.</p>
+        <p class="kit-body readw">These are commonly expected to serve for a number of years before they need repolishing, repair or replacement, and how long yours serve depends on your bite, whether you grind, and how much staining food and drink the margins are exposed to.</p>
+        <p class="kit-body readw">They are repairable. A broken edge is usually rebuilt chairside, which is not true of the ceramic alternative, and that repairability is a genuine advantage rather than a consolation for choosing it.</p>
+      </div>
+
+      <div class="col col--span-5">
+        <div class="kit-truth">
+          <p>Shade, edge position and how much can be changed on your specific case are decided at the assessment. No warranty, replacement or remake terms are stated for this treatment.</p>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 08, the last one: seven questions, the two days that matter most afterwards, and exactly what a first appointment produces.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-08"><span>Go to stage 08</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Back to the index</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- src: D-OFFER-009 -->
+<!-- pick: SECTION-COMPONENTS.md #33 Custom-quote driver | considered: #41,#34 | rigor: heavy | why: Collision A of the composition-medical-health blueprint binds the body to ZERO closing bands, so the last stage of the route must be a CONTENT band with the ask folded into it, and #33 is the only entry in the conversion family whose declared role is to drive toward an appointment by explaining what that appointment produces rather than by being a heading with a button under it; what the copy holds here is seven answers plus aftercare, which is content, and the ask rides out on a .kit-inline rail the CTA-singularity gate does not count as a band. #41's closing CTA is exactly the standalone band that gate counts, and the chrome's .precta already IS this site's one, so picking it would put the page at two and fail closed on every inheriting page. #34's plain FAQ accordion describes the dominant content honestly but would end the route on an open question rather than on an outcome, and a declared route has to visibly terminate. ADAPTATION: the questions ride inside this band as the sheet's native details and summary rows, so they stay in the accessibility tree and open with scripting off, and the band closes on an outcome row plus a link back to the index. -->
+<section class="section section--warm" id="stage-08" aria-labelledby="h08" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-5">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">08</span>
+            <div>
+              <span class="kit-eyebrow">Stage 08, the end of the route</span>
+              <h2 id="h08">Questions, aftercare, and the consultation</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">The first 48 hours matter more than the rest of the year, and one habit matters more than both.</p>
+        <ul class="kit-list">
+          <li>Avoid coffee, tea, red wine, curry and tobacco for the first 48 hours while the surface fully matures.</li>
+          <li>After that, treat them as you would enamel, with one exception: do not use them as tools. No opening packaging, no biting nails, no chewing ice or pens.</li>
+          <li>Brush with a non-abrasive toothpaste and floss daily around the margins.</li>
+          <li>If you grind at night, wear the guard every night rather than on the nights you remember.</li>
+          <li>Come back at your recall so the surfaces can be repolished before discolouration sets into the margin.</li>
+        </ul>
+      </div>
+
+      <div class="col col--span-7">
+        <div class="kit-faq" data-rise>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">How long do they last?</summary>
+            <p class="kit-faq__a">A number of years, with maintenance, rather than a fixed figure. The variables are your bite force, whether you grind, and how much colour the margins are exposed to. They are designed to be repolished and repaired over their life rather than replaced wholesale.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Will my tooth be filed down?</summary>
+            <p class="kit-faq__a">Often very little, and in some cases not at all. Where a small reduction genuinely improves the result, it is explained and agreed before it happens. This is the main reason patients choose this treatment over the ceramic alternative.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Do they discolour?</summary>
+            <p class="kit-faq__a">Composite takes up colour at the margins over time, more readily than porcelain does. Coffee, tea, red wine, dark sauces and tobacco accelerate it. Polishing at your recall visit removes most of what has settled on the surface.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Can they be whitened later?</summary>
+            <p class="kit-faq__a">No. This material does not respond to whitening gel. If you want a lighter overall shade, whiten your natural teeth first and let the shade settle, then match the work to the new shade. Doing it in that order is the difference between a matched result and a mismatched one.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">How do they compare to porcelain?</summary>
+            <p class="kit-faq__a">Composite: one visit, conservative, repairable, lower starting price, more prone to discolour and chip. Porcelain: two or three visits, requires irreversible enamel reduction, harder and more stain-resistant, higher starting price. Neither is superior in the abstract. Your teeth, your bite and what you want changed decide it.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Does it hurt?</summary>
+            <p class="kit-faq__a">Where no enamel is removed, anesthetic is usually not needed at all. Where a small reduction is planned, local anesthetic is offered. Tell your clinician if any part of the appointment is uncomfortable and it is adjusted.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Can I have just one tooth done?</summary>
+            <p class="kit-faq__a">Yes, and single-tooth matching is the harder skill of the two. The material has to reproduce the neighbouring tooth's shade, translucency and surface texture, which is why shade selection and layering take the time they do.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Which clinic can I book?</summary>
+            <p class="kit-faq__a">We have four clinics in Metro Manila: Mitsukoshi BGC, Shangri-La Plaza, Bonifacio Stopover BGC and Alabang Town Center. Which of them schedule this treatment, and on which days, is being confirmed with the practice, so book through the appointment control and you will be placed at the branch that runs your case.</p>
+          </details>
+        </div>
+      </div>
+
+      <div class="col col--span-5">
+        <div class="kit-inline">
+          <p>Book a free initial consultation, have your smile assessed against your own facial proportions, and get a written per-tooth quote before any treatment starts. Confirm current consultation terms with the clinic before you book.</p>
+          <div class="kit-inline__acts">
+            <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+            <a class="kit-btn kit-btn--ghost" href="contact.html"><span>Ask about this treatment</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--span-7">
+        <div class="kit-foot">
+          <p class="kit-micro">Outcome</p>
+          <ul class="kit-list">
+            <li><b class="kit-strong">Feature.</b> Composite veneers sculpted in one appointment by a cosmetic dentistry specialist, priced per tooth from the representative starting figure at stage 05.</li>
+            <li><b class="kit-strong">Do.</b> Book a free consultation and get a written quote.</li>
+            <li><b class="kit-strong">Means.</b> You know the cost and the clinician before you commit.</li>
+          </ul>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Back to the index</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-start"><span>Back to the start</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

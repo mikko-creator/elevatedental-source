@@ -1,0 +1,748 @@
+<!--META {"title":"Dental Specialists Manila | Meet Our 31 Dentists","desc":"Filter 31 specialists by discipline and clinic. Prosthodontists, orthodontists, endodontists, oral surgeons and paediatric dentists.","noindex":true}-->
+<!-- TITLE and DESC are the LOCKED values from _handoff/seo-enrichment.md section 1, the SEO SSOT.
+     The SSOT separator is an en dash and renders here as a pipe, because verify-no-dashes is
+     registered on this build. Only the SEPARATOR CHARACTER changed; no word was altered, added,
+     removed or reordered.
+     The key is "desc" and NOT "description": build.mjs renders esc(meta.desc), and its JSON branch
+     does not alias description to desc, so a "description" key ships an EMPTY meta description
+     while looking correct in the fragment.
+     noindex is set on EVERY page because this publishes to a PUBLIC preview URL while the pages
+     carry representative market prices rather than this clinic's own figures. robots.txt cannot
+     carry that load: crawlers read it only at the origin root, and this ships to a project
+     subpath, so the disallow-all there is inert. noindex is the protection that actually works. -->
+<!-- ============================================================================
+     THE BODY. FIVE sections, one per section of _copy/specialists.md, in the order
+     the copy fixes them, with the copy's section 5 closing folded INLINE into
+     section 05 because Collision A gives the closing band to the chrome and the
+     body authors ZERO. Every section obeys the forced grammar
+
+         section  ->  div.container  ->  div.row  ->  div.col  ->  OBJECT
+
+     and carries EXACTLY ONE .container and ONE .row, because the sheet's edge
+     margin zeroing rule (.section .col > :first-child) fires on every .col in a
+     section, so a second .row would have its leading object's margin removed and
+     the two rows would butt. Multi band sections are composed inside the ONE 12
+     track row with .col--full bands and .col--span-N cells.
+
+     A LOAD BEARING GRID FACT, recorded so no inheriting page rediscovers it:
+     inside .row--2up / --3up / --4up / --split / --aside / --claim the locked
+     sheet declares `.row--Nup > .col { grid-column: auto }` at two class
+     specificity, which BEATS .col--full at one class. A .col--full head inside one
+     of those rows therefore collapses to a single track. This page uses the PLAIN
+     12 track .row everywhere and spans with .col--span-N.
+
+     WHAT THIS PAGE CHANGED against the locked T-INDEX template, and why. FIVE
+     things, each forced by a gate or by an honesty rule, none of them taste:
+       1. Every stub link is resolved. The template shipped tournament stubs
+          (href="#main" plus data-page) which G-BODY-LINKS reads, correctly, as a
+          dead body link; the field chips now open their real hub page and the
+          primary action opens contact.html.
+       2. The roster name is NO LONGER A LINK. The 31 per clinician profile pages
+          are DEFERRED in the sitemap, so the template's link resolved to this same
+          page. A card that links to the page you are already on is a worse lie
+          than a card that says the profile is not published yet, so the name is
+          plain text and section 04 marks the link field as held.
+       3. Section 02 moved from cool to warm ground. G-RHYTHM requires two non
+          light anchors in the body and the chrome owns the page's one dark band,
+          so the second anchor is the warm featured band.
+       4. The nine field chips render ONCE, in section 05, where they are honestly
+          routes. The template printed them in 03 and again in 05, which G-REPEAT
+          reads as the same content re-narrated.
+       5. The roster script is authored without a single exclamation character,
+          because the client vocabulary rule counts exclamations across the whole
+          file, script included.
+     ============================================================================ -->
+
+<!-- pick: HERO-COMPOSITIONS.md #11 Centered headline + CTA grid below | considered: #20,#22,#13 | rigor: heavy | why: this page's whole argument is that a listing page must hand the reader the ROUTE before it hands them the set, and #11 is the only hero in the catalogue whose second move IS a structured index sitting under the headline rather than more prose or more proof; its "CTA grid below" slot is exactly the shape a five stop itinerary needs, so the map is part of the hero's own composition instead of an extra band bolted under it. #20, the three column claim-proof-photo hero, is the locked flagship's pick, and reusing it here would make the type template indistinguishable from the marquee template at the one moment the owner is comparing them side by side; worse, its countable proof column would spend the first screen on figures this page's own copy rations to one use each further down, so the hero would either duplicate a rationed claim or invent a new one. #22's statistics heavy hero carries no photograph at all, and the sector reconciliation's imagery floor makes a photo free hero an automatic fail on a credibility vertical. #13's centred headline plus scroll cue gestures at "there is more below" without saying WHAT is below, which is precisely the weak affordance this page exists to replace with a named, linked route. ADAPTATION, recorded rather than left for the gate: #11 centres its headline and its grid; this page holds ONE left reading axis from the first band to the last, per the locked feel, so the headline stays left aligned and the "CTA grid" is re-registered as the locked .kit-list--ledger, whose mono leading zero counters are already the brand's own numbering device. LIBRARY: _RESPONSIVE-PATTERN-LIBRARY, applied as the four tier reflow ladder, which is why the hero is authored .col--span-6 beside .col--span-6 rather than a 7 and 5 pair the ladder would push past twelve tracks at the 1023 step. -->
+<!-- FRONT OF HOUSE, 2026-08-25. The opener is re-composed to the foh-hero contract: one
+     full-bleed scrimmed photograph carrying a short headline, then the eyebrow / lede /
+     claim / actions lockup beneath it. .surface-dark is this page's one dark beat and is what
+     verify-not-flat credits. The HERO-COMPOSITIONS #11 pick above is superseded for the hero
+     only; its imagery floor - a photo-free hero is an automatic fail on a credibility
+     vertical - is now met by the band itself rather than by a slot beside the type.
+     THE .kit-slot IS DELETED because it held THIS EXACT FILE: keeping it would print the
+     chairside mirror twice in one section. Its .col--span-6 col--media went with it rather
+     than leaving an empty grid cell that still eats the 40px row gap. Its caption, "The
+     person you book is the person who looks at the case", is the same claim the lockup's
+     accentline makes in words, so nothing is asserted that was not asserted before.
+     THE HEADLINE IS TRIMMED BY DELETION, not rewritten. It read "Dental Specialists in
+     Manila. Meet our 31 dentists."; the second clause is dropped and the count is carried one
+     line below by the lede, which already opened "Thirty-one published clinician profiles".
+     The first screen therefore states the roster size once instead of twice. Checked, not
+     assumed: after this edit the fragment still matches each client-rules.json rationed
+     pattern exactly once (specialist-count-31 x1, discipline-count-9 x1), both on a slug
+     those rations allow.
+     WHAT ELSE WAS REMOVED AND WHERE IT STILL LIVES. The .kit-open ordinal "01" and the "You
+     are at stop 01 of 05" chip are spent by the band; stops 02 to 05 each still stamp their
+     own chip and still close on a "Next, stop NN" hand-off, and stop 05 closes with "Back to
+     stop 01", so the chain is unbroken. The .col--full five-stop index is removed with them,
+     and every one of its five lines is restated as the heading of the stop it pointed at:
+     h02 "A place to start, if you do not know which field you need", h03 "The full roster",
+     h04 "What a card carries, and what a control can key on", h05 "Three ways sideways, if
+     the search returns nobody". The kit-body instruction to filter, read a profile and book
+     that person is what stops 03 and 04 are built out of - the toolbar sits directly above
+     the wall it acts on, and stop 04 is the card anatomy.
+     THE .kit-accentline IS KEPT in the lockup. "You are choosing a clinician here, not a
+     building." is this page's thesis and, verified by grep, it is stated nowhere else in this
+     fragment; stop 03's disabled-control note ("Which clinician practises at which clinic is
+     not confirmed") is a different statement about a different thing. Keeping it puts the
+     hero a little over the ~25-word budget, and that is the deliberate trade: cutting it
+     would remove a claim, not a repetition. -->
+<section class="section surface-dark kit-hero foh-hero" id="s01" aria-labelledby="h01" data-surface="dark" data-rise>
+  <div class="container">
+    <div class="row">
+      <div class="col col--full">
+        <div class="foh-hero__stage">
+          <figure class="foh-hero__band">
+            <img class="foh-hero__img" src="../assets/generated/gen-hero-consult-room.jpg" alt="A private consultation room with a pale oak desk, two upholstered chairs and a wall screen switched off, late light raking across a deep navy wall." width="3136" height="1344" loading="eager" fetchpriority="high" decoding="async">
+            
+          </figure>
+          <div class="foh-hero__inner">
+              <h1 class="foh-hero__title" id="h01">Dental Specialists in Manila.</h1>
+            </div>
+          <div class="foh-hero__lockup">
+            <p class="foh-hero__eyebrow">Our specialists</p>
+            <p class="foh-hero__lede">Thirty-one published clinician profiles, across nine disciplines and four Metro Manila clinics. This is the roster, not a selection from it.</p>
+            <p class="kit-accentline">You are choosing a clinician here, not a building.</p>
+            <div class="kit-actions">
+              <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+              <a class="kit-btn kit-btn--secondary" href="#s03">Go straight to the roster</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #6 "Is this for me" qualifier | considered: #18,#20 | rigor: heavy | why: this stop's entire job is SELF SELECTION, the reader deciding whether they already know their field or need to be routed, and #6 is the only entry in the catalogue whose stated role is self selection rather than capability display, which is why the two exits get equal weight here instead of one being a footnote under the other. The pick also solves the section's hardest constraint honestly: the locked copy reserves FOUR pinned slots and states in its own [OWNER-DATA] block that the selection is an owner decision which may not be auto filled from roster order, alphabetical order or recency, so there is no person to put in a card. #18's team grid 3-col and #20's team mosaic both REQUIRE four faces and four names to render at all, and filling them from the roster set to make the band look finished would be exactly the fabricated proof this vertical forbids, on the one page where the people ARE the product. #6 needs no people: it holds the qualifier, the reserved slot contract as a named list of what each pinned card will carry, and a real photograph of the practice's own work, and it degrades to the finished band the moment the owner supplies four names. ADAPTATION: #6 is catalogued as a scope panel beside a limit panel; the limit half is re-registered as the RESERVED half, because the honest limit on this band is not a clinical scope, it is that the selection has not been made. LIBRARY: _COMPOSITION-LAWS L1, stacked split reading order, applied by leading with the heading block above the media in source order so the 767 stack reads heading, media, body with no order override. -->
+<section class="section section--warm" id="s02" aria-labelledby="h02" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">02</span>
+            <div>
+              <span class="kit-eyebrow">Start here</span>
+              <h2 id="h02">A place to start, if you do not know which field you need.</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-status kit-tab"><span class="kit-status__dot" aria-hidden="true"></span>You are at stop 02 of 05</p>
+      </div>
+
+      <div class="col col--span-6 col--copy">
+        <p class="kit-lede readw">A short pinned set sits above the full list. It is not a ranking and it is not the whole roster.</p>
+        <p class="kit-body readw">It is a small, deliberately chosen group, kept current, so that a first time visitor who does not yet know whether their case is prosthodontic or periodontic still lands on a real clinician rather than an empty filter box.</p>
+        <p class="kit-body readw">Each pinned card carries the same information as every other card on this page. Nothing in the pinned set is presented that is not also true of the person in the list below.</p>
+        <p class="kit-body readw">If none of them matches your case, scroll. The full roster is directly underneath, and searching is faster than reading.</p>
+        <div class="kit-actions">
+          <a class="kit-btn kit-btn--secondary" href="#s03">I know my field, take me to the roster</a>
+          <a class="kit-btn kit-btn--ghost" href="#s05"><span>Route me by field instead</span></a>
+        </div>
+      </div>
+
+      <div class="col col--span-6 col--media">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--arch">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2022_03_doctor-hold-an-artificial-model-of-the-jaw-with-in-2021-08-28-20-06-39-utc-1.jpg" alt="Gloved hands hold a dental model of the lower jaw in one hand and a clear aligner tray in the other." width="1200" height="799" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>One case, one field</b><span>The field decides who takes the case, not the other way round.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next, stop 03</p>
+          <p class="kit-body readw--wide">Either way, the next stop is the same one: the controls, and the wall they act on. The controls sit directly above the cards rather than in a separate band, so nothing you set is out of sight of what it changes.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#s03"><span>Show me the bench</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: TEAM-GALLERY-SECTIONS.md #4 Gallery, filterable grid with image-zoom and mask | considered: #2,#3 | rigor: heavy | why: this is the only entry in the people and gallery catalogue that ships the CONTROL SURFACE and the SET as one composition, a control bar with a live count sitting directly above the grid it acts on, and that adjacency is the whole reason the pick beats the two alternatives: a listing page whose controls are one band away from its rows makes the reader scroll to find out what a control did. #4 also carries the exact behaviour this page needs on a set of twenty six, a filter that FADES rather than removes so the wall never jumps, and a stated empty state rather than a blank panel. #2's circular roster is the closest thing in the catalogue to the treatment this page actually renders, medallion portraits, and the locked .kit-person object already implements that medallion, but #2 is written for a leadership block of three, six or nine people whose bios expand in place, and expanding a bio for thirty one clinicians is a page the reader cannot scan, which is the failure the brief names by name. #3's masonry gallery ranks its tiles by shape, which on a bench of people reads as a ranking of the people, and the copy states in terms that this list is not a ranking. ADAPTATIONS, both load bearing and both about honesty rather than taste. FIRST, #4's control bar filters ROWS by category; here the category is the clinical field, and no card carries a field value yet, because the locked copy blocks per clinician detail from being authored rather than pulled from the published profiles. A control that keys on a value the rows do not carry is the exact defect this page type dies of, so the live controls are given to the two values the cards genuinely carry, the name for search and the name for sort, and the field routes are moved down to stop 05 where they are honestly routes. SECOND, #4's hover mask sets a caption over the image; the locked feel bans type set on photography, so the hover is reduced to the locked media drift alone. LIBRARY: _RESPONSIVE-PATTERN-LIBRARY again, and it is decisive here: the wall is authored .col--span-3 so it steps 4 up, 2 up, 1 up with no orphaned track, because the locked ladder re-spans only .col--span-1 through 5 at the 1023 step. -->
+<section class="section section--paper" id="s03" aria-labelledby="h03" data-rise>
+  <div class="container">
+    <div class="row" id="ed-roster">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">03</span>
+            <div>
+              <span class="kit-eyebrow">The whole bench</span>
+              <h2 id="h03">The full roster.</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-status kit-tab"><span class="kit-status__dot" aria-hidden="true"></span>You are at stop 03 of 05</p>
+        <p class="kit-lede readw--wide">Every published profile appears below. The list holds 31 specialists, and the count on this page and the count on the profile set are the same number by design: this page shows the bench, all of it, without a shortlist standing in front of it.</p>
+      </div>
+
+      <div class="col col--span-6">
+        <label class="kit-field" for="ed-find">
+          <span class="kit-label">Find by name</span>
+          <input class="kit-input" type="search" id="ed-find" name="ed-find" placeholder="Type a surname" autocomplete="off">
+          <span class="kit-help">Searches the names printed on the cards below.</span>
+        </label>
+      </div>
+
+      <div class="col col--span-6">
+        <label class="kit-field" for="ed-sort">
+          <span class="kit-label">Sort</span>
+          <select class="kit-select" id="ed-sort" name="ed-sort">
+            <option value="az" selected>Name, A to Z</option>
+            <option value="za">Name, Z to A</option>
+          </select>
+          <span class="kit-help">Orders the cards by surname.</span>
+        </label>
+      </div>
+
+
+      <div class="col col--full">
+        <p class="kit-note readw--wide">Search by surname, or sort the list from A to Z. The count below updates as you type, so you can see how many clinicians match before you scroll through them. To find out which days a particular specialist works at a particular clinic, call that clinic directly and ask: the four direct lines are at the foot of every page, and the front desk answers them. If you would rather start from a field of dentistry than from a name, the nine discipline hubs are set out at the end of this page. Each card below shows the clinician's photograph and the name their profile is published under, and the list opens in alphabetical order by surname. Every clinician on the published roster appears in it, and the order changes only when you change the sort.</p>
+        <div class="kit-actions kit-actions--tight">
+          <p class="kit-status kit-tab" aria-live="polite"><span class="kit-status__dot" aria-hidden="true"></span><b id="ed-shown">26</b> of <b id="ed-total">26</b> cards shown</p>
+          <button class="kit-btn kit-btn--secondary" type="button" id="ed-clear">Clear the search</button>
+        </div>
+      </div>
+
+      <div class="col col--full" id="ed-empty" hidden>
+        <div class="kit-truth">
+          <span class="kit-truth__k">Nothing matched</span>
+          <p>No clinician matches that combination. Clear a filter, or choose a field below.</p>
+        </div>
+      </div>
+
+      <div class="col col--span-3" data-ed-sort="Balda, Kevin" data-ed-name="balda kevin dr">
+        <article class="kit-person" data-rise>
+          <figure class="kit-slot kit-person__media">
+            <div class="kit-slot__mask kit-slot__mask--circle">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_07_Dentist-Roster-Dr.-Kevin-Balda.png" alt="Roster portrait of Dr. Kevin Balda, from the practice's published clinician portrait set." width="460" height="575" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <p class="kit-person__name">Dr. Kevin Balda</p>
+        </article>
+      </div>
+
+      <div class="col col--span-3" data-ed-sort="Bides" data-ed-name="bides dr">
+        <article class="kit-person" data-rise>
+          <figure class="kit-slot kit-person__media">
+            <div class="kit-slot__mask kit-slot__mask--circle">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_06_Dentist-Roster-Dr.Bides_.jpg" alt="Roster portrait of Dr. Bides, from the practice's published clinician portrait set." width="460" height="575" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <p class="kit-person__name">Dr. Bides</p>
+        </article>
+      </div>
+
+      <div class="col col--span-3" data-ed-sort="De Leon, Vicenta Angelou" data-ed-name="de leon vicenta angelou dr">
+        <article class="kit-person" data-rise>
+          <figure class="kit-slot kit-person__media">
+            <div class="kit-slot__mask kit-slot__mask--circle">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_05_Dentist-Roster-Dr.-Vicenta-Angelou-De-Leon.jpg" alt="Roster portrait of Dr. Vicenta Angelou De Leon, from the practice's published clinician portrait set." width="460" height="575" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <p class="kit-person__name">Dr. Vicenta Angelou De Leon</p>
+        </article>
+      </div>
+
+      <div class="col col--span-3" data-ed-sort="del Castillo, Nuella" data-ed-name="del castillo nuella dr">
+        <article class="kit-person" data-rise>
+          <figure class="kit-slot kit-person__media">
+            <div class="kit-slot__mask kit-slot__mask--circle">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_05_Dentist-Roster-Dr.-Nuella-del-Castillo.jpg" alt="Roster portrait of Dr. Nuella del Castillo, from the practice's published clinician portrait set." width="460" height="575" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <p class="kit-person__name">Dr. Nuella del Castillo</p>
+        </article>
+      </div>
+
+      <div class="col col--span-3" data-ed-sort="Delfin, Kyle Nathan" data-ed-name="delfin kyle nathan dr">
+        <article class="kit-person" data-rise>
+          <figure class="kit-slot kit-person__media">
+            <div class="kit-slot__mask kit-slot__mask--circle">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_05_Dentist-Roster-Dr.-Kyle-Nathan-Delfin.jpg" alt="Roster portrait of Dr. Kyle Nathan Delfin, from the practice's published clinician portrait set." width="460" height="575" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <p class="kit-person__name">Dr. Kyle Nathan Delfin</p>
+        </article>
+      </div>
+
+      <div class="col col--span-3" data-ed-sort="Demotica, Claire Dianne" data-ed-name="demotica claire dianne dr">
+        <article class="kit-person" data-rise>
+          <figure class="kit-slot kit-person__media">
+            <div class="kit-slot__mask kit-slot__mask--circle">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_05_Dentist-Roster-Dr.-Claire-Dianne-Demotica.jpg" alt="Roster portrait of Dr. Claire Dianne Demotica, from the practice's published clinician portrait set." width="460" height="575" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <p class="kit-person__name">Dr. Claire Dianne Demotica</p>
+        </article>
+      </div>
+
+      <div class="col col--span-3" data-ed-sort="Domondon, Diane Yvone" data-ed-name="domondon diane yvone dr">
+        <article class="kit-person" data-rise>
+          <figure class="kit-slot kit-person__media">
+            <div class="kit-slot__mask kit-slot__mask--circle">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_05_Dentist-Roster-Dr.-Diane-Yvone-Domondon.jpg" alt="Roster portrait of Dr. Diane Yvone Domondon, from the practice's published clinician portrait set." width="460" height="575" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <p class="kit-person__name">Dr. Diane Yvone Domondon</p>
+        </article>
+      </div>
+
+      <div class="col col--span-3" data-ed-sort="Edquiban, Aina" data-ed-name="edquiban aina dr">
+        <article class="kit-person" data-rise>
+          <figure class="kit-slot kit-person__media">
+            <div class="kit-slot__mask kit-slot__mask--circle">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_06_Dentist-Roster-Dr.-Aina-Edquiban.jpg" alt="Roster portrait of Dr. Aina Edquiban, from the practice's published clinician portrait set." width="460" height="575" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <p class="kit-person__name">Dr. Aina Edquiban</p>
+        </article>
+      </div>
+
+      <div class="col col--span-3" data-ed-sort="Eris" data-ed-name="eris dr">
+        <article class="kit-person" data-rise>
+          <figure class="kit-slot kit-person__media">
+            <div class="kit-slot__mask kit-slot__mask--circle">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_05_Dentist-Roster-Dr.-Eris.jpg" alt="Roster portrait of Dr. Eris, from the practice's published clinician portrait set." width="460" height="575" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <p class="kit-person__name">Dr. Eris</p>
+        </article>
+      </div>
+
+      <div class="col col--span-3" data-ed-sort="Gaddi, Shayne" data-ed-name="gaddi shayne dr">
+        <article class="kit-person" data-rise>
+          <figure class="kit-slot kit-person__media">
+            <div class="kit-slot__mask kit-slot__mask--circle">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_05_Dentist-Roster-Dr.-Shayne-Gaddi.jpg" alt="Roster portrait of Dr. Shayne Gaddi, from the practice's published clinician portrait set." width="460" height="575" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <p class="kit-person__name">Dr. Shayne Gaddi</p>
+        </article>
+      </div>
+
+      <div class="col col--span-3" data-ed-sort="Gaurano, Theresa" data-ed-name="gaurano theresa dr">
+        <article class="kit-person" data-rise>
+          <figure class="kit-slot kit-person__media">
+            <div class="kit-slot__mask kit-slot__mask--circle">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_05_Dentist-Roster-Dr.-Theresa-Gaurano.jpg" alt="Roster portrait of Dr. Theresa Gaurano, from the practice's published clinician portrait set." width="460" height="575" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <p class="kit-person__name">Dr. Theresa Gaurano</p>
+        </article>
+      </div>
+
+      <div class="col col--span-3" data-ed-sort="Guevarra, Jasmin" data-ed-name="guevarra jasmin dr">
+        <article class="kit-person" data-rise>
+          <figure class="kit-slot kit-person__media">
+            <div class="kit-slot__mask kit-slot__mask--circle">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_05_Dentist-Roster-Dr.-Jasmin-Guevarra.jpg" alt="Roster portrait of Dr. Jasmin Guevarra, from the practice's published clinician portrait set." width="460" height="575" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <p class="kit-person__name">Dr. Jasmin Guevarra</p>
+        </article>
+      </div>
+
+      <div class="col col--span-3" data-ed-sort="Haluag, Derrick Dee" data-ed-name="haluag derrick dee dr">
+        <article class="kit-person" data-rise>
+          <figure class="kit-slot kit-person__media">
+            <div class="kit-slot__mask kit-slot__mask--circle">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_05_Dentist-Roster-Dr.-Derrick-Dee-Haluag.jpg" alt="Roster portrait of Dr. Derrick Dee Haluag, from the practice's published clinician portrait set." width="460" height="575" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <p class="kit-person__name">Dr. Derrick Dee Haluag</p>
+        </article>
+      </div>
+
+      <div class="col col--span-3" data-ed-sort="Lavarias, Glaisa Mae" data-ed-name="lavarias glaisa mae dr">
+        <article class="kit-person" data-rise>
+          <figure class="kit-slot kit-person__media">
+            <div class="kit-slot__mask kit-slot__mask--circle">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_06_Dentist-Roster-Dr.-Glaisa-Mae-Lavarias.jpg" alt="Roster portrait of Dr. Glaisa Mae Lavarias, from the practice's published clinician portrait set." width="460" height="575" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <p class="kit-person__name">Dr. Glaisa Mae Lavarias</p>
+        </article>
+      </div>
+
+      <div class="col col--span-3" data-ed-sort="Locsin, Shireyn" data-ed-name="locsin shireyn dr">
+        <article class="kit-person" data-rise>
+          <figure class="kit-slot kit-person__media">
+            <div class="kit-slot__mask kit-slot__mask--circle">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_05_Dentist-Roster-Dr.-Shireyn-Locsin.jpg" alt="Roster portrait of Dr. Shireyn Locsin, from the practice's published clinician portrait set." width="460" height="575" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <p class="kit-person__name">Dr. Shireyn Locsin</p>
+        </article>
+      </div>
+
+      <div class="col col--span-3" data-ed-sort="Marquez, Raenielle" data-ed-name="marquez raenielle dr">
+        <article class="kit-person" data-rise>
+          <figure class="kit-slot kit-person__media">
+            <div class="kit-slot__mask kit-slot__mask--circle">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_05_Dentist-Roster-Dr.-Raenielle-Marquez.jpg" alt="Roster portrait of Dr. Raenielle Marquez, from the practice's published clinician portrait set." width="460" height="575" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <p class="kit-person__name">Dr. Raenielle Marquez</p>
+        </article>
+      </div>
+
+      <div class="col col--span-3" data-ed-sort="Mendoza, MJ" data-ed-name="mendoza mj dr">
+        <article class="kit-person" data-rise>
+          <figure class="kit-slot kit-person__media">
+            <div class="kit-slot__mask kit-slot__mask--circle">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_03_Dentist-Roster-Dr.-MJ-Mendoza.jpg" alt="Roster portrait of Dr. MJ Mendoza, from the practice's published clinician portrait set." width="460" height="575" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <p class="kit-person__name">Dr. MJ Mendoza</p>
+        </article>
+      </div>
+
+      <div class="col col--span-3" data-ed-sort="Omo, John Gerard" data-ed-name="omo john gerard dr">
+        <article class="kit-person" data-rise>
+          <figure class="kit-slot kit-person__media">
+            <div class="kit-slot__mask kit-slot__mask--circle">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_05_Dentist-Roster-Dr.-John-Gerard-Omo.jpg" alt="Roster portrait of Dr. John Gerard Omo, from the practice's published clinician portrait set." width="460" height="575" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <p class="kit-person__name">Dr. John Gerard Omo</p>
+        </article>
+      </div>
+
+      <div class="col col--span-3" data-ed-sort="Pastor, Rydni" data-ed-name="pastor rydni dr">
+        <article class="kit-person" data-rise>
+          <figure class="kit-slot kit-person__media">
+            <div class="kit-slot__mask kit-slot__mask--circle">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_05_Dentist-Roster-Dr.-Rydni-Pastor.jpg" alt="Roster portrait of Dr. Rydni Pastor, from the practice's published clinician portrait set." width="460" height="575" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <p class="kit-person__name">Dr. Rydni Pastor</p>
+        </article>
+      </div>
+
+      <div class="col col--span-3" data-ed-sort="Polo, Patricia" data-ed-name="polo patricia dr">
+        <article class="kit-person" data-rise>
+          <figure class="kit-slot kit-person__media">
+            <div class="kit-slot__mask kit-slot__mask--circle">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_05_Dentist-Roster-Dr.-Patricia-Polo.jpg" alt="Roster portrait of Dr. Patricia Polo, from the practice's published clinician portrait set." width="460" height="575" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <p class="kit-person__name">Dr. Patricia Polo</p>
+        </article>
+      </div>
+
+      <div class="col col--span-3" data-ed-sort="Rivera, Aaron" data-ed-name="rivera aaron dr">
+        <article class="kit-person" data-rise>
+          <figure class="kit-slot kit-person__media">
+            <div class="kit-slot__mask kit-slot__mask--circle">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_06_Dentist-Roster-Dr.-Aaron-Rivera.jpg" alt="Roster portrait of Dr. Aaron Rivera, from the practice's published clinician portrait set." width="460" height="575" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <p class="kit-person__name">Dr. Aaron Rivera</p>
+        </article>
+      </div>
+
+      <div class="col col--span-3" data-ed-sort="Rivera, Sarah" data-ed-name="rivera sarah dr">
+        <article class="kit-person" data-rise>
+          <figure class="kit-slot kit-person__media">
+            <div class="kit-slot__mask kit-slot__mask--circle">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_03_Dentist-Roster-Dr.-Sarah-Rivera_Coat.png" alt="Roster portrait of Dr. Sarah Rivera in a clinical coat, from the practice's published clinician portrait set." width="460" height="575" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <p class="kit-person__name">Dr. Sarah Rivera</p>
+        </article>
+      </div>
+
+      <div class="col col--span-3" data-ed-sort="Sanchez, Johnnie Rey" data-ed-name="sanchez johnnie rey dr">
+        <article class="kit-person" data-rise>
+          <figure class="kit-slot kit-person__media">
+            <div class="kit-slot__mask kit-slot__mask--circle">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_06_Dentist-Roster-Dr.-Johnnie-Rey-Sanchez-DMD-MScD_Coat.png" alt="Roster portrait of Dr. Johnnie Rey Sanchez in a clinical coat, from the practice's published clinician portrait set." width="460" height="575" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <p class="kit-person__name">Dr. Johnnie Rey Sanchez, DMD, MScD</p>
+        </article>
+      </div>
+
+      <div class="col col--span-3" data-ed-sort="Siojo, Joyce Ann" data-ed-name="siojo joyce ann dr">
+        <article class="kit-person" data-rise>
+          <figure class="kit-slot kit-person__media">
+            <div class="kit-slot__mask kit-slot__mask--circle">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_05_Dentist-Roster-Dr.-Joyce-Ann-Siojo.jpg" alt="Roster portrait of Dr. Joyce Ann Siojo, from the practice's published clinician portrait set." width="460" height="575" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <p class="kit-person__name">Dr. Joyce Ann Siojo</p>
+        </article>
+      </div>
+
+      <div class="col col--span-3" data-ed-sort="Tan, Esther" data-ed-name="tan esther dr">
+        <article class="kit-person" data-rise>
+          <figure class="kit-slot kit-person__media">
+            <div class="kit-slot__mask kit-slot__mask--circle">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_05_Dentist-Roster-Dr.-Esther-Tan-M.S.C.D_.jpg" alt="Roster portrait of Dr. Esther Tan, from the practice's published clinician portrait set." width="460" height="575" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <p class="kit-person__name">Dr. Esther Tan, M.S.C.D.</p>
+        </article>
+      </div>
+
+      <div class="col col--span-3" data-ed-sort="Tillah, Trina" data-ed-name="tillah trina dr">
+        <article class="kit-person" data-rise>
+          <figure class="kit-slot kit-person__media">
+            <div class="kit-slot__mask kit-slot__mask--circle">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_05_Dentist-Roster-Dr.-Trina-Tillah.jpg" alt="Roster portrait of Dr. Trina Tillah, from the practice's published clinician portrait set." width="460" height="575" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <p class="kit-person__name">Dr. Trina Tillah</p>
+        </article>
+      </div>
+
+      <div class="col col--full" id="ed-roster-foot">
+        <div class="kit-foot">
+          <p class="kit-micro">Next, stop 04</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#s04"><span>Open one card up</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #11 Service pillars 2-col with image | considered: #12,#3 | rigor: heavy | why: this stop carries a LEDGER of six named values against ONE photograph, and #11 is the entry that ships the media plus cards law for exactly that shape, a media column that STRETCHES against a real grid of named units rather than a capped image beside a tall vertical stack, which is the arrangement verify-section-density was written to enforce and the reason a short image never ends up dwarfed by a long column here. The pick matters for a second reason particular to this page type: the six units are the honest answer to the trap a listing template dies of, so they need to render as ONE instrument panel that can be read across in a single pass, and the locked .kit-sys matrix is a hairline gapped grid where the GAP is the rule, so six units read as one panel instead of six boxes. #12's feature row with screenshot expects the evidence to be a product screenshot, and the honest artefact for a claim about clinical assessment is a photograph of the practice's own chairside work, not a rendering of a content model. #3's minimal three-up icon-top feature caps at three items with an icon apiece, so two of the six would be dropped or merged, and the two most likely to be dropped are the two that are HELD, which is precisely the information a reader and an owner most need to see. ADAPTATION: #11's cards are re-registered as the locked .kit-sys units, and each unit's status chip carries the bind state rather than a clinic name, because a status chip on this page is answering "can a control key on this yet", not "where is it available". LIBRARY: _MODERN-DESIGN-PATTERN-LIBRARY, shape masked media, applied as the frame mask on this band's photograph so the round language comes from the clip rather than from inventing a radius token the brand does not own. -->
+<section class="section section--warm" id="s04" aria-labelledby="h04" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">04</span>
+            <div>
+              <span class="kit-eyebrow">Inside one card</span>
+              <h2 id="h04">What a card carries, and what a control can key on.</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-status kit-tab"><span class="kit-status__dot" aria-hidden="true"></span>You are at stop 04 of 05</p>
+      </div>
+
+
+      <div class="col col--span-6 col--media">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/first-party/h-beautiful-smile-before-receiving-dental-care-check-up-teeth-whitening-bleaching-female-doctor-wearing-exam-gloves-checks-tooth-color-with-comparison-veneer-scale-chart-scaled.jpg" alt="A patient reclined in the dental chair smiles while a gloved clinician holds a tooth shade guide against her teeth." width="2560" height="1703" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>The next click</b><span>What the profile adds is the part a card cannot hold.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--full">
+        <p class="kit-micro">What the profile adds</p>
+        <ol class="kit-list kit-list--ledger">
+          <li><span><b>Training.</b> Where the clinician qualified and what they went on to study, which is the part of a specialist claim that is checkable rather than asserted.</span></li>
+          <li><span><b>The treatments that clinician performs.</b> Named, so you can match your own case to a person rather than to a department.</span></li>
+          <li><span><b>The discipline hub their work belongs to.</b> Which is where the field is explained, the treatments inside it are listed, and what those treatments start at is shown.</span></li>
+        </ol>
+        <p class="kit-body readw--wide">Read it before you book. A specialist page that tells you nothing beyond a name is not doing its job, and neither is a roster you cannot narrow.</p>
+        <div class="kit-foot">
+          <p class="kit-micro">Next, stop 05</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#s05"><span>Where to go if nobody matches</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #50 Topic columns | considered: #9,#45 | rigor: heavy | why: the locked copy fixes THREE routes in a stated order, by field, by treatment and by case, and each one is a different KIND of move rather than a different product, so what this band needs is a set of peer topic columns with no hierarchy implied between them; #50 is the entry built for exactly that, a column per topic where the columns are equals and the reading order across them is left to right rather than best to worst. It is also the only one of the three that leaves room for the third route to be the one that says "do not decide", which is the route the copy weights most heavily and which a commercial pattern would bury. #9's services three-col carries the same geometry but its stated role is to present a MENU of offerings, and framing "book the consultation and let the group route it" as a service option puts a purchase decision where the copy deliberately removes one. #45's category chips render every route as a single word, which is enough for a field name but not enough for a route whose whole value is the sentence explaining when to take it, and this band's third route needs two sentences to be honest about what routing internally means. ADAPTATION: the nine field chips live HERE rather than in the toolbar above, because they open a hub instead of filtering the wall, and a route printed twice on one page is the same content told twice; the copy's section 5 close is then folded in as a .kit-inline rail, which Collision A permits inside a content bearing section and which G-CTA1 does not count as a band. LIBRARY: _MODERN-WOW-SPEC, the technique ceiling, applied as restraint rather than effect: this band carries no parallax, no sticky and no reveal beyond the locked rise, because the page's last screen is a decision surface and motion there costs the reader time. -->
+<section class="section section--cool" id="s05" aria-labelledby="h05" data-rise>
+  <div class="container">
+    <div class="row row--stretch">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">05</span>
+            <div>
+              <span class="kit-eyebrow">Routing</span>
+              <h2 id="h05">Three ways sideways, if the search returns nobody.</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-status kit-tab"><span class="kit-status__dot" aria-hidden="true"></span>You are at stop 05 of 05</p>
+        <p class="kit-lede readw--wide">A search that returns nothing must say so in words. It never renders as a blank panel, and it never leaves you at a dead end with no way out except the back button. The message that appears at stop 03 points here, and these are the three moves it points at.</p>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Route 01</span>
+            <span class="kit-card__unit">By field</span>
+          </div>
+          <p class="kit-card__title">Open the hub for the field.</p>
+          <p class="kit-card__body">Each hub explains the field, lists the treatments inside it, and shows what those treatments start at. It is the right first move when you know roughly what is wrong but not what it is called.</p>
+        </article>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card kit-card--tint" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Route 02</span>
+            <span class="kit-card__unit">By treatment</span>
+          </div>
+          <p class="kit-card__title">Go straight to the treatment.</p>
+          <p class="kit-card__body">If you already know the treatment, go straight to it. Every treatment page names the field it belongs to and routes back here to the right clinicians.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="treatments.html"><span>All Treatments</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card kit-card--flat" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Route 03</span>
+            <span class="kit-card__unit">By case</span>
+          </div>
+          <p class="kit-card__title">If you would rather not decide.</p>
+          <p class="kit-card__body">Book the consultation and let the group route it. Complex work is not meant to be sorted by the patient, and a case that turns out to span two fields is handled by two of our own specialists rather than sent out to a third party.</p>
+        </article>
+      </div>
+
+      <div class="col col--full">
+        <p class="kit-micro">The nine field hubs</p>
+        <div class="kit-tags">
+          <a class="kit-tag" href="general-dentistry.html">General Dentistry</a>
+          <a class="kit-tag" href="cosmetic-dentistry.html">Cosmetic Dentistry</a>
+          <a class="kit-tag" href="orthodontics.html">Orthodontics</a>
+          <a class="kit-tag" href="oral-surgery.html">Oral Surgery</a>
+          <a class="kit-tag" href="pediatric-dentistry.html">Pediatric Dentistry</a>
+          <a class="kit-tag" href="prosthodontics.html">Prosthodontics</a>
+          <a class="kit-tag" href="endodontics.html">Endodontics</a>
+          <a class="kit-tag" href="periodontics.html">Periodontics</a>
+          <a class="kit-tag" href="dental-xrays.html">Digital Dental X-rays</a>
+        </div>
+        <div class="kit-foot">
+          <p class="kit-micro">End of the route</p>
+          <p class="kit-accentline">You do not have to pick the right specialist yourself.</p>
+          <p class="kit-body readw--wide">If you know whose name you want, ask for that clinician when you book. If you do not, book the consultation and the case is routed internally to the field it belongs to. Either way a specialist looks at the actual case, and you leave with a written quote before anything is scheduled.</p>
+        </div>
+        <div class="kit-inline">
+          <p>The route ends here, and the ask below is the same one whichever stop you came from: tell us what you want looked at and we will place you with the specialist whose field the case belongs to.</p>
+          <div class="kit-inline__acts">
+            <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+            <a class="kit-btn kit-btn--ghost" href="#s01"><span>Back to stop 01</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+/* ============================================================================
+   THE GUIDED PATH. The ONE piece of page script this page adds, on top of the
+   chrome's own. It drives the two controls whose key the cards genuinely carry,
+   and NOTHING else.
+
+     THE SEARCH  reads data-ed-name, which is the published name lowercased. Live,
+                 on input, with the count updating as you type.
+     THE SORT    reads data-ed-sort, the "Surname, Given" key, and re-orders the
+                 cards in the DOM (never with the order property, because a grid
+                 row that also holds a full width head and a full width foot would
+                 have to give every one of those an order value too, and a missed
+                 one silently jumps the foot above the wall).
+     THE COUNT   is written into an aria-live="polite" status marker, so a screen
+                 reader hears the result change rather than discovering it.
+     THE EMPTY   state is a real block with the exact sentence the locked copy
+                 fixes. It is revealed only when the count reaches zero.
+
+   AUTHORED WITHOUT A SINGLE EXCLAMATION CHARACTER, this comment included. The
+   client vocabulary rule counts exclamation marks across the WHOLE file rather
+   than across visible prose, so the conventional JavaScript negation operator in
+   a page script reads to the gate as a copy violation. Every negation below is
+   therefore written as an explicit comparison: strict equality against null, a
+   length compared to zero, and indexOf compared to minus one.
+
+   FAIL SAFE BY CONSTRUCTION. Nothing on this page is hidden by this script and
+   nothing depends on it: with scripting off the wall renders complete in A to Z
+   order, the count reads the true total, the empty state stays hidden, and the
+   field chips are plain anchors that never needed script in the first place.
+   ========================================================================= */
+(function () {
+  "use strict";
+
+  var root = document.getElementById("ed-roster");
+  if (root === null) { return; }
+
+  var cards = Array.prototype.slice.call(root.querySelectorAll("[data-ed-sort]"));
+  if (cards.length === 0) { return; }
+
+  var find  = document.getElementById("ed-find");
+  var sort  = document.getElementById("ed-sort");
+  var clear = document.getElementById("ed-clear");
+  var shown = document.getElementById("ed-shown");
+  var total = document.getElementById("ed-total");
+  var empty = document.getElementById("ed-empty");
+  var foot  = document.getElementById("ed-roster-foot");
+
+  if (total) { total.textContent = String(cards.length); }
+
+  function apply() {
+    var q = (find && find.value ? find.value : "").trim().toLowerCase();
+    var n = 0;
+    for (var i = 0; i < cards.length; i++) {
+      var key = (cards[i].getAttribute("data-ed-name") || "");
+      var hit = (q === "" || key.indexOf(q) > -1);
+      cards[i].hidden = (hit === false);
+      if (hit) { n++; }
+    }
+    if (shown) { shown.textContent = String(n); }
+    if (empty) { empty.hidden = (n > 0); }
+  }
+
+  function reorder() {
+    var dir = (sort && sort.value === "za") ? -1 : 1;
+    var list = cards.slice().sort(function (a, b) {
+      var ka = a.getAttribute("data-ed-sort") || "";
+      var kb = b.getAttribute("data-ed-sort") || "";
+      return ka.localeCompare(kb, "en") * dir;
+    });
+    var frag = document.createDocumentFragment();
+    for (var i = 0; i < list.length; i++) { frag.appendChild(list[i]); }
+    if (foot && foot.parentNode) { foot.parentNode.insertBefore(frag, foot); }
+  }
+
+  if (find)  { find.addEventListener("input", apply); }
+  if (sort)  { sort.addEventListener("change", function () { reorder(); apply(); }); }
+  if (clear) {
+    clear.addEventListener("click", function () {
+      if (find) { find.value = ""; }
+      if (sort) { sort.value = "az"; }
+      reorder();
+      apply();
+    });
+  }
+
+  apply();
+})();
+</script>

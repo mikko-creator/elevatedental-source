@@ -1,0 +1,454 @@
+<!--META {"title":"Dental Insights and Care | Costs, Treatments, Advice","desc":"Plain answers on what treatments cost, how to choose between options, and how to look after your teeth between visits.","noindex":true}-->
+<!-- TITLE and DESC are the LOCKED values from _handoff/seo-enrichment.md section 1, the SEO SSOT.
+     The SSOT separator is an en dash and renders here as a pipe, because verify-no-dashes is
+     registered on this build. Only the SEPARATOR CHARACTER changed; no word was altered, added,
+     removed or reordered.
+     The key is "desc" and NOT "description": build.mjs renders esc(meta.desc), and its JSON branch
+     does not alias description to desc, so a "description" key ships an EMPTY meta description
+     while looking correct in the fragment.
+     noindex is set on EVERY page because this publishes to a PUBLIC preview URL while the pages
+     carry representative market prices rather than this clinic's own figures. robots.txt cannot
+     carry that load: crawlers read it only at the origin root, and this ships to a project
+     subpath, so the disallow-all there is inert. noindex is the protection that actually works. -->
+<!-- ============================================================================
+     THE BODY. FIVE sections, one per section of _copy/insights.md, in brief order,
+     with the copy's section 5 closing folded INLINE into section 05 because the
+     chrome owns the single closing band and the body authors ZERO. Forced grammar
+     throughout: section -> div.container -> div.row -> div.col -> OBJECT, exactly
+     ONE .container and ONE .row per section.
+
+     THE STATE OF THE LIBRARY, which is what shapes this page. The existing library
+     runs to 185 posts and whether all of them carry across, or the set is pruned
+     and consolidated, is an open owner decision that is NOT made here. So this
+     index is built around the two things that are settled: the NINE categories the
+     library is organised by, and the THREE pieces the strategy pins at the top.
+     Individual post pages are part of the deferred migration, which is why no
+     article title on this page is a link: a title that navigates to nothing is a
+     worse promise than a title that says the piece is on its way.
+
+     THE BRIEF DEFECT, resolved and recorded rather than silently corrected: the
+     source brief lists filter_fields as "category, tags, category, tags, date".
+     Category and tags are duplicated. Deduplicated here to category, tags, date.
+
+     THE IMAGERY DECISION. The pool holds five blog thumbnails. One of them is a
+     comic stock photograph of a frightened patient being loomed over by two
+     clinicians holding instruments. It is not used, on a page whose register is
+     calm and whose reader is often anxious about exactly that. A second is a
+     shade contrast close up that would read as a before and after in a dental
+     context, and this build does not publish anything that reads as a case
+     outcome. The three that ship all show real treatment in progress.
+     ============================================================================ -->
+
+<!-- pick: HERO-COMPOSITIONS.md #19 Bento-grid hero, mixed content boxes | considered: #10,#22 | rigor: heavy | why: this hero has to carry THREE different kinds of content on one screen, the claim about what the library answers, a photograph of the work the library is about, and the filter contract with the exact words the empty state says, and #19 is the only entry in the catalogue whose premise is boxes of unlike content sharing one opening rather than a claim beside a picture of the claim. A plain split cannot hold the third box without turning it into a caption or pushing it into a second band, and pushing it down is the wrong call: a reader who arrives at a library with a question needs to know how the set is narrowed before they scroll past the pinned three. #10, the centred headline with no hero photo, is the most tempting alternative for an editorial index and it fails the sector imagery floor on a credibility vertical, where a photo free first screen reads as an unfinished page rather than as restraint. #22, the statistics heavy hero, would open on counted proof, and every number this page could count is either rationed away from this slug or is an internal planning figure rather than a patient facing claim. ADAPTATION, recorded rather than left for the gate: #19 is catalogued as a nested bento grid, and this build cannot nest one, because the locked ladder re-spans only .col--span-1 through 5 at the 1023 step and a nested grid would strand its own tracks there. The irregular tiling is therefore delivered by the ONE 12 track row the grammar allows, a 7 and 5 pair above a full width box, which reflows to a clean stack at every tier. LIBRARY: _COMPOSITION-LAWS L1, stacked split reading order, applied so the 767 stack reads heading, media, contract with no order override. -->
+<!-- FRONT OF HOUSE RESTRUCTURE. The hero is re-housed into the foh-hero contract: one
+     full-bleed scrimmed photographic band carrying the headline, a paper lockup under it for the
+     eyebrow, the scope status, the lede, the examination disclaimer and the existing buttons.
+     .surface-dark is the page's one dark beat, which verify-not-flat credits.
+     THE BAND IMAGE COMES FROM THE SHARED POOL, not from this page's own set, and hero-map.json
+     records why: this index's own widest master is 1024x683 and would be a 1.41x upscale in the
+     one place the design puts most weight. The frame chosen is an editorial one on the same
+     subject as the library itself, and it claims nothing. Its alt was written after opening the
+     file, never from the filename.
+     WHAT LEFT THE HERO, and where each fact still stands, checked before cutting: "Most people
+     research a dental treatment for weeks..." restated the lede's own two questions verbatim, and
+     its authorship claim is stated in full at band 06, "Articles are written and reviewed by the
+     specialists who practice in that discipline". "An article can tell you what a treatment
+     involves ... it cannot tell you whether it is right for your case" -> band 05, whose whole
+     heading is "An article narrows the question. An examination answers it."
+     THE .kit-accentline STAYS, even though band 05 restates it too, because it is this page's one
+     examination disclaimer and it belongs where the library is introduced, not only after it.
+     The mid-treatment .kit-slot is a DIFFERENT photograph to the assigned band image, so it is
+     kept below the band with its caption intact rather than deleted as a duplicate. -->
+<section class="section surface-dark kit-hero foh-hero" id="s01" aria-labelledby="h01" data-surface="dark" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="foh-hero__stage">
+          <figure class="foh-hero__band">
+            <img class="foh-hero__img" src="../assets/generated/gen-hero-journal-desk.jpg" alt="A flat lay of a closed notebook, two brass pens and a cup of coffee on a pale desk with eucalyptus sprigs." width="3136" height="1344" loading="eager" fetchpriority="high" decoding="async">
+            
+          </figure>
+          <div class="foh-hero__inner">
+              <h1 class="foh-hero__title" id="h01">Insights and Care</h1>
+            </div>
+          <div class="foh-hero__lockup">
+            <p class="foh-hero__eyebrow">Insights and care</p>
+            <p class="foh-hero__lede">Plain answers on what treatments cost, how to choose between options, and how to look after your teeth between visits.</p>
+            <p class="kit-accentline">Nothing here is a substitute for an examination.</p>
+            <div class="kit-actions">
+              <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+              <a class="kit-btn kit-btn--secondary" href="#s02">Start with three pieces</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: BLOG-SECTIONS.md #2 Featured plus list | considered: #3,#01 | rigor: heavy | why: this is the one page in the set whose catalogue has a section family written for it, and #2 is the entry whose whole structure is a small deliberately chosen group standing above the body of the library, which is exactly what the copy specifies: a pinned set chosen for what the pieces answer rather than for when they were posted. The pick matters more than usual here because the strategic argument for this page is that the questions people search hardest are the ones clinics answer least, so the three pinned pieces are the page's actual thesis and they need the weight a featured band gives them. #3, the editorial index, treats every piece as an equal row, which is the correct shape for an archive and the wrong one for a hub that is trying to answer two specific intents first. #01, the post card grid, has no featured position at all, so the three would be indistinguishable from the rest and the reader who arrives asking what something costs would be handed a grid to sort through. ADAPTATION, and it is forced by the migration state: #2's featured cards each link to their post, and the individual post pages are part of the deferred migration, so each title here is set as plain text with its category, its framing line and, where it is published, its date. Nothing is linked to a page that does not exist yet. LIBRARY: _RESPONSIVE-PATTERN-LIBRARY, the four tier reflow ladder, applied by authoring the three pinned cards .col--span-4 so the row steps 3 up, 2 up, 1 up with no orphaned track. -->
+<section class="section section--paper" id="s02" aria-labelledby="h02" data-rise>
+  <div class="container">
+    <div class="row row--stretch">
+
+      <!-- MOVED HERE FROM THE OPENING SECTION, 2026-08-25, VERBATIM. The FOH pass added the
+           photographic band but left the old hero's remaining two cells inside the same
+           section, where the released hero .container renders them flush to the viewport with
+           no gutter. Both hold content that exists NOWHERE ELSE on this page, so neither was
+           deleted: the .kit-slot carries a DIFFERENT photograph from the band image (one
+           occurrence in this fragment) and the .kit-foot is the only place the index states
+           what the filter toolbar acts on and what it says when nothing matches. Markup is
+           byte-identical to what stood in the hero except for ONE class: the foot cell was
+           .col--full and is .col--span-7 here, so the pair fills one 12-track line and no
+           existing cell in this row changes width or position. -->
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">02</span>
+            <div>
+              <span class="kit-eyebrow">Start here</span>
+              <h2 id="h02">The questions people search hardest are the ones clinics answer least.</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">Ask what a treatment costs in this market and the answers come back from directories and aggregators rather than from anyone who would be doing the work. That is the gap these three exist to close.</p>
+      </div>
+
+      <div class="col col--span-7">
+        <div class="kit-foot">
+          <p class="kit-micro">How this index is filtered, and what it says when nothing matches</p>
+          <p class="kit-body readw--wide">Every card carries three values so the toolbar acts on real content rather than shipping inert: its category, its tags, and its date. The list is sorted by that date, most recent first. The source brief listed category and tags twice each; that duplication is recorded and deduplicated rather than quietly fixed.</p>
+          <p class="kit-quote kit-quote--display readw">No article matches those filters. Clear one filter to widen the list, or see everything. If your question is not answered here, ask it at a consultation, or send it through the contact form and it will reach a specialist in that discipline.</p>
+        </div>
+      </div>
+
+      <div class="col col--span-5 col--media">
+        <figure class="kit-slot kit-hero__media" data-rise style="box-shadow: var(--ds-shadow-lift);">
+          <div class="kit-slot__mask kit-slot__mask--arch">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2020_03_Blog.png" alt="A teenage patient in fixed braces smiles from the dental chair, with the unit's tray and mirror in the foreground." width="1024" height="683" loading="eager" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Mid treatment</b><span>Most of what is written here is about the middle, not the after.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Pinned 01</span>
+            <span class="kit-card__unit">Invisalign</span>
+          </div>
+          <p class="kit-card__title">Invisalign in the Philippines: The Process and Cost Guide 2026</p>
+          <p class="kit-card__body">What the treatment involves, stage by stage, and what determines where a case falls in the cost range. The piece a reader almost always wants before they will book a consultation about aligners.</p>
+        </article>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card kit-card--tint" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Pinned 02</span>
+            <span class="kit-card__unit">Smile assessment</span>
+          </div>
+          <p class="kit-card__title">What Happens During a Comprehensive Smile Assessment</p>
+          <p class="kit-card__body">What is examined, what is imaged, and what you leave with. Worth reading before a first appointment, because it is the visit most people arrive at with the least idea of what to expect.</p>
+        </article>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card kit-card--flat" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Pinned 03</span>
+            <span class="kit-card__unit">Cosmetic dentistry</span>
+          </div>
+          <p class="kit-card__title">When Is It Time to Invest in a Smile Makeover: Signs You Are Ready for an Upgrade</p>
+          <p class="kit-card__body">Published 29 January 2026. On the decision itself, which is usually years in the making rather than sudden, and on the difference between wanting a change and being ready to plan one.</p>
+        </article>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#s03"><span>The nine categories</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #48 Article cards 3-col | considered: #49,#42 | rigor: heavy | why: the library is organised by NINE categories and nine divides cleanly into a three column grid with no short final row, which is the whole reason this entry beats its two neighbours; a set that ends on a ragged row reads as a set that is missing something, and on a page whose honest state is "the post migration is still open" that impression is the one thing to avoid. #48's card is also large enough to carry the one line that says what a category is FOR, which is the difference between a taxonomy and a signpost. #49, article cards four-col compact, would leave a row of one, and its compact card has no room for the framing line, so nine categories would arrive as nine bare words. #42, the filterable project grid, is the shape this band becomes once the posts land and every card is a real piece, and it cannot be built today because the filter would key on a set that has not been migrated, which is a control that keys on values the rows do not carry. ADAPTATION, forced by the same migration state: #48's card is normally one article; here each card is one CATEGORY, carrying the question that category answers and a link to the treatment hub behind it where one exists. Smile assessment has no treatment hub of its own and is therefore not linked, rather than pointed at the nearest page that is roughly about the same thing. LIBRARY: _MODERN-DESIGN-PATTERN-LIBRARY, shape masked media, applied to this band's single photograph as the frame mask, so the round language on this page comes from the clip rather than from a radius the brand does not own. -->
+<section class="section section--warm" id="s03" aria-labelledby="h03" data-rise>
+  <div class="container">
+    <div class="row row--stretch">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">03</span>
+            <div>
+              <span class="kit-eyebrow">Everything else</span>
+              <h2 id="h03">Nine categories, and what each one is actually for.</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">One card per article once the migration runs: category label, title as published, date, a line on the question it answers, and the read time. Until then, the categories themselves are the index.</p>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Category</span>
+            <span class="kit-card__unit">Braces</span>
+          </div>
+          <p class="kit-card__title">Fixed appliances, and when they beat the removable option.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="braces.html"><span>Braces</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card kit-card--tint" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Category</span>
+            <span class="kit-card__unit">Cosmetic dentistry</span>
+          </div>
+          <p class="kit-card__title">Choosing between the ways a smile can be changed, and what each costs to maintain.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="cosmetic-dentistry.html"><span>Cosmetic dentistry</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Category</span>
+            <span class="kit-card__unit">General dentistry</span>
+          </div>
+          <p class="kit-card__title">The routine half: what to do between visits, and what not to leave.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="general-dentistry.html"><span>General dentistry</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card kit-card--tint" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Category</span>
+            <span class="kit-card__unit">Invisalign (Clear Aligners)</span>
+          </div>
+          <p class="kit-card__title">How a course is planned, how long it runs, and what moves the figure.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="invisalign.html"><span>Invisalign</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Category</span>
+            <span class="kit-card__unit">Oral surgery</span>
+          </div>
+          <p class="kit-card__title">What is involved when something has to come out, and what follows it.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="oral-surgery.html"><span>Oral surgery</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card kit-card--tint" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Category</span>
+            <span class="kit-card__unit">Pediatric dentistry</span>
+          </div>
+          <p class="kit-card__title">First visits, prevention, and the questions parents actually ask.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="pediatric-dentistry.html"><span>Pediatric dentistry</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card kit-card--flat" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Category</span>
+            <span class="kit-card__unit">Smile assessment</span>
+          </div>
+          <p class="kit-card__title">What an examination looks at before any treatment is named.</p>
+          <p class="kit-card__body">This category has no treatment hub of its own, so it is not linked to one. It is the reading that sits before the decision rather than inside it.</p>
+        </article>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Category</span>
+            <span class="kit-card__unit">Teeth whitening</span>
+          </div>
+          <p class="kit-card__title">What shade change is realistic, and how long it holds.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="laser-teeth-whitening.html"><span>Teeth whitening</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card kit-card--tint" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Category</span>
+            <span class="kit-card__unit">Veneers</span>
+          </div>
+          <p class="kit-card__title">Material by material, and why that is the decision rather than the shade.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="porcelain-veneers.html"><span>Veneers</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-7">
+        <p class="kit-micro">Who writes it, and how cost is handled</p>
+        <p class="kit-body readw--wide">Articles are written and reviewed by the specialists who practice in that discipline. Where a piece discusses cost, it explains what moves the figure, because the honest answer to what a treatment costs is a range and the reasons for it rather than a single number.</p>
+      </div>
+
+      <div class="col col--span-5 col--media">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2020_03_Blog.jpg" alt="Close up of a patient with fixed metal braces holding her mouth open while a gloved clinician works with a dental mirror." width="1024" height="683" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>The work itself</b><span>Every image on this page shows treatment happening, never a finished result.</span></figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #34 FAQ accordion | considered: #45,#50 | rigor: heavy | why: this band's own heading is a question, and the reader who reaches it arrived at a library with a question rather than a browsing habit; #34 is the only entry in the catalogue whose unit IS a question with its answer folded underneath, so the four intents this page actually serves can each be asked in the reader's own words and answered with a route rather than a paragraph. It is built on native details and summary, so it works with scripting off, stays in the accessibility tree, and needs no control surface of its own. #45, category chips, is the right instrument where the units are single word destinations, which is true one section up and on the offers page, and it is wrong here because "what does this cost" is not a category, it is an intent that maps to two different pages. #50, topic columns, is used for peer routes on two sibling pages in this set, and reaching for it a third time would be the defaulted pick rather than the considered one; it also spends three columns of vertical space on four items that are each one sentence long. ADAPTATION: the answers are routes rather than explanations, so each panel ends on the page that actually answers it, and the accordion carries no photograph because a signpost with a picture on it is slower to read. LIBRARY: _COMPOSITION-LAWS L9 selection rationale, applied by recording here why the entry rejected one section above is the right one at this stop. -->
+<section class="section section--paper" id="s04" aria-labelledby="h04" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">04</span>
+            <div>
+              <span class="kit-eyebrow">Looking for something specific</span>
+              <h2 id="h04">If you came here with a question rather than to browse.</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--span-7">
+        <div class="kit-faq">
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">What does this treatment cost</summary>
+            <div class="kit-faq__a">
+              <p>The price list publishes a starting figure for every treatment in one table, and each treatment page explains what moves that figure for a case like yours. Read the table first if you are sizing a decision, and the treatment page second if you have already picked one.</p>
+              <p><a class="kit-link-plain" href="prices.html">Treatment prices</a></p>
+            </div>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">What does it actually involve</summary>
+            <div class="kit-faq__a">
+              <p>Every treatment page sets out the clinical detail, the stages in order, and the field it belongs to. That is the level an article summarises and a page commits to.</p>
+              <p><a class="kit-link-plain" href="treatments.html">All treatments</a></p>
+            </div>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Who would be doing it</summary>
+            <div class="kit-faq__a">
+              <p>The roster lists who practices in which field, with credentials as published. On a case that crosses two fields, it is the reason the answer is a bench rather than a person.</p>
+              <p><a class="kit-link-plain" href="specialists.html">Our specialists</a></p>
+            </div>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">What happens at a first visit</summary>
+            <div class="kit-faq__a">
+              <p>The new patient guide covers what a first appointment involves, what to bring and how payment works. If the question is one a guide does not answer, the contact page carries a direct line to each clinic.</p>
+              <p><a class="kit-link-plain" href="patients.html">New patient guide</a> and <a class="kit-link-plain" href="contact.html">contact</a></p>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="col col--span-5">
+        <div class="kit-card kit-card--pad" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">The shortcut</span>
+            <svg class="kit-ring" width="28" height="28" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+            </svg>
+          </div>
+          <p class="kit-card__title">Reading narrows the question. It does not close it.</p>
+          <p class="kit-card__body">If you already know roughly what you want, the fastest honest route is not another article. It is a consultation where a specialist looks at the actual case and tells you what the sequence would be.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="#s05"><span>What a consultation settles</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #8 Manifesto or belief statement | considered: #57,#41 | rigor: heavy | why: the locked closing on this page is a position about the limits of reading, that an article narrows a question and an examination answers it, and #8 is the entry whose job is to state a position at full measure in the brand's own voice rather than to sell the next click. That register is the right one to end a library on: a hub that closes by pushing hard would undercut four sections of saying that nothing here replaces an examination. #57, the standalone pull quote, would set the same sentence as ornament and lose the two lines that make it actionable, which is the difference between a mood and an instruction. #41, the closing CTA, is the shape a commercial index would reach for and it is structurally unavailable: the chrome owns the site's single closing conversion band, so a second one authored here is the exact double band G-CTA1 exists to stop. ADAPTATION: the copy's ask is folded in as a .kit-inline rail inside this content bearing section, which Collision A permits and which the gate does not count as a band; the photograph beside it is the only image on this page that is not of treatment in progress, and it is captioned as what it is, a library picture rather than a patient of this practice. LIBRARY: _MODERN-WOW-SPEC, the technique ceiling, read as restraint: the last screen carries no reveal beyond the locked rise, because a reader at the end of an index is deciding, not being shown. -->
+<section class="section section--warm" id="s05" aria-labelledby="h05" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">05</span>
+            <div>
+              <span class="kit-eyebrow">When reading has taken you as far as it can</span>
+              <h2 id="h05">An article narrows the question. An examination answers it.</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-status kit-tab"><span class="kit-status__dot" aria-hidden="true"></span>Self pay practice. The quote you are given is written</p>
+      </div>
+
+      <div class="col col--span-7 col--copy">
+        <p class="kit-lede readw">If you have read enough to know roughly what you want, the next useful step is a consultation.</p>
+        <p class="kit-body readw">Our specialists look at your case and set out the sequence and what it involves, including the stages that belong to a second field. That is the part no article can do for you, and it is the reason this library is written to inform a decision rather than to make one.</p>
+        <p class="kit-accentline">Elevate Dental does not accept HMO or dental insurance. All treatment is self pay.</p>
+        <p class="kit-body readw">Which is worth knowing before you plan around anything you have read here: the figure you are quoted is the figure you deal with, and you get it in writing before anything is scheduled.</p>
+      </div>
+
+      <div class="col col--span-5 col--media">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--circle">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2020_02_Blog-1.png" alt="Two adults stand against a plain wall, each pointing with both hands toward their own smile." width="1024" height="683" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>A library picture</b><span>Stock, from the article set. Not a patient of this practice, and not a case.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-inline">
+          <p>Bring what you have read to the chair. Tell us which piece sent you and which part of it applies to you, and a specialist will tell you what your own case needs.</p>
+          <div class="kit-inline__acts">
+            <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+            <a class="kit-btn kit-btn--ghost" href="prices.html"><span>Treatment Prices</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

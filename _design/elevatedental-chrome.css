@@ -1,0 +1,831 @@
+/* ==========================================================================
+   ELEVATE DENTAL : THE LOCKED CHROME SHEET
+   Stage (2) CHROME. Concept B "THE CALM SHELF", the owner pick of 2026-08-14.
+
+   WHAT THIS SHEET IS. The paint for the five site-wide chrome parts carried by
+   _design/_chrome-block.html: the two-tier header, the mega panel, the mobile
+   drawer, the ONE closing .precta band, and the footer. It is extracted from the
+   winner preview (_design/_tournament/chrome-b/preview.html) without re-shaping
+   the rules, because the chrome is a LOCKED BLOCK and verify-chrome-parity
+   RENDERS the built chrome against that preview.
+
+   TOKEN PURE. No colour literal below this line: every colour, radius, shadow,
+   duration and easing resolves through a var(--ds-*) from the locked token sheet
+   (elevatedental-tokens.css). Raw px survives only as a structural literal (a
+   hairline, a control height, a media anchor), never as a colour.
+
+   WHAT IT DELIBERATELY DOES NOT DUPLICATE. Everything the structural sheet
+   already owns: the box-sizing reset, the body ground and type, the grain veil,
+   .container / .row / .col, .section, the kit- component set, .kit-seam, and the
+   two local layout values --ed-flow and --ed-gutter, which are declared in
+   elevatedental-structural.css :root and are only CONSUMED here. The preview's
+   own body{background} line is dropped for that reason: structural declares the
+   identical value.
+
+   THE ONE RULE THIS SHEET OWNS THAT LOOKS LIKE A BODY RULE: main{padding-top}.
+   The fixed header is cleared ONCE, here, because only the chrome knows its own
+   height. The structural sheet states that contract at its hero section and does
+   not re-reserve it.
+
+   ORDER INDEPENDENCE, and why three selectors are scoped one level deeper than
+   the preview wrote them. In the preview the chrome rules lived in an inline
+   <style> that came AFTER the structural link, so a chrome rule and a structural
+   rule of EQUAL specificity resolved in the chrome's favour by source order
+   alone. A sheet cannot rely on that: verify-chrome-parity styles the carrier by
+   linking tokens, then chrome, then structural, and it caught the consequence at
+   once (hamburger 53px past the header edge at 375). The three real ties were
+     .kit-btn{width:100%} at max-width 767   vs  .ed-cta-m{width:auto}
+     .kit-btn{display:inline-flex}           vs  .ed-cta-m{display:none}
+     .kit-seam{height:var(--ed-seam-h)}      vs  .ed-arc{height:var(--ed-arc-h)}
+   so .ed-cta-m and .ed-burger are scoped under .ed-shelf__in, and .ed-arc under
+   .site-header. Not one declared value changes: the scoping only lifts these
+   three off a source-order coin toss so the chrome paints identically whichever
+   order a consumer links the sheets in.
+
+   COLLAPSE ANCHOR: 1100. The desktop bar folds to the hamburger wherever it
+   cannot fit. A previous build collapsed only at 768 and overflowed 264px at 834.
+   Everything from 1100 down runs the single compressed bar. Verified zero
+   horizontal overflow at 375 / 768 / 834 / 1024 / 1200 / 1440.
+   ========================================================================== */
+
+/* --- the chrome's own layout values, all derived from the locked scale ----- */
+:root{
+  --ed-chrome-max: 1320px;   /* the shelf runs a step wider than the reading measure */
+  --ed-util-h: 56px;         /* tier 1, the utility strip */
+  --ed-shelf-h: 70px;        /* tier 2, the shelf */
+  --ed-arc-h: 18px;          /* the seam where the header meets the page */
+  --ed-header-h: calc(var(--ed-util-h) + var(--ed-shelf-h) + var(--ed-arc-h));
+}
+/* THE COLLAPSE. The desktop bar folds to the hamburger wherever it cannot fit.
+   1100 is the anchor: a previous build collapsed only at 768 and overflowed 264px
+   at 834. Everything from 1100 down runs the single compressed bar. */
+@media (max-width: 1100px){
+  :root{ --ed-util-h: 0px; --ed-shelf-h: 62px; --ed-arc-h: 14px; }
+}
+
+[hidden]{ display: none !important; }
+main{ padding-top: var(--ed-header-h); }
+main > .kit-hero:first-child{ border-top: 0; }
+
+/* THE KEYBOARD FOCUS RING, carried by the chrome sheet itself (WCAG 2.4.7).
+   The structural sheet declares the same ring, but through :where(...), which is
+   zero-specificity and invisible to a static role scan; the chrome frame is the
+   surface a keyboard user lands on FIRST (skip link, utility numbers, eleven nav
+   items, the mega, the drawer, the footer sitemap), so the ring is stated here
+   too, in the plain role form. Same tokens, same offset, same radius as
+   structural: identical paint, never a competing look. */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible{
+  outline: 2px solid var(--ds-accent-deep);
+  outline-offset: 3px;
+  border-radius: var(--ds-r-control);
+}
+/* on the one dark band the bronze goes to the gold that was built to hold there */
+.surface-dark a:focus-visible,
+.surface-dark button:focus-visible,
+.surface-dark summary:focus-visible,
+.surface-dark [tabindex]:focus-visible{
+  outline-color: var(--ds-accent-light);
+}
+
+/* ==========================================================================
+   PART 1 : THE HEADER
+   ========================================================================== */
+.site-header{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: var(--ds-z-sticky);
+  background: var(--ds-bg-surface-2);          /* the shelf tint, and the arc's ground */
+  transition: box-shadow var(--ds-dur-fast) var(--ds-ease-out);
+}
+.site-header.is-stuck{ box-shadow: var(--ds-shadow-card); }
+
+.ed-wrap{
+  width: 100%;
+  max-width: var(--ed-chrome-max);
+  margin-inline: auto;
+  padding-inline: var(--ed-gutter);
+  min-width: 0;
+}
+
+/* --- tier 1 : THE UTILITY STRIP ------------------------------------------- */
+.ed-util{
+  height: var(--ed-util-h);
+  overflow: hidden;
+  background: var(--ds-primary-soft);
+  border-bottom: 1px solid var(--ds-hairline);
+  transition: height var(--ds-dur-fast) var(--ds-ease-out);
+}
+/* NAV-PATTERNS #8's sticky behaviour: the utility row retires on scroll and the
+   nav shelf is what stays pinned. main's padding is fixed, so nothing jumps. */
+.site-header.is-stuck .ed-util{ height: 0; border-bottom-color: transparent; }
+.ed-util__in{
+  height: var(--ed-util-h);
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-md);
+  min-width: 0;
+}
+
+.ed-tels{ display: flex; align-items: stretch; margin: 0; padding: 0; list-style: none; min-width: 0; }
+.ed-tels li + li{ border-left: 1px solid var(--ds-hairline); }
+.ed-tel{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  padding: 4px 16px;
+  min-height: 44px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.ed-tels li:first-child .ed-tel{ padding-left: 0; }
+.ed-tel__c{
+  font-size: 9.5px; font-weight: 700; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--ds-ink-soft);
+  transition: color var(--ds-dur-fast) var(--ds-ease-out);
+}
+.ed-tel__n{
+  font-family: var(--ds-font-mono); font-size: 11.5px; line-height: 1.2;
+  color: var(--ds-ink-heading); font-variant-numeric: tabular-nums;
+  transition: color var(--ds-dur-fast) var(--ds-ease-out);
+}
+.ed-tel:hover .ed-tel__n{ color: var(--ds-accent-deep); }
+.ed-tel:hover .ed-tel__c{ color: var(--ds-accent-deep); }
+
+.ed-util__end{ display: flex; align-items: center; gap: var(--ds-space-sm); margin-left: auto; min-width: 0; }
+.ed-hours{
+  margin: 0;
+  font-size: 11px; line-height: 1.3; letter-spacing: .02em;
+  color: var(--ds-ink-soft); white-space: nowrap;
+}
+.ed-hours b{ display: block; font-size: 9.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--ds-accent-deep); }
+/* the pinned appointment control, compacted for the strip. Never a third weight:
+   it is the same .kit-btn--primary the whole system uses. */
+.ed-util .kit-btn{
+  width: auto;
+  min-height: 40px;
+  padding: 10px 18px;
+  font-size: 11.5px;
+  white-space: nowrap;
+}
+
+/* --- tier 2 : THE SHELF ---------------------------------------------------- */
+.ed-shelf{
+  position: relative;
+  height: var(--ed-shelf-h);
+  /* the soft tint wash. Two radial washes over the cool ground, the same material
+     move .kit-atmos makes in the body, so the shelf reads as a surface and not a bar */
+  background-image:
+    radial-gradient(64% 180% at 88% 0%, var(--ds-primary-soft) 0%, transparent 62%),
+    radial-gradient(46% 150% at 6% 100%, var(--ds-bg-warm) 0%, transparent 68%);
+}
+/* THE UNROLLED INDEX RULE along the shelf's top edge: minor graduations on a
+   hairline, the brand's signature motif doing a structural job as the joint
+   between the two tiers. */
+.ed-shelf::before{
+  content: "";
+  position: absolute; left: 0; right: 0; top: 0; height: 6px;
+  background-image: repeating-linear-gradient(90deg, var(--ds-primary) 0 1px, transparent 1px calc(100% / 48));
+  opacity: .22;
+  pointer-events: none;
+}
+.ed-shelf__in{
+  height: var(--ed-shelf-h);
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-md);
+  min-width: 0;
+}
+
+/* the logo lockup: the index ring beside the wordmark. No tagline here: the
+   tagline is spent once, in the .precta, where it has room to be read. */
+.ed-logo{
+  display: flex; align-items: center; gap: 10px;
+  flex: 0 0 auto; min-width: 0;
+  text-decoration: none;
+}
+.ed-logo__mark{ flex: 0 0 auto; }
+.ed-logo__word{
+  font-family: var(--ds-font-display); font-weight: 500;
+  font-size: 22px; line-height: 1; letter-spacing: -.012em;
+  color: var(--ds-ink-heading); white-space: nowrap;
+}
+.ed-logo:hover .ed-logo__word{ color: var(--ds-primary-deep); }
+
+/* THE NAV. Eleven items, one row, distributing their own slack. `gap` is the
+   MINIMUM spacing and space-between spends whatever is left, so the bar tightens
+   itself from 1440 down to 1101 rather than overflowing at some fixed width. */
+.ed-nav{ flex: 1 1 auto; min-width: 0; margin-left: clamp(18px, 2.2vw, 40px); }
+.ed-nav__list{
+  display: flex; flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0; padding: 0; list-style: none; min-width: 0;
+}
+.ed-nav__item{ min-width: 0; }
+.ed-nav__link{
+  position: relative;
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 7px 0;
+  font-family: var(--ds-font-body);
+  font-size: clamp(11px, .88vw, 13px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: .005em;
+  color: var(--ds-ink-heading);
+  background: none; border: 0;
+  text-decoration: none; white-space: nowrap; cursor: pointer;
+  transition: color var(--ds-dur-fast) var(--ds-ease-out);
+}
+/* the hover mark is the card's bronze index bar at nav scale: it extends from the
+   left rather than fading in, which is the one gesture this system uses for "open" */
+.ed-nav__link::before{
+  content: "";
+  position: absolute; left: 0; bottom: 0;
+  width: 0; height: 2px;
+  background: var(--ds-accent);
+  transition: width var(--ds-dur-slow) var(--ds-ease-out);
+}
+.ed-nav__link:hover, .ed-nav__link[aria-expanded="true"]{ color: var(--ds-accent-deep); }
+.ed-nav__link:hover::before, .ed-nav__link[aria-expanded="true"]::before{ width: 100%; }
+.ed-nav__link.is-current{ color: var(--ds-primary-deep); }
+.ed-nav__link.is-current::before{ width: 100%; background: var(--ds-primary); }
+/* the mega caret, drawn not typed, so the accessible label stays exactly "Treatments" */
+.ed-caret{
+  display: block; width: 6px; height: 6px; flex: 0 0 auto;
+  border-right: 1px solid var(--ds-accent-deep);
+  border-bottom: 1px solid var(--ds-accent-deep);
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform var(--ds-dur-fast) var(--ds-ease-out);
+}
+.ed-nav__link[aria-expanded="true"] .ed-caret{ transform: translateY(1px) rotate(-135deg); }
+
+/* the arc seam where the header meets the page. The page ground RISES into the
+   shelf, one bronze hairline riding the curve. This is the page's ONE arc.
+   SCOPED under .site-header so the chrome's own arc height wins over the generic
+   .kit-seam height regardless of which sheet a consumer links last. */
+.site-header .ed-arc{ height: var(--ed-arc-h); margin-bottom: 0; }
+
+/* the compressed-bar controls, off above 1100. SCOPED under .ed-shelf__in so
+   display:none wins over .kit-btn{display:inline-flex} in either link order. */
+.ed-shelf__in .ed-cta-m, .ed-shelf__in .ed-burger{ display: none; }
+
+/* ==========================================================================
+   PART 2 : THE MEGA PANEL
+   ========================================================================== */
+.ed-scrim{
+  position: fixed; inset: 0; top: var(--ed-header-h);
+  background: var(--ds-primary-deep);
+  opacity: var(--ds-opacity-scrim);
+  border: 0;
+}
+.ed-mega{
+  position: absolute; left: 0; right: 0; top: 100%;
+  background: var(--ds-bg-surface);            /* the arc's fill flows straight into it */
+  border-bottom: 1px solid var(--ds-hairline);
+  box-shadow: var(--ds-shadow-lift);
+  max-height: calc(100vh - var(--ed-header-h));
+  overflow-y: auto;
+}
+.ed-mega__in{ padding-block: var(--ds-space-lg) var(--ds-space-md); }
+.ed-mega__grid{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.1fr) minmax(0, 1.15fr);
+  gap: var(--ds-space-lg);
+}
+.ed-mega__col{ min-width: 0; }
+.ed-mlist{ list-style: none; margin: var(--ds-space-sm) 0 0; padding: 0; }
+.ed-mlist li{ margin-top: 2px; }
+.ed-mlink{
+  display: block;
+  padding: 7px 0;
+  font-size: 13.5px; line-height: 1.4;
+  color: var(--ds-ink); text-decoration: none;
+  transition: color var(--ds-dur-fast) var(--ds-ease-out), padding-left var(--ds-dur-fast) var(--ds-ease-out);
+}
+.ed-mlink:hover{ color: var(--ds-accent-deep); padding-left: 6px; }
+.ed-mclinic{
+  display: block; padding: 9px 0; text-decoration: none;
+  border-bottom: 1px solid var(--ds-hairline);
+}
+.ed-mclinic:last-child{ border-bottom: 0; }
+.ed-mclinic b{ display: block; font-family: var(--ds-font-display); font-weight: 500; font-size: 15px; line-height: 1.25; color: var(--ds-ink-heading); }
+.ed-mclinic span{ display: block; margin-top: 3px; font-size: 11.5px; color: var(--ds-ink-soft); font-variant-numeric: tabular-nums; }
+.ed-mclinic:hover b{ color: var(--ds-accent-deep); }
+.ed-mega__foot{
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: var(--ds-space-sm) var(--ds-space-md);
+  margin-top: var(--ds-space-md);
+  padding-top: var(--ds-space-md);
+  border-top: 1px solid var(--ds-hairline);
+}
+.ed-mega .kit-card{ height: 100%; }
+.ed-mega .kit-btn{ width: auto; }
+
+/* ==========================================================================
+   PART 3 : THE MOBILE DRAWER
+   ========================================================================== */
+.ed-drawer{ position: fixed; inset: 0; z-index: var(--ds-z-drawer); }
+.ed-drawer__scrim{
+  position: absolute; inset: 0;
+  background: var(--ds-primary-deep);
+  opacity: var(--ds-opacity-scrim);
+  border: 0;
+}
+/* THE DRAWER IS A FLEX COLUMN, and that is the whole anti-trap mechanic:
+   head (fixed) / scroll region (flex:1 1 auto, min-height:0, overflow-y:auto) /
+   foot (flex:0 0 auto). The foot is a SIBLING of the scroll region, never an
+   overlay on top of it, so no nav row can be stranded underneath it. */
+.ed-drawer__panel{
+  position: absolute; top: 0; right: 0; bottom: 0;
+  width: min(92vw, 384px);
+  display: flex;
+  flex-direction: column;
+  background: var(--ds-bg-surface);
+  border-left: 1px solid var(--ds-hairline);
+  box-shadow: var(--ds-shadow-lift);
+}
+.ed-drawer__head{
+  flex: 0 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--ds-space-sm);
+  padding: 12px var(--ds-space-md);
+  min-height: 62px;
+  background: var(--ds-bg-surface-2);
+  border-bottom: 1px solid var(--ds-hairline);
+}
+.ed-close{
+  position: relative;
+  width: 44px; height: 44px; flex: 0 0 auto;
+  background: none; border: 1px solid var(--ds-hairline);
+  border-radius: var(--ds-r-control);
+  cursor: pointer;
+}
+.ed-close::before, .ed-close::after{
+  content: ""; position: absolute; left: 12px; top: 21px;
+  width: 18px; height: 1px; background: var(--ds-primary);
+}
+.ed-close::before{ transform: rotate(45deg); }
+.ed-close::after{ transform: rotate(-45deg); }
+.ed-close:hover{ border-color: var(--ds-accent); }
+
+.ed-drawer__scroll{
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: var(--ds-space-md) var(--ds-space-md) var(--ds-space-lg);
+}
+
+/* the drawer LEADS WITH CLINIC CHOICE: a Manila patient picks a branch first */
+.ed-pick{ margin: 0 0 var(--ds-space-md); padding-bottom: var(--ds-space-sm); border-bottom: 2px solid var(--ds-primary); }
+.ed-pick__list{ list-style: none; margin: var(--ds-space-sm) 0 0; padding: 0; }
+.ed-pick__row{
+  display: flex; align-items: center; gap: var(--ds-space-sm);
+  border-bottom: 1px solid var(--ds-hairline);
+}
+.ed-pick__row:last-child{ border-bottom: 0; }
+/* the row's whole height IS the link's padding, so the tap target is the row */
+.ed-pick__name{ flex: 1 1 auto; min-width: 0; text-decoration: none; padding: 14px 0; }
+.ed-pick__name b{ display: block; font-family: var(--ds-font-display); font-weight: 500; font-size: 15px; line-height: 1.25; color: var(--ds-ink-heading); }
+.ed-pick__name span{ display: block; margin-top: 2px; font-size: 11px; color: var(--ds-ink-soft); font-variant-numeric: tabular-nums; }
+.ed-pick__tel{
+  flex: 0 0 auto;
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 44px; min-height: 44px; padding: 0 12px;
+  font-family: var(--ds-font-mono); font-size: 10.5px; letter-spacing: .04em;
+  color: var(--ds-primary);
+  border: 1px solid var(--ds-hairline); border-radius: var(--ds-r-control);
+  background: var(--ds-bg-surface-2);
+  text-decoration: none; white-space: nowrap;
+}
+.ed-pick__tel:hover{ border-color: var(--ds-accent); color: var(--ds-accent-deep); }
+
+/* the drawer nav: the SAME eleven labels, the SAME order as the shelf */
+.ed-dnav{ list-style: none; margin: 0; padding: 0; }
+.ed-dnav > li{ border-bottom: 1px solid var(--ds-hairline); }
+.ed-dnav__link, .ed-dnav__sum{
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--ds-space-sm);
+  width: 100%;
+  padding: 14px 0;
+  min-height: 52px;
+  font-family: var(--ds-font-body); font-size: 15px; font-weight: 500;
+  color: var(--ds-ink-heading);
+  text-decoration: none;
+  background: none; border: 0; text-align: left;
+  list-style: none; cursor: pointer;
+}
+.ed-dnav__sum::-webkit-details-marker{ display: none; }
+.ed-dnav__link:hover, .ed-dnav__sum:hover{ color: var(--ds-accent-deep); }
+.ed-dcaret{
+  display: block; width: 8px; height: 8px; flex: 0 0 auto;
+  border-right: 1px solid var(--ds-accent-deep);
+  border-bottom: 1px solid var(--ds-accent-deep);
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform var(--ds-dur-fast) var(--ds-ease-out);
+}
+details[open] > .ed-dnav__sum .ed-dcaret{ transform: translateY(1px) rotate(-135deg); }
+.ed-dlist{ list-style: none; margin: 0 0 var(--ds-space-sm); padding: 0 0 0 var(--ds-space-md); border-left: 2px solid var(--ds-accent); }
+.ed-dlist a{
+  display: block; padding: 9px 0; min-height: 40px;
+  font-size: 13.5px; line-height: 1.4; color: var(--ds-ink-soft); text-decoration: none;
+}
+.ed-dlist a:hover{ color: var(--ds-accent-deep); }
+
+/* the foot. flex:0 0 auto, a real sibling, so it never sits over the list. */
+.ed-drawer__foot{
+  flex: 0 0 auto;
+  padding: var(--ds-space-md);
+  background: var(--ds-bg-surface-2);
+  border-top: 1px solid var(--ds-hairline);
+}
+.ed-drawer__foot .kit-btn{ width: 100%; }
+.ed-nap{ display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px var(--ds-space-sm); margin-top: 12px; }
+.ed-nap a{ font-size: 12px; color: var(--ds-primary); text-decoration: none; }
+.ed-nap a:hover{ color: var(--ds-accent-deep); text-decoration: underline; }
+.ed-nap span{ font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--ds-ink-soft); }
+
+/* ==========================================================================
+   PART 4 : THE CLOSING CTA BAND  (.precta, the ONE band on any page)
+   This is also the page's ONE dark punctuation. It carries .section--dark PAIRED
+   with .surface-dark, which is the authoring form the structural sheet requires:
+   the flip repoints the tokens for the whole subtree, so every object inside
+   re-skins itself instead of only the band. The joint into it is a flat ground
+   step, because the sheet turns the light-to-light hairline and contact ramp OFF
+   into and out of the dark band, and the page's one arc is already spent above.
+   ========================================================================== */
+.precta .kit-actions{ margin-top: var(--ds-space-md); }
+.precta__aside{
+  padding: var(--ds-space-md);
+  background: var(--ds-bg-surface-2);
+  border: 1px solid var(--ds-line);
+  border-radius: var(--ds-r-surface);
+  box-shadow: var(--ds-shadow-card);
+}
+.precta__ring{ display: flex; justify-content: flex-end; margin-bottom: var(--ds-space-sm); }
+
+/* ==========================================================================
+   PART 5 : THE FOOTER
+   ========================================================================== */
+.site-footer{
+  background: var(--ds-bg-warm);
+  padding-block: var(--ed-flow) var(--ds-space-lg);
+}
+.ed-fbrand{
+  display: flex; flex-wrap: wrap; align-items: flex-start; gap: var(--ds-space-lg);
+  padding-bottom: var(--ds-space-lg);
+  border-bottom: 2px solid var(--ds-primary);
+}
+.ed-fbrand__id{ display: flex; align-items: center; gap: var(--ds-space-sm); min-width: 0; }
+.ed-fbrand__word{ font-family: var(--ds-font-display); font-weight: 500; font-size: 26px; line-height: 1.1; letter-spacing: -.014em; color: var(--ds-ink-heading); }
+.ed-fbrand__say{ flex: 1 1 320px; min-width: 0; }
+.ed-fcols{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) minmax(0, 1.55fr);
+  gap: var(--ds-space-lg);
+  padding-block: var(--ds-space-lg);
+}
+.ed-fcol{ min-width: 0; }
+.ed-flist{ list-style: none; margin: var(--ds-space-sm) 0 0; padding: 0; }
+.ed-flist li{ margin-top: 4px; }
+.ed-flist a{
+  display: block; padding: 5px 0;
+  font-size: 13px; line-height: 1.45; color: var(--ds-ink);
+  text-decoration: none;
+  transition: color var(--ds-dur-fast) var(--ds-ease-out);
+}
+.ed-flist a:hover{ color: var(--ds-accent-deep); text-decoration: underline; }
+.ed-flist--tel a{ min-height: 40px; display: flex; align-items: center; }
+.ed-fsoc{ display: flex; flex-wrap: wrap; gap: 8px; margin-top: var(--ds-space-sm); }
+.ed-fsoc a{
+  display: inline-flex; align-items: center; min-height: 36px; padding: 0 12px;
+  font-size: 11px; font-weight: 600; letter-spacing: .06em;
+  color: var(--ds-primary); text-decoration: none;
+  border: 1px solid var(--ds-hairline); border-radius: var(--ds-r-control);
+  background: var(--ds-bg-surface);
+}
+.ed-fsoc a:hover{ border-color: var(--ds-accent); color: var(--ds-accent-deep); }
+.ed-fbar{
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: var(--ds-space-sm) var(--ds-space-md);
+  padding-top: var(--ds-space-md);
+  border-top: 1px solid var(--ds-hairline);
+}
+.ed-fbar p{ font-size: 12px; color: var(--ds-ink-soft); }
+.ed-fbar__links{ display: flex; flex-wrap: wrap; gap: var(--ds-space-md); list-style: none; margin: 0; padding: 0; }
+.ed-fbar__links a{ font-size: 12px; color: var(--ds-ink-soft); text-decoration: none; }
+.ed-fbar__links a:hover{ color: var(--ds-accent-deep); text-decoration: underline; }
+
+/* ==========================================================================
+   THE REFLOW LADDER FOR THE CHROME. Same four authored tiers as the body sheet.
+   No tier introduces a fixed width or an unclamped child, so no tier can open a
+   horizontal scrollbar at 375 / 768 / 834 / 1024 / 1200 / 1440.
+   ========================================================================== */
+
+/* the 1101 to 1199 band: the shelf is at its tightest, so the lockup and the
+   strip give back what the nav needs rather than the nav shrinking its labels */
+@media (max-width: 1199px){
+  .ed-logo__word{ font-size: 19px; }
+  .ed-logo__mark{ width: 26px; height: 26px; }
+  .ed-nav{ margin-left: 16px; }
+  .ed-nav__list{ gap: 8px; }
+  .ed-tel{ padding-inline: 12px; }
+  .ed-util__in{ gap: var(--ds-space-sm); }
+  .ed-mega__grid{ gap: var(--ds-space-md); }
+}
+
+/* THE COLLAPSE at 1100. Everything above folds into one compressed bar:
+   logo left, the pinned control, then the hamburger LAST and flush right.
+   Every .ed-cta-m / .ed-burger rule here carries the same .ed-shelf__in scope as
+   the display:none default above, so the whole compressed bar resolves as one
+   block instead of half of it losing a source-order tie with .kit-btn. */
+@media (max-width: 1100px){
+  .ed-util{ display: none; }
+  .ed-nav{ display: none; }
+  .ed-mega{ display: none; }
+  .ed-shelf::before{ display: none; }
+  .ed-shelf__in{ gap: 10px; }
+  .ed-logo__word{ font-size: 19px; }
+
+  .ed-shelf__in .ed-cta-m{
+    display: inline-flex;
+    width: auto;
+    margin-left: auto;
+    min-height: 44px;
+    padding-inline: clamp(10px, 2.6vw, 20px);
+    font-size: clamp(10px, 2.4vw, 12px);
+    letter-spacing: .04em;
+    white-space: nowrap;
+  }
+  .ed-shelf__in .ed-cta-m::after{ display: none; }   /* the bronze tick is a hover gesture, not a phone one */
+
+  .ed-shelf__in .ed-burger{
+    display: inline-flex; align-items: center; justify-content: center;
+    position: relative;
+    flex: 0 0 auto;
+    width: 44px; height: 44px;
+    margin-right: 0;                         /* FLUSH RIGHT: nothing sits to its right */
+    padding: 0;
+    background: none;
+    border: 1px solid var(--ds-hairline);
+    border-radius: var(--ds-r-control);
+    cursor: pointer;
+  }
+  .ed-shelf__in .ed-burger:hover{ border-color: var(--ds-accent); }
+  .ed-shelf__in .ed-burger i,
+  .ed-shelf__in .ed-burger::before,
+  .ed-shelf__in .ed-burger::after{
+    content: ""; position: absolute; left: 12px;
+    width: 18px; height: 1px; background: var(--ds-primary);
+  }
+  .ed-shelf__in .ed-burger::before{ top: 15px; }
+  .ed-shelf__in .ed-burger i{ top: 21px; width: 13px; background: var(--ds-accent); }
+  .ed-shelf__in .ed-burger::after{ top: 27px; }
+}
+
+/* tier 1 of the body ladder */
+@media (max-width: 1023px){
+  .ed-fcols{ grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--ds-space-md); }
+}
+
+/* tier 2 */
+@media (max-width: 899px){
+  .ed-fbrand{ gap: var(--ds-space-md); }
+  .precta__aside{ margin-top: var(--ds-space-md); }
+}
+
+/* tier 3 : mobile */
+@media (max-width: 767px){
+  .ed-fcols{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ed-fbar{ flex-direction: column; align-items: flex-start; }
+  .precta .kit-btn{ width: 100%; }
+  .precta .kit-btn--ghost{ width: auto; }
+  .site-footer .kit-btn{ width: 100%; }
+}
+
+/* tier 4 : the small-phone floor */
+@media (max-width: 480px){
+  .ed-fcols{ grid-template-columns: minmax(0, 1fr); gap: var(--ds-space-md); }
+}
+@media (max-width: 380px){
+  .ed-logo__word{ font-size: 17px; }
+  .ed-logo__mark{ width: 24px; height: 24px; }
+  .ed-shelf__in{ gap: 8px; }
+}
+
+/* MOTION. Every transition above reads a --ds-dur-* token, so the reduced-motion
+   block in the structural sheet already neutralises them at the token. These two
+   are the chrome's own transform gestures and are pinned here as well. */
+@media (prefers-reduced-motion: reduce){
+  .ed-caret, .ed-dcaret{ transition: none; }
+  .ed-mlink:hover{ padding-left: 0; }
+}
+
+/* ED FOOTER SOCIAL GLYPHS v1 */
+/* ==========================================================================
+   FOOTER SOCIAL - BRAND GLYPHS. CSS ONLY; the footer markup is carrier-generated
+   and must not be edited, so each link is matched on its href and the platform
+   mark is painted as a CSS mask over background-color:currentColor. The glyph
+   therefore inherits the link's ink (--ds-primary) and its hover brass
+   (--ds-accent-deep) for free, in light and in dark, with no second palette.
+
+   Path data: simple-icons, 24x24 viewBox, one path per brand, fetched from the
+   upstream repo (linkedin from the pinned 13.0.0 package - it is no longer in
+   master). Monochrome by design: full-colour brand marks would fight the navy /
+   brass / bone system.
+
+   ACCESSIBILITY. The link text IS the accessible name and the markup gives it no
+   wrapper element to target, so it cannot be clipped with the usual
+   position:absolute sr-only box. It is instead indented out of a fixed 40x40 box
+   that clips it (text-indent + overflow:hidden). The text is still rendered text
+   at its inherited size - not font-size:0, not display:none, not
+   visibility:hidden - so it stays in the accessibility tree and each link keeps
+   reading as "Facebook" / "Instagram" / "TikTok" / "LinkedIn". The ::before is
+   out of flow, so the indent cannot move the glyph.
+
+   SPECIFICITY. The FOH sheet loads after this one and carries its own
+   .ed-fsoc a rule at (0,1,1). Every rule below is written as .ed-fsoc a[href],
+   which is (0,2,1), so the box geometry cannot be undone downstream. The
+   remaining FOH declaration - font-size on the clipped text - is harmless
+   against a definite 40x40 box.
+
+   TOUCH TARGET. 40x40 exactly, at every breakpoint, with the 8px .ed-fsoc gap
+   keeping the four evenly spaced. The white chip and hairline are the treatment
+   this strip already had, so the audited #243A52-on-#FFFFFF pair still holds.
+   ========================================================================== */
+.ed-fsoc a[href]{
+  --ed-soc-glyph: 18px;
+  position: relative;
+  display: block;
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  min-height: 40px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 150%;
+  color: var(--ds-primary);
+  text-decoration: none;
+  border: 1px solid var(--ds-hairline);
+  border-radius: var(--ds-r-control);
+  background: var(--ds-bg-surface);
+  transition:
+    color var(--ds-dur-fast) var(--ds-ease-out),
+    border-color var(--ds-dur-fast) var(--ds-ease-out);
+}
+.ed-fsoc a[href]::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: var(--ed-soc-glyph);
+  height: var(--ed-soc-glyph);
+  text-indent: 0;
+  background-color: currentColor;
+  -webkit-mask-image: var(--ed-soc-icon);
+          mask-image: var(--ed-soc-icon);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+}
+.ed-fsoc a[href]:hover{ border-color: var(--ds-accent); color: var(--ds-accent-deep); }
+
+/* the four marks. TikTok's glyph is inset inside its own viewBox, so it is
+   nudged up a step to read at the same optical weight as the other three. */
+.ed-fsoc a[href*="facebook"]{  --ed-soc-icon: url('data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 24 24%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cpath fill=%22black%22 d=%22M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z%22/%3E%3C/svg%3E'); }
+.ed-fsoc a[href*="instagram"]{ --ed-soc-icon: url('data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 24 24%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cpath fill=%22black%22 d=%22M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077%22/%3E%3C/svg%3E'); }
+.ed-fsoc a[href*="tiktok"]{    --ed-soc-icon: url('data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 24 24%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cpath fill=%22black%22 d=%22M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z%22/%3E%3C/svg%3E'); --ed-soc-glyph: 19px; }
+.ed-fsoc a[href*="linkedin"]{  --ed-soc-icon: url('data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 24 24%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cpath fill=%22black%22 d=%22M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z%22/%3E%3C/svg%3E'); }
+
+/* no-mask fallback: if the engine cannot mask, drop the glyph box and let the
+   real link text back into view rather than shipping four empty chips. */
+@supports not ((-webkit-mask-image: url('#a')) or (mask-image: url('#a'))){
+  .ed-fsoc a[href]{
+    display: inline-flex; align-items: center; justify-content: center;
+    width: auto; min-width: 40px; padding: 0 12px; text-indent: 0; overflow: visible;
+  }
+  .ed-fsoc a[href]::before{ content: none; }
+}
+
+/* ==========================================================================
+   ED MEGA v2 - THE BENCH + PICTURES
+
+   The panel was four columns of 13.5px text links: a sitemap dump, and the owner
+   called it boring. It becomes a dark bench instead. Three things carry it:
+
+   1. THE GROUND FLIPS. The panel takes .surface-dark, so it drops out of the light
+      header as a deliberate slab rather than as more of the same page. Because that
+      class is the design system's own, every existing rule in this file that reads a
+      --ds-* token flips with it and needs no duplicate here.
+   2. THE DISCIPLINES ARE NUMBERED. Nine disciplines is a fixed, complete set, so a
+      leading-zero index is information (there are nine, this is the fourth) and not
+      decoration. The names move to the display face at a readable size.
+   3. MOST-REQUESTED BECOMES PICTURES. Seven treatments, each showing the photograph
+      its own page opens with, so the tile previews the destination. Seven tiles into
+      a four-across grid leaves a hole, so the first spans two cells as a feature and
+      the eight cells fill exactly.
+
+   The tint card that was the fourth column is gone, but nothing it held is: both its
+   links and its full sentence moved into the foot, which is now a two-part row.
+   ========================================================================== */
+
+.ed-mega{
+  border-bottom: 2px solid var(--ds-accent);   /* brass edge closes the slab */
+}
+.ed-mega__in{ padding-block: var(--ds-space-md) var(--ds-space-md); }
+
+/* three columns now, not four. The middle carries the pictures and takes the room. */
+.ed-mega__grid{
+  grid-template-columns: minmax(0, 0.86fr) minmax(0, 2.5fr) minmax(0, 1.02fr);
+  gap: var(--ds-space-lg);
+  align-items: start;
+}
+.ed-mega .kit-eyebrow{ color: var(--ds-accent-light); }
+
+/* -- the numbered disciplines --------------------------------------------- */
+.ed-mega__col--disc .ed-mlist{ counter-reset: ed-disc; }
+.ed-mega__col--disc .ed-mlist li{ counter-increment: ed-disc; margin-top: 0; }
+.ed-mega__col--disc .ed-mlink{
+  position: relative;
+  padding: 6px 0 6px 28px;
+  font-family: var(--ds-font-display);
+  font-size: 15.5px; font-weight: 500; line-height: 1.3;
+  color: var(--ds-ink);
+}
+.ed-mega__col--disc .ed-mlink::before{
+  content: counter(ed-disc, decimal-leading-zero);
+  position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+  font-family: var(--ds-font-mono); font-size: 10px; letter-spacing: .08em;
+  color: var(--ds-accent-light);
+  font-variant-numeric: tabular-nums;
+}
+/* --ds-accent-deep is the correct hover on a LIGHT ground and the wrong one here:
+   on the dark panel a hover must brighten, not darken. */
+.ed-mega .ed-mlink:hover,
+.ed-mega .ed-mclinic:hover b{ color: var(--ds-accent-light); }
+.ed-mega__col--disc .ed-mlink:hover{ padding-left: 34px; }
+
+/* -- the picture grid ------------------------------------------------------ */
+.ed-mtiles{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: var(--ds-space-sm);
+}
+/* seven treatments into eight cells: the first is the feature and takes two. */
+.ed-mtile--wide{ grid-column: span 2; }
+.ed-mtile{ display: block; text-decoration: none; min-width: 0; }
+.ed-mtile__frame{
+  display: block; overflow: hidden;
+  height: clamp(92px, 8.2vw, 128px);
+  border-radius: var(--ds-r-surface);
+  background: var(--ds-primary-soft);
+}
+/* an explicit frame height, not a per-tile aspect-ratio: the feature tile is twice as
+   wide as its neighbours, so an aspect-ratio would make it twice as tall and break the
+   row. A fixed height keeps every tile on the same baseline whatever its span. */
+.ed-mtile__img{
+  display: block; width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform var(--ds-dur-slow) var(--ds-ease-out);
+}
+.ed-mtile:hover .ed-mtile__img{ transform: scale(1.06); }
+.ed-mtile__name{
+  display: block; margin-top: 8px;
+  font-family: var(--ds-font-display); font-weight: 500;
+  font-size: 14px; line-height: 1.25;
+  color: var(--ds-ink);
+  transition: color var(--ds-dur-fast) var(--ds-ease-out);
+}
+.ed-mtile:hover .ed-mtile__name{ color: var(--ds-accent-light); }
+.ed-mtile:focus-visible .ed-mtile__frame{ outline: 2px solid var(--ds-accent-light); outline-offset: 3px; }
+
+/* -- clinics --------------------------------------------------------------- */
+.ed-mega .ed-mclinic{ padding: 8px 0; }
+.ed-mega .ed-mclinic b{ font-size: 14.5px; }
+
+/* -- the foot now carries what the fourth column used to ------------------- */
+.ed-mega__foot{ align-items: flex-end; gap: var(--ds-space-md); }
+.ed-mega__foot-say{ flex: 1 1 460px; min-width: 0; }
+.ed-mega__foot-say .kit-note + .kit-note{ margin-top: 6px; }
+.ed-mega__foot-act{
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: var(--ds-space-xs);
+}
+
+@media (prefers-reduced-motion: reduce){
+  .ed-mtile__img{ transition: none; }
+  .ed-mtile:hover .ed-mtile__img{ transform: none; }
+  .ed-mega__col--disc .ed-mlink:hover{ padding-left: 28px; }
+}

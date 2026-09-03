@@ -1,0 +1,587 @@
+<!--META {"title":"Dental X-rays Philippines | Digital and 3D CBCT","desc":"Panoramic, cephalometric and periapical digital X-rays plus 3D CBCT scanning, available at all four clinics.","noindex":true}-->
+<!-- TITLE and DESC are the LOCKED values from _handoff/seo-enrichment.md section 1, the SEO SSOT.
+     The SSOT separator is an en dash and renders here as a pipe, because verify-no-dashes is
+     registered on this build. Only the SEPARATOR CHARACTER changed; no word was altered, added,
+     removed or reordered.
+     The key is "desc" and NOT "description": build.mjs renders esc(meta.desc), and its JSON branch
+     does not alias description to desc, so a "description" key ships an EMPTY meta description
+     while looking correct in the fragment.
+     noindex is set on EVERY page because this publishes to a PUBLIC preview URL while the pages
+     carry representative market prices rather than this clinic's own figures. robots.txt cannot
+     carry that load: crawlers read it only at the origin root, and this ships to a project
+     subpath, so the disallow-all there is inert. noindex is the protection that actually works. -->
+<!-- ============================================================================
+     DIGITAL DENTAL X-RAYS. T-HUB, promoted from the owner-stamped template
+     _design/_tournament/templates/T-HUB/c (concept C, "THE COMPARISON").
+     PROMOTION, not redesign: the template's spine is kept and the page carries
+     ITS OWN copy from _copy/dental-xrays.md.
+
+     THIS HUB HAS ONE CHILD, digital-dental-x-ray (sitemap.yaml, parent:
+     dental-xrays), so the template's four-up routing rail has only one page to
+     route to. But this is the one hub in the set whose COPY supplies a genuine
+     four-way comparison of its own: periapical, panoramic, cephalometric and
+     3D CBCT, four kinds of image that answer four different questions. The
+     template's four-up rail and its matrix are therefore spent on THOSE, and
+     band 05 carries the single child on its own. Every card in the four-up says
+     in its own label that it is a KIND OF IMAGE and not a separate service, so
+     no reader can mistake the row for four bookable products.
+
+     THE FOUR ATTRIBUTES on each card are re-cut from the template's cosmetic
+     axes (Changes / Made / Quoted per / From) to the ones that separate one
+     image from another: Shows / Covers / Used for / Dimension.
+
+     THE FOUR-CLINIC SCOPE IS NARROWED ON PURPOSE. The supplied meta description
+     attaches "available at all four clinics" to the whole imaging set. The
+     verified receipt (client-rules.json proof_rules.cbct-all-clinics) covers 3D
+     CBCT imaging specifically, and its restatement rule says do not extend the
+     scope to any other capability. This page therefore applies the four-clinic
+     claim to the cone-beam scan ONLY, and says so where a reader can see it.
+     The SEO owner has to either confirm the wider scope or narrow the meta.
+
+     WHERE THE COPY WENT. Hero to band 01. The four kinds of image to bands 02
+     and 03. What imaging finds, and the in-house argument, to band 04. The one
+     child service to band 05. Who reads the image, which on this field is the
+     whole argument, to band 06. Starting prices and the closing CTA to band 07.
+     The clinic list stays in the chrome.
+
+     LIBRARIES APPLIED, not merely named.
+       _RESPONSIVE-PATTERN-LIBRARY  Comp6, the table-to-cards reflow, recorded
+         MANDATORY on any four-column matrix, is why every cell in band 03
+         carries a data-label. G7, equal height with a mandatory mobile relax,
+         is why the four image cards share a baseline through .row--stretch.
+       _COMPOSITION-LAWS  L1, stacked split reading order, governs bands 04 and
+         06. L9, SELECTION-RATIONALE, is why every band carries an adjacent
+         ledger naming the pick, two real alternatives and why they lost.
+       _MODERN-WOW-SPEC  the ceiling the locked sheet already spends: the fixed
+         grain veil, the tint wash and the asymmetric index-ring opener.
+
+     IMAGERY. Five real first-party files from _imagery-map.json, three of them
+     radiographs. A radiograph is not identifiable clinical proof of a treatment
+     outcome, so it is not caught by the consent block on before-and-after
+     imagery, and no caption on this page presents any image as a result.
+
+     TERMINOLOGY. The form "3D X-ray" is banned by client-rules.json; the
+     canonical term is 3D CBCT imaging and it is used throughout. Plain X-ray
+     and digital dental X-ray remain valid on this page and are used as such.
+
+     HONESTY. This page prints NO peso figure. No starting figure for imaging
+     exists in the handoff, and whether imaging is billed separately or carried
+     inside a treatment fee is also unconfirmed, so neither is stated. Three
+     owner holds are shown ON the page: the missing figure, the billing model,
+     and who reports on a cone-beam volume.
+
+     ZERO closing CTA bands, ZERO dark bands and ZERO arc seams are authored
+     here. The chrome's .precta is the page's one closing band.
+     ============================================================================ -->
+
+<!-- pick: HERO-COMPOSITIONS.md #2 Split-text-right + photo-left (mirror) | considered: #23,#20,#28 | rigor: heavy | why: on this field the opening job is not to pose a choice or to prove a number, it is to show the ROOM, because the single fact that changes a reader's decision is that the machine is in the building rather than at an imaging center across town. #2 is the plainest catalogued split, one photograph carrying that fact and one column of prose beside it, and its plainness is the point on a page whose subject is a diagnostic step rather than a treatment. #23 comparison hero is the pediatric and endodontic hubs' pick and is deliberately not reused here: this page's four-way comparison is real but it belongs two bands down, where four cards can hold it, and forcing two of the four into a hero would rank them. #20 three-column text plus stat plus photo is the periodontic hub's pick and wants a standing fact column, and the one standing fact this page owns, the four-clinic cone-beam scope, is a claim with a receipt that must be stated with its exact scope rather than compressed into a hero panel. #28 embedded map hero would put a location above the diagnosis, and the locations hub already owns that job. -->
+<!-- FRONT OF HOUSE RESTRUCTURE. The hero is re-housed into the foh-hero contract: one
+     full-bleed scrimmed photographic band carrying the headline, a paper lockup under it for the
+     eyebrow, the lede and the existing buttons. .surface-dark is the page's one dark beat, which
+     verify-not-flat credits. The h1 carries no price and is unchanged.
+     WHAT LEFT THE HERO, and where each fact still stands, checked line by line before cutting:
+       - "An examination shows the surfaces / Radiography shows what sits underneath" and its list
+         of findings -> band 04, "The questions a picture answers", which states every one of them.
+       - "3D CBCT imaging is available at all four clinics" -> the availability table in band 03,
+         "All four clinics. This scope is verified for the cone-beam scan", which is the receipt-
+         scoped wording client-rules.json requires.
+       - "Four kinds of image are taken here, and each one answers a different question" -> the
+         band 02 lede, which opens on that sentence and then expands it.
+     The imaging-room .kit-slot is a DIFFERENT photograph to the assigned band image, so it is
+     kept below the band with its caption intact rather than deleted as a duplicate. The .col that
+     held only the buttons is removed, because the buttons are now in the lockup and an empty grid
+     cell still consumes the row gap. -->
+<section class="section surface-dark kit-hero foh-hero" id="s01" aria-labelledby="h01" data-surface="dark" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="foh-hero__stage">
+          <figure class="foh-hero__band">
+            <img class="foh-hero__img" src="../assets/generated/gen-hero-lightbox.jpg" alt="A dental radiograph glowing on a wall mounted viewing box in a darkened room." width="3136" height="1344" loading="eager" fetchpriority="high" decoding="async">
+            
+          </figure>
+          <div class="foh-hero__inner">
+              <h1 class="foh-hero__title" id="h01">Dental X-rays Philippines: Digital and 3D CBCT</h1>
+            </div>
+          <div class="foh-hero__lockup">
+            <p class="foh-hero__eyebrow">Digital Dental X-rays</p>
+            <p class="foh-hero__lede">Imaging is how a diagnosis gets made before a treatment is planned.</p>
+            <div class="kit-actions">
+              <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+              <a class="kit-btn kit-btn--secondary" href="#s03">See what each image answers</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #10 Services 4-col compact | considered: #9,#13,#45 | rigor: heavy | why: this is the one hub in the set whose copy hands over four true peers, and #10 is the entry built for exactly four with a lighter content load per column, which is what lets all four be seen on one screen and compared without scrolling back. The template's routing rail is reused verbatim in shape here, spec rail and all, because the comparison job is identical even though the things compared are images rather than child pages. #9 services 3-col cannot hold four peers without demoting one to a second row. #13 bento feature grid gives its cells different visual weights, and a periapical is not a lesser thing than a cone-beam volume, it is a different question. #45 category chips would strip each image to a label and lose the clause that says what it answers. HONESTY, load bearing and the reason this band is safe: these four are NOT bookable services and none of them is a child page of this hub. Every card says so in its own label, the row carries no route buttons, and the one real child service is routed separately in band 05. -->
+<section class="section section--cool" id="s02" aria-labelledby="h02" data-rise>
+  <div class="container">
+    <div class="row row--stretch">
+
+      <!-- MOVED HERE FROM THE OPENING SECTION, 2026-08-25, BYTE-VERBATIM (class attribute
+           included). The FOH pass added the photographic band but left this cell inside the
+           same section, where the released hero .container renders it flush to the viewport
+           with no gutter. It was NOT deleted: its photograph is a DIFFERENT file from the
+           assigned band image and occurs exactly once in this fragment, so the imaging room
+           would otherwise leave the page. It is inserted as the row's first cell and keeps
+           .col--span-6, so no existing cell in this row changes width or position; the
+           opener below it is .col--full and takes its own line as before. -->
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">02</span>
+            <div>
+              <span class="kit-eyebrow">What this field covers</span>
+              <h2 id="h02">Four images, four questions</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">Four kinds of image are taken here. They are not four versions of one picture: they cover different amounts of you, they answer different questions, and only one of them is three-dimensional.</p>
+      </div>
+
+      <div class="col col--span-6 col--media">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/generated/gen-xray-sensor-coil.jpg" alt="An intraoral x-ray sensor with its cable coiled on a dark surface." width="675" height="585" loading="eager" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>In the building</b><span>The unit and the screen that reads it are in the same room.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Kind of image, not a service</span>
+            <span class="kit-card__unit">Close</span>
+          </div>
+          <p class="kit-card__title">Periapical</p>
+          <p class="kit-card__body">One or two teeth, from the crown to the tip of the root. Used to look for infection at the end of a root and to check the result of a root canal.</p>
+          <dl class="kit-card__hours">
+            <div><dt>Shows</dt><dd>Root tip and the bone at it</dd></div>
+            <div><dt>Covers</dt><dd>One or two teeth</dd></div>
+            <div><dt>Used for</dt><dd>Infection, and checking a seal</dd></div>
+            <div><dt>Dimension</dt><dd>Flat</dd></div>
+          </dl>
+        </article>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Kind of image, not a service</span>
+            <span class="kit-card__unit">Wide</span>
+          </div>
+          <p class="kit-card__title">Panoramic</p>
+          <p class="kit-card__body">Both jaws in a single wide image, including the sinuses and the jaw joints. Used for a broad survey, for wisdom teeth and for planning across a whole arch.</p>
+          <dl class="kit-card__hours">
+            <div><dt>Shows</dt><dd>Both jaws in one sweep</dd></div>
+            <div><dt>Covers</dt><dd>Everything, at low detail</dd></div>
+            <div><dt>Used for</dt><dd>Surveys and wisdom teeth</dd></div>
+            <div><dt>Dimension</dt><dd>Flat</dd></div>
+          </dl>
+        </article>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Kind of image, not a service</span>
+            <span class="kit-card__unit">Profile</span>
+          </div>
+          <p class="kit-card__title">Cephalometric</p>
+          <p class="kit-card__body">A standardized side view of the skull. Used in orthodontic planning to measure the relationship between the jaws and the profile they produce.</p>
+          <dl class="kit-card__hours">
+            <div><dt>Shows</dt><dd>Jaw relationship in profile</dd></div>
+            <div><dt>Covers</dt><dd>The whole skull, from the side</dd></div>
+            <div><dt>Used for</dt><dd>Orthodontic measurement</dd></div>
+            <div><dt>Dimension</dt><dd>Flat</dd></div>
+          </dl>
+        </article>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Kind of image, not a service</span>
+            <span class="kit-card__unit">Volume</span>
+          </div>
+          <p class="kit-card__title">3D CBCT imaging</p>
+          <p class="kit-card__body">A three-dimensional volume of the jaw rather than a flat picture. Used wherever depth matters: implant planning, complex root anatomy, impacted teeth and the position of the inferior alveolar nerve.</p>
+          <dl class="kit-card__hours">
+            <div><dt>Shows</dt><dd>Depth, in any plane</dd></div>
+            <div><dt>Covers</dt><dd>A block of the jaw</dd></div>
+            <div><dt>Used for</dt><dd>Implants, nerves, impactions</dd></div>
+            <div><dt>Dimension</dt><dd>Three, and measurable</dd></div>
+          </dl>
+        </article>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: PRICING-SECTIONS.md #2 Comparison table to cards on mobile | considered: #4,#5,#6 | rigor: heavy | why: the cards above say what each image is; this band answers the question the cards cannot, which is what you get and what you accept for it, and only a matrix holds four options against four attributes at once. #2 is the catalogued band whose stance is that nothing is hidden, and Comp6 in _RESPONSIVE-PATTERN-LIBRARY records the table-to-cards reflow as MANDATORY at this width, which the locked sheet already ships, so no responsive strategy is invented here. #4 quote-only cost-model split refuses to print a price cell and this page's price cell has something honest to say, that no figure is supplied and that the billing model itself is unconfirmed. #5 plain-deal honesty stance is the right register for the money paragraph in band 07 and cannot hold four rows of clinical axes. #6 quote-configurator ladder is built for one treatment whose fee moves with options. SCOPE, load bearing: the availability column states the four-clinic scope for the cone-beam row ONLY, because that is the exact scope the receipt covers, and the other three rows say plainly that per-clinic availability is not evidenced rather than borrowing the CBCT scope. -->
+<section class="section section--warm" id="s03" aria-labelledby="h03" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">03</span>
+            <div>
+              <span class="kit-eyebrow">Side by side</span>
+              <h2 id="h03">The deciding matrix</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">The same four images on the axes that actually separate them. Read down a column, not across a brochure.</p>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-mesh" aria-hidden="true" style="background-image:var(--ds-grid)"></div>
+        <div class="kit-table__scroll">
+          <table class="kit-table">
+            <caption>The four images compared. This page prints no peso figure: no starting figure for imaging has been supplied, and how it is charged is unconfirmed.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Image</th>
+                <th scope="col">What it answers</th>
+                <th scope="col">How much of you it covers</th>
+                <th scope="col">Dimension</th>
+                <th scope="col">Where it is available</th>
+                <th scope="col">Starting price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Image"><b class="kit-strong">Periapical</b></td>
+                <td data-label="What it answers">Is there infection at the end of this root, and did the seal hold</td>
+                <td data-label="How much of you it covers">One or two teeth</td>
+                <td data-label="Dimension">Flat</td>
+                <td data-label="Where it is available">-</td>
+                <td data-label="Starting price">-</td>
+              </tr>
+              <tr>
+                <td data-label="Image"><b class="kit-strong">Panoramic</b></td>
+                <td data-label="What it answers">What is going on across both jaws, including the wisdom teeth</td>
+                <td data-label="How much of you it covers">Both jaws, the sinuses and the joints</td>
+                <td data-label="Dimension">Flat</td>
+                <td data-label="Where it is available">-</td>
+                <td data-label="Starting price">-</td>
+              </tr>
+              <tr>
+                <td data-label="Image"><b class="kit-strong">Cephalometric</b></td>
+                <td data-label="What it answers">How the jaws sit relative to each other, and the profile that results</td>
+                <td data-label="How much of you it covers">The skull, from the side</td>
+                <td data-label="Dimension">Flat</td>
+                <td data-label="Where it is available">-</td>
+                <td data-label="Starting price">-</td>
+              </tr>
+              <tr>
+                <td data-label="Image"><b class="kit-strong">Cone-beam scan</b></td>
+                <td data-label="What it answers">How deep, how curved, how close to the nerve, measured in millimeters</td>
+                <td data-label="How much of you it covers">A block of jaw, sliceable in any plane</td>
+                <td data-label="Dimension">Three</td>
+                <td data-label="Where it is available">All four clinics. This scope is verified for the cone-beam scan</td>
+                <td data-label="Starting price">-</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="kit-tags">
+          <span class="kit-tag kit-tag--accent kit-tab">Four-clinic scope is verified for the cone-beam scan only</span>
+        </div>
+      </div>
+
+      <div class="col col--span-4 col--media">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2023_03_x-ray-close-up-2021-08-26-18-11-44-utc-1.jpg" alt="A panoramic radiograph angled on a light box, showing a lower jaw with several bright metallic fillings and one molar tilted against its neighbour." width="1200" height="800" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>A flat survey</b><span>Wide coverage, at the detail a survey can carry.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--span-8">
+        <div class="kit-foot">
+          <p class="kit-micro">What a matrix cannot decide</p>
+          <p class="kit-body readw--wide">Which image you need is decided by the question in front of your dentist, not by which one shows the most. A cone-beam volume is not a better periapical; it is a different instrument with a different dose, and it is used where depth actually changes the plan.</p>
+          <p class="kit-body readw--wide">Nothing on this page is a request to have more imaging. The rule this practice works to is the one stated in the technology band: take the image that answers the question and no more than that.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #6 "Is this for me" qualifier | considered: #7,#45,#34 | rigor: heavy | why: a reader does not arrive wanting an image, they arrive with a question, and this band is the list that lets them find their own question in what imaging actually finds. #6 is the entry whose stated role is that self-check, and it is the right shape here precisely because the list is long and unglamorous: decay under a filling, a cyst at a root tip, bone loss measured rather than estimated. #7 problem framing states ONE problem at length and this band has seven. #45 category chips would strip each finding to a noun and lose the clause that makes it recognisable. #34 FAQ accordion would hide the list behind controls on a page whose whole argument is that things are easier to decide when you can see them. ADAPTATION: the band closes on the copy's own in-house paragraph as a tinted card, because on this field the argument is not that the practice owns a machine, it is that the image is read and used for planning inside the same appointment. -->
+<section class="section section--paper" id="s04" aria-labelledby="h04" data-rise>
+  <div class="container">
+    <div class="row row--split">
+
+      <div class="col col--copy">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">04</span>
+            <div>
+              <span class="kit-eyebrow">What imaging finds</span>
+              <h2 id="h04">The questions a picture answers</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Radiography is not a formality at the start of a plan. These are the findings it exists to catch, and most of them are invisible to an examination.</p>
+        <ul class="kit-list">
+          <li><b class="kit-strong">Hidden decay.</b> Between teeth and underneath existing fillings.</li>
+          <li><b class="kit-strong">Infection.</b> Or a cyst at a root tip.</li>
+          <li><b class="kit-strong">Bone loss.</b> From gum disease, measured rather than estimated.</li>
+          <li><b class="kit-strong">Impacted teeth.</b> Unerupted ones included, wisdom teeth among them.</li>
+          <li><b class="kit-strong">Bone volume.</b> And nerve position, before an extraction or an implant.</li>
+          <li><b class="kit-strong">Root angle.</b> Position and angulation, before orthodontic treatment.</li>
+          <li><b class="kit-strong">Old work.</b> The state of a restoration or a previous root canal.</li>
+        </ul>
+        <div class="kit-card kit-card--tint kit-card--pad" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Why it matters that it is here</span>
+            <svg class="kit-ring" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+            </svg>
+          </div>
+          <p class="kit-card__title">The reading does not wait on a third party.</p>
+          <p class="kit-card__body">Imaging is one of the nine fields listed on our treatments index, and it is done in-house. Your images are taken, read and used for planning inside the same appointment. Nothing is sent to an outside imaging center.</p>
+        </div>
+      </div>
+
+      <div class="col col--media">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--circle">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2022_07_doctor-holding-and-looking-at-dental-x-ray-2021-08-27-09-16-54-utc-1.jpg" alt="A panoramic radiograph filling the frame, showing both jaws with fixed braces and an archwire across the lower teeth, and a hand holding a pencil tip against one lower root." width="1200" height="799" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Read, not just taken</b><span>A finding is pointed out on the image it was found in.</span></figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #11 Service pillars 2-col with image | considered: #32,#10,#12 | rigor: heavy | why: one child service cannot fill a four-up rail, and #11 is the catalogued split whose media column STRETCHES beside its content, so a single card sits in a band without looking like three went missing. The card keeps the template's SPEC RAIL device in the locked .kit-card__hours, and the rail's four attributes are the ones that separate this service from the four IMAGES compared above: it is the service that produces any of them. #32 pricing single product is built for exactly one offer and was the strongest rival, but its shape leads with a figure and there is no figure to lead with. #10 services 4-col compact is the routing rail this hub cannot fill. #12 feature row with screenshot wants a system beside a reading, and this band is about the service rather than the machine, which band 03 and the technology page already carry. -->
+<section class="section section--warm" id="s05" aria-labelledby="h05" data-rise>
+  <div class="container">
+    <div class="row row--stretch">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">05</span>
+            <div>
+              <span class="kit-eyebrow">Treatments in this field</span>
+              <h2 id="h05">The one service, and what it produces</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">One service sits under imaging. It has its own page with the full process and the starting price.</p>
+      </div>
+
+      <div class="col col--span-7">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">The one route</span>
+            <span class="kit-card__unit">Diagnostic</span>
+          </div>
+          <p class="kit-card__title">Digital Dental X-ray</p>
+          <p class="kit-card__body">Digital radiography and cone-beam scanning for diagnosis and treatment planning. Digital sensors replace film, so the image is on screen in seconds and the radiation dose is lower than conventional film radiography. Images are stored with your record, which means the next set can be compared against this one rather than read in isolation.</p>
+          <dl class="kit-card__hours">
+            <div><dt>Produces</dt><dd>Any of the four images</dd></div>
+            <div><dt>Replaces</dt><dd>Film, with a digital sensor</dd></div>
+            <div><dt>Kept with</dt><dd>Your record, for comparison</dd></div>
+            <div><dt>From</dt><dd>-</dd></div>
+          </dl>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="digital-dental-x-ray.html"><span>Digital Dental X-ray</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-5 col--media">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/generated/gen-pano-unit.jpg" alt="A wall mounted panoramic x-ray unit standing in a darkened clinical imaging room." width="675" height="585" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Positioned first</b><span>The apron goes on and the head is squared before anything is taken.</span></figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: CARD-VARIATIONS.md #4 Circle-icon service card with arrow link | considered: #8,#3,#9 | rigor: heavy | why: the copy's argument on this field is that the judgment matters more than the picture, and it names three readings performed by three different specialists, the endodontist on the periapical, the oral surgeon on the cone-beam volume, the orthodontist on the cephalometric. Three named readings is three routes, and #4 is the catalogued card for a medical practice routing between fields: a light card whose circular mark, short clause and ruled link are a tap target rather than a paragraph. #8 team bio card is the shape this band would want if a reader were choosing a person, but no radiography-trained clinician is named in the handoff and imaging is read by the treating specialist rather than by a dedicated role, so a bio card would have to invent the role it displays. #3 minimal 3-up icon-top drops the card edge and these are onward navigation. #9 testimonial 3-up is barred: republishing testimonial CONTENT is blocked by B-2 for want of documented consent. ADAPTATION: the ruled rail under the cards carries the copy's own contrast, that a clinician interpreting your scan and planning your treatment is not what happens when imaging is bought as a standalone service elsewhere, and it is set as prose rather than a fourth card because it is the reason the three cards exist. -->
+<section class="section section--paper" id="s06" aria-labelledby="h06" data-rise>
+  <div class="container">
+    <div class="row row--stretch">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">06</span>
+            <div>
+              <span class="kit-eyebrow">The specialists in this field</span>
+              <h2 id="h06">An image is only as useful as the clinician reading it</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">A panoramic image shows a shadow over a root. Whether that shadow is an artifact of the machine, a cyst, or a socket that is healing normally is a judgment call, and the judgment matters more than the picture.</p>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card kit-card--tint" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Reads the periapical</span>
+            <svg class="kit-ring" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+            </svg>
+          </div>
+          <p class="kit-card__title">Endodontics</p>
+          <p class="kit-card__body">The endodontist reads the close image before opening the tooth, and again during treatment to confirm working length and check the final seal.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="endodontics.html"><span>Endodontics</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card kit-card--tint" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Reads the volume</span>
+            <svg class="kit-ring" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+            </svg>
+          </div>
+          <p class="kit-card__title">Oral Surgery</p>
+          <p class="kit-card__body">The oral surgeon reads the cone-beam volume before an extraction near the nerve, because the distance that decides the approach is measured in millimeters.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="oral-surgery.html"><span>Oral Surgery</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card kit-card--tint" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Reads the profile</span>
+            <svg class="kit-ring" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+            </svg>
+          </div>
+          <p class="kit-card__title">Orthodontics</p>
+          <p class="kit-card__body">The orthodontist reads the side view before deciding how the jaws should relate, which is a measurement problem before it is a treatment plan.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="orthodontics.html"><span>Orthodontics</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-7">
+        <div class="kit-foot">
+          <p class="kit-micro">Why that matters</p>
+          <p class="kit-body readw--wide">The clinician interpreting your scan is the clinician planning your treatment, which is not the case when imaging is bought as a standalone service from an outside center. Every specialist profile carries a full name, the field that clinician practices and their postnominal credentials.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="specialists.html"><span>See the specialist index</span></a>
+            <a class="kit-btn kit-btn--ghost" href="treatments.html"><span>All Treatments</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--span-5 col--media">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--circle">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2023_04_dentist-in-clinic-examines-x-ray-of-jaw-of-client-2021-11-02-17-00-47-utc.jpg" alt="An over-the-shoulder view of a blue-gloved clinician at a white desk, holding a stylus over a printed panoramic radiograph of a jaw beside an open laptop." width="1200" height="799" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>At the desk</b><span>The reading happens where the plan is written.</span></figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #26 Pull-quote section | considered: #40,#57,#8 | rigor: heavy | why: the self-pay fact is the one sentence on this page that changes whether a reader should be here at all, and on a field where a scan is usually taken at the same visit as the examination, it is the sentence a reader most needs before they sit down. #26 is the only entry that is a single statement standing alone with nothing else competing in the band, and the locked .kit-quote--display gives it the one typographic treatment nothing else on this page uses. #40 pre-footer CTA band is precisely the standalone closing band G-CTA1 counts, and the chrome's .precta already is this page's one, so picking it would put the page at two and fail closed. #57 standalone pull-quote is the same device catalogued as decoration between bands. #8 manifesto would recast a payment condition as a belief. ADAPTATION: #26 mandates no other content in the band, and this page adds the two rails it cannot put anywhere else, the technology summary that belongs beside the money because both are about what you are actually paying for, and the inline ask, because Collision A binds this body to zero closing bands. -->
+<section class="section section--warm" id="s07" aria-labelledby="h07" data-rise>
+  <div class="container">
+    <div class="row">
+      <div class="col col--full">
+
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">07</span>
+            <div>
+              <span class="kit-eyebrow">Paying for it</span>
+              <h2 id="h07">One condition that is not a matter of preference</h2>
+            </div>
+          </div>
+        </div>
+
+        <p class="kit-quote kit-quote--display readw">Elevate Dental does not accept HMO or dental insurance. All treatment is self-pay.</p>
+        <p class="kit-body readw">Imaging is usually taken at the same visit as the examination, which is exactly the point at which a payment condition should already be known rather than discovered.</p>
+
+        <div class="kit-sys" data-rise>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">01</span>
+            <p class="kit-sys__name">Digital radiography</p>
+            <p class="kit-sys__note">Direct digital capture in place of film. The picture appears in seconds, it can be enlarged and adjusted on screen while you are still in the chair, and the dose is lower than conventional film radiography.</p>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">02</span>
+            <p class="kit-sys__name">iTero intraoral scanner</p>
+            <p class="kit-sys__note">Records the surface shape of your teeth and gums as a digital impression. It replaces impression material, not radiography, and it uses no radiation at all.</p>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">03</span>
+            <p class="kit-sys__name">RayFace facial scanner</p>
+            <p class="kit-sys__note">Records the proportions of your face in three dimensions, for restorative and smile-design planning. It is a camera system rather than a radiographic one.</p>
+          </div>
+        </div>
+
+        <div class="kit-foot">
+          <p class="kit-micro">What this page does not print</p>
+          <p class="kit-body readw--wide">No starting figure for imaging exists in the supplied handoff, so no number appears anywhere above. Whether imaging is billed separately or carried inside a treatment fee is also unconfirmed and is deliberately not stated.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="prices.html"><span>See the full price list</span></a>
+            <a class="kit-btn kit-btn--ghost" href="technology.html"><span>Full detail on each system</span></a>
+          </div>
+        </div>
+
+        <div class="kit-inline">
+          <p>Imaging is the first step of most treatment plans, and it is usually taken at the same appointment as the examination. The images, the reading and the plan that follows come from the specialist who would do the work.</p>
+          <div class="kit-inline__acts">
+            <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+            <a class="kit-btn kit-btn--ghost" href="contact.html"><span>Call Us</span></a>
+          </div>
+        </div>
+
+        <div class="kit-foot">
+          <p class="kit-micro">The outcome</p>
+          <p class="kit-body readw--wide">Imaging is handled in-house by named specialists. Book one consultation instead of chasing a referral. Your case is finished by the people who assessed it.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

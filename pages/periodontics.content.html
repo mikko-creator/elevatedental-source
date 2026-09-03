@@ -1,0 +1,545 @@
+<!--META {"title":"Periodontics Philippines | Gum Disease Treatment","desc":"Treat bleeding and receding gums with scaling and root planing, plus Sol laser gum contouring where indicated.","noindex":true}-->
+<!-- TITLE and DESC are the LOCKED values from _handoff/seo-enrichment.md section 1, the SEO SSOT.
+     The SSOT separator is an en dash and renders here as a pipe, because verify-no-dashes is
+     registered on this build. Only the SEPARATOR CHARACTER changed; no word was altered, added,
+     removed or reordered.
+     The key is "desc" and NOT "description": build.mjs renders esc(meta.desc), and its JSON branch
+     does not alias description to desc, so a "description" key ships an EMPTY meta description
+     while looking correct in the fragment.
+     noindex is set on EVERY page because this publishes to a PUBLIC preview URL while the pages
+     carry representative market prices rather than this clinic's own figures. robots.txt cannot
+     carry that load: crawlers read it only at the origin root, and this ships to a project
+     subpath, so the disallow-all there is inert. noindex is the protection that actually works. -->
+<!-- ============================================================================
+     PERIODONTICS. T-HUB, promoted from the owner-stamped template
+     _design/_tournament/templates/T-HUB/c (concept C, "THE COMPARISON").
+     PROMOTION, not redesign: the template's spine is kept and the page carries
+     ITS OWN copy from _copy/periodontics.md.
+
+     THIS HUB HAS ONE CHILD. sitemap.yaml gives periodontics exactly one page
+     with parent: periodontics, tooth-scaling-and-root-planning. The template's
+     four-up routing rail is therefore refused. The comparison the reader
+     actually needs is supplied by the copy itself, in one sentence: this is the
+     treatment for pockets that a routine cleaning cannot reach. So the matrix in
+     band 04 sets the deep clean beside the ROUTINE clean, which is a real page
+     in this build (oral-prophylaxis, under general dentistry) and the thing most
+     readers assume they are already getting. The row that is not this field's
+     work says so in its own cell and routes to where it belongs.
+
+     THE FOUR ATTRIBUTES on the child card are re-cut from the template's
+     cosmetic axes (Changes / Made / Quoted per / From) to the ones that separate
+     a deep clean from a routine one: Reaches / Done under / Checked after /
+     From.
+
+     WHERE THE COPY WENT. Hero to band 01. What this field covers, the pocket
+     mechanism and the seven presentations, to band 02. Treatments in this field
+     to band 03, and the routine-versus-deep matrix to band 04. The copy's own
+     stage argument, that bleeding is controllable and bone loss is not
+     reversible by itself, to band 05, which is this page's honest half. The
+     specialists to band 06. Technology to band 07. Starting prices and the
+     closing CTA to band 08. The clinic list stays in the chrome.
+
+     LIBRARIES APPLIED, not merely named.
+       _RESPONSIVE-PATTERN-LIBRARY  Comp6, the table-to-cards reflow, recorded
+         MANDATORY on any multi-column matrix, is why every cell in band 04
+         carries a data-label. G7, equal height with a mandatory mobile relax,
+         governs the paired stage cards in band 05.
+       _COMPOSITION-LAWS  L1, stacked split reading order, governs bands 02 and
+         07. L9, SELECTION-RATIONALE, is why every band carries an adjacent
+         ledger naming the pick, two real alternatives and why they lost.
+       _MODERN-WOW-SPEC  the ceiling the locked sheet already spends: the fixed
+         grain veil, the tint wash and the asymmetric index-ring opener.
+
+     IMAGERY. Five real first-party files from _imagery-map.json. Two of them are
+     medical ILLUSTRATIONS rather than photographs, and their alt text says so
+     rather than letting a rendering pass as a clinical photograph of a patient.
+
+     HONESTY. This page prints NO peso figure. No starting figure for the one
+     treatment exists anywhere in the supplied handoff, so the price cell says
+     that in visible content instead of carrying a number. No outcome or
+     reversal promise is made: the copy's line that bone does not come back by
+     itself is kept because it is the honest half of the argument. The self-pay
+     truth is stated in band 08 in its canonical wording. Three owner holds are
+     shown ON the page: the missing figure, the per-field roster, and the
+     free-consultation term the copy flags as agent-derived.
+
+     ZERO closing CTA bands, ZERO dark bands and ZERO arc seams are authored
+     here. The chrome's .precta is the page's one closing band.
+     ============================================================================ -->
+
+<!-- pick: HERO-COMPOSITIONS.md #20 Three-column hero (text + stat + photo) | considered: #23,#2,#22 | rigor: heavy | why: this field's opening problem is not a fork between treatments, it is that the disease is SILENT, so the hero has to carry a fact the reader would not otherwise believe (a little blood when you brush, and nothing that hurts) beside the picture that makes it concrete. #20 is the catalogued hero with a third column for exactly that, a standing fact set apart from the prose, and here the fact column carries the stage the reader is probably at rather than a number, since every countable figure this brand owns is rationed by client-rules.json to other slugs. #23 comparison hero is the pediatric and endodontic hubs' pick and is deliberately not reused: those pages open on a genuine choice between two treatments, and here there is one treatment and a question of WHEN. #2 split-text-right with photo-left is the plain two-column form and would work, but it has nowhere to stand the silent-disease fact except inside the paragraph, which is where a reader skims past it. #22 statistics-heavy carries no photograph at all, which the sector reconciliation's imagery floor fails outright on a credibility vertical. -->
+<!-- FRONT OF HOUSE, 2026-08-25. The opener is re-composed to the foh-hero contract. The #20
+     pick above is superseded for the hero only.
+     THE HERO IMAGE is the bleeding-gum frame this page already owns at s02, and its alt is
+     reused verbatim from that use. It carries no claim: it shows the one early sign the page
+     is written around.
+     THE OLD MEDIA. The .kit-slot held a DIFFERENT file (periodontics-main, the tablet
+     explainer) and was removed on judgement: under a full-bleed band with no copy left
+     beside it its .col--span-4 wraps as an orphan, and its caption's point - that the stages
+     are explained against your own measurements - is s07's whole subject, "Measurement
+     first, then instrumentation". Its .col--media went with it rather than leaving an empty
+     grid cell that still eats the 40px row gap.
+     THE FACT CARD went the same way and loses nothing: s05 "The difference the timing makes"
+     states both of its sentences at length, one panel headed "At the bleeding stage" and the
+     other carrying "Left alone the condition takes bone, and the bone does not come back by
+     itself" almost word for word.
+     THE KIT-BODY is carried too: the bleeding sign at s02's symptom list ("Gums that bleed
+     when you brush or floss") and again at the closing block ("Bleeding gums are worth an
+     assessment while they are still only bleeding"), and the it-does-not-hurt point at s05
+     ("an appointment for something that does not hurt is worth making").
+     The actions moved out of their own .col--full and into the lockup, unchanged.
+     No fact left the page. -->
+<section class="section surface-dark kit-hero foh-hero" id="s01" aria-labelledby="h01" data-surface="dark" data-rise>
+  <div class="container">
+    <div class="row">
+      <div class="col col--full">
+        <div class="foh-hero__stage">
+          <figure class="foh-hero__band">
+            <img class="foh-hero__img" src="../assets/generated/gen-hero-perio-row.jpg" alt="A set of slim periodontal instruments and a graduated probe fanned across a round brushed brass tray." width="3136" height="1344" loading="eager" fetchpriority="high" decoding="async">
+            
+          </figure>
+          <div class="foh-hero__inner">
+              <h1 class="foh-hero__title" id="h01">Periodontics Philippines: Gum Disease Treatment</h1>
+            </div>
+          <div class="foh-hero__lockup">
+            <p class="foh-hero__eyebrow">Periodontics</p>
+            <p class="foh-hero__lede">Periodontics treats the gum and bone that hold your teeth in place.</p>
+            <div class="kit-actions">
+              <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+              <a class="kit-btn kit-btn--secondary" href="#s04">Routine clean or deep clean</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #7 Problem framing | considered: #6,#12,#45 | rigor: heavy | why: this band has a MECHANISM to explain before any symptom list means anything, that bacteria harden into calculus at the gum margin, the body's response breaks down the attachment, and a pocket forms that a toothbrush can no longer reach the bottom of. #7 is the entry built to state a problem at length and in the page's own voice before naming a product, and the mechanism is the reason every row of the list that follows matters. #6 the qualifier is the pediatric hub's pick and sorts readers by profile, but here almost every reader has the same profile, gums that bleed, and the sort that helps is by DEPTH rather than by person. #12 feature row with screenshot wants a system beside a reading and this band has no instrument in it yet. #45 category chips would strip each presentation to a label and lose the clause that lets a reader recognise their own. ADAPTATION: the list is set AFTER the mechanism rather than before it, which reverses the usual order of this pattern, because a pocket that a brush cannot reach is the fact that makes "bleeding when you floss" worth an appointment. -->
+<section class="section section--cool" id="s02" aria-labelledby="h02" data-rise>
+  <div class="container">
+    <div class="row row--split">
+
+      <div class="col col--copy">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">02</span>
+            <div>
+              <span class="kit-eyebrow">What this field covers</span>
+              <h2 id="h02">Why a pocket is the whole problem</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Your teeth are held by fibers anchored into bone. Bacteria collect at the gum margin and harden into calculus, and the body's response to that deposit breaks down the attachment. The gum separates from the tooth and a pocket forms.</p>
+        <p class="kit-body readw">Once a pocket is deep enough, a toothbrush cannot reach the bottom of it, and no amount of brushing at home will.</p>
+        <ul class="kit-list">
+          <li><b class="kit-strong">Bleeding.</b> Gums that bleed when you brush or floss.</li>
+          <li><b class="kit-strong">Recession.</b> Gums that have receded and left the root exposed.</li>
+          <li><b class="kit-strong">Depth.</b> Pockets between gum and tooth that a normal clean cannot reach.</li>
+          <li><b class="kit-strong">Breath.</b> Persistent bad breath coming from bacteria in the pocket itself.</li>
+          <li><b class="kit-strong">Movement.</b> Teeth that have started to loosen or drift.</li>
+          <li><b class="kit-strong">Contour.</b> An uneven or heavy gum line, where contouring is indicated.</li>
+          <li><b class="kit-strong">Around an implant.</b> The gum and bone surrounding one already placed.</li>
+        </ul>
+        <div class="kit-card kit-card--tint kit-card--pad" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Why this field sits underneath</span>
+            <svg class="kit-ring" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+            </svg>
+          </div>
+          <p class="kit-card__title">Most other dental work is built on top of this one.</p>
+          <p class="kit-card__body">Periodontics is one of the nine fields of dentistry practiced in-house at Elevate Dental, and it sits underneath most other dental work. Crowns, implants and orthodontic treatment all depend on stable bone. Having the periodontist in the same clinic means the foundation is assessed before anything is planned on top of it, rather than after a restoration has already been made.</p>
+        </div>
+      </div>
+
+      <div class="col col--media">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--circle">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2023_05_woman-mouth-with-bleeding-gums-during-teeth-brushing-periodontal-disease-avitaminosis-gingivitis.jpg" alt="Close-up of a smiling mouth with a spot of blood at the gum between two upper front teeth, and a blue toothbrush held in front showing red on its bristles." width="1200" height="800" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>The first sign</b><span>Blood on the brush is the stage where this is easiest to control.</span></figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #11 Service pillars 2-col with image | considered: #10,#32,#9 | rigor: heavy | why: one child treatment cannot fill a four-up rail, and #11 is the catalogued split whose media column STRETCHES beside its content, which is what lets a single card sit in a band without looking like three cards went missing. The card keeps the template's own device, the SPEC RAIL in the locked .kit-card__hours, because the rail is what makes the next band's matrix legible: the same four attributes appear in the same order in both places, so the reader learns the axes here and applies them there. #10 services 4-col compact is the template's own pick and is refused for the obvious arithmetic reason. #32 pricing single product is built for exactly one offer and was the strongest rival, but its shape leads with a figure, and this treatment has no supplied figure at all, so the band would lead with a blank. #9 services 3-col has the same problem as #10 one column smaller. MEDIA NOTE: the image beside the card is a medical ILLUSTRATION, not a photograph, and both the alt text and the caption say so, because a rendering of calculus being lifted from a root is a diagram of the mechanism rather than a picture of a patient. -->
+<section class="section section--paper" id="s03" aria-labelledby="h03" data-rise>
+  <div class="container">
+    <div class="row row--stretch">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">03</span>
+            <div>
+              <span class="kit-eyebrow">Treatments in this field</span>
+              <h2 id="h03">The one treatment, and what it reaches</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">One treatment sits under periodontics. It has its own page with the full process, the timeline and the starting price.</p>
+      </div>
+
+      <div class="col col--span-5 col--media">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/generated/gen-scaler-macro.jpg" alt="An ultrasonic scaler tip in close up with fine water droplets against a dark background." width="675" height="585" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Illustration, not a photograph</b><span>A rendering of what the instrument reaches below the margin.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--span-7">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">The one route</span>
+            <span class="kit-card__unit">Below the margin</span>
+          </div>
+          <p class="kit-card__title">Scaling and Root Planing</p>
+          <p class="kit-card__body">Deep cleaning below the gumline. Hardened deposits are removed from the root surface and the root is smoothed, so the tissue has a clean surface to reattach to. This is the treatment for pockets that a routine cleaning cannot reach. It is worked through in sections, with local anesthesia where the depth calls for it, and the pockets are re-measured afterwards to check the response.</p>
+          <dl class="kit-card__hours">
+            <div><dt>Reaches</dt><dd>The root below the margin</dd></div>
+            <div><dt>Done under</dt><dd>Local anesthesia where needed</dd></div>
+            <div><dt>Checked after</dt><dd>Pockets re-measured</dd></div>
+            <div><dt>From</dt><dd>-</dd></div>
+          </dl>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="tooth-scaling-and-root-planning.html"><span>Scaling and Root Planing</span></a>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: PRICING-SECTIONS.md #2 Comparison table to cards on mobile | considered: #5,#4,#3 | rigor: heavy | why: the single most common misunderstanding this field meets is a reader who believes the clean they already have twice a year is the same thing, and only a matrix can put the two side by side on the axes that separate them. #2 is the catalogued band whose stance is that nothing is hidden, every option against every attribute in one semantic table, and Comp6 in _RESPONSIVE-PATTERN-LIBRARY records the table-to-cards reflow as MANDATORY on a matrix this wide, which the locked sheet already implements. #5 plain-deal honesty stance is the right register for the money paragraph in band 08 and carries no axes. #4 quote-only cost-model split refuses to print a price cell, and the honest content of this page's price cell is an admission, which is worth printing. #3 monthly and annual billing toggle is a subscription device. HONESTY, load bearing: the second row is NOT a treatment in this field. A routine clean is general dentistry, it has its own page in this build, and the table says so in its own cell rather than letting a reader assume periodontics owns both. Neither row carries a number, because no starting figure for either is supplied in the handoff. -->
+<section class="section section--warm" id="s04" aria-labelledby="h04" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">04</span>
+            <div>
+              <span class="kit-eyebrow">Side by side</span>
+              <h2 id="h04">Routine clean, deep clean</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">The two cleanings on the axes that actually separate them. Read down a column, not across a leaflet.</p>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-mesh" aria-hidden="true" style="background-image:var(--ds-grid)"></div>
+        <div class="kit-table__scroll">
+          <table class="kit-table">
+            <caption>The routine clean beside the deep clean. Neither cell in the price column carries a figure, because none has been supplied for either treatment.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Cleaning</th>
+                <th scope="col">What it removes</th>
+                <th scope="col">How far below the margin</th>
+                <th scope="col">Anesthesia</th>
+                <th scope="col">Which field performs it</th>
+                <th scope="col">Starting price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Cleaning"><b class="kit-strong">Scaling and root planing</b></td>
+                <td data-label="What it removes">Hardened deposits from the root surface, which is then smoothed</td>
+                <td data-label="How far below the margin">To the base of the pocket, section by section</td>
+                <td data-label="Anesthesia">Local, where the depth calls for it</td>
+                <td data-label="Which field performs it">Periodontics, on this page</td>
+                <td data-label="Starting price">-</td>
+              </tr>
+              <tr>
+                <td data-label="Cleaning"><b class="kit-strong">A routine cleaning</b></td>
+                <td data-label="What it removes">Deposit and stain at and just inside the visible margin</td>
+                <td data-label="How far below the margin">Only as far as an instrument reaches comfortably</td>
+                <td data-label="Anesthesia">Not usually needed</td>
+                <td data-label="Which field performs it">General dentistry, on its own page</td>
+                <td data-label="Starting price">Quoted on that page</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="kit-tags">
+          <span class="kit-tag kit-tag--accent kit-tab">One deep clean is not a longer version of the other</span>
+        </div>
+      </div>
+
+      <div class="col col--span-7">
+        <div class="kit-foot">
+          <p class="kit-micro">What the table cannot decide</p>
+          <p class="kit-body readw--wide">Which row you belong in is a measurement, not a preference. Depth is charted around every tooth before anything is decided, and a mouth can need one row in some sections and the other row everywhere else.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="oral-prophylaxis.html"><span>Oral Prophylaxis</span></a>
+            <a class="kit-btn kit-btn--ghost" href="prices.html"><span>Treatment Prices</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #15 Comparison table (us vs them) | considered: #29,#27,#14 | rigor: heavy | why: the strongest thing this hub can say is the thing that costs it nothing to say and everything to hide, that treatment at the bleeding stage controls the disease and that bone already lost does not come back by itself. #15 is the only entry that gives an opposition an actual shape, two peer panels of equal weight with the deciding question named between them, and here the two panels are two MOMENTS rather than two products, which is the honest axis on a disease whose whole difficulty is timing. #29 before-and-after pair is barred outright: proof_rules.clinical-image-library is blocked pending a documented owner authorisation, and a gum before-and-after is exactly the imagery that rule exists to stop. #27 numbered process steps would turn a fork into a sequence and imply that everyone passes through both stages, which is the opposite of the argument. #14 tabbed content would hide the second panel behind a control. RE-REGISTERED: #15 is authored as us versus THEM, and there is no THEM; competitorFraming.tierBDensityCap is zero site wide, so the axis is re-pointed at two stages of the same condition in the same practice. NO REVERSAL is promised on either panel, because none is evidenced. -->
+<section class="section section--paper" id="s05" aria-labelledby="h05" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">05</span>
+            <div>
+              <span class="kit-eyebrow">The honest half</span>
+              <h2 id="h05">The difference the timing makes</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">The same condition, met at two different moments. What changes between them is not the treatment, it is what the treatment can still achieve.</p>
+      </div>
+
+      <div class="col col--span-4">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2022_10_visual-plastic-prop-of-gum-and-teeth-presented-by-2022-09-29-20-18-07-utc.jpg" alt="Blue-gloved hands holding a plastic teaching block of three molars set into an orange gum section, in front of a treatment chair." width="1200" height="800" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Held up, not guessed at</b><span>A teaching model of what the chart is describing.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--span-4 col--stretch">
+        <div class="kit-card kit-card--pad" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Met early</span>
+            <span class="kit-card__unit">Controlled</span>
+          </div>
+          <p class="kit-card__title">At the bleeding stage</p>
+          <p class="kit-card__body">The attachment is inflamed but the supporting bone is largely intact, and cleaning under the margin plus a maintenance interval is what controls it. The work is smaller, the appointments are fewer, and what is being protected is still there.</p>
+        </div>
+      </div>
+
+      <div class="col col--span-4 col--stretch">
+        <div class="kit-card kit-card--pad" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Met late</span>
+            <span class="kit-card__unit">Managed</span>
+          </div>
+          <p class="kit-card__title">After bone has gone</p>
+          <p class="kit-card__body">Left alone the condition takes bone, and the bone does not come back by itself. Treatment then aims at stopping further loss and keeping what remains, which is a different goal from the one above and is described as such rather than dressed up.</p>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Why a hub page says this out loud</p>
+          <p class="kit-body readw--wide">Being told plainly that one stage is controllable and the other is manageable is not a scare tactic and it is not an upsell. It is the reason an appointment for something that does not hurt is worth making, and you are better served reading it here than hearing it after a chart has been filled in.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: CARD-VARIATIONS.md #4 Circle-icon service card with arrow link | considered: #3,#8,#5 | rigor: heavy | why: the copy's own sentence, that crowns, implants and orthodontic treatment all depend on stable bone, names three fields that sit ON TOP of this one, and #4 is the catalogued card for a medical practice routing between products: a light card whose circular mark, short clause and ruled link are a tap target rather than a paragraph. Three cards for exactly three named dependents, no padding. The circular mark is why the pick fits this brand: this system already owns one, the index ring, drawn from tokens as inline SVG, so no icon set is minted. #3 minimal 3-up icon-top drops the card edge and these are onward navigation. #8 team bio card would put faces here and no periodontist is named in the supplied handoff, so the faces would be borrowed. #5 stat tile 4-up needs four countable facts, and the counts this brand owns are rationed to other slugs. ADAPTATION: the argument that ends the band is the copy's own charting point, that gum disease is diagnosed by measurement rather than by appearance, and it is set as a ruled rail rather than a fourth card, because it is the reason the three cards route anywhere at all. -->
+<section class="section section--cool" id="s06" aria-labelledby="h06" data-rise>
+  <div class="container">
+    <div class="row row--stretch">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">06</span>
+            <div>
+              <span class="kit-eyebrow">The specialists in this field</span>
+              <h2 id="h06">What is built on top of this</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">Gum disease is diagnosed by measurement, not by appearance. A periodontist charts the depth of every pocket around every tooth, reads bone level against the imaging, and decides from those numbers what the tissue can recover and what it cannot. Gums can look healthy over a pocket that is losing bone.</p>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card kit-card--tint" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">If a crown is planned</span>
+            <svg class="kit-ring" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+            </svg>
+          </div>
+          <p class="kit-card__title">Prosthodontics</p>
+          <p class="kit-card__body">Crowns, bridges and dentures are measured to a margin that has to stay where it is. That is why the foundation is assessed before the restoration is designed rather than after.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="prosthodontics.html"><span>Prosthodontics</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card kit-card--tint" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">If an implant is planned</span>
+            <svg class="kit-ring" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+            </svg>
+          </div>
+          <p class="kit-card__title">Oral Surgery</p>
+          <p class="kit-card__body">An implant is anchored in bone, so how much bone there is and how healthy the tissue around it is are the first questions asked, and they are asked again at every review afterwards.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="oral-surgery.html"><span>Oral Surgery</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-4">
+        <article class="kit-card kit-card--tint" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">If teeth are being moved</span>
+            <svg class="kit-ring" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+              <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="5"/>
+            </svg>
+          </div>
+          <p class="kit-card__title">Orthodontics</p>
+          <p class="kit-card__body">Moving a tooth means moving it through bone. Treatment that begins on an untreated foundation is planned on ground that is still changing, so the order matters.</p>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="orthodontics.html"><span>Orthodontics</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Who reads the chart</p>
+          <p class="kit-body readw--wide">A general practice that finds deep pockets sends the case out to somebody else, and the treatment restarts with a clinician who has not seen the chart. Here the charting, the treatment and the maintenance schedule stay with one team. Every specialist profile carries a full name, the field that clinician practices and their postnominal credentials.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="specialists.html"><span>See the specialists in periodontics</span></a>
+            <a class="kit-btn kit-btn--ghost" href="treatments.html"><span>All Treatments</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #13 Bento feature grid | considered: #9,#12,#3 | rigor: heavy | why: three named systems of very unlike weight have to read as one instrument panel, an imaging system, a laser and a maintenance device, and the locked structural sheet already implements that shape as .kit-sys, a hairline-gapped lattice where the GAP is the rule. #13 is the catalogued grid whose cells are unequal in content but equal in weight, which is exactly the relationship between a cone-beam scanner and a powder jet. #9 services 3-col would give three unlike instruments identical column weight and read as a product row. #12 feature row with screenshot is the endodontic hub's pick for its technology band, where the imaging IS the plan; here the measurement is done by hand with a probe and the instruments support it, so the quieter lattice is right and reusing #12 would flatten the difference between the two pages. #3 minimal icon-top needs an icon per system and this build owns no icon set. CLEARANCE: all three are cleared nominative-text-only in client-rules.json third_party_marks, and the Sol laser carries NO manufacturer attribution because the handoff records that attribution as unverified. -->
+<section class="section section--paper" id="s07" aria-labelledby="h07" data-rise>
+  <div class="container">
+    <div class="row row--split">
+
+      <div class="col col--copy">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">07</span>
+            <div>
+              <span class="kit-eyebrow">Technology used here</span>
+              <h2 id="h07">Measurement first, then instrumentation</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Periodontal treatment is measured before it is worked, and the instruments are chosen for the stage the tissue is at.</p>
+        <div class="kit-sys" data-rise>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">01</span>
+            <p class="kit-sys__name">3D CBCT imaging</p>
+            <p class="kit-sys__note">Shows bone level around each root in three dimensions, so the extent of the loss is measured rather than estimated from a flat film. Available at all four clinics.</p>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">02</span>
+            <p class="kit-sys__name">Sol Dental Laser</p>
+            <p class="kit-sys__note">Used for gum contouring where it is indicated, and for soft-tissue work that would otherwise call for a scalpel and sutures.</p>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">03</span>
+            <p class="kit-sys__name">AirFlow (guided biofilm therapy)</p>
+            <p class="kit-sys__note">Lifts biofilm and surface staining with a controlled jet of air, water and fine powder. Used at maintenance appointments while the tissue is still settling and instrumentation would be heavy-handed.</p>
+          </div>
+        </div>
+        <div class="kit-foot">
+          <p class="kit-micro">Where the volume is taken</p>
+          <p class="kit-body readw--wide">The cone-beam scan is available at Mitsukoshi BGC, Shangri-La Plaza, Bonifacio Stopover BGC and Alabang Town Center, so bone level is measured in the same building as the charting.</p>
+          <p class="kit-status"><span class="kit-status__dot" aria-hidden="true"></span>3D CBCT imaging, all four clinics</p>
+        </div>
+        <div class="kit-actions kit-actions--tight">
+          <a class="kit-btn kit-btn--ghost" href="technology.html"><span>Full detail on each system</span></a>
+          <a class="kit-btn kit-btn--ghost" href="airflow.html"><span>Airflow Teeth Cleaning</span></a>
+        </div>
+      </div>
+
+      <div class="col col--media">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--arch">
+            <img class="kit-slot__img" src="../assets/generated/gen-scaler-vs-polisher.jpg" alt="An ultrasonic scaler tip and a polishing handpiece laid side by side on dark slate." width="768" height="512" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Handed the mirror</b><span>What was measured is shown back to you at the chair.</span></figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #26 Pull-quote section | considered: #40,#57,#41 | rigor: heavy | why: the self-pay fact is the one sentence on this page that changes whether a reader should be here at all, and on a condition that needs a maintenance interval rather than a single visit, a payment condition discovered late is discovered several appointments in. #26 is the only entry that is a single statement standing alone with nothing else competing in the band, and the locked .kit-quote--display gives it the one typographic treatment nothing else on this page uses. #40 pre-footer CTA band is precisely the standalone closing band G-CTA1 counts, and the chrome's .precta already is this page's one, so picking it would put the page at two and fail closed. #41 closing CTA has the same problem for the same reason. #57 standalone pull-quote is the same device catalogued as a decorative transition, and this is a qualifying fact with consequences. ADAPTATION recorded rather than left for the gate: #26 mandates no other content in the band, and three ruled rails are added beneath the statement, one on what this page does not print, one on the unconfirmed consultation term, and one folding the page's single mid-page ask inline, because Collision A binds this body to zero closing bands. -->
+<section class="section section--warm" id="s08" aria-labelledby="h08" data-rise>
+  <div class="container">
+    <div class="row">
+      <div class="col col--full">
+
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">08</span>
+            <div>
+              <span class="kit-eyebrow">Paying for it</span>
+              <h2 id="h08">One condition that is not a matter of preference</h2>
+            </div>
+          </div>
+        </div>
+
+        <p class="kit-quote kit-quote--display readw">Elevate Dental does not accept HMO or dental insurance. All treatment is self-pay.</p>
+        <p class="kit-body readw">This condition is managed over a schedule rather than settled in one visit, so the payment terms matter more here than on a page about a single appointment. They are stated in the body for that reason.</p>
+
+        <div class="kit-foot">
+          <p class="kit-micro">What this page does not print</p>
+          <p class="kit-body readw--wide">The handoff carries no starting figure for this treatment, so this page prints no peso figure at all. Where a figure lands it will be a starting point rather than a quote, and the final fee will depend on how many sections are worked and how deep they are.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="prices.html"><span>See the full price list</span></a>
+          </div>
+        </div>
+
+        <div class="kit-inline">
+          <p>Bleeding gums are worth an assessment while they are still only bleeding. The charting, the plan and the quote come from the specialist who would do the work.</p>
+          <div class="kit-inline__acts">
+            <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+            <a class="kit-btn kit-btn--ghost" href="contact.html"><span>Call Us</span></a>
+          </div>
+        </div>
+
+        <div class="kit-foot">
+          <p class="kit-micro">The outcome</p>
+          <p class="kit-body readw--wide">Periodontics is handled in-house by named specialists. Book one consultation instead of chasing a referral. Your case is finished by the people who assessed it.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

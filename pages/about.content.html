@@ -1,0 +1,554 @@
+<!--META {"title":"About Elevate Dental | Nine Disciplines, Four Clinics","desc":"Who we are, how we work and why complex cases are finished in-house rather than referred out. Our mission and our team.","noindex":true}-->
+<!-- TITLE and DESC are the LOCKED values from _handoff/seo-enrichment.md section 1, the SEO SSOT.
+     The SSOT separator is an en dash and renders here as a pipe, because verify-no-dashes is
+     registered on this build. Only the SEPARATOR CHARACTER changed; no word was altered, added,
+     removed or reordered.
+     The key is "desc" and NOT "description": build.mjs renders esc(meta.desc), and its JSON branch
+     does not alias description to desc, so a "description" key ships an EMPTY meta description
+     while looking correct in the fragment.
+     noindex is set on EVERY page because this publishes to a PUBLIC preview URL while the pages
+     carry representative market prices rather than this clinic's own figures. robots.txt cannot
+     carry that load: crawlers read it only at the origin root, and this ships to a project
+     subpath, so the disallow-all there is inert. noindex is the protection that actually works. -->
+<!-- ============================================================================
+     THE BODY. Eight sections, laid out on _copy/about.md, in the order the copy
+     fixes them. Every section obeys the forced grammar
+
+         section  ->  div.container  ->  div.row  ->  div.col  ->  OBJECT
+
+     and carries EXACTLY ONE .container and EXACTLY ONE .row, because the locked
+     sheet's edge-margin zeroing (.section .col > :first-child) fires on every .col
+     in a section, so a second .row would have its leading object's margin removed
+     and the two rows would butt. Multi-band sections are composed inside the ONE
+     12-track row with .col--full bands and .col--span-N cells, and the interval
+     between bands is the row GAP rather than a margin.
+
+     THE CONCEPT, EXPRESSED AS PAGE ORDER. THE DIRECT ANSWER. The claim is stated
+     once, in the hero, in its locked wording. Every band after it is a RECEIPT for
+     one part of that claim, and nothing after the hero restates a number: the four
+     clinics are given as four real addresses, hours and direct lines; the bench is
+     given as every discipline named in a ruled lattice; the equipment is given as
+     eight systems named individually in a real table. The page proves the scale by
+     SHOWING the things that are being counted.
+
+     ZERO closing CTA bands are authored here. The chrome's .precta is the page's
+     one, per Collision A. The single mid-page ask is a .kit-inline rail folded
+     inside content-bearing section 08.
+
+     ZERO dark bands are authored here. Measured tone is dark_ratio 0 and the one
+     permitted flip is already spent by the chrome's closing band.
+
+     ZERO arc seams are authored here. The one arc per page is spent by the header.
+
+     THE RATION LEDGER, checked line by line. client-rules.json rations three
+     patterns to ONE occurrence each on this page: positioning-lead, specialist
+     count and discipline count. The hero deck, which is the locked positioning
+     lead in its locked wording, satisfies and EXHAUSTS all three in one line. No
+     band below it pairs a numeral with the word disciplines or the word
+     specialists, which is not a workaround but the concept: the receipts are the
+     named things, not the counts restated. The fourth rationed pattern, the roof
+     phrase, is spent exactly once, in the creed at 03.
+     ============================================================================ -->
+
+<!-- pick: COMPANY-SECTIONS.md #1 Founder / company editorial hero | considered: #2,#3 | rigor: heavy | why: the T-COMPANY law in this catalog is explicit that an about page opens on its OWN editorial vocabulary rather than on the product hero, and #1 is the only opener in the catalog whose shape is a type column beside a FRAMED INSET portrait with a signed credibility line under a hairline, which is exactly the shape this page needs: the claim is a sentence, the evidence is a rail of countables, and the photograph is context rather than proof. It is also the pick that keeps this template structurally distinct from the locked flagship, which opens on HERO-COMPOSITIONS #20's three parallel columns of claim, stat and photo; reusing #20 here would make the about page read as the treatment page with the copy swapped, which is the cross-TYPE stamp G14 exists to catch. #2's manifesto creed was considered as the opener because this brand's argument is genuinely a belief, but a creed as the FIRST screen states a position before the reader knows what the practice is, and the locked copy's own first move is the countable facts, not the belief; the creed is therefore spent one band later, at 03, where it lands on ground the reader already has. #3's dated origin spine is refused on evidence rather than on taste: no founding year appears anywhere on the current site and none has been supplied, so a dated spine would either run with invented dates or run with empty nodes, and both are worse than not running. ADAPTATION, recorded here rather than discovered at gate time: #1's load-bearing move is a SIGNED credibility line, founder names in display over a role in mono. No founder is supplied for this page and the founding year is a held blocker, so the signature is re-registered as a COUNTABLE signature, the locked .kit-statband--stack under the same hairline, carrying three figures that are cleared and none of which restates a rationed count. -->
+<!-- FRONT OF HOUSE, 2026-08-25. The opener is re-composed to the foh-hero contract: one
+     full-bleed scrimmed photograph carrying a short headline, then the eyebrow / lede /
+     claim / actions lockup beneath it. .surface-dark is this page's one dark beat and is
+     what verify-not-flat credits. The COMPANY-SECTIONS #1 pick above still explains why an
+     editorial opener carries this page; only its composition is superseded.
+     WHAT WAS REMOVED AND WHERE EVERY FACT STILL LIVES ON THIS PAGE. The .kit-open ordinal
+     "01" is spent by the band itself; the numbering resumes at 02. The kit-body sentence
+     "Complex dental work should not mean being referred somewhere else" is the same claim
+     section 04 makes as "a discipline this practice finishes in-house rather than sending
+     out". The three-stat band goes: the four clinics are named with their full addresses in
+     section 02, the eight named systems are the eight rows and the caption of the systems
+     table in section 07, and "Case plan, written once" is restated almost verbatim by the
+     "Planned once" card in section 05. The lede's own CBCT sentence is restated in section
+     07 ("3D CBCT imaging is installed at all four clinics") and again in that table's first
+     row, so the lede keeps only its first sentence.
+     THE .kit-accentline IS KEPT in the lockup, and keeping it is load-bearing rather than
+     sentimental: the ration ledger above records this exact line as the locked positioning
+     lead, which "satisfies and EXHAUSTS" the specialist-count and discipline-count rations
+     in one line, so no band below it may restate either number. Drop it and both facts leave
+     the page. Verified by grep: neither count appears anywhere else in this fragment.
+     THE OLD .kit-slot IS REMOVED with its now-empty .col--media. It held a DIFFERENT file
+     (luxury-dental-clinic-in-manila.png) to the assigned band image, and the hero's
+     .container is released to max-width:none / padding-inline:0, so any sibling .col left in
+     this row renders flush to the viewport edge with no gutter - measured at 1440, not
+     assumed. That photograph is not lost from the build: index and prices both still carry
+     it. FOR REVIEW: the assigned band file is also the section-02 figure, so this
+     photograph now appears twice on this page. -->
+<section class="section surface-dark kit-hero foh-hero" id="s01" aria-labelledby="h01" data-surface="dark" data-rise>
+  <div class="container">
+    <div class="row">
+      <div class="col col--full">
+        <div class="foh-hero__stage">
+          <figure class="foh-hero__band">
+            <img class="foh-hero__img" src="../assets/generated/gen-hero-reception.jpg" alt="A clinic reception lounge with pale upholstered armchairs, a low stone table holding a single orchid, warm plaster walls and tall windows screened with sheer linen." width="3136" height="1344" loading="eager" fetchpriority="high" decoding="async">
+            
+          </figure>
+          <div class="foh-hero__inner">
+              <h1 class="foh-hero__title" id="h01">About Elevate Dental</h1>
+            </div>
+          <div class="foh-hero__lockup">
+            <p class="foh-hero__eyebrow">About</p>
+            <p class="foh-hero__lede">Four clinics across Metro Manila.</p>
+            <p class="kit-accentline">Nine disciplines. Thirty-one specialists. One clinic.</p>
+            <div class="kit-actions">
+              <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+              <a class="kit-btn kit-btn--ghost" href="specialists.html"><span>Our Specialists</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #51 Locations grid | considered: #52,#53 | rigor: heavy | why: this concept's thesis is that the four locations should carry the argument rather than be summarised by it, and #51 is the only catalogued entry that gives every branch its own tile with its own address, its own week and its own tappable number, which is what a Metro Manila reader actually uses when deciding whether a group is real and reachable; the locked .kit-card already ships the address line, the ruled hours rail pinned by margin-top auto and the telephone foot, so the pick spends existing vocabulary and mints nothing. #52's map embed plus contact is written for a SINGLE-location business and would seat one branch above a map with the other three demoted underneath it, which silently ranks four peers that keep four genuinely different weeks. #53's hours table carries the week and drops both the addresses and the direct lines, so it answers the least urgent of the three questions this band is asked, and it would leave the copy's own geography, the flagship at 8th Avenue, the fourth floor of the East Wing, the short walk between the two BGC clinics, with nowhere to land. COMPANY-SECTIONS #3, the dated origin spine, was the obvious catalog-native alternative for a section headed "how the group came to be" and is refused for the same evidenced reason as in the hero: no founding year exists. ADAPTATION, load bearing: #51's tile carries a PHOTO per location. No per-branch photography is assigned to this page in _imagery-map.json, and putting a generic interior on a tile labelled Mitsukoshi BGC would be a fabricated location photograph, so the tiles carry no image at all and the band's one photograph sits at band level, captioned as unassigned to any branch. -->
+<section class="section section--cool" id="s02" aria-labelledby="h02" data-rise>
+  <div class="container">
+    <div class="row row--stretch">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">02</span>
+            <div>
+              <span class="kit-eyebrow">The group as it stands</span>
+              <h2 id="h02">How the group came to be</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">There are four Elevate Dental clinics today, all in Metro Manila.</p>
+        <p class="kit-body readw">Mitsukoshi BGC is the flagship, on the second floor at 8th Avenue corner 36th Street in Grand Central Park, Taguig. Shangri-La Plaza sits on the fourth floor of the East Wing at EDSA corner Shaw Boulevard in Ortigas. Bonifacio Stopover BGC is a short walk from the flagship. Alabang Town Center serves the south.</p>
+        <p class="kit-body readw">Each opening added disciplines rather than duplicating them. That is the pattern worth noticing: the group grew by widening what could be finished in-house, not by repeating a general practice in four postcodes.</p>
+      </div>
+
+      <div class="col col--span-5">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2018_06_choosing-dental-clinic.jpg" alt="A dentist in a white coat, surgical cap, mask and magnifying loupes working on a patient reclined in a dental chair in a treatment room with tall windows." width="1920" height="1440" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>In the chair</b><span>A first-party photograph of a treatment room. It is not assigned to a named branch.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Clinic 01</span>
+            <span class="kit-card__unit">Taguig</span>
+          </div>
+          <p class="kit-card__title">Mitsukoshi BGC</p>
+          <p class="kit-card__addr">2F Mitsukoshi BGC, 8th Avenue corner 36th Street, Grand Central Park, Taguig.</p>
+          <dl class="kit-card__hours">
+            <div><dt>Mon to Fri</dt><dd>11:00 to 20:00</dd></div>
+            <div><dt>Sat and Sun</dt><dd>10:30 to 20:00</dd></div>
+          </dl>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost kit-tab" href="tel:+639171599284"><span>+63 917 159 9284</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Clinic 02</span>
+            <span class="kit-card__unit">Mandaluyong</span>
+          </div>
+          <p class="kit-card__title">Shangri-La Plaza</p>
+          <p class="kit-card__addr">4F East Wing, EDSA corner Shaw Boulevard, Ortigas, Mandaluyong.</p>
+          <dl class="kit-card__hours">
+            <div><dt>Mon to Sun</dt><dd>10:30 to 19:00</dd></div>
+          </dl>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost kit-tab" href="tel:+639688515420"><span>+63 968 851 5420</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Clinic 03</span>
+            <span class="kit-card__unit">Taguig</span>
+          </div>
+          <p class="kit-card__title">Bonifacio Stopover BGC</p>
+          <p class="kit-card__addr">Unit R303, 3rd Floor, Bonifacio Stopover Pavilion, BGC, Taguig.</p>
+          <dl class="kit-card__hours">
+            <div><dt>Mon to Sat</dt><dd>09:00 to 18:00</dd></div>
+            <div class="is-closed"><dt>Sunday</dt><dd>Closed</dd></div>
+          </dl>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost kit-tab" href="tel:+639178294551"><span>+63 917 829 4551</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Clinic 04</span>
+            <span class="kit-card__unit">Muntinlupa</span>
+          </div>
+          <p class="kit-card__title">Alabang Town Center</p>
+          <p class="kit-card__addr">2nd Floor, 2225 Commerce Mall, Alabang Town Center, Ayala Alabang, Muntinlupa 1780.</p>
+          <dl class="kit-card__hours">
+            <div><dt>Mon to Fri</dt><dd>11:00 to 20:00</dd></div>
+            <div><dt>Sat and Sun</dt><dd>10:00 to 20:00</dd></div>
+          </dl>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost kit-tab" href="tel:+639171140598"><span>+63 917 114 0598</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">What the four have in common</p>
+          <p class="kit-body readw--wide">Every clinic runs the same protocols and the same equipment, so the week you can book and the building you can reach are the two things that actually differ between them.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="locations.html"><span>All Locations</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: COMPANY-SECTIONS.md #2 Manifesto / values creed type-block | considered: #1,#3 | rigor: heavy | why: the locked copy for this beat is a pure argument with no artefact attached to it, a claim about how complex dental work is normally split across practices and what that costs the patient, and #2 is the one catalog entry whose whole composition is TYPE in open space with hairlines between the statements and no surfaces, no shadows and no icons, which is what lets an argument read as an argument instead of as four feature tiles that happen to contain sentences. It is also the correct answer to the specific instruction in the catalog LAW that a company page must not be assembled from capability tiles, and it gives this template its one deliberately empty-handed band, placed between the densest photographic band and the ruled lattice so the page has a breath in it. #1's founder editorial hero would carry the same belief as a signed letter, but the signature is the load-bearing half of #1 and no founder is supplied, so the belief would arrive unattributed in a shape whose whole point is attribution, and #1 is in any case already spent on the opener. #3's origin timeline would tell the same argument as a journey, which is a better shape for this content than tiles would be, and it is still refused: the argument here is structural rather than chronological, and the dated nodes a spine needs do not exist. ADAPTATION: #2 renders its values as oversized typographic statements, and the locked structural sheet is not editable from a template, so the oversized register is carried by .kit-accentline and .kit-quote--display, and the indexed hairline-separated rows by .kit-list--ledger, which is the sheet's own hairline-ruled mono-indexed row. Nothing new is minted. -->
+<section class="section section--paper" id="s03" aria-labelledby="h03" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">03</span>
+            <div>
+              <span class="kit-eyebrow">The argument</span>
+              <h2 id="h03">Why we built it this way</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-accentline">Assembling this many disciplines inside one practice is expensive. It is also deliberate.</p>
+      </div>
+
+      <div class="col col--span-6">
+        <p class="kit-lede readw">Most complex dental work in Metro Manila is split across practices.</p>
+        <ol class="kit-list kit-list--ledger">
+          <li><span><b>A general dentist starts it.</b></span></li>
+          <li><span><b>An orthodontist takes a stage.</b></span></li>
+          <li><span><b>A surgeon takes another.</b></span></li>
+          <li><span><b>A prosthodontist finishes.</b></span></li>
+        </ol>
+        <p class="kit-body readw">Every handoff is a fresh set of records, a fresh consultation, and a fresh judgment about work somebody else planned. The patient carries the continuity, which is the one thing a patient is least equipped to carry.</p>
+      </div>
+
+      <div class="col col--span-6">
+        <p class="kit-quote kit-quote--display readw">Our specialists work under one roof.</p>
+        <p class="kit-body readw">A case that needs surgery, then orthodontics, then a final restoration is planned once, by the people who will each do a part of it.</p>
+        <p class="kit-body readw">The imaging travels with the case instead of being repeated. The person fitting the final restoration was in the room when the sequence was set.</p>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Stated plainly</p>
+          <p class="kit-body readw--wide">That is a structural argument, not a slogan. It is also the reason the numbers on this page are stated exactly rather than described, and the reason every band below this one hands you the thing being counted instead of the count.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: TRUST-STATS-SECTIONS.md #1 Trust bar, mono logo row | considered: #3,#4 | rigor: heavy | why: the shape this band needs is a RULED LATTICE, a bordered grid of equal named cells divided by hairlines so that a set of names reads as one instrument rather than as a row of separate tiles, and #1 is the only entry in the catalog built that way; the locked sheet already implements exactly that lattice as .kit-sys, a hairline-gapped grid where the gap IS the rule, so the geometry is inherited rather than invented. The pick is chosen for a second and larger reason, which is what it REFUSES: #1 is catalogued as BORROWED credibility, a wall of third-party marks resting in grayscale until hovered, and this client may not ship that wall at all, because four professional-body marks sit on the current site unlabelled with membership and usage rights unconfirmed for every one of them, and the visual direction names that wall by name as an anti-pattern to leave behind. Re-registering the lattice from borrowed marks to the practice's own named disciplines is therefore the concept in one move: the frame that would have held other people's logos holds the thing this group actually has. #3's count-up 3-up is refused twice over, because the content here is nine NAMES and not three figures, and because a count-up animation is not one of the three moves the locked motion budget permits. #4's big-number anchor band is the page's one near-black anchor by definition, and the single dark punctuation is already spent by the chrome's closing band on a brand measured at dark ratio zero, so taking #4 would break the tone measurement rather than a preference. -->
+<section class="section section--warm" id="s04" aria-labelledby="h04" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">04</span>
+            <div>
+              <span class="kit-eyebrow">The bench</span>
+              <h2 id="h04">Every discipline the bench covers</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">Named, not summarised. Each row below is a discipline this practice finishes in-house rather than sending out, which is the only reason the group is built at this width.</p>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-sys kit-sys--3up" data-rise>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">01</span>
+            <p class="kit-sys__name">General dentistry</p>
+            <p class="kit-sys__note">Examination, cleaning, fillings and the routine care most cases start from.</p>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">02</span>
+            <p class="kit-sys__name">Cosmetic dentistry</p>
+            <p class="kit-sys__note">Veneers, whitening and restorative work carried out for appearance as well as function.</p>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">03</span>
+            <p class="kit-sys__name">Orthodontics</p>
+            <p class="kit-sys__note">Braces and clear aligners, planned and monitored by an orthodontist.</p>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">04</span>
+            <p class="kit-sys__name">Oral surgery</p>
+            <p class="kit-sys__note">Extractions, implant placement and the surgical stages inside a larger plan.</p>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">05</span>
+            <p class="kit-sys__name">Endodontics</p>
+            <p class="kit-sys__note">Root canal treatment, the discipline that keeps a tooth rather than removing it.</p>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">06</span>
+            <p class="kit-sys__name">Periodontics</p>
+            <p class="kit-sys__note">The gum and the bone, treated first wherever the rest of a plan depends on them.</p>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">07</span>
+            <p class="kit-sys__name">Prosthodontics</p>
+            <p class="kit-sys__note">Crowns, bridges and dentures, the discipline that fits the final restoration.</p>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">08</span>
+            <p class="kit-sys__name">Pediatric dentistry</p>
+            <p class="kit-sys__note">Children's dentistry, from a first visit through to the mixed dentition years.</p>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">09</span>
+            <p class="kit-sys__name">Dental radiography</p>
+            <p class="kit-sys__note">Imaging as its own discipline rather than a step inside somebody else's.</p>
+            <span class="kit-sys__where"><i aria-hidden="true"></i>All four clinics</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Read the lattice as one bench</p>
+          <p class="kit-body readw--wide">The point of the grid is the absence of gaps in it. A case that moves from one row to another does not move to another practice, which is what the sequence in the band above is describing when it says the plan is written once.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="treatments.html"><span>All Treatments</span></a>
+            <a class="kit-btn kit-btn--ghost" href="specialists.html"><span>Our Specialists</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #11 Service pillars 2-col with image | considered: #18,#12 | rigor: heavy | why: this beat carries FOUR discrete facts about how the bench operates against ONE photograph, and #11 is the entry that ships the media-plus-cards law for precisely that ratio, a media column that STRETCHES to the height of a two-by-two card grid rather than a capped image beside a tall vertical stack, which is the arrangement verify-section-density was written to enforce and which the locked sheet already implements as .kit-mediagrid with the media-fits-track anchors baked in. It is also the one place on this page where a photograph can do real work, because the operating model is a claim about people handling records, and a clinician reading a panoramic image at a desk is the honest artefact for it. #18's team grid 3-col is the shape a reader would expect under a heading about the bench, and it is refused on evidence: no clinician portrait is assigned to this page in _imagery-map.json, per-clinic assignment of a named specialist is blocked outright by client-rules.json, and a grid of faces borrowed from elsewhere, or of empty portrait frames, is fabricated proof on a medical site rather than a layout compromise. TEAM-GALLERY-SECTIONS #2, the circular roster, fails for the identical reason and is named here so the refusal is on record for both catalogs. #12's feature row with screenshot assumes the evidence is a product interface, and there is no interface here to show; substituting a stock software rendering for a clinical workflow would put an invented artefact beside a real claim. -->
+<section class="section section--paper" id="s05" aria-labelledby="h05" data-rise>
+  <div class="container">
+    <div class="row">
+      <div class="col col--full">
+
+        <div class="kit-head">
+          <div class="kit-open">
+            <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+            <div class="kit-open__head">
+              <span class="kit-open__no">05</span>
+              <div>
+                <span class="kit-eyebrow">The operating model</span>
+                <h2 id="h05">The bench, and how it works</h2>
+              </div>
+            </div>
+          </div>
+          <p class="kit-lede readw--wide">The bench is the operating model here, not a staff page.</p>
+        </div>
+
+        <div class="kit-mediagrid">
+          <figure class="kit-mediagrid__media kit-slot" data-rise>
+            <div class="kit-slot__mask kit-slot__mask--arch">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2023_04_dentist-in-clinic-examines-x-ray-of-jaw-of-client-2021-11-02-17-00-47-utc.jpg" alt="A clinician in blue examination gloves at a desk, pointing a stylus at a printed panoramic X-ray of a jaw beside an open laptop." width="1200" height="799" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <div class="kit-mediagrid__cards">
+            <article class="kit-card" data-rise>
+              <p class="kit-card__title">Planned once</p>
+              <p class="kit-card__body">A case that crosses disciplines is planned by the specialists who will carry out each stage of it, so the sequence is agreed before the first appointment rather than negotiated between practices halfway through.</p>
+            </article>
+            <article class="kit-card" data-rise>
+              <p class="kit-card__title">Published individually</p>
+              <p class="kit-card__body">Every specialist is published individually, with name, credentials and discipline. Nobody on the bench is presented to you only as part of a group.</p>
+            </article>
+            <article class="kit-card" data-rise>
+              <p class="kit-card__title">Read before you book</p>
+              <p class="kit-card__body">Read the profile of whoever you are booking with before you book. That is a normal thing to do here, and the roster is published in a form that makes it possible.</p>
+            </article>
+            <article class="kit-card" data-rise>
+              <p class="kit-card__title">One practice, one record</p>
+              <p class="kit-card__body">Where a case needs a second discipline, the second discipline is in the same practice, so the imaging and the plan carry forward instead of restarting.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="kit-foot">
+          <p class="kit-micro">Where to go next</p>
+          <p class="kit-body readw--wide">The roster page lists every specialist with the discipline each one practices, so the sensible order is to read the discipline you need, then the person, then book.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="specialists.html"><span>See every specialist</span></a>
+          </div>
+        </div>
+
+        <div class="kit-truth">
+          <p>No named specialist is assigned to a named clinic anywhere on this site.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #8 Manifesto / belief statement, the quote-formatted-with-attribution variant | considered: #26,#17 | rigor: heavy | why: the two statements this band carries are FIRST-PARTY VERBATIM, a vision and a mission the client already publishes in their own words, and the entry's quote-formatted-with-attribution variant is the only catalogued treatment that both sets them as belief and labels whose belief they are, which matters more here than usual because the mission describes clinics in every major city and the present fact is four clinics in one metropolitan area; unattributed, that sentence reads as coverage, and attributed and qualified it reads as the ambition it is. It also sits at a different register from the creed at 03, which is an ARGUMENT in the page's own voice with no attribution and no media, so the two belief beats do not repeat a shape. #26's pull-quote section is catalogued as one giant quote standing alone with NO other content in the section, and this beat cannot be alone: the ambition has to be qualified in the same breath, and the operational standard that follows it is what makes the ambition legible rather than aspirational, so a bare pull-quote would ship the loudest sentence on the page with its correction one band away. #17's centered manifesto bio centres the block and attributes it to a founder; no founder is supplied, and the page holds ONE left reading axis from the hero to the last band, so a single centred moment at band six would read as a different page pasted in. -->
+<section class="section section--cool" id="s06" aria-labelledby="h06" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">06</span>
+            <div>
+              <span class="kit-eyebrow">Mission and vision</span>
+              <h2 id="h06">Mission, vision and standards</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-quote kit-quote--display readw">Elevating People's Lives, One Smile at a Time.<span class="kit-quote__cite">The vision, first-party verbatim</span></p>
+        <p class="kit-quote readw">To revolutionize dental care in the Philippines through the establishment of state-of-the-art Elevate Dental clinics in every major city across the country.<span class="kit-quote__cite">The mission, first-party verbatim</span></p>
+        <p class="kit-body readw">That mission is an ambition, and it is presented here as one. The present fact is four clinics across Metro Manila, with more planned.</p>
+        <p class="kit-body readw">The standard is consistency. Every clinic runs the same protocols, the same equipment and the same specialist bench, which is why the imaging available to you does not depend on which clinic you booked.</p>
+      </div>
+
+      <div class="col col--span-5">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2022_12_dentist-at-dental-clinic-white-healthy-tooth-with-2022-11-16-18-05-26-utc.jpg" alt="A clinician in a pale coat pointing a stylus at a dental X-ray displayed on a tablet, with a plaster model of a jaw and three hand instruments on the white table." width="1200" height="675" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Same protocol</b><span>The imaging a plan is built on does not change with the branch.</span></figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #15 Comparison table (us vs them) | considered: #2,#13 | rigor: heavy | why: what this band owes the reader is eight named units each with the one line that says what it actually is, and a REAL semantic table is the only shape that keeps a name and its definition on the same row for eight rows without turning eight instruments into eight marketing tiles; #15 is the catalog's table entry, the locked .kit-table already carries the tabular figure treatment and the mobile card reflow in which every cell re-prints its own header from a data-label, so nothing is lost when the eight rows become eight cards at 375. The re-registration is recorded rather than assumed: #15 is authored as US versus THEM, and this client may never name a competitor on any page, so the comparison axis is turned inward and becomes name against definition, which is also the axis the honesty rules require, since every one of these eight marks is cleared for nominative text use only. #2's trust strip and logo wall is what a technology band on a clinic site usually becomes, and it is exactly what the clearance record forbids: not one of the eight may appear as a logo, and one of them carries an unverified manufacturer attribution that a logo would silently assert. #13's bento feature grid reads its tiles as parallel marketing claims with no room for a qualifying sentence, so the one row that has to say that an attribution is unverified would have nowhere to say it. -->
+<section class="section section--warm" id="s07" aria-labelledby="h07" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-4">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">07</span>
+            <div>
+              <span class="kit-eyebrow">Equipment</span>
+              <h2 id="h07">The systems, named individually</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">These are the systems the plan is built on. Each is named as plain text describing equipment the practice operates, with no logo, no badge and no partner claim attached to it.</p>
+        <p class="kit-body readw">3D CBCT imaging is installed at all four clinics. That scope is verified for imaging and is not extended to anything else on this list.</p>
+        <div class="kit-actions kit-actions--tight">
+          <a class="kit-btn kit-btn--ghost" href="technology.html"><span>Technology</span></a>
+        </div>
+      </div>
+
+      <div class="col col--span-8">
+        <div class="kit-table__scroll" data-rise>
+          <table class="kit-table">
+            <caption>Named systems in clinical use</caption>
+            <thead>
+              <tr><th scope="col">System</th><th scope="col">What it is</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="System"><b class="kit-strong">3D CBCT imaging</b></td><td data-label="What it is">Cone beam computed tomography. Three-dimensional imaging of bone, root position and nerve position. Installed at all four clinics.</td></tr>
+              <tr><td data-label="System"><b class="kit-strong">iTero intraoral scanner</b></td><td data-label="What it is">A scanner that records the shape of the teeth digitally, without putty impressions.</td></tr>
+              <tr><td data-label="System"><b class="kit-strong">RayFace facial scanner</b></td><td data-label="What it is">A scanner that records the face in three dimensions alongside the dental record.</td></tr>
+              <tr><td data-label="System"><b class="kit-strong">OccluSense bite analysis</b></td><td data-label="What it is">A digital record of where the teeth meet and how hard they meet there.</td></tr>
+              <tr><td data-label="System"><b class="kit-strong">Sol Dental Laser</b></td><td data-label="What it is">A dental laser. The manufacturer attribution is unverified and is therefore not stated.</td></tr>
+              <tr><td data-label="System"><b class="kit-strong">AirFlow (guided biofilm therapy)</b></td><td data-label="What it is">A cleaning method that removes biofilm with a controlled jet of warm water and fine powder.</td></tr>
+              <tr><td data-label="System"><b class="kit-strong">Zoom whitening</b></td><td data-label="What it is">An in-clinic whitening system, carried out in the chair rather than at home.</td></tr>
+              <tr><td data-label="System"><b class="kit-strong">Piezotome</b></td><td data-label="What it is">An ultrasonic surgical unit used where cutting has to stay selective.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #6 "Is this for me" qualifier | considered: #41,#33 | rigor: heavy | why: the last beat of this copy is not an ask, it is a description of the reader the group was built for, a case that needs more than one discipline, and #6 is the entry whose stated role IS self-selection, so the band can end the page by telling the reader whether this practice is the right shape for their problem and let the chrome's inherited closing band do the asking a screen later. That division is required rather than chosen: Collision A of the sector reconciliation allots the chrome exactly one closing CTA band and forbids the body from authoring any, so the final beat must be a CONTENT band with the ask folded into it as a ruled .kit-inline rail. #41 Closing CTA is precisely the standalone heading-plus-button band that G-CTA1 counts, and the chrome's .precta already is this page's one, so picking it would put the page at two and fail the gate closed. #33's custom-quote driver was the flagship's answer to the same constraint and is wrong here: it drives toward a written quote by explaining what the quote requires, and this page quotes nothing, carries no figure and cannot carry one, because no real treatment price exists for this practice, so its ladder would resolve to an empty output row. ADAPTATION: #6 is catalogued as a grid of buyer profiles, and the profiles here are reduced to two honest ones, the multi-stage case and the single-stage case, because inventing a third audience to balance a three-column grid is the exact failure the copy's own restraint is written against. -->
+<section class="section section--paper" id="s08" aria-labelledby="h08" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">08</span>
+            <div>
+              <span class="kit-eyebrow">Who this is for</span>
+              <h2 id="h08">Bring the complex case to one clinic</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">A case that needs more than one discipline is the case this group was built for.</p>
+        <p class="kit-body readw">Start with a consultation, and you will leave with the sequence, not just an opinion.</p>
+        <p class="kit-body readw">If your case needs one discipline and one appointment, that is not a reason to go elsewhere, and it is also not the reason this page exists. The width matters when a plan has stages in it.</p>
+        <div class="kit-inline">
+          <p>Tell us what you want looked at and you will be placed with the specialist whose discipline the case belongs to, at whichever of the four clinics suits your week.</p>
+          <div class="kit-inline__acts">
+            <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+            <a class="kit-btn kit-btn--ghost" href="contact.html"><span>Contact Us</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--span-5">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--circle">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2022_07_dentist-and-patient-in-dental-clinic-2022-03-31-20-13-13-utc-1.jpg" alt="A dentist in a white coat gesturing toward a screen while a young child sits on an adult's lap in the dental chair, all three looking at the same display." width="1200" height="800" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Same screen</b><span>The plan is shown to the people it belongs to.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Outcome</p>
+          <ul class="kit-list">
+            <li><b class="kit-strong">Feature.</b> A multi-discipline group built so cases finish in-house.</li>
+            <li><b class="kit-strong">Do.</b> Bring a complex case to one clinic.</li>
+            <li><b class="kit-strong">Means.</b> Continuity of care from the first scan to the final fitting.</li>
+          </ul>
+        </div>
+        <div class="kit-truth">
+          <p>Elevate Dental does not accept HMO or dental insurance. All treatment is self-pay, paid directly to the clinic, and prices are quoted per treatment after clinical assessment.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

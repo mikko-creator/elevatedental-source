@@ -1,0 +1,498 @@
+<!--META {"title":"Dental Clinic Locations | BGC, Ortigas, Alabang","desc":"Four Metro Manila clinics with hours, direct lines, parking and the specialists based at each. Find the one nearest you.","noindex":true}-->
+<!-- TITLE and DESC are the LOCKED values from _handoff/seo-enrichment.md section 1, the SEO SSOT.
+     The SSOT separator is an en dash and renders here as a pipe, because verify-no-dashes is
+     registered on this build. Only the SEPARATOR CHARACTER changed; no word was altered, added,
+     removed or reordered.
+     The key is "desc" and NOT "description": build.mjs renders esc(meta.desc), and its JSON branch
+     does not alias description to desc, so a "description" key ships an EMPTY meta description
+     while looking correct in the fragment.
+     noindex is set on EVERY page because this publishes to a PUBLIC preview URL while the pages
+     carry representative market prices rather than this clinic's own figures. robots.txt cannot
+     carry that load: crawlers read it only at the origin root, and this ships to a project
+     subpath, so the disallow-all there is inert. noindex is the protection that actually works. -->
+<!-- ============================================================================
+     BODY, pages/locations.content.html. Promoted from the owner-stamped T-HUB
+     template (_design/_tournament/templates/T-HUB/c/preview.html) and then
+     RE-AUTHORED against _copy/locations.md, which is the authority.
+
+     WHAT THIS HUB IS, and why it is not the template with the nouns swapped:
+       - Its children are four BRANCHES, not four treatments, so the per-child
+         comparison rail cannot be Changes / Made / Quoted per / From. Nothing
+         clinical distinguishes one address from another here: the copy states
+         plainly that the standard does not change with the address. The four axes
+         that DO separate them are when each one opens, when it closes, whether it
+         opens on a Sunday, and which number reaches it, so those are the four rows
+         on every clinic card, transcribed exactly from the verified hours.
+       - The template's starting-price matrix is gone. Pricing does not vary by
+         clinic, which is a fact worth a band of its own and worthless as a column,
+         so it is stated once, in prose, with the owner confirmation still open.
+       - Three bands on this page exist to say what is NOT known: which specialists
+         sit where, which of the seven non-imaging systems is installed where, and
+         the parking and transit the brief asked for. Each ships as a visible held
+         block rather than as a guess.
+
+     IMAGERY, and one refusal recorded rather than left silent:
+       - _imagery-map.json names luxury-dental-clinic-in-manila.png as this page's
+         primary. It is NOT placed. The file shows a treatment room against a
+         floor-to-ceiling waterfront skyline, and none of the four addresses is on
+         a waterfront, so on a page whose whole job is telling a reader what each
+         address is, that frame would read as a view no clinic has. The imagery
+         system bars a clinic image that carries a per-clinic implication the copy
+         is not cleared to make; this is that bar applied to an interior.
+       - Bonifacio-Stopover-Facade.jpg is also refused: its signage has clinic hours
+         burned into the glass that do not match the verified hours on this page.
+       - No photograph of the Mitsukoshi BGC clinic exists in the supplied library.
+         That gap is stated visibly in band 04 rather than papered over with a
+         lookalike interior.
+
+     ZERO closing CTA bands, ZERO dark bands, ZERO page-local CSS.
+     ============================================================================ -->
+
+<!-- pick: HERO-COMPOSITIONS.md #28 | considered: #5,#21,#2 | rigor: heavy | why: this is the one page on the site where the reader's question is geographic before it is clinical, and #28 is the only hero in the catalogue written for a local business, an opener whose job is to place the business somewhere real before it says anything about itself. The pick earns its place through the ADAPTATION it forces rather than through the pattern as catalogued: #28 wants an embedded map, and the imagery system bars a clinic image used as a map pin while client-rules leaves per-clinic capability unconfirmed, so the map is replaced by a real photograph of a real frontage and by the four addresses as an index a reader can scan in one pass. That keeps the pattern's job, orientation, and drops the part of it that would assert something no receipt supports. #5 full-bleed image with overlay text puts type over a photograph, which the locked imagery treatment refuses outright, and would need a hero-scale master this library does not contain for three of the four sites. #21 mosaic collage hero would show four interiors at thumbnail scale and invite the reader to compare rooms, which is precisely the comparison this page says is not the one that matters. #2 split text-right photo-left is the plainest option and was genuinely weighed, but it carries no index, and a four-branch hub whose hero cannot list its four branches has spent its first screen on atmosphere. -->
+<!-- FRONT OF HOUSE, 2026-08-25. The opener is re-composed to the foh-hero contract.
+     THE OLD MEDIA. The .kit-slot held THIS EXACT FILE, so it was deleted rather than print
+     the same frontage twice in one section, and its .col--span-6.col--media went with it
+     rather than leaving an empty grid cell that still eats the 40px row gap. Its alt is
+     carried over verbatim onto the band. The caption it lost, naming the frontage as
+     Alabang Town Center on the second floor of Commerce Mall, is the ATC card's own text in
+     the addresses band below. The band is deliberately left unlabelled: the alt says only
+     what is in the frame, an Elevate shopfront, which claims nothing about WHICH of the four
+     a reader is looking at on a page that is about all four.
+     WHAT ELSE WAS REMOVED, AND WHERE IT STILL LIVES: the kit-body ("The standard of care
+     does not change with the address ... what changes is convenience") and the accentline
+     ("Choose on your week, not on a map") were the page's summary of its own sections, and
+     those sections say it at length - s-choose "Three things usually decide it", s-fee "The
+     fee is the same at every address", s-pick "Pick the clinic that fits your week". The
+     kit-foot's four address chips are the four cards in s-clinics, each with its full street
+     address, its own line and its own hours. No fact left the page. -->
+<section class="section surface-dark kit-hero foh-hero" id="s-map" aria-labelledby="h-map" data-surface="dark" data-rise>
+  <div class="container">
+    <div class="row">
+      <div class="col col--full">
+        <div class="foh-hero__stage">
+          <figure class="foh-hero__band">
+            <img class="foh-hero__img" src="../assets/generated/gen-hero-corridor.jpg" alt="A clinic corridor with a fluted oak wall, deep navy doors with brass handles, and a long slot of afternoon light falling across warm terrazzo." width="3136" height="1344" loading="eager" fetchpriority="high" decoding="async">
+            
+          </figure>
+          <div class="foh-hero__inner">
+              <h1 class="foh-hero__title" id="h-map">Dental Clinic Locations. Four clinics across Metro Manila.</h1>
+            </div>
+          <div class="foh-hero__lockup">
+            <p class="foh-hero__eyebrow">Where we are</p>
+            <p class="foh-hero__lede">Two clinics in Taguig, one in Mandaluyong and one in Muntinlupa.</p>
+            <div class="kit-actions">
+              <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+              <a class="kit-btn kit-btn--secondary" href="#s-clinics">Compare the four</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #7 | considered: #6,#50,#27 | rigor: heavy | why: the reader arriving here has a decision rather than a symptom, and #7 problem framing is the entry whose structure is a named decision held up in large type with its variables underneath, which is exactly the shape of the locked copy for this beat: one question, three things that answer it, and one of the three admitted as unanswerable today. Framing it as a PROBLEM rather than as a menu is what lets the third variable be honest; a menu with an empty third column reads as an oversight, a framed problem with a stated unknown reads as candour. #6 self-selection qualifier is the right device one band lower, where the reader is matched against a hold, and using it twice would flatten the two bands into one long triage. #50 topic columns would give the three variables equal editorial weight, and they are not equal: proximity and opening hours are answerable on this page and the third is not. #27 numbered process steps implies a sequence, and these three are simultaneous considerations rather than stages of anything. ADAPTATION: the three variables ship as a ledger list so the count is visible at a glance, and the media column carries a working appointment rather than a building, because the argument of this band is that what happens in the chair is constant while the address is the variable. -->
+<section class="section section--cool" id="s-choose" aria-labelledby="h-choose" data-rise>
+  <div class="container">
+    <div class="row row--split">
+
+      <div class="col col--copy">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">02</span>
+            <div>
+              <span class="kit-eyebrow">Choosing between them</span>
+              <h2 id="h-choose">Three things usually decide it</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Two of the three you can settle on this page. The third needs a phone call, and this page will not pretend otherwise.</p>
+        <ol class="kit-list kit-list--ledger">
+          <li><span><b>Where you are.</b> Two of the four sit in Bonifacio Global City, a few minutes apart, and they are not interchangeable: one is inside Mitsukoshi on 8th Avenue, the other is at the Stopover Pavilion. Ortigas Center and the routes north are served from Mandaluyong, and the south from Muntinlupa.</span></li>
+          <li><span><b>When you can come.</b> Opening times are genuinely different at each site, so read the card before you travel. One clinic opens at 09:00 and is the only one shut on Sundays. Two run until 20:00 seven days a week. The fourth is open every day and shuts at 19:00.</span></li>
+          <li><span><b>Which specialist your case needs.</b> This is the one thing the page cannot answer site by site, and section four says why. Call the number on the card, describe the case, and ask when the relevant specialist is there.</span></li>
+        </ol>
+        <p class="kit-body readw--wide">If your case is straightforward, book whichever address is nearest. If it is complex, the phone call is worth making first, because a clinic schedule is a more reliable answer than a published one.</p>
+      </div>
+
+      <div class="col col--media">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--circle">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2018_06_choosing-dental-clinic.jpg" alt="A clinician in a surgical cap, mask and magnifying loupes leaning over a patient reclined in a dental chair, in a bright room with tall windows and a wall-mounted screen." width="1920" height="1440" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>The constant</b><span>What happens in the chair is the part that does not vary.</span></figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #51 | considered: #53,#52,#10 | rigor: heavy | why: there is exactly one catalogue entry written for a multi-site business listing its sites, and this is it: a locations grid whose tile is an address, a number and a set of hours rather than a product. Picking anything else here would mean re-deriving the pattern the library already holds. The load-bearing part is the RAIL, and the rail is where the template is departed from most deliberately: the locked T-HUB card compares its children on Changes, Made, Quoted per and From, and not one of those four means anything between two addresses that run the same protocols at the same prices. The axes that genuinely separate these four are opening time, closing time, whether Sunday is worked, and which line reaches the desk, so those are the four rows, transcribed exactly rather than summarised. #53 hours table would carry the opening times beautifully and nothing else, and an address and a direct line are not footnotes to an hours grid. #52 map embed plus contact is barred by the same rule that reshaped the hero: no per-clinic map pin is authorised. #10 services 4-col compact is the template's own child grid and would force a clinic to read as a product tile with a price rail it must not have. ADAPTATION: each tile's telephone number is a real tel link rather than plain type, because on the device most of this traffic arrives on the number IS the action, and the parking and transit rows the brief asked for are absent by refusal rather than by oversight, which the held block under the grid states in the open. -->
+<section class="section section--paper" id="s-clinics" aria-labelledby="h-clinics" data-rise>
+  <div class="container">
+    <div class="row row--stretch">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">03</span>
+            <div>
+              <span class="kit-eyebrow">The four clinics</span>
+              <h2 id="h-clinics">Addresses, lines and opening times</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">Read the times before you travel. They are not the same at any two of these four.</p>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Taguig</span>
+            <span class="kit-card__unit">Flagship</span>
+          </div>
+          <p class="kit-card__title">Mitsukoshi BGC</p>
+          <p class="kit-card__addr">2F Mitsukoshi BGC, 8th Avenue corner 36th Street, Grand Central Park, Taguig</p>
+          <dl class="kit-card__hours">
+            <div><dt>Weekdays</dt><dd>11:00 to 20:00</dd></div>
+            <div><dt>Weekends</dt><dd>10:30 to 20:00</dd></div>
+            <div><dt>Sunday</dt><dd>Open</dd></div>
+            <div><dt>Direct line</dt><dd><span class="kit-card__tel">+63 917 159 9284</span></dd></div>
+          </dl>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="bgc-mitsukoshi.html"><span>Mitsukoshi BGC</span></a>
+            <a class="kit-link-plain" href="tel:+639171599284">Call this clinic</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Mandaluyong</span>
+            <span class="kit-card__unit">Ortigas</span>
+          </div>
+          <p class="kit-card__title">Shangri-La Plaza</p>
+          <p class="kit-card__addr">4F East Wing, Shangri-La Plaza, EDSA corner Shaw Boulevard, Ortigas, Mandaluyong</p>
+          <dl class="kit-card__hours">
+            <div><dt>Weekdays</dt><dd>10:30 to 19:00</dd></div>
+            <div><dt>Weekends</dt><dd>10:30 to 19:00</dd></div>
+            <div><dt>Sunday</dt><dd>Open</dd></div>
+            <div><dt>Direct line</dt><dd><span class="kit-card__tel">+63 968 851 5420</span></dd></div>
+          </dl>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="shangri-la-plaza.html"><span>Shangri-La Plaza</span></a>
+            <a class="kit-link-plain" href="tel:+639688515420">Call this clinic</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Taguig</span>
+            <span class="kit-card__unit">Earliest</span>
+          </div>
+          <p class="kit-card__title">Bonifacio Stopover BGC</p>
+          <p class="kit-card__addr">Unit R303, 3rd Floor, Bonifacio Stopover Pavilion, Bonifacio Global City, Taguig</p>
+          <dl class="kit-card__hours">
+            <div><dt>Weekdays</dt><dd>09:00 to 18:00</dd></div>
+            <div><dt>Weekends</dt><dd>Saturday 09:00 to 18:00</dd></div>
+            <div><dt>Sunday</dt><dd>Closed</dd></div>
+            <div><dt>Direct line</dt><dd><span class="kit-card__tel">+63 917 829 4551</span></dd></div>
+          </dl>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="bgc-stopover.html"><span>Bonifacio Stopover</span></a>
+            <a class="kit-link-plain" href="tel:+639178294551">Call this clinic</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--span-3">
+        <article class="kit-card" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Muntinlupa</span>
+            <span class="kit-card__unit">South</span>
+          </div>
+          <p class="kit-card__title">Alabang Town Center</p>
+          <p class="kit-card__addr">2nd Floor, 2225 Commerce Mall, Alabang Town Center, Ayala Alabang, Muntinlupa 1780</p>
+          <dl class="kit-card__hours">
+            <div><dt>Weekdays</dt><dd>11:00 to 20:00</dd></div>
+            <div><dt>Weekends</dt><dd>10:00 to 20:00</dd></div>
+            <div><dt>Sunday</dt><dd>Open</dd></div>
+            <div><dt>Direct line</dt><dd><span class="kit-card__tel">+63 917 114 0598</span></dd></div>
+          </dl>
+          <div class="kit-card__foot">
+            <a class="kit-btn kit-btn--ghost" href="atc.html"><span>Alabang Town Center</span></a>
+            <a class="kit-link-plain" href="tel:+639171140598">Call this clinic</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-truth">
+          <p>Parking arrangements, whether validation is offered, and the nearest station or terminal with a walking time are not listed here. Rather than print a guess you would travel on, we leave it off and ask you to call the clinic you plan to visit. The number is on its card above.</p>
+        </div>
+        <p class="kit-note">Every clinic can be reached by email at <a class="kit-link-plain" href="mailto:info@elevatedental.ph">info@elevatedental.ph</a>.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: TEAM-GALLERY-SECTIONS.md #3 | considered: #5,#4,#2 | rigor: heavy | why: a reader deciding between four addresses wants to know what they are walking into, and the masonry gallery is the one entry in the family that lets images of DIFFERENT proportions sit together without cropping any of them to a common ratio, which matters here because the three admissible interiors are a lobby, a corridor and a treatment room and forcing them into one aspect would cut the corridor's whole subject out of frame. It is also the only gallery entry that treats its caption as a first-class part of the tile rather than as a hover reward, and every caption in this band is doing real work: it names which building the frame is in. #5 hover-zoom tiles with a circle-mask reveal hides the caption until the pointer arrives, which on a touch device means it is never read, and the caption is the fact. #4 filterable grid needs a filter axis and three images across three buildings do not have one. #2 circular roster is written for faces, and no clinician portrait may be tied to a named site while per-clinic assignment is blocked. ADAPTATION, and the reason this band exists at all rather than being folded into the cards above: the supplied library holds no photograph of the Mitsukoshi BGC clinic, so a photograph on each of the four cards was impossible without borrowing a lookalike interior for the fourth. Pulling the pictures OUT of the grid keeps the four cards identical and lets the missing fourth be stated in the open instead of being disguised. -->
+<section class="section section--warm" id="s-rooms" aria-labelledby="h-rooms" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-5 col--copy">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">04</span>
+            <div>
+              <span class="kit-eyebrow">Inside them</span>
+              <h2 id="h-rooms">What you walk into</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Two of these frames are from the same building. They are shown because they answer a question a floor plan cannot: whether you will be comfortable waiting there.</p>
+      </div>
+
+      <div class="col col--span-7">
+        <div class="kit-mediagrid" data-rise>
+          <figure class="kit-slot">
+            <div class="kit-slot__mask kit-slot__mask--frame">
+              <img class="kit-slot__img kit-mediagrid__media" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_03_Lobby-Shangri-La.jpg" alt="A reception lobby with deep green fluted walls, four rounded pendant lamps, a pale stone desk lit from beneath, a cream boucle sofa and a curved mustard sofa under a gold logo on marble." width="1350" height="901" loading="lazy" decoding="async">
+            </div>
+            <figcaption class="kit-slot__cap"><b>Shangri-La reception</b><span>The waiting room on the fourth floor of the East Wing.</span></figcaption>
+          </figure>
+          <figure class="kit-slot">
+            <div class="kit-slot__mask kit-slot__mask--frame">
+              <img class="kit-slot__img kit-mediagrid__media" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_04_Bonifacio-Stopover-Hallway.jpg" alt="A narrow corridor with teal panelled walls, arched rattan insets lit by slim brass sconces, and a black and white striped marble floor running to an arched window at the far end." width="1486" height="990" loading="lazy" decoding="async">
+            </div>
+            <figcaption class="kit-slot__cap"><b>Bonifacio Stopover corridor</b><span>The run between the desk and the rooms on the third floor.</span></figcaption>
+          </figure>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #6 | considered: #18,#19,#24 | rigor: heavy | why: the honest content of this band is a HOLD, and a hold is only readable when the reader can see which cases it affects and which it does not, which is a self-selection problem and therefore #6's. The band sorts the reader into two groups, one whose case the missing data does not touch and one whose case it does, and gives the second group the only reliable route there is. Written as anything else it becomes an apology. #18 and #19, the three-column and four-column team grids, are the patterns this band would obviously take if the roster were available, and they are refused for the same reason: client-rules blocks per-clinic assignment outright, so a grid of faces under a clinic heading would fabricate exactly the fact the band exists to withhold. #24 testimonials grid would answer a question about staffing with quotes about experience, which is a substitution rather than an answer. ADAPTATION: the two groups are opposed as peer panels of equal weight, so "call first" reads as a recommendation rather than as a hedge, and neither panel names a clinician or ties a discipline to a building. -->
+<section class="section section--cool" id="s-bench" aria-labelledby="h-bench" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">05</span>
+            <div>
+              <span class="kit-eyebrow">Specialists by site</span>
+              <h2 id="h-bench">Who is where, and why this page will not say</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw--wide">The roster is confirmed. Its distribution across the four buildings is not, and a schedule published today would be wrong by next month anyway.</p>
+      </div>
+
+      <div class="col col--span-6 col--stretch">
+        <div class="kit-card kit-card--pad" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Book anywhere</span>
+            <span class="kit-card__unit">Simple case</span>
+          </div>
+          <p class="kit-card__title">A single crown, a cleaning, a filling or a check-up</p>
+          <p class="kit-card__body">Work of this kind is handled wherever is convenient, and the protocols behind it are identical at each address. Pick the shortest journey and book it.</p>
+        </div>
+      </div>
+
+      <div class="col col--span-6 col--stretch">
+        <div class="kit-card kit-card--pad" data-rise>
+          <div class="kit-card__top">
+            <span class="kit-card__label">Call before booking</span>
+            <span class="kit-card__unit">Complex case</span>
+          </div>
+          <p class="kit-card__title">A rehabilitation spanning prosthodontics, periodontics and surgery</p>
+          <p class="kit-card__body">Work of this kind is worth scheduling around the people rather than the postcode. Ring the desk on that card, say what the work involves, and ask which days the relevant specialist is there.</p>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <p class="kit-body readw--wide">What is confirmed today is the bench itself, and it is group-wide rather than per site. Every clinician is published by name and by field on the specialist index.</p>
+        <div class="kit-actions kit-actions--tight">
+          <a class="kit-btn kit-btn--ghost" href="specialists.html"><span>Our Specialists</span></a>
+          <a class="kit-btn kit-btn--ghost" href="patients.html"><span>New Patient Guide</span></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #3 | considered: #2,#4,#56 | rigor: heavy | why: this band has exactly one hard, verified, per-site fact and seven names it must NOT attach to a site, and #3's stat strip is the only structure that can put a single measured figure at the front and let a list of names sit behind it as supporting detail rather than as a second claim. Leading with the figure is the honest ordering: the reader wants to know what is confirmed at the address they are choosing, and precisely one thing is. #2 trust strip and logo wall, and #56 sponsors logo wall, both want marks, and every system named here is cleared as nominative text only, no logo, no badge and no partner status, so either would need artwork this build is not permitted to draw. #4 press band has no press to carry. ADAPTATION, load bearing: the seven unconfirmed systems are printed as a plain lattice with an explicit group-wide label above them, so the visual hierarchy itself carries the distinction between the one fact that is per site and the seven that are not. -->
+<section class="section section--paper" id="s-kit" aria-labelledby="h-kit" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">06</span>
+            <div>
+              <span class="kit-eyebrow">Equipment by site</span>
+              <h2 id="h-kit">One system is confirmed everywhere</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-status"><span class="kit-status__dot" aria-hidden="true"></span>3D CBCT imaging, verified at every one of the four addresses above</p>
+        <p class="kit-lede readw">It is the system that matters most for planning, because implants, root canal treatment and surgical extractions are all planned on it.</p>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-sys kit-sys--3up" data-rise>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">01</span>
+            <p class="kit-sys__name">iTero intraoral scanner</p>
+            <p class="kit-sys__note">Digital impressions in place of putty trays.</p>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">02</span>
+            <p class="kit-sys__name">RayFace facial scanner</p>
+            <p class="kit-sys__note">Veneer and smile planning against your own proportions.</p>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">03</span>
+            <p class="kit-sys__name">OccluSense bite analysis</p>
+            <p class="kit-sys__note">Where and how hard the teeth actually meet.</p>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">04</span>
+            <p class="kit-sys__name">Sol Dental Laser</p>
+            <p class="kit-sys__note">Soft-tissue work and gum contouring.</p>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">05</span>
+            <p class="kit-sys__name">AirFlow guided biofilm therapy</p>
+            <p class="kit-sys__note">Cleaning with air, warm water and fine powder.</p>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">06</span>
+            <p class="kit-sys__name">Zoom whitening</p>
+            <p class="kit-sys__note">Light-activated whitening in a single session.</p>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">07</span>
+            <p class="kit-sys__name">Piezotome</p>
+            <p class="kit-sys__note">Ultrasonic bone cutting that spares soft tissue.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--span-4">
+        <div class="kit-truth">
+          <p>The seven systems above are named as group equipment and are not assigned to a specific building. If a specific one matters to your case, an intraoral scan for a clear aligner plan or a facial scan for veneer design, ring that clinic and confirm it before you book.</p>
+        </div>
+        <div class="kit-actions kit-actions--tight">
+          <a class="kit-btn kit-btn--ghost" href="technology.html"><span>What each system does</span></a>
+          <a class="kit-btn kit-btn--ghost" href="treatments.html"><span>All Treatments</span></a>
+        </div>
+      </div>
+
+      <div class="col col--span-8">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--arch">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_04_WP-Asset-_-ATC-Treatment-Room-1_11zon-scaled-1.jpg" alt="A treatment room with a cream dental chair, an overhead operating light on a jointed arm, a wheeled clinician stool and two wall screens above a cream fluted wall." width="2560" height="1440" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>A room, not a claim</b><span>The photograph shows a room. It does not tell you what is installed in it.</span></figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #26 | considered: #57,#8,#40 | rigor: heavy | why: two facts on this page change the shape of a reader's decision and neither is comparable across the four buildings, that the fee is the same wherever you go and that nothing is billed to a health plan, so both belong in the one band structure that carries a single statement with nothing competing beside it. Giving them the locked display quote treatment is the argument: on a page built entirely from four-way comparisons, the two things that do not vary get the one typographic move no comparison uses. #57 standalone pull-quote is the same device catalogued as a decorative transition, and a payment condition is not a rhythm break. #8 manifesto would recast a billing fact as a belief, which the sector reconciliation refuses for a clinical vertical. #40 pre-footer CTA band is the standalone closing band the singularity gate counts, and the chrome already carries this page's one, so picking it would put the page at two and fail closed. ADAPTATION: one ruled rail sits under the statement carrying the two peso figures that bracket the published ladder, because a reader told that the price is identical everywhere will immediately want to know what the price is, and the honest answer is a range that is still a placeholder. -->
+<section class="section section--warm" id="s-fee" aria-labelledby="h-fee" data-rise>
+  <div class="container">
+    <div class="row">
+      <div class="col col--full">
+
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">07</span>
+            <div>
+              <span class="kit-eyebrow">What does not vary</span>
+              <h2 id="h-fee">The fee is the same at every address</h2>
+            </div>
+          </div>
+        </div>
+
+        <p class="kit-quote kit-quote--display readw">Elevate Dental does not accept HMO or dental insurance. All treatment is self-pay, at every clinic.</p>
+        <p class="kit-body readw">Pricing does not vary by building. What a treatment starts at in Muntinlupa is what it starts at in Taguig. Choose on convenience and on where the right specialist is, never on the fee.</p>
+
+        <div class="kit-foot">
+          <p class="kit-micro">The published ladder, end to end</p>
+          <p class="kit-body readw--wide">It runs from ₱1,000 <span class="kit-meta">(a representative market figure)</span> for a single digital radiograph up to ₱180,000 <span class="kit-meta">(an indicative market figure)</span> for a full course of clear aligners. Neither is a quote from Elevate, and every figure between them is anchored to published Philippine market ranges rather than to a rate card of this practice. Your own figures are written for you at the free consultation. Confirm current consultation terms with the clinic before you book.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="prices.html"><span>Treatment Prices</span></a>
+          </div>
+        </div>
+
+        <div class="kit-truth" data-rise>
+          <span class="kit-truth__k">Before you choose a clinic</span>
+          <p>Price parity across sites. A treatment is quoted from the same starting figure wherever it is done, and that has not yet been confirmed for every treatment on the list. So choose the clinic that suits you, then ask for your written quote at that clinic, and the figure you are holding is the one that applies to you.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #11 | considered: #41,#12,#22 | rigor: heavy | why: the final beat has to close a decision rather than open one, and #11's two-column pillar split lets the last argument sit beside the last photograph, which is the right proportion for a page that has spent six bands on logistics: one short paragraph, one room, one ask. #41 closing CTA is the obvious pick and is REFUSED on a hard rule rather than on taste: the chrome carries this site's single closing band, and a second one authored in the body puts the page at two and fails the singularity gate closed, so the ask is folded inline into a content-bearing band instead. #12 feature row with a screenshot has no screenshot to carry and the compact feature-row law bars the full-width media stack it degrades into. #22 featured case study plus two small wants an outcome to feature, and clinical results are owner-blocked under B-2. ADAPTATION: the inline rail carries the appointment control and the contact route side by side, because a reader who has read four sets of opening times may well prefer to speak to someone rather than fill anything in. -->
+<section class="section section--cool" id="s-pick" aria-labelledby="h-pick" data-rise>
+  <div class="container">
+    <div class="row row--split">
+
+      <div class="col col--copy">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">08</span>
+            <div>
+              <span class="kit-eyebrow">Deciding</span>
+              <h2 id="h-pick">Pick the clinic that fits your week</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Book at whichever of the four suits your journey, or ring that clinic and talk it through first. Either way you get the same protocols, the same imaging standard and the same written quote before treatment starts.</p>
+        <p class="kit-body readw--wide">If the case is complex enough that the specialist matters more than the distance, make the call. The desk can tell you when the right person is in that building, and a five minute conversation saves a wasted journey across the metro.</p>
+        <div class="kit-inline">
+          <p>Four addresses, one standard, one quote. The only open question is which journey you would rather make.</p>
+          <div class="kit-inline__acts">
+            <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+            <a class="kit-btn kit-btn--ghost" href="contact.html"><span>Call Us</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--media">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2026_04_Bonifacio-Stopover-Treatment-Room-1.jpg" alt="A treatment room with a green fluted wall, a beige dental chair and unit, a wheeled stool and a wall screen, beside a full height window looking onto a street of office towers." width="1498" height="998" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Bonifacio Stopover treatment room</b><span>Third floor, with the Pavilion street below.</span></figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>

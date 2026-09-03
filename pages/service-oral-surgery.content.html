@@ -1,0 +1,800 @@
+<!--META {"title":"Oral Surgery Procedures | Extractions From ₱6,000","desc":"Surgical extractions and oral procedures using Piezotome ultrasonic instruments and 3D CBCT planning for safer healing.","noindex":true}-->
+<!-- TITLE and DESC are the LOCKED values from _handoff/seo-enrichment.md section 1, the SEO SSOT.
+     The SSOT separator is an en dash and renders here as a pipe, because verify-no-dashes is
+     registered on this build. Only the SEPARATOR CHARACTER changed; no word was altered, added,
+     removed or reordered.
+     The key is "desc" and NOT "description": build.mjs renders esc(meta.desc), and its JSON branch
+     does not alias description to desc, so a "description" key ships an EMPTY meta description
+     while looking correct in the fragment.
+     noindex is set on EVERY page because this publishes to a PUBLIC preview URL while the pages
+     carry representative market prices rather than this clinic's own figures. robots.txt cannot
+     carry that load: crawlers read it only at the origin root, and this ships to a project
+     subpath, so the disallow-all there is inert. noindex is the protection that actually works. -->
+<!-- ============================================================================
+     THE BODY. elevatedental / service-oral-surgery. T-FEATURE, concept B "THE GUIDED
+     PATH", the owner pick of 2026-08-15 (_approvals.json T-FEATURE).
+
+     THE SPINE IS PRESERVED, RE-POINTED AT THIS TREATMENT: an in-flow route index that
+     works with scripting off, an ORDINAL stamped in the .kit-open__no slot of every
+     band, and a ruled .kit-foot hand-off naming the next stage. No position:sticky is
+     authored (inert inside the overflow:hidden .section) and no scroll-spy script is
+     added, because the spine has to survive scripting being switched off.
+
+     THIS PAGE DECLARES NINE STAGES, AND TWO OF THEM EXIST ONLY HERE. The route length
+     is read off THIS page's copy (_copy/service-oral-surgery.md), and this is the only
+     treatment on the template that is SURGERY, which adds two beats no veneer or
+     appliance page has:
+       stage 04  WHERE IT IS SAFE TO DO THIS. A bleeding disorder, uninterruptible
+                 anticoagulant therapy, antiresorptive history, recent cardiac events or
+                 immunosuppression change the SETTING, not the technique. That is a
+                 safety gate, not a caveat, so it gets a band rather than a sentence.
+       stage 07  A CAPABILITY DENIAL. The copy states plainly that sedation dentistry is
+                 NOT offered. productModel.unverified_capabilities records sedation as
+                 not evidenced in the source crawl, so the page says so in the band where
+                 a reader would otherwise assume it.
+     Eleven sections. The consent hold rides inside the final stage rather than taking a
+     band of its own, because a stop on a route whose only content is an absence is a
+     hole in the route.
+
+     Every section obeys section -> div.container -> div.row -> div.col -> OBJECT and
+     carries EXACTLY ONE .container and EXACTLY ONE .row. Skin classes sit on the OBJECT.
+     NO PAGE-LOCAL STYLE BLOCK. ZERO closing CTA bands, ZERO dark bands, ZERO arc seams.
+
+     DESIGN-SYSTEM PROVENANCE, cited and meant:
+       blueprint composition-medical-health  the SECTOR spine. Collision A (zero closing
+                 bands in the body) and Collision B (warm imagery, calm voice) bind here,
+                 and Collision B is doing real work on a surgical page: the imagery is
+                 clinical and calm, never dramatic.
+       library   _COMPOSITION-LAWS           L9 SELECTION-RATIONALE is why every band
+                 carries a defended ledger; L1 STACKED SPLIT READING ORDER is why no
+                 media cell is authored above its own heading.
+       library   _RESPONSIVE-PATTERN-LIBRARY the four-tier reflow ladder.
+       library   _MODERN-WOW-SPEC            real photography over token-built material.
+       library   _MODERN-DESIGN-PATTERN-LIBRARY  the shape-masked media spent through the
+                 locked .kit-slot family.
+
+     IMAGERY. Six real first-party photographs from this page's assignment in
+     _imagery-map.json, each LOOKED AT before its alt text was written. ZERO generated
+     images. The flat-lay at stage 02 is described in its alt text as the model-and-prop
+     illustration it actually is, rather than being passed off as an operative photograph.
+     ZERO before-and-after pairs: the surgical records are owner-blocked (B-2).
+
+     CLAIM DISCIPLINE. RISKS ARE STATED, NOT MINIMISED, and the page never promises the
+     absence of pain. No sedation capability is claimed. Both peso figures carry a plain-English
+     representative-market disclosure. The self-pay truth is carried in stage 08 in its
+     canonical wording.
+     ============================================================================ -->
+
+<!-- pick: HERO-COMPOSITIONS.md #13 Centered + scroll cue, the continue indicator | considered: #20,#19,#8 | rigor: heavy | why: someone reading a surgical page is frightened, and a frightened reader's question is not "why you" but "what is going to happen to me and in what order"; #13 is the only cataloged entry whose named device is the CONTINUE affordance, a hero that is deliberately incomplete and points onward, which is the honest posture when the answer is nine stages long. #20's three parallel proof columns make a case for the practice at the moment the reader wants a description of a procedure. #19's bento answers many questions at once, which reads as reassurance-by-volume on a page where the reader needs sequence. #8's manifesto band opens on belief, and belief is the least useful thing to offer someone deciding whether to let a surgeon cut their jaw. ADAPTATION: #13's centering, 100vh box and animated chevron are all refused, per the single left reading axis, the no-min-height hero law and the three-move motion budget. DIVERGENCE FROM THE TEMPLATE, stated honestly: the template hero photographs the APPLIANCE being sold; there is no appliance here, so this hero photographs the OPERATOR, which is the thing actually being trusted, and pairs it with the entry price rather than a per-unit fee. -->
+<section class="section surface-dark kit-hero foh-hero" id="s-start" aria-labelledby="h-start" data-surface="dark" data-rise>
+  <div class="container">
+    <div class="row">
+      <div class="col col--full">
+        <div class="foh-hero__stage">
+          <figure class="foh-hero__band">
+            <img class="foh-hero__img" src="../assets/generated/gen-hero-sterile-field.jpg" alt="A prepared sterile field: crisply folded bone-white drapes and a brushed brass tray of covered instruments under soft overhead light." width="3136" height="1344" loading="eager" fetchpriority="high" decoding="async">
+            
+          </figure>
+          <div class="foh-hero__inner">
+              <h1 class="foh-hero__title" id="h-start">Oral Surgery Procedures in the Philippines.</h1>
+            </div>
+          <div class="foh-hero__lockup">
+            <p class="foh-hero__eyebrow">Oral surgery, at four Metro Manila clinics</p>
+            <div class="kit-tags">
+              <span class="kit-tag kit-tag--accent kit-tab">From ₱6,000. Indicative figure, not an Elevate price</span>
+            </div>
+            <p class="foh-hero__lede">Oral surgery covers surgical extractions and the procedures around them, planned on a 3D CBCT scan.</p>
+            <div class="kit-actions">
+              <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+              <a class="kit-btn kit-btn--secondary" href="contact.html" data-page="contact.html">Ask about this treatment</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOH hero restructure: the opening section is now the photographic band and its lockup. The
+     free-consultation line, the operator photograph and the note on how the page is laid out are
+     re-housed here unchanged; the representative-figure caveat that ran inside the old h1 now
+     stands in the accent chip in the lockup, where the same disclosure already sat. Nothing but the
+     stage can live in the hero section, because .foh-hero > .container releases its max-width and
+     its gutter and only the stage re-pays them. -->
+<!-- pick: HERO-COMPOSITIONS.md #1 Split-text-left + photo-right | considered: #2,#4 | why: this band is what REMAINS of the opening stage once the FOH restructure lifted the headline into the photographic band above it, and the remainder is already #1's shape at #1's own ratio, the free-consultation copy on a .col--span-7 (58%) beside the operator portrait on a .col--span-5 (42%), which is precisely the case #1 names, a service business where the person operating is the thing being chosen. #2's mirror leads with the photograph, so a reader would meet a masked clinician before the sentence telling them the first consultation is free. #4's diptych gives the work equal billing with the operator, but the work on an oral-surgery page is a surgical field, and that frame is already spent in the hero directly above. The full-width orientation cell below the split is not part of #1: it is the route hand-off and it stays a hand-off cell. -->
+<section class="section section--paper" id="s-start-b" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">Start</span>
+          </div>
+        </div>
+        <p class="kit-body readw">The first consultation is free, and you leave it knowing what your own imaging actually reveals and what your case will cost. Confirm current consultation terms with the clinic before you book.</p>
+      </div>
+
+      <div class="col col--span-5">
+        <figure class="kit-slot" data-rise style="box-shadow: var(--ds-shadow-lift);">
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/generated/gen-surgical-field.jpg" alt="A surgical suction tip and extraction forceps arranged on a sterile blue field." width="675" height="585" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>The operator</b><span>On this page it is the surgeon, not an appliance, that you are choosing.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>See the nine stages</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#stage-09"><span>Skip to the risks</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #36 Sticky-sidebar topic nav | considered: #27,#50 | rigor: heavy | why: this band IS the concept, and #36 is the only entry whose stated role is ORIENTATION across a long document, with a declared reflow that moves the index ABOVE the body at the narrow tier. #27's numbered process steps describe a PROCEDURE the reader undergoes, and this page's stage 05 IS that procedure, so reusing the shape would make the table of contents indistinguishable from the thing it points at. #50's topic columns are unordered by construction. ADAPTATION: #36's sidebar is STICKY and cannot be, because position:sticky is inert inside the overflow:hidden .section, so the affordance is rebuilt as an in-flow index plus a per-band ordinal plus a per-band hand-off. THIS INDEX ALSO CARRIES A WARNING its siblings do not: the route names stage 04 as a place where the answer may be that the procedure should not happen in this building at all, so a reader with a complicated medical history meets that fact in the map rather than nine tenths of the way down the page. -->
+<section class="section section--cool" id="s-route" aria-labelledby="h-route" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-4">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">Route</span>
+            <div>
+              <span class="kit-eyebrow">The nine stages</span>
+              <h2 id="h-route">What this page covers</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Nine stages, and two of them exist because this is surgery rather than dentistry.</p>
+        <p class="kit-body readw">Stage 04 is about where your procedure is safe to happen, which for some medical histories is a hospital and not a dental clinic. Stage 09 is about risk, stated in full rather than summarised into comfort.</p>
+      </div>
+
+      <div class="col col--span-8">
+        <ol class="kit-list kit-list--ledger" data-rise>
+          <li><span><b>What cutting means here.</b> What separates lifting a tooth out whole from raising a flap and taking it out in pieces. <a href="#stage-01">Go to stage 01</a></span></li>
+          <li><span><b>The procedures in this group.</b> Seven named operations an oral surgeon handles rather than a general dentist. <a href="#stage-02">Go to stage 02</a></span></li>
+          <li><span><b>Whether you need it at all.</b> Including the third molar that should be left alone and the tooth that should be saved instead. <a href="#stage-03">Go to stage 03</a></span></li>
+          <li><span><b>Where it is safe to do it.</b> The medical histories that move a procedure from this clinic to a hospital setting. <a href="#stage-04">Go to stage 04</a></span></li>
+          <li><span><b>The day itself, and the week after.</b> Scan to suture removal, with the real timings and the recovery window. <a href="#stage-05">Go to stage 05</a></span></li>
+          <li><span><b>The bench.</b> Who interprets the imaging, who operates, and who is brought in when a tooth might still be saved. <a href="#stage-06">Go to stage 06</a></span></li>
+          <li><span><b>The equipment, and a plain denial.</b> Three named systems, plus what this practice does not do. <a href="#stage-07">Go to stage 07</a></span></li>
+          <li><span><b>The fee.</b> An anchor figure, the drivers behind it, and the one way this clinic is paid. <a href="#stage-08">Go to stage 08</a></span></li>
+          <li><span><b>Risks, answers and aftercare.</b> Eight real questions, the specific risks named, and what to do in the days that follow. <a href="#stage-09">Go to stage 09</a></span></li>
+        </ol>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 01, what the word surgical actually changes about an extraction, and why it is a different operation rather than a harder version of the same one.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-01"><span>Go to stage 01</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #21 Definition block with inline callout | considered: #12,#57 | rigor: heavy | why: this stage defines ONE term by CONTRASTING it with a simpler one, and the whole value of the band is that the contrast is continuous: a simple extraction lifts a tooth out whole, a surgical extraction raises a flap, removes bone, sections the tooth and closes with sutures. #21 is the entry built for a continuous definition that interrupts itself with a called-out consequence, which is what the locked .kit-truth block does here. #12's feature row with a screenshot is refused because there is no honest photograph of the DIFFERENCE between two extraction techniques; a picture of forceps illustrates one half and misrepresents the other. #57's standalone pull-quote can carry a single line but not a two-part contrast plus its consequence. ADAPTATION: the band carries NO photograph at all, which on an eleven-section page with six photographs is a deliberate spend: the one band whose content is a definition is the one band with nothing to look at, so the reader's attention is on the words where the distinction actually lives. -->
+<section class="section section--warm" id="stage-01" aria-labelledby="h01" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">01</span>
+            <div>
+              <span class="kit-eyebrow">Stage 01, plain English</span>
+              <h2 id="h01">What makes an extraction surgical</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Oral surgery is the part of dentistry that involves cutting.</p>
+        <p class="kit-body readw">A simple extraction lifts a tooth out whole with forceps. A surgical extraction is what happens when that is not possible: the gum is lifted as a flap, bone is removed where it blocks the path, the tooth is sectioned into pieces, each piece is taken out separately, and the site is cleaned and closed with sutures.</p>
+        <p class="kit-body readw">That is not a harder version of the same procedure. It is a different one, with a different recovery and a different set of things that can go wrong, which is why it is planned on a scan rather than attempted and then abandoned.</p>
+        <p class="kit-accentline">Something in the jaw is infected, obstructed, painful, or in the way of a restoration that cannot proceed until it is dealt with.</p>
+      </div>
+
+      <div class="col col--span-5">
+        <div class="kit-truth">
+          <span class="kit-truth__k">Why the order matters</span>
+          <p>The scan comes before the plan, and the plan comes before the appointment. For a lower wisdom tooth it maps the exact relationship between the roots and the inferior alveolar nerve canal. For an upper one it shows how close the roots sit to the sinus floor. That is the information that decides the surgical approach, and deciding it in advance is what separates a planned operation from an improvised one.</p>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 02, the seven named operations grouped under this heading, and what each one is actually for.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-02"><span>Go to stage 02</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Return to the index</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #30 Ledger list with per-row detail | considered: #10,#9 | rigor: heavy | why: SEVEN named operations is too many for any card grid in the catalogue: #10 tops out at four peer cells and #9 at three, so seven would either run to a ragged second row or force two operations to be merged, and merging two surgical procedures because a layout wants an even number is a content decision made by a grid. #30's ledger rows take an arbitrary count without deforming, give each row a name in bold and a real sentence of detail, and keep the hairline rule between rows doing the separating work that a card border would otherwise do. #10 is additionally the device this build already spends on the four-turning exit boards of the sibling veneer pages, and reusing it here for a set that is NOT a set of exits would make two different meanings share one shape. ADAPTATION: the rows are NOT links. Every other ledger list on this page type carries a destination per row, and these seven deliberately do not, because there is no per-procedure page to send anyone to and a link that resolves to the same parent page seven times is worse than no link. -->
+<section class="section section--paper" id="stage-02" aria-labelledby="h02" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-5">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">02</span>
+            <div>
+              <span class="kit-eyebrow">Stage 02, the group</span>
+              <h2 id="h02">The procedures handled here</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">These are the operations an oral surgeon handles rather than a general dentist.</p>
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2023_03_tooth-extraction-with-a-dental-instrument-with-for-2022-04-20-18-35-01-utc-1.jpg" alt="A flat-lay illustration of white model teeth arranged in an arch beside a pair of wooden toy forceps on a pale blue background." width="1200" height="800" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>An illustration, not an operation</b><span>Models and props. The clinical records are held back under consent.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--span-7">
+        <ol class="kit-list kit-list--ledger" data-rise>
+          <li><span><b>Impacted wisdom teeth.</b> A third molar angled into bone, or into the tooth in front of it, so it cannot erupt into a cleanable position.</span></li>
+          <li><span><b>Retained roots.</b> Fragments left behind by an old fracture or an incomplete extraction, still sitting in the bone.</span></li>
+          <li><span><b>Apicoectomy.</b> The infected tip of a root removed surgically, after root canal treatment has not resolved the infection.</span></li>
+          <li><span><b>Exposure and bonding of an impacted canine.</b> Uncovering the tooth and bonding an attachment to it so the orthodontist can bring it into the arch.</span></li>
+          <li><span><b>Socket preservation and bone grafting.</b> Rebuilding the ridge after a tooth is removed, so an implant can be placed there later.</span></li>
+          <li><span><b>Frenectomy.</b> Releasing a tight lip or tongue attachment.</span></li>
+          <li><span><b>Removal of cysts and soft-tissue lesions.</b> With biopsy where the tissue needs to be examined rather than assumed benign.</span></li>
+        </ol>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 03, whether your case is one of these at all, including the two situations where the correct answer is to do nothing surgical.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-03"><span>Go to stage 03</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>The stage list</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #6 "Is this for me" qualifier | considered: #10,#57 | rigor: heavy | why: the content here is a QUALIFIER in the strict sense, a statement of who needs the procedure followed by two refusals, and #6 is the entry built for exactly that asymmetry. The refusals are not exits to other treatments in the way a veneer page's turnings are, they are arguments for NOT operating, so the four-cell exit board of #10 would misdescribe them as four alternative purchases. #57's pull-quote could carry one refusal with force but not two plus the qualifying list. ADAPTATION, and it is the reason this band exists in this position: the two refusals are the most commercially costly sentences on the page, because each one talks a reader out of a procedure, so they are given the WIDER column and the qualifying list is given the narrower one. A band that argues against its own sale should not bury that argument in a sidebar. -->
+<section class="section section--cool" id="stage-03" aria-labelledby="h03" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-4">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">03</span>
+            <div>
+              <span class="kit-eyebrow">Stage 03</span>
+              <h2 id="h03">Whether you need surgery at all</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">You need it if you have one of these.</p>
+        <ul class="kit-list">
+          <li>An impacted or partially erupted wisdom tooth that keeps getting infected.</li>
+          <li>A tooth broken below the gum line.</li>
+          <li>A root fragment left in the bone.</li>
+          <li>A failing root canal that has not settled after retreatment.</li>
+          <li>An impacted canine that orthodontics needs uncovered.</li>
+          <li>A site that needs bone before an implant can be placed.</li>
+        </ul>
+      </div>
+
+      <div class="col col--span-8">
+        <p class="kit-micro">And the two cases where the answer is no</p>
+        <div class="kit-truth" data-rise>
+          <span class="kit-truth__k">A healthy wisdom tooth can stay</span>
+          <p>A wisdom tooth that is fully erupted, upright, cleanable and causing no symptoms does not automatically need removing. Prophylactic removal of an asymptomatic, functional third molar is not a default here. If there is no sign of pathology and you can clean it, you will be told to keep it and monitor it.</p>
+        </div>
+        <div class="kit-truth" data-rise>
+          <span class="kit-truth__k">A tooth that can be saved should be saved</span>
+          <p>An extraction is quicker and costs less today than root canal treatment plus a crown. It is also a permanent loss, and replacing a lost tooth later costs more than the treatment that would have kept it. If your case is restorable, the endodontist or the prosthodontist who could restore it works in the same practice and can look at it before anything is removed.</p>
+        </div>
+        <div class="kit-actions kit-actions--tight">
+          <a class="kit-btn kit-btn--ghost" href="root-canal-treatment.html" data-page="root-canal-treatment.html"><span>Root canal treatment</span></a>
+          <a class="kit-btn kit-btn--ghost" href="dental-crowns.html" data-page="dental-crowns.html"><span>Dental crowns</span></a>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 04, the question that comes before technique: whether this building is the right place for your procedure at all.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-04"><span>Go to stage 04</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Jump to the map</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #57 Quote / pull-quote standalone | considered: #6,#30 | rigor: heavy | why: THIS BAND EXISTS ONLY ON THIS PAGE and its ledger is written from scratch. Its content is a single instruction that the reader must not miss, tell us your full medical history and every medication before the procedure is booked, wrapped around a list of the histories that change the setting. #57's role is stated as breaking the rhythm so that one sentence can carry a band, and this is the sentence on the page most worth breaking rhythm for: it is the one that most often changes the plan. #6's qualifier band was already spent one stage earlier on a different question, and running two consecutive qualifier bands would make stage 03 and stage 04 read as one long hedge instead of two separate decisions. #30's ledger list would render six medical conditions as six peers of equal weight, which is exactly the flattening to avoid, because the decisive item is not any one condition, it is the DISCLOSURE. ADAPTATION: the display quote carries the instruction, the conditions sit under it as a plain list rather than as cards, and the photograph shows a real operatory, because the whole band is an argument about SETTING and the setting is the one thing here a photograph can honestly show. -->
+<section class="section section--warm" id="stage-04" aria-labelledby="h04" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">04</span>
+            <div>
+              <span class="kit-eyebrow">Stage 04, setting before technique</span>
+              <h2 id="h04">Where your procedure is safe to happen</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-quote kit-quote--display readw">Tell us your full medical history and every medication and supplement you take, including blood thinners, before the procedure is booked.</p>
+        <p class="kit-body readw">This is the single piece of information that most often changes the plan, and it changes it before anything else is decided.</p>
+        <p class="kit-body readw">Some cases belong in a hospital rather than in a dental clinic. Our clinics work under local anesthesia. If your medical history means your procedure needs a hospital setting, you will be told that at the assessment rather than partway through it.</p>
+        <ul class="kit-list">
+          <li>A bleeding disorder.</li>
+          <li>Current anticoagulant therapy that cannot be interrupted.</li>
+          <li>A history of antiresorptive or bisphosphonate medication.</li>
+          <li>Recent cardiac events.</li>
+          <li>Immunosuppression.</li>
+          <li>Any case that genuinely requires general anesthesia.</li>
+        </ul>
+      </div>
+
+      <div class="col col--span-5">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--arch">
+            <img class="kit-slot__img" src="../assets/generated/gen-theatre-empty.jpg" alt="An empty dental surgical theatre with an overhead operating light and dark cabinetry." width="663" height="512" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>A dental operatory</b><span>Equipped for local anesthesia, which is what decides the answer above.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 05, the appointment sequence, the procedure itself, and what the days immediately after are actually like.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-05"><span>Go to stage 05</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Route index</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #28 Process timeline horizontal | considered: #27,#13 | rigor: heavy | why: the copy fixes SEVEN steps with a real duration or window on each, and #28 is the entry written for the long sequence where the connector carries meaning; #27 is cataloged for three to six numbered cards. #13's bento is non-sequential, and on a surgical page the sequence IS the reassurance, so scrambling it into tiles removes the only structure the reader came for. ADAPTATION: #28's horizontal flow is not built, because a horizontal timeline drops its connector and wraps two-up at the tablet tier and would need page-local CSS that promotion strips; the locked table's hairline rules are the connector and the third column is the durations axis. THE DIVERGENCE WORTH NAMING: two of the seven rows carry no clock time. The first forty-eight hours are a period the patient spends at home rather than an appointment, and onward treatment is measured in months and only applies to some cases, so those cells state the real unit instead of a chair time that would be a fiction. -->
+<section class="section section--paper" id="stage-05" aria-labelledby="h05" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">05</span>
+            <div>
+              <span class="kit-eyebrow">Stage 05, scan to suture removal</span>
+              <h2 id="h05">How it runs</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Seven steps, and you should know what step 03 feels like before you agree to it.</p>
+        <p class="kit-body readw">You will feel pressure and movement. You should not feel sharpness. If you do, say so immediately and more anesthetic is given before work continues. That instruction is given to you in the chair, and it is repeated here so you are not hearing it for the first time while lying down.</p>
+      </div>
+
+      <div class="col col--span-5">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/generated/gen-surgical-set.jpg" alt="A sterile oral surgery instrument set laid out in order on a dark blue surgical drape." width="623" height="512" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Two pairs of hands</b><span>An operator and an assistant, for the length of the procedure.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-table__scroll">
+          <table class="kit-table">
+            <caption>The seven steps, with the real time or window each one takes</caption>
+            <thead>
+              <tr><th scope="col">Step</th><th scope="col">What happens</th><th scope="col">How long</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">01 Consultation and imaging</b></td>
+                <td data-label="What happens">Examination, medical history, and a 3D CBCT scan where the case needs one. This is the information that decides the surgical approach.</td>
+                <td data-label="How long" class="kit-tab">45 to 60 minutes</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">02 Planning and medical review</b></td>
+                <td data-label="What happens">The surgeon decides the approach, whether the tooth will be sectioned, whether bone will be removed and whether the site will be grafted. Medications are reviewed. You get the fee in writing and the post-operative instructions in advance, so you can arrange the day around them.</td>
+                <td data-label="How long" class="kit-tab">Same visit, or within a week</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">03 The procedure</b></td>
+                <td data-label="What happens">Local anesthesia first, and the site is tested before anything begins. The flap is raised, the tooth or lesion is removed, the site is irrigated and cleaned, graft material is placed if the plan calls for it, and the flap is sutured.</td>
+                <td data-label="How long" class="kit-tab">30 to 90 minutes</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">04 Immediate recovery</b></td>
+                <td data-label="What happens">You bite on gauze in the clinic until the initial bleeding stops, then leave with written instructions and any prescribed medication.</td>
+                <td data-label="How long" class="kit-tab">30 to 45 minutes</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">05 The first forty-eight hours</b></td>
+                <td data-label="What happens">Swelling peaks around day two. Ice on and off for the first day, rest, soft cold food, no rinsing and no spitting for the first 24 hours, no smoking, and no drinking through a straw.</td>
+                <td data-label="How long" class="kit-tab">At home, not in the chair</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">06 Review and suture removal</b></td>
+                <td data-label="What happens">The site is checked for healing and the sutures are removed if they are not the dissolving type.</td>
+                <td data-label="How long" class="kit-tab">15 to 20 minutes, at 7 to 10 days</td>
+              </tr>
+              <tr>
+                <td data-label="Step"><b class="kit-strong">07 Onward treatment, where it applies</b></td>
+                <td data-label="What happens">A grafted site waits before an implant can go into it. An exposed canine is passed back to the orthodontist. A biopsy result is discussed with you as soon as it comes back.</td>
+                <td data-label="How long" class="kit-tab">3 to 6 months for a graft</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 06, whose judgement the plan rests on, and who else looks at a tooth before it is written off.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-06"><span>Go to stage 06</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>The whole route</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #11 Service pillars 2-col with image | considered: #18,#8 | rigor: heavy | why: #11's media-plus-cards law fits a small named set exactly, one photograph STRETCHING against a card group rather than a capped image beside a tall stack, which is what verify-media-fits-track enforces and what the locked .kit-mediagrid implements. #18's team grid is refused on evidence: per-clinic and per-treatment rosters are BLOCKED in client-rules.json, so faces would assert an assignment no receipt supports. #8's manifesto band cannot name separate disciplines. ADAPTATION, specific to surgery: the band's real argument is that the hardest decision on this page is a JUDGEMENT rather than a technique, whether to take a whole tooth or deliberately leave a fragment when a root is wrapped around the nerve canal, so that sentence leads the band and the cards carry the disciplines consulted before a tooth is given up on. -->
+<section class="section section--cool" id="stage-06" aria-labelledby="h06" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">06</span>
+            <div>
+              <span class="kit-eyebrow">Stage 06, the bench</span>
+              <h2 id="h06">Who reads the scan and who operates</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Procedures are performed by an oral surgery specialist. The scan reading, the surgical decision and the operation itself are theirs.</p>
+        <p class="kit-body readw--wide">That matters most where a case is not straightforward. If imaging reveals a root wrapped around the nerve canal, whether to take the whole tooth or leave a fragment deliberately in place is a surgical judgement, not a general one, and it is made by the person who will live with the consequence.</p>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-mediagrid">
+          <figure class="kit-mediagrid__media kit-slot" data-rise>
+            <div class="kit-slot__mask kit-slot__mask--arch">
+              <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2018_05_decayed-tooth-extraction.jpg" alt="Close-up of an open mouth with extraction forceps positioned around a lower back tooth." width="1920" height="1271" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <div class="kit-mediagrid__cards">
+            <article class="kit-card kit-card--flat" data-rise>
+              <p class="kit-card__title">Oral Surgery</p>
+              <p class="kit-card__body">Owns the case: reads the imaging, chooses the approach, and carries out the operation.</p>
+            </article>
+            <article class="kit-card kit-card--flat" data-rise>
+              <p class="kit-card__title">Endodontics</p>
+              <p class="kit-card__body">Consulted before a tooth is written off. If a failing root canal can be retreated, that conversation happens before an extraction is booked.</p>
+            </article>
+            <article class="kit-card kit-card--flat" data-rise>
+              <p class="kit-card__title">Prosthodontics</p>
+              <p class="kit-card__body">Consulted where a tooth is coming out and will need replacing, so the site is prepared for what follows rather than simply emptied.</p>
+            </article>
+            <article class="kit-card kit-card--flat" data-rise>
+              <p class="kit-card__title">Orthodontics</p>
+              <p class="kit-card__body">Where a canine is exposed and bonded, the case returns to the orthodontist who asked for it and who brings the tooth into the arch.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 07, the three named instruments, and one thing this practice does not offer.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-07"><span>Go to stage 07</span></a>
+            <a class="kit-btn kit-btn--ghost" href="specialists.html" data-page="specialists.html"><span>Our Specialists</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Index of stages</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: SECTION-COMPONENTS.md #9 Services 3-col | considered: #10,#13 | rigor: heavy | why: THREE named units, each needing two or three real sentences about what it does to YOUR case, is #9's shape exactly: equal columns, a name, a short description, no hierarchy. The locked sheet ships it as .kit-sys, the hairline-gapped matrix where the gap is the rule. #10's four-column compact grid is cataloged for lighter content and leaves a hole at three. #13's bento sizes tiles differently, and a bigger tile is a claim of importance the practice has not made. ADAPTATION, and it is the whole point of the band: the ruled foot carries a CAPABILITY DENIAL. Sedation dentistry is recorded in productModel.unverified_capabilities as not evidenced in the source crawl, and a technology stage is precisely where a frightened reader would otherwise assume it exists, so the page says plainly that it is not offered. A named-technology band that lists only what a practice HAS is an advertisement; one that also states what it does not have is a disclosure. -->
+<section class="section section--warm" id="stage-07" aria-labelledby="h07" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-7">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">07</span>
+            <div>
+              <span class="kit-eyebrow">Stage 07</span>
+              <h2 id="h07">The instruments, and one thing we do not offer</h2>
+            </div>
+          </div>
+        </div>
+        <p class="kit-lede readw">Three named systems, and what each of them changes about the margin of error.</p>
+        <p class="kit-accentline">We name the systems because a name can be checked. An adjective cannot.</p>
+      </div>
+
+      <div class="col col--span-5">
+        <figure class="kit-slot" data-rise>
+          <div class="kit-slot__mask kit-slot__mask--frame">
+            <img class="kit-slot__img" src="../assets/first-party/elevatedental.ph_wp-content_uploads_2022_08_dental-male-employee-is-demonstrating-extraction-i-2021-09-03-23-32-37-utc.jpg" alt="Gloved hands holding a dental elevator and extraction forceps beside a seated patient, with a tooth model on the instrument tray." width="1200" height="800" loading="lazy" decoding="async">
+          </div>
+          <figcaption class="kit-slot__cap"><b>Chosen per case</b><span>The approach decides the instrument, not the other way round.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-sys kit-sys--3up" data-rise>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">Station 01</span>
+            <p class="kit-sys__name">3D CBCT imaging</p>
+            <p class="kit-sys__note">Your scan is taken where you are being treated rather than at a separate imaging centre on a separate day. For this kind of operation it is the difference between knowing where the nerve canal runs and estimating it from a flat film.</p>
+            <span class="kit-sys__where"><i aria-hidden="true"></i>All four clinics</span>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">Station 02</span>
+            <p class="kit-sys__name">Piezotome ultrasonic instrumentation</p>
+            <p class="kit-sys__note">Cuts bone with ultrasonic vibration rather than a rotating bur. The frequency is tuned to mineralized tissue, so it cuts bone while being far less likely to tear nerves, the sinus membrane or the gum flap on contact. In practice bone can be removed close to a nerve canal or under a sinus floor with a narrower margin of error, and the cut surface is left cleaner for healing.</p>
+            <span class="kit-sys__where"><i aria-hidden="true"></i>Named installed system</span>
+          </div>
+          <div class="kit-sys__unit">
+            <span class="kit-sys__no">Station 03</span>
+            <p class="kit-sys__name">Sol Dental Laser</p>
+            <p class="kit-sys__note">Operated here for soft-tissue work. Whether it is used in your procedure depends on what the procedure involves, and the surgeon will tell you at the planning stage rather than listing it as a feature you are buying.</p>
+            <span class="kit-sys__where"><i aria-hidden="true"></i>Named installed system</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-truth">
+          <span class="kit-truth__k">What is not offered here</span>
+          <p>We do not offer sedation dentistry, and we do not claim to. Procedures here are done under local anesthesia. If your case needs more than that, it needs a different setting and you will be told so at the assessment.</p>
+        </div>
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 08, the money: an anchor figure, the drivers behind it, and how payment actually works at this practice.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-08"><span>Go to stage 08</span></a>
+            <a class="kit-btn kit-btn--ghost" href="technology.html" data-page="technology.html"><span>Technology</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Reopen the map</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: PRICING-SECTIONS.md #4 Quote-only cost-model split | considered: #6,#2 | rigor: heavy | why: the copy holds a cost MODEL, an anchor figure plus three named drivers plus a promise that the real number follows a scan that has been read, and #4 is built for that: a split head, a rules list, and an oversized display figure carrying the anchor, with the ask NOT closed in this band because the chrome owns the closing band. #6's configurator ladder would be a third numbered device on a page that already numbers a nine-stage route and a seven-step table. #2's comparison table needs a rate card and none exists. ADAPTATIONS: #4's no-price law is broken exactly once, because the locked copy publishes an anchor and the brief requires the money question answered rather than buried; the figure ships in the stat cell with the representative marker as its own label. #4's portrait media frame is dropped, because dressing a self-pay disclosure in a photograph is what makes a reader distrust it. WHAT THIS PAGE ADDS: the copy promises the written figure states whether IMAGING, MEDICATION and the REVIEW APPOINTMENT are included, which on a surgical case is where a quote usually leaks, so that sentence gets its own accent line. -->
+<section class="section section--paper" id="stage-08" aria-labelledby="h08" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--span-5">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">08</span>
+            <div>
+              <span class="kit-eyebrow">Stage 08, how the number is built</span>
+              <h2 id="h08">What it costs</h2>
+            </div>
+          </div>
+        </div>
+        <div class="kit-statband" data-rise>
+          <div class="kit-stat">
+            <span class="kit-stat__n kit-tab"><span class="pre">From</span> ₱6,000</span>
+            <span class="kit-stat__l">A representative market figure, not an Elevate price</span>
+            <p class="kit-stat__sub">Per procedure. Anchored to published market ranges, not to an Elevate price list.</p>
+          </div>
+        </div>
+        <div class="kit-truth">
+          <p>Every peso amount on this page is representative and anchored to published market ranges - it is not a price quoted by Elevate Dental. Each procedure is quoted after a clinical assessment.</p>
+        </div>
+      </div>
+
+      <div class="col col--span-7">
+        <p class="kit-micro">What moves the final figure</p>
+        <ul class="kit-list">
+          <li><b class="kit-strong">Case complexity.</b> A retained root near the surface and a fully impacted horizontal lower third molar lying against the inferior alveolar nerve are separated by an hour of surgery and a different level of risk.</li>
+          <li><b class="kit-strong">Materials.</b> A graft material, a membrane, or a suture type chosen for a specific closure all carry their own cost, and they are listed separately rather than folded in silently.</li>
+          <li><b class="kit-strong">Number of sites.</b> Four wisdom teeth removed in one appointment is priced differently from one, and doing them in a single visit usually means one recovery period rather than four.</li>
+        </ul>
+        <p class="kit-body readw--wide">The exact figure is confirmed at consultation, after the scan has been read, and it is given to you in writing before the procedure is booked.</p>
+        <p class="kit-accentline">The written figure states whether imaging, medication and the review appointment are included.</p>
+      </div>
+
+      <!-- RE-BAND (G-DENSITY, layout only, zero copy changed): this row measured [457,1067,195], two
+           tall columns plus a short full-width hand-off strip. The 195px strip set the minimum against
+           a 1067px column, so colDelta read 0.82 and no re-proportioning of the two big columns could
+           reach it. DOM order is untouched; the row is re-spanned into two LOCAL bands instead.
+           Band 1 (5|7): the cost head and the anchor figure beside the drivers list.
+           Band 2 (7|5): the self-pay block and its rail beside the stage-09 hand-off. -->
+      <div class="col col--span-7">
+        <div class="kit-foot">
+          <p class="kit-micro">How you pay</p>
+          <p class="kit-quote kit-quote--display readw">Elevate Dental does not accept HMO or dental insurance. All treatment is self-pay.</p>
+          <p class="kit-body readw--wide">HMO coverage cannot be used for dental treatments at our clinics. Payment is by cash, bank cheque, bank transfer, debit or credit card, or QR payment. It is stated here, in the stage where the money is discussed, because finding it out late is worse than reading it now.</p>
+        </div>
+        <div class="kit-inline">
+          <p>A surgical fee follows a scan that has actually been read, so the only way to get yours is an examination.</p>
+          <div class="kit-inline__acts">
+            <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+            <a class="kit-btn kit-btn--ghost" href="prices.html" data-page="prices.html"><span>Treatment Prices</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--span-5">
+        <div class="kit-foot">
+          <p class="kit-micro">Next</p>
+          <p class="kit-body readw--wide">Stage 09, the last one: the risks named in full, the eight questions people actually ask, and what to do in the days after.</p>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#stage-09"><span>Go to stage 09</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>The route, from the top</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- pick: FAQ-ACCORDION.md #7 Category-grouped sections | considered: #4,#2 | rigor: heavy | why: the questions arrive at two different moments, before consenting and during recovery, and #7 is the only entry that groups an FAQ into named sub-blocks for that reason. #4's numbered list would be a third numbered run on a page that already numbers a nine-stage route and a seven-step table. #2's per-question cards would box a clinical answer, and this system reserves the box for a thing you can act on. ADAPTATION, and it is the most important decision on the page: the RISK answer is NOT left inside an accordion. Everything else here can be collapsed, but a details element is closed by default and a risk a reader has to click to discover is a risk that has been hidden, so the specific risks are stated in an open .kit-truth block above the accordions. This band is also the LAST one, because Collision A binds the body to zero closing bands, so the end of the route is a CONTENT band with the ask folded into a .kit-inline rail. -->
+<section class="section section--warm" id="stage-09" aria-labelledby="h09" data-rise>
+  <div class="container">
+    <div class="row">
+
+      <div class="col col--full">
+        <div class="kit-open">
+          <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+          <div class="kit-open__head">
+            <span class="kit-open__no">09</span>
+            <div>
+              <span class="kit-eyebrow">Stage 09, the end of the route</span>
+              <h2 id="h09">Risks, answers and the days after</h2>
+            </div>
+          </div>
+        </div>
+        <div class="kit-truth">
+          <p>Every surgical procedure carries risk, and yours is explained before you consent rather than after. For lower wisdom teeth the specific ones are temporary or, less commonly, lasting altered sensation in the lip, chin or tongue if the nerve is disturbed, along with bleeding, infection, dry socket, and sinus communication for upper molars. The scan exists precisely to quantify the nerve risk in your case in advance rather than discovering it during the procedure.</p>
+        </div>
+      </div>
+
+      <div class="col col--span-6">
+        <p class="kit-micro">Before you consent</p>
+        <div class="kit-faq" data-rise>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Will I be awake?</summary>
+            <p class="kit-faq__a">Yes. The anesthetic is local rather than general, so you are awake and the area is numb. You will feel pressure and movement. You should not feel sharpness, and if you do, tell the surgeon immediately and more anesthetic is given before work continues.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Do I have to take out all four wisdom teeth?</summary>
+            <p class="kit-faq__a">No. Each one is judged on the scan and on your symptoms. A wisdom tooth that is upright, fully erupted, cleanable and causing no problems can stay and be monitored. Removing teeth that do not need removing is not the approach here.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">Can I drive myself home?</summary>
+            <p class="kit-faq__a">With a local anesthetic only, generally yes, assuming you feel steady. If you have been given anything that affects alertness, arrange for someone to take you.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">How long is the recovery?</summary>
+            <p class="kit-faq__a">Most people take one to two days away from work for a surgical extraction and return to normal eating over about a week. Soft tissue closes in one to two weeks. The bone underneath continues remodelling for months, which is why an implant into a grafted site waits three to six months.</p>
+          </details>
+        </div>
+      </div>
+
+      <div class="col col--span-6">
+        <p class="kit-micro">While you are recovering</p>
+        <div class="kit-faq" data-rise>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">How much does it hurt afterwards?</summary>
+            <p class="kit-faq__a">Expect soreness and swelling that peak around 48 hours and then settle over the following three to five days. Prescribed analgesia is taken on schedule rather than waited for. Most people find day three noticeably easier than day two. Pain that increases after day three, rather than decreasing, is a reason to call the clinic.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">What is dry socket and how do I avoid it?</summary>
+            <p class="kit-faq__a">Dry socket is the loss of the blood clot from the extraction site, exposing bone, and it is sharply painful around day three to five. You reduce the risk by not smoking, not rinsing or spitting for the first 24 hours, not drinking through a straw, and not disturbing the site with your tongue. If it happens, call the clinic. It is treatable, and it is treated the same day where possible.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">When can I go back to the gym?</summary>
+            <p class="kit-faq__a">Not for the first 48 hours, and build back gradually over the following week. Raising your blood pressure early restarts bleeding.</p>
+          </details>
+          <details class="kit-faq__item">
+            <summary class="kit-faq__q">What are the sutures like?</summary>
+            <p class="kit-faq__a">Some dissolve on their own and some are removed at the review appointment, which is why that visit is kept even when the site feels fine. Which type you have is decided by the closure your case needed, and you are told before you leave.</p>
+          </details>
+        </div>
+      </div>
+
+      <div class="col col--span-7">
+        <p class="kit-micro">Aftercare</p>
+        <ul class="kit-list">
+          <li>Bite firmly on the gauze for 30 to 45 minutes.</li>
+          <li>No rinsing, spitting, smoking or straws for 24 hours.</li>
+          <li>Ice on and off for the first day, then warm salt-water rinses from day two, five or six times daily.</li>
+          <li>Soft, cool food, and sleep with your head raised on the first night.</li>
+          <li>Take prescribed medication exactly as directed and finish any antibiotic course.</li>
+          <li>Keep the review appointment even if the site feels fine.</li>
+        </ul>
+        <div class="kit-inline">
+          <p>The first consultation is free. You will be examined, scanned where the case calls for it, told exactly what the scan shows about your own anatomy, and given the figure for your procedure in writing before anything is booked.</p>
+          <div class="kit-inline__acts">
+            <a class="kit-btn kit-btn--secondary" href="contact.html" data-page="contact.html">Ask about this treatment</a>
+            <a class="kit-btn kit-btn--ghost" href="oral-surgery.html" data-page="oral-surgery.html"><span>Oral Surgery</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col--full">
+        <div class="kit-foot">
+          <p class="kit-micro">Outcome</p>
+          <ul class="kit-list">
+            <li><b class="kit-strong">Feature.</b> Surgical procedures at the representative starting figure set out in stage 08, imaged first and performed by an oral surgery specialist.</li>
+            <li><b class="kit-strong">Do.</b> Book a free consultation and get a written quote.</li>
+            <li><b class="kit-strong">Means.</b> You know the cost, the risks and the clinician before you commit.</li>
+          </ul>
+          <div class="kit-actions kit-actions--tight">
+            <a class="kit-btn kit-btn--ghost" href="#s-route"><span>Back to the index</span></a>
+            <a class="kit-btn kit-btn--ghost" href="#s-start"><span>Back to the start</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

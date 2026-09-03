@@ -1,0 +1,1283 @@
+<!doctype html>
+<html lang="en-PH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elevate Dental CHROME concept A - The Measured Rail</title>
+
+<!--
+  ELEVATE DENTAL - CHROME TOURNAMENT, CONCEPT A "THE MEASURED RAIL"
+  Stage (2) CHROME. BRAND-CARD, FEEL and SYSTEM are stamped and LOCKED upstream.
+
+  THE ARGUMENT. Stage (1) locked the index ring as the brand's mark of position: a thin navy
+  ring with eleven minor graduations and one bronze index. The structural sheet already unrolls
+  that ring into the rule that opens every body section. This concept promotes the SAME device
+  to site chrome and makes it structural rather than decorative: a hairline graduated rail runs
+  the full width under the nav, every one of the eleven nav items paints its own minor
+  graduation onto that rail, and the item you are currently on paints the single BRONZE INDEX.
+  The rail is therefore not an ornament drawn beneath the nav; it IS the nav's readout. When the
+  bar collapses, the rail keeps its canonical form (eleven graduations, one bronze index at the
+  start) so the device never disappears, and the drawer stands the same rail on end as a vertical
+  graduated spine. Instrument panel, not chrome.
+
+  THE DESIGN PROBLEM THIS CONCEPT SOLVES. C1 fixes eleven top-level nav items and the primary CTA
+  is locked to "Book an Appointment". Eleven labels plus a mark plus a pinned CTA do not share one
+  row at any width this site has to serve. This concept gives the nav its OWN full-width row,
+  which is also the only arrangement in which a full-width graduated rail can exist at all, and
+  routes the depth (nine disciplines, twenty treatments) into one mega panel opened from
+  Treatments. The bar collapses to the hamburger at 1100px, well above the width where the row
+  can no longer hold its labels.
+
+  NAV PARITY IS STRUCTURAL, NOT CLERICAL. The header bar and the drawer carry the SAME eleven C1
+  labels in the SAME order. The drawer adds depth only INSIDE an exclusive accordion panel, never
+  as an extra top-level row, and it carries no count badges on its triggers, so the two label sets
+  are identical by construction rather than by proofreading. Every top-level trigger in both places
+  also carries data-nav, so the parity is machine-checkable in one query.
+
+  WHAT IS DERIVED, NOT INVENTED:
+    tokens       _design/elevatedental-tokens.css        every colour, radius, shadow, duration
+    body         _design/elevatedental-structural.css    kit- vocabulary, .container/.row/.col grammar
+    feel         _design/feel-specimen.html              the confirmed body this chrome sits on
+    direction    _handoff/visual-direction.md            C7, locked. Light ground, dark ratio 0, restrained
+    nav + footer _handoff/sitemap.yaml                   C1. Eleven nav items, five footer groups, four real numbers
+    sector       _SECTOR-BLUEPRINT-RECONCILIATION.md     the CTA spine and Collision A
+
+  THE THREE BUDGETS, AND WHY THE CHROME OWNS ALL THREE. C7 measured dark_ratio 0 and allows a dark
+  moment only "in one place, for one job (a single proof or conversion band)". The structural sheet
+  independently rations the arc seam to one per page, and Collision A rations the closing CTA band
+  to one per page. All three allowances land on the SAME object here: the .precta is the single
+  closing band, it is the single dark spend, and the one arc seam is the gesture that introduces
+  it. Putting all three on one chrome-owned band is what makes the rule enforceable across 47
+  pages: a page body authors ZERO closing bands, ZERO dark bands and ZERO arcs, and opens every
+  other joint with the index rule, exactly as the structural sheet prescribes. Everything else in
+  this chrome (header, mega, drawer, footer) runs on light grounds, so the measured tone survives
+  and the one dark band reads as punctuation rather than as a theme. Separation on light is carried
+  the way the structural sheet requires: a hairline, a graded contact shadow and a change of
+  material, never a value ladder.
+
+  THE CTA SPINE (Collision A, binding). Header-pinned "Book an Appointment", the hero button, ONE
+  inline .kit-inline rail folded inside a content-bearing section, and the single .precta closing
+  band which the chrome owns. The mobile sticky action bar carries the same one action at 767 and
+  below; it is fixed viewport furniture that never enters page flow, so G-CTA1 does not count it.
+
+  IMAGERY. This is a chrome tournament, so photography is not placed here. The mark is drawn from
+  the ring so the concept is judgeable without the raster logo, which C7 records as PNG-only with
+  no vector master.
+-->
+
+<link rel="stylesheet" href="../../elevatedental-tokens.css">
+<link rel="stylesheet" href="../../elevatedental-structural.css">
+
+<style>
+/* ==========================================================================
+   CHROME SHEET, CONCEPT A. Loads after the tokens and the structural sheet.
+   TOKEN-PURE: no colour literal below this line. Raw px survives only as a
+   structural literal (a hairline, a control height, a media anchor).
+   ========================================================================== */
+
+:root{
+  /* the three chrome bands, declared once so main can clear the header exactly */
+  --ed-hdr-row1: 66px;      /* mark + pinned CTA + hamburger */
+  --ed-hdr-row2: 44px;      /* the nav row, present above 1100 only */
+  --ed-hdr-rail: 12px;      /* THE RAIL. The graduated readout, always present */
+  --ed-header-h: 122px;     /* 66 + 44 + 12 */
+  --ed-drawer-w: min(92vw, 402px);
+}
+
+/* THE FIXED HEADER. Opaque from the first pixel: an instrument panel does not fade
+   in, and a transparent bar over a light hero would have nothing to sit on. */
+.site-header{
+  position:fixed; inset:0 0 auto 0;
+  z-index:var(--ds-z-sticky);
+  background:var(--ds-bg-surface);
+  padding-bottom:var(--ed-hdr-rail);
+  transition:box-shadow var(--ds-dur-fast) var(--ds-ease-out);
+}
+.site-header::before{                       /* the calming tint wash, sparingly */
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background-image:radial-gradient(72% 180% at 96% 0%, var(--ds-primary-soft) 0%, transparent 62%);
+  opacity:var(--ds-opacity-veil);
+}
+.site-header > *{position:relative}
+.site-header.is-stuck{box-shadow:var(--ds-shadow-card)}
+
+/* --- row 1 : the mark, the standing fact, the pinned CTA, the hamburger ----- */
+.site-header__row{
+  display:flex; align-items:center; gap:var(--ds-space-md);
+  height:var(--ed-hdr-row1); min-width:0;
+}
+.site-header__mark{
+  display:flex; align-items:center; gap:11px;
+  text-decoration:none; min-width:0; flex:0 1 auto;
+}
+.site-header__mark:hover{text-decoration:none}
+.site-header__markring{display:block; flex:0 0 auto}
+.site-header__markname{
+  font-family:var(--ds-font-display); font-weight:500; font-size:19px; line-height:1.05;
+  letter-spacing:-.012em; color:var(--ds-ink-heading); white-space:nowrap;
+}
+.site-header__marksub{
+  display:block; margin-top:3px;
+  font-size:9.5px; font-weight:700; letter-spacing:.17em; text-transform:uppercase;
+  color:var(--ds-accent-deep); white-space:nowrap;
+}
+.site-header__util{display:flex; align-items:center; gap:var(--ds-space-sm); margin-left:auto; min-width:0}
+.site-header__meta{
+  font-family:var(--ds-font-mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--ds-ink-soft); white-space:nowrap;
+  padding-right:var(--ds-space-sm); border-right:1px solid var(--ds-hairline);
+}
+.site-header__cta{min-height:42px; padding:12px 20px; font-size:12px}
+
+/* THE HAMBURGER. Rightmost control in the header at every collapsed width, flush
+   to the reading gutter with nothing to its right. Three bars of the same rule the
+   rail is drawn from, so the control is the motif at control scale. */
+.burger{
+  display:none; flex:0 0 auto; order:99;
+  width:46px; height:46px; padding:0;
+  align-items:center; justify-content:center;
+  background:transparent; border:1px solid var(--ds-hairline); border-radius:var(--ds-r-control);
+  cursor:pointer;
+  transition:border-color var(--ds-dur-fast) var(--ds-ease-out), background-color var(--ds-dur-fast) var(--ds-ease-out);
+}
+.burger:hover{border-color:var(--ds-primary); background:var(--ds-primary-soft)}
+.burger__bars{display:block; width:20px}
+.burger__bars i{display:block; height:1px; background:var(--ds-primary); opacity:.72}
+.burger__bars i + i{margin-top:5px}
+.burger__bars i:first-child{height:2px; width:11px; background:var(--ds-accent); opacity:1}
+
+/* --- row 2 : THE NAV. Eleven labels, one row, its own band ------------------ */
+.site-nav{height:var(--ed-hdr-row2); min-width:0}
+.site-nav__list{
+  display:flex; align-items:stretch; height:100%;
+  gap:clamp(11px, 1.7vw, 28px);
+  margin:0; padding:0; list-style:none; min-width:0;
+}
+.site-nav__item{display:flex; min-width:0}
+.site-nav__link{
+  position:relative;
+  display:flex; align-items:center; height:100%;
+  font-family:var(--ds-font-body);
+  font-size:clamp(11px, .9vw, 12.5px);
+  font-weight:600; letter-spacing:.05em; line-height:1;
+  color:var(--ds-ink); text-decoration:none; white-space:nowrap;
+  background:transparent; border:0; padding:0; cursor:pointer;
+  transition:color var(--ds-dur-fast) var(--ds-ease-out);
+}
+.site-nav__link:hover{color:var(--ds-primary)}
+/* THE MINOR GRADUATION. One per nav item, dropped onto the rail below. Eleven
+   items, eleven graduations: the ring, unrolled, exactly. */
+.site-nav__link::before{
+  content:""; position:absolute; left:0; bottom:calc(-1 * var(--ed-hdr-rail));
+  width:1px; height:7px; background:var(--ds-primary); opacity:.42;
+  transition:height var(--ds-dur-fast) var(--ds-ease-out), opacity var(--ds-dur-fast) var(--ds-ease-out);
+}
+.site-nav__link:hover::before{height:10px; opacity:.7}
+/* THE BRONZE INDEX. The single graduation that says where you are. */
+.site-nav__link[aria-current="page"]{color:var(--ds-primary)}
+.site-nav__link[aria-current="page"]::before{
+  width:2px; height:var(--ed-hdr-rail); background:var(--ds-accent); opacity:1;
+}
+/* the caret on the one item that opens a panel */
+.site-nav__caret{
+  display:block; width:7px; height:7px; margin-left:7px; flex:0 0 auto;
+  border-right:1px solid var(--ds-accent); border-bottom:1px solid var(--ds-accent);
+  transform:translateY(-2px) rotate(45deg);
+  transition:transform var(--ds-dur-fast) var(--ds-ease-out);
+}
+.site-nav__link[aria-expanded="true"] .site-nav__caret{transform:translateY(1px) rotate(-135deg)}
+
+/* --- THE RAIL. The full-width graduated readout, always present ------------- */
+.site-header__rail{
+  position:absolute; left:0; right:0; bottom:0; height:var(--ed-hdr-rail);
+  pointer-events:none;
+}
+.site-header__rail::before{                 /* the base hairline, full width */
+  content:""; position:absolute; left:0; right:0; bottom:0; height:1px;
+  background:var(--ds-primary); opacity:.30;
+}
+.site-header__railidx{                      /* the collapsed-state bronze index */
+  display:none; position:absolute; bottom:0;
+  left:clamp(var(--ds-space-md), 4vw, var(--ds-space-lg));
+  width:2px; height:var(--ed-hdr-rail); background:var(--ds-accent);
+}
+
+/* ==========================================================================
+   THE MEGA PANEL. Full width, cool paper, opened from Treatments.
+   ========================================================================== */
+.mega{
+  position:absolute; left:0; right:0; top:100%;
+  z-index:var(--ds-z-overlay);
+  background:var(--ds-bg-surface-2);
+  border-bottom:1px solid var(--ds-hairline);
+  box-shadow:var(--ds-shadow-lift);
+  display:none;
+}
+.mega.is-open{display:block}
+.mega__inner{padding-block:var(--ds-space-lg) var(--ds-space-md)}
+.mega__grid{
+  display:grid;
+  grid-template-columns:repeat(3, minmax(0,1fr)) minmax(0,.82fr);
+  gap:var(--ds-space-md) var(--ds-space-lg);
+  align-items:start;
+}
+.mega__disc{min-width:0}
+.mega__link{
+  display:block; text-decoration:none; padding:9px 0 10px;
+  border-top:1px solid var(--ds-hairline);
+  transition:border-top-color var(--ds-dur-fast) var(--ds-ease-out);
+}
+.mega__link:hover{text-decoration:none; border-top-color:var(--ds-accent)}
+.mega__no{
+  font-family:var(--ds-font-mono); font-size:10px; letter-spacing:.1em;
+  color:var(--ds-accent-deep); display:inline-block; width:22px;
+}
+.mega__name{
+  font-family:var(--ds-font-display); font-size:16px; font-weight:500; line-height:1.2;
+  letter-spacing:-.008em; color:var(--ds-ink-heading);
+}
+.mega__link:hover .mega__name{color:var(--ds-primary-deep)}
+.mega__sub{display:block; margin:4px 0 0 22px; font-size:12px; line-height:1.5; color:var(--ds-ink-soft)}
+.mega__aside{
+  min-width:0; padding-left:var(--ds-space-md);
+  border-left:1px solid var(--ds-hairline);
+  display:flex; flex-direction:column; align-items:flex-start;
+}
+.mega__asidering{margin-bottom:10px}
+.mega__foot{
+  margin-top:var(--ds-space-md); padding-top:var(--ds-space-sm);
+  border-top:2px solid var(--ds-primary);
+  display:flex; flex-wrap:wrap; gap:10px var(--ds-space-md); align-items:baseline;
+}
+.mega__foot a{
+  font-size:12px; font-weight:600; letter-spacing:.04em;
+  color:var(--ds-primary); text-decoration:none;
+  border-bottom:1px solid var(--ds-hairline); padding-bottom:2px;
+}
+.mega__foot a:hover{border-bottom-color:var(--ds-accent)}
+
+/* ==========================================================================
+   THE MOBILE DRAWER. A flex column whose nav region scrolls on its own.
+   The foot is a non-overlapping flex:0 0 auto sibling, never a sticky overlay,
+   so an item can never be trapped underneath it.
+   ========================================================================== */
+.scrim{
+  position:fixed; inset:0; z-index:var(--ds-z-overlay);
+  background:var(--ds-primary-deep); opacity:0;
+  visibility:hidden; pointer-events:none;
+  transition:opacity var(--ds-dur-fast) var(--ds-ease-out), visibility var(--ds-dur-fast) var(--ds-ease-out);
+}
+html.drawer-open .scrim{opacity:var(--ds-opacity-scrim); visibility:visible; pointer-events:auto}
+
+.drawer{
+  position:fixed; top:0; right:0; bottom:0;
+  z-index:var(--ds-z-drawer);
+  width:var(--ed-drawer-w);
+  display:flex; flex-direction:column;   /* THE THREE-PART COLUMN */
+  background:var(--ds-bg-surface);
+  border-left:1px solid var(--ds-hairline);
+  box-shadow:var(--ds-shadow-lift);
+  transform:translateX(101%);
+  visibility:hidden;
+  transition:transform var(--ds-dur-slow) var(--ds-ease-out), visibility var(--ds-dur-slow) var(--ds-ease-out);
+}
+html.drawer-open .drawer{transform:none; visibility:visible}
+
+/* head : flex 0 0 auto */
+.drawer__head{
+  flex:0 0 auto;
+  display:flex; align-items:center; justify-content:space-between; gap:var(--ds-space-sm);
+  padding:14px var(--ds-space-md) 12px;
+  border-bottom:1px solid var(--ds-hairline);
+}
+.drawer__close{
+  width:44px; height:44px; flex:0 0 auto;
+  display:flex; align-items:center; justify-content:center;
+  background:transparent; border:1px solid var(--ds-hairline); border-radius:var(--ds-r-control);
+  color:var(--ds-primary); cursor:pointer; font-size:17px; line-height:1;
+}
+.drawer__close:hover{border-color:var(--ds-primary); background:var(--ds-primary-soft)}
+
+/* nav : flex 1 1 auto, min-height 0, its OWN scroll region */
+.drawer__nav{
+  flex:1 1 auto;
+  min-height:0;
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior:contain;
+  padding:var(--ds-space-md) var(--ds-space-md) var(--ds-space-lg);
+}
+/* THE VERTICAL SPINE. The rail stood on end: one hairline, a graduation per item,
+   one bronze index on the item you are on. */
+.drawer__list{position:relative; list-style:none; margin:0; padding:0 0 0 var(--ds-space-md)}
+.drawer__list::before{
+  content:""; position:absolute; left:0; top:6px; bottom:6px; width:1px;
+  background:var(--ds-primary); opacity:.30;
+}
+.drawer__row{position:relative}
+.drawer__row::before{                        /* the minor graduation */
+  content:""; position:absolute; left:calc(-1 * var(--ds-space-md)); top:22px;
+  width:7px; height:1px; background:var(--ds-primary); opacity:.42;
+}
+.drawer__row[data-current="true"]::before{   /* the bronze index */
+  width:2px; height:20px; top:13px; background:var(--ds-accent); opacity:1;
+}
+.drawer__link,
+.drawer__summary{
+  display:flex; align-items:center; justify-content:space-between; gap:var(--ds-space-sm);
+  width:100%; min-height:46px; padding:11px 0;
+  font-family:var(--ds-font-body); font-size:15px; font-weight:600; letter-spacing:.01em;
+  color:var(--ds-ink-heading); text-decoration:none;
+  background:transparent; border:0; border-bottom:1px solid var(--ds-hairline);
+  cursor:pointer; text-align:left;
+}
+.drawer__link:hover,
+.drawer__summary:hover{color:var(--ds-primary); text-decoration:none}
+.drawer__row[data-current="true"] .drawer__link{color:var(--ds-accent-deep)}
+.drawer__summary{list-style:none}
+.drawer__summary::-webkit-details-marker{display:none}
+.drawer__chev{
+  display:block; width:7px; height:7px; flex:0 0 auto; margin-right:3px;
+  border-right:1px solid var(--ds-accent); border-bottom:1px solid var(--ds-accent);
+  transform:translateY(-2px) rotate(45deg);
+  transition:transform var(--ds-dur-fast) var(--ds-ease-out);
+}
+details[open] > .drawer__summary .drawer__chev{transform:translateY(1px) rotate(-135deg)}
+.drawer__sublist{list-style:none; margin:0; padding:6px 0 12px}
+.drawer__sublist a{
+  display:block; padding:8px 0; min-height:38px;
+  font-size:13.5px; font-weight:500; color:var(--ds-ink-soft); text-decoration:none;
+}
+.drawer__sublist a:hover{color:var(--ds-primary)}
+.drawer__sublist b{
+  font-family:var(--ds-font-mono); font-size:10px; letter-spacing:.08em;
+  color:var(--ds-accent-deep); font-weight:400; margin-right:9px;
+}
+
+/* foot : flex 0 0 auto, in flow, NEVER positioned over the list */
+.drawer__foot{
+  flex:0 0 auto;
+  padding:var(--ds-space-md);
+  background:var(--ds-bg-surface-2);
+  border-top:2px solid var(--ds-primary);
+}
+.drawer__nap{
+  display:grid; grid-template-columns:repeat(2, minmax(0,1fr));
+  gap:10px var(--ds-space-sm); margin-top:var(--ds-space-sm);
+}
+.drawer__nap a{display:block; text-decoration:none; min-width:0; font-size:12.5px; line-height:1.35; color:var(--ds-primary)}
+.drawer__nap a:hover{color:var(--ds-primary-deep)}
+.drawer__nap b{
+  display:block; font-size:9.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--ds-ink-soft); margin-bottom:2px;
+}
+.drawer__nap a.drawer__nap--wide{grid-column:1 / -1; padding-top:8px; border-top:1px solid var(--ds-hairline)}
+
+/* ==========================================================================
+   THE MOBILE STICKY ACTION BAR. Fixed viewport furniture, 767 and below.
+   Never in page flow, so G-CTA1 does not count it as a band.
+   ========================================================================== */
+.stickybar{
+  display:none;
+  position:fixed; left:0; right:0; bottom:0;
+  z-index:var(--ds-z-sticky);
+  gap:10px; padding:9px var(--ds-space-md) calc(9px + env(safe-area-inset-bottom, 0px));
+  background:var(--ds-bg-surface);
+  border-top:1px solid var(--ds-primary);
+  box-shadow:var(--ds-shadow-lift);
+}
+.stickybar::before{                          /* the rail, at bar scale */
+  content:""; position:absolute; left:0; right:0; top:0; height:5px;
+  background-image:repeating-linear-gradient(90deg, var(--ds-primary) 0 1px, transparent 1px calc(100% / 12));
+  opacity:.34; pointer-events:none;
+}
+.stickybar .kit-btn{flex:1 1 0; min-width:0; font-size:12px; padding-inline:12px}
+.stickybar .kit-btn--secondary{flex:0 0 40%}
+html.drawer-open .stickybar{display:none}
+
+/* ==========================================================================
+   THE CLOSING BAND. Exactly ONE per page and the chrome owns it. It is also
+   where the page's single dark spend and its single arc seam are paid.
+   ========================================================================== */
+.precta{
+  position:relative; isolation:isolate;
+  padding-block:var(--ed-flow);
+  background-color:var(--ds-bg-surface);          /* the deep navy, under .surface-dark */
+  background-image:
+    radial-gradient(66% 74% at 88% 6%, var(--ds-primary-soft) 0%, transparent 60%),
+    radial-gradient(52% 52% at 2% 96%, var(--ds-bg-warm) 0%, transparent 64%),
+    var(--ds-grid);
+  background-size:auto, auto, var(--ds-grid-size);
+}
+.precta > *{position:relative; z-index:var(--ds-z-raised)}
+/* THE ONE ARC. It rises into the band it leaves, filled in the DESTINATION ground.
+   Reading the fill from --ds-bg-surface INSIDE the flipped surface means the arc and
+   the band can never drift apart, whatever the band above happens to be. */
+.precta__seam{
+  position:absolute; left:0; right:0; top:calc(1px - var(--ed-seam-h));
+  width:100%; height:var(--ed-seam-h); margin:0;
+  z-index:var(--ds-z-raised);
+}
+.precta .kit-seam__fill{fill:var(--ds-bg-surface)}
+/* the rail again, at band scale: the bookend of the header's readout */
+.precta__rail{position:relative; height:14px; margin-bottom:var(--ds-space-md)}
+.precta__rail::before{content:""; position:absolute; left:0; right:0; bottom:0; height:1px; background:var(--ds-primary); opacity:.30}
+.precta__rail::after{
+  content:""; position:absolute; left:0; right:0; bottom:0; height:7px;
+  background-image:repeating-linear-gradient(90deg, var(--ds-primary) 0 1px, transparent 1px calc(100% / 12));
+  opacity:.42;
+}
+.precta__idx{position:absolute; left:0; bottom:0; width:2px; height:14px; background:var(--ds-accent)}
+.precta__grid{
+  display:grid; grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);
+  gap:var(--ds-space-lg); align-items:end;
+}
+.precta__acts{display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:flex-end}
+.precta__nap{
+  margin-top:clamp(28px, 3.4vw, 44px); padding-top:var(--ds-space-md);
+  border-top:2px solid var(--ds-primary);
+  display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:var(--ds-space-md);
+}
+.precta__nap a{display:block; text-decoration:none; min-width:0}
+.precta__nap b{
+  display:block; font-size:10px; font-weight:700; letter-spacing:.15em; text-transform:uppercase;
+  color:var(--ds-ink-soft); margin-bottom:5px;
+}
+.precta__nap span{font-size:14px; font-weight:600; color:var(--ds-ink); letter-spacing:.01em}
+.precta__nap a:hover span{color:var(--ds-accent-light)}
+
+/* ==========================================================================
+   THE FOOTER. Five named groups, exactly as C1 defines them. Light ground:
+   the dark spend was made once, on the band above.
+   ========================================================================== */
+.site-footer{
+  position:relative;
+  background:var(--ds-bg-surface);
+  padding-block:var(--ed-flow) var(--ds-space-lg);
+}
+.site-footer__brand{
+  display:flex; flex-wrap:wrap; gap:var(--ds-space-md) var(--ds-space-lg);
+  align-items:flex-end; justify-content:space-between;
+  padding-bottom:var(--ds-space-md); border-bottom:2px solid var(--ds-primary);
+}
+.site-footer__mark{display:flex; align-items:center; gap:12px; text-decoration:none}
+.site-footer__mark:hover{text-decoration:none}
+.site-footer__name{
+  font-family:var(--ds-font-display); font-weight:500; font-size:23px; line-height:1.05;
+  letter-spacing:-.014em; color:var(--ds-ink-heading);
+}
+.site-footer__tag{
+  font-family:var(--ds-font-display); font-style:italic; font-size:16px; line-height:1.3;
+  color:var(--ds-accent-deep); margin:0;
+}
+.site-footer__cols{
+  display:grid;
+  grid-template-columns:repeat(4, minmax(0,1fr)) minmax(0,1.3fr);
+  gap:var(--ds-space-lg) var(--ds-space-md);
+  padding-top:var(--ds-space-lg);
+}
+.site-footer__col{min-width:0}
+.site-footer__h{
+  font-size:10.5px; font-weight:700; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--ds-accent-deep); margin:0 0 12px;
+}
+.site-footer__list{list-style:none; margin:0; padding:0}
+.site-footer__list li{margin:0}
+.site-footer__list a{
+  display:block; padding:6px 0; min-height:32px;
+  font-size:13.5px; line-height:1.45; color:var(--ds-ink); text-decoration:none;
+}
+.site-footer__list a:hover{color:var(--ds-primary); text-decoration:underline; text-underline-offset:.18em}
+.site-footer__list--tel a{font-variant-numeric:tabular-nums}
+.site-footer__list--tel b{
+  display:block; font-size:9.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--ds-ink-soft); margin-bottom:1px;
+}
+.site-footer__social{
+  display:flex; flex-wrap:wrap; gap:8px var(--ds-space-sm);
+  margin-top:12px; padding-top:12px; border-top:1px solid var(--ds-hairline);
+}
+.site-footer__social a{font-size:12px; font-weight:600; color:var(--ds-primary); text-decoration:none; padding:4px 0}
+.site-footer__social a:hover{color:var(--ds-accent-deep)}
+.site-footer__bottom{
+  margin-top:var(--ds-space-lg); padding-top:var(--ds-space-md);
+  border-top:1px solid var(--ds-hairline);
+  display:flex; flex-wrap:wrap; gap:10px var(--ds-space-md);
+  align-items:baseline; justify-content:space-between;
+}
+.site-footer__legal{display:flex; flex-wrap:wrap; gap:8px var(--ds-space-md)}
+.site-footer__legal a{font-size:12px; color:var(--ds-ink-soft); text-decoration:none}
+.site-footer__legal a:hover{color:var(--ds-primary); text-decoration:underline}
+
+/* ==========================================================================
+   THE DEMO BODY. Present only so the chrome is judgeable in context.
+   ========================================================================== */
+main{padding-top:var(--ed-header-h)}
+.demo-doc{border-top:2px solid var(--ds-primary); padding:var(--ds-space-md) 0 var(--ds-space-lg)}
+.demo-doc__kicker{
+  display:flex; flex-wrap:wrap; gap:9px 16px; align-items:center;
+  font-family:var(--ds-font-mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--ds-ink-soft);
+}
+.demo-doc__kicker b{color:var(--ds-accent-deep); font-weight:600}
+.demo-parts{
+  margin-top:var(--ds-space-md);
+  display:grid; grid-template-columns:repeat(auto-fit, minmax(158px,1fr));
+  border-top:1px solid var(--ds-hairline);
+}
+.demo-parts > div{padding:11px 15px 11px 0; border-right:1px solid var(--ds-hairline)}
+.demo-parts > div:last-child{border-right:0}
+.demo-parts dt{font-size:9.5px; letter-spacing:.15em; text-transform:uppercase; color:var(--ds-ink-soft); margin-bottom:4px}
+.demo-parts dd{margin:0; font-size:12.5px; font-weight:600; color:var(--ds-ink-heading)}
+
+/* ==========================================================================
+   THE REFLOW LADDER for the chrome. Five authored tiers. No tier introduces a
+   fixed width, a negative inline margin or an unclamped media, so no tier can
+   open a horizontal scrollbar.
+   ========================================================================== */
+
+/* --- tier 1 : 1199 and below. The 1101 to 1199 band, where the bar is still a
+   bar but the labels need their gaps tightened. ----------------------------- */
+@media (max-width:1199px){
+  .site-nav__list{gap:clamp(11px, 1.5vw, 20px)}
+  .site-header__meta{display:none}
+  .mega__grid{gap:var(--ds-space-md)}
+}
+
+/* --- tier 2 : 1100 and below. THE COLLAPSE. The nav row and its mega both leave
+   the bar and the hamburger becomes the rightmost header control. This is set well
+   above the width at which eleven labels stop fitting, which is the defect the
+   previous build shipped (264px of overflow at 834, because it collapsed at 768). */
+@media (max-width:1100px){
+  :root{--ed-header-h:72px}
+  .site-header__row{height:60px}
+  .site-nav{display:none}
+  .mega{display:none}
+  .burger{display:flex}
+  .site-header__railidx{display:block}
+  .site-header__rail::after{
+    content:""; position:absolute; left:0; right:0; bottom:0; height:7px;
+    background-image:repeating-linear-gradient(90deg, var(--ds-primary) 0 1px, transparent 1px calc(100% / 12));
+    opacity:.42;
+  }
+  .precta__grid{grid-template-columns:minmax(0,1fr); gap:var(--ds-space-md)}
+  .precta__acts{justify-content:flex-start}
+}
+
+/* --- tier 3 : 899 and below ------------------------------------------------ */
+@media (max-width:899px){
+  .site-footer__cols{grid-template-columns:repeat(2, minmax(0,1fr)); gap:var(--ds-space-lg) var(--ds-space-md)}
+  .precta__nap{grid-template-columns:repeat(2, minmax(0,1fr))}
+}
+
+/* --- tier 4 : 767 and below. The mobile floor. ----------------------------- */
+@media (max-width:767px){
+  .site-header__cta{display:none}          /* the sticky bar carries the action here */
+  .stickybar{display:flex}
+  main{padding-bottom:78px}                /* clear the sticky bar, no trapped content */
+  .site-footer{padding-bottom:calc(var(--ds-space-lg) + 78px)}
+  .site-footer__brand{align-items:flex-start}
+}
+
+/* --- tier 5 : the small-phone floor ---------------------------------------- */
+@media (max-width:479px){
+  .site-footer__cols{grid-template-columns:minmax(0,1fr)}
+  .precta__nap{grid-template-columns:minmax(0,1fr); gap:var(--ds-space-sm)}
+  .site-header__markname{font-size:17px}
+  .drawer__nap{grid-template-columns:minmax(0,1fr)}
+}
+
+/* reduced motion is honoured at the token by the structural sheet; these are the
+   two transitions this chrome adds, neutralised here as well. */
+@media (prefers-reduced-motion: reduce){
+  .drawer{transition:none}
+  .scrim{transition:none}
+}
+</style>
+</head>
+
+<body>
+
+<a class="kit-skip-link" href="#main">Skip to content</a>
+
+
+<!-- ============================================================================
+     PART 1 of 5 - THE DESKTOP HEADER
+     ========================================================================= -->
+<!-- pick: NAV-PATTERNS.md #7 Centered logo + below-it mega-nav with dropdowns | considered: #3 Right-aligned link cluster + phone pill, #13 Logo + always-visible hamburger hybrid | why: C1 fixes ELEVEN top-level labels and C7 locks the primary CTA to the exact string "Book an Appointment", and those eleven labels alone set roughly 800px of type before a single gap is paid, so a one-row bar has nothing left for the mark or the pinned CTA at any width this site has to serve; #7 is the only archetype in the catalog that gives the nav its OWN full-width second row, which is also the only arrangement in which a full-width graduated rail can exist at all, and it is the archetype whose Row 2 already opens mega panels, which is the pressure valve the nine disciplines need. #3 keeps everything on one row and pushes the cluster right, which is exactly the shape that overflowed 264px at 834 on the previous build and would do it again the moment the eleventh label lands. #13 solves the crowding by hiding the inline links behind an always-visible desktop hamburger, which drops the top-level labels off the bar entirely and would put the desktop header out of label parity with the drawer, failing G-CHROME-NAV by construction. DEVIATION from #7, recorded: the mark stays LEFT rather than centred, because a centred wordmark would put the pinned CTA and the mark in competition for the same optical centre, and C7's restrained register cannot afford that argument. -->
+<header class="site-header" id="site-header">
+
+  <div class="container container--wide">
+
+    <!-- row 1 : mark left, standing fact, pinned CTA, hamburger RIGHTMOST -->
+    <div class="site-header__row">
+
+      <a class="site-header__mark" href="index.html" aria-label="Elevate Dental, home">
+        <svg class="site-header__markring" width="34" height="34" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+          <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+          <g class="kit-ring__tick" stroke-width="3">
+            <line x1="50" y1="12" x2="50" y2="21" transform="rotate(90 50 50)"/>
+            <line x1="50" y1="12" x2="50" y2="21" transform="rotate(180 50 50)"/>
+            <line x1="50" y1="12" x2="50" y2="21" transform="rotate(270 50 50)"/>
+          </g>
+          <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="34" stroke-width="5"/>
+        </svg>
+        <span>
+          <span class="site-header__markname">Elevate Dental</span>
+          <span class="site-header__marksub">Metro Manila</span>
+        </span>
+      </a>
+
+      <div class="site-header__util">
+        <span class="site-header__meta kit-tab">4 clinics, 31 specialists</span>
+        <a class="kit-btn kit-btn--primary site-header__cta" href="contact.html">Book an Appointment</a>
+        <button class="burger" type="button" id="burger"
+                aria-controls="mobile-drawer" aria-expanded="false" aria-label="Open menu">
+          <span class="burger__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- row 2 : THE NAV. The eleven C1 labels, in C1 order, each painting its own
+         graduation onto the rail below. The item you are on paints the bronze index. -->
+    <nav class="site-nav" aria-label="Primary">
+      <ul class="site-nav__list">
+
+        <li class="site-nav__item">
+          <button class="site-nav__link" type="button" id="mega-trigger"
+                  aria-controls="mega" aria-expanded="false" data-nav="Treatments">
+            Treatments<span class="site-nav__caret" aria-hidden="true"></span>
+          </button>
+        </li>
+        <li class="site-nav__item"><a class="site-nav__link" href="specialists.html" data-nav="Specialists">Specialists</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="technology.html" data-nav="Technology">Technology</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="prices.html" data-nav="Prices">Prices</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="locations.html" aria-current="page" data-nav="Locations">Locations</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="results.html" data-nav="Results">Results</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="dental-tourism.html" data-nav="Dental Tourism">Dental Tourism</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="patients.html" data-nav="Patients">Patients</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="about.html" data-nav="About">About</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="insights.html" data-nav="Insights">Insights</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="contact.html" data-nav="Contact">Contact</a></li>
+
+      </ul>
+    </nav>
+
+  </div>
+
+  <!-- THE RAIL. Always present. Above 1100 its graduations are painted by the nav
+       items themselves; below 1100 it carries the canonical graduations and one
+       bronze index at the start, so the device never leaves the page. -->
+  <div class="site-header__rail" aria-hidden="true">
+    <span class="site-header__railidx"></span>
+  </div>
+
+
+  <!-- ==========================================================================
+       PART 2 of 5 - THE MEGA PANEL
+       ======================================================================= -->
+  <!-- pick: SECTION-COMPONENTS.md #10 Services 4-col compact | considered: #9 Services 3-col, #13 Bento feature grid | why: the panel has to seat NINE disciplines plus a routing aside inside a header overlay that a reader scans in about two seconds, so it needs the denser grid with lighter content per cell that #10 specifies for wider service catalogs, and it is the only one of the three that leaves room for each discipline to name the treatments it contains, which is the countable-specifics discipline C7 §3 demands of this brand. #9's three-column services block budgets two to three sentences of description per cell, which at nine cells is a wall of prose hanging off a nav bar and would push the panel past the fold at 1024. #13's bento is the shape the feel specimen already rejected by name for this brand: asymmetric app-coded tiles read loud, and loud is what a restrained clinical register cannot spend on a routing surface. The nine cells run three-across with a ruled aside taking the fourth track, so the compact grid keeps #10's density while the aside carries the all-treatments and prices routes the disciplines do not. -->
+  <div class="mega" id="mega" role="region" aria-labelledby="mega-trigger">
+    <div class="container container--wide mega__inner">
+
+      <div class="mega__grid">
+
+        <div class="mega__disc">
+          <a class="mega__link" href="general-dentistry.html">
+            <span class="mega__no kit-tab">01</span><span class="mega__name">General Dentistry</span>
+            <span class="mega__sub">Airflow cleaning, fillings, oral prophylaxis</span>
+          </a>
+          <a class="mega__link" href="cosmetic-dentistry.html">
+            <span class="mega__no kit-tab">02</span><span class="mega__name">Cosmetic Dentistry</span>
+            <span class="mega__sub">Porcelain, zirconia and direct veneers, whitening</span>
+          </a>
+          <a class="mega__link" href="orthodontics.html">
+            <span class="mega__no kit-tab">03</span><span class="mega__name">Orthodontics</span>
+            <span class="mega__sub">Invisalign clear aligners, braces</span>
+          </a>
+        </div>
+
+        <div class="mega__disc">
+          <a class="mega__link" href="oral-surgery.html">
+            <span class="mega__no kit-tab">04</span><span class="mega__name">Oral Surgery</span>
+            <span class="mega__sub">Dental implants, surgical procedures</span>
+          </a>
+          <a class="mega__link" href="pediatric-dentistry.html">
+            <span class="mega__no kit-tab">05</span><span class="mega__name">Pediatric Dentistry</span>
+            <span class="mega__sub">Sealants, fluoride treatment</span>
+          </a>
+          <a class="mega__link" href="prosthodontics.html">
+            <span class="mega__no kit-tab">06</span><span class="mega__name">Prosthodontics</span>
+            <span class="mega__sub">Crowns, bridges, complete and partial dentures</span>
+          </a>
+        </div>
+
+        <div class="mega__disc">
+          <a class="mega__link" href="endodontics.html">
+            <span class="mega__no kit-tab">07</span><span class="mega__name">Endodontics</span>
+            <span class="mega__sub">Root canal treatment</span>
+          </a>
+          <a class="mega__link" href="periodontics.html">
+            <span class="mega__no kit-tab">08</span><span class="mega__name">Periodontics</span>
+            <span class="mega__sub">Scaling and root planing</span>
+          </a>
+          <a class="mega__link" href="dental-xrays.html">
+            <span class="mega__no kit-tab">09</span><span class="mega__name">Digital Dental X-rays</span>
+            <span class="mega__sub">CBCT imaging on site at all four clinics</span>
+          </a>
+        </div>
+
+        <div class="mega__aside">
+          <svg class="kit-ring mega__asidering" width="52" height="52" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+            <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="2.4"/>
+            <g class="kit-ring__tick" stroke-width="2.4">
+              <line x1="50" y1="12" x2="50" y2="20" transform="rotate(90 50 50)"/>
+              <line x1="50" y1="12" x2="50" y2="20" transform="rotate(180 50 50)"/>
+              <line x1="50" y1="12" x2="50" y2="20" transform="rotate(270 50 50)"/>
+            </g>
+            <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="32" stroke-width="4"/>
+          </svg>
+          <span class="kit-eyebrow">Nine disciplines</span>
+          <p class="kit-note">Twenty treatments, planned and carried out by the same bench, in the building where the imaging was taken.</p>
+        </div>
+
+      </div>
+
+      <div class="mega__foot">
+        <a href="treatments.html">All treatments</a>
+        <a href="prices.html">Treatment prices</a>
+        <a href="specialists.html">The 31 specialists</a>
+        <a href="technology.html">The named systems</a>
+        <a href="results.html">Results by treatment</a>
+      </div>
+
+    </div>
+  </div>
+
+</header>
+
+
+<!-- ============================================================================
+     PART 3 of 5 - THE MOBILE DRAWER
+     ========================================================================= -->
+<!-- pick: NAV-PATTERNS.md #7 Centered logo + below-it mega-nav with dropdowns, drawer state | considered: #14 Logo + centered hamburger + right CTA (full-width takeover, address printed at the bottom), #4 Pill-grouped active-tab + icon CTA (BeDoctor, white slide-from-LEFT panel) | why: the nav library's own law is that a pattern is ONE coordinated system across desktop, compressed and drawer, and you do not bolt another pattern's drawer onto #7's bar; #7's verified drawer is also right here for a second reason, that it is the only considered drawer that RETAINS the dropdown affordance from the bar, which is what lets Treatments and Locations open in place instead of costing a second screen or a second set of top-level rows that would break label parity. #14's full-width takeover sets its links at 36 to 44px, which is a display-scale gesture a restrained clinical brand does not make, and eleven oversized labels plus two expansions would need scrolling before the first item is read. #4 slides from the LEFT, which would put the panel's edge on the opposite side from the hamburger that opened it and break the spatial contract at exactly the width where the reader has the least context. DEVIATIONS from #7's verified drawer, recorded and defended: (a) links are LEFT-aligned on the vertical graduated spine rather than centred, because centred links cannot carry an index mark and the spine is this concept's whole argument; (b) the drawer DOES carry a bottom CTA and the four real clinic numbers, which #7's reference drops, because C7 §1 records the mobile action bar as an existing instinct worth keeping and four real numbers are the honest mobile conversion for a four-clinic group. The foot is a flex:0 0 auto sibling in flow, never an overlay, the list scrolls in its own flex:1 1 auto region, and the two accordions are EXCLUSIVE, so no item is ever trapped and the drawer can never grow to a both-open height. -->
+<div class="scrim" id="scrim" hidden></div>
+
+<aside class="drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Menu" aria-hidden="true">
+
+  <div class="drawer__head">
+    <a class="site-header__mark" href="index.html">
+      <svg class="site-header__markring" width="30" height="30" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+        <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="3"/>
+        <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="34" stroke-width="5"/>
+      </svg>
+      <span><span class="site-header__markname">Elevate Dental</span></span>
+    </a>
+    <button class="drawer__close" type="button" id="drawer-close" aria-label="Close menu">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <!-- the nav region: its OWN scroll, min-height 0, flex 1 1 auto.
+       ELEVEN top-level rows, the C1 labels in the C1 order, identical to the header.
+       Depth lives INSIDE an accordion panel, never as an extra top-level row. -->
+  <nav class="drawer__nav" aria-label="Primary, mobile">
+    <ul class="drawer__list">
+
+      <li class="drawer__row">
+        <details name="ed-drawer" class="drawer__acc">
+          <summary class="drawer__summary" data-nav="Treatments">
+            Treatments
+            <span class="drawer__chev" aria-hidden="true"></span>
+          </summary>
+          <div class="drawer__sub">
+            <ul class="drawer__sublist">
+              <li><a href="treatments.html"><b>00</b>All treatments</a></li>
+              <li><a href="general-dentistry.html"><b>01</b>General Dentistry</a></li>
+              <li><a href="cosmetic-dentistry.html"><b>02</b>Cosmetic Dentistry</a></li>
+              <li><a href="orthodontics.html"><b>03</b>Orthodontics</a></li>
+              <li><a href="oral-surgery.html"><b>04</b>Oral Surgery</a></li>
+              <li><a href="pediatric-dentistry.html"><b>05</b>Pediatric Dentistry</a></li>
+              <li><a href="prosthodontics.html"><b>06</b>Prosthodontics</a></li>
+              <li><a href="endodontics.html"><b>07</b>Endodontics</a></li>
+              <li><a href="periodontics.html"><b>08</b>Periodontics</a></li>
+              <li><a href="dental-xrays.html"><b>09</b>Digital Dental X-rays</a></li>
+            </ul>
+          </div>
+        </details>
+      </li>
+
+      <li class="drawer__row"><a class="drawer__link" href="specialists.html" data-nav="Specialists">Specialists</a></li>
+      <li class="drawer__row"><a class="drawer__link" href="technology.html" data-nav="Technology">Technology</a></li>
+      <li class="drawer__row"><a class="drawer__link" href="prices.html" data-nav="Prices">Prices</a></li>
+
+      <li class="drawer__row" data-current="true">
+        <details name="ed-drawer" class="drawer__acc">
+          <summary class="drawer__summary" data-nav="Locations">
+            Locations
+            <span class="drawer__chev" aria-hidden="true"></span>
+          </summary>
+          <div class="drawer__sub">
+            <ul class="drawer__sublist">
+              <li><a href="locations.html"><b>00</b>All locations</a></li>
+              <li><a href="bgc-mitsukoshi.html"><b>01</b>Mitsukoshi BGC</a></li>
+              <li><a href="shangri-la-plaza.html"><b>02</b>Shangri-La Plaza</a></li>
+              <li><a href="bgc-stopover.html"><b>03</b>Bonifacio Stopover BGC</a></li>
+              <li><a href="atc.html"><b>04</b>Alabang Town Center</a></li>
+            </ul>
+          </div>
+        </details>
+      </li>
+
+      <li class="drawer__row"><a class="drawer__link" href="results.html" data-nav="Results">Results</a></li>
+      <li class="drawer__row"><a class="drawer__link" href="dental-tourism.html" data-nav="Dental Tourism">Dental Tourism</a></li>
+      <li class="drawer__row"><a class="drawer__link" href="patients.html" data-nav="Patients">Patients</a></li>
+      <li class="drawer__row"><a class="drawer__link" href="about.html" data-nav="About">About</a></li>
+      <li class="drawer__row"><a class="drawer__link" href="insights.html" data-nav="Insights">Insights</a></li>
+      <li class="drawer__row"><a class="drawer__link" href="contact.html" data-nav="Contact">Contact</a></li>
+
+    </ul>
+  </nav>
+
+  <!-- the foot: flex 0 0 auto, in flow, non-overlapping -->
+  <div class="drawer__foot">
+    <a class="kit-btn kit-btn--primary kit-btn--wide" href="contact.html">Book an Appointment</a>
+    <div class="drawer__nap kit-tab">
+      <a href="tel:+639171599284"><b>Mitsukoshi BGC</b>+63 917 159 9284</a>
+      <a href="tel:+639688515420"><b>Shangri-La Plaza</b>+63 968 851 5420</a>
+      <a href="tel:+639178294551"><b>Bonifacio Stopover</b>+63 917 829 4551</a>
+      <a href="tel:+639171140598"><b>Alabang Town Center</b>+63 917 114 0598</a>
+      <a class="drawer__nap--wide" href="mailto:info@elevatedental.ph"><b>Email</b>info@elevatedental.ph</a>
+    </div>
+  </div>
+
+</aside>
+
+
+<!-- ============================================================================
+     THE MOBILE STICKY ACTION BAR (chrome furniture, 767 and below).
+     Not one of the five parts and NOT a closing band: it is fixed viewport
+     furniture that never enters page flow, so G-CTA1 does not count it.
+     ========================================================================= -->
+<!-- pick: STICKY-CTA-BAR.md #2 Dual-button bottom-bar (primary + secondary) | considered: #6 Floating pill bar (not full-width), #4 Sticky form-trigger (opens modal) | why: this vertical's mobile reader splits cleanly into two intents, book the appointment or phone a clinic, and #2 is the entry written for exactly that split (its own when-to-use reads "medical: book online OR call"), which matters more here than at most clinics because Elevate runs FOUR clinics with four different numbers, so the call route has to lead somewhere that discloses which; the secondary therefore routes to the footer's Get-in-touch group rather than dialling one branch and quietly implying it is the default. #6's floating pill is a single-action shape, so it would drop the call route entirely at the width where calling is easiest. #4 opens a modal booking form, and blocker B-1 leaves this build with no real price data and no confirmed booking endpoint, so a modal form would promise a transaction the site cannot yet complete. The bar carries the same locked string as the header, so the spine reads as one action at every width. -->
+<div class="stickybar" role="region" aria-label="Quick actions">
+  <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+  <a class="kit-btn kit-btn--secondary" href="#get-in-touch">Call a clinic</a>
+</div>
+
+
+<main id="main">
+
+  <!-- the specimen apparatus. Labels the artifact so it is never mistaken for a page. -->
+  <!-- pick: SECTION-COMPONENTS.md #3 Stat strip / metric band | considered: #2 Trust strip / logo wall, #8 Manifesto / belief statement | why: this strip's only job is to state the concept's CHECKABLE commitments (eleven nav items in C1 order, the 1100 collapse, one closing band, one dark spend, one arc) so a judge can verify them against the rendered chrome instead of taking the prose above on trust, and #3 is the only one of the three built to carry a ruled row of countable values under hairline dividers; #2 is a wall of third-party marks, which C7 §3 rules out outright while the four affiliation marks still carry uncleared usage rights; #8 is a belief statement, which would put an unverifiable claim exactly where this artifact needs numbers a reviewer can count. -->
+  <section>
+    <div class="container">
+      <div class="demo-doc">
+        <div class="demo-doc__kicker">
+          <span>Elevate Dental</span>
+          <b>Chrome concept A</b>
+          <span>The Measured Rail</span>
+          <span class="kit-tab">Stage 2 CHROME</span>
+        </div>
+        <p class="kit-lede readw--wide">The index ring, unrolled and made structural. A hairline graduated rail runs the full width under the nav; each of the eleven nav items paints its own minor graduation onto it, and the item you are on paints the single bronze index. Below 1100 the bar collapses to the hamburger and the rail keeps its canonical form. The drawer stands the same rail on end.</p>
+        <dl class="demo-parts">
+          <div><dt>Nav items</dt><dd class="kit-tab">11, C1 order</dd></div>
+          <div><dt>Collapse</dt><dd class="kit-tab">1100px</dd></div>
+          <div><dt>Closing bands</dt><dd class="kit-tab">1, the precta</dd></div>
+          <div><dt>Dark spend</dt><dd class="kit-tab">1, the precta</dd></div>
+          <div><dt>Arc seam</dt><dd class="kit-tab">1, into the precta</dd></div>
+          <div><dt>Try it</dt><dd>Open Treatments, then narrow to 375</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- demo band 1 : the hero, so the chrome is judged against the confirmed feel -->
+  <!-- pick: HERO-COMPOSITIONS.md #20 Three-column hero (text + stat + photo) | considered: #5 Full-bleed image + overlay text, #22 Statistics-heavy hero | why: this band is carried VERBATIM from the owner-confirmed feel specimen so the chrome is judged against the exact body it has to sit on and not against a fresh composition that could flatter it; the locked lead is a COUNT, and #20 is the one hero that gives the claim, the countable proof and the imagery slot each their own column, so "Nine disciplines. Thirty-one specialists. One clinic." lands beside its evidence rather than merely above it. #5 sets the headline over a scrimmed photograph, which C7 §4 bans outright as a washed-out overlay treatment and which would invert a ground whose measured dark ratio is zero. #22 keeps the numerals but drops the photograph, and a credibility vertical shipping zero imagery moves is the automatic failure the sector reconciliation exists to prevent. -->
+  <section class="kit-hero" data-rise>
+    <div class="container container--wide">
+      <div class="row row--claim row--loose">
+
+        <div class="col col--copy">
+          <div class="kit-open">
+            <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+            <div class="kit-open__head">
+              <span class="kit-open__no kit-tab">01</span>
+              <span class="kit-eyebrow">Elevate Dental, Metro Manila</span>
+            </div>
+          </div>
+
+          <h1>Nine disciplines. Thirty-one specialists. One clinic.</h1>
+          <p class="kit-lede readw--tight">Complex dental work should not mean being referred somewhere else.</p>
+          <p class="kit-body readw">A treatment plan is written once, by the people who will carry it out, in the building where the imaging was taken.</p>
+
+          <div class="kit-actions">
+            <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+            <a class="kit-btn kit-btn--secondary" href="specialists.html">See our specialists</a>
+          </div>
+
+          <div class="kit-truth readw">
+            <span class="kit-truth__k">Stated plainly, and early</span>
+            <p>Elevate Dental does not accept HMO or dental insurance. All treatment is self-pay.</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="kit-statband kit-statband--stack">
+            <div class="kit-stat"><span class="kit-stat__n kit-tab">09</span><span class="kit-stat__l">Disciplines</span></div>
+            <div class="kit-stat"><span class="kit-stat__n kit-tab">31</span><span class="kit-stat__l">Specialists</span></div>
+            <div class="kit-stat"><span class="kit-stat__n kit-tab">04</span><span class="kit-stat__l">Clinics, Metro Manila</span></div>
+            <div class="kit-stat"><span class="kit-stat__n kit-tab">4/4</span><span class="kit-stat__l">With 3D CBCT on site</span></div>
+          </div>
+        </div>
+
+        <div class="col col--media">
+          <figure class="kit-slot kit-hero__media">
+            <div class="kit-slot__mask kit-slot__mask--circle">
+              <div class="kit-slot__art">
+                <svg class="kit-ring" width="128" height="128" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+                  <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="1.4"/>
+                  <g class="kit-ring__tick" stroke-width="1.4">
+                    <line x1="50" y1="12" x2="50" y2="19" transform="rotate(30 50 50)"/>
+                    <line x1="50" y1="12" x2="50" y2="19" transform="rotate(60 50 50)"/>
+                    <line x1="50" y1="12" x2="50" y2="19" transform="rotate(90 50 50)"/>
+                    <line x1="50" y1="12" x2="50" y2="19" transform="rotate(120 50 50)"/>
+                    <line x1="50" y1="12" x2="50" y2="19" transform="rotate(150 50 50)"/>
+                    <line x1="50" y1="12" x2="50" y2="19" transform="rotate(180 50 50)"/>
+                    <line x1="50" y1="12" x2="50" y2="19" transform="rotate(210 50 50)"/>
+                    <line x1="50" y1="12" x2="50" y2="19" transform="rotate(240 50 50)"/>
+                    <line x1="50" y1="12" x2="50" y2="19" transform="rotate(270 50 50)"/>
+                    <line x1="50" y1="12" x2="50" y2="19" transform="rotate(300 50 50)"/>
+                    <line x1="50" y1="12" x2="50" y2="19" transform="rotate(330 50 50)"/>
+                  </g>
+                  <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="2.6"/>
+                </svg>
+              </div>
+            </div>
+            <figcaption class="kit-slot__cap">
+              <b>Imagery slot</b>
+              <span>Facility photograph, circle mask, 1:1. Placed at the IMAGERY stage from the 31 first-party facility files on hand.</span>
+            </figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- demo band 2 : one content-bearing section, carrying the ONE inline CTA rail -->
+  <!-- pick: CARD-VARIATIONS.md #2 Light feature card with embedded mini-visual | considered: #4 Circle-icon service card with arrow link, #13 Category image-overlay tile | why: this band exists to prove two things at once, that the fixed rail still reads correctly against a real content band and that the mid-page CTA can live as a ruled .kit-inline rail rather than a second closing band, so it uses the SAME card the structural sheet already locked: a light card raised off cool paper by three stacked edge events, a hairline plus a one-pixel inset highlight plus a graded contact shadow, which is the only variant that separates on a white-dominant page without inverting it. #4 puts a generic circle icon where this brand puts a real clinic fact, and generic medical iconography is exactly the register C7 §5 lists under design-away-from. #13 is an image-overlay tile, so its label sits on a photograph, the one treatment C7 §4 rules out, and it would also demand imagery this stage has not placed yet. -->
+  <section class="kit-band-alt" style="background:var(--ds-bg-surface-2)" data-rise>
+    <div class="container">
+
+      <div class="kit-open">
+        <div class="kit-open__rule"><span class="kit-open__idx"></span></div>
+        <div class="kit-open__head">
+          <span class="kit-open__no kit-tab">02</span>
+          <div>
+            <span class="kit-eyebrow">Four clinics</span>
+            <h2 class="kit-d2">Where the bench works</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row row--3up row--tight row--stretch">
+        <div class="col">
+          <article class="kit-card">
+            <span class="kit-card__label">Taguig</span>
+            <h3 class="kit-card__title">Mitsukoshi BGC</h3>
+            <p class="kit-note">Nine disciplines on site. CBCT imaging in the building.</p>
+            <p class="kit-card__tel kit-tab"><a class="kit-link-plain" href="tel:+639171599284">+63 917 159 9284</a></p>
+          </article>
+        </div>
+        <div class="col">
+          <article class="kit-card">
+            <span class="kit-card__label">Mandaluyong</span>
+            <h3 class="kit-card__title">Shangri-La Plaza</h3>
+            <p class="kit-note">One schedule, Monday to Sunday. CBCT imaging in the building.</p>
+            <p class="kit-card__tel kit-tab"><a class="kit-link-plain" href="tel:+639688515420">+63 968 851 5420</a></p>
+          </article>
+        </div>
+        <div class="col">
+          <article class="kit-card">
+            <span class="kit-card__label">Muntinlupa</span>
+            <h3 class="kit-card__title">Alabang Town Center</h3>
+            <p class="kit-note">Weekday and weekend schedules differ. CBCT imaging in the building.</p>
+            <p class="kit-card__tel kit-tab"><a class="kit-link-plain" href="tel:+639171140598">+63 917 114 0598</a></p>
+          </article>
+        </div>
+      </div>
+
+      <!-- the ONE inline mid-page CTA, folded inside a content-bearing section
+           (Collision A). It is a ruled rail, never a heading-plus-button band. -->
+      <div class="kit-inline">
+        <p>Four clinics, four schedules. Each clinic page carries its own hours before you commit to a slot.</p>
+        <div class="kit-inline__acts">
+          <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+          <a class="kit-btn kit-btn--ghost" href="locations.html"><span>Compare the four clinics</span></a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+
+<!-- ============================================================================
+     PART 4 of 5 - THE CLOSING CTA BAND. Exactly one, site-wide, chrome-owned.
+     ========================================================================= -->
+<!-- pick: CTA-PATTERNS.md #11 Full-width band CTA (section as button) | considered: CTA-PATTERNS.md #7 Multi-CTA cluster (primary + secondary horizontal), SECTION-COMPONENTS.md #40 Pre-footer CTA band | why: G-CTA1 allows the whole site exactly ONE closing band and the chrome owns it, so this has to read unmistakably as a SECTION rather than as a control lockup, otherwise 47 page bodies will read the absence of weight as permission to author their own closer, which is the failure Collision A exists to prevent; #11 is the entry whose whole premise is that the band IS the action, and it is the only one of the three that treats the SURFACE, not the button, as the conversion object, which is what lets this band absorb the page's single dark spend honestly instead of decorating a light one. #7 is a control cluster, which this chrome already spends twice, in the hero and in the .kit-inline rail, so reusing it here would leave the page with three identical lockups and no closing gesture at all. #40 is the same intent but it is catalogued as a page-BODY section, and a band authored per page is exactly the thing G-CTA1 counts and fails; the chrome has to own it once so the body can own it zero times. DEVIATIONS, recorded: the fill is the brand's own .surface-dark flip rather than #11's saturated brand-colour fill, because C7 permits a dark moment only in one place for one job, "a single proof or conversion band", and this is that band; and the composition is left-axis rather than centred, so the closing band sits on the same reading axis the whole system is pinned to. The page's ONE arc seam introduces it, per the structural sheet's seam budget: chrome owns the closing band, the dark spend and the arc, and the body opens every other joint with the index rule. -->
+<section class="precta surface-dark">
+
+  <!-- THE ONE ARC. DIVIDER-PATTERNS #2, filled in the destination ground so the
+       dark band rises into the light one instead of cutting it. -->
+  <svg class="kit-seam precta__seam" viewBox="0 0 1200 34" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <path class="kit-seam__fill" d="M0,34 C320,-4 880,-4 1200,34 Z"/>
+    <path class="kit-seam__edge" d="M0,34 C320,-4 880,-4 1200,34"/>
+  </svg>
+
+  <div class="container">
+
+    <div class="precta__rail" aria-hidden="true"><span class="precta__idx"></span></div>
+
+    <div class="precta__grid">
+      <div>
+        <span class="kit-eyebrow">Book an appointment</span>
+        <h2 class="kit-d2">Bring the case to the bench that will finish it.</h2>
+        <p class="kit-lede readw">One plan, written by the people who will carry it out. Choose the clinic nearest you and we will confirm the slot, and what it costs, before anything starts.</p>
+      </div>
+      <div class="precta__acts">
+        <a class="kit-btn kit-btn--primary" href="contact.html">Book an Appointment</a>
+        <a class="kit-btn kit-btn--ghost" href="#get-in-touch"><span>Call a clinic</span></a>
+      </div>
+    </div>
+
+    <div class="precta__nap kit-tab">
+      <a href="tel:+639171599284"><b>Mitsukoshi BGC</b><span>+63 917 159 9284</span></a>
+      <a href="tel:+639688515420"><b>Shangri-La Plaza</b><span>+63 968 851 5420</span></a>
+      <a href="tel:+639178294551"><b>Bonifacio Stopover</b><span>+63 917 829 4551</span></a>
+      <a href="tel:+639171140598"><b>Alabang Town Center</b><span>+63 917 114 0598</span></a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================================
+     PART 5 of 5 - THE FOOTER
+     ========================================================================= -->
+<!-- pick: FOOTER-STYLES.md #3 5-col dense | considered: #2 4-col light with brand-left, #14 Hours-and-contact prominent | why: C1 does not leave the footer's shape open, it defines FIVE named groups carrying 32 links (7 / 5 / 5 / 6 / 9), and #3 is the entry written for exactly that load, five narrow columns of five to eight items each, so it is the only candidate that ships C1 as authored instead of editing it; the fifth group is also the widest, carrying four real clinic numbers as tel: links plus the email, so its track is given extra measure rather than being squeezed to match its neighbours. #2's four-column brand-left shape is one column short by construction, so one of C1's five named groups would have to be merged into another or dropped, and the library flags this whole family as the reflex default the first five demos all reached for. #14 is the closest match on register, a service business leading with contact, but its structure explicitly drops long nav lists, and the sitemap's footer IS a 32-link index, so #14 would delete roughly twenty of them to make room for an hours table this brand cannot print in one form anyway, because the four clinics run four genuinely different schedules. Light ground, because the page's single dark spend was made once on the band above, and a second dark surface immediately under it would turn punctuation into a theme. -->
+<footer class="site-footer">
+  <div class="container">
+
+    <div class="site-footer__brand">
+      <a class="site-footer__mark" href="index.html">
+        <svg width="38" height="38" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+          <circle class="kit-ring__track" cx="50" cy="50" r="38" stroke-width="2.6"/>
+          <g class="kit-ring__tick" stroke-width="2.6">
+            <line x1="50" y1="12" x2="50" y2="20" transform="rotate(90 50 50)"/>
+            <line x1="50" y1="12" x2="50" y2="20" transform="rotate(180 50 50)"/>
+            <line x1="50" y1="12" x2="50" y2="20" transform="rotate(270 50 50)"/>
+          </g>
+          <line class="kit-ring__index" x1="50" y1="12" x2="50" y2="33" stroke-width="4.4"/>
+        </svg>
+        <span class="site-footer__name">Elevate Dental</span>
+      </a>
+      <p class="site-footer__tag">Elevating People's Lives, One Smile at a Time.</p>
+    </div>
+
+    <div class="site-footer__cols">
+
+      <div class="site-footer__col">
+        <p class="site-footer__h">Treatments</p>
+        <ul class="site-footer__list">
+          <li><a href="treatments.html">All Treatments</a></li>
+          <li><a href="invisalign.html">Invisalign</a></li>
+          <li><a href="porcelain-veneers.html">Porcelain Veneers</a></li>
+          <li><a href="braces.html">Braces</a></li>
+          <li><a href="laser-teeth-whitening.html">Teeth Whitening</a></li>
+          <li><a href="dental-implant.html">Dental Implants</a></li>
+          <li><a href="airflow.html">Airflow Cleaning</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__col">
+        <p class="site-footer__h">Clinics</p>
+        <ul class="site-footer__list">
+          <li><a href="locations.html">All Locations</a></li>
+          <li><a href="bgc-mitsukoshi.html">Mitsukoshi BGC</a></li>
+          <li><a href="shangri-la-plaza.html">Shangri-La Plaza</a></li>
+          <li><a href="bgc-stopover.html">Bonifacio Stopover BGC</a></li>
+          <li><a href="atc.html">Alabang Town Center</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__col">
+        <p class="site-footer__h">Patients</p>
+        <ul class="site-footer__list">
+          <li><a href="patients.html">New Patient Guide</a></li>
+          <li><a href="prices.html">Treatment Prices</a></li>
+          <li><a href="results.html">Results</a></li>
+          <li><a href="dental-tourism.html">Dental Tourism</a></li>
+          <li><a href="promos.html">Promos</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__col">
+        <p class="site-footer__h">Clinic</p>
+        <ul class="site-footer__list">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="specialists.html">Our Specialists</a></li>
+          <li><a href="technology.html">Technology</a></li>
+          <li><a href="insights.html">Insights &amp; Care</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__col" id="get-in-touch" style="scroll-margin-top:140px">
+        <p class="site-footer__h">Get in touch</p>
+        <ul class="site-footer__list site-footer__list--tel kit-tab">
+          <li><a href="tel:+639171599284"><b>Mitsukoshi BGC</b>+63 917 159 9284</a></li>
+          <li><a href="tel:+639688515420"><b>Shangri-La Plaza</b>+63 968 851 5420</a></li>
+          <li><a href="tel:+639178294551"><b>Bonifacio Stopover</b>+63 917 829 4551</a></li>
+          <li><a href="tel:+639171140598"><b>Alabang Town Center</b>+63 917 114 0598</a></li>
+          <li><a href="mailto:info@elevatedental.ph">info@elevatedental.ph</a></li>
+        </ul>
+        <div class="site-footer__social">
+          <a href="https://facebook.com/ElevateDentalPhilippines">Facebook</a>
+          <a href="https://instagram.com/elevatedental_ph/">Instagram</a>
+          <a href="https://tiktok.com/@elevatedentalph">TikTok</a>
+          <a href="https://linkedin.com/company/elevate-dental-ph/">LinkedIn</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="site-footer__bottom">
+      <p class="kit-meta">Elevate Dental, Metro Manila. All treatment is self-pay; no HMO and no dental insurance are accepted.</p>
+      <nav class="site-footer__legal" aria-label="Legal">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="careers.html">Careers</a>
+      </nav>
+    </div>
+
+  </div>
+</footer>
+
+
+<script>
+(function(){
+  'use strict';
+
+  var root    = document.documentElement;
+  var header  = document.getElementById('site-header');
+  var burger  = document.getElementById('burger');
+  var drawer  = document.getElementById('mobile-drawer');
+  var closeEl = document.getElementById('drawer-close');
+  var scrim   = document.getElementById('scrim');
+  var mega    = document.getElementById('mega');
+  var trigger = document.getElementById('mega-trigger');
+
+  /* the scroll-reveal latch the structural sheet gates on. Only added when
+     scripting AND IntersectionObserver exist AND reduced motion is not asked for,
+     so a static capture can never come back blank. */
+  var motionOK = ('IntersectionObserver' in window) &&
+                 !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  if (motionOK) root.className += ' js-rise';
+
+  /* --- the header contact shadow. No shrink: an instrument panel does not bounce. */
+  var onScroll = function(){
+    if (window.scrollY > 8) header.classList.add('is-stuck');
+    else header.classList.remove('is-stuck');
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  /* --- THE MEGA PANEL ------------------------------------------------------ */
+  var megaOpen = false, hoverTimer = null;
+  function setMega(open){
+    megaOpen = open;
+    mega.classList.toggle('is-open', open);
+    trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  trigger.addEventListener('click', function(e){ e.preventDefault(); setMega(!megaOpen); });
+  /* hover-open with intent, per pattern #7, on fine pointers only */
+  if (window.matchMedia && window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+    trigger.addEventListener('mouseenter', function(){
+      clearTimeout(hoverTimer);
+      hoverTimer = setTimeout(function(){ setMega(true); }, 130);
+    });
+    header.addEventListener('mouseleave', function(){
+      clearTimeout(hoverTimer);
+      hoverTimer = setTimeout(function(){ setMega(false); }, 220);
+    });
+    mega.addEventListener('mouseenter', function(){ clearTimeout(hoverTimer); });
+  }
+  document.addEventListener('click', function(e){
+    if (!megaOpen) return;
+    if (header.contains(e.target)) return;
+    setMega(false);
+  });
+
+  /* --- THE DRAWER ---------------------------------------------------------- */
+  var lastFocus = null;
+  function setDrawer(open){
+    root.classList.toggle('drawer-open', open);
+    drawer.setAttribute('aria-hidden', open ? 'false' : 'true');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    scrim.hidden = !open;
+    document.body.style.overflow = open ? 'hidden' : '';
+    if (open){ lastFocus = document.activeElement; closeEl.focus(); }
+    else if (lastFocus && lastFocus.focus){ lastFocus.focus(); }
+  }
+  burger.addEventListener('click',  function(){ setDrawer(true);  });
+  closeEl.addEventListener('click', function(){ setDrawer(false); });
+  scrim.addEventListener('click',   function(){ setDrawer(false); });
+
+  document.addEventListener('keydown', function(e){
+    if (e.key !== 'Escape' && e.keyCode !== 27) return;
+    if (root.classList.contains('drawer-open')) setDrawer(false);
+    else if (megaOpen) { setMega(false); trigger.focus(); }
+  });
+
+  /* EXCLUSIVE ACCORDIONS in the drawer. The name attribute already makes these
+     exclusive where it is supported; this enforces it everywhere, so the drawer
+     can never grow to a both-open height. */
+  var accs = drawer.querySelectorAll('details.drawer__acc');
+  Array.prototype.forEach.call(accs, function(d){
+    d.addEventListener('toggle', function(){
+      if (!d.open) return;
+      Array.prototype.forEach.call(accs, function(o){ if (o !== d) o.open = false; });
+    });
+  });
+
+  /* leaving the collapsed range with the drawer open would strand it */
+  var wide = window.matchMedia('(min-width: 1101px)');
+  var onWide = function(m){ if (m.matches && root.classList.contains('drawer-open')) setDrawer(false); };
+  if (wide.addEventListener) wide.addEventListener('change', onWide);
+  else if (wide.addListener) wide.addListener(onWide);
+
+  /* --- the staggered rise, three moves only -------------------------------- */
+  if (motionOK){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (!en.isIntersecting) return;
+        en.target.classList.add('is-in');
+        io.unobserve(en.target);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+    Array.prototype.forEach.call(document.querySelectorAll('[data-rise]'), function(el, i){
+      el.style.setProperty('--i', i % 6);
+      io.observe(el);
+    });
+  }
+})();
+</script>
+
+</body>
+</html>

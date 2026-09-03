@@ -1,0 +1,220 @@
+{
+  "slug": "elevatedental",
+  "page": "dental-tourism",
+  "concept": "_design/_tournament/tmpl-invisalign-a",
+  "gates": [
+    {
+      "name": "block-banned-content",
+      "pass": true
+    },
+    {
+      "name": "block-revision-violations",
+      "pass": false
+    },
+    {
+      "name": "verify-handoff-current",
+      "pass": true
+    },
+    {
+      "name": "verify-brief-consumed",
+      "pass": true
+    },
+    {
+      "name": "verify-asset-intake",
+      "pass": true
+    },
+    {
+      "name": "verify-design-foundation",
+      "pass": true
+    },
+    {
+      "name": "verify-not-flat",
+      "pass": true
+    },
+    {
+      "name": "verify-legal-is-document",
+      "pass": true
+    },
+    {
+      "name": "verify-applied-design",
+      "pass": true
+    },
+    {
+      "name": "verify-design-system-used",
+      "pass": true
+    },
+    {
+      "name": "verify-shell-purity",
+      "pass": true
+    },
+    {
+      "name": "verify-stylesheet-linked",
+      "pass": true
+    },
+    {
+      "name": "verify-section-visual-rhythm",
+      "pass": false
+    },
+    {
+      "name": "verify-globals-overlay",
+      "pass": true
+    },
+    {
+      "name": "verify-motion-js-linked",
+      "pass": true
+    },
+    {
+      "name": "verify-no-unfilled-slots",
+      "pass": true
+    },
+    {
+      "name": "verify-no-gradient-placeholders",
+      "pass": true
+    },
+    {
+      "name": "verify-no-orphan-classes",
+      "pass": true
+    },
+    {
+      "name": "verify-no-dead-body-links",
+      "pass": false
+    },
+    {
+      "name": "verify-chrome-consistent",
+      "pass": true
+    },
+    {
+      "name": "verify-sticky-cta-behavior",
+      "pass": true
+    },
+    {
+      "name": "verify-copy-fidelity",
+      "pass": false
+    },
+    {
+      "name": "verify-conversion-integrity",
+      "pass": true
+    },
+    {
+      "name": "verify-home-routes",
+      "pass": true
+    },
+    {
+      "name": "verify-fabricated-honesty",
+      "pass": true
+    },
+    {
+      "name": "verify-cross-page-variety",
+      "pass": true
+    },
+    {
+      "name": "verify-page-distinct",
+      "pass": false
+    },
+    {
+      "name": "verify-page-type-distinct",
+      "pass": true
+    },
+    {
+      "name": "verify-company-composition",
+      "pass": true
+    },
+    {
+      "name": "verify-page-token-styled",
+      "pass": true
+    },
+    {
+      "name": "verify-focus-states",
+      "pass": true
+    },
+    {
+      "name": "verify-imagery-spec-present",
+      "pass": true
+    },
+    {
+      "name": "verify-image-reuse-cap",
+      "pass": true
+    },
+    {
+      "name": "verify-card-grid-consistent",
+      "pass": true
+    },
+    {
+      "name": "verify-dom-structure",
+      "pass": true
+    },
+    {
+      "name": "verify-tokens-complete",
+      "pass": true
+    },
+    {
+      "name": "verify-brand-distinct",
+      "pass": true
+    },
+    {
+      "name": "verify-section-height-sane",
+      "pass": true
+    },
+    {
+      "name": "verify-section-pattern-variety",
+      "pass": true
+    },
+    {
+      "name": "verify-grid-accent",
+      "pass": true
+    },
+    {
+      "name": "verify-media-fits-track",
+      "pass": true
+    },
+    {
+      "name": "verify-cta-singularity",
+      "pass": true
+    },
+    {
+      "name": "verify-selection-rationale",
+      "pass": true
+    },
+    {
+      "name": "verify-content-repetition",
+      "pass": false
+    },
+    {
+      "name": "verify-no-dashes",
+      "pass": true
+    },
+    {
+      "name": "verify-chrome-links-resolve",
+      "pass": true
+    },
+    {
+      "name": "verify-chrome-nav-consistency",
+      "pass": true
+    },
+    {
+      "name": "verify-chrome-fresh",
+      "pass": true
+    },
+    {
+      "name": "verify-chrome-edit-at-carrier",
+      "pass": true
+    },
+    {
+      "name": "verify-sitemap-typed",
+      "pass": true
+    },
+    {
+      "name": "verify-title-quality",
+      "pass": true
+    },
+    {
+      "name": "verify-form-live",
+      "pass": true
+    }
+  ],
+  "failCount": 6,
+  "gateCount": 52,
+  "noGates": false,
+  "filtered": [],
+  "ts": 1786772092237
+}
